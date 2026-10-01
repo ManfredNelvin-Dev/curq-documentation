@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="{{ language | default('en') }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CURQ Documentation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('_static/css/style.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('_static/css/sidebar.css', 1) }}">
+
+</head>
+
+<body>
+
+    {% if pagename == 'index' %}
+        {% include "landing.html" %}
+    {% else %}
+        {% set ns = namespace(current_mod=None, current_page_label='Overview', current_category=None) %}
+        {% for mod in modules %}
+            {% if pagename.startswith('docs/' + mod.folder) %}
+                {% set ns.current_mod = mod %}
+                {% for page in mod.pages %}
+                    {% if page.page_path == pagename %}
+                        {% set ns.current_page_label = page.label %}
+                        {% set ns.current_category = page.category %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="layout">
+            {% include "docs_sidebar.html" %}
+
+            <main class="main-content">
+                <nav class="breadcrumb">
+                    {% set t = _ %}
+                    <a href="{{ pathto('index') }}">{{ _('Home') }}</a>
+                    {% if ns.current_mod %}
+                        <span class="separator">/</span>
+                        {% if ns.current_mod.has_docs %}
+                            {% set target_path = ns.current_mod.pages[0].page_path %}
+                        {% else %}
+                            {% set target_path = 'docs' %}
+                        {% endif %}
+                        {% set raw_href = pathto(target_path) %}
+                        {% if raw_href == '#' or not raw_href %}
+                            {% set mod_href = '?module=' + ns.current_mod.sidebar_key %}
+                        {% else %}
+                            {% set mod_href = raw_href + ('&' if '?' in raw_href else '?') + 'module=' + ns.current_mod.sidebar_key %}
+                        {% endif %}
+                        <a href="{{ mod_href }}">{{ t(ns.current_mod.display_name) }}</a>
+                        
+                        {% if ns.current_category %}
+                            <span class="separator">/</span>
+                            <span>{{ t(ns.current_category) }}</span>
+                        {% endif %}
+                        
+                        <span class="separator">/</span>
+                        <a href="javascript:void(0)" class="current-section">{{ t(ns.current_page_label) }}</a>
+                    {% else %}
+                        <span class="separator">/</span>
+                        <a href="javascript:void(0)" class="current-section">{{ title|striptags }}</a>
+                    {% endif %}
+                </nav>
+                <div class="content-wrapper">
+                    <div class="sphinx-content">
+                        {% block body %}{{ body|safe }}{% endblock %}
+                    </div>
+
+                    <aside class="right-sidebar">
+                        {% if toc %}
+                            <div class="right-sidebar-section">
+                                <div class="right-sidebar-heading">ON THIS PAGE</div>
+                                <div class="toc-container">
+                                    {{ toc }}
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        <div class="right-sidebar-section">
+                            <div class="right-sidebar-heading">FURTHER WITH</div>
+                            <ul class="right-sidebar-list">
+                                {% if ns.current_mod and ns.current_mod.pages|length > 1 %}
+                                    {% for page in ns.current_mod.pages %}
+                                        {% if page.page_path != pagename %}
+                                            <li><a href="{{ pathto(page.page_path) }}?module={{ ns.current_mod.sidebar_key }}">{{ page.label }}</a></li>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                    {% for mod in modules %}
+                                        {% if not ns.current_mod or mod.folder != ns.current_mod.folder %}
+                                            {% if mod.has_docs %}
+                                                <li><a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">{{ mod.display_name }} Overview</a></li>
+                                            {% else %}
+                                                <li><a href="{{ pathto('docs') }}?module={{ mod.sidebar_key }}">{{ mod.display_name }}</a></li>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    {% endif %}
+
+    {% include "search_modal.html" %}
+
+    <script>
+        window.CURQ_CONFIG = {
+            homeUrl: "{{ pathto('_static', 1) }}".replace('_static', '') + 'index.html',
+            baseUrl: "{{ pathto('_static', 1) }}".replace('_static', ''),
+            searchIndexUrl: "{{ pathto('searchindex.js', 1) }}",
+            defaultLang: "{{ default_language }}",
+            supportedLangs: [
+                /* {% for lang in supported_languages %} */
+                /* {% if lang.code != default_language %} */
+                "{{ lang.code }}",
+                /* {% endif %} */
+                /* {% endfor %} */
+            ]
+        };
+    </script>
+    <script src="{{ pathto('_static/js/main.js', 1) }}"></script>
+
+</body>
+
+</html>

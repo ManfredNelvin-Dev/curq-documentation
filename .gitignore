@@ -1,0 +1,26 @@
+# Virtual environments
+.venv/
+
+# Python caching
+__pycache__/
+*.pyc
+
+# Sphinx build directory
+_build/
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Ignore contents of docs and locale but keep the folders
+docs/*
+!docs/.gitkeep
+locale/*
+!locale/.gitkeep
