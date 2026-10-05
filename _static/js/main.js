@@ -262,7 +262,8 @@ if (searchModal && modalInput) {
 
 // FAQ Accordion Logic
 function initFaqAccordions() {
-    if (window.location.pathname.includes('/faq/')) {
+    const path = window.location.pathname.toLowerCase();
+    if (path.includes('/faq/') || path.endsWith('/faq.html')) {
         const headings = document.querySelectorAll('.sphinx-content h2');
         headings.forEach(heading => {
             let container = heading.parentElement;

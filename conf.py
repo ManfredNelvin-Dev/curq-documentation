@@ -117,6 +117,12 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
         'description': 'Discover the module',
         'sidebar_key': 'contacts',
     },
+    'Chat': {
+        'display_name': 'Chats',
+        'icon': 'chats-icon.png',
+        'description': 'Discover the module',
+        'sidebar_key': 'chats',
+    },
 }
 
 SUBMENU_LABELS: Dict[str, str] = {
@@ -139,13 +145,14 @@ def build_modules_context() -> List[Dict[str, Any]]:
 
     leading_number_re = re.compile(r'^\d+\s*')
 
-    category_order = {
-        '': 0,
-        'Manual': 1,
-        'Procedures': 2,
-        'Articles': 3,
-        'Faq': 4,
-    }
+    def get_category_order(cat_name: str) -> int:
+        cat_lower = cat_name.lower()
+        if not cat_lower or 'overview' in cat_lower: return 0
+        if 'manual' in cat_lower: return 1
+        if 'procedure' in cat_lower or 'configuration' in cat_lower: return 2
+        if 'article' in cat_lower: return 3
+        if 'faq' in cat_lower: return 4
+        return 99
 
     for folder_name, meta in MODULE_REGISTRY.items():
         folder_path = doc_root / folder_name
@@ -155,33 +162,40 @@ def build_modules_context() -> List[Dict[str, Any]]:
             def get_sort_key(md_file: Path) -> tuple:
                 folder_rel = str(md_file.parent.relative_to(folder_path))
                 if folder_rel == '.':
-                    cat = ''
+                    order = 4 if 'faq' in md_file.stem.lower() else 0
                 else:
                     cat = folder_rel.replace('-', ' ').replace('_', ' ')
                     cat = leading_number_re.sub('', cat).strip().title()
-                return (category_order.get(cat, 99), md_file.name)
+                    order = get_category_order(cat)
+                return (order, md_file.name)
 
             md_files = list(folder_path.rglob('*.md'))
             md_files.sort(key=get_sort_key)
-            
+
             for md_file in md_files:
                 basename = md_file.stem
-                
+
                 pretty_name = basename.replace('-', ' ').replace('_', ' ')
                 pretty_name = leading_number_re.sub('', pretty_name).strip().title()
-                
+
+                if pretty_name.lower() == 'faq':
+                    pretty_name = 'FAQ'
+
                 label = SUBMENU_LABELS.get(basename, pretty_name)
-                
+
                 rel_path = md_file.relative_to(base_dir)
                 page_path = str(rel_path.with_suffix('')).replace('\\', '/')
-                
+
                 folder_rel = str(md_file.parent.relative_to(folder_path))
                 if folder_rel == '.':
-                    category = ''
+                    category = 'FAQ' if 'faq' in basename.lower() else ''
                 else:
                     category = folder_rel.replace('-', ' ').replace('_', ' ')
                     category = leading_number_re.sub('', category).strip().title()
-                
+
+                    if category.lower() == 'faq':
+                        category = 'FAQ'
+
                 pages.append({
                     'label': label,
                     'page_path': page_path,
