@@ -20,7 +20,5 @@ Thumbs.db
 *.log
 
 # Ignore contents of docs and locale but keep the folders
-docs/*
-!docs/.gitkeep
 locale/*
 !locale/.gitkeep
