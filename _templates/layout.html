@@ -56,7 +56,17 @@
                         
                         {% if ns.current_category %}
                             <span class="separator">/</span>
-                            <span>{{ t(ns.current_category) }}</span>
+                            {% set ns_cat = namespace(first_in_cat=none) %}
+                            {% for p in ns.current_mod.pages %}
+                                {% if p.category == ns.current_category and not ns_cat.first_in_cat %}
+                                    {% set ns_cat.first_in_cat = p %}
+                                {% endif %}
+                            {% endfor %}
+                            {% if ns_cat.first_in_cat %}
+                                <a href="{{ pathto(ns_cat.first_in_cat.page_path) }}?module={{ ns.current_mod.sidebar_key }}">{{ t(ns.current_category) }}</a>
+                            {% else %}
+                                <span>{{ t(ns.current_category) }}</span>
+                            {% endif %}
                         {% endif %}
                         
                         <span class="separator">/</span>
@@ -69,6 +79,28 @@
                 <div class="content-wrapper">
                     <div class="sphinx-content">
                         {% block body %}{{ body|safe }}{% endblock %}
+
+                        {% if pagename.endswith('00-overview') %}
+                        {% set ns_btns = namespace(first_article=none, first_faq=none) %}
+                        {% if ns.current_mod %}
+                            {% for p in ns.current_mod.pages %}
+                                {% if p.category == 'Articles' and not ns_btns.first_article %}
+                                    {% set ns_btns.first_article = p %}
+                                {% endif %}
+                                {% if p.category == 'Faq' and not ns_btns.first_faq %}
+                                    {% set ns_btns.first_faq = p %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                        <div class="overview-buttons">
+                            {% if ns_btns.first_article %}
+                                <a href="{{ pathto(ns_btns.first_article.page_path) }}?module={{ ns.current_mod.sidebar_key }}" class="overview-btn">View all articles</a>
+                            {% endif %}
+                            {% if ns_btns.first_faq %}
+                                <a href="{{ pathto(ns_btns.first_faq.page_path) }}?module={{ ns.current_mod.sidebar_key }}" class="overview-btn secondary">Frequently asked questions</a>
+                            {% endif %}
+                        </div>
+                        {% endif %}
                     </div>
 
                     <aside class="right-sidebar">

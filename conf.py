@@ -21,16 +21,8 @@ locale_dirs = ["locale/"]
 gettext_compact = False
 gettext_uuid = True
 
-html_theme = 'alabaster'
+html_theme = 'basic'
 html_static_path = ['_static']
-
-html_sidebars = {
-    '**': [
-        'localtoc.html',
-        'relations.html',
-        'searchbox.html',
-    ]
-}
 
 html_css_files = []
 source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
@@ -141,12 +133,30 @@ def build_modules_context() -> List[Dict[str, Any]]:
 
     leading_number_re = re.compile(r'^\d+\s*')
 
+    category_order = {
+        '': 0,
+        'Manual': 1,
+        'Procedures': 2,
+        'Articles': 3,
+        'Faq': 4,
+    }
+
     for folder_name, meta in MODULE_REGISTRY.items():
         folder_path = doc_root / folder_name
         pages = []
 
         if folder_path.is_dir():
-            md_files = sorted(folder_path.rglob('*.md'))
+            def get_sort_key(md_file: Path) -> tuple:
+                folder_rel = str(md_file.parent.relative_to(folder_path))
+                if folder_rel == '.':
+                    cat = ''
+                else:
+                    cat = folder_rel.replace('-', ' ').replace('_', ' ')
+                    cat = leading_number_re.sub('', cat).strip().title()
+                return (category_order.get(cat, 99), md_file.name)
+
+            md_files = list(folder_path.rglob('*.md'))
+            md_files.sort(key=get_sort_key)
             
             for md_file in md_files:
                 basename = md_file.stem

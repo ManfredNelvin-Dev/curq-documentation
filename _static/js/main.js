@@ -76,22 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Breadcrumb Logic
-function updateBreadcrumb(moduleName, pageName, moduleUrl, pageUrl) {
-    const breadcrumb = document.querySelector('.breadcrumb');
-    if (!breadcrumb) return;
-    const mUrl = moduleUrl || '#';
-    const pUrl = pageUrl || 'javascript:void(0)';
-    const homeUrl = window.CURQ_CONFIG ? window.CURQ_CONFIG.homeUrl : '/';
-    breadcrumb.innerHTML = `
-        <a href="${homeUrl}">Home</a>
-        <span class="separator">/</span>
-        <a href="${mUrl}">${moduleName}</a>
-        <span class="separator">/</span>
-        <a href="${pUrl}" class="current-section">${pageName}</a>
-    `;
-}
-
 // Sidebar Dropdown Toggle
 document.querySelectorAll('.menu-title').forEach(title => {
     title.addEventListener('click', () => {
@@ -103,15 +87,6 @@ document.querySelectorAll('.menu-title').forEach(title => {
         if (group.classList.contains('open')) {
             icon.classList.remove('fa-chevron-right');
             icon.classList.add('fa-chevron-down');
-
-            const moduleNameSpan = group.querySelector('.menu-left span');
-            const firstSubmenuItem = group.querySelector('.submenu-item');
-            if (moduleNameSpan && firstSubmenuItem) {
-                const moduleName = moduleNameSpan.innerText.trim();
-                const pageName = firstSubmenuItem.textContent.trim();
-                const moduleUrl = firstSubmenuItem.getAttribute('href');
-                updateBreadcrumb(moduleName, pageName, moduleUrl, moduleUrl);
-            }
         } else {
             icon.classList.remove('fa-chevron-down');
             icon.classList.add('fa-chevron-right');
@@ -129,14 +104,6 @@ document.querySelectorAll('.submenu-item').forEach(item => {
 
         document.querySelectorAll('.submenu-item').forEach(el => el.classList.remove('active'));
         item.classList.add('active');
-
-        const group = item.closest('.menu-group');
-        const moduleName = group.querySelector('.menu-left span').innerText.trim();
-        const pageName = item.textContent.trim();
-        const firstItem = group.querySelector('.submenu-item');
-        const moduleUrl = firstItem ? firstItem.getAttribute('href') : href;
-
-        updateBreadcrumb(moduleName, pageName, moduleUrl, href);
     });
 });
 
@@ -291,4 +258,50 @@ if (searchModal && modalInput) {
         const results = document.getElementById('search-modal-results');
         performSearch(query, label, results);
     });
+}
+
+// FAQ Accordion Logic
+function initFaqAccordions() {
+    if (window.location.pathname.includes('/faq/')) {
+        const headings = document.querySelectorAll('.sphinx-content h2');
+        headings.forEach(heading => {
+            let container = heading.parentElement;
+
+            // MyST/Sphinx usually wraps headings in <section>
+            if (container && (container.tagName === 'SECTION' || container.classList.contains('section'))) {
+                const details = document.createElement('details');
+                details.className = 'faq-accordion';
+
+                const summary = document.createElement('summary');
+                summary.innerHTML = heading.innerHTML;
+                // add icon wrapper
+                summary.innerHTML += '<i class="fa-solid fa-chevron-down accordion-icon"></i>';
+                details.appendChild(summary);
+
+                const contentDiv = document.createElement('div');
+                contentDiv.className = 'faq-accordion-content';
+
+                // move all siblings after heading to contentDiv
+                Array.from(container.childNodes).forEach(child => {
+                    if (child !== heading && child.tagName !== 'HR') {
+                        contentDiv.appendChild(child);
+                    }
+                });
+
+                details.appendChild(contentDiv);
+
+                container.innerHTML = '';
+                container.appendChild(details);
+            }
+        });
+
+        // Cleanup remaining HRs
+        document.querySelectorAll('.sphinx-content hr').forEach(hr => hr.remove());
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener("DOMContentLoaded", initFaqAccordions);
+} else {
+    initFaqAccordions();
 }

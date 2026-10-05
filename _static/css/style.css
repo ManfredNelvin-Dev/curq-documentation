@@ -480,3 +480,100 @@ a:hover {
     font-weight: 400;
     color: #16345f;
 }
+
+/* Generic Overview Buttons */
+.overview-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.overview-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #16345f;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: 1px solid #16345f;
+    text-align: center;
+}
+
+.overview-btn:hover {
+    background: #0f2442;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.overview-btn.secondary {
+    background: #ffffff;
+    color: #16345f !important;
+}
+
+.overview-btn.secondary:hover {
+    background: #f8fafc;
+}
+
+/* FAQ Accordions */
+.faq-accordion {
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.faq-accordion:hover {
+    border-color: #d0d5dd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.faq-accordion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #16345f;
+    cursor: pointer;
+    list-style: none;
+    /* removes default arrow in most browsers */
+    margin: 0;
+}
+
+.faq-accordion summary::-webkit-details-marker {
+    display: none;
+    /* removes default arrow in webkit */
+}
+
+.faq-accordion summary .accordion-icon {
+    font-size: 14px;
+    color: #16345f;
+    transition: transform 0.3s ease;
+}
+
+.faq-accordion[open] summary .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.faq-accordion-content {
+    padding: 0 24px 20px 24px;
+    font-size: 14px;
+    color: #545669;
+    border-top: 1px solid #e4e7ec;
+    margin-top: -5px;
+    padding-top: 15px;
+}
+
+.faq-accordion-content p {
+    margin-bottom: 12px;
+}
+
+.faq-accordion-content p:last-child {
+    margin-bottom: 0;
+}
