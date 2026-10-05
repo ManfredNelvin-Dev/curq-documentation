@@ -111,6 +111,12 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
         'description': 'Discover the module',
         'sidebar_key': 'website',
     },
+    'Contacts': {
+        'display_name': 'Contacts',
+        'icon': 'contacts-icon.png',
+        'description': 'Discover the module',
+        'sidebar_key': 'contacts',
+    },
 }
 
 SUBMENU_LABELS: Dict[str, str] = {

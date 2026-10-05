@@ -21,4 +21,3 @@ Manage multiple delivery, invoice, and private addresses for every partner. Set 
 
 ---
 
-[View all articles](./articles/managing-enterprise-customers-and-subsidiaries.md) &nbsp;&nbsp;&nbsp;&nbsp; [Frequently asked questions](./faq/01-contacts-management-faq.md)
