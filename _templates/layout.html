@@ -33,9 +33,15 @@
         {% endfor %}
 
         <div class="layout">
+            <div class="sidebar-overlay"></div>
             {% include "docs_sidebar.html" %}
 
             <main class="main-content">
+                <div class="mobile-header">
+                    <button class="mobile-menu-toggle left-toggle"><i class="fa-solid fa-bars"></i></button>
+                    <span class="mobile-header-title">CURQ Documentation</span>
+                    <button class="mobile-menu-toggle right-toggle"><i class="fa-solid fa-grip"></i></button>
+                </div>
                 <nav class="breadcrumb">
                     {% set t = _ %}
                     <a href="{{ pathto('index') }}">{{ _('Home') }}</a>

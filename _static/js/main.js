@@ -306,3 +306,41 @@ if (document.readyState === 'loading') {
 } else {
     initFaqAccordions();
 }
+
+// Mobile Sidebar Toggle
+document.addEventListener("DOMContentLoaded", () => {
+    const leftToggle = document.querySelector('.left-toggle');
+    const rightToggle = document.querySelector('.right-toggle');
+    const leftSidebar = document.querySelector('.sidebar');
+    const rightSidebar = document.querySelector('.right-sidebar');
+    const overlay = document.querySelector('.sidebar-overlay');
+
+    function closeAllSidebars() {
+        if(leftSidebar) leftSidebar.classList.remove('open');
+        if(rightSidebar) rightSidebar.classList.remove('open');
+        if(overlay) overlay.classList.remove('active');
+    }
+
+    if (leftToggle && leftSidebar && overlay) {
+        leftToggle.addEventListener('click', () => {
+            leftSidebar.classList.add('open');
+            overlay.classList.add('active');
+        });
+    }
+
+    if (rightToggle && rightSidebar && overlay) {
+        rightToggle.addEventListener('click', () => {
+            rightSidebar.classList.add('open');
+            overlay.classList.add('active');
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', closeAllSidebars);
+    }
+    
+    // Close sidebar when a link is clicked
+    document.querySelectorAll('.sidebar a, .right-sidebar a').forEach(link => {
+        link.addEventListener('click', closeAllSidebars);
+    });
+});
