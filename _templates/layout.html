@@ -5,8 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CURQ Documentation</title>
+    <link rel="icon" type="image/png" href="{{ pathto('_static/images/curq-favicon.png', 1) }}" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}">
     <link rel="stylesheet" href="{{ pathto('_static/css/style.css', 1) }}">
@@ -45,7 +47,19 @@
                 <nav class="breadcrumb">
                     {% set t = _ %}
                     <a href="{{ pathto('index') }}">{{ _('Home') }}</a>
-                    {% if ns.current_mod %}
+                    {% if pagename.startswith('docs/Articles') or pagename.startswith('Articles') %}
+                        <span class="separator">/</span>
+                        {% if pagename == 'docs/Articles/00-overview' or pagename == 'Articles/00-overview' %}
+                            <a href="javascript:void(0)" class="current-section">{{ _('Articles') }}</a>
+                        {% else %}
+                            <a href="{{ pathto('docs/Articles/00-overview') }}">{{ _('Articles') }}</a>
+                            <span class="separator">/</span>
+                            <a href="javascript:void(0)" class="current-section">{{ title|striptags }}</a>
+                        {% endif %}
+                    {% elif pagename == 'docs/faq' or pagename == 'faq' %}
+                        <span class="separator">/</span>
+                        <a href="javascript:void(0)" class="current-section">{{ _('FAQ') }}</a>
+                    {% elif ns.current_mod %}
                         <span class="separator">/</span>
                         {% if ns.current_mod.has_docs %}
                             {% set target_path = ns.current_mod.pages[0].page_path %}
@@ -82,6 +96,7 @@
                         <a href="javascript:void(0)" class="current-section">{{ title|striptags }}</a>
                     {% endif %}
                 </nav>
+
                 <div class="content-wrapper">
                     <div class="sphinx-content">
                         {% block body %}{{ body|safe }}{% endblock %}

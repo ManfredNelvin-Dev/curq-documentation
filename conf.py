@@ -23,6 +23,7 @@ gettext_uuid = True
 
 html_theme = 'basic'
 html_static_path = ['_static']
+html_favicon = '_static/images/curq-favicon.png'
 
 html_css_files = []
 source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}

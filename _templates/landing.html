@@ -39,49 +39,36 @@
         <div class="container">
             <h2>{{ _('Popular articles') }}</h2>
             <div class="article-grid">
-                <a href="#" class="article-card">
+                <a href="{{ pathto('docs/CRM/articles/closing-enterprise-deals-with-pipeline-management') }}?module=crm" class="article-card">
                     <div>
-                        <h3>{{ _('Declaring a business lunch') }}</h3>
-                        <p>{{ _('Manual · Expenses') }}</p>
+                        <h3>{{ _('Closing Enterprise Deals with Pipeline Management') }}</h3>
+                        <p>{{ _('Article · CRM') }}</p>
                     </div>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#" class="article-card">
+                <a href="{{ pathto('docs/Sales/articles/selling-in-bulk-with-contracts') }}?module=sales" class="article-card">
                     <div>
-                        <h3>{{ _('Your first expense claim') }}</h3>
-                        <p>{{ _('Learning · Expenses') }}</p>
+                        <h3>{{ _('Selling in Bulk with Contracts') }}</h3>
+                        <p>{{ _('Article · Sales') }}</p>
                     </div>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#" class="article-card">
+                <a href="{{ pathto('docs/Contacts/articles/managing-enterprise-customers-and-subsidiaries') }}?module=contacts" class="article-card">
                     <div>
-                        <h3>{{ _('Fields & statuses') }}</h3>
-                        <p>{{ _('Reference · Expenses') }}</p>
+                        <h3>{{ _('Managing Enterprise Customers & Subsidiaries') }}</h3>
+                        <p>{{ _('Article · Contacts') }}</p>
                     </div>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#" class="article-card">
+                <a href="{{ pathto('docs/Discuss/articles/streamlining-cross-department-collaboration') }}?module=discuss" class="article-card">
                     <div>
-                        <h3>{{ _('Initial settings') }}</h3>
-                        <p>{{ _('Reference · Expenses') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#" class="article-card">
-                    <div>
-                        <h3>{{ _('Why the category matters') }}</h3>
-                        <p>{{ _('Background · Expenses') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#" class="article-card">
-                    <div>
-                        <h3>{{ _('Frequently asked questions') }}</h3>
-                        <p>{{ _('Help with expenses') }}</p>
+                        <h3>{{ _('Streamlining Cross-Department Collaboration') }}</h3>
+                        <p>{{ _('Article · Discuss') }}</p>
                     </div>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
+
         </div>
     </section>
 
@@ -116,20 +103,22 @@
     <div class="container">
         <h2>{{ _('Frequently asked questions') }}</h2>
         <div class="faq-list">
-            <a href="#" class="faq-card">
+            <a href="{{ pathto('docs/faq') }}" class="faq-card">
                 <div>
-                    <h3>{{ _('How do I submit my first expense claim?') }}</h3>
-                    <p>{{ _('Follow the exercise for new users.') }}</p>
+                    <h3>{{ _('How do I switch between different business modules in CURQ?') }}</h3>
+                    <p>{{ _('Learn sidebar navigation and overview options.') }}</p>
                 </div>
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="#" class="faq-card">
+            <a href="{{ pathto('docs/CRM/faq') }}?module=crm" class="faq-card">
                 <div>
-                    <h3>{{ _('Which category do I choose for a lunch?') }}</h3>
-                    <p>{{ _('View the answer and associated reference.') }}</p>
+                    <h3>{{ _('What is the difference between a Lead and an Opportunity?') }}</h3>
+                    <p>{{ _('Learn how unverified contacts are qualified into commercial deals.') }}</p>
                 </div>
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
+
+
         </div>
     </div>
 </section>

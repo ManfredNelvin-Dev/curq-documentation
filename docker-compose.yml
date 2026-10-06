@@ -11,7 +11,7 @@ services:
     container_name: curq_documentation
     restart: unless-stopped
     ports:
-      - "${PORT:-80}:8000"
+      - "8080:8000"
     logging:
       driver: "json-file"
       options:

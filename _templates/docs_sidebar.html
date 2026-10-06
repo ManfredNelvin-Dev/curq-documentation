@@ -18,7 +18,8 @@
 
         {% set t = _ %}
         {% for mod in modules %}
-        <div class="menu-group{% if (ns.current_mod and mod.folder == ns.current_mod.folder) or (not ns.current_mod and loop.first) %} open{% endif %}"
+        {% set is_mod_open = (ns.current_mod and mod.folder == ns.current_mod.folder) %}
+        <div class="menu-group{% if is_mod_open %} open{% endif %}"
             data-module-key="{{ mod.sidebar_key }}">
             <div class="menu-title">
                 <div class="menu-left">
@@ -26,7 +27,7 @@
                     <span>{{ t(mod.display_name) }}</span>
                 </div>
                 <i
-                    class="fa-solid fa-chevron-{% if (ns.current_mod and mod.folder == ns.current_mod.folder) or (not ns.current_mod and loop.first) %}down{% else %}right{% endif %} toggle-icon"></i>
+                    class="fa-solid fa-chevron-{% if is_mod_open %}down{% else %}right{% endif %} toggle-icon"></i>
             </div>
             <div class="submenu">
                 {% if mod.has_docs %}
@@ -44,14 +45,14 @@
                 <span>{{ t(page.category) }}</span>
                 <i class="fa-solid fa-chevron-{% if is_active_cat %}down{% else %}right{% endif %} cat-icon"></i>
             </div>
-            <div class="nested-submenu" style="display: {% if is_active_cat %}block{% else %}none{% endif %};">
+            <div class="nested-submenu{% if is_active_cat %} active{% endif %}">
                 {% endif %}
 
                 {% set ns_cat.current = page.category %}
                 {% endif %}
 
                 <a href="{{ pathto(page.page_path) }}?module={{ mod.sidebar_key }}"
-                    class="submenu-item{% if not page.category %} root-item{% endif %}{% if page.page_path == pagename or (not ns.current_mod and loop.first) %} active{% endif %}"
+                    class="submenu-item{% if not page.category %} root-item{% endif %}{% if page.page_path == pagename %} active{% endif %}"
                     title="{{ t(page.label) }}">{{ t(page.label) }}</a>
 
                 {% endfor %}
@@ -63,7 +64,17 @@
             {% endif %}
         </div>
     </div>
+
     {% endfor %}
+
+        <div class="sidebar-bottom-links">
+            <a href="{{ pathto('docs/Articles/00-overview') }}" class="sidebar-bottom-item{% if pagename.startswith('docs/Articles') or pagename.startswith('Articles') %} active{% endif %}">
+                <span>{{ _('Articles') }}</span>
+            </a>
+            <a href="{{ pathto('docs/faq') }}" class="sidebar-bottom-item{% if pagename == 'docs/faq' or pagename == 'faq' %} active{% endif %}">
+                <span>{{ _('FAQ') }}</span>
+            </a>
+        </div>
     </div>
 
     <div class="sidebar-footer">
