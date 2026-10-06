@@ -10,8 +10,7 @@ If a payment is not linked to a specific invoice, it remains as an outstanding c
 
 In most organizations, invoices are marked as paid when the payment is received and matched through bank reconciliation. However, CURQ also allows users to manually register payments on customer and supplier invoices.
 
-> [!NOTE]
-> If supplier payments are processed through SEPA payment files, use the outgoing payments functionality described in the SEPA documentation. These payments are not processed through the standard Payments button.
+If supplier payments are processed through SEPA payment files, use the outgoing payments functionality described in the SEPA documentation. These payments are not processed through the standard Payments button.
 
 **Navigation:**
 `Invoicing → Suppliers → Outgoing Payments`
@@ -48,8 +47,6 @@ When you click **Register Payment**, CURQ automatically:
 
 Once the corresponding bank statement is imported and reconciled, CURQ automatically transfers the amount from the outstanding account to the bank account. This process creates a complete accounting trail and ensures that both the invoice and bank transaction are correctly recorded.
 
-*[Image placeholder: Payment Journal Entries]*
-
 ---
 
 ## Payment Information
@@ -64,8 +61,6 @@ From the payment details screen, you can view:
 - Related accounting entries
 
 Selecting **View** opens the complete payment record.
-
-*[Image placeholder: Payment Information Screen]*
 
 ---
 
@@ -123,8 +118,6 @@ In this menu, CURQ displays all outstanding payments, receipts, and open invoice
 - Supplier prepayments
 - Outstanding receipts
 - Outstanding payments
-
-*[Image placeholder: Reconciliation Overview]*
 
 ### Matching Payments and Invoices
 Within the reconciliation screen, you can select an outstanding payment and match it to the corresponding invoice or bill.

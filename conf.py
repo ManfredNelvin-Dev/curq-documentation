@@ -117,11 +117,11 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
         'description': 'Discover the module',
         'sidebar_key': 'contacts',
     },
-    'Chat': {
-        'display_name': 'Chats',
-        'icon': 'chats-icon.png',
+    'Discuss': {
+        'display_name': 'Discuss',
+        'icon': 'discuss-icon.png',
         'description': 'Discover the module',
-        'sidebar_key': 'chats',
+        'sidebar_key': 'discuss',
     },
 }
 
@@ -131,7 +131,6 @@ SUBMENU_LABELS: Dict[str, str] = {
     '02-procedures': 'Procedures',
     '03-articles': 'Articles',
     '04-faq': 'FAQ',
-    '05-reference': 'Reference',
 }
 
 def build_modules_context() -> List[Dict[str, Any]]:
@@ -188,7 +187,7 @@ def build_modules_context() -> List[Dict[str, Any]]:
 
                 folder_rel = str(md_file.parent.relative_to(folder_path))
                 if folder_rel == '.':
-                    category = 'FAQ' if 'faq' in basename.lower() else ''
+                    category = ''
                 else:
                     category = folder_rel.replace('-', ' ').replace('_', ' ')
                     category = leading_number_re.sub('', category).strip().title()

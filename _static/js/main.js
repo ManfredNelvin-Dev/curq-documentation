@@ -53,7 +53,55 @@ async function switchLanguage(lang) {
     }
 }
 
+function cleanHeadingNumbers() {
+    const bodyHeadings = document.querySelectorAll('.sphinx-content h2, .sphinx-content h3');
+    bodyHeadings.forEach(h => {
+        Array.from(h.childNodes).forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                node.nodeValue = node.nodeValue.replace(/^\s*\d+\.\s*/, '');
+            }
+        });
+    });
+
+    const tocLinks = document.querySelectorAll('.right-sidebar .toc-container a');
+    tocLinks.forEach(a => {
+        Array.from(a.childNodes).forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                node.nodeValue = node.nodeValue.replace(/^\s*\d+\.\s*/, '');
+            }
+        });
+    });
+}
+
+function initSidebarScroll() {
+    const sidebarContent = document.querySelector('.sidebar-content');
+    if (!sidebarContent) return;
+
+    const savedPos = sessionStorage.getItem('sidebar_scroll_position');
+    if (savedPos !== null) {
+        sidebarContent.scrollTop = parseInt(savedPos, 10);
+    } else {
+        const activeItem = sidebarContent.querySelector('.submenu-item.active');
+        if (activeItem) {
+            activeItem.scrollIntoView({ block: 'center', behavior: 'instant' });
+        }
+    }
+
+    const savePos = () => {
+        sessionStorage.setItem('sidebar_scroll_position', sidebarContent.scrollTop);
+    };
+
+    sidebarContent.addEventListener('scroll', debounce(savePos, 100));
+
+    sidebarContent.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', savePos);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    cleanHeadingNumbers();
+    initSidebarScroll();
+
     const savedLang = localStorage.getItem('preferred_lang');
     if (savedLang) {
         document.querySelectorAll('.language-selector').forEach(sel => {
@@ -74,36 +122,37 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
-});
 
-// Sidebar Dropdown Toggle
-document.querySelectorAll('.menu-title').forEach(title => {
-    title.addEventListener('click', () => {
-        const group = title.closest('.menu-group');
-        const icon = title.querySelector('.toggle-icon');
+    document.querySelectorAll('.menu-title').forEach(title => {
+        title.addEventListener('click', () => {
+            const group = title.closest('.menu-group');
+            const icon = title.querySelector('.toggle-icon');
 
-        group.classList.toggle('open');
+            group.classList.toggle('open');
 
-        if (group.classList.contains('open')) {
-            icon.classList.remove('fa-chevron-right');
-            icon.classList.add('fa-chevron-down');
-        } else {
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-chevron-right');
-        }
+            if (group.classList.contains('open')) {
+                icon.classList.remove('fa-chevron-right');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-right');
+            }
+        });
     });
-});
 
-document.querySelectorAll('.submenu-item').forEach(item => {
-    item.addEventListener('click', (e) => {
-        const href = item.getAttribute('href');
-
-        if (!href || href === '#') {
-            e.preventDefault();
-        }
-
-        document.querySelectorAll('.submenu-item').forEach(el => el.classList.remove('active'));
-        item.classList.add('active');
+    document.querySelectorAll('.submenu-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            const href = item.getAttribute('href');
+            if (!href || href === '#') {
+                e.preventDefault();
+            }
+            const sidebarContent = document.querySelector('.sidebar-content');
+            if (sidebarContent) {
+                sessionStorage.setItem('sidebar_scroll_position', sidebarContent.scrollTop);
+            }
+            document.querySelectorAll('.submenu-item').forEach(el => el.classList.remove('active'));
+            item.classList.add('active');
+        });
     });
 });
 
@@ -111,15 +160,20 @@ document.querySelectorAll('.submenu-item').forEach(item => {
 function toggleCategory(element) {
     const submenu = element.nextElementSibling;
     const icon = element.querySelector('.cat-icon');
+    if (!submenu) return;
 
     if (submenu.style.display === 'none' || submenu.style.display === '') {
         submenu.style.display = 'block';
-        icon.classList.remove('fa-chevron-right');
-        icon.classList.add('fa-chevron-down');
+        if (icon) {
+            icon.classList.remove('fa-chevron-right');
+            icon.classList.add('fa-chevron-down');
+        }
     } else {
         submenu.style.display = 'none';
-        icon.classList.remove('fa-chevron-down');
-        icon.classList.add('fa-chevron-right');
+        if (icon) {
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-right');
+        }
     }
 }
 
@@ -544,51 +598,52 @@ if (searchModal && modalInput) {
     setupKeyboardNavigation(modalInput, modalResults, window.closeSearchModal);
 }
 
-// FAQ Accordion Logic
-function initFaqAccordions() {
+// Static FAQ Card Formatting
+function formatFaqCards() {
     const path = window.location.pathname.toLowerCase();
-    if (path.includes('/faq/') || path.endsWith('/faq.html')) {
-        const headings = document.querySelectorAll('.sphinx-content h2');
+    if (path.includes('/faq') || path.endsWith('/faq.html')) {
+        const headings = document.querySelectorAll('.sphinx-content h2, .sphinx-content h3');
         headings.forEach(heading => {
             let container = heading.parentElement;
 
-            // MyST/Sphinx usually wraps headings in <section>
-            if (container && (container.tagName === 'SECTION' || container.classList.contains('section'))) {
-                const details = document.createElement('details');
-                details.className = 'faq-accordion';
+            if (!container || heading.tagName === 'H1' || heading.classList.contains('main-title')) return;
 
-                const summary = document.createElement('summary');
-                summary.innerHTML = heading.innerHTML;
-                // add icon wrapper
-                summary.innerHTML += '<i class="fa-solid fa-chevron-down accordion-icon"></i>';
-                details.appendChild(summary);
+            if (container && (container.tagName === 'SECTION' || container.classList.contains('section'))) {
+                const card = document.createElement('div');
+                card.className = 'faq-card-static';
 
                 const contentDiv = document.createElement('div');
-                contentDiv.className = 'faq-accordion-content';
+                contentDiv.className = 'faq-card-content';
 
-                // move all siblings after heading to contentDiv
+                const headingClone = heading.cloneNode(true);
+                Array.from(headingClone.childNodes).forEach(node => {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        node.nodeValue = node.nodeValue.replace(/^\s*\d+\.\s*/, '');
+                    }
+                });
+                contentDiv.appendChild(headingClone);
+
                 Array.from(container.childNodes).forEach(child => {
-                    if (child !== heading && child.tagName !== 'HR') {
-                        contentDiv.appendChild(child);
+                    if (child !== heading && child.tagName !== 'HR' && child.tagName !== 'H1' && child.tagName !== 'H2' && child.tagName !== 'H3') {
+                        contentDiv.appendChild(child.cloneNode(true));
                     }
                 });
 
-                details.appendChild(contentDiv);
+                card.appendChild(contentDiv);
 
                 container.innerHTML = '';
-                container.appendChild(details);
+                container.appendChild(card);
             }
         });
 
-        // Cleanup remaining HRs
         document.querySelectorAll('.sphinx-content hr').forEach(hr => hr.remove());
     }
 }
 
 if (document.readyState === 'loading') {
-    document.addEventListener("DOMContentLoaded", initFaqAccordions);
+    document.addEventListener("DOMContentLoaded", formatFaqCards);
 } else {
-    initFaqAccordions();
+    formatFaqCards();
 }
 
 // Mobile Sidebar Toggle

@@ -9,8 +9,7 @@ A VAT return provides detailed information about a company's taxable sales and p
 
 Accurate VAT reporting is essential for complying with legal requirements, maintaining financial transparency, and ensuring that tax obligations are met correctly. Proper VAT administration also helps avoid penalties and supports efficient business operations, including international trade activities.
 
-> [!NOTE]
-> Additional information about VAT (sales tax) can be found on the website of the relevant tax authority.
+Additional information about VAT (sales tax) can be found on the website of the relevant tax authority.
 
 ---
 
@@ -34,8 +33,7 @@ When creating a VAT return, complete the following fields:
 - **Amendment Date**
   Displays the most recent date on which changes were made to the VAT return.
 
-> [!IMPORTANT]
-> Marking a return as submitted in CURQ does not automatically send it to the tax authorities. The actual submission must still be completed manually through the tax authority's portal.
+Marking a return as submitted in CURQ does not automatically send it to the tax authorities. The actual submission must still be completed manually through the tax authority's portal.
 
 ---
 

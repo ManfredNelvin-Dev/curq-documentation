@@ -300,6 +300,52 @@ body {
     color: #16345f;
 }
 
+/* Static Non-Collapsible FAQ Cards for FAQ Pages */
+.faq-card-static {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.faq-card-static:hover {
+    border-color: #d0d5dd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.faq-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.faq-card-static h2,
+.faq-card-static h3 {
+    margin: 0 0 4px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #16345f !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.faq-card-static h2::before,
+.faq-card-static h3::before {
+    content: "" !important;
+}
+
+.faq-card-static p {
+    margin: 0 !important;
+    font-size: 13.5px !important;
+    color: #545669 !important;
+    line-height: 1.5 !important;
+}
+
 @media (max-width:992px) {
 
     .article-grid,

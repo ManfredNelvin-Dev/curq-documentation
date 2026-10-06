@@ -39,19 +39,20 @@
             {% endif %}
 
             {% if page.category %}
+            {% set is_active_cat = (ns.current_category and page.category == ns.current_category) %}
             <div class="submenu-category collapsible-cat" onclick="toggleCategory(this)">
                 <span>{{ t(page.category) }}</span>
-                <i class="fa-solid fa-chevron-right cat-icon"></i>
+                <i class="fa-solid fa-chevron-{% if is_active_cat %}down{% else %}right{% endif %} cat-icon"></i>
             </div>
-            <div class="nested-submenu" style="display: none;">
+            <div class="nested-submenu" style="display: {% if is_active_cat %}block{% else %}none{% endif %};">
                 {% endif %}
 
                 {% set ns_cat.current = page.category %}
                 {% endif %}
 
                 <a href="{{ pathto(page.page_path) }}?module={{ mod.sidebar_key }}"
-                    class="submenu-item{% if page.page_path == pagename or (not ns.current_mod and loop.first) %} active{% endif %}">{{
-                    t(page.label) }}</a>
+                    class="submenu-item{% if not page.category %} root-item{% endif %}{% if page.page_path == pagename or (not ns.current_mod and loop.first) %} active{% endif %}"
+                    title="{{ t(page.label) }}">{{ t(page.label) }}</a>
 
                 {% endfor %}
 

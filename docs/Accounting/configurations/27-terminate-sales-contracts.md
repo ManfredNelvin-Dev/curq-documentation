@@ -10,8 +10,6 @@ There are two ways to terminate a contract rule:
 
 Both methods prevent CURQ from generating future recurring invoices for that contract line.
 
-*[Image placeholder: Stop Contract Rule]*
-
 ---
 
 ## Stopping a Contract Rule
@@ -38,8 +36,6 @@ You can also terminate a contract rule directly through its configuration.
 
 The subscription will remain active until the specified date and will automatically stop generating invoices afterwards.
 
-*[Image placeholder: Contract Rule Configuration]*
-
 ---
 
 ## Temporary Suspension
@@ -64,5 +60,3 @@ To restart the subscription:
 - Remove or adjust the **End Date** if necessary.
 
 Once the rule becomes active again, CURQ will resume generating recurring invoices according to the configured billing schedule.
-
-*[Image placeholder: Restart Contract Rule]*

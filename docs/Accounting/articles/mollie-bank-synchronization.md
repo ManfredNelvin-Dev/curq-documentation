@@ -24,16 +24,13 @@ After creating the journal:
 
 Once configured, all payments processed through Mollie will automatically appear in the Mollie journal and can be reconciled with the related invoices.
 
-*[Image placeholder: Mollie synchronization configuration]*
-
 ---
 
 ## Mollie Organisation Access Token
 
 To connect CURQ with Mollie, you must provide a Mollie Organisation Access Token.
 
-> [!IMPORTANT]
-> This is not the standard Mollie Live API Key mentioned in the Mollie documentation. CURQ requires a separate Organisation Access Token.
+This is not the standard Mollie Live API Key mentioned in the Mollie documentation. CURQ requires a separate Organisation Access Token.
 
 ### Create an Organisation Access Token
 
@@ -45,8 +42,6 @@ To connect CURQ with Mollie, you must provide a Mollie Organisation Access Token
    - **Payments – Write**
 5. Generate the token and copy it.
 6. Paste the token into the Mollie Synchronization settings in CURQ.
-
-*[Image placeholder: Mollie Organisation Access Token setup]*
 
 ---
 

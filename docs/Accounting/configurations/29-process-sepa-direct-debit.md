@@ -83,8 +83,6 @@ When a sales invoice is created for a customer with an active mandate, CURQ auto
 
 The active mandate will be visible directly on the invoice.
 
-*[Image placeholder: Invoice with Mandate]*
-
 As soon as the invoice is validated, CURQ prepares the payment for inclusion in a SEPA Direct Debit batch.
 
 ---
@@ -113,11 +111,7 @@ Then select: **Create Transactions**
 
 CURQ automatically includes all invoices that meet the collection criteria and have a valid SEPA mandate.
 
-*[Image placeholder: Add Eligible Transactions]*
-
 The debit order now contains all transactions that will be included in the SEPA collection file.
-
-*[Image placeholder: Payment Order Transactions]*
 
 ---
 
@@ -170,5 +164,4 @@ If a customer withdraws authorization or the mandate is no longer valid:
 
 The mandate will be deactivated and can no longer be used for future collections.
 
-> [!WARNING]
-> Existing invoices already included in a submitted collection file are not automatically cancelled. Review any pending debit orders before cancelling a mandate.
+Existing invoices already included in a submitted collection file are not automatically cancelled. Review any pending debit orders before cancelling a mandate.

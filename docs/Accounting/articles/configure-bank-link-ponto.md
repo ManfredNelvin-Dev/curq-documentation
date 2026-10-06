@@ -27,8 +27,7 @@ When creating the connection:
 
 ![Ponto Connection Settings](images/ponto-connection-settings.png)
 
-> [!TIP]
-> It is recommended to keep the **Retrieve Interval** at **1 hour or higher** to ensure steady performance and avoid API rate limits.
+It is recommended to keep the **Retrieve Interval** at **1 hour or higher** to ensure steady performance and avoid API rate limits.
 
 ## Configure Bank Account Details
 
@@ -44,12 +43,10 @@ After creating the connection, you must configure the account details:
 
 ![Bank Account Number](images/bank-account-number.png)
 
-> [!IMPORTANT]
-> Make sure all bank details are entered accurately to ensure successful and uninterrupted synchronization.
+Make sure all bank details are entered accurately to ensure successful and uninterrupted synchronization.
 
 ## Result
 
 Once the setup is complete, CURQ can automatically retrieve bank transactions from your connected bank account. These transactions can then be reviewed and reconciled seamlessly within the Accounting module.
 
-> [!NOTE]
-> CURQ automatically saves changes as you make them. There is no need to manually save your configuration.
+CURQ automatically saves changes as you make them. There is no need to manually save your configuration.

@@ -61,8 +61,6 @@ For example:
 
 CURQ generates invoices based on the recurrence settings defined on each contract line.
 
-*[Image placeholder: Multiple Billing Periods in One Contract]*
-
 ### Invoice Every
 Define how frequently invoices should be generated. Available intervals include:
 - Days

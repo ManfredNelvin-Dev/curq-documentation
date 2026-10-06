@@ -19,6 +19,3 @@ Chat powers the chatter feed on every customer card, sales quotation, project ta
 | **I want to send a message or start a chat**<br>Go directly to the practical steps for opening channels, direct chats, and calls. | **I am here for the first time**<br>Explore how the inbox, channels, direct messages, and chatter work together. |
 | **Where do I see my notifications?**<br>Understand the Inbox, Starred messages, unread counters, and email alerts.                | **What can I configure in advance?**<br>Set up public or private channels, member access, and canned responses.  |
 
----
-
-[View all articles](./articles/streamlining-cross-department-collaboration.md) &nbsp;&nbsp;&nbsp;&nbsp; [Frequently asked questions](./faq/01-chat-and-communication-faq.md)

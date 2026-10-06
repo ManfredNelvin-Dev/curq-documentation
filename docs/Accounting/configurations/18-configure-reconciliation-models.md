@@ -25,8 +25,6 @@ For example, a reconciliation model can create a Bank Charges button that automa
 
 The configured button becomes available directly in the reconciliation screen:
 
-*[Image placeholder: Manual Counter Entry Button]*
-
 This approach is particularly useful for recurring transactions such as:
 - Bank charges
 - Interest expenses
@@ -44,8 +42,6 @@ For example, the model can be configured to:
 Only when both conditions are satisfied will CURQ automatically suggest the predefined ledger account.
 
 The result is that transactions matching the defined criteria immediately display the correct accounting proposal during reconciliation.
-
-*[Image placeholder: Automatic Counter Entry Proposal]*
 
 This method is useful for recurring transactions that follow predictable patterns and always require the same accounting treatment.
 
@@ -75,8 +71,6 @@ Small payment discrepancies can occur due to rounding differences, bank fees, or
 CURQ allows you to configure a **Payment Tolerance** within a reconciliation model. When the difference falls within the defined tolerance, the remaining amount can be automatically written off to a designated ledger account.
 
 For example, if the tolerance is set to €0.05, any difference below five cents can be automatically posted to a payment difference account.
-
-*[Image placeholder: Payment Tolerance Configuration]*
 
 This reduces manual intervention for insignificant payment variances.
 
@@ -110,8 +104,7 @@ When the difference falls within the specified tolerance, CURQ can automatically
 ### Automatic Confirmation
 When enabled, CURQ immediately confirms and processes the proposed reconciliation without requiring user approval.
 
-> [!WARNING]
-> Enable this option only when you are confident that the reconciliation model has been configured correctly.
+Enable this option only when you are confident that the reconciliation model has been configured correctly.
 
 ### Search Limit (Months)
 Restricts how far back CURQ searches for matching invoices or transactions.

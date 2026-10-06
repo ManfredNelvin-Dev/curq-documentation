@@ -22,11 +22,9 @@ You can access all transaction lines by selecting the three-dot menu (⋮) on th
 
 To reconcile transactions, click **Reconciliation Lines** on the relevant bank journal from the dashboard. CURQ will display all transaction lines that are ready for reconciliation. By default, only unreconciled lines are shown, but you can remove the search filter to display previously reconciled transactions as well.
 
-> [!IMPORTANT]
-> If you accidentally reconcile a transaction incorrectly, always remove the incorrect reconciliation entries first by deleting the associated lines before processing the transaction again.
+If you accidentally reconcile a transaction incorrectly, always remove the incorrect reconciliation entries first by deleting the associated lines before processing the transaction again.
 
-> [!NOTE]
-> When a transaction line is selected, it becomes highlighted. This indicates that the line is active and available for further actions such as assigning VAT codes, selecting accounts, or applying reconciliation models.
+When a transaction line is selected, it becomes highlighted. This indicates that the line is active and available for further actions such as assigning VAT codes, selecting accounts, or applying reconciliation models.
 
 ---
 

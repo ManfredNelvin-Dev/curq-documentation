@@ -35,8 +35,7 @@ Instead, the revenue can be spread evenly across the subscription period:
 
 The full €1,200 is initially recorded in a deferred revenue account and gradually recognized as revenue throughout the year.
 
-> [!NOTE]
-> Deferred revenue is also commonly referred to as Revenue Recognition, Accrual Accounting, or Deferred Income.
+Deferred revenue is also commonly referred to as Revenue Recognition, Accrual Accounting, or Deferred Income.
 
 ---
 

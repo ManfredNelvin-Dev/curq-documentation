@@ -10,8 +10,7 @@ Common reasons for submitting a supplementary return include:
 
 Submitting a supplementary return helps ensure that your VAT reporting remains accurate and up to date, while reducing the risk of penalties or compliance issues.
 
-> [!NOTE]
-> More information about correcting VAT returns can be found on the website of the Tax and Customs Administration under Correcting a VAT Return.
+More information about correcting VAT returns can be found on the website of the Tax and Customs Administration under Correcting a VAT Return.
 
 ---
 
@@ -43,8 +42,6 @@ Navigate to:
 `Accounting → Reports → NL BTW Statement`
 
 Create a VAT return for the current reporting period (for example, February 2024).
-
-*[Image placeholder: VAT Return creation screen]*
 
 ---
 

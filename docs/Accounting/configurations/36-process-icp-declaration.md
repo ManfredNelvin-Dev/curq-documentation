@@ -16,8 +16,7 @@ Submitting ICP declarations accurately and on time is not only a legal requireme
 - Maintain accurate records of international trade.
 - Ensure proper VAT treatment of cross-border transactions.
 
-> [!NOTE]
-> Additional information about ICP declarations can be found on the website of the Tax and Customs Administration under ICP Declaration.
+Additional information about ICP declarations can be found on the website of the Tax and Customs Administration under ICP Declaration.
 
 ---
 

@@ -90,10 +90,10 @@
                         {% set ns_btns = namespace(first_article=none, first_faq=none) %}
                         {% if ns.current_mod %}
                             {% for p in ns.current_mod.pages %}
-                                {% if p.category == 'Articles' and not ns_btns.first_article %}
+                                {% if (p.category == 'Articles' or 'article' in p.page_path.lower()) and not ns_btns.first_article %}
                                     {% set ns_btns.first_article = p %}
                                 {% endif %}
-                                {% if p.category == 'Faq' and not ns_btns.first_faq %}
+                                {% if (p.label == 'FAQ' or p.category == 'FAQ' or p.page_path.endswith('/faq') or p.page_path.endswith('faq')) and not ns_btns.first_faq %}
                                     {% set ns_btns.first_faq = p %}
                                 {% endif %}
                             {% endfor %}

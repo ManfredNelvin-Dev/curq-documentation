@@ -72,8 +72,7 @@ Archive financial reports, supporting documents, and accounting records in accor
 ### Financial Evaluation and Planning
 Review the company's financial performance and use the results to support strategic planning and decision-making for the next financial year.
 
-> [!NOTE]
-> Year-end closing requirements may vary depending on local regulations, company policies, and accounting practices. It is recommended to consult an accountant or financial professional before finalizing the year-end closing.
+Year-end closing requirements may vary depending on local regulations, company policies, and accounting practices. It is recommended to consult an accountant or financial professional before finalizing the year-end closing.
 
 ---
 
@@ -135,10 +134,7 @@ Configure the appropriate lock dates:
 - **Global Lock Date**: Prevents modifications to all accounting entries dated on or before the specified date.
 - **Hard Lock Date**: Permanently locks accounting entries before the selected date.
 
-> [!WARNING]
-> Even administrators cannot modify entries before the Hard Lock Date. Use this option with caution.
-
-*[Image placeholder: Accounting Lock Dates]*
+Even administrators cannot modify entries before the Hard Lock Date. Use this option with caution.
 
 ### 8. Review Balance Sheet and Profit & Loss Reports
 The Balance Sheet and Profit & Loss reports are essential for reviewing the financial year before closure.
@@ -153,8 +149,6 @@ These reports provide a complete overview of:
 - Company profitability
 
 For more information, refer to the MIS Reporting documentation.
-
-*[Image placeholder: MIS Reports Overview]*
 
 ### 9. Record Correction Entries
 After reviewing the accounting records, the accountant or auditor may identify corrections that need to be made.

@@ -6,8 +6,7 @@ The preferred method is to use bank synchronization, which automatically imports
 - Import bank transaction files provided by your bank.
 - Register bank transactions manually.
 
-> [!NOTE]
-> Grouping transactions into bank statements is optional and can be configured according to your preferred accounting workflow.
+Grouping transactions into bank statements is optional and can be configured according to your preferred accounting workflow.
 
 ---
 

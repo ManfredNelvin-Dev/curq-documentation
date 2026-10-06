@@ -14,8 +14,6 @@ When creating the supplier invoice, make sure to:
 - Fill in the **Invoice Reference** field on the supplier invoice. This field is mandatory for SEPA payment processing.
 - Validate (confirm) the supplier invoice.
 
-*[Image placeholder: Supplier invoice with supplier bank account and invoice reference completed]*
-
 ---
 
 ## 2. Create an Outgoing Payment Order
@@ -34,8 +32,6 @@ Click **New** to create a payment order.
 4. Review the invoices that will be included in the payment batch.
 5. Click **Create Transactions** to generate the payment transactions.
 
-*[Image placeholder: Outgoing Payment Order showing selected invoices]*
-
 ---
 
 ## 3. Generate the SEPA XML File
@@ -53,8 +49,6 @@ At this stage, CURQ generates a SEPA XML file containing all selected supplier p
 
 The actual file upload and payment authorization are performed outside CURQ using your banking platform.
 
-*[Image placeholder: Payment order in the "File Created" stage with generated XML file]*
-
 ---
 
 ## 4. Mark the File as Uploaded
@@ -65,8 +59,6 @@ This action performs the following updates:
 - The supplier invoices included in the batch are marked as **Paid**.
 - The total payment amount is posted to an intermediate clearing account (for example, the Creditors in Transit account).
 - The payment order is finalized within CURQ.
-
-*[Image placeholder: Payment order in the "File Uploaded" stage]*
 
 ---
 
@@ -84,5 +76,3 @@ During reconciliation:
 - The balance on the intermediate creditors account is cleared.
 - The supplier payment is fully settled.
 - The bank account balance is updated accordingly.
-
-*[Image placeholder: Bank reconciliation matching the payment order]*
