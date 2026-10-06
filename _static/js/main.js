@@ -123,7 +123,78 @@ function toggleCategory(element) {
     }
 }
 
-// Search Logic
+// ==========================================
+// CURQ Documentation Advanced Search Engine
+// ==========================================
+
+const searchCache = new Map();
+
+// Helper to debounce high-frequency input events
+function debounce(func, delay = 200) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
+// 1. Path & Metadata Extraction
+function parseDocMetadata(docname) {
+    const parts = docname.split('/');
+    let moduleName = 'General';
+    let sectionName = 'Article';
+
+    if (parts.length >= 2 && parts[0] === 'docs') {
+        moduleName = parts[1];
+        if (parts.length >= 3) {
+            const rawSec = parts[2].toLowerCase();
+            if (rawSec === 'manual') sectionName = 'Manual';
+            else if (rawSec === 'articles' || rawSec === 'article') sectionName = 'Article';
+            else if (rawSec === 'faq' || rawSec === 'faqs') sectionName = 'FAQ';
+            else if (rawSec === 'procedures' || rawSec === 'procedure') sectionName = 'Procedure';
+            else sectionName = rawSec.charAt(0).toUpperCase() + rawSec.slice(1);
+        }
+    }
+
+    return {
+        module: moduleName,
+        section: sectionName,
+        metaLine: `${sectionName} · ${moduleName}`
+    };
+}
+
+// Strip leading numbers from title for cleaner display (e.g. "1. Access ..." -> "Access ...")
+function cleanTitle(title) {
+    if (!title) return '';
+    return title.replace(/^\d+\.\s*/, '').trim();
+}
+
+// 2. Highlighting Utility
+function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function highlightText(text, tokens) {
+    if (!text || !tokens || tokens.length === 0) return text || '';
+
+    let htmlEscaped = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+
+    const sortedTokens = [...tokens].sort((a, b) => b.length - a.length);
+
+    sortedTokens.forEach(token => {
+        if (!token || token.length < 1) return;
+        const regex = new RegExp(`(${escapeRegExp(token)})`, 'gi');
+        htmlEscaped = htmlEscaped.replace(regex, '<mark class="search-highlight">$1</mark>');
+    });
+
+    return htmlEscaped;
+}
+
+// 3. Search Engine Algorithm & Scoring System
 let sphinxSearchIndex = null;
 window.Search = {
     setIndex: function (index) {
@@ -139,93 +210,299 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-function performSearch(query, labelElement, resultsContainer) {
-    if (query.length > 0) {
-        labelElement.textContent = `RESULTATEN VOOR "${query.toUpperCase()}"`;
+function searchDocumentation(rawQuery) {
+    const query = rawQuery.trim().toLowerCase();
+    if (!query) return [];
 
-        if (!sphinxSearchIndex) {
-            resultsContainer.innerHTML = '<p style="padding: 16px; font-size: 13px; color: #667085;">Loading search index...</p>';
-            return;
-        }
+    if (searchCache.has(query)) {
+        return searchCache.get(query);
+    }
 
-        let matchedIds = new Set();
+    if (!sphinxSearchIndex || !sphinxSearchIndex.docnames) {
+        return [];
+    }
 
-        sphinxSearchIndex.titles.forEach((title, id) => {
-            if (title.toLowerCase().includes(query)) matchedIds.add(id);
+    const qTokens = query.split(/\s+/).filter(t => t.length > 0);
+    if (qTokens.length === 0) return [];
+
+    const results = [];
+    const docCount = sphinxSearchIndex.docnames.length;
+
+    for (let docId = 0; docId < docCount; docId++) {
+        const rawTitle = sphinxSearchIndex.titles[docId] || '';
+        const title = cleanTitle(rawTitle);
+        const titleLower = title.toLowerCase();
+        const docname = sphinxSearchIndex.docnames[docId] || '';
+        const meta = parseDocMetadata(docname);
+
+        let totalScore = 0;
+        let matchedTokensCount = 0;
+        let matchedHeading = null;
+        let matchedTermList = [];
+
+        qTokens.forEach(qToken => {
+            let tokenScore = 0;
+            let tokenMatched = false;
+
+            // --- A. Title Matching ---
+            if (titleLower === query) {
+                tokenScore += 100;
+                tokenMatched = true;
+            } else if (titleLower === qToken) {
+                tokenScore += 90;
+                tokenMatched = true;
+            } else if (titleLower.startsWith(query)) {
+                tokenScore += 80;
+                tokenMatched = true;
+            } else if (titleLower.startsWith(qToken)) {
+                tokenScore += 70;
+                tokenMatched = true;
+            } else if (titleLower.includes(query)) {
+                tokenScore += 60;
+                tokenMatched = true;
+            } else if (titleLower.includes(qToken)) {
+                tokenScore += 50;
+                tokenMatched = true;
+            }
+
+            // --- B. Heading Matching (alltitles) ---
+            if (sphinxSearchIndex.alltitles) {
+                for (const headingText in sphinxSearchIndex.alltitles) {
+                    const entries = sphinxSearchIndex.alltitles[headingText];
+                    const belongsToDoc = entries.some(entry => entry[0] === docId);
+
+                    if (belongsToDoc) {
+                        const cleanHead = cleanTitle(headingText);
+                        const headLower = cleanHead.toLowerCase();
+
+                        if (headLower === qToken || headLower === query) {
+                            tokenScore += 40;
+                            tokenMatched = true;
+                            matchedHeading = cleanHead;
+                        } else if (headLower.startsWith(qToken)) {
+                            tokenScore += 35;
+                            tokenMatched = true;
+                            if (!matchedHeading) matchedHeading = cleanHead;
+                        } else if (headLower.includes(qToken)) {
+                            tokenScore += 30;
+                            tokenMatched = true;
+                            if (!matchedHeading) matchedHeading = cleanHead;
+                        }
+                    }
+                }
+            }
+
+            // --- C. Titleterms Matching ---
+            if (sphinxSearchIndex.titleterms) {
+                for (const term in sphinxSearchIndex.titleterms) {
+                    if (term === qToken) {
+                        const docs = sphinxSearchIndex.titleterms[term];
+                        const hits = Array.isArray(docs) ? docs.includes(docId) : docs === docId;
+                        if (hits) {
+                            tokenScore += 30;
+                            tokenMatched = true;
+                        }
+                    } else if (qToken.length >= 2 && term.startsWith(qToken)) {
+                        const docs = sphinxSearchIndex.titleterms[term];
+                        const hits = Array.isArray(docs) ? docs.includes(docId) : docs === docId;
+                        if (hits) {
+                            tokenScore += 20;
+                            tokenMatched = true;
+                        }
+                    }
+                }
+            }
+
+            // --- D. Terms Matching (Body / Content) ---
+            if (sphinxSearchIndex.terms) {
+                for (const term in sphinxSearchIndex.terms) {
+                    if (term === qToken) {
+                        const docs = sphinxSearchIndex.terms[term];
+                        const hits = Array.isArray(docs) ? docs.includes(docId) : docs === docId;
+                        if (hits) {
+                            tokenScore += 20;
+                            tokenMatched = true;
+                            matchedTermList.push(term);
+                        }
+                    } else if (qToken.length >= 2 && term.startsWith(qToken)) {
+                        const docs = sphinxSearchIndex.terms[term];
+                        const hits = Array.isArray(docs) ? docs.includes(docId) : docs === docId;
+                        if (hits) {
+                            tokenScore += 10;
+                            tokenMatched = true;
+                            matchedTermList.push(term);
+                        }
+                    }
+                }
+            }
+
+            if (tokenMatched) {
+                matchedTokensCount++;
+                totalScore += tokenScore;
+            }
         });
 
-        for (let term in sphinxSearchIndex.terms) {
-            if (term.includes(query) || query.includes(term)) {
-                let docs = sphinxSearchIndex.terms[term];
-                if (Array.isArray(docs)) docs.forEach(id => matchedIds.add(id));
-                else matchedIds.add(docs);
+        // Multi-Word Query Bonus
+        if (qTokens.length > 1 && matchedTokensCount === qTokens.length) {
+            totalScore += 50;
+        }
+
+        if (totalScore > 0) {
+            let snippet = '';
+            if (matchedHeading) {
+                snippet = `Section: ${matchedHeading}`;
+            } else if (matchedTermList.length > 0) {
+                const termsPreview = [...new Set(matchedTermList)].slice(0, 3).join(', ');
+                snippet = `Contains relevant guidance regarding ${termsPreview} in ${meta.module}.`;
+            } else {
+                snippet = `Documentation resource for ${meta.section} in ${meta.module}.`;
             }
+
+            const base_url = window.CURQ_CONFIG ? window.CURQ_CONFIG.baseUrl : '/';
+            const url = base_url + docname + '.html';
+
+            results.push({
+                docId,
+                title,
+                docname,
+                meta,
+                score: totalScore,
+                snippet,
+                url,
+                tokens: qTokens
+            });
         }
+    }
 
-        for (let term in sphinxSearchIndex.titleterms) {
-            if (term.includes(query) || query.includes(term)) {
-                let docs = sphinxSearchIndex.titleterms[term];
-                if (Array.isArray(docs)) docs.forEach(id => matchedIds.add(id));
-                else matchedIds.add(docs);
-            }
-        }
+    results.sort((a, b) => b.score - a.score);
 
-        if (matchedIds.size === 0) {
-            resultsContainer.innerHTML = '<p style="padding: 16px; font-size: 13px; color: #667085;">No results found.</p>';
-            return;
-        }
+    const topResults = results.slice(0, 15);
+    searchCache.set(query, topResults);
+    return topResults;
+}
 
-        let html = '';
-        const base_url = window.CURQ_CONFIG ? window.CURQ_CONFIG.baseUrl : '/';
-
-        let count = 0;
-        matchedIds.forEach(id => {
-            if (count >= 10) return;
-            count++;
-
-            const title = sphinxSearchIndex.titles[id];
-            let docname = sphinxSearchIndex.docnames[id];
-            let url = base_url + docname + '.html';
-            let displayPath = docname.replace('docs/', '').replace(/\//g, ' / ');
-
-            html += `
-                <a href="${url}" class="search-result-card">
-                    <div class="search-result-text">
-                        <h4>${title}</h4>
-                        <p>${displayPath}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            `;
-        });
-
-        resultsContainer.innerHTML = html;
-    } else {
+// 4. Render Results Card HTML
+function renderSearchResults(results, labelElement, resultsContainer, query) {
+    if (!query || query.trim().length === 0) {
         labelElement.textContent = "SEARCH";
         resultsContainer.innerHTML = "";
+        return;
     }
+
+    labelElement.textContent = `RESULTATEN VOOR "${query.toUpperCase()}"`;
+
+    if (!sphinxSearchIndex) {
+        resultsContainer.innerHTML = '<p style="padding: 16px; font-size: 13px; color: #667085;">Loading search index...</p>';
+        return;
+    }
+
+    if (results.length === 0) {
+        resultsContainer.innerHTML = `<p style="padding: 16px; font-size: 13px; color: #667085;">No results found for "${query}".</p>`;
+        return;
+    }
+
+    let html = '';
+    results.forEach((res, index) => {
+        const highlightedTitle = highlightText(res.title, res.tokens);
+        const highlightedSnippet = highlightText(res.snippet, res.tokens);
+        const highlightedMeta = highlightText(res.meta.metaLine, res.tokens);
+
+        html += `
+            <a href="${res.url}" class="search-result-card${index === 0 ? ' selected' : ''}" data-index="${index}">
+                <div class="search-result-content">
+                    <div class="search-result-header">
+                        <h4 class="search-result-title">${highlightedTitle}</h4>
+                        <span class="search-result-badge">${highlightedMeta}</span>
+                    </div>
+                    ${res.snippet ? `<p class="search-result-snippet">${highlightedSnippet}</p>` : ''}
+                </div>
+                <div class="search-result-arrow-wrap">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+        `;
+    });
+
+    resultsContainer.innerHTML = html;
+}
+
+function performSearch(query, labelElement, resultsContainer) {
+    const results = searchDocumentation(query);
+    renderSearchResults(results, labelElement, resultsContainer, query);
+}
+
+// Keyboard Navigation Helper
+function setupKeyboardNavigation(inputEl, resultsContainer, onClose) {
+    let selectedIndex = 0;
+
+    function getCards() {
+        return resultsContainer.querySelectorAll('.search-result-card');
+    }
+
+    function updateSelection(cards) {
+        cards.forEach((card, idx) => {
+            if (idx === selectedIndex) {
+                card.classList.add('selected');
+                card.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            } else {
+                card.classList.remove('selected');
+            }
+        });
+    }
+
+    inputEl.addEventListener('keydown', (e) => {
+        const cards = getCards();
+        if (cards.length === 0) return;
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            selectedIndex = (selectedIndex + 1) % cards.length;
+            updateSelection(cards);
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            selectedIndex = (selectedIndex - 1 + cards.length) % cards.length;
+            updateSelection(cards);
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (cards[selectedIndex]) {
+                const targetUrl = cards[selectedIndex].getAttribute('href');
+                if (targetUrl) window.location.href = targetUrl;
+            }
+        } else if (e.key === 'Escape') {
+            e.preventDefault();
+            if (onClose) onClose();
+        }
+    });
 }
 
 // Landing Page Inline Search
 const landingInput = document.getElementById('landing-search-input');
 if (landingInput) {
-    landingInput.addEventListener('input', function (e) {
-        const query = e.target.value.trim().toLowerCase();
-        const dropdown = document.getElementById('landing-search-dropdown');
-        const label = document.getElementById('landing-search-results-label');
-        const results = document.getElementById('landing-search-results');
+    const landingDropdown = document.getElementById('landing-search-dropdown');
+    const landingLabel = document.getElementById('landing-search-results-label');
+    const landingResults = document.getElementById('landing-search-results');
 
+    const debouncedLandingSearch = debounce((query) => {
         if (query.length > 0) {
-            dropdown.style.display = 'block';
-            performSearch(query, label, results);
+            landingDropdown.style.display = 'block';
+            performSearch(query, landingLabel, landingResults);
         } else {
-            dropdown.style.display = 'none';
+            landingDropdown.style.display = 'none';
         }
+    }, 200);
+
+    landingInput.addEventListener('input', function (e) {
+        const query = e.target.value.trim();
+        debouncedLandingSearch(query);
     });
 
-    document.getElementById('close-landing-search').addEventListener('click', function () {
-        document.getElementById('landing-search-dropdown').style.display = 'none';
+    document.getElementById('close-landing-search')?.addEventListener('click', function () {
+        landingDropdown.style.display = 'none';
         landingInput.value = '';
+    });
+
+    setupKeyboardNavigation(landingInput, landingResults, () => {
+        landingDropdown.style.display = 'none';
     });
 }
 
@@ -234,6 +511,9 @@ const searchModal = document.getElementById('search-modal');
 const modalInput = document.getElementById('search-modal-input');
 
 if (searchModal && modalInput) {
+    const modalLabel = document.getElementById('search-results-label');
+    const modalResults = document.getElementById('search-modal-results');
+
     window.openSearchModal = function () {
         searchModal.classList.add('active');
         modalInput.focus();
@@ -242,22 +522,26 @@ if (searchModal && modalInput) {
     window.closeSearchModal = function () {
         searchModal.classList.remove('active');
         modalInput.value = '';
-        document.getElementById('search-results-label').textContent = 'SEARCH';
-        document.getElementById('search-modal-results').innerHTML = '';
+        if (modalLabel) modalLabel.textContent = 'SEARCH';
+        if (modalResults) modalResults.innerHTML = '';
     };
 
-    document.querySelector('.close-modal').addEventListener('click', window.closeSearchModal);
+    document.querySelector('.close-modal')?.addEventListener('click', window.closeSearchModal);
 
     searchModal.addEventListener('click', function (e) {
         if (e.target === this) window.closeSearchModal();
     });
 
+    const debouncedModalSearch = debounce((query) => {
+        performSearch(query, modalLabel, modalResults);
+    }, 200);
+
     modalInput.addEventListener('input', function (e) {
-        const query = e.target.value.trim().toLowerCase();
-        const label = document.getElementById('search-results-label');
-        const results = document.getElementById('search-modal-results');
-        performSearch(query, label, results);
+        const query = e.target.value.trim();
+        debouncedModalSearch(query);
     });
+
+    setupKeyboardNavigation(modalInput, modalResults, window.closeSearchModal);
 }
 
 // FAQ Accordion Logic
