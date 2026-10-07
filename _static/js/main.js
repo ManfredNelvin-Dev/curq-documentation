@@ -630,46 +630,91 @@ if (searchModal && modalInput) {
     setupKeyboardNavigation(modalInput, modalResults, window.closeSearchModal);
 }
 
-// Static FAQ Card Formatting
+// Collapsible FAQ Accordion Formatting
 function formatFaqCards() {
     const path = window.location.pathname.toLowerCase();
-    if (path.includes('/faq') || path.endsWith('/faq.html')) {
-        const headings = document.querySelectorAll('.sphinx-content h2, .sphinx-content h3');
-        headings.forEach(heading => {
-            let container = heading.parentElement;
+    const isFaqPage = path.includes('/faq') || path.endsWith('/faq.html') || document.querySelector('.sphinx-content h1')?.textContent.toLowerCase().includes('faq');
 
-            if (!container || heading.tagName === 'H1' || heading.classList.contains('main-title')) return;
+    if (!isFaqPage) return;
 
-            if (container && (container.tagName === 'SECTION' || container.classList.contains('section'))) {
-                const card = document.createElement('div');
-                card.className = 'faq-card-static';
+    const mainContent = document.querySelector('.sphinx-content');
+    if (!mainContent) return;
 
-                const contentDiv = document.createElement('div');
-                contentDiv.className = 'faq-card-content';
+    const sections = Array.from(mainContent.querySelectorAll('section')).filter(sec => {
+        const heading = sec.querySelector('h2, h3');
+        return heading && sec.parentElement && sec.parentElement.tagName === 'SECTION';
+    });
 
-                const headingClone = heading.cloneNode(true);
-                Array.from(headingClone.childNodes).forEach(node => {
-                    if (node.nodeType === Node.TEXT_NODE) {
-                        node.nodeValue = node.nodeValue.replace(/^\s*\d+\.\s*/, '');
-                    }
-                });
-                contentDiv.appendChild(headingClone);
+    if (sections.length === 0) return;
 
-                Array.from(container.childNodes).forEach(child => {
-                    if (child !== heading && child.tagName !== 'HR' && child.tagName !== 'H1' && child.tagName !== 'H2' && child.tagName !== 'H3') {
-                        contentDiv.appendChild(child.cloneNode(true));
-                    }
-                });
+    // Convert each section into an accordion item
+    sections.forEach(section => {
+        if (section.classList.contains('faq-accordion-item')) return;
 
-                card.appendChild(contentDiv);
+        const heading = section.querySelector('h2, h3');
+        if (!heading) return;
 
-                container.innerHTML = '';
-                container.appendChild(card);
+        section.classList.add('faq-accordion-item');
+
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'faq-accordion-header';
+
+        const titleEl = heading.cloneNode(true);
+        titleEl.classList.add('faq-question-title');
+        titleEl.querySelectorAll('.headerlink').forEach(hl => hl.remove());
+
+        const icon = document.createElement('i');
+        icon.className = 'fa-solid fa-chevron-down faq-toggle-icon';
+
+        headerDiv.appendChild(titleEl);
+        headerDiv.appendChild(icon);
+
+        const answerDiv = document.createElement('div');
+        answerDiv.className = 'faq-answer';
+
+        const answerInner = document.createElement('div');
+        answerInner.className = 'faq-answer-inner';
+
+        Array.from(section.childNodes).forEach(child => {
+            if (child !== heading && child.tagName !== 'HR') {
+                answerInner.appendChild(child);
             }
         });
 
-        document.querySelectorAll('.sphinx-content hr').forEach(hr => hr.remove());
+        answerDiv.appendChild(answerInner);
+
+        section.innerHTML = '';
+        section.appendChild(headerDiv);
+        section.appendChild(answerDiv);
+
+        headerDiv.addEventListener('click', () => {
+            const isOpen = section.classList.contains('open');
+            if (isOpen) {
+                section.classList.remove('open');
+                answerDiv.style.maxHeight = '0px';
+            } else {
+                section.classList.add('open');
+                answerDiv.style.maxHeight = answerInner.scrollHeight + 40 + 'px';
+            }
+        });
+    });
+
+    // Auto-open section if anchor target exists in URL hash
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const targetSec = document.getElementById(targetId);
+        if (targetSec && targetSec.classList.contains('faq-accordion-item')) {
+            targetSec.classList.add('open');
+            const ans = targetSec.querySelector('.faq-answer');
+            const inner = targetSec.querySelector('.faq-answer-inner');
+            if (ans && inner) ans.style.maxHeight = inner.scrollHeight + 40 + 'px';
+            setTimeout(() => {
+                targetSec.scrollIntoView({ behavior: 'smooth' });
+            }, 200);
+        }
     }
+
+    document.querySelectorAll('.sphinx-content hr').forEach(hr => hr.remove());
 }
 
 if (document.readyState === 'loading') {
