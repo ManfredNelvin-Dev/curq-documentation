@@ -229,23 +229,55 @@ function escapeRegExp(str) {
 }
 
 function highlightText(text, tokens) {
-    if (!text || !tokens || tokens.length === 0) return text || '';
-
-    let htmlEscaped = text
+    if (!text) return '';
+    const escapeHtml = (str) => str
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;");
 
-    const sortedTokens = [...tokens].sort((a, b) => b.length - a.length);
+    if (!tokens || tokens.length === 0) return escapeHtml(text);
 
-    sortedTokens.forEach(token => {
-        if (!token || token.length < 1) return;
-        const regex = new RegExp(`(${escapeRegExp(token)})`, 'gi');
-        htmlEscaped = htmlEscaped.replace(regex, '<mark class="search-highlight">$1</mark>');
+    const validTokens = tokens.map(t => typeof t === 'string' ? t.trim() : '').filter(t => t.length > 0);
+    if (validTokens.length === 0) return escapeHtml(text);
+
+    const intervals = [];
+    validTokens.forEach(token => {
+        const regex = new RegExp(escapeRegExp(token), 'gi');
+        let match;
+        while ((match = regex.exec(text)) !== null) {
+            intervals.push([match.index, match.index + match[0].length]);
+            if (regex.lastIndex === match.index) {
+                regex.lastIndex++;
+            }
+        }
     });
 
-    return htmlEscaped;
+    if (intervals.length === 0) return escapeHtml(text);
+
+    intervals.sort((a, b) => a[0] - b[0]);
+
+    const merged = [intervals[0]];
+    for (let i = 1; i < intervals.length; i++) {
+        const prev = merged[merged.length - 1];
+        const curr = intervals[i];
+        if (curr[0] <= prev[1]) {
+            prev[1] = Math.max(prev[1], curr[1]);
+        } else {
+            merged.push(curr);
+        }
+    }
+
+    let result = '';
+    let lastIndex = 0;
+    merged.forEach(([start, end]) => {
+        result += escapeHtml(text.slice(lastIndex, start));
+        result += '<mark class="search-highlight">' + escapeHtml(text.slice(start, end)) + '</mark>';
+        lastIndex = end;
+    });
+    result += escapeHtml(text.slice(lastIndex));
+
+    return result;
 }
 
 // 3. Search Engine Algorithm & Scoring System
@@ -443,7 +475,7 @@ function renderSearchResults(results, labelElement, resultsContainer, query) {
         return;
     }
 
-    labelElement.textContent = `RESULTATEN VOOR "${query.toUpperCase()}"`;
+    labelElement.textContent = `RESULTS FOR "${query.toUpperCase()}"`;
 
     if (!sphinxSearchIndex) {
         resultsContainer.innerHTML = '<p style="padding: 16px; font-size: 13px; color: #667085;">Loading search index...</p>';
