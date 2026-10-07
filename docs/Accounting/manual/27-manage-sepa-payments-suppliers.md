@@ -21,7 +21,7 @@ When creating the supplier invoice, make sure to:
 Once the supplier invoices have been validated, they can be added to a SEPA payment batch.
 
 **Navigation:**
-`Accounting → Vendors → Outgoing Payment Orders`
+`Accounting → Vendors → Payment Orders`
 
 Click **New** to create a payment order.
 

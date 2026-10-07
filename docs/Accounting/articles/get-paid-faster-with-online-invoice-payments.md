@@ -1,10 +1,10 @@
-# Online Invoice Payments
+# Get Paid Faster with Online Invoice Payments
 
-## Overview
+Collecting customer payments efficiently is essential for maintaining healthy cash flow. Traditional payment methods often require customers to manually transfer funds, enter invoice references correctly, and notify the supplier once payment has been made. These additional steps can lead to delayed payments, administrative overhead, and increased follow-up efforts.
 
-CURQ allows customers to pay invoices directly online through the Customer Portal. When the **Pay Invoice Online** feature is enabled, a **Pay Now** button is added to customer invoices, making it easy for customers to view and pay outstanding invoices using their preferred payment method.
+CURQ simplifies the payment process by allowing customers to pay invoices directly online through the Customer Portal. By integrating with trusted payment providers such as Mollie, customers can securely settle outstanding invoices using their preferred payment method. Once a payment is completed, CURQ automatically updates the invoice status and records the payment in the accounting system.
 
-This streamlined payment process improves the customer experience, accelerates payment collection, and automatically updates invoice statuses within CURQ.
+This functionality helps organizations reduce manual administration, improve payment collection, and provide a better customer experience.
 
 ---
 

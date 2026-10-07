@@ -100,15 +100,3 @@ Once verified:
 2. Return to CURQ.
 3. Mark the VAT return as **Submitted** and then **Final** when the process has been completed.
 
----
-
-## Benefits of Historical Transaction Processing
-
-The historical transaction functionality in CURQ helps organizations:
-- Include late-arriving invoices without modifying finalized VAT periods.
-- Maintain accurate VAT reporting.
-- Correct reporting omissions efficiently.
-- Keep accounting records aligned with tax submissions.
-- Reduce the need for manual VAT recalculations.
-
-By using the Historical Undeclared Transactions feature, businesses can ensure that previously missed invoices are correctly reflected in future VAT returns while maintaining a clear audit trail of all adjustments.

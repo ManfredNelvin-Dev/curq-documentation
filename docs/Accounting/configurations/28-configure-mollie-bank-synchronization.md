@@ -22,6 +22,8 @@ After creating the journal:
 2. Navigate to the **Bank Feeds** section.
 3. Select **Mollie Synchronization** as the synchronization method.
 
+![Mollie Journal Configuration](images/mollie-journal-configuration.png)
+
 Once configured, all payments processed through Mollie will automatically appear in the Mollie journal and can be reconciled with the related invoices.
 
 ---
@@ -42,6 +44,8 @@ This is not the standard Mollie Live API Key mentioned in the Mollie documentati
    - **Payments – Write**
 5. Generate the token and copy it.
 6. Paste the token into the Mollie Synchronization settings in CURQ.
+
+![Mollie Developer Dashboard](images/mollie-developer-dashboard.png)
 
 ---
 

@@ -25,6 +25,8 @@ To import a transaction file:
 4. Upload the transaction file.
 5. Confirm the import.
 
+![Import Statement (OCA)](images/import-statement-oca.png)
+
 After importing, the transactions become available for reconciliation against invoices, payments, and other accounting entries.
 
 ### Import Transactions via CSV or Excel
@@ -32,12 +34,14 @@ CURQ also supports importing bank transactions from CSV and Excel files.
 Because banks often use different export formats, it is recommended to configure a dedicated import template for each bank.
 
 **Navigation:**
-`Invoicing → Configuration → Statement Sheet Mappings`
+`Accounting → Configuration → Statement Sheet Mappings`
 
 This menu allows you to define how columns from bank exports should be mapped to transaction fields in CURQ.
 
 ### KNAB Bank Support
 Some banks, such as KNAB, do not provide CAMT files. For this reason, CURQ includes a predefined import format for KNAB during installation. CSV files exported from KNAB can therefore be imported directly without additional configuration.
+
+![KNAB Import Mapping](images/knab-import-mapping.png)
 
 Since file layouts differ between banks, some banks may require a custom import template. If assistance is needed, contact the CURQ support team for help configuring the import format.
 
@@ -51,8 +55,13 @@ To create a transaction manually:
 1. Navigate to `Accounting → Dashboard`.
 2. Click the name of the Bank Journal.
 3. Open the **Transactions** list.
-4. Click **New**.
+
+![Bank Journal Transactions](images/bank-journal-transactions.png)
+
+4. Click **New** (or **Create**).
 5. Enter the transaction details and save the record.
+
+![Create Manual Transaction](images/create-manual-transaction.png)
 
 When creating manual transactions, it is recommended to complete the following fields:
 - **Partner**
