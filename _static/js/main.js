@@ -628,6 +628,229 @@ if (searchModal && modalInput) {
     });
 
     setupKeyboardNavigation(modalInput, modalResults, window.closeSearchModal);
+
+    document.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            if (!searchModal.classList.contains('active')) {
+                window.openSearchModal();
+            }
+        }
+    });
+}
+
+// Overview Cards Formatting
+function formatOverviewCards() {
+    const path = window.location.pathname.toLowerCase();
+    const isOverviewPage = path.includes('/00-overview') || (document.querySelector('.sphinx-content h1') && document.querySelector('.sphinx-content h1').textContent.toLowerCase().includes('overview'));
+
+    if (!isOverviewPage) return;
+
+    const mainContent = document.querySelector('.sphinx-content');
+    if (!mainContent) return;
+
+    const headings = Array.from(mainContent.querySelectorAll('h2')).filter(h2 => h2.querySelector('a.reference.internal'));
+
+    if (headings.length === 0) return;
+
+    // Create a grid container for the 2-column layout
+    const gridContainer = document.createElement('div');
+    gridContainer.className = 'custom-overview-grid';
+    gridContainer.style.display = 'grid';
+    gridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+    gridContainer.style.gridAutoRows = '1fr';
+    gridContainer.style.gap = '16px';
+    gridContainer.style.marginTop = '24px';
+
+    const firstSection = headings[0].closest('section');
+    if (firstSection) {
+        firstSection.parentNode.insertBefore(gridContainer, firstSection);
+    }
+
+    headings.forEach(h2 => {
+        const linkEl = h2.querySelector('a.reference.internal');
+        const section = h2.closest('section');
+
+        let pEl = h2.nextElementSibling;
+        while (pEl && pEl.tagName !== 'P') {
+            pEl = pEl.nextElementSibling;
+        }
+
+        const title = linkEl.textContent;
+        const url = linkEl.getAttribute('href');
+        const subtitle = pEl ? pEl.textContent : '';
+
+        const card = document.createElement('a');
+        card.href = url;
+        card.className = 'search-result-card'; // Reuse this styling
+        card.style.display = 'flex';
+        card.style.marginBottom = '0';
+        card.style.height = '100%';
+
+        card.innerHTML = `
+            <div class="search-result-content">
+                <div class="search-result-header" style="margin-bottom: 4px;">
+                    <h4 class="search-result-title" style="font-size: 16px; font-weight: 700;">${title}</h4>
+                </div>
+                <span class="search-result-snippet" style="font-size: 13px; color: #667085;">${subtitle}</span>
+            </div>
+            <div class="search-result-arrow-wrap">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        `;
+
+        gridContainer.appendChild(card);
+        if (section) {
+            section.style.display = 'none'; // hide the original section
+        }
+    });
+}
+
+// Format Quick Actions Tables
+function formatQuickActionTables() {
+    const headings = Array.from(document.querySelectorAll('.sphinx-content h3'));
+    const qaHeadings = headings.filter(h => h.textContent.includes('Quick Actions'));
+
+    qaHeadings.forEach(heading => {
+        let nextEl = heading.nextElementSibling;
+        if (nextEl && nextEl.tagName === 'TABLE') {
+            const table = nextEl;
+
+            const gridContainer = document.createElement('div');
+            gridContainer.className = 'custom-overview-grid';
+            gridContainer.style.display = 'grid';
+            gridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            gridContainer.style.gridAutoRows = '1fr';
+            gridContainer.style.gap = '16px';
+            gridContainer.style.marginTop = '16px';
+            gridContainer.style.marginBottom = '32px';
+
+            const cells = Array.from(table.querySelectorAll('tbody td'));
+            cells.forEach(cell => {
+                const strong = cell.querySelector('strong');
+                if (!strong) return;
+
+                const title = strong.textContent;
+
+                let subtitle = '';
+                const br = cell.querySelector('br');
+                if (br && br.nextSibling) {
+                    subtitle = br.nextSibling.textContent.trim();
+                } else {
+                    const clone = cell.cloneNode(true);
+                    if (clone.querySelector('strong')) clone.querySelector('strong').remove();
+                    if (clone.querySelector('br')) clone.querySelector('br').remove();
+                    subtitle = clone.textContent.trim();
+                }
+
+                const card = document.createElement('a');
+                card.href = 'javascript:void(0)';
+                card.className = 'search-result-card';
+                card.style.display = 'flex';
+                card.style.marginBottom = '0';
+                card.style.alignItems = 'flex-start';
+                card.style.height = '100%';
+
+                card.innerHTML = `
+                    <div class="search-result-content">
+                        <div class="search-result-header" style="margin-bottom: 8px;">
+                            <h4 class="search-result-title" style="font-size: 16px; font-weight: 700; white-space: normal;">${title}</h4>
+                        </div>
+                        <span class="search-result-snippet" style="font-size: 13px; color: #667085; display: block; white-space: normal;">${subtitle}</span>
+                    </div>
+                `;
+
+                gridContainer.appendChild(card);
+            });
+
+            table.parentNode.insertBefore(gridContainer, table);
+            table.style.display = 'none';
+        }
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener("DOMContentLoaded", () => {
+        formatOverviewCards();
+        formatQuickActionTables();
+        formatLandingPageCards();
+    });
+} else {
+    formatOverviewCards();
+    formatQuickActionTables();
+    formatLandingPageCards();
+}
+
+function formatLandingPageCards() {
+    const popSection = document.querySelector('.popular-articles-section .container');
+    const faqSection = document.querySelector('.faq-section .container');
+
+    const welcomeHeading = document.querySelector('#welcome-to-curq-documentation h1');
+    if (welcomeHeading) {
+        welcomeHeading.style.display = 'none';
+    }
+
+    [popSection, faqSection].forEach(container => {
+        if (!container) return;
+        
+        // Find the main section title (the one without a link) and make it an h2 if it's a p.rubric
+        const allRubrics = container.querySelectorAll('p.rubric, h2');
+        allRubrics.forEach(el => {
+            if (!el.querySelector('a')) {
+                if (el.tagName === 'P') {
+                    const h2 = document.createElement('h2');
+                    h2.innerHTML = el.innerHTML;
+                    h2.className = el.className;
+                    h2.id = el.id;
+                    el.parentNode.replaceChild(h2, el);
+                }
+            }
+        });
+
+        const headings = Array.from(container.querySelectorAll('h2, p.rubric')).filter(el => {
+            return el.querySelector('a.reference.internal') || el.querySelector('a.reference.external');
+        });
+        if (headings.length === 0) return;
+
+        const isFaq = container === faqSection;
+        const gridClass = isFaq ? 'faq-list' : 'article-grid';
+        const cardClass = isFaq ? 'faq-card' : 'article-card';
+
+        const gridContainer = document.createElement('div');
+        gridContainer.className = gridClass;
+
+        container.appendChild(gridContainer);
+
+        headings.forEach(headingEl => {
+            const linkEl = headingEl.querySelector('a.reference.internal') || headingEl.querySelector('a.reference.external');
+            
+            let pEl = headingEl.nextElementSibling;
+            while (pEl && pEl.tagName !== 'P') {
+                pEl = pEl.nextElementSibling;
+            }
+            
+            const title = linkEl.textContent;
+            const url = linkEl.getAttribute('href');
+            const subtitle = pEl ? pEl.textContent : '';
+            
+            const card = document.createElement('a');
+            card.href = url;
+            card.className = cardClass;
+            
+            card.innerHTML = `
+                <div>
+                    <h3>${title}</h3>
+                    <p>${subtitle}</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            `;
+            
+            gridContainer.appendChild(card);
+            
+            headingEl.style.display = 'none';
+            if (pEl) pEl.style.display = 'none';
+        });
+    });
 }
 
 // Collapsible FAQ Accordion Formatting
@@ -732,9 +955,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.querySelector('.sidebar-overlay');
 
     function closeAllSidebars() {
-        if(leftSidebar) leftSidebar.classList.remove('open');
-        if(rightSidebar) rightSidebar.classList.remove('open');
-        if(overlay) overlay.classList.remove('active');
+        if (leftSidebar) leftSidebar.classList.remove('open');
+        if (rightSidebar) rightSidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('active');
     }
 
     if (leftToggle && leftSidebar && overlay) {
@@ -754,7 +977,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (overlay) {
         overlay.addEventListener('click', closeAllSidebars);
     }
-    
+
     // Close sidebar when a link is clicked
     document.querySelectorAll('.sidebar a, .right-sidebar a').forEach(link => {
         link.addEventListener('click', closeAllSidebars);

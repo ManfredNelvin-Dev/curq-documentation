@@ -34,44 +34,7 @@
     </div>
 </section>
 
-<div class="content-area">
-    <section class="section">
-        <div class="container">
-            <h2>{{ _('Popular articles') }}</h2>
-            <div class="article-grid">
-                <a href="{{ pathto('docs/CRM/articles/closing-enterprise-deals-with-pipeline-management') }}?module=crm" class="article-card">
-                    <div>
-                        <h3>{{ _('Closing Enterprise Deals with Pipeline Management') }}</h3>
-                        <p>{{ _('Article · CRM') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="{{ pathto('docs/Sales/articles/selling-in-bulk-with-contracts') }}?module=sales" class="article-card">
-                    <div>
-                        <h3>{{ _('Selling in Bulk with Contracts') }}</h3>
-                        <p>{{ _('Article · Sales') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="{{ pathto('docs/Contacts/articles/managing-enterprise-customers-and-subsidiaries') }}?module=contacts" class="article-card">
-                    <div>
-                        <h3>{{ _('Managing Enterprise Customers & Subsidiaries') }}</h3>
-                        <p>{{ _('Article · Contacts') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="{{ pathto('docs/Discuss/articles/streamlining-cross-department-collaboration') }}?module=discuss" class="article-card">
-                    <div>
-                        <h3>{{ _('Streamlining Cross-Department Collaboration') }}</h3>
-                        <p>{{ _('Article · Discuss') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-
-        </div>
-    </section>
-
+{% set modules_html %}
     <section class="section modules-section">
         <div class="container">
             <h2>{{ _('Modules') }}</h2>
@@ -97,28 +60,8 @@
             </div>
         </div>
     </section>
+{% endset %}
+
+<div class="content-area">
+    {{ body | replace('<!-- MODULES_PLACEHOLDER -->', modules_html) }}
 </div>
-
-<section class="section faq-section">
-    <div class="container">
-        <h2>{{ _('Frequently asked questions') }}</h2>
-        <div class="faq-list">
-            <a href="{{ pathto('docs/faq') }}" class="faq-card">
-                <div>
-                    <h3>{{ _('How do I switch between different business modules in CURQ?') }}</h3>
-                    <p>{{ _('Learn sidebar navigation and overview options.') }}</p>
-                </div>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="{{ pathto('docs/CRM/faq') }}?module=crm" class="faq-card">
-                <div>
-                    <h3>{{ _('What is the difference between a Lead and an Opportunity?') }}</h3>
-                    <p>{{ _('Learn how unverified contacts are qualified into commercial deals.') }}</p>
-                </div>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-
-        </div>
-    </div>
-</section>

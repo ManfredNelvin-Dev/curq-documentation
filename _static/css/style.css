@@ -723,4 +723,4 @@ a:hover {
 
 .faq-accordion-content p:last-child {
     margin-bottom: 0;
-}
+}@media (max-width: 992px) { .custom-overview-grid { grid-template-columns: 1fr !important; } }
