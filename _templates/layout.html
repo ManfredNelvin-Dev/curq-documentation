@@ -41,7 +41,7 @@
             <main class="main-content">
                 <div class="mobile-header">
                     <button class="mobile-menu-toggle left-toggle"><i class="fa-solid fa-bars"></i></button>
-                    <span class="mobile-header-title">CURQ Documentation</span>
+                    <span class="mobile-header-title">{{ _('CURQ Documentation') }}</span>
                     <button class="mobile-menu-toggle right-toggle"><i class="fa-solid fa-grip"></i></button>
                 </div>
                 <nav class="breadcrumb">
@@ -59,6 +59,9 @@
                     {% elif pagename == 'docs/faq' or pagename == 'faq' %}
                         <span class="separator">/</span>
                         <a href="javascript:void(0)" class="current-section">{{ _('FAQ') }}</a>
+                    {% elif pagename == 'docs/support' or pagename == 'support' %}
+                        <span class="separator">/</span>
+                        <a href="javascript:void(0)" class="current-section">{{ _('Contact & Support') }}</a>
                     {% elif ns.current_mod %}
                         <span class="separator">/</span>
                         {% if ns.current_mod.has_docs %}
@@ -115,41 +118,43 @@
                         {% endif %}
                         <div class="overview-buttons">
                             {% if ns_btns.first_article %}
-                                <a href="{{ pathto(ns_btns.first_article.page_path) }}?module={{ ns.current_mod.sidebar_key }}" class="overview-btn">View all articles</a>
+                                <a href="{{ pathto(ns_btns.first_article.page_path) }}?module={{ ns.current_mod.sidebar_key }}" class="overview-btn">{{ _('View all articles') }}</a>
                             {% endif %}
                             {% if ns_btns.first_faq %}
-                                <a href="{{ pathto(ns_btns.first_faq.page_path) }}?module={{ ns.current_mod.sidebar_key }}" class="overview-btn secondary">Frequently asked questions</a>
+                                <a href="{{ pathto(ns_btns.first_faq.page_path) }}?module={{ ns.current_mod.sidebar_key }}" class="overview-btn secondary">{{ _('Frequently asked questions') }}</a>
                             {% endif %}
                         </div>
                         {% endif %}
                     </div>
 
                     <aside class="right-sidebar">
+                        {% block right_sidebar_toc %}
                         {% if toc %}
                             <div class="right-sidebar-section">
-                                <div class="right-sidebar-heading">ON THIS PAGE</div>
+                                <div class="right-sidebar-heading">{{ _('ON THIS PAGE') }}</div>
                                 <div class="toc-container">
                                     {{ toc }}
                                 </div>
                             </div>
                         {% endif %}
+                        {% endblock %}
 
                         <div class="right-sidebar-section">
-                            <div class="right-sidebar-heading">FURTHER WITH</div>
+                            <div class="right-sidebar-heading">{{ _('FURTHER WITH') }}</div>
                             <ul class="right-sidebar-list">
                                 {% if ns.current_mod and ns.current_mod.pages|length > 1 %}
                                     {% for page in ns.current_mod.pages %}
                                         {% if page.page_path != pagename %}
-                                            <li><a href="{{ pathto(page.page_path) }}?module={{ ns.current_mod.sidebar_key }}">{{ page.label }}</a></li>
+                                            <li><a href="{{ pathto(page.page_path) }}?module={{ ns.current_mod.sidebar_key }}">{{ _(page.label) }}</a></li>
                                         {% endif %}
                                     {% endfor %}
                                 {% else %}
                                     {% for mod in modules %}
                                         {% if not ns.current_mod or mod.folder != ns.current_mod.folder %}
                                             {% if mod.has_docs %}
-                                                <li><a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">{{ mod.display_name }} Overview</a></li>
+                                                <li><a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">{{ _(mod.display_name) }} {{ _('Overview') }}</a></li>
                                             {% else %}
-                                                <li><a href="{{ pathto('docs') }}?module={{ mod.sidebar_key }}">{{ mod.display_name }}</a></li>
+                                                <li><a href="{{ pathto('docs') }}?module={{ mod.sidebar_key }}">{{ _(mod.display_name) }}</a></li>
                                             {% endif %}
                                         {% endif %}
                                     {% endfor %}

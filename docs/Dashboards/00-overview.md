@@ -24,7 +24,6 @@ Built on a responsive layout, CURQ Dashboards adapt to any screen size and offer
 
 | | |
 | --- | --- |
-| **I want to explore standard dashboards**<br>Navigate pre-built dashboards, apply filters, and analyze live KPIs across your business. | **I am here for the first time**<br>Understand how Standard Dashboards and My Dashboard work. |
-| **How do I customize "My Dashboard"?**<br>Add personal views and widgets, arrange your layout, and track your daily figures. | **How do filters and widgets work?**<br>Learn how to apply date ranges, filter by department, and arrange cards across your screen. |
-
----
+| **I want to explore standard dashboards**<br>Navigate pre-built boards and inspect live KPIs in [Standard Dashboards](./manual/01-navigate-and-filter-standard-dashboards.md). | **I am here for the first time**<br>Explore how dashboards empower daily operations in our [executive KPI tracking article](./articles/tracking-executive-kpis-and-daily-operations.md). |
+| **How do I customize "My Dashboard"?**<br>Add personal views, pin widgets, and arrange layouts in [My Dashboard](./manual/02-create-and-manage-my-dashboard.md). | **What can I configure in advance?**<br>Organize dashboards into categories and teams using [Dashboard Groups Setup](./procedures/01-dashboard-groups-setup.md). |
+| **Where are general system settings configured?**<br>Manage users, companies, access rights, and mail servers in [General Settings](./general-settings.md). | **Need an overview of executive KPIs?**<br>Review reporting architecture in our [executive KPI tracking article](./articles/tracking-executive-kpis-and-daily-operations.md). |

@@ -112,25 +112,22 @@ Once an inquiry is qualified and confirmed as a genuine commercial prospect, con
 1. Open the lead form.
 2. In the top action bar, click **Convert to Opportunity**.
 3. A modal dialog opens with conversion configuration choices:
+   * **Conversion Action**:
+     * **Convert to opportunity**: Creates a new opportunity card inside the pipeline. This option displays customer linking choices *(Link to an existing customer, Create a new customer, or Do not link to a customer)*.
+     * **Merge with existing opportunities**: Combines the inquiry with matching active deals into a single record, displaying a list of matching opportunities to consolidate.
+   * **Assign This Opportunity To**:
+     * **Salesperson**: Confirm or reassign the team member responsible for advancing the deal.
+     * **Sales Team**: Confirm or select the designated commercial team.
+   * **Customer Handling (when Converting)**:
+     * **Create a new customer**: Automatically generates a brand new contact card in your database using the address and contact details from the lead form.
+     * **Link to an existing customer**: Select this option when the prospect belongs to an established customer in your system. Use the search field to connect to the existing record in [Contacts](../../Contacts/manual/01-create-contact.md).
+     * **Do not link to a customer**: Converts the inquiry into an opportunity without generating or linking an address book contact.
 
-#### Conversion Action:
-* **Convert to opportunity**: Creates a new opportunity card inside the pipeline. This option displays customer linking choices *(Link to an existing customer, Create a new customer, or Do not link to a customer)*.
-* **Merge with existing opportunities**: Combines the inquiry with matching active deals into a single record, displaying a list of matching opportunities to consolidate.
+   ![CRM Convert to opportunity modal dialog showing customer handling options](./images/crm-lead-convert-to-opportunity-modal.png)
 
-#### Assign This Opportunity To:
-* **Salesperson**: Confirm or reassign the team member responsible for advancing the deal.
-* **Sales Team**: Confirm or select the designated commercial team.
+   When duplicate deals are detected, selecting **Merge with existing opportunities** displays the matching records to consolidate:
 
-#### Customer Handling (when Converting):
-* **Create a new customer**: Automatically generates a brand new contact card in your database using the address and contact details from the lead form.
-* **Link to an existing customer**: Select this option when the prospect belongs to an established customer in your system. Use the search field to connect to the existing record in [Contacts](../../Contacts/manual/01-create-contact.md).
-* **Do not link to a customer**: Converts the inquiry into an opportunity without generating or linking an address book contact.
-
-![CRM Convert to opportunity modal dialog showing customer handling options](./images/crm-lead-convert-to-opportunity-modal.png)
-
-When duplicate deals are detected, selecting **Merge with existing opportunities** displays the matching records to consolidate:
-
-![CRM Merge with existing opportunities modal dialog showing matching duplicate deals to consolidate](./images/crm-lead-merge-opportunities-modal.png)
+   ![CRM Merge with existing opportunities modal dialog showing matching duplicate deals to consolidate](./images/crm-lead-merge-opportunities-modal.png)
 
 4. Click **Create Opportunity** to execute the transition.
 

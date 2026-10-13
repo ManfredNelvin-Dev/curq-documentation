@@ -78,7 +78,8 @@ When completing a call, email, or meeting, you can immediately log discussion ou
 
 ---
 
-Direct creation is disabled on the Calendar view grid. The calendar view is dedicated to visualizing, inspecting, and editing existing deadlines rather than creating new tasks from blank slots. To schedule new meetings or calls, use the Activity matrix grid or the opportunity chatter pane.
+> [!NOTE]
+> Direct creation is disabled on the Calendar view grid. The calendar view is dedicated to visualizing, inspecting, and editing existing deadlines rather than creating new tasks from blank slots. To schedule new meetings or calls, use the Activity matrix grid or the opportunity chatter pane.
 
 ---
 

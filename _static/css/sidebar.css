@@ -6,8 +6,8 @@
 .sidebar {
     width: 282px;
     height: 100vh;
-    background: #ffffff;
-    border-right: 1px solid #e4e7ec;
+    background: var(--color-bg-card);
+    border-right: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     position: sticky;
@@ -17,7 +17,7 @@
 
 .sidebar-top {
     height: 88px;
-    border-bottom: 1px solid #e4e7ec;
+    border-bottom: 1px solid var(--color-border);
     display: flex;
     align-items: center;
     padding: 0 18px;
@@ -40,7 +40,7 @@
 
 .logo span {
     font-size: 18px;
-    color: #16345f;
+    color: var(--color-primary);
 }
 
 .sidebar-content {
@@ -50,8 +50,8 @@
 }
 
 .sidebar-search-box {
-    background: #fff;
-    border: 1px solid #16345f;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-primary);
     border-radius: 4px;
     height: 38px;
     display: flex;
@@ -64,13 +64,13 @@
 
 .sidebar-search-placeholder {
     font-size: 14px;
-    color: #667085;
+    color: var(--color-text-muted);
 }
 
 .sidebar-heading {
     font-size: 11px;
     font-weight: 700;
-    color: #667085;
+    color: var(--color-text-muted);
     margin-bottom: 10px;
 }
 
@@ -82,7 +82,7 @@
     align-items: center;
     font-size: 14px;
     font-weight: 600;
-    color: #16345f;
+    color: var(--color-primary);
     margin-bottom: 4px;
     cursor: pointer;
     border-radius: 6px;
@@ -112,7 +112,7 @@
 
 .menu-title i {
     font-size: 11px;
-    color: #667085;
+    color: var(--color-text-muted);
     flex-shrink: 0;
 }
 
@@ -149,7 +149,7 @@
 
 .submenu-category:hover {
     background: #f2f4f7;
-    color: #16345f;
+    color: var(--color-primary);
 }
 
 .submenu-category .cat-icon {
@@ -198,13 +198,13 @@
 }
 
 .submenu-item:hover {
-    background: #f8fafc;
-    color: #16345f;
+    background: var(--color-bg-hover);
+    color: var(--color-primary);
 }
 
 .submenu-item.active {
     background: #f8edb4;
-    color: #16345f;
+    color: var(--color-primary);
     font-weight: 600;
     box-shadow: inset 0 0 0 1px rgba(22, 52, 95, 0.1);
 }
@@ -218,7 +218,7 @@
 .sidebar-bottom-links {
     margin-top: 16px;
     padding-top: 12px;
-    border-top: 1px solid #e4e7ec;
+    border-top: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -227,7 +227,7 @@
 .sidebar-bottom-item {
     font-size: 14px;
     font-weight: 600;
-    color: #16345f;
+    color: var(--color-primary);
     padding: 8px 10px;
     border-radius: 6px;
     text-decoration: none;
@@ -241,14 +241,14 @@
 
 .sidebar-bottom-item.active {
     background: #f8edb4;
-    color: #16345f;
+    color: var(--color-primary);
 }
 
 .sidebar-footer {
-    border-top: 1px solid #e4e7ec;
+    border-top: 1px solid var(--color-border);
     padding: 14px 18px;
     font-size: 12px;
-    color: #667085;
+    color: var(--color-text-muted);
 }
 
 
@@ -256,7 +256,7 @@
     flex: 1;
     min-width: 0;
     padding: 40px 60px;
-    background: #ffffff;
+    background: var(--color-bg-card);
 }
 
 .breadcrumb {
@@ -276,7 +276,7 @@
 }
 
 .breadcrumb a:hover {
-    color: #16345f;
+    color: var(--color-primary);
 }
 
 .breadcrumb .separator {
@@ -285,7 +285,7 @@
 
 .breadcrumb .current-section {
     font-weight: 700;
-    color: #16345f;
+    color: var(--color-primary);
 }
 
 .content-wrapper {
@@ -309,7 +309,7 @@
 .sphinx-content h1 {
     font-size: 32px;
     font-weight: 700;
-    color: #16345f;
+    color: var(--color-primary);
     margin: 0 0 12px;
     border: none;
 }
@@ -320,14 +320,14 @@
 
 .sphinx-content hr {
     border: none;
-    border-top: 1px solid #e4e7ec;
+    border-top: 1px solid var(--color-border);
     margin: 36px 0;
 }
 
 .sphinx-content h2 {
     font-size: 20px;
     font-weight: 700;
-    color: #16345f;
+    color: var(--color-primary);
     margin: 32px 0 14px;
     border: none;
     counter-increment: h2counter;
@@ -341,7 +341,7 @@
 .sphinx-content h3 {
     font-size: 16px;
     font-weight: 600;
-    color: #16345f;
+    color: var(--color-primary);
     margin: 24px 0 12px;
 }
 
@@ -364,7 +364,7 @@
 }
 
 .sphinx-content a {
-    color: #16345f;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -372,7 +372,7 @@
     max-width: 100%;
     height: auto;
     border-radius: 6px;
-    border: 1px solid #e4e7ec;
+    border: 1px solid var(--color-border);
     margin: 16px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -401,7 +401,7 @@
 
 .sphinx-content th,
 .sphinx-content td {
-    border: 1px solid #e4e7ec;
+    border: 1px solid var(--color-border);
     padding: 12px;
     text-align: left;
     font-size: 14px;
@@ -410,7 +410,7 @@
 .sphinx-content th {
     background: #f9fafb;
     font-weight: 600;
-    color: #16345f;
+    color: var(--color-primary);
 }
 
 .sphinx-content pre,
@@ -421,8 +421,8 @@
     white-space: pre;
     word-wrap: normal;
     border-radius: 6px;
-    background: #f8fafc;
-    border: 1px solid #e4e7ec;
+    background: var(--color-bg-hover);
+    border: 1px solid var(--color-border);
     padding: 14px;
     margin: 16px 0;
 }
@@ -446,8 +446,8 @@
 .sphinx-content blockquote {
     margin: 16px 0;
     padding: 12px 20px;
-    border-left: 4px solid #16345f;
-    background: #f8fafc;
+    border-left: 4px solid var(--color-primary);
+    background: var(--color-bg-hover);
     color: #545669;
 }
 
@@ -469,7 +469,7 @@
 .right-sidebar-heading {
     font-size: 11px;
     font-weight: 700;
-    color: #16345f;
+    color: var(--color-primary);
     letter-spacing: 1px;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -530,7 +530,7 @@
 
 .right-sidebar-list a:hover,
 .right-sidebar .toc-container a:hover {
-    color: #16345f !important;
+    color: var(--color-primary) !important;
 }
 
 .article-grid {
@@ -545,14 +545,14 @@
     display: flex !important;
     justify-content: space-between !important;
     padding: 20px !important;
-    background: #fff !important;
-    border: 1px solid #e4e7ec !important;
+    background: var(--color-bg-card) !important;
+    border: 1px solid var(--color-border) !important;
     border-radius: 12px !important;
     transition: .2s !important;
 }
 
 .article-card:hover {
-    border-color: #d0d5dd !important;
+    border-color: var(--color-border-hover) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .04) !important;
 }
 
@@ -560,19 +560,19 @@
     margin: 0 0 6px !important;
     font-size: 15px !important;
     font-weight: 600 !important;
-    color: #16345f !important;
+    color: var(--color-primary) !important;
 }
 
 .article-card p {
     margin: 0 !important;
     font-size: 13px !important;
-    color: #667085 !important;
+    color: var(--color-text-muted) !important;
 }
 
 .article-card i {
     margin-left: 16px;
     font-size: 14px;
-    color: #667085;
+    color: var(--color-text-muted);
     flex-shrink: 0;
     margin-top: 4px;
 }
@@ -585,8 +585,8 @@
 }
 
 .btn-primary {
-    background: #16345f !important;
-    color: #ffffff !important;
+    background: var(--color-primary) !important;
+    color: var(--color-bg-card) !important;
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none !important;
@@ -601,7 +601,7 @@
 
 .btn-secondary {
     background: #f2f4f7 !important;
-    color: #16345f !important;
+    color: var(--color-primary) !important;
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none !important;
@@ -611,7 +611,7 @@
 }
 
 .btn-secondary:hover {
-    background: #e4e7ec !important;
+    background: var(--color-border) !important;
 }
 
 /* Responsive Design */
@@ -661,8 +661,8 @@
         justify-content: space-between;
         padding: 0 16px;
         height: 60px;
-        background: #fff;
-        border-bottom: 1px solid #e4e7ec;
+        background: var(--color-bg-card);
+        border-bottom: 1px solid var(--color-border);
         position: sticky;
         top: 0;
         z-index: 100;
@@ -673,7 +673,7 @@
         background: none;
         border: none;
         font-size: 20px;
-        color: #16345f;
+        color: var(--color-primary);
         cursor: pointer;
         padding: 8px;
         display: flex;
@@ -683,7 +683,7 @@
 
     .mobile-header-title {
         font-weight: 600;
-        color: #16345f;
+        color: var(--color-primary);
         font-size: 16px;
         flex: 1;
         text-align: center;
@@ -738,7 +738,7 @@
         width: 280px;
         max-width: 85vw;
         height: 100vh;
-        background: #fff;
+        background: var(--color-bg-card);
         transition: right 0.3s ease;
         box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
         padding: 24px 20px;

@@ -199,6 +199,12 @@ function parseDocMetadata(docname) {
     let sectionName = 'Article';
 
     if (parts.length >= 2 && parts[0] === 'docs') {
+        const p1 = parts[1].toLowerCase();
+        if (p1 === 'faq') {
+            return { module: 'General', section: 'FAQ', metaLine: 'FAQ · General' };
+        } else if (p1 === 'support') {
+            return { module: 'Support', section: 'Contact', metaLine: 'Contact · Support' };
+        }
         moduleName = parts[1];
         if (parts.length >= 3) {
             const rawSec = parts[2].toLowerCase();
@@ -639,6 +645,52 @@ if (searchModal && modalInput) {
     });
 }
 
+// Shared helper to build standard cards
+function createCardElement(url, title, subtitle, type) {
+    const card = document.createElement('a');
+    card.href = url;
+
+    if (type === 'search-result') {
+        card.className = 'search-result-card custom-card-override';
+        card.innerHTML = `
+            <div class="search-result-content">
+                <div class="search-result-header">
+                    <h4 class="search-result-title">${title}</h4>
+                </div>
+                <span class="search-result-snippet">${subtitle}</span>
+            </div>
+            <div class="search-result-arrow-wrap">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        `;
+    } else if (type === 'quick-action') {
+        card.className = 'search-result-card custom-card-override qa-card-override';
+        const hasUrl = url && url !== 'javascript:void(0)';
+        card.innerHTML = `
+            <div class="search-result-content">
+                <div class="search-result-header">
+                    <h4 class="search-result-title">${title}</h4>
+                </div>
+                <span class="search-result-snippet">${subtitle}</span>
+            </div>
+            ${hasUrl ? `
+            <div class="search-result-arrow-wrap">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>` : ''}
+        `;
+    } else {
+        card.className = type; // 'faq-card' or 'article-card'
+        card.innerHTML = `
+            <div>
+                <h3>${title}</h3>
+                <p>${subtitle}</p>
+            </div>
+            <i class="fa-solid fa-arrow-right"></i>
+        `;
+    }
+    return card;
+}
+
 // Overview Cards Formatting
 function formatOverviewCards() {
     const path = window.location.pathname.toLowerCase();
@@ -650,17 +702,10 @@ function formatOverviewCards() {
     if (!mainContent) return;
 
     const headings = Array.from(mainContent.querySelectorAll('h2')).filter(h2 => h2.querySelector('a.reference.internal'));
-
     if (headings.length === 0) return;
 
-    // Create a grid container for the 2-column layout
     const gridContainer = document.createElement('div');
     gridContainer.className = 'custom-overview-grid';
-    gridContainer.style.display = 'grid';
-    gridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
-    gridContainer.style.gridAutoRows = '1fr';
-    gridContainer.style.gap = '16px';
-    gridContainer.style.marginTop = '24px';
 
     const firstSection = headings[0].closest('section');
     if (firstSection) {
@@ -672,94 +717,48 @@ function formatOverviewCards() {
         const section = h2.closest('section');
 
         let pEl = h2.nextElementSibling;
-        while (pEl && pEl.tagName !== 'P') {
-            pEl = pEl.nextElementSibling;
-        }
+        while (pEl && pEl.tagName !== 'P') pEl = pEl.nextElementSibling;
 
         const title = linkEl.textContent;
         const url = linkEl.getAttribute('href');
         const subtitle = pEl ? pEl.textContent : '';
 
-        const card = document.createElement('a');
-        card.href = url;
-        card.className = 'search-result-card'; // Reuse this styling
-        card.style.display = 'flex';
-        card.style.marginBottom = '0';
-        card.style.height = '100%';
-
-        card.innerHTML = `
-            <div class="search-result-content">
-                <div class="search-result-header" style="margin-bottom: 4px;">
-                    <h4 class="search-result-title" style="font-size: 16px; font-weight: 700;">${title}</h4>
-                </div>
-                <span class="search-result-snippet" style="font-size: 13px; color: #667085;">${subtitle}</span>
-            </div>
-            <div class="search-result-arrow-wrap">
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-        `;
-
+        const card = createCardElement(url, title, subtitle, 'search-result');
         gridContainer.appendChild(card);
-        if (section) {
-            section.style.display = 'none'; // hide the original section
-        }
+        
+        if (section) section.style.display = 'none';
     });
 }
 
 // Format Quick Actions Tables
 function formatQuickActionTables() {
-    const headings = Array.from(document.querySelectorAll('.sphinx-content h3'));
-    const qaHeadings = headings.filter(h => h.textContent.includes('Quick Actions'));
+    const headings = Array.from(document.querySelectorAll('.sphinx-content h3')).filter(h => h.textContent.includes('Quick Actions'));
 
-    qaHeadings.forEach(heading => {
+    headings.forEach(heading => {
         let nextEl = heading.nextElementSibling;
         if (nextEl && nextEl.tagName === 'TABLE') {
             const table = nextEl;
 
             const gridContainer = document.createElement('div');
-            gridContainer.className = 'custom-overview-grid';
-            gridContainer.style.display = 'grid';
-            gridContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
-            gridContainer.style.gridAutoRows = '1fr';
-            gridContainer.style.gap = '16px';
-            gridContainer.style.marginTop = '16px';
-            gridContainer.style.marginBottom = '32px';
+            gridContainer.className = 'custom-overview-grid qa-grid-margin';
 
             const cells = Array.from(table.querySelectorAll('tbody td'));
             cells.forEach(cell => {
                 const strong = cell.querySelector('strong');
                 if (!strong) return;
 
-                const title = strong.textContent;
+                const title = strong.textContent.trim();
+                const clone = cell.cloneNode(true);
+                const a = clone.querySelector('a');
+                if (a) a.remove();
+                const str = clone.querySelector('strong');
+                if (str) str.remove();
+                const subtitle = clone.textContent.replace(/^[\s:\-\–\—]+/, '').replace(/\s+/g, ' ').trim();
 
-                let subtitle = '';
-                const br = cell.querySelector('br');
-                if (br && br.nextSibling) {
-                    subtitle = br.nextSibling.textContent.trim();
-                } else {
-                    const clone = cell.cloneNode(true);
-                    if (clone.querySelector('strong')) clone.querySelector('strong').remove();
-                    if (clone.querySelector('br')) clone.querySelector('br').remove();
-                    subtitle = clone.textContent.trim();
-                }
+                const link = cell.querySelector('a');
+                const url = link ? link.getAttribute('href') : 'javascript:void(0)';
 
-                const card = document.createElement('a');
-                card.href = 'javascript:void(0)';
-                card.className = 'search-result-card';
-                card.style.display = 'flex';
-                card.style.marginBottom = '0';
-                card.style.alignItems = 'flex-start';
-                card.style.height = '100%';
-
-                card.innerHTML = `
-                    <div class="search-result-content">
-                        <div class="search-result-header" style="margin-bottom: 8px;">
-                            <h4 class="search-result-title" style="font-size: 16px; font-weight: 700; white-space: normal;">${title}</h4>
-                        </div>
-                        <span class="search-result-snippet" style="font-size: 13px; color: #667085; display: block; white-space: normal;">${subtitle}</span>
-                    </div>
-                `;
-
+                const card = createCardElement(url, title, subtitle, 'quick-action');
                 gridContainer.appendChild(card);
             });
 
@@ -769,17 +768,7 @@ function formatQuickActionTables() {
     });
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener("DOMContentLoaded", () => {
-        formatOverviewCards();
-        formatQuickActionTables();
-        formatLandingPageCards();
-    });
-} else {
-    formatOverviewCards();
-    formatQuickActionTables();
-    formatLandingPageCards();
-}
+
 
 function formatLandingPageCards() {
     const popSection = document.querySelector('.popular-articles-section .container');
@@ -792,7 +781,7 @@ function formatLandingPageCards() {
 
     [popSection, faqSection].forEach(container => {
         if (!container) return;
-        
+
         // Find the main section title (the one without a link) and make it an h2 if it's a p.rubric
         const allRubrics = container.querySelectorAll('p.rubric, h2');
         allRubrics.forEach(el => {
@@ -823,30 +812,19 @@ function formatLandingPageCards() {
 
         headings.forEach(headingEl => {
             const linkEl = headingEl.querySelector('a.reference.internal') || headingEl.querySelector('a.reference.external');
-            
+
             let pEl = headingEl.nextElementSibling;
             while (pEl && pEl.tagName !== 'P') {
                 pEl = pEl.nextElementSibling;
             }
-            
+
             const title = linkEl.textContent;
             const url = linkEl.getAttribute('href');
             const subtitle = pEl ? pEl.textContent : '';
-            
-            const card = document.createElement('a');
-            card.href = url;
-            card.className = cardClass;
-            
-            card.innerHTML = `
-                <div>
-                    <h3>${title}</h3>
-                    <p>${subtitle}</p>
-                </div>
-                <i class="fa-solid fa-arrow-right"></i>
-            `;
-            
+
+            const card = createCardElement(url, title, subtitle, cardClass);
             gridContainer.appendChild(card);
-            
+
             headingEl.style.display = 'none';
             if (pEl) pEl.style.display = 'none';
         });
@@ -909,8 +887,19 @@ function formatFaqCards() {
         section.innerHTML = '';
         section.appendChild(headerDiv);
         section.appendChild(answerDiv);
+    });
 
-        headerDiv.addEventListener('click', () => {
+    // Event delegation for all FAQ headers
+    if (!mainContent.dataset.faqDelegated) {
+        mainContent.addEventListener('click', (e) => {
+            const header = e.target.closest('.faq-accordion-header');
+            if (!header) return;
+            
+            const section = header.closest('.faq-accordion-item');
+            const answerDiv = section.querySelector('.faq-answer');
+            const answerInner = section.querySelector('.faq-answer-inner');
+            if (!answerDiv || !answerInner) return;
+
             const isOpen = section.classList.contains('open');
             if (isOpen) {
                 section.classList.remove('open');
@@ -920,7 +909,8 @@ function formatFaqCards() {
                 answerDiv.style.maxHeight = answerInner.scrollHeight + 40 + 'px';
             }
         });
-    });
+        mainContent.dataset.faqDelegated = 'true';
+    }
 
     // Auto-open section if anchor target exists in URL hash
     if (window.location.hash) {
@@ -940,14 +930,7 @@ function formatFaqCards() {
     document.querySelectorAll('.sphinx-content hr').forEach(hr => hr.remove());
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener("DOMContentLoaded", formatFaqCards);
-} else {
-    formatFaqCards();
-}
-
-// Mobile Sidebar Toggle
-document.addEventListener("DOMContentLoaded", () => {
+function initSidebars() {
     const leftToggle = document.querySelector('.left-toggle');
     const rightToggle = document.querySelector('.right-toggle');
     const leftSidebar = document.querySelector('.sidebar');
@@ -982,4 +965,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.sidebar a, .right-sidebar a').forEach(link => {
         link.addEventListener('click', closeAllSidebars);
     });
-});
+}
+
+function initCurqDocs() {
+    formatOverviewCards();
+    formatQuickActionTables();
+    formatLandingPageCards();
+    formatFaqCards();
+    initSidebars();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener("DOMContentLoaded", initCurqDocs);
+} else {
+    initCurqDocs();
+}
