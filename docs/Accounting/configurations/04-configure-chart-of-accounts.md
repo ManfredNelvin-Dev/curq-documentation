@@ -2,7 +2,7 @@
 
 The Chart of Accounts is a comprehensive list of financial accounts used to seamlessly record and organize your company's financial transactions.
 
-CURQ automatically loads the **RGS Dutch Chart of Accounts (Reference General Ledger Scheme)** when the accounting module is set up for your company.
+CURQ automatically loads the **RGS Dutch Chart of Accounts (Referentie GrootboekSchema)** when the accounting module is set up for your company.
 
 The Chart of Accounts typically includes:
 - **General Ledger Accounts**
@@ -36,7 +36,7 @@ A full list of all available accounts will be displayed.
 
 The **General Ledger** contains all ledger accounts of a company, including both balance sheet accounts and profit and loss accounts. Each financial transaction is recorded through journal entries, where multiple accounts are debited and credited.
 
-In CURQ, a standardized chart of accounts based on the **RGS (Reference General Ledger Scheme)** is used.
+In CURQ, a standardized chart of accounts based on the **RGS (Referentie GrootboekSchema)** is used.
 
 Each ledger account belongs to a specific category. In CURQ, every account has a unique code and is assigned to one of the following categories:
 

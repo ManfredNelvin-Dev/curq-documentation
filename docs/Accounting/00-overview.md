@@ -29,7 +29,7 @@ With its built-in automation and deep system integration, CURQ is designed to he
 
 ### What is RGS?
 
-The **Reference General Ledger Scheme (RGS)** is a standardized chart of accounts that uses uniform codes for financial data. Companies that use RGS can easily retrieve information from their accounting systems and share it with other systems or include it in reports for external parties.
+The **Referentie GrootboekSchema (RGS)** is a standardized chart of accounts that uses uniform codes for financial data. Companies that use RGS can easily retrieve information from their accounting systems and share it with other systems or include it in reports for external parties.
 
 Using RGS makes it easier and faster to create internal and external reports, prepare reliable dashboards, and compare financial data.
 
