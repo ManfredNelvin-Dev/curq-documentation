@@ -19,6 +19,9 @@ Thumbs.db
 # Logs
 *.log
 
+# Temporary worktrees for multiversion builds
+.worktrees/
+
 # Ignore contents of docs and locale but keep the folders
 locale/*
 !locale/.gitkeep

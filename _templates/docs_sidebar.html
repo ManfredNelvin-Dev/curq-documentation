@@ -82,7 +82,11 @@
 
     <div class="sidebar-footer">
         <div class="sidebar-footer-selectors">
-            <span class="version-text">CURQ 18</span>
+            <select class="version-selector" onchange="switchVersion(this.value)" aria-label="Version">
+                {% for ver in supported_versions %}
+                <option value="{{ ver.code }}" {% if current_version_code == ver.code or ver.code in pagename %}selected{% endif %}>{{ ver.name }}</option>
+                {% endfor %}
+            </select>
             <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">
                 {% for lang in supported_languages %}
                 <option value="{{ lang.code }}" {% if language==lang.code %}selected{% endif %}>{{ lang.name }}</option>

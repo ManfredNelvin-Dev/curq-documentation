@@ -1,5 +1,7 @@
+import json
 import os
 import re
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
@@ -244,12 +246,69 @@ def build_modules_context() -> List[Dict[str, Any]]:
 # HTML template context
 # ---------------------------------------------------------
 
+def get_git_versions():
+    """Dynamically get versions from git tags without hardcoding."""
+    try:
+        tags_raw = subprocess.check_output(
+            ["git", "tag", "--sort=-creatordate"],
+            stderr=subprocess.DEVNULL,
+            text=True
+        ).strip().splitlines()
+        tags = [t.strip() for t in tags_raw if t.strip()]
+    except Exception:
+        tags = []
+
+    try:
+        curr = subprocess.check_output(
+            ["git", "describe", "--tags", "--exact-match"],
+            stderr=subprocess.DEVNULL,
+            text=True
+        ).strip()
+    except Exception:
+        try:
+            curr = subprocess.check_output(
+                ["git", "describe", "--tags", "--abbrev=0"],
+                stderr=subprocess.DEVNULL,
+                text=True
+            ).strip()
+        except Exception:
+            try:
+                curr = subprocess.check_output(
+                    ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                    stderr=subprocess.DEVNULL,
+                    text=True
+                ).strip()
+            except Exception:
+                curr = "latest"
+
+    versions = [{"code": t, "name": t} for t in tags]
+    if not versions:
+        versions = [{"code": curr, "name": curr}]
+
+    return curr, versions
+
+git_current_ver, git_versions_list = get_git_versions()
+
+env_current_version = os.environ.get("SPHINX_CURRENT_VERSION")
+env_current_version_code = os.environ.get("SPHINX_CURRENT_VERSION_CODE")
+env_supported_versions = os.environ.get("SPHINX_SUPPORTED_VERSIONS_JSON")
+
+current_version_name = env_current_version or git_current_ver
+current_version_code = env_current_version_code or git_current_ver
+
+if env_supported_versions:
+    try:
+        supported_versions_list = json.loads(env_supported_versions)
+    except Exception:
+        supported_versions_list = git_versions_list
+else:
+    supported_versions_list = git_versions_list
+
 html_context = {
     "modules": build_modules_context(),
-    "current_version": "CURQ 18",
-    "supported_versions": [
-        {"code": "18.0", "name": "CURQ 18"},
-    ],
+    "current_version": current_version_name,
+    "current_version_code": current_version_code,
+    "supported_versions": supported_versions_list,
     "supported_languages": [
         {"code": "en", "name": "English"},
         {"code": "nl", "name": "Dutch"},

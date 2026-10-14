@@ -15,37 +15,37 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
     'Accounting': {
         'display_name': 'Accounting',
         'icon': 'accounting-icon.png',
-        'description': 'Expenses and administration',
+        'description': 'Financial Management',
         'sidebar_key': 'accounting',
     },
     'CRM': {
         'display_name': 'CRM',
         'icon': 'crm-icon.png',
-        'description': 'Discover the module',
+        'description': 'Lead Management',
         'sidebar_key': 'crm',
     },
     'Sales': {
         'display_name': 'Sales',
         'icon': 'sales-icon.png',
-        'description': 'Discover the module',
+        'description': 'Sales Management',
         'sidebar_key': 'sales',
     },
     'Purchase': {
         'display_name': 'Purchase',
         'icon': 'purchase-icon.png',
-        'description': 'Discover the module',
+        'description': 'Purchase Management',
         'sidebar_key': 'purchase',
     },
     'Inventory': {
         'display_name': 'Inventory',
         'icon': 'inventory-icon.png',
-        'description': 'Discover the module',
+        'description': 'Stock Management',
         'sidebar_key': 'inventory',
     },
     'Projects': {
         'display_name': 'Projects',
         'icon': 'project-icon.png',
-        'description': 'Discover the module',
+        'description': 'Project Tracking',
         'sidebar_key': 'projects',
     },
     'HR': {
@@ -63,7 +63,7 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
     'EmailMarketing': {
         'display_name': 'Email Marketing',
         'icon': 'emailmarketing-icon.png',
-        'description': 'Discover the module',
+        'description': 'Email Campaigns',
         'sidebar_key': 'emailmarketing',
     },
     'Appointments': {
@@ -75,37 +75,37 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
     'Dashboards': {
         'display_name': 'Dashboards',
         'icon': 'dashboard-icon.png',
-        'description': 'Discover the module',
+        'description': 'Business Insights',
         'sidebar_key': 'dashboards',
     },
     'Website': {
         'display_name': 'Website',
         'icon': 'website-icon.png',
-        'description': 'Discover the module',
+        'description': 'Website Builder',
         'sidebar_key': 'website',
     },
     'Contacts': {
         'display_name': 'Contacts',
         'icon': 'contacts-icon.png',
-        'description': 'Discover the module',
+        'description': 'Contact Management',
         'sidebar_key': 'contacts',
     },
     'Discuss': {
         'display_name': 'Discuss',
         'icon': 'discuss-icon.png',
-        'description': 'Discover the module',
+        'description': 'Team Communication',
         'sidebar_key': 'discuss',
     },
     'Timeoff': {
         'display_name': 'Time Off',
         'icon': 'timeoff-icon.png',
-        'description': 'Discover the module',
+        'description': 'Leave Management',
         'sidebar_key': 'timeoff',
     },
     'Timesheet': {
         'display_name': 'Timesheet',
         'icon': 'timesheet-icon.png',
-        'description': 'Discover the module',
+        'description': 'Time Tracking',
         'sidebar_key': 'timesheet',
     },
 }

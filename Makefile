@@ -12,7 +12,11 @@ BUILDDIR      = _build
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: help Makefile serve
+.PHONY: help Makefile serve multiversion
+
+# Build multi-version documentation from Git tags
+multiversion:
+	python3 scripts/build_multiversion.py
 
 # Serve the HTML output on localhost:8000
 serve:

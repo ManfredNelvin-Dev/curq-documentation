@@ -5,7 +5,12 @@
             <span>docs</span>
         </a>
         <div class="nav-selectors">
-            <span class="version-text">CURQ 18</span>
+            <select class="version-selector" onchange="switchVersion(this.value)" aria-label="Version">
+                {% for ver in supported_versions %}
+                <option value="{{ ver.code }}" {% if current_version_code==ver.code or ver.code in pagename %}selected{%
+                    endif %}>{{ ver.name }}</option>
+                {% endfor %}
+            </select>
             <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">
                 {% for lang in supported_languages %}
                 <option value="{{ lang.code }}" {% if language==lang.code %}selected{% endif %}>{{ lang.name }}</option>
@@ -22,7 +27,7 @@
         <div class="landing-search-container">
             <div class="search-box">
                 <input type="text" id="landing-search-input"
-                    placeholder="{{ _('Search for a content, ARTICLES or FAQs...') }}">
+                    placeholder="{{ _('Search for Contents, Articles or FAQs...') }}">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div id="landing-search-dropdown" class="search-modal-content">
@@ -37,33 +42,38 @@
 </section>
 
 {% set modules_html %}
-    <section class="section modules-section">
-        <div class="container">
-            <h2>{{ _('Modules') }}</h2>
-            <div class="modules-grid">
-                {% set t = _ %}
-                {% for mod in modules %}
-                {% if mod.has_docs %}
-                <a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">
-                    {% else %}
-                    <a href="javascript:void(0);" style="cursor: default;">
-                        {% endif %}
-                        <div class="module-card" {% if not mod.has_docs %} style="opacity: 0.7;" {% endif %}>
-                            <div class="icon">
-                                <img src="{{ pathto('_static/images/', 1) }}{{ mod.icon }}" alt="">
-                            </div>
-                            <div>
-                                <h3>{{ t(mod.display_name) }}</h3>
-                                <p>{{ t(mod.description) }}</p>
-                            </div>
+<section class="section modules-section">
+    <div class="container">
+        <h2>{{ _('Modules') }}</h2>
+        <div class="modules-grid">
+            {% set t = _ %}
+            {% for mod in modules %}
+            {% if mod.has_docs %}
+            <a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">
+                {% else %}
+                <a href="javascript:void(0);" style="cursor: default;">
+                    {% endif %}
+                    <div class="module-card" {% if not mod.has_docs %} style="opacity: 0.7;" {% endif %}>
+                        <div class="icon">
+                            <img src="{{ pathto('_static/images/', 1) }}{{ mod.icon }}" alt="">
                         </div>
-                    </a>
-                    {% endfor %}
-            </div>
+                        <div>
+                            <h3>{{ t(mod.display_name) }}</h3>
+                            <p>{{ t(mod.description) }}</p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 {% endset %}
 
 <div class="content-area">
-    {{ body | replace('<!-- MODULES_PLACEHOLDER -->', modules_html) }}
+    {% if '<!-- MODULES_PLACEHOLDER -->' in body %}
+        {{ body | replace('<!-- MODULES_PLACEHOLDER -->', modules_html) }}
+    {% else %}
+        {{ modules_html }}
+        {{ body }}
+    {% endif %}
 </div>
