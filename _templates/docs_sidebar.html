@@ -81,13 +81,14 @@
     </div>
 
     <div class="sidebar-footer">
-        <select class="language-selector" onchange="switchLanguage(this.value)"
-            style="width: 100%; text-align: center; border: none; background: transparent; font-size: 13px;">
-            {% for lang in supported_languages %}
-            <option value="{{ lang.code }}" {% if language==lang.code %}selected{% endif %}>CURQ 18 • {{ lang.name }}
-            </option>
-            {% endfor %}
-        </select>
+        <div class="sidebar-footer-selectors">
+            <span class="version-text">CURQ 18</span>
+            <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">
+                {% for lang in supported_languages %}
+                <option value="{{ lang.code }}" {% if language==lang.code %}selected{% endif %}>{{ lang.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
     </div>
 
 </aside>

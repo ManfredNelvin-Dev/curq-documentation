@@ -246,9 +246,21 @@ def build_modules_context() -> List[Dict[str, Any]]:
 
 html_context = {
     "modules": build_modules_context(),
+    "current_version": "CURQ 18",
+    "supported_versions": [
+        {"code": "18.0", "name": "CURQ 18"},
+    ],
     "supported_languages": [
         {"code": "en", "name": "English"},
-        {"code": "nl", "name": "Nederlands"},
+        {"code": "nl", "name": "Dutch"},
     ],
     "default_language": "en",
+}
+
+# ---------------------------------------------------------
+# Additional standalone HTML templates
+# ---------------------------------------------------------
+
+html_additional_pages = {
+    "docs/support": "support.html",
 }

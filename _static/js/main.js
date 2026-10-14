@@ -91,17 +91,16 @@ function initSidebarScroll() {
         sessionStorage.setItem('sidebar_scroll_position', sidebarContent.scrollTop);
     };
 
-    sidebarContent.addEventListener('scroll', debounce(savePos, 100));
+    sidebarContent.addEventListener('scroll', debounce(savePos, 100), { passive: true });
 
-    sidebarContent.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', savePos);
+    sidebarContent.addEventListener('click', (e) => {
+        if (e.target.closest('a')) {
+            savePos();
+        }
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    cleanHeadingNumbers();
-    initSidebarScroll();
-
+function initSidebarMenu() {
     const savedLang = localStorage.getItem('preferred_lang');
     if (savedLang) {
         document.querySelectorAll('.language-selector').forEach(sel => {
@@ -123,38 +122,37 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    document.querySelectorAll('.menu-title').forEach(title => {
-        title.addEventListener('click', () => {
+    const sidebarContent = document.querySelector('.sidebar-content');
+    if (!sidebarContent) return;
+
+    sidebarContent.addEventListener('click', (e) => {
+        const title = e.target.closest('.menu-title');
+        if (title && sidebarContent.contains(title)) {
             const group = title.closest('.menu-group');
             const icon = title.querySelector('.toggle-icon');
-
-            group.classList.toggle('open');
-
-            if (group.classList.contains('open')) {
-                icon.classList.remove('fa-chevron-right');
-                icon.classList.add('fa-chevron-down');
-            } else {
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-right');
+            if (group) {
+                group.classList.toggle('open');
+                if (icon) {
+                    const isOpen = group.classList.contains('open');
+                    icon.classList.toggle('fa-chevron-down', isOpen);
+                    icon.classList.toggle('fa-chevron-right', !isOpen);
+                }
             }
-        });
-    });
+            return;
+        }
 
-    document.querySelectorAll('.submenu-item').forEach(item => {
-        item.addEventListener('click', (e) => {
+        const item = e.target.closest('.submenu-item');
+        if (item && sidebarContent.contains(item)) {
             const href = item.getAttribute('href');
             if (!href || href === '#') {
                 e.preventDefault();
             }
-            const sidebarContent = document.querySelector('.sidebar-content');
-            if (sidebarContent) {
-                sessionStorage.setItem('sidebar_scroll_position', sidebarContent.scrollTop);
-            }
-            document.querySelectorAll('.submenu-item').forEach(el => el.classList.remove('active'));
+            sessionStorage.setItem('sidebar_scroll_position', sidebarContent.scrollTop);
+            sidebarContent.querySelectorAll('.submenu-item.active').forEach(el => el.classList.remove('active'));
             item.classList.add('active');
-        });
+        }
     });
-});
+}
 
 // Category Toggle
 function toggleCategory(element) {
@@ -288,9 +286,43 @@ function highlightText(text, tokens) {
 
 // 3. Search Engine Algorithm & Scoring System
 let sphinxSearchIndex = null;
+let precomputedDocs = null;
+let docHeadings = null;
+
 window.Search = {
     setIndex: function (index) {
         sphinxSearchIndex = index;
+        if (!index || !index.docnames) return;
+
+        const docCount = index.docnames.length;
+        precomputedDocs = new Array(docCount);
+        docHeadings = Array.from({ length: docCount }, () => []);
+
+        for (let d = 0; d < docCount; d++) {
+            const rawTitle = index.titles[d] || '';
+            const title = cleanTitle(rawTitle);
+            const docname = index.docnames[d] || '';
+            precomputedDocs[d] = {
+                title,
+                titleLower: title.toLowerCase(),
+                docname,
+                meta: parseDocMetadata(docname)
+            };
+        }
+
+        if (index.alltitles) {
+            for (const headingText in index.alltitles) {
+                const cleanHead = cleanTitle(headingText);
+                const headLower = cleanHead.toLowerCase();
+                const entries = index.alltitles[headingText];
+                for (let i = 0; i < entries.length; i++) {
+                    const docId = entries[i][0];
+                    if (docHeadings[docId]) {
+                        docHeadings[docId].push({ cleanHead, headLower });
+                    }
+                }
+            }
+        }
     }
 };
 
@@ -310,7 +342,7 @@ function searchDocumentation(rawQuery) {
         return searchCache.get(query);
     }
 
-    if (!sphinxSearchIndex || !sphinxSearchIndex.docnames) {
+    if (!sphinxSearchIndex || !sphinxSearchIndex.docnames || !precomputedDocs) {
         return [];
     }
 
@@ -320,124 +352,107 @@ function searchDocumentation(rawQuery) {
     const results = [];
     const docCount = sphinxSearchIndex.docnames.length;
 
-    for (let docId = 0; docId < docCount; docId++) {
-        const rawTitle = sphinxSearchIndex.titles[docId] || '';
-        const title = cleanTitle(rawTitle);
-        const titleLower = title.toLowerCase();
-        const docname = sphinxSearchIndex.docnames[docId] || '';
-        const meta = parseDocMetadata(docname);
+    const tokenData = qTokens.map(qToken => {
+        const titletermScores = new Int32Array(docCount);
+        const termScores = new Int32Array(docCount);
+        const termMatches = [];
 
+        if (sphinxSearchIndex.titleterms) {
+            for (const term in sphinxSearchIndex.titleterms) {
+                let score = 0;
+                if (term === qToken) score = 30;
+                else if (qToken.length >= 2 && term.startsWith(qToken)) score = 20;
+                if (score > 0) {
+                    const docs = sphinxSearchIndex.titleterms[term];
+                    if (Array.isArray(docs)) {
+                        for (let i = 0; i < docs.length; i++) {
+                            titletermScores[docs[i]] += score;
+                        }
+                    } else {
+                        titletermScores[docs] += score;
+                    }
+                }
+            }
+        }
+
+        if (sphinxSearchIndex.terms) {
+            for (const term in sphinxSearchIndex.terms) {
+                let score = 0;
+                if (term === qToken) score = 20;
+                else if (qToken.length >= 2 && term.startsWith(qToken)) score = 10;
+                if (score > 0) {
+                    const docs = sphinxSearchIndex.terms[term];
+                    termMatches.push({ term, docs });
+                    if (Array.isArray(docs)) {
+                        for (let i = 0; i < docs.length; i++) {
+                            termScores[docs[i]] += score;
+                        }
+                    } else {
+                        termScores[docs] += score;
+                    }
+                }
+            }
+        }
+
+        return { qToken, titletermScores, termScores, termMatches };
+    });
+
+    for (let docId = 0; docId < docCount; docId++) {
+        const doc = precomputedDocs[docId];
         let totalScore = 0;
         let matchedTokensCount = 0;
         let matchedHeading = null;
         let matchedTermList = [];
+        const headings = docHeadings[docId];
 
-        qTokens.forEach(qToken => {
+        tokenData.forEach(td => {
+            const qToken = td.qToken;
             let tokenScore = 0;
             let tokenMatched = false;
 
-            // --- A. Title Matching ---
-            if (titleLower === query) {
-                tokenScore += 100;
-                tokenMatched = true;
-            } else if (titleLower === qToken) {
-                tokenScore += 90;
-                tokenMatched = true;
-            } else if (titleLower.startsWith(query)) {
-                tokenScore += 80;
-                tokenMatched = true;
-            } else if (titleLower.startsWith(qToken)) {
-                tokenScore += 70;
-                tokenMatched = true;
-            } else if (titleLower.includes(query)) {
-                tokenScore += 60;
-                tokenMatched = true;
-            } else if (titleLower.includes(qToken)) {
-                tokenScore += 50;
-                tokenMatched = true;
-            }
+            if (doc.titleLower === query) { tokenScore += 100; tokenMatched = true; }
+            else if (doc.titleLower === qToken) { tokenScore += 90; tokenMatched = true; }
+            else if (doc.titleLower.startsWith(query)) { tokenScore += 80; tokenMatched = true; }
+            else if (doc.titleLower.startsWith(qToken)) { tokenScore += 70; tokenMatched = true; }
+            else if (doc.titleLower.includes(query)) { tokenScore += 60; tokenMatched = true; }
+            else if (doc.titleLower.includes(qToken)) { tokenScore += 50; tokenMatched = true; }
 
-            // --- B. Heading Matching (alltitles) ---
-            if (sphinxSearchIndex.alltitles) {
-                for (const headingText in sphinxSearchIndex.alltitles) {
-                    const entries = sphinxSearchIndex.alltitles[headingText];
-                    const belongsToDoc = entries.some(entry => entry[0] === docId);
-
-                    if (belongsToDoc) {
-                        const cleanHead = cleanTitle(headingText);
-                        const headLower = cleanHead.toLowerCase();
-
-                        if (headLower === qToken || headLower === query) {
-                            tokenScore += 40;
-                            tokenMatched = true;
-                            matchedHeading = cleanHead;
-                        } else if (headLower.startsWith(qToken)) {
-                            tokenScore += 35;
-                            tokenMatched = true;
-                            if (!matchedHeading) matchedHeading = cleanHead;
-                        } else if (headLower.includes(qToken)) {
-                            tokenScore += 30;
-                            tokenMatched = true;
-                            if (!matchedHeading) matchedHeading = cleanHead;
-                        }
+            if (headings && headings.length > 0) {
+                for (let i = 0; i < headings.length; i++) {
+                    const h = headings[i];
+                    if (h.headLower === qToken || h.headLower === query) {
+                        tokenScore += 40; tokenMatched = true; matchedHeading = h.cleanHead;
+                    } else if (h.headLower.startsWith(qToken)) {
+                        tokenScore += 35; tokenMatched = true; if (!matchedHeading) matchedHeading = h.cleanHead;
+                    } else if (h.headLower.includes(qToken)) {
+                        tokenScore += 30; tokenMatched = true; if (!matchedHeading) matchedHeading = h.cleanHead;
                     }
                 }
             }
 
-            // --- C. Titleterms Matching ---
-            if (sphinxSearchIndex.titleterms) {
-                for (const term in sphinxSearchIndex.titleterms) {
-                    if (term === qToken) {
-                        const docs = sphinxSearchIndex.titleterms[term];
-                        const hits = Array.isArray(docs) ? docs.includes(docId) : docs === docId;
-                        if (hits) {
-                            tokenScore += 30;
-                            tokenMatched = true;
-                        }
-                    } else if (qToken.length >= 2 && term.startsWith(qToken)) {
-                        const docs = sphinxSearchIndex.titleterms[term];
-                        const hits = Array.isArray(docs) ? docs.includes(docId) : docs === docId;
-                        if (hits) {
-                            tokenScore += 20;
-                            tokenMatched = true;
-                        }
+            const ttScore = td.titletermScores[docId];
+            if (ttScore > 0) {
+                tokenScore += ttScore;
+                tokenMatched = true;
+            }
+
+            const tScore = td.termScores[docId];
+            if (tScore > 0) {
+                tokenScore += tScore;
+                tokenMatched = true;
+                for (let m = 0; m < td.termMatches.length; m++) {
+                    const tm = td.termMatches[m];
+                    const docs = tm.docs;
+                    if (Array.isArray(docs) ? docs.includes(docId) : docs === docId) {
+                        matchedTermList.push(tm.term);
                     }
                 }
             }
 
-            // --- D. Terms Matching (Body / Content) ---
-            if (sphinxSearchIndex.terms) {
-                for (const term in sphinxSearchIndex.terms) {
-                    if (term === qToken) {
-                        const docs = sphinxSearchIndex.terms[term];
-                        const hits = Array.isArray(docs) ? docs.includes(docId) : docs === docId;
-                        if (hits) {
-                            tokenScore += 20;
-                            tokenMatched = true;
-                            matchedTermList.push(term);
-                        }
-                    } else if (qToken.length >= 2 && term.startsWith(qToken)) {
-                        const docs = sphinxSearchIndex.terms[term];
-                        const hits = Array.isArray(docs) ? docs.includes(docId) : docs === docId;
-                        if (hits) {
-                            tokenScore += 10;
-                            tokenMatched = true;
-                            matchedTermList.push(term);
-                        }
-                    }
-                }
-            }
-
-            if (tokenMatched) {
-                matchedTokensCount++;
-                totalScore += tokenScore;
-            }
+            if (tokenMatched) { matchedTokensCount++; totalScore += tokenScore; }
         });
 
-        // Multi-Word Query Bonus
-        if (qTokens.length > 1 && matchedTokensCount === qTokens.length) {
-            totalScore += 50;
-        }
+        if (qTokens.length > 1 && matchedTokensCount === qTokens.length) totalScore += 50;
 
         if (totalScore > 0) {
             let snippet = '';
@@ -445,19 +460,19 @@ function searchDocumentation(rawQuery) {
                 snippet = `Section: ${matchedHeading}`;
             } else if (matchedTermList.length > 0) {
                 const termsPreview = [...new Set(matchedTermList)].slice(0, 3).join(', ');
-                snippet = `Contains relevant guidance regarding ${termsPreview} in ${meta.module}.`;
+                snippet = `Contains relevant guidance regarding ${termsPreview} in ${doc.meta.module}.`;
             } else {
-                snippet = `Documentation resource for ${meta.section} in ${meta.module}.`;
+                snippet = `Documentation resource for ${doc.meta.section} in ${doc.meta.module}.`;
             }
 
             const base_url = window.CURQ_CONFIG ? window.CURQ_CONFIG.baseUrl : '/';
-            const url = base_url + docname + '.html';
+            const url = base_url + doc.docname + '.html';
 
             results.push({
                 docId,
-                title,
-                docname,
-                meta,
+                title: doc.title,
+                docname: doc.docname,
+                meta: doc.meta,
                 score: totalScore,
                 snippet,
                 url,
@@ -725,7 +740,7 @@ function formatOverviewCards() {
 
         const card = createCardElement(url, title, subtitle, 'search-result');
         gridContainer.appendChild(card);
-        
+
         if (section) section.style.display = 'none';
     });
 }
@@ -834,12 +849,35 @@ function formatLandingPageCards() {
 // Collapsible FAQ Accordion Formatting
 function formatFaqCards() {
     const path = window.location.pathname.toLowerCase();
-    const isFaqPage = path.includes('/faq') || path.endsWith('/faq.html') || document.querySelector('.sphinx-content h1')?.textContent.toLowerCase().includes('faq');
-
-    if (!isFaqPage) return;
-
     const mainContent = document.querySelector('.sphinx-content');
     if (!mainContent) return;
+
+    // Event delegation for all FAQ headers (both generated and static)
+    if (!mainContent.dataset.faqDelegated) {
+        mainContent.addEventListener('click', (e) => {
+            const header = e.target.closest('.faq-accordion-header');
+            if (!header) return;
+
+            const section = header.closest('.faq-accordion-item');
+            if (!section) return;
+            const answerDiv = section.querySelector('.faq-answer');
+            const answerInner = section.querySelector('.faq-answer-inner');
+            if (!answerDiv || !answerInner) return;
+
+            const isOpen = section.classList.contains('open');
+            if (isOpen) {
+                section.classList.remove('open');
+                answerDiv.style.maxHeight = '0px';
+            } else {
+                section.classList.add('open');
+                answerDiv.style.maxHeight = answerInner.scrollHeight + 40 + 'px';
+            }
+        });
+        mainContent.dataset.faqDelegated = 'true';
+    }
+
+    const isFaqPage = path.includes('/faq') || path.endsWith('/faq.html') || document.querySelector('.sphinx-content h1')?.textContent.toLowerCase().includes('faq');
+    if (!isFaqPage) return;
 
     const sections = Array.from(mainContent.querySelectorAll('section')).filter(sec => {
         const heading = sec.querySelector('h2, h3');
@@ -888,29 +926,6 @@ function formatFaqCards() {
         section.appendChild(headerDiv);
         section.appendChild(answerDiv);
     });
-
-    // Event delegation for all FAQ headers
-    if (!mainContent.dataset.faqDelegated) {
-        mainContent.addEventListener('click', (e) => {
-            const header = e.target.closest('.faq-accordion-header');
-            if (!header) return;
-            
-            const section = header.closest('.faq-accordion-item');
-            const answerDiv = section.querySelector('.faq-answer');
-            const answerInner = section.querySelector('.faq-answer-inner');
-            if (!answerDiv || !answerInner) return;
-
-            const isOpen = section.classList.contains('open');
-            if (isOpen) {
-                section.classList.remove('open');
-                answerDiv.style.maxHeight = '0px';
-            } else {
-                section.classList.add('open');
-                answerDiv.style.maxHeight = answerInner.scrollHeight + 40 + 'px';
-            }
-        });
-        mainContent.dataset.faqDelegated = 'true';
-    }
 
     // Auto-open section if anchor target exists in URL hash
     if (window.location.hash) {
@@ -962,17 +977,240 @@ function initSidebars() {
     }
 
     // Close sidebar when a link is clicked
-    document.querySelectorAll('.sidebar a, .right-sidebar a').forEach(link => {
-        link.addEventListener('click', closeAllSidebars);
+    if (leftSidebar) {
+        leftSidebar.addEventListener('click', (e) => {
+            if (e.target.closest('a')) closeAllSidebars();
+        });
+    }
+    if (rightSidebar) {
+        rightSidebar.addEventListener('click', (e) => {
+            if (e.target.closest('a')) closeAllSidebars();
+        });
+    }
+}
+
+function initImageZoomModal() {
+    let modal = document.getElementById('image-zoom-modal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'image-zoom-modal';
+        modal.className = 'image-zoom-modal';
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        modal.setAttribute('aria-label', 'Image preview');
+        modal.innerHTML = `
+            <div class="image-zoom-backdrop"></div>
+            <div class="image-zoom-container">
+                <div class="image-zoom-toolbar">
+                    <button class="image-zoom-btn zoom-in-btn" type="button" title="Zoom in (+)"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                    <button class="image-zoom-btn zoom-out-btn" type="button" title="Zoom out (-)"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                    <button class="image-zoom-btn zoom-reset-btn" type="button" title="Reset zoom (1:1)"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button class="image-zoom-btn image-zoom-close" type="button" title="Close (Esc)"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="image-zoom-stage">
+                    <img class="image-zoom-preview" src="" alt="" draggable="false" />
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    const backdrop = modal.querySelector('.image-zoom-backdrop');
+    const stage = modal.querySelector('.image-zoom-stage');
+    const preview = modal.querySelector('.image-zoom-preview');
+    const closeBtn = modal.querySelector('.image-zoom-close');
+    const zoomInBtn = modal.querySelector('.zoom-in-btn');
+    const zoomOutBtn = modal.querySelector('.zoom-out-btn');
+    const resetBtn = modal.querySelector('.zoom-reset-btn');
+
+    let currentScale = 1;
+    let translateX = 0;
+    let translateY = 0;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+
+    function applyTransform() {
+        preview.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+        if (currentScale > 1) {
+            stage.classList.add('is-zoomed');
+            preview.style.cursor = 'grab';
+        } else {
+            stage.classList.remove('is-zoomed');
+            preview.style.cursor = 'zoom-in';
+        }
+    }
+
+    function setScale(newScale) {
+        currentScale = Math.min(Math.max(newScale, 1), 4);
+        if (currentScale === 1) {
+            translateX = 0;
+            translateY = 0;
+        }
+        applyTransform();
+    }
+
+    function openModal(img) {
+        preview.src = img.currentSrc || img.src;
+        preview.alt = img.alt || '';
+
+        currentScale = 1;
+        translateX = 0;
+        translateY = 0;
+        applyTransform();
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        currentScale = 1;
+        translateX = 0;
+        translateY = 0;
+        applyTransform();
+    }
+
+    // Attach delegated click listener to documentation images
+    function bindContentImages() {
+        const content = document.querySelector('.sphinx-content');
+        if (!content || content.dataset.zoomDelegated) return;
+        content.dataset.zoomDelegated = 'true';
+
+        content.addEventListener('click', (e) => {
+            const img = e.target.closest('img');
+            if (!img || !content.contains(img)) return;
+            if (img.classList.contains('no-zoom') || img.classList.contains('onestein-badge-logo')) return;
+            if (img.complete && (img.naturalWidth < 40 || img.naturalHeight < 40)) return;
+
+            const link = img.closest('a');
+            if (link) {
+                const href = link.getAttribute('href') || '';
+                if (href === '#' || href === 'javascript:void(0)' || /\.(png|jpe?g|webp|gif|svg)(\?.*)?$/i.test(href)) {
+                    e.preventDefault();
+                } else {
+                    return;
+                }
+            }
+            openModal(img);
+        });
+    }
+
+    bindContentImages();
+
+    // Toolbar buttons
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+
+    zoomInBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setScale(currentScale + 0.35);
+    });
+
+    zoomOutBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setScale(currentScale - 0.35);
+    });
+
+    resetBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setScale(1);
+    });
+
+    // Toggle zoom on image click
+    preview.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentScale === 1) {
+            setScale(1.85);
+        } else {
+            setScale(1);
+        }
+    });
+
+    // Close when clicking empty space in stage
+    stage.addEventListener('click', (e) => {
+        if (e.target === stage) {
+            closeModal();
+        }
+    });
+
+    // Mouse wheel zoom
+    stage.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY < 0 ? 0.25 : -0.25;
+        setScale(currentScale + delta);
+    }, { passive: false });
+
+    // Drag to pan when zoomed (Desktop)
+    stage.addEventListener('mousedown', (e) => {
+        if (currentScale <= 1) return;
+        isDragging = true;
+        startX = e.clientX - translateX;
+        startY = e.clientY - translateY;
+        stage.classList.add('is-dragging');
+        preview.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        translateX = e.clientX - startX;
+        translateY = e.clientY - startY;
+        applyTransform();
+    });
+
+    window.addEventListener('mouseup', () => {
+        if (isDragging) {
+            isDragging = false;
+            stage.classList.remove('is-dragging');
+            preview.style.cursor = currentScale > 1 ? 'grab' : 'zoom-in';
+        }
+    });
+
+    // Touch dragging when zoomed (Mobile / Tablet)
+    stage.addEventListener('touchstart', (e) => {
+        if (currentScale <= 1 || e.touches.length !== 1) return;
+        isDragging = true;
+        startX = e.touches[0].clientX - translateX;
+        startY = e.touches[0].clientY - translateY;
+    }, { passive: true });
+
+    stage.addEventListener('touchmove', (e) => {
+        if (!isDragging || e.touches.length !== 1) return;
+        translateX = e.touches[0].clientX - startX;
+        translateY = e.touches[0].clientY - startY;
+        applyTransform();
+    }, { passive: true });
+
+    stage.addEventListener('touchend', () => {
+        isDragging = false;
+    });
+
+    // Keyboard support: Escape closes modal, +/- zooms, 0 resets
+    window.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') {
+            closeModal();
+        } else if (e.key === '+' || e.key === '=') {
+            setScale(currentScale + 0.35);
+        } else if (e.key === '-' || e.key === '_') {
+            setScale(currentScale - 0.35);
+        } else if (e.key === '0') {
+            setScale(1);
+        }
     });
 }
 
 function initCurqDocs() {
+    cleanHeadingNumbers();
+    initSidebarScroll();
+    initSidebarMenu();
     formatOverviewCards();
     formatQuickActionTables();
     formatLandingPageCards();
     formatFaqCards();
     initSidebars();
+    initImageZoomModal();
 }
 
 if (document.readyState === 'loading') {

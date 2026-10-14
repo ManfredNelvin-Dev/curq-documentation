@@ -7,6 +7,7 @@
     <title>CURQ Documentation</title>
     <link rel="icon" type="image/png" href="{{ pathto('_static/images/curq-favicon.png', 1) }}" />
 
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
@@ -100,7 +101,7 @@
                     {% endif %}
                 </nav>
 
-                <div class="content-wrapper">
+                <div class="content-wrapper{% if pagename == 'docs/support' or pagename == 'support' %} support-content-layout{% endif %}">
                     <div class="sphinx-content">
                         {% block body %}{{ body|safe }}{% endblock %}
 
@@ -127,6 +128,8 @@
                         {% endif %}
                     </div>
 
+                    {% block right_sidebar %}
+                    {% if pagename != 'docs/support' and pagename != 'support' %}
                     <aside class="right-sidebar">
                         {% block right_sidebar_toc %}
                         {% if toc %}
@@ -162,6 +165,8 @@
                             </ul>
                         </div>
                     </aside>
+                    {% endif %}
+                    {% endblock %}
                 </div>
             </main>
         </div>
@@ -184,7 +189,7 @@
             ]
         };
     </script>
-    <script src="{{ pathto('_static/js/main.js', 1) }}"></script>
+    <script src="{{ pathto('_static/js/main.js', 1) }}" defer></script>
 
 </body>
 
