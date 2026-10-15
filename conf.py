@@ -32,12 +32,12 @@ myst_enable_extensions = ["colon_fence"]
 # ---------------------------------------------------------
 
 smv_tag_whitelist = r"^v?\d+(\.\d+)*$"
-smv_branch_whitelist = r"^(main|18\.0|upload-docs)$"
+smv_branch_whitelist = r"^(main|18\.0)$"
 smv_remote_whitelist = None
 smv_released_pattern = r"^tags/.*$"
 smv_outputdir_format = "{ref.name}"
 smv_prefer_remote_refs = False
-smv_latest_version = "upload-docs"
+smv_latest_version = "main"
 
 # ---------------------------------------------------------
 # Paths and exclusions

@@ -159,7 +159,7 @@ git log --oneline -n 10
 ```
 Example output:
 ```text
-4a296e6 (HEAD -> upload-docs) search functionality fix
+4a296e6 (HEAD -> main) search functionality fix
 ad78a42 fix: added the multiversion functionality
 ce6bb31 Added Timesheet module documentation
 f4feb46 Add Accounting documentation
@@ -218,7 +218,6 @@ make multiversion
    ```text
    _build/html/
    ├── index.html          # Standard root redirect to active branch
-   ├── upload-docs/        # Current working branch documentation
    ├── main/               # Main branch documentation
    ├── 0.1/                # Documentation built from commit tagged as 0.1
    ├── 0.2/                # Documentation built from commit tagged as 0.2

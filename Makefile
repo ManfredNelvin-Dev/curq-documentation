@@ -9,7 +9,7 @@ SPHINXMULTIVERSION  ?= $(VENV)sphinx-multiversion
 SPHINXAUTOBUILD     ?= $(VENV)sphinx-autobuild
 SOURCEDIR           = .
 BUILDDIR            = _build
-ACTIVE_BRANCH       := $(shell git symbolic-ref --short -q HEAD 2>/dev/null || git describe --tags --exact-match 2>/dev/null || echo "upload-docs")
+ACTIVE_BRANCH       := $(shell git symbolic-ref --short -q HEAD 2>/dev/null || git describe --tags --exact-match 2>/dev/null || echo "main")
 
 # Put it first so that "make" without argument is like "make help".
 help:
