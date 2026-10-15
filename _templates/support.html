@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="support-page-wrapper">
+    <!-- Header -->
+    <div class="support-header">
+        <h1 class="support-main-title">{{ _('Contact & Support') }}</h1>
+        <p class="support-intro-text">
+            {{ _('CURQ offers support via expert teams, allowing users to ask questions and receive help with their specific problems.') }}
+        </p>
+    </div>
+
+    <!-- Hero Banner -->
+    <div class="support-hero-banner">
+        <div class="support-hero-content">
+            <h2 class="support-hero-title">{{ _('Need a hand with CURQ?') }}</h2>
+            <div class="support-hero-description">
+                <p>{{ _('Our support team is here to help you get the most out of CURQ.') }}</p>
+                <p>{{ _('Explore our documentation, or contact us directly for personalized support.') }}</p>
+            </div>
+            <div class="support-hero-actions">
+                <a href="mailto:support@curq.nl" class="hero-btn-primary">
+                    {{ _('Open a support ticket') }} <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{{ pathto('index') }}" class="hero-btn-secondary">
+                    <i class="fa-solid fa-book-open"></i> {{ _('Browse documentation') }}
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Columns: Get In Touch + Popular Questions -->
+    <div class="support-columns-container">
+        <!-- Left: Get In Touch -->
+        <div class="support-contact-column">
+            <div class="column-header">
+                <h2 class="column-title">{{ _('Get in touch') }}</h2>
+                <p class="column-subtitle">{{ _('Choose the best way to reach our support team.') }}</p>
+            </div>
+
+            <div class="contact-channels-group">
+                <!-- Phone -->
+                <div class="contact-channel-card">
+                    <div class="channel-icon-container">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="channel-details">
+                        <span class="channel-title">{{ _('Phone support') }}</span>
+                        <strong class="channel-value"><a href="tel:0886270340">088-627-0340</a></strong>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-channel-card">
+                    <div class="channel-icon-container">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="channel-details">
+                        <span class="channel-title">{{ _('Email support') }}</span>
+                        <strong class="channel-value"><a href="mailto:support@curq.nl">support@curq.nl</a></strong>
+                    </div>
+                </div>
+
+                <!-- Office Address -->
+                <div class="contact-channel-card">
+                    <div class="channel-icon-container">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="channel-details">
+                        <span class="channel-title">{{ _('Office address') }}</span>
+                        <strong class="channel-value">Etnastraat 20</strong>
+                        <span class="channel-meta">4814 AA, Breda<br>{{ _('Netherlands') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Popular Support Questions -->
+        <div class="support-faq-column">
+            <div class="column-header faq-header-row">
+                <div class="faq-header-titles">
+                    <h2 class="column-title">{{ _('Popular support questions') }}</h2>
+                    <p class="column-subtitle">{{ _('Find quick answers to the most common questions.') }}</p>
+                </div>
+                <a href="{{ pathto('docs/faq') }}" class="faq-view-all-link">
+                    {{ _('View all questions') }} <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="faq-accordion-container">
+                <div class="faq-accordion-item">
+                    <div class="faq-accordion-header">
+                        <h3 class="faq-question-title">{{ _('What are the main features and modules offered in CURQ?') }}</h3>
+                        <i class="fa-solid fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>{{ _('CURQ Starter and Growth come standard with the following modules: Financial, Inventory Management, Purchasing, Sales, CRM, Website/Webshop, Projects, Timesheets, and Expense Claims. CURQ Professional is equipped with even more modules and functionalities.') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item">
+                    <div class="faq-accordion-header">
+                        <h3 class="faq-question-title">{{ _('How do implementation costs and lead time compare to commercial ERP solutions?') }}</h3>
+                        <i class="fa-solid fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>{{ _('Startup and configuration take an average of 2 hours and are included as standard (free of charge) with every CURQ product. Should additional support be required, this can be purchased for CURQ Starter & Growth based on a support voucher system. For CURQ Professional, an implementation package is available at a cost of €1,500.00, which covers the implementation process.') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item">
+                    <div class="faq-accordion-header">
+                        <h3 class="faq-question-title">{{ _('Is there an active community surrounding this open-source ERP system that provides support and regularly releases updates and patches?') }}</h3>
+                        <i class="fa-solid fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>{{ _('Yes, there is a community called OCA. This stands for "Odoo Community Association". It is an independent non-profit organization founded by members of the Odoo community. The main goal of OCA is to support the development and promotion of Odoo (formerly known as OpenERP) – a popular open-source enterprise management software.') }}</p>
+                            <p>{{ _('The OCA community consists of developers, implementation experts, and users who collaborate to create additional modules and extensions for the Odoo platform. These modules add extra functionality to the standard Odoo system and can be specifically tailored to the needs of various industries and use cases.') }}</p>
+                            <p>{{ _('Because Odoo is open source, developers around the world can contribute to the development of the software. The OCA facilitates these contributions by providing a structured process for developing, reviewing, and publishing modules. This allows new features and capabilities to be introduced and shared with the broader Odoo community.') }}</p>
+                            <p>{{ _('It is important to note that OCA is separate from Odoo SA, the company that develops Odoo and provides commercial support. OCA is a community initiative centered on collaboration and sharing knowledge and technology within the Odoo community.') }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item">
+                    <div class="faq-accordion-header">
+                        <h3 class="faq-question-title">{{ _('What support options are available for users who need help implementing, configuring, and maintaining the system?') }}</h3>
+                        <i class="fa-solid fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>{{ _('Standard support includes 2 hours. A prepaid card can be purchased for additional explanation or training. We have a reduced rate especially for CURQ customers:') }}</p>
+                            <ul>
+                                <li><strong>{{ _('10 hours') }}</strong> {{ _('costs € 800.00 (€ 80.00 p.m.)') }}</li>
+                                <li><strong>{{ _('25 hours') }}</strong> {{ _('costs € 1,875.00 (€ 75.00 p.m.)') }}</li>
+                                <li>{{ _('The standard rate is € 85.00 per hour.') }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item">
+                    <div class="faq-accordion-header">
+                        <h3 class="faq-question-title">{{ _('Can I easily upgrade to another package?') }}</h3>
+                        <i class="fa-solid fa-chevron-down faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>{{ _('Yes, that is possible. You can send an email to') }} <a href="mailto:info@curq.nl">info@curq.nl</a> {{ _('for this. Onestein will process the request.') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Onestein Card -->
+    <div class="support-onestein-footer-card">
+        <div class="onestein-card-brand">
+            <img src="{{ pathto('_static/images/onestein-logo.png', 1) }}" alt="Onestein" class="onestein-badge-logo">
+        </div>
+        <div class="onestein-card-text">
+            <h3 class="onestein-card-title">{{ _('CURQ is a proud product of Onestein') }}</h3>
+            <p class="onestein-card-desc">
+                {{ _("Backed by Onestein's specialized open-source ERP consultants and engineers, we provide enterprise guidance, system configuration, hosting, and ongoing technical maintenance.") }}
+            </p>
+        </div>
+        <div class="onestein-card-action">
+            <a href="https://www.onestein.eu" target="_blank" rel="noopener noreferrer" class="onestein-visit-btn">
+                {{ _('Visit onestein.eu') }} <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block right_sidebar %}{% endblock %}

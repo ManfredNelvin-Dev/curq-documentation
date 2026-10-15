@@ -39,5 +39,4 @@ The discount amount and discount deadline can also be printed on customer invoic
 
 If the customer pays the discounted amount within the allowed period, CURQ automatically proposes posting the difference to the configured Payment Difference Account when registering the payment directly from the invoice.
 
-> [!TIP]
-> If payments are processed through imported bank statements, it is recommended to create a Reconciliation Model to automatically write off the payment difference.
+If payments are processed through imported bank statements, it is recommended to create a Reconciliation Model to automatically write off the payment difference.

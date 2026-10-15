@@ -36,8 +36,7 @@ Click **New** to create a new date range.
 | **End Date** | Enter the last date of the period. |
 | **Active** | Enable this option if the date range should be available for reporting and filtering. |
 
-> [!NOTE]
-> CURQ automatically maintains standard monthly, quarterly, and yearly date ranges. Manual changes are usually only required for special business requirements.
+CURQ automatically maintains standard monthly, quarterly, and yearly date ranges. Manual changes are usually only required for special business requirements.
 
 ---
 

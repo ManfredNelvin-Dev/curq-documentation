@@ -1,0 +1,11 @@
+.venv
+_build
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.DS_Store
+*.log
+docker-compose*.yml
+README.md

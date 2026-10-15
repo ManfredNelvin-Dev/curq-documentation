@@ -33,8 +33,7 @@ Depending on your business requirements and local regulations, you may also need
 - **Tax Identification Number**
 - **Other legal registration details**
 
-> [!NOTE]
-> These details may appear on invoices and official documents. It is important to ensure they match your official registrations exactly.
+These details may appear on invoices and official documents. It is important to ensure they match your official registrations exactly.
 
 ## Upload Company Logo
 
@@ -43,12 +42,10 @@ To personalize your documents and brand your business:
 2. Upload your company logo.
 3. Save the changes.
 
-> [!TIP]
-> Your logo will be prominently displayed on invoices, quotations, and reports, giving your documents a highly professional appearance!
+Your logo will be prominently displayed on invoices, quotations, and reports, giving your documents a highly professional appearance!
 
 ## Verify Contact Information
 
 Make sure all contact details are up to date so customers, suppliers, and employees can easily reach your business when needed.
 
-> [!IMPORTANT]
-> **Save Your Changes:** CURQ automatically saves changes as you make them. There is no separate save button!
+**Save Your Changes:** CURQ automatically saves changes as you make them. There is no separate save button!

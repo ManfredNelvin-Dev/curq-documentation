@@ -12,8 +12,7 @@ The configured addresses can be viewed from the contact record under:
 
 A Delivery Address is identified by the truck icon, while a Billing Address is identified by the banknote icon.
 
-> [!NOTE]
-> For information on creating and managing contact addresses, refer to the Contacts documentation.
+For information on creating and managing contact addresses, refer to the Contacts documentation.
 
 ---
 
@@ -21,8 +20,7 @@ A Delivery Address is identified by the truck icon, while a Billing Address is i
 
 If you use the Sales module, billing and delivery addresses can also be managed directly through sales orders. The selected addresses are automatically carried forward to related documents, such as deliveries and invoices.
 
-> [!NOTE]
-> For more information, refer to the Sales Orders documentation.
+For more information, refer to the Sales Orders documentation.
 
 ---
 

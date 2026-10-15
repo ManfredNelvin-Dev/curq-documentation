@@ -5,10 +5,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CURQ Documentation</title>
+    <link rel="icon" type="image/png" href="{{ pathto('_static/images/curq-favicon.png', 1) }}" />
 
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.7/viewer.min.css">
     <link rel="stylesheet" href="{{ pathto('_static/css/style.css', 1) }}">
     <link rel="stylesheet" href="{{ pathto('_static/css/sidebar.css', 1) }}">
 
@@ -17,128 +21,166 @@
 <body>
 
     {% if pagename == 'index' %}
-        {% include "landing.html" %}
+    {% include "landing.html" %}
     {% else %}
-        {% set ns = namespace(current_mod=None, current_page_label='Overview', current_category=None) %}
-        {% for mod in modules %}
-            {% if pagename.startswith('docs/' + mod.folder) %}
-                {% set ns.current_mod = mod %}
-                {% for page in mod.pages %}
-                    {% if page.page_path == pagename %}
-                        {% set ns.current_page_label = page.label %}
-                        {% set ns.current_category = page.category %}
-                    {% endif %}
+    {% set ns = namespace(current_mod=None, current_page_label='Overview', current_category=None) %}
+    {% for mod in modules %}
+    {% if pagename.startswith('docs/' + mod.folder) %}
+    {% set ns.current_mod = mod %}
+    {% for page in mod.pages %}
+    {% if page.page_path == pagename %}
+    {% set ns.current_page_label = page.label %}
+    {% set ns.current_category = page.category %}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+
+    <div class="layout">
+        <div class="sidebar-overlay"></div>
+        {% include "docs_sidebar.html" %}
+
+        <main class="main-content">
+            <div class="mobile-header">
+                <button class="mobile-menu-toggle left-toggle"><i class="fa-solid fa-bars"></i></button>
+                <span class="mobile-header-title">{{ _('CURQ Documentation') }}</span>
+                <button class="mobile-menu-toggle right-toggle"><i class="fa-solid fa-grip"></i></button>
+            </div>
+            <nav class="breadcrumb">
+                {% set t = _ %}
+                <a href="{{ pathto('index') }}">{{ _('Home') }}</a>
+                {% if pagename.startswith('docs/Articles') or pagename.startswith('Articles') %}
+                <span class="separator">/</span>
+                {% if pagename == 'docs/Articles/00-overview' or pagename == 'Articles/00-overview' %}
+                <a href="javascript:void(0)" class="current-section">{{ _('Articles') }}</a>
+                {% else %}
+                <a href="{{ pathto('docs/Articles/00-overview') }}">{{ _('Articles') }}</a>
+                <span class="separator">/</span>
+                <a href="javascript:void(0)" class="current-section">{{ title|striptags }}</a>
+                {% endif %}
+                {% elif pagename == 'docs/faq' or pagename == 'faq' %}
+                <span class="separator">/</span>
+                <a href="javascript:void(0)" class="current-section">{{ _('FAQ') }}</a>
+                {% elif pagename == 'docs/support' or pagename == 'support' %}
+                <span class="separator">/</span>
+                <a href="javascript:void(0)" class="current-section">{{ _('Contact & Support') }}</a>
+                {% elif ns.current_mod %}
+                <span class="separator">/</span>
+                {% if ns.current_mod.has_docs %}
+                {% set target_path = ns.current_mod.pages[0].page_path %}
+                {% else %}
+                {% set target_path = 'docs' %}
+                {% endif %}
+                {% set raw_href = pathto(target_path) %}
+                {% if raw_href == '#' or not raw_href %}
+                {% set mod_href = '?module=' + ns.current_mod.sidebar_key %}
+                {% else %}
+                {% set mod_href = raw_href + ('&' if '?' in raw_href else '?') + 'module=' + ns.current_mod.sidebar_key
+                %}
+                {% endif %}
+                <a href="{{ mod_href }}">{{ t(ns.current_mod.display_name) }}</a>
+
+                {% if ns.current_category %}
+                <span class="separator">/</span>
+                {% set ns_cat = namespace(first_in_cat=none) %}
+                {% for p in ns.current_mod.pages %}
+                {% if p.category == ns.current_category and not ns_cat.first_in_cat %}
+                {% set ns_cat.first_in_cat = p %}
+                {% endif %}
                 {% endfor %}
-            {% endif %}
-        {% endfor %}
+                {% if ns_cat.first_in_cat %}
+                <a href="{{ pathto(ns_cat.first_in_cat.page_path) }}?module={{ ns.current_mod.sidebar_key }}">{{
+                    t(ns.current_category) }}</a>
+                {% else %}
+                <span>{{ t(ns.current_category) }}</span>
+                {% endif %}
+                {% endif %}
 
-        <div class="layout">
-            {% include "docs_sidebar.html" %}
+                <span class="separator">/</span>
+                <a href="javascript:void(0)" class="current-section">{{ t(ns.current_page_label) }}</a>
+                {% else %}
+                <span class="separator">/</span>
+                <a href="javascript:void(0)" class="current-section">{{ title|striptags }}</a>
+                {% endif %}
+            </nav>
 
-            <main class="main-content">
-                <nav class="breadcrumb">
-                    {% set t = _ %}
-                    <a href="{{ pathto('index') }}">{{ _('Home') }}</a>
+            <div
+                class="content-wrapper{% if pagename == 'docs/support' or pagename == 'support' %} support-content-layout{% endif %}">
+                <div class="sphinx-content">
+                    {% block body %}{{ body|safe }}{% endblock %}
+
+                    {% if pagename.endswith('00-overview') %}
+                    {% set ns_btns = namespace(first_article=none, first_faq=none) %}
                     {% if ns.current_mod %}
-                        <span class="separator">/</span>
-                        {% if ns.current_mod.has_docs %}
-                            {% set target_path = ns.current_mod.pages[0].page_path %}
-                        {% else %}
-                            {% set target_path = 'docs' %}
-                        {% endif %}
-                        {% set raw_href = pathto(target_path) %}
-                        {% if raw_href == '#' or not raw_href %}
-                            {% set mod_href = '?module=' + ns.current_mod.sidebar_key %}
-                        {% else %}
-                            {% set mod_href = raw_href + ('&' if '?' in raw_href else '?') + 'module=' + ns.current_mod.sidebar_key %}
-                        {% endif %}
-                        <a href="{{ mod_href }}">{{ t(ns.current_mod.display_name) }}</a>
-                        
-                        {% if ns.current_category %}
-                            <span class="separator">/</span>
-                            {% set ns_cat = namespace(first_in_cat=none) %}
-                            {% for p in ns.current_mod.pages %}
-                                {% if p.category == ns.current_category and not ns_cat.first_in_cat %}
-                                    {% set ns_cat.first_in_cat = p %}
-                                {% endif %}
-                            {% endfor %}
-                            {% if ns_cat.first_in_cat %}
-                                <a href="{{ pathto(ns_cat.first_in_cat.page_path) }}?module={{ ns.current_mod.sidebar_key }}">{{ t(ns.current_category) }}</a>
-                            {% else %}
-                                <span>{{ t(ns.current_category) }}</span>
-                            {% endif %}
-                        {% endif %}
-                        
-                        <span class="separator">/</span>
-                        <a href="javascript:void(0)" class="current-section">{{ t(ns.current_page_label) }}</a>
-                    {% else %}
-                        <span class="separator">/</span>
-                        <a href="javascript:void(0)" class="current-section">{{ title|striptags }}</a>
+                    {% for p in ns.current_mod.pages %}
+                    {% if (p.category == 'Articles' or 'article' in p.page_path.lower()) and not ns_btns.first_article
+                    %}
+                    {% set ns_btns.first_article = p %}
                     {% endif %}
-                </nav>
-                <div class="content-wrapper">
-                    <div class="sphinx-content">
-                        {% block body %}{{ body|safe }}{% endblock %}
-
-                        {% if pagename.endswith('00-overview') %}
-                        {% set ns_btns = namespace(first_article=none, first_faq=none) %}
-                        {% if ns.current_mod %}
-                            {% for p in ns.current_mod.pages %}
-                                {% if p.category == 'Articles' and not ns_btns.first_article %}
-                                    {% set ns_btns.first_article = p %}
-                                {% endif %}
-                                {% if p.category == 'Faq' and not ns_btns.first_faq %}
-                                    {% set ns_btns.first_faq = p %}
-                                {% endif %}
-                            {% endfor %}
+                    {% if (p.label == 'FAQ' or p.category == 'FAQ' or p.page_path.endswith('/faq') or
+                    p.page_path.endswith('faq')) and not ns_btns.first_faq %}
+                    {% set ns_btns.first_faq = p %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    <div class="overview-buttons">
+                        {% if ns_btns.first_article %}
+                        <a href="{{ pathto(ns_btns.first_article.page_path) }}?module={{ ns.current_mod.sidebar_key }}"
+                            class="overview-btn">{{ _('View all articles') }}</a>
                         {% endif %}
-                        <div class="overview-buttons">
-                            {% if ns_btns.first_article %}
-                                <a href="{{ pathto(ns_btns.first_article.page_path) }}?module={{ ns.current_mod.sidebar_key }}" class="overview-btn">View all articles</a>
-                            {% endif %}
-                            {% if ns_btns.first_faq %}
-                                <a href="{{ pathto(ns_btns.first_faq.page_path) }}?module={{ ns.current_mod.sidebar_key }}" class="overview-btn secondary">Frequently asked questions</a>
-                            {% endif %}
-                        </div>
+                        {% if ns_btns.first_faq %}
+                        <a href="{{ pathto(ns_btns.first_faq.page_path) }}?module={{ ns.current_mod.sidebar_key }}"
+                            class="overview-btn secondary">{{ _('Frequently asked questions') }}</a>
                         {% endif %}
                     </div>
-
-                    <aside class="right-sidebar">
-                        {% if toc %}
-                            <div class="right-sidebar-section">
-                                <div class="right-sidebar-heading">ON THIS PAGE</div>
-                                <div class="toc-container">
-                                    {{ toc }}
-                                </div>
-                            </div>
-                        {% endif %}
-
-                        <div class="right-sidebar-section">
-                            <div class="right-sidebar-heading">FURTHER WITH</div>
-                            <ul class="right-sidebar-list">
-                                {% if ns.current_mod and ns.current_mod.pages|length > 1 %}
-                                    {% for page in ns.current_mod.pages %}
-                                        {% if page.page_path != pagename %}
-                                            <li><a href="{{ pathto(page.page_path) }}?module={{ ns.current_mod.sidebar_key }}">{{ page.label }}</a></li>
-                                        {% endif %}
-                                    {% endfor %}
-                                {% else %}
-                                    {% for mod in modules %}
-                                        {% if not ns.current_mod or mod.folder != ns.current_mod.folder %}
-                                            {% if mod.has_docs %}
-                                                <li><a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">{{ mod.display_name }} Overview</a></li>
-                                            {% else %}
-                                                <li><a href="{{ pathto('docs') }}?module={{ mod.sidebar_key }}">{{ mod.display_name }}</a></li>
-                                            {% endif %}
-                                        {% endif %}
-                                    {% endfor %}
-                                {% endif %}
-                            </ul>
-                        </div>
-                    </aside>
+                    {% endif %}
                 </div>
-            </main>
-        </div>
+
+                {% block right_sidebar %}
+                {% if pagename != 'docs/support' and pagename != 'support' %}
+                <aside class="right-sidebar">
+                    {% block right_sidebar_toc %}
+                    {% if toc %}
+                    <div class="right-sidebar-section">
+                        <div class="right-sidebar-heading">{{ _('ON THIS PAGE') }}</div>
+                        <div class="toc-container">
+                            {{ toc }}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endblock %}
+
+                    <div class="right-sidebar-section">
+                        <div class="right-sidebar-heading">{{ _('FURTHER WITH') }}</div>
+                        <ul class="right-sidebar-list">
+                            {% if ns.current_mod and ns.current_mod.pages|length > 1 %}
+                            {% for page in ns.current_mod.pages %}
+                            {% if page.page_path != pagename %}
+                            <li><a href="{{ pathto(page.page_path) }}?module={{ ns.current_mod.sidebar_key }}">{{
+                                    _(page.label) }}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                            {% else %}
+                            {% for mod in modules %}
+                            {% if not ns.current_mod or mod.folder != ns.current_mod.folder %}
+                            {% if mod.has_docs %}
+                            <li><a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">{{
+                                    _(mod.display_name) }} {{ _('Overview') }}</a></li>
+                            {% else %}
+                            <li><a href="{{ pathto('docs') }}?module={{ mod.sidebar_key }}">{{ _(mod.display_name)
+                                    }}</a></li>
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </aside>
+                {% endif %}
+                {% endblock %}
+            </div>
+        </main>
+    </div>
     {% endif %}
 
     {% include "search_modal.html" %}
@@ -148,6 +190,8 @@
             homeUrl: "{{ pathto('_static', 1) }}".replace('_static', '') + 'index.html',
             baseUrl: "{{ pathto('_static', 1) }}".replace('_static', ''),
             searchIndexUrl: "{{ pathto('searchindex.js', 1) }}",
+            currentVersion: "{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or 'latest') }}",
+            currentVersionCode: "{{ current_version.name if current_version is defined and current_version.name is defined else (current_version_code or 'latest') }}",
             defaultLang: "{{ default_language }}",
             supportedLangs: [
                 /* {% for lang in supported_languages %} */
@@ -158,7 +202,10 @@
             ]
         };
     </script>
-    <script src="{{ pathto('_static/js/main.js', 1) }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.7/viewer.min.js" defer></script>
+    <script src="{{ pathto('_static/js/main.js', 1) }}" defer></script>
 
 </body>
 

@@ -16,11 +16,7 @@ To manage payment terms, navigate to the Invoicing/Accounting module.
 
 From this page, you can view, create, edit, or remove payment terms used on customer invoices and vendor bills.
 
-*[Image placeholder: Payment Terms list view]*
-
 Several standard payment terms are available by default. To create a new payment term, click **[New]** in the upper-left corner.
-
-*[Image placeholder: New Payment Term button]*
 
 ---
 
@@ -32,8 +28,7 @@ Before using payment discounts, verify that the appropriate general ledger accou
 
 ![Default Accounts](images/default-accounts.png)
 
-> [!WARNING]
-> Only modify these accounts in consultation with your accountant.
+Only modify these accounts in consultation with your accountant.
 
 ---
 
@@ -76,8 +71,6 @@ Payment terms can also include an early payment discount. To apply payment disco
 **Example:**
 A company offers a 2% discount if payment is made within 5 days, and the full invoice amount is due within 30 days. In this scenario, customers who pay within the first five days receive a 2% discount. After the discount period expires, the full invoice amount remains payable until the final due date.
 
-*[Image placeholder: Payment Term with Discount Percentage and Discount Days]*
-
 ### Payment Discounts and VAT
 
 Tax authorities provide specific guidelines regarding VAT treatment when early-payment discounts are offered. In CURQ, the VAT handling method is configured directly on the Payment Term itself.
@@ -114,8 +107,6 @@ The preview shows:
 - Remaining balances
 
 This allows you to verify that the payment term behaves as expected before saving it.
-
-*[Image placeholder: Example section]*
 
 **Example Scenario:**
 For a payment term configured as:

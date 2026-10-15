@@ -9,7 +9,7 @@
 
     <div class="sidebar-content">
         <div class="sidebar-search-box" onclick="openSearchModal()">
-            <span class="sidebar-search-placeholder">{{ _('Search for content') }}</span>
+            <span class="sidebar-search-placeholder">{{ _('Search for a content...') }}</span>
         </div>
 
         <div class="sidebar-heading">
@@ -18,15 +18,14 @@
 
         {% set t = _ %}
         {% for mod in modules %}
-        <div class="menu-group{% if (ns.current_mod and mod.folder == ns.current_mod.folder) or (not ns.current_mod and loop.first) %} open{% endif %}"
-            data-module-key="{{ mod.sidebar_key }}">
+        {% set is_mod_open = (ns.current_mod and mod.folder == ns.current_mod.folder) %}
+        <div class="menu-group{% if is_mod_open %} open{% endif %}" data-module-key="{{ mod.sidebar_key }}">
             <div class="menu-title">
                 <div class="menu-left">
                     <img src="{{ pathto('_static/images/', 1) }}{{ mod.icon }}" alt="">
                     <span>{{ t(mod.display_name) }}</span>
                 </div>
-                <i
-                    class="fa-solid fa-chevron-{% if (ns.current_mod and mod.folder == ns.current_mod.folder) or (not ns.current_mod and loop.first) %}down{% else %}right{% endif %} toggle-icon"></i>
+                <i class="fa-solid fa-chevron-{% if is_mod_open %}down{% else %}right{% endif %} toggle-icon"></i>
             </div>
             <div class="submenu">
                 {% if mod.has_docs %}
@@ -39,19 +38,20 @@
             {% endif %}
 
             {% if page.category %}
+            {% set is_active_cat = (ns.current_category and page.category == ns.current_category) %}
             <div class="submenu-category collapsible-cat" onclick="toggleCategory(this)">
                 <span>{{ t(page.category) }}</span>
-                <i class="fa-solid fa-chevron-right cat-icon"></i>
+                <i class="fa-solid fa-chevron-{% if is_active_cat %}down{% else %}right{% endif %} cat-icon"></i>
             </div>
-            <div class="nested-submenu" style="display: none;">
+            <div class="nested-submenu{% if is_active_cat %} active{% endif %}">
                 {% endif %}
 
                 {% set ns_cat.current = page.category %}
                 {% endif %}
 
                 <a href="{{ pathto(page.page_path) }}?module={{ mod.sidebar_key }}"
-                    class="submenu-item{% if page.page_path == pagename or (not ns.current_mod and loop.first) %} active{% endif %}">{{
-                    t(page.label) }}</a>
+                    class="submenu-item{% if not page.category %} root-item{% endif %}{% if page.page_path == pagename %} active{% endif %}"
+                    title="{{ t(page.label) }}">{{ t(page.label) }}</a>
 
                 {% endfor %}
 
@@ -62,17 +62,42 @@
             {% endif %}
         </div>
     </div>
+
     {% endfor %}
+
+    <div class="sidebar-bottom-links">
+        <a href="{{ pathto('docs/Articles/00-overview') }}"
+            class="sidebar-bottom-item{% if pagename.startswith('docs/Articles') or pagename.startswith('Articles') %} active{% endif %}">
+            <span>{{ _('Articles') }}</span>
+        </a>
+        <a href="{{ pathto('docs/faq') }}"
+            class="sidebar-bottom-item{% if pagename == 'docs/faq' or pagename == 'faq' %} active{% endif %}">
+            <span>{{ _('FAQ') }}</span>
+        </a>
+        <a href="{{ pathto('docs/support') }}"
+            class="sidebar-bottom-item{% if pagename == 'docs/support' or pagename == 'support' %} active{% endif %}">
+            <span>{{ _('Contact & Support') }}</span>
+        </a>
+    </div>
     </div>
 
     <div class="sidebar-footer">
-        <select class="language-selector" onchange="switchLanguage(this.value)"
-            style="width: 100%; text-align: center; border: none; background: transparent; font-size: 13px;">
-            {% for lang in supported_languages %}
-            <option value="{{ lang.code }}" {% if language==lang.code %}selected{% endif %}>CURQ 18 • {{ lang.name }}
-            </option>
-            {% endfor %}
-        </select>
+        <div class="sidebar-footer-selectors">
+            <select class="version-selector" onchange="window.location.href=this.value" aria-label="Version">
+                {% if versions %}
+                {% for item in versions %}
+                <option value="{{ item.url }}" {% if current_version and current_version.name == item.name %}selected{% endif %}>{{ item.name }}</option>
+                {% endfor %}
+                {% else %}
+                <option value="" selected>{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or 'latest') }}</option>
+                {% endif %}
+            </select>
+            <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">
+                {% for lang in supported_languages %}
+                <option value="{{ lang.code }}" {% if language==lang.code %}selected{% endif %}>{{ lang.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
     </div>
 
 </aside>

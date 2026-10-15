@@ -23,5 +23,4 @@ You can access the tax settings by navigating to:
 | **Verify VAT Numbers** | Enable this option to automatically validate customer VAT numbers using the VIES (VAT Information Exchange System) service. Benefits include verification of EU VAT numbers and reduced data entry errors. |
 | **Fiscal Country** | Select the country whose tax regulations apply to your accounting. The fiscal country determines available tax configurations, VAT reporting requirements, and localization settings. |
 
-> [!NOTE]
-> If you are unsure which method to use for VAT reductions, the NL Invoice system, or OSS, it is highly recommended to consult your accountant.
+If you are unsure which method to use for VAT reductions, the NL Invoice system, or OSS, it is highly recommended to consult your accountant.

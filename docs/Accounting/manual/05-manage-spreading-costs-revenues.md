@@ -69,8 +69,7 @@ Recalculates only lines that have not yet been posted. Useful when changes are m
 ### Recalculate Full Spread
 **[RECALCULATE FULL SPREAD]**
 Completely rebuilds the spread table. 
-> [!WARNING]
-> Existing posted entries are removed and recreated. Use only when necessary.
+Existing posted entries are removed and recreated. Use only when necessary.
 
 ### Undo Spread
 **[UNDO SPREAD]**

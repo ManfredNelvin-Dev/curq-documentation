@@ -87,8 +87,7 @@ When a supplier invoice PDF is uploaded, CURQ displays a PDF preview on the righ
 
 The preview makes it easier to review supplier details, invoice amounts, invoice dates, VAT information, and payment references. This significantly improves the speed and accuracy of invoice processing. 
 
-> [!NOTE] 
-> The PDF preview may not appear on smaller screens due to limited display space.
+The PDF preview may not appear on smaller screens due to limited display space.
 
 ### Available PDF Viewer Controls
 - **Page Navigation:** Move between pages when the PDF contains multiple pages.
@@ -97,8 +96,6 @@ The preview makes it easier to review supplier details, invoice amounts, invoice
 - **Multiple Attachments Navigation:** If several PDF files are attached, use the navigation controls to switch between documents.
 
 If the PDF supports text selection, information can be copied directly from the document and pasted into invoice fields, making data entry faster and reducing errors.
-
-*[Image placeholder: Invoice Preview]*
 
 ---
 
@@ -111,8 +108,6 @@ The **Chatter** section at the bottom of the invoice records all activity relate
 - **Activities:** Schedule activities such as follow-up tasks, approval requests, phone calls, or meetings.
 - **Followers:** Contacts and employees can follow the document. Followers automatically receive notifications about changes based on their subscription preferences.
 
-*[Image placeholder: Invoice Chatter]*
-
 ---
 
 ## Confirming the Invoice
@@ -122,8 +117,6 @@ After all invoice information has been entered and verified:
 2. Verify accounting entries.
 3. Confirm taxes and payment terms.
 4. Click **[Confirm]**.
-
-*[Image placeholder: Confirm Invoice]*
 
 Once confirmed, the invoice becomes an official accounting document. After confirmation, you can register a payment, create a credit note, view journal entries, or return the invoice to draft status (if permitted) for corrections.
 

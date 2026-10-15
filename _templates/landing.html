@@ -4,12 +4,22 @@
             <img src="{{ pathto('_static/images/', 1) }}curq-logo.png" alt="CURQ Logo" class="logo-img">
             <span>docs</span>
         </a>
-        <select class="language-selector" onchange="switchLanguage(this.value)">
-            {% for lang in supported_languages %}
-            <option value="{{ lang.code }}" {% if language==lang.code %}selected{% endif %}>CURQ 18 • {{ lang.name }}
-            </option>
-            {% endfor %}
-        </select>
+        <div class="nav-selectors">
+            <select class="version-selector" onchange="window.location.href=this.value" aria-label="Version">
+                {% if versions %}
+                {% for item in versions %}
+                <option value="{{ item.url }}" {% if current_version and current_version.name == item.name %}selected{% endif %}>{{ item.name }}</option>
+                {% endfor %}
+                {% else %}
+                <option value="" selected>{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or 'latest') }}</option>
+                {% endif %}
+            </select>
+            <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">
+                {% for lang in supported_languages %}
+                <option value="{{ lang.code }}" {% if language==lang.code %}selected{% endif %}>{{ lang.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
     </div>
 </header>
 
@@ -20,7 +30,7 @@
         <div class="landing-search-container">
             <div class="search-box">
                 <input type="text" id="landing-search-input"
-                    placeholder="{{ _('Search for a task, article or setting...') }}">
+                    placeholder="{{ _('Search for Contents, Articles or FAQs...') }}">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div id="landing-search-dropdown" class="search-modal-content">
@@ -30,106 +40,49 @@
                 </div>
                 <div id="landing-search-results" class="search-modal-results"></div>
             </div>
+            <div class="landing-contact-wrapper">
+                <a href="{{ pathto('docs/support') }}" class="landing-contact-btn">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>{{ _('Contact Us') }}</span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
+
+{% set modules_html %}
+<section class="section modules-section">
+    <div class="container">
+        <h2>{{ _('Modules') }}</h2>
+        <div class="modules-grid">
+            {% set t = _ %}
+            {% for mod in modules %}
+            {% if mod.has_docs %}
+            <a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">
+                {% else %}
+                <a href="javascript:void(0);" style="cursor: default;">
+                    {% endif %}
+                    <div class="module-card" {% if not mod.has_docs %} style="opacity: 0.7;" {% endif %}>
+                    <div class="icon">
+                        <img src="{{ pathto('_static/images/', 1) }}{{ mod.icon }}" alt="">
+                    </div>
+                    <div>
+                        <h3>{{ t(mod.display_name) }}</h3>
+                        <p>{{ t(mod.description) }}</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endset %}
 
 <div class="content-area">
-    <section class="section">
-        <div class="container">
-            <h2>{{ _('Popular articles') }}</h2>
-            <div class="article-grid">
-                <a href="#" class="article-card">
-                    <div>
-                        <h3>{{ _('Declaring a business lunch') }}</h3>
-                        <p>{{ _('Manual · Expenses') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#" class="article-card">
-                    <div>
-                        <h3>{{ _('Your first expense claim') }}</h3>
-                        <p>{{ _('Learning · Expenses') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#" class="article-card">
-                    <div>
-                        <h3>{{ _('Fields & statuses') }}</h3>
-                        <p>{{ _('Reference · Expenses') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#" class="article-card">
-                    <div>
-                        <h3>{{ _('Initial settings') }}</h3>
-                        <p>{{ _('Reference · Expenses') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#" class="article-card">
-                    <div>
-                        <h3>{{ _('Why the category matters') }}</h3>
-                        <p>{{ _('Background · Expenses') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#" class="article-card">
-                    <div>
-                        <h3>{{ _('Frequently asked questions') }}</h3>
-                        <p>{{ _('Help with expenses') }}</p>
-                    </div>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section modules-section">
-        <div class="container">
-            <h2>{{ _('Modules') }}</h2>
-            <div class="modules-grid">
-                {% set t = _ %}
-                {% for mod in modules %}
-                {% if mod.has_docs %}
-                <a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">
-                    {% else %}
-                    <a href="javascript:void(0);" style="cursor: default;">
-                        {% endif %}
-                        <div class="module-card" {% if not mod.has_docs %} style="opacity: 0.7;" {% endif %}>
-                            <div class="icon">
-                                <img src="{{ pathto('_static/images/', 1) }}{{ mod.icon }}" alt="">
-                            </div>
-                            <div>
-                                <h3>{{ t(mod.display_name) }}</h3>
-                                <p>{{ t(mod.description) }}</p>
-                            </div>
-                        </div>
-                    </a>
-                    {% endfor %}
-            </div>
-        </div>
-    </section>
+    {% if '<!-- MODULES_PLACEHOLDER -->' in body %}
+    {{ body | replace('<!-- MODULES_PLACEHOLDER -->', modules_html) }}
+    {% else %}
+    {{ modules_html }}
+    {{ body }}
+    {% endif %}
 </div>
-
-<section class="section faq-section">
-    <div class="container">
-        <h2>{{ _('Frequently asked questions') }}</h2>
-        <div class="faq-list">
-            <a href="#" class="faq-card">
-                <div>
-                    <h3>{{ _('How do I submit my first expense claim?') }}</h3>
-                    <p>{{ _('Follow the exercise for new users.') }}</p>
-                </div>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="#" class="faq-card">
-                <div>
-                    <h3>{{ _('Which category do I choose for a lunch?') }}</h3>
-                    <p>{{ _('View the answer and associated reference.') }}</p>
-                </div>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-</section>

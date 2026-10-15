@@ -1,19 +1,64 @@
+import json
 import os
 import re
+import sys
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Any, Dict, List
 
-project = 'CURQ Documentation'
-copyright = '2026, CIT Services'
-author = 'CIT Services'
+# ---------------------------------------------------------
+# Project information
+# ---------------------------------------------------------
 
-version = '1.0'
-release = '1.0'
+project = "CURQ Documentation"
+copyright = "2026, CIT Services"
+author = "CIT Services"
 
-extensions = ['myst_parser']
+version = "1.0"
+release = "1.0"
 
-templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'docs/README.md', '.venv']
+# ---------------------------------------------------------
+# Sphinx extensions
+# ---------------------------------------------------------
+
+extensions = [
+    "myst_parser",
+    "sphinx_multiversion",
+]
+
+myst_enable_extensions = ["colon_fence"]
+
+# ---------------------------------------------------------
+# Sphinx Multi-Version configuration
+# ---------------------------------------------------------
+
+smv_tag_whitelist = r"^v?\d+(\.\d+)*$"
+smv_branch_whitelist = r"^(main|18\.0|upload-docs)$"
+smv_remote_whitelist = None
+smv_released_pattern = r"^tags/.*$"
+smv_outputdir_format = "{ref.name}"
+smv_prefer_remote_refs = False
+smv_latest_version = "upload-docs"
+
+# ---------------------------------------------------------
+# Paths and exclusions
+# ---------------------------------------------------------
+
+templates_path = ["_templates"]
+
+exclude_patterns = [
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+    "docs/README.md",
+    "README.md",
+    ".venv",
+    "docs/popular_articles.md",
+    "docs/landing_faq.md",
+]
+
+# ---------------------------------------------------------
+# Language and translations
+# ---------------------------------------------------------
 
 language = "en"
 
@@ -21,137 +66,85 @@ locale_dirs = ["locale/"]
 gettext_compact = False
 gettext_uuid = True
 
-html_theme = 'basic'
-html_static_path = ['_static']
+# ---------------------------------------------------------
+# HTML configuration
+# ---------------------------------------------------------
+
+html_theme = "basic"
+
+html_static_path = ["_static"]
+html_favicon = "_static/images/curq-favicon.png"
 
 html_css_files = []
-source_suffix = {'.rst': 'restructuredtext', '.md': 'markdown'}
 
-# -- Module Registry ---------------------------------------------------------
-# Maps folder names in docs/ to display metadata.
-# To add a new module:
-#   1. Create a folder in docs/ (e.g. docs/Accounting/)
-#   2. Add an entry below with: display_name, icon, description
-#   3. Place an icon named <icon>.png in _static/images/
-#   4. Add .md files inside the folder (00-overview.md, 01-manual.md, etc.)
-#
-# The template auto-discovers .md files inside each module folder and
-# generates sidebar submenu items from them.
-
-MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
-    'Accounting': {
-        'display_name': 'Accounting',
-        'icon': 'accounting-icon.png',
-        'description': 'Expenses and administration',
-        'sidebar_key': 'accounting',
-    },
-    'CRM': {
-        'display_name': 'CRM',
-        'icon': 'crm-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'crm',
-    },
-    'Sales': {
-        'display_name': 'Sales',
-        'icon': 'sales-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'sales',
-    },
-    'Purchase': {
-        'display_name': 'Purchase',
-        'icon': 'purchase-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'purchase',
-    },
-    'Inventory': {
-        'display_name': 'Inventory',
-        'icon': 'inventory-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'inventory',
-    },
-    'Projects': {
-        'display_name': 'Projects',
-        'icon': 'project-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'projects',
-    },
-    'HR': {
-        'display_name': 'HR',
-        'icon': 'hr-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'hr',
-    },
-    'Helpdesk': {
-        'display_name': 'Helpdesk',
-        'icon': 'helpdesk-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'helpdesk',
-    },
-    'EmailMarketing': {
-        'display_name': 'Email Marketing',
-        'icon': 'emailmarketing-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'emailmarketing',
-    },
-    'Appointments': {
-        'display_name': 'Appointments',
-        'icon': 'appointment-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'appointments',
-    },
-    'Dashboards': {
-        'display_name': 'Dashboards',
-        'icon': 'dashboard-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'dashboards',
-    },
-    'Website': {
-        'display_name': 'Website',
-        'icon': 'website-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'website',
-    },
-    'Contacts': {
-        'display_name': 'Contacts',
-        'icon': 'contacts-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'contacts',
-    },
-    'Chat': {
-        'display_name': 'Chats',
-        'icon': 'chats-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'chats',
-    },
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
 }
+
+# ---------------------------------------------------------
+# Module registry
+# ---------------------------------------------------------
+
+sys.path.insert(0, os.path.abspath("."))
+
+from module_registry import MODULE_REGISTRY
+
+
+# ---------------------------------------------------------
+# Sidebar labels
+# ---------------------------------------------------------
 
 SUBMENU_LABELS: Dict[str, str] = {
-    '00-overview': 'Overview',
-    '01-manual': 'Manual',
-    '02-procedures': 'Procedures',
-    '03-articles': 'Articles',
-    '04-faq': 'FAQ',
-    '05-reference': 'Reference',
+    "00-overview": "Overview",
+    "01-manual": "Manual",
+    "02-procedures": "Procedures",
+    "03-articles": "Articles",
+    "04-faq": "FAQ",
 }
 
-def build_modules_context() -> List[Dict[str, Any]]:
+
+# ---------------------------------------------------------
+# Build module documentation context
+# ---------------------------------------------------------
+
+def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
     """
-    Scan the docs/ directory and build a list of module metadata
-    dictionaries to inject into the Sphinx HTML template context.
+    Scan the docs/ directory and build module metadata
+    dictionaries for use in Sphinx HTML templates.
     """
-    base_dir = Path(__file__).parent
-    doc_root = base_dir / 'docs'
+
+    if sourcedir is None:
+        base_dir = Path(__file__).resolve().parent
+    else:
+        base_dir = Path(sourcedir).resolve()
+
+    doc_root = base_dir / "docs"
     modules = []
 
-    leading_number_re = re.compile(r'^\d+\s*')
+    # Match a leading number followed by a hyphen or space.
+    leading_number_re = re.compile(r"^\d+[-\s]+")
 
     def get_category_order(cat_name: str) -> int:
+        """Return the display order for documentation categories."""
+
         cat_lower = cat_name.lower()
-        if not cat_lower or 'overview' in cat_lower: return 0
-        if 'manual' in cat_lower: return 1
-        if 'procedure' in cat_lower or 'configuration' in cat_lower: return 2
-        if 'article' in cat_lower: return 3
-        if 'faq' in cat_lower: return 4
+
+        if not cat_lower or "overview" in cat_lower:
+            return 0
+
+        if "manual" in cat_lower:
+            return 1
+
+        if "procedure" in cat_lower or "configuration" in cat_lower:
+            return 2
+
+        if "article" in cat_lower:
+            return 3
+
+        if "faq" in cat_lower:
+            return 4
+
         return 99
 
     for folder_name, meta in MODULE_REGISTRY.items():
@@ -159,67 +152,144 @@ def build_modules_context() -> List[Dict[str, Any]]:
         pages = []
 
         if folder_path.is_dir():
-            def get_sort_key(md_file: Path) -> tuple:
-                folder_rel = str(md_file.parent.relative_to(folder_path))
-                if folder_rel == '.':
-                    order = 4 if 'faq' in md_file.stem.lower() else 0
-                else:
-                    cat = folder_rel.replace('-', ' ').replace('_', ' ')
-                    cat = leading_number_re.sub('', cat).strip().title()
-                    order = get_category_order(cat)
-                return (order, md_file.name)
 
-            md_files = list(folder_path.rglob('*.md'))
-            md_files.sort(key=get_sort_key)
+            def get_sort_key(md_file: Path) -> tuple:
+                """Sort pages by category and filename."""
+
+                folder_rel = str(
+                    md_file.parent.relative_to(folder_path)
+                )
+
+                if folder_rel == ".":
+                    order = (
+                        4
+                        if "faq" in md_file.stem.lower()
+                        else 0
+                    )
+                else:
+                    category_name = (
+                        folder_rel
+                        .replace("-", " ")
+                        .replace("_", " ")
+                    )
+
+                    category_name = (
+                        leading_number_re.sub(
+                            "", category_name
+                        ).strip().title()
+                    )
+
+                    order = get_category_order(category_name)
+
+                return order, md_file.name.lower()
+
+            md_files = sorted(
+                folder_path.rglob("*.md"),
+                key=get_sort_key,
+            )
 
             for md_file in md_files:
                 basename = md_file.stem
 
-                pretty_name = basename.replace('-', ' ').replace('_', ' ')
-                pretty_name = leading_number_re.sub('', pretty_name).strip().title()
+                pretty_name = (
+                    basename
+                    .replace("-", " ")
+                    .replace("_", " ")
+                )
 
-                if pretty_name.lower() == 'faq':
-                    pretty_name = 'FAQ'
+                pretty_name = (
+                    leading_number_re.sub(
+                        "", pretty_name
+                    ).strip()
+                )
 
-                label = SUBMENU_LABELS.get(basename, pretty_name)
+                pretty_name = " ".join(
+                    w if w.isupper() else w.capitalize()
+                    for w in pretty_name.split()
+                )
+
+                if pretty_name.lower() == "faq":
+                    pretty_name = "FAQ"
+
+                label = SUBMENU_LABELS.get(
+                    basename, pretty_name
+                )
 
                 rel_path = md_file.relative_to(base_dir)
-                page_path = str(rel_path.with_suffix('')).replace('\\', '/')
 
-                folder_rel = str(md_file.parent.relative_to(folder_path))
-                if folder_rel == '.':
-                    category = 'FAQ' if 'faq' in basename.lower() else ''
+                page_path = rel_path.with_suffix("").as_posix()
+
+                folder_rel = str(
+                    md_file.parent.relative_to(folder_path)
+                )
+
+                if folder_rel == ".":
+                    category = ""
                 else:
-                    category = folder_rel.replace('-', ' ').replace('_', ' ')
-                    category = leading_number_re.sub('', category).strip().title()
+                    category = (
+                        folder_rel
+                        .replace("-", " ")
+                        .replace("_", " ")
+                    )
 
-                    if category.lower() == 'faq':
-                        category = 'FAQ'
+                    category = (
+                        leading_number_re.sub(
+                            "", category
+                        ).strip().title()
+                    )
 
-                pages.append({
-                    'label': label,
-                    'page_path': page_path,
-                    'category': category,
-                })
+                    if category.lower() == "faq":
+                        category = "FAQ"
 
-        modules.append({
-            'folder': folder_name,
-            'display_name': meta['display_name'],
-            'icon': meta['icon'],
-            'description': meta['description'],
-            'sidebar_key': meta['sidebar_key'],
-            'pages': pages,
-            'has_docs': len(pages) > 0,
-        })
+                pages.append(
+                    {
+                        "label": label,
+                        "page_path": page_path,
+                        "category": category,
+                    }
+                )
+
+        modules.append(
+            {
+                "folder": folder_name,
+                "display_name": meta["display_name"],
+                "icon": meta["icon"],
+                "description": meta["description"],
+                "sidebar_key": meta["sidebar_key"],
+                "pages": pages,
+                "has_docs": bool(pages),
+            }
+        )
+
+    modules.sort(
+        key=lambda module: module["display_name"].lower()
+    )
 
     return modules
 
+
 html_context = {
-    'modules': build_modules_context(),
-    'supported_languages': [
-        {'code': 'en', 'name': 'English'},
-        {'code': 'nl', 'name': 'Nederlands'}
+    "modules": build_modules_context(),
+    "current_version": version,
+    "current_version_code": version,
+    "supported_languages": [
+        {"code": "en", "name": "English"},
+        {"code": "nl", "name": "Dutch"},
     ],
-    'default_language': 'en',
+    "default_language": "en",
 }
 
+# ---------------------------------------------------------
+# Additional standalone HTML templates
+# ---------------------------------------------------------
+
+html_additional_pages = {
+    "docs/support": "support.html",
+}
+
+
+def setup(app):
+    def on_html_page_context(app, pagename, templatename, context, doctree):
+        context["modules"] = build_modules_context(app.srcdir)
+
+    app.connect("html-page-context", on_html_page_context)

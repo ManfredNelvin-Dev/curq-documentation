@@ -110,8 +110,7 @@ This tab defines how supplier and vendor payments are processed.
 | **Manual Payment** | Payment is processed manually. |
 | **SEPA Credit Transfer for Suppliers** | Creates SEPA payment files for supplier payments. |
 
-> [!NOTE]
-> **SEPA Credit Transfer** allows CURQ to generate payment files that can be uploaded to your bank.
+**SEPA Credit Transfer** allows CURQ to generate payment files that can be uploaded to your bank.
 
 ---
 

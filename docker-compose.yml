@@ -1,0 +1,19 @@
+# ==============================================================================
+# CURQ Documentation - Docker Compose Configuration
+# ==============================================================================
+
+services:
+  curq-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: curq-docs:latest
+    container_name: curq_documentation
+    restart: unless-stopped
+    ports:
+      - "8080:8000"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

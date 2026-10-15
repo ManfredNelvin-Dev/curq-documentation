@@ -162,8 +162,7 @@ You can:
 - Modify depreciation lines if necessary.
 - Delete depreciation lines before activation.
 
-> [!NOTE]
-> In most cases, manual adjustments are not required.
+In most cases, manual adjustments are not required.
 
 ---
 
@@ -183,10 +182,9 @@ From the Depreciation Card, you can:
 - Open related journal entries.
 - Reverse or delete entries when permitted.
 
-> [!TIP]
-> The **History** tab contains all accounting entries related to the asset.
->
-> ![Asset History](images/asset-history.png)
+The **History** tab contains all accounting entries related to the asset.
+
+![Asset History](images/asset-history.png)
 
 ---
 

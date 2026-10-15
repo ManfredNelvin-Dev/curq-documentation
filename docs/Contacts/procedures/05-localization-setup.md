@@ -52,7 +52,7 @@ CURQ pre-loads all official world countries. To inspect or customize country rul
 | **Country Code**         | Standard two-letter ISO country code (such as `IN` or `US`).                                       | Enables quick searching and validates tax identification numbers.         |
 | **Country Calling Code** | International dialing prefix (such as `91` or `1`).                                                | Formats phone and mobile contact numbers automatically.                   |
 | **Enforce Cities**       | Toggle requiring contacts in this nation to choose an existing city from the registry.             | Prevents spelling variations in city names across partner addresses.      |
-| **Vat Label**            | Custom title for the tax identification field (such as `GSTIN`, `VAT`, or `EIN`).                  | Replaces the default Tax ID label on contact forms for local clarity.     |
+| **VAT Label**            | Custom title for the tax identification field (such as `GSTIN`, `VAT`, or `EIN`).                  | Replaces the default Tax ID label on contact forms for local clarity.     |
 | **Zip Required**         | Toggle requiring a postal or ZIP code before saving an address.                                    | Stops users from saving incomplete delivery or billing locations.         |
 | **State Required**       | Toggle requiring a state or province selection before saving an address.                           | Ensures accurate regional taxation and legal address compliance.          |
 | **States**               | Sub-table listing all regional states, provinces, or territories with their names and short codes. | Provides the allowable state choices in contact address dropdowns.        |
