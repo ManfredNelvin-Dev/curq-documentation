@@ -190,8 +190,8 @@
             homeUrl: "{{ pathto('_static', 1) }}".replace('_static', '') + 'index.html',
             baseUrl: "{{ pathto('_static', 1) }}".replace('_static', ''),
             searchIndexUrl: "{{ pathto('searchindex.js', 1) }}",
-            currentVersion: "{{ current_version }}",
-            currentVersionCode: "{{ current_version_code }}",
+            currentVersion: "{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or 'latest') }}",
+            currentVersionCode: "{{ current_version.name if current_version is defined and current_version.name is defined else (current_version_code or 'latest') }}",
             defaultLang: "{{ default_language }}",
             supportedLangs: [
                 /* {% for lang in supported_languages %} */

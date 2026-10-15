@@ -5,11 +5,14 @@
             <span>docs</span>
         </a>
         <div class="nav-selectors">
-            <select class="version-selector" onchange="switchVersion(this.value)" aria-label="Version">
-                {% for ver in supported_versions %}
-                <option value="{{ ver.code }}" {% if current_version_code==ver.code or ver.code in pagename %}selected{%
-                    endif %}>{{ ver.name }}</option>
+            <select class="version-selector" onchange="window.location.href=this.value" aria-label="Version">
+                {% if versions %}
+                {% for item in versions %}
+                <option value="{{ item.url }}" {% if current_version and current_version.name == item.name %}selected{% endif %}>{{ item.name }}</option>
                 {% endfor %}
+                {% else %}
+                <option value="" selected>{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or 'latest') }}</option>
+                {% endif %}
             </select>
             <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">
                 {% for lang in supported_languages %}
@@ -36,6 +39,12 @@
                     <span id="close-landing-search">{{ _('Close') }} &times;</span>
                 </div>
                 <div id="landing-search-results" class="search-modal-results"></div>
+            </div>
+            <div class="landing-contact-wrapper">
+                <a href="{{ pathto('docs/support') }}" class="landing-contact-btn">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>{{ _('Contact Us') }}</span>
+                </a>
             </div>
         </div>
     </div>

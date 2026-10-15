@@ -20,9 +20,24 @@ release = "1.0"
 # Sphinx extensions
 # ---------------------------------------------------------
 
-extensions = ["myst_parser"]
+extensions = [
+    "myst_parser",
+    "sphinx_multiversion",
+]
 
 myst_enable_extensions = ["colon_fence"]
+
+# ---------------------------------------------------------
+# Sphinx Multi-Version configuration
+# ---------------------------------------------------------
+
+smv_tag_whitelist = r"^v?\d+(\.\d+)*$"
+smv_branch_whitelist = r"^(main|18\.0|upload-docs)$"
+smv_remote_whitelist = None
+smv_released_pattern = r"^tags/.*$"
+smv_outputdir_format = "{ref.name}"
+smv_prefer_remote_refs = False
+smv_latest_version = "upload-docs"
 
 # ---------------------------------------------------------
 # Paths and exclusions
@@ -35,6 +50,7 @@ exclude_patterns = [
     "Thumbs.db",
     ".DS_Store",
     "docs/README.md",
+    "README.md",
     ".venv",
     "docs/popular_articles.md",
     "docs/landing_faq.md",
@@ -92,13 +108,17 @@ SUBMENU_LABELS: Dict[str, str] = {
 # Build module documentation context
 # ---------------------------------------------------------
 
-def build_modules_context() -> List[Dict[str, Any]]:
+def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
     """
     Scan the docs/ directory and build module metadata
     dictionaries for use in Sphinx HTML templates.
     """
 
-    base_dir = Path(__file__).resolve().parent
+    if sourcedir is None:
+        base_dir = Path(__file__).resolve().parent
+    else:
+        base_dir = Path(sourcedir).resolve()
+
     doc_root = base_dir / "docs"
     modules = []
 
@@ -180,7 +200,12 @@ def build_modules_context() -> List[Dict[str, Any]]:
                 pretty_name = (
                     leading_number_re.sub(
                         "", pretty_name
-                    ).strip().title()
+                    ).strip()
+                )
+
+                pretty_name = " ".join(
+                    w if w.isupper() else w.capitalize()
+                    for w in pretty_name.split()
                 )
 
                 if pretty_name.lower() == "faq":
@@ -243,76 +268,10 @@ def build_modules_context() -> List[Dict[str, Any]]:
     return modules
 
 
-import subprocess
-
-
-def _discover_git_versions():
-    """Discover current version and all available versions dynamically from git tags and branches."""
-    try:
-        raw_tags = subprocess.check_output(
-            ["git", "tag", "--sort=-creatordate"],
-            stderr=subprocess.DEVNULL,
-            text=True
-        ).strip().splitlines()
-        tags = [t.strip() for t in raw_tags if t.strip()]
-    except Exception:
-        tags = []
-
-    curr_ver = None
-    try:
-        curr_ver = subprocess.check_output(
-            ["git", "describe", "--tags", "--exact-match"],
-            stderr=subprocess.DEVNULL,
-            text=True
-        ).strip()
-    except Exception:
-        pass
-
-    if not curr_ver:
-        try:
-            branch = subprocess.check_output(
-                ["git", "rev-parse", "--abbrev-ref", "HEAD"],
-                stderr=subprocess.DEVNULL,
-                text=True
-            ).strip()
-            if branch and branch != "HEAD":
-                curr_ver = branch
-        except Exception:
-            pass
-
-    if not curr_ver:
-        curr_ver = tags[0] if tags else "latest"
-
-    # Build versions list from tags
-    v_list = [{"code": t, "name": t} for t in tags]
-    if not any(v["code"] == curr_ver for v in v_list):
-        v_list.insert(0, {"code": curr_ver, "name": curr_ver})
-
-    return curr_ver, v_list
-
-
-_discovered_curr_ver, _discovered_v_list = _discover_git_versions()
-
-env_current_version = os.environ.get("SPHINX_CURRENT_VERSION")
-env_current_version_code = os.environ.get("SPHINX_CURRENT_VERSION_CODE")
-env_supported_versions = os.environ.get("SPHINX_SUPPORTED_VERSIONS_JSON")
-
-if env_supported_versions:
-    try:
-        supported_versions_list = json.loads(env_supported_versions)
-    except Exception:
-        supported_versions_list = _discovered_v_list
-else:
-    supported_versions_list = _discovered_v_list
-
-current_version_name = env_current_version or _discovered_curr_ver
-current_version_code = env_current_version_code or _discovered_curr_ver
-
 html_context = {
     "modules": build_modules_context(),
-    "current_version": current_version_name,
-    "current_version_code": current_version_code,
-    "supported_versions": supported_versions_list,
+    "current_version": version,
+    "current_version_code": version,
     "supported_languages": [
         {"code": "en", "name": "English"},
         {"code": "nl", "name": "Dutch"},
@@ -327,3 +286,10 @@ html_context = {
 html_additional_pages = {
     "docs/support": "support.html",
 }
+
+
+def setup(app):
+    def on_html_page_context(app, pagename, templatename, context, doctree):
+        context["modules"] = build_modules_context(app.srcdir)
+
+    app.connect("html-page-context", on_html_page_context)

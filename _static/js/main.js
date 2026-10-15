@@ -54,101 +54,9 @@ async function switchLanguage(lang) {
 }
 
 // Version Switcher Logic
-async function switchVersion(targetVersion) {
-    if (!targetVersion) return;
-    const currentPath = window.location.pathname;
-    const segments = currentPath.split('/').filter(Boolean);
-    let targetPath = '';
-
-    if (segments.length === 0) {
-        targetPath = `/${targetVersion}/index.html`;
-    } else {
-        const firstSegment = segments[0];
-        // Dynamically get all available versions from the selector options and config
-        const availableVersions = Array.from(document.querySelectorAll('.version-selector option'))
-            .map(opt => opt.value)
-            .filter(Boolean);
-        if (window.CURQ_CONFIG && window.CURQ_CONFIG.currentVersionCode) {
-            availableVersions.push(window.CURQ_CONFIG.currentVersionCode);
-        }
-
-        const isVersionSegment = availableVersions.includes(firstSegment) ||
-            (!firstSegment.endsWith('.html') && firstSegment !== 'docs' && firstSegment !== '_static');
-
-        if (isVersionSegment) {
-            targetPath = '/' + targetVersion + '/' + segments.slice(1).join('/');
-        } else {
-            targetPath = '/' + targetVersion + '/' + segments.join('/');
-        }
-    }
-
-    targetPath = targetPath.replace(/\/+/g, '/');
-    const destination = targetPath + window.location.search + window.location.hash;
-
-    if (window.location.protocol === 'file:') {
-        window.location.href = destination;
-        return;
-    }
-
-    try {
-        const resp = await fetch(targetPath, { method: 'HEAD' });
-        if (resp.ok) {
-            window.location.href = destination;
-            return;
-        }
-    } catch (e) {
-        // On network error or fetch restriction, navigate to the target page directly
-        window.location.href = destination;
-        return;
-    }
-
-    // Only fallback to home page if server explicitly returned 404 (file doesn't exist in target version)
-    window.location.href = `/${targetVersion}/index.html`;
-}
-
-async function initVersionSelector() {
-    try {
-        // Ensure Dutch language option displays "Dutch"
-        const nlOptions = document.querySelectorAll('.language-selector option[value="nl"]');
-        nlOptions.forEach(opt => {
-            opt.textContent = 'Dutch';
-        });
-
-        const rootUrl = window.CURQ_CONFIG && window.CURQ_CONFIG.baseUrl ? window.CURQ_CONFIG.baseUrl : '/';
-        const candidates = [
-            rootUrl + 'versions.json',
-            rootUrl + '../versions.json',
-            '/versions.json'
-        ];
-        let versionsData = null;
-        for (const url of candidates) {
-            try {
-                const res = await fetch(url);
-                if (res.ok) {
-                    versionsData = await res.json();
-                    break;
-                }
-            } catch (e) { }
-        }
-
-        if (versionsData && Array.isArray(versionsData) && versionsData.length > 0) {
-            const versionSelects = document.querySelectorAll('.version-selector');
-            versionSelects.forEach(selectEl => {
-                selectEl.innerHTML = '';
-                const currentPath = window.location.pathname;
-                versionsData.forEach(v => {
-                    const opt = document.createElement('option');
-                    opt.value = v.code;
-                    opt.textContent = v.code;
-                    if (currentPath.includes('/' + v.code + '/') || (window.CURQ_CONFIG && window.CURQ_CONFIG.currentVersionCode === v.code)) {
-                        opt.selected = true;
-                    }
-                    selectEl.appendChild(opt);
-                });
-            });
-        }
-    } catch (err) {
-        console.debug('Multi-version config not loaded:', err);
+function switchVersion(targetUrl) {
+    if (targetUrl) {
+        window.location.href = targetUrl;
     }
 }
 
@@ -976,7 +884,6 @@ function initCurqDocs() {
     formatFaqCards();
     initSidebars();
     initImageViewer();
-    initVersionSelector();
 }
 
 if (document.readyState === 'loading') {
