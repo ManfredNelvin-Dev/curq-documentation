@@ -19,15 +19,13 @@
         {% set t = _ %}
         {% for mod in modules %}
         {% set is_mod_open = (ns.current_mod and mod.folder == ns.current_mod.folder) %}
-        <div class="menu-group{% if is_mod_open %} open{% endif %}"
-            data-module-key="{{ mod.sidebar_key }}">
+        <div class="menu-group{% if is_mod_open %} open{% endif %}" data-module-key="{{ mod.sidebar_key }}">
             <div class="menu-title">
                 <div class="menu-left">
                     <img src="{{ pathto('_static/images/', 1) }}{{ mod.icon }}" alt="">
                     <span>{{ t(mod.display_name) }}</span>
                 </div>
-                <i
-                    class="fa-solid fa-chevron-{% if is_mod_open %}down{% else %}right{% endif %} toggle-icon"></i>
+                <i class="fa-solid fa-chevron-{% if is_mod_open %}down{% else %}right{% endif %} toggle-icon"></i>
             </div>
             <div class="submenu">
                 {% if mod.has_docs %}
@@ -67,24 +65,28 @@
 
     {% endfor %}
 
-        <div class="sidebar-bottom-links">
-            <a href="{{ pathto('docs/Articles/00-overview') }}" class="sidebar-bottom-item{% if pagename.startswith('docs/Articles') or pagename.startswith('Articles') %} active{% endif %}">
-                <span>{{ _('Articles') }}</span>
-            </a>
-            <a href="{{ pathto('docs/faq') }}" class="sidebar-bottom-item{% if pagename == 'docs/faq' or pagename == 'faq' %} active{% endif %}">
-                <span>{{ _('FAQ') }}</span>
-            </a>
-            <a href="{{ pathto('docs/support') }}" class="sidebar-bottom-item{% if pagename == 'docs/support' or pagename == 'support' %} active{% endif %}">
-                <span>{{ _('Contact & Support') }}</span>
-            </a>
-        </div>
+    <div class="sidebar-bottom-links">
+        <a href="{{ pathto('docs/Articles/00-overview') }}"
+            class="sidebar-bottom-item{% if pagename.startswith('docs/Articles') or pagename.startswith('Articles') %} active{% endif %}">
+            <span>{{ _('Articles') }}</span>
+        </a>
+        <a href="{{ pathto('docs/faq') }}"
+            class="sidebar-bottom-item{% if pagename == 'docs/faq' or pagename == 'faq' %} active{% endif %}">
+            <span>{{ _('FAQ') }}</span>
+        </a>
+        <a href="{{ pathto('docs/support') }}"
+            class="sidebar-bottom-item{% if pagename == 'docs/support' or pagename == 'support' %} active{% endif %}">
+            <span>{{ _('Contact & Support') }}</span>
+        </a>
+    </div>
     </div>
 
     <div class="sidebar-footer">
         <div class="sidebar-footer-selectors">
             <select class="version-selector" onchange="switchVersion(this.value)" aria-label="Version">
                 {% for ver in supported_versions %}
-                <option value="{{ ver.code }}" {% if current_version_code == ver.code or ver.code in pagename %}selected{% endif %}>{{ ver.name }}</option>
+                <option value="{{ ver.code }}" {% if current_version_code==ver.code or ver.code in pagename %}selected{%
+                    endif %}>{{ ver.name }}</option>
                 {% endfor %}
             </select>
             <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">

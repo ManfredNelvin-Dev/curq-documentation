@@ -54,16 +54,16 @@
                 <a href="javascript:void(0);" style="cursor: default;">
                     {% endif %}
                     <div class="module-card" {% if not mod.has_docs %} style="opacity: 0.7;" {% endif %}>
-                        <div class="icon">
-                            <img src="{{ pathto('_static/images/', 1) }}{{ mod.icon }}" alt="">
-                        </div>
-                        <div>
-                            <h3>{{ t(mod.display_name) }}</h3>
-                            <p>{{ t(mod.description) }}</p>
-                        </div>
+                    <div class="icon">
+                        <img src="{{ pathto('_static/images/', 1) }}{{ mod.icon }}" alt="">
                     </div>
-                </a>
-                {% endfor %}
+                    <div>
+                        <h3>{{ t(mod.display_name) }}</h3>
+                        <p>{{ t(mod.description) }}</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -71,9 +71,9 @@
 
 <div class="content-area">
     {% if '<!-- MODULES_PLACEHOLDER -->' in body %}
-        {{ body | replace('<!-- MODULES_PLACEHOLDER -->', modules_html) }}
+    {{ body | replace('<!-- MODULES_PLACEHOLDER -->', modules_html) }}
     {% else %}
-        {{ modules_html }}
-        {{ body }}
+    {{ modules_html }}
+    {{ body }}
     {% endif %}
 </div>

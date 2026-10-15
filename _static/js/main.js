@@ -342,6 +342,16 @@ function buildMiniSearchIndex(index) {
         const rawTitle = (index.titles && index.titles[id]) || '';
         const title = cleanTitle(rawTitle);
         const docname = index.docnames[id] || '';
+        // Exclude popular articles, landing faq snippets, and root index from search
+        if (
+            !docname ||
+            docname === 'index' ||
+            docname.includes('popular_articles') ||
+            docname.includes('landing_faq')
+        ) {
+            continue;
+        }
+
         const meta = parseDocMetadata(docname);
 
         const headings = [];
@@ -366,7 +376,18 @@ function buildMiniSearchIndex(index) {
             }
         }
 
-        const baseUrl = (window.CURQ_CONFIG && window.CURQ_CONFIG.baseUrl) ? window.CURQ_CONFIG.baseUrl : '/';
+        const verCode = (window.CURQ_CONFIG && window.CURQ_CONFIG.currentVersionCode);
+        let baseUrl = '/';
+        if (window.location.protocol === 'file:') {
+            baseUrl = (window.CURQ_CONFIG && window.CURQ_CONFIG.baseUrl) || '';
+        } else if (verCode) {
+            baseUrl = `/${verCode}/`;
+        } else {
+            const segs = window.location.pathname.split('/').filter(Boolean);
+            if (segs.length > 0 && !segs[0].endsWith('.html') && segs[0] !== 'docs' && segs[0] !== '_static') {
+                baseUrl = `/${segs[0]}/`;
+            }
+        }
 
         docs.push({
             id,
@@ -421,6 +442,9 @@ function searchDocumentation(rawQuery) {
         prefix: true,
         fuzzy: query.length > 3 ? 0.2 : false,
         combineWith: 'AND'
+    }).filter(res => {
+        const doc = (res.docname || '').toLowerCase();
+        return !doc.includes('popular_articles') && !doc.includes('landing_faq') && doc !== 'index';
     }).slice(0, 15);
 
     searchCache.set(query.toLowerCase(), results);
@@ -480,20 +504,36 @@ function renderSearchResults(results, labelElement, resultsContainer, query) {
 function setupKeyboardNavigation(inputEl, resultsContainer, onClose) {
     let selectedIndex = 0;
 
+    resultsContainer._resetSelection = function () {
+        selectedIndex = 0;
+    };
+
     function getCards() {
-        return resultsContainer.querySelectorAll('.search-result-card');
+        return Array.from(resultsContainer.querySelectorAll('.search-result-card'));
     }
 
     function updateSelection(cards) {
         cards.forEach((card, idx) => {
-            if (idx === selectedIndex) {
-                card.classList.add('selected');
+            const isSel = (idx === selectedIndex);
+            card.classList.toggle('selected', isSel);
+            if (isSel) {
                 card.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-            } else {
-                card.classList.remove('selected');
             }
         });
     }
+
+    // Sync selection on mouse hover
+    resultsContainer.addEventListener('mouseover', (e) => {
+        const card = e.target.closest('.search-result-card');
+        if (card && resultsContainer.contains(card)) {
+            const cards = getCards();
+            const idx = cards.indexOf(card);
+            if (idx !== -1) {
+                selectedIndex = idx;
+                updateSelection(cards);
+            }
+        }
+    });
 
     inputEl.addEventListener('keydown', (e) => {
         const cards = getCards();
@@ -509,8 +549,9 @@ function setupKeyboardNavigation(inputEl, resultsContainer, onClose) {
             updateSelection(cards);
         } else if (e.key === 'Enter') {
             e.preventDefault();
-            if (cards[selectedIndex]) {
-                const targetUrl = cards[selectedIndex].getAttribute('href');
+            const target = cards[selectedIndex] || cards[0];
+            if (target) {
+                const targetUrl = target.getAttribute('href');
                 if (targetUrl) window.location.href = targetUrl;
             }
         } else if (e.key === 'Escape') {
@@ -528,6 +569,7 @@ function setupSearchInput(inputEl, labelEl, resultsEl, containerEl, onClose) {
             if (containerEl) containerEl.style.display = 'block';
             const results = searchDocumentation(query);
             renderSearchResults(results, labelEl, resultsEl, query);
+            resultsEl._resetSelection?.();
         } else {
             if (containerEl) containerEl.style.display = 'none';
             labelEl.textContent = 'SEARCH';

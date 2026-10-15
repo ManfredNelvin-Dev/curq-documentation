@@ -1,7 +1,6 @@
 import json
 import os
 import re
-import subprocess
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
@@ -37,6 +36,8 @@ exclude_patterns = [
     ".DS_Store",
     "docs/README.md",
     ".venv",
+    "docs/popular_articles.md",
+    "docs/landing_faq.md",
 ]
 
 # ---------------------------------------------------------
@@ -242,67 +243,70 @@ def build_modules_context() -> List[Dict[str, Any]]:
     return modules
 
 
-# ---------------------------------------------------------
-# HTML template context
-# ---------------------------------------------------------
+import subprocess
 
-def get_git_versions():
-    """Dynamically get versions from git tags without hardcoding."""
+
+def _discover_git_versions():
+    """Discover current version and all available versions dynamically from git tags and branches."""
     try:
-        tags_raw = subprocess.check_output(
+        raw_tags = subprocess.check_output(
             ["git", "tag", "--sort=-creatordate"],
             stderr=subprocess.DEVNULL,
             text=True
         ).strip().splitlines()
-        tags = [t.strip() for t in tags_raw if t.strip()]
+        tags = [t.strip() for t in raw_tags if t.strip()]
     except Exception:
         tags = []
 
+    curr_ver = None
     try:
-        curr = subprocess.check_output(
+        curr_ver = subprocess.check_output(
             ["git", "describe", "--tags", "--exact-match"],
             stderr=subprocess.DEVNULL,
             text=True
         ).strip()
     except Exception:
+        pass
+
+    if not curr_ver:
         try:
-            curr = subprocess.check_output(
-                ["git", "describe", "--tags", "--abbrev=0"],
+            branch = subprocess.check_output(
+                ["git", "rev-parse", "--abbrev-ref", "HEAD"],
                 stderr=subprocess.DEVNULL,
                 text=True
             ).strip()
+            if branch and branch != "HEAD":
+                curr_ver = branch
         except Exception:
-            try:
-                curr = subprocess.check_output(
-                    ["git", "rev-parse", "--abbrev-ref", "HEAD"],
-                    stderr=subprocess.DEVNULL,
-                    text=True
-                ).strip()
-            except Exception:
-                curr = "latest"
+            pass
 
-    versions = [{"code": t, "name": t} for t in tags]
-    if not versions:
-        versions = [{"code": curr, "name": curr}]
+    if not curr_ver:
+        curr_ver = tags[0] if tags else "latest"
 
-    return curr, versions
+    # Build versions list from tags
+    v_list = [{"code": t, "name": t} for t in tags]
+    if not any(v["code"] == curr_ver for v in v_list):
+        v_list.insert(0, {"code": curr_ver, "name": curr_ver})
 
-git_current_ver, git_versions_list = get_git_versions()
+    return curr_ver, v_list
+
+
+_discovered_curr_ver, _discovered_v_list = _discover_git_versions()
 
 env_current_version = os.environ.get("SPHINX_CURRENT_VERSION")
 env_current_version_code = os.environ.get("SPHINX_CURRENT_VERSION_CODE")
 env_supported_versions = os.environ.get("SPHINX_SUPPORTED_VERSIONS_JSON")
 
-current_version_name = env_current_version or git_current_ver
-current_version_code = env_current_version_code or git_current_ver
-
 if env_supported_versions:
     try:
         supported_versions_list = json.loads(env_supported_versions)
     except Exception:
-        supported_versions_list = git_versions_list
+        supported_versions_list = _discovered_v_list
 else:
-    supported_versions_list = git_versions_list
+    supported_versions_list = _discovered_v_list
+
+current_version_name = env_current_version or _discovered_curr_ver
+current_version_code = env_current_version_code or _discovered_curr_ver
 
 html_context = {
     "modules": build_modules_context(),
