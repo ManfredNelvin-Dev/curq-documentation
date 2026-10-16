@@ -1,7 +1,9 @@
 import json
 import os
 import re
+import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -74,6 +76,7 @@ html_theme = "basic"
 
 html_static_path = ["_static"]
 html_favicon = "_static/images/curq-favicon.png"
+html_last_updated_fmt = "%B %d, %Y"
 
 html_css_files = []
 
@@ -288,8 +291,81 @@ html_additional_pages = {
 }
 
 
+_GIT_FILE_DATES_CACHE: Dict[str, Dict[str, str]] = {}
+
+
+def get_git_file_dates_for_ref(ref: str = "HEAD") -> Dict[str, str]:
+    """
+    Extract and cache the exact last commit date for all repository files
+    for a specific Git reference (e.g. 'main', '0.1', '0.2', or 'HEAD').
+    Always runs in the true repository directory where conf.py is located.
+    """
+    global _GIT_FILE_DATES_CACHE
+    if ref in _GIT_FILE_DATES_CACHE:
+        return _GIT_FILE_DATES_CACHE[ref]
+
+    repo_root = Path(__file__).resolve().parent
+    dates: Dict[str, str] = {}
+    try:
+        cmd = [
+            "git",
+            "log",
+            ref,
+            "--name-only",
+            "--format=DATE:%cd",
+            "--date=format:%B %d, %Y",
+        ]
+        res = subprocess.check_output(
+            cmd,
+            cwd=repo_root,
+            stderr=subprocess.DEVNULL,
+            text=True,
+        )
+        current_date = None
+        for line in res.splitlines():
+            line = line.strip()
+            if line.startswith("DATE:"):
+                current_date = line[5:]
+            elif line and current_date:
+                if line not in dates:
+                    dates[line] = current_date
+    except Exception:
+        pass
+
+    _GIT_FILE_DATES_CACHE[ref] = dates
+    return dates
+
+
 def setup(app):
     def on_html_page_context(app, pagename, templatename, context, doctree):
         context["modules"] = build_modules_context(app.srcdir)
+
+        # In sphinx-multiversion, smv_current_version is set ('main', '0.1', '0.2')
+        # In single-version builds, fallback to 'HEAD'
+        target_ref = getattr(app.config, "smv_current_version", None) or "HEAD"
+        git_dates = get_git_file_dates_for_ref(target_ref)
+
+        page_date = None
+        if hasattr(app.env, "doc2path"):
+            try:
+                doc_path = Path(app.env.doc2path(pagename)).resolve()
+                srcdir = Path(app.srcdir).resolve()
+                rel_path = doc_path.relative_to(srcdir).as_posix()
+                page_date = git_dates.get(rel_path)
+            except Exception:
+                pass
+
+        # If not found in git (e.g. new uncommitted file), fall back to file mtime
+        if not page_date and hasattr(app.env, "doc2path"):
+            try:
+                doc_path = Path(app.env.doc2path(pagename)).resolve()
+                if doc_path.exists():
+                    mtime = doc_path.stat().st_mtime
+                    page_date = datetime.fromtimestamp(mtime).strftime("%B %d, %Y")
+            except Exception:
+                pass
+
+        context["page_last_updated"] = page_date
+        context["last_updated"] = page_date
 
     app.connect("html-page-context", on_html_page_context)

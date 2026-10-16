@@ -134,6 +134,15 @@
                         {% endif %}
                     </div>
                     {% endif %}
+
+                    {% if page_last_updated or last_updated %}
+                    <div class="page-footer">
+                        <div class="page-last-updated">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>{{ _('Last updated:') }} {{ page_last_updated or last_updated }}</span>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
 
                 {% block right_sidebar %}

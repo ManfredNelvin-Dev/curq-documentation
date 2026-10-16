@@ -1458,3 +1458,27 @@ a:hover {
 .viewer-transition {
     transition: all 0.15s cubic-bezier(0, 0, 0.2, 1) !important;
 }
+
+/* Page Footer & Last Updated */
+.page-footer {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid #eef2f6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.page-last-updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.page-last-updated i {
+    font-size: 13.5px;
+    color: #94a3b8;
+}
