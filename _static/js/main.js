@@ -215,6 +215,10 @@ function parseDocMetadata(docname) {
             else if (rawSec === 'articles' || rawSec === 'article') sectionName = 'Article';
             else if (rawSec === 'faq' || rawSec === 'faqs') sectionName = 'FAQ';
             else if (rawSec === 'procedures' || rawSec === 'procedure') sectionName = 'Procedure';
+            else if (rawSec === 'tutorials' || rawSec === 'tutorial') sectionName = 'Tutorial';
+            else if (rawSec === 'how-to' || rawSec === 'howto') sectionName = 'How-To';
+            else if (rawSec === 'explanation' || rawSec === 'explanations') sectionName = 'Explanation';
+            else if (rawSec === 'reference' || rawSec === 'references') sectionName = 'Reference';
             else sectionName = rawSec.charAt(0).toUpperCase() + rawSec.slice(1);
         }
     }

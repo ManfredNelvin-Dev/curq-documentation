@@ -1,33 +1,16 @@
-# Contacts Management FAQ
+# Contacts FAQ
 
-Frequently asked questions about contacts, addresses, duplicate records, and bank accounts in CURQ 18.
+### 1. When should I set a partner as a Company versus an Individual?
+Set a partner as a **Company** if it represents a legal entity that holds fiscal liabilities, tax IDs, and credit terms. Set a partner as an **Individual** for employees or contacts, who can be linked to a parent company to inherit its commercial and accounting settings while keeping direct contact details.
 
----
+### 2. How do I ship orders to a branch warehouse while sending the invoice to corporate headquarters?
+Under the customer company record in **Contacts**, add distinct child addresses for **Delivery Address** and **Invoice Address**. When creating a sales order, select the parent company as the customer, then choose the branch location in **Delivery Address** and headquarters in **Invoice Address**.
 
-### 1. Should I pick Individual or Company when creating a contact?
+### 3. How do I merge duplicate contact records without losing transaction history?
+In the **Contacts** list view, select the duplicate records, open the **Action** menu, and click **Merge**. Select the surviving master record; CURQ automatically reassigns all open sales orders, invoices, CRM opportunities, and chatter history to the destination contact.
 
-Pick **Company** for the business organization, and pick **Individual** for each person or employee who works there. You can link individual employees directly to the company record.
+### 4. How do Fiscal Positions automatically apply the correct taxes based on customer location?
+Fiscal Positions map standard domestic tax rates to destination-specific taxes or zero-rate exemptions based on the customer's delivery country and state. With **Detect Automatically** enabled, CURQ detects the address on the sales order and replaces standard product taxes with the appropriate tax rules.
 
----
-
-### 2. If I update a company address, does it update the employees too?
-
-Yes. Linked employees copy the company address automatically. If an employee works from home or at another site, you can change their address separately.
-
----
-
-### 3. Will I lose old orders or invoices if I merge duplicate contacts?
-
-No. When you merge duplicate contacts, CURQ moves all past sales orders, invoices, deliveries, and notes to the main contact. Nothing gets deleted except the extra blank contact card.
-
----
-
-### 4. Why does a new bank account show as Untrusted?
-
-CURQ marks new bank accounts as untrusted to prevent payment mistakes and fraud. An accounting manager must check the bank details and click the trust button before sending wire payments.
-
----
-
-### 5. Can CURQ fill in the city and state automatically from a ZIP code?
-
-Yes. If the city and postal code exist in **Configuration > Localization > Cities**, typing the ZIP code on a contact form fills in the city, state, and country right away.
+### 5. How can I prevent sales orders from being created for delinquent customers?
+Open the contact record, go to the **Internal Notes** tab, and set **Warning on the Sales Order** to **Blocking Message** with an explanation. When a salesperson attempts to draft or confirm an order for this customer, the system displays a hard modal block that stops the transaction.

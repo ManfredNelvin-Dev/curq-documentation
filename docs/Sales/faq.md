@@ -1,33 +1,16 @@
-# Sales Orders and Pricing FAQ
+# Sales FAQ
 
-Frequently asked business and system questions about sales orders, pricing, signatures, and payments in CURQ 18.
+### 1. What is the difference between "Invoice what is ordered" and "Invoice what is delivered"?
+**Invoice what is ordered** allows immediate invoicing for the full order amount upon confirmation, which is ideal for services and subscriptions. **Invoice what is delivered** restricts invoicing to quantities validated on warehouse delivery slips, preventing billing errors and disputes on physical goods.
 
----
+### 2. Why are confirmed sales orders locked, and how can an authorized user edit them?
+Confirmed orders are locked to protect downstream inventory pickings, manufacturing orders, and accounting drafts from inadvertent alterations. Authorized users can click **Unlock** on the order header, make necessary line or price adjustments, and click **Lock** to synchronize downstream documents.
 
-### 1. Can sales staff change prices or items after a customer signs online?
+### 3. What happens to reserved inventory and delivery pickings when a Sales Order is cancelled?
+Cancelling a confirmed sales order immediately cancels any unfulfilled warehouse delivery pickings and returns reserved stock to available inventory. If goods have already been shipped, an inventory return picking must be processed before the order can be cancelled.
 
-No. Once a customer signs online, CURQ locks the document to protect the legal agreement. To change items or prices, sales staff must cancel the order or create a new quote.
+### 4. How do Down Payments work and how are they deducted from the final invoice?
+On a confirmed order, click **Create Invoice** and select **Down Payment** (percentage or fixed amount) to bill the deposit. When the final order is fulfilled, generate a **Regular Invoice** with **Deduct down payments** checked to automatically deduct the prior deposit and bill the net remaining balance.
 
----
-
-### 2. What happens if a customer wants to pay by check or bank wire offline?
-
-Sales staff can open the quotation in the backend and click **Confirm** directly. This confirms the sales order right away without requiring an online payment.
-
----
-
-### 3. Why is the Cost field hidden on some product forms?
-
-When a product has multiple variants *(such as different colors or sizes)*, CURQ hides the cost on the main product template. You set the cost on each individual variant record instead.
-
----
-
-### 4. Can we ask for a partial deposit like 20% or 50% instead of full payment online?
-
-Yes. In the quotation **Other Info** tab, check **Online payment** and enter any deposit percentage you want. The customer only needs to pay that deposit to confirm the order.
-
----
-
-### 5. When does CURQ create customer invoices automatically?
-
-If **Automatic Invoice** is turned on in settings, CURQ creates and posts the invoice the second the customer online payment is confirmed by the payment gateway.
+### 5. How does CURQ determine which pricelist rule applies when multiple rules overlap?
+CURQ applies rules according to a strict specificity hierarchy: Product Variant takes precedence over Product Template, which takes precedence over Product Category, followed by Global rules. Within the same specificity tier, the rule with the highest applicable minimum quantity threshold is selected.

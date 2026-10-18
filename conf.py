@@ -25,9 +25,14 @@ release = "1.0"
 extensions = [
     "myst_parser",
     "sphinx_multiversion",
+    "sphinx.ext.mathjax",
 ]
 
-myst_enable_extensions = ["colon_fence"]
+myst_enable_extensions = [
+    "colon_fence",
+    "dollarmath",
+    "amsmath",
+]
 
 # ---------------------------------------------------------
 # Sphinx Multi-Version configuration
@@ -136,17 +141,20 @@ def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
         if not cat_lower or "overview" in cat_lower:
             return 0
 
-        if "manual" in cat_lower:
+        if "tutorial" in cat_lower or "manual" in cat_lower:
             return 1
 
-        if "procedure" in cat_lower or "configuration" in cat_lower:
+        if "how" in cat_lower or "procedure" in cat_lower or "configuration" in cat_lower:
             return 2
 
-        if "article" in cat_lower:
+        if "explanation" in cat_lower or "article" in cat_lower:
             return 3
 
-        if "faq" in cat_lower:
+        if "reference" in cat_lower:
             return 4
+
+        if "faq" in cat_lower:
+            return 5
 
         return 99
 
