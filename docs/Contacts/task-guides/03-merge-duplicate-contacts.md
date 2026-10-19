@@ -32,10 +32,10 @@ The **Merge** window displays the selected records and lets you define the survi
 ![Merge Duplicate Contacts Modal](../media/020.png)
 
 1. In the **Destination Contact** field, select which record will remain as the permanent master profile.
-2. Review the list of contacts being merged in the sub-table (verifying `ID`, `Display Name`, `Email`, and `Tax ID`):
+2. Review the list of contacts being merged in the sub-table (verifying `ID`, `Display Name`, `Email`, `Is a Company`, `Tax ID`, and `Country`):
    * To exclude a record selected by mistake, click the **X** (remove) icon on that row.
    * To add another duplicate record, click **Add a line** and search for the contact.
-3. Click **Merge Contacts** (or **Cancel** to abort without altering records).
+3. Click **Merge Contacts** (or **Cancel** / **Skip these contacts** to abort without altering records).
 
 ---
 
@@ -56,7 +56,9 @@ When CURQ executes the consolidation:
 
 ---
 
-### Related Documentation
-* [Explanation: Understanding Contact Deduplication and Data Integrity](../explanation/02-understanding-contact-deduplication-and-data-integrity.md)
+## Related Documentation
+
 * [How-To: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
 * [How-To: Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
+* [How-To: Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [Explanation: Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)

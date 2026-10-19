@@ -1,13 +1,13 @@
 # Getting Started: Set Up an Enterprise Customer with Branch Locations
 
-Welcome to CURQ 18 Contacts. In this tutorial, you will learn how to structure an enterprise customer account operating across multiple commercial sites: establishing a corporate headquarters record, attaching a dedicated shipping warehouse address, and configuring an accounts payable billing address.
+Welcome to CURQ Contacts. In this tutorial, you will learn how to structure an enterprise customer account operating across multiple commercial sites: establishing a corporate headquarters record, attaching a dedicated shipping warehouse address, and configuring an accounts payable billing address.
 
 By the end of this exercise, you will understand how CURQ routes sales deliveries and accounting invoices to distinct branch facilities automatically.
 
 ---
 
 ### Prerequisites
-* Access to a standard CURQ 18 instance with the **Contacts** app installed.
+* Access to a standard CURQ instance with the **Contacts** app installed.
 * Standard default settings. No special multi-company permissions or configuration modules are needed.
 
 ---
@@ -65,7 +65,10 @@ Now, let us configure a separate destination where accounting invoices and billi
    * **Address**: Enter `PO Box 1042, Chicago, IL 60690, United States`.
    * **Email**: Enter `ap-invoicing@globallogistics.com`.
    * **Phone**: Enter `+1 312-555-0188`.
-4. Click **Save & Close**.
+
+   ![Configure accounts payable invoice address modal](../media/051.png)
+
+4. Click **Save & Close** (or **Save**).
 
 ---
 
@@ -84,8 +87,9 @@ Congratulations! You have successfully configured a multi-branch corporate hiera
 
 ---
 
-### Next Steps
+## Related Documentation
 
-* To learn how to configure payment terms, credit limits, and sales order warning alerts, see [How-To: Create and Manage Contacts](../how-to/01-create-and-manage-contacts.md).
-* To explore all address type technical definitions and EDI GLN rules, see [Reference: Contacts and Addresses Tab](../reference/01-contact-form-field-definitions.md#contacts-and-addresses-tab).
-* To understand the relational database architecture powering multi-address hierarchies, see [Explanation: Understanding Unified Partner Architecture and Hierarchies](../explanation/01-understanding-unified-partner-architecture-and-hierarchies.md).
+* [Getting Started: Overview & Create Your First Contact](./01-create-your-first-contact.md)
+* [How-To: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
+* [How-To: Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
+* [Explanation: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)

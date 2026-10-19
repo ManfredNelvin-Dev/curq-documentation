@@ -1482,3 +1482,18 @@ a:hover {
     font-size: 13.5px;
     color: #94a3b8;
 }
+
+/* Related documentation section moved to FURTHER WITH sidebar */
+.sphinx-content section#related-documentation,
+.sphinx-content div#related-documentation,
+.sphinx-content hr:has(+ section#related-documentation) {
+    display: none !important;
+}
+
+.toc-container a[href="#related-documentation"] {
+    display: none !important;
+}
+
+.toc-container li:has(a[href="#related-documentation"]) {
+    display: none !important;
+}

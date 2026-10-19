@@ -60,7 +60,9 @@ To allow multiple customers to view their invoices, deliveries, and quotes onlin
 
 ---
 
-### Related Documentation
+## Related Documentation
+
 * [How-To: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
+* [How-To: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
 * [How-To: Merge Duplicate Contacts](./03-merge-duplicate-contacts.md)
-* [Reference: Contact Form Field Definitions](../reference/01-contact-form-field-definitions.md)
+* [Explanation: Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)

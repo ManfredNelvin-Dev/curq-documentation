@@ -161,6 +161,8 @@
 
                 {% block right_sidebar %}
                 {% if pagename != 'docs/support' and pagename != 'support' %}
+                {% set is_standalone = is_standalone_page if is_standalone_page is defined else (pagename.endswith('00-overview') or pagename.endswith('/overview') or pagename.lower().endswith('faq') or pagename.lower() == 'docs/faq' or pagename == 'faq') %}
+                {% if toc or not is_standalone %}
                 <aside class="right-sidebar">
                     {% block right_sidebar_toc %}
                     {% if toc %}
@@ -173,6 +175,8 @@
                     {% endif %}
                     {% endblock %}
 
+                    {% set is_standalone = ('overview' in pagename.lower() or 'faq' in pagename.lower() or 'popular_articles' in pagename or 'landing_faq' in pagename) %}
+                    {% if not is_standalone %}
                     <div class="right-sidebar-section">
                         <div class="right-sidebar-heading">{{ _('FURTHER WITH') }}</div>
                         <ul class="right-sidebar-list">
@@ -198,7 +202,9 @@
                             {% endif %}
                         </ul>
                     </div>
+                    {% endif %}
                 </aside>
+                {% endif %}
                 {% endif %}
                 {% endblock %}
             </div>
@@ -213,8 +219,8 @@
             homeUrl: "{{ pathto('_static', 1) }}".replace('_static', '') + 'index.html',
             baseUrl: "{{ pathto('_static', 1) }}".replace('_static', ''),
             searchIndexUrl: "{{ pathto('searchindex.js', 1) }}",
-            currentVersion: "{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or 'latest') }}",
-            currentVersionCode: "{{ current_version.name if current_version is defined and current_version.name is defined else (current_version_code or 'latest') }}",
+            currentVersion: "{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or '18.0') }}",
+            currentVersionCode: "{{ current_version.name if current_version is defined and current_version.name is defined else (current_version_code or '18.0') }}",
             defaultLang: "{{ default_language }}",
             supportedLangs: [
                 /* {% for lang in supported_languages %} */

@@ -17,7 +17,7 @@ Search across partner details, apply built-in and custom multi-criteria filters,
    * **Mailing List**: Associated marketing mailing lists.
    * **Department**: Internal or partner business unit.
    * **Salesperson**: The internal user managing the account.
-4. Select the specific field match from the search dropdown (for example, `Search Tag: VIP`), or press **Enter** to search globally across names.
+4. Select the specific field match from the search dropdown (for example, `Search Name for: john`), or press **Enter** to search globally across names.
 
    ![Contacts dynamic search dropdown](../media/015.png)
 
@@ -87,7 +87,9 @@ At the top right of the screen, click the view switcher icons:
 
 ---
 
-### Related Documentation
+## Related Documentation
+
+* [How-To: Create and Manage Contacts](./01-create-and-manage-contacts.md)
 * [How-To: Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
 * [How-To: Merge Duplicate Contacts](./03-merge-duplicate-contacts.md)
-* [Reference: Contact Form Field Definitions](../reference/01-contact-form-field-definitions.md)
+* [How-To: Configure and Assign Contact Tags](./05-configure-contact-tags.md)

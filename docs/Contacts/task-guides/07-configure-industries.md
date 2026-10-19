@@ -58,6 +58,9 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 
 ---
 
-### Related Documentation
-* [Reference: Contact Form Field Definitions](../reference/01-contact-form-field-definitions.md)
+## Related Documentation
+
+* [How-To: Configure and Assign Contact Titles](./06-configure-contact-titles.md)
+* [How-To: Register and Authorize Partner Bank Accounts](./08-manage-partner-bank-accounts.md)
+* [How-To: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
 * [How-To: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)

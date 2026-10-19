@@ -8,10 +8,11 @@
             <select class="version-selector" onchange="window.location.href=this.value" aria-label="Version">
                 {% if versions %}
                 {% for item in versions %}
-                <option value="{{ item.url }}" {% if current_version and current_version.name == item.name %}selected{% endif %}>{{ item.name }}</option>
+                {% set display_v = '18.0' if item.name == 'main' else item.name %}
+                <option value="{{ item.url }}" {% if (current_version and current_version.name == item.name) or (item.name == 'main' and (not current_version or current_version.name == 'main' or current_version.name == '18.0')) %}selected{% endif %}>{{ display_v }}</option>
                 {% endfor %}
                 {% else %}
-                <option value="" selected>{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or 'latest') }}</option>
+                <option value="" selected>{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or '18.0') }}</option>
                 {% endif %}
             </select>
             <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">
@@ -43,7 +44,7 @@
             <div class="landing-contact-wrapper">
                 <a href="{{ pathto('docs/support') }}" class="landing-contact-btn">
                     <i class="fa-solid fa-headset"></i>
-                    <span>{{ _('Contact Us') }}</span>
+                    <span>{{ _('Contact & Support') }}</span>
                 </a>
             </div>
         </div>

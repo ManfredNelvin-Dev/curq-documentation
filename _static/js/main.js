@@ -219,7 +219,11 @@ function parseDocMetadata(docname) {
             else if (rawSec === 'how-to' || rawSec === 'howto') sectionName = 'How-To';
             else if (rawSec === 'explanation' || rawSec === 'explanations') sectionName = 'Explanation';
             else if (rawSec === 'reference' || rawSec === 'references') sectionName = 'Reference';
-            else sectionName = rawSec.charAt(0).toUpperCase() + rawSec.slice(1);
+            else if (rawSec === 'getting-started' || rawSec === 'getting started') sectionName = 'Getting Started';
+            else if (rawSec === 'task-guides' || rawSec === 'task guides') sectionName = 'Task Guides';
+            else if (rawSec === 'core-concepts' || rawSec === 'core concepts') sectionName = 'Core Concepts';
+            else if (rawSec === 'settings-and-fields' || rawSec === 'settings and fields') sectionName = 'Settings and Fields';
+            else sectionName = rawSec.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
         }
     }
 
@@ -232,7 +236,13 @@ function parseDocMetadata(docname) {
 
 function cleanTitle(title) {
     if (!title) return '';
-    return title.replace(/^\d+\.\s*/, '').trim();
+    return title
+        .replace(/^\d+\.\s*/, '')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .trim();
 }
 
 let miniSearch = null;
@@ -288,12 +298,9 @@ function buildMiniSearchIndex(index) {
             }
         }
 
-        const verCode = (window.CURQ_CONFIG && window.CURQ_CONFIG.currentVersionCode);
         let baseUrl = '/';
         if (window.location.protocol === 'file:') {
             baseUrl = (window.CURQ_CONFIG && window.CURQ_CONFIG.baseUrl) || '';
-        } else if (verCode) {
-            baseUrl = `/${verCode}/`;
         } else {
             const segs = window.location.pathname.split('/').filter(Boolean);
             if (segs.length > 0 && !segs[0].endsWith('.html') && segs[0] !== 'docs' && segs[0] !== '_static') {
@@ -334,13 +341,19 @@ window.Search = {
     }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+function loadSearchIndex() {
     if (window.CURQ_CONFIG && window.CURQ_CONFIG.searchIndexUrl) {
         const script = document.createElement('script');
         script.src = window.CURQ_CONFIG.searchIndexUrl;
         document.head.appendChild(script);
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener("DOMContentLoaded", loadSearchIndex);
+} else {
+    loadSearchIndex();
+}
 
 function searchDocumentation(rawQuery) {
     const query = rawQuery.trim();
@@ -491,6 +504,20 @@ function setupSearchInput(inputEl, labelEl, resultsEl, containerEl, onClose) {
 
     inputEl.addEventListener('input', (e) => debouncedSearch(e.target.value.trim()));
     setupKeyboardNavigation(inputEl, resultsEl, onClose);
+
+    if (resultsEl) {
+        resultsEl.addEventListener('click', (e) => {
+            if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey) return;
+            const card = e.target.closest('.search-result-card');
+            if (card && resultsEl.contains(card)) {
+                const url = card.getAttribute('href');
+                if (url && url !== '#' && !url.startsWith('javascript:')) {
+                    e.preventDefault();
+                    window.location.href = url;
+                }
+            }
+        });
+    }
 }
 
 // Landing Search
@@ -878,6 +905,56 @@ function initImageViewer() {
     setupViewer();
 }
 
+function setupRelatedDocs() {
+    const relatedSec = document.getElementById('related-documentation');
+    if (!relatedSec) return;
+
+    const furtherWithList = document.querySelector('.right-sidebar .right-sidebar-list');
+    if (furtherWithList) {
+        const links = Array.from(relatedSec.querySelectorAll('a')).filter(a => {
+            return !a.classList.contains('headerlink') && a.textContent.trim() !== '¶';
+        });
+
+        if (links.length > 0) {
+            furtherWithList.innerHTML = '';
+            const currentParams = new URLSearchParams(window.location.search);
+            const moduleParam = currentParams.get('module');
+
+            links.forEach(a => {
+                const li = document.createElement('li');
+                const newA = document.createElement('a');
+                let href = a.getAttribute('href');
+                if (moduleParam && href && !href.includes('module=')) {
+                    if (href.includes('#')) {
+                        const [p, f] = href.split('#', 2);
+                        const sep = p.includes('?') ? '&' : '?';
+                        href = `${p}${sep}module=${moduleParam}#${f}`;
+                    } else {
+                        const sep = href.includes('?') ? '&' : '?';
+                        href = `${href}${sep}module=${moduleParam}`;
+                    }
+                }
+                newA.href = href;
+                newA.textContent = a.textContent.trim();
+                li.appendChild(newA);
+                furtherWithList.appendChild(li);
+            });
+        }
+    }
+
+    // Clean up in-body section and preceding HR
+    let prev = relatedSec.previousElementSibling;
+    if (prev && prev.tagName === 'HR') {
+        prev.remove();
+    }
+    relatedSec.remove();
+
+    // Clean up TOC
+    document.querySelectorAll('.toc-container a[href="#related-documentation"]').forEach(el => {
+        el.closest('li')?.remove();
+    });
+}
+
 function initCurqDocs() {
     cleanHeadingNumbers();
     initSidebarScroll();
@@ -888,6 +965,7 @@ function initCurqDocs() {
     formatFaqCards();
     initSidebars();
     initImageViewer();
+    setupRelatedDocs();
 }
 
 if (document.readyState === 'loading') {

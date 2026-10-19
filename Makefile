@@ -10,6 +10,7 @@ SPHINXAUTOBUILD     ?= $(VENV)sphinx-autobuild
 SOURCEDIR           = .
 BUILDDIR            = _build
 ACTIVE_BRANCH       := $(shell git symbolic-ref --short -q HEAD 2>/dev/null || git describe --tags --exact-match 2>/dev/null || echo "main")
+DEFAULT_VERSION     ?= 18.0
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -20,8 +21,11 @@ help:
 # Build multi-version documentation using sphinx-multiversion
 multiversion:
 	$(SPHINXMULTIVERSION) "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
-	@echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=$(ACTIVE_BRANCH)/index.html"><script>window.location.replace("$(ACTIVE_BRANCH)/index.html" + window.location.search + window.location.hash);</script></head><body><p>Redirecting to <a href="$(ACTIVE_BRANCH)/index.html">$(ACTIVE_BRANCH)</a>...</p></body></html>' > $(BUILDDIR)/html/index.html
-	@echo "[✓] Multi-version build complete. Root redirect -> $(ACTIVE_BRANCH)/index.html"
+	@if [ -d "$(BUILDDIR)/html/main" ] && [ ! -d "$(BUILDDIR)/html/$(DEFAULT_VERSION)" ]; then \
+		cp -r "$(BUILDDIR)/html/main" "$(BUILDDIR)/html/$(DEFAULT_VERSION)"; \
+	fi
+	@echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=$(DEFAULT_VERSION)/index.html"><script>window.location.replace("$(DEFAULT_VERSION)/index.html" + window.location.search + window.location.hash);</script></head><body><p>Redirecting to <a href="$(DEFAULT_VERSION)/index.html">$(DEFAULT_VERSION)</a>...</p></body></html>' > $(BUILDDIR)/html/index.html
+	@echo "[✓] Multi-version build complete. Root redirect -> $(DEFAULT_VERSION)/index.html"
 
 # Live preview server with auto-rebuild (official sphinx-doc/sphinx-autobuild)
 livehtml:

@@ -26,11 +26,11 @@ Define standard and custom professional salutations with abbreviations (such as 
 ### Task 2: Assign a Title to an Individual Contact
 
 1. In the **Contacts** directory, open an individual contact card (or click **New** and ensure the type is **Individual**).
-2. On the right side of the form, locate the **Title** field (positioned between **Website** and **Language**).
+2. On the right side of the form, locate the **Title** field (positioned between **Telegram Link** and **Language**).
 
-   ![Contact form showing Title field with selected option](../media/028.png)
+   ![Contact form showing Title field dropdown options](../media/028.png)
 
-3. Click the dropdown and select the desired salutation (for example, `Miss`).
+3. Click the dropdown and select the desired salutation (for example, `Mister`, `Doctor`, or `Miss`).
 4. Click the cloud icon to save.
 
 ---
@@ -42,6 +42,9 @@ Define standard and custom professional salutations with abbreviations (such as 
 
 ---
 
-### Related Documentation
-* [Reference: Contact Form Field Definitions](../reference/01-contact-form-field-definitions.md)
+## Related Documentation
+
+* [How-To: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
+* [How-To: Configure and Assign Industries](./07-configure-industries.md)
 * [How-To: Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [Reference: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

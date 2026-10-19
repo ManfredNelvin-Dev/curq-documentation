@@ -15,8 +15,8 @@ project = "CURQ Documentation"
 copyright = "2026, CIT Services"
 author = "CIT Services"
 
-version = "1.0"
-release = "1.0"
+version = "18.0"
+release = "18.0"
 
 # ---------------------------------------------------------
 # Sphinx extensions
@@ -44,7 +44,7 @@ smv_remote_whitelist = None
 smv_released_pattern = r"^tags/.*$"
 smv_outputdir_format = "{ref.name}"
 smv_prefer_remote_refs = False
-smv_latest_version = "main"
+smv_latest_version = "18.0"
 
 # ---------------------------------------------------------
 # Paths and exclusions
@@ -141,16 +141,16 @@ def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
         if not cat_lower or "overview" in cat_lower:
             return 0
 
-        if "tutorial" in cat_lower or "manual" in cat_lower:
+        if "getting started" in cat_lower or "tutorial" in cat_lower or "manual" in cat_lower:
             return 1
 
-        if "how" in cat_lower or "procedure" in cat_lower or "configuration" in cat_lower:
+        if "task guide" in cat_lower or "how" in cat_lower or "procedure" in cat_lower or "configuration" in cat_lower:
             return 2
 
-        if "explanation" in cat_lower or "article" in cat_lower:
+        if "settings" in cat_lower or "field" in cat_lower or "explanation" in cat_lower or "article" in cat_lower:
             return 3
 
-        if "reference" in cat_lower:
+        if "core concept" in cat_lower or "reference" in cat_lower:
             return 4
 
         if "faq" in cat_lower:
@@ -183,8 +183,9 @@ def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
                 )
 
                 if folder_rel == ".":
+                    category_name = ""
                     order = (
-                        4
+                        5
                         if "faq" in md_file.stem.lower()
                         else 0
                     )
@@ -201,9 +202,14 @@ def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
                         ).strip().title()
                     )
 
+                    if category_name.lower() == "settings and fields":
+                        category_name = "Settings and Fields"
+                    elif category_name.lower() == "faq":
+                        category_name = "FAQ"
+
                     order = get_category_order(category_name)
 
-                return order, md_file.name.lower()
+                return order, category_name.lower(), md_file.name.lower()
 
             md_files = sorted(
                 folder_path.rglob("*.md"),
@@ -260,7 +266,9 @@ def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
                         ).strip().title()
                     )
 
-                    if category.lower() == "faq":
+                    if category.lower() == "settings and fields":
+                        category = "Settings and Fields"
+                    elif category.lower() == "faq":
                         category = "FAQ"
 
                 pages.append(

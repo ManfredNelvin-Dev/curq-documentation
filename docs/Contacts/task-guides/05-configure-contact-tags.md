@@ -45,7 +45,7 @@ You can create new tags directly while editing a contact form without navigating
 
    ![Contact form showing Tags field with assigned badge](../media/025.png)
 
-3. Select one or more tags from the dropdown list (such as `Employees`, `Event Attendee`, or `Vendor / Office Supplies`).
+3. Select one or more tags from the dropdown list (such as `Vendor` or `Website Form`).
 4. Click the cloud icon at the top left (or navigate away) to save.
 
 ---
@@ -66,6 +66,9 @@ You can create new tags directly while editing a contact form without navigating
 
 ---
 
-### Related Documentation
+## Related Documentation
+
+* [How-To: Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [How-To: Configure and Assign Contact Titles](./06-configure-contact-titles.md)
+* [How-To: Configure and Assign Industries](./07-configure-industries.md)
 * [How-To: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
-* [Reference: Contact Form Field Definitions](../reference/01-contact-form-field-definitions.md)
