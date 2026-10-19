@@ -60,7 +60,7 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
         'description': 'Discover the module',
         'sidebar_key': 'helpdesk',
     },
-    'EmailMarketing': {
+    'Email Marketing': {
         'display_name': 'Email Marketing',
         'icon': 'emailmarketing-icon.png',
         'description': 'Email Campaigns',

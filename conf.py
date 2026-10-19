@@ -160,6 +160,17 @@ def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
 
     for folder_name, meta in MODULE_REGISTRY.items():
         folder_path = doc_root / folder_name
+        if not folder_path.is_dir():
+            alt_path = doc_root / meta.get("display_name", "")
+            if alt_path.is_dir():
+                folder_path = alt_path
+                folder_name = meta["display_name"]
+            else:
+                alt_nospaces = doc_root / folder_name.replace(" ", "")
+                if alt_nospaces.is_dir():
+                    folder_path = alt_nospaces
+                    folder_name = folder_name.replace(" ", "")
+
         pages = []
 
         if folder_path.is_dir():
