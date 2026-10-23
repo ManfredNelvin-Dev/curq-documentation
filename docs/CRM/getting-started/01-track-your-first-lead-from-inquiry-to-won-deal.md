@@ -4,25 +4,20 @@ Welcome to CURQ CRM. The **CRM** application serves as the pipeline intelligence
 
 In this tutorial, you will build a clear mental model of how CURQ organizes the sales cycle and complete a hands-on exercise to track your first lead from initial inquiry to won deal in 4 quick steps.
 
-```
-Incoming Prospects (Web Forms, Emails, Events)
-                      │
-                      ▼
-              ┌───────────────┐
-              │   CRM Leads   │  <── Optional qualification filter
-              └───────┬───────┘
-                      │ (Convert to Opportunity)
-                      ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     Sales Pipeline Kanban                   │
-│   [New]  ───►  [Qualified]  ───►  [Proposition]  ───► [Won] │
-└─────────────────────────────┬───────────────────────────────┘
-                              │
-                              ▼
-                ┌───────────────────────────┐
-                │ Linked Quotation / Order  │
-                │ (Updates Expected Revenue)│
-                └───────────────────────────┘
+```{mermaid}
+flowchart TD
+    A["`**Incoming Inquiries**
+    Web Forms • Emails • Events`"] --> B["`**CRM Leads**
+    Qualification Filter`"]
+    B -->|"Convert"| K1["New"]
+    
+    subgraph Pipeline ["Sales Pipeline Kanban"]
+        direction LR
+        K1["New"] --> K2["Qualified"] --> K3["Proposition"] --> K4["Won"]
+    end
+    
+    Pipeline --> Q["`**Quotation / Order**
+    Updates Expected Revenue`"]
 ```
 
 ---

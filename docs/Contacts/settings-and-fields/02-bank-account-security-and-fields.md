@@ -1,4 +1,4 @@
-# Reference: Bank Account Fields and Security Badges
+# Settings and Fields: Bank Account Fields and Security Badges
 
 This document details the data fields, validation specifications, and security risk indicators used within the CURQ banking directories.
 
@@ -43,8 +43,8 @@ This document details the data fields, validation specifications, and security r
 
 ## Related Documentation
 
-* [Reference: Contact Form Field Definitions](./01-contact-form-field-definitions.md)
-* [Reference: Geographic and Localization Settings](./03-localization-and-country-settings.md)
-* [How-To: Register and Authorize Partner Bank Accounts](../task-guides/08-manage-partner-bank-accounts.md)
-* [Explanation: Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)
+* [Settings and Fields: Contact Form Field Definitions](./01-contact-form-field-definitions.md)
+* [Settings and Fields: Geographic and Localization Settings](./03-localization-and-country-settings.md)
+* [Task Guide: Register and Authorize Partner Bank Accounts](../task-guides/08-manage-partner-bank-accounts.md)
+* [Core Concepts: Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)
 

@@ -1,4 +1,4 @@
-# Reference: Pipeline Configuration and Assignment Settings
+# Settings and Fields: Pipeline Configuration and Assignment Settings
 
 This document provides factual specifications and data tables for pipeline stages, sales teams, rule-based routing, and predictive scoring parameters in CURQ.
 
@@ -57,7 +57,7 @@ This document provides factual specifications and data tables for pipeline stage
 ---
 
 ### Related Documentation
-* [How-To: Configure Custom Pipeline Stages](../task-guides/05-configure-pipeline-stages.md)
-* [How-To: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
-* [How-To: Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)
-* [Explanation: Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
+* [Task Guide: Configure Custom Pipeline Stages](../task-guides/05-configure-pipeline-stages.md)
+* [Task Guide: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
+* [Task Guide: Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)
+* [Core Concepts: Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)

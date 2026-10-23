@@ -1,4 +1,4 @@
-# Explanation: Understanding Leads vs. Opportunities in CURQ
+# Core Concepts: Understanding Leads vs. Opportunities in CURQ
 
 This document explains the commercial logic, data architecture, and pipeline mechanics that govern prospect management, revenue modeling, and deal outcomes in CURQ CRM.
 
@@ -8,19 +8,11 @@ This document explains the commercial logic, data architecture, and pipeline mec
 
 In commercial operations, sales teams encounter two fundamentally different categories of prospects:
 
-```
-┌────────────────────────────────────────────────────────┐
-│                   Inbound Lead Intake                  │
-│       (Raw Inquiries, Web Forms, Business Cards)       │
-│        • Unscrubbed   • Unverified   • No Stages       │
-└──────────────────────────┬─────────────────────────────┘
-                           │ Qualification & Scrubbing
-                           ▼
-┌────────────────────────────────────────────────────────┐
-│                  Active Opportunities                  │
-│             (Qualified Deals in Pipeline)              │
-│       • Defined Value • Win Probability • Stages       │
-└────────────────────────────────────────────────────────┘
+```{mermaid}
+flowchart LR
+    A["`**Inbound Lead Intake**
+    Raw Inquiries & Unverified Leads`"] -->|"Qualification & Scrubbing"| B["`**Active Opportunities**
+    Qualified Deals in Sales Pipeline`"]
 ```
 
 #### 1. Inbound Leads (Lead Intake Stage)
@@ -53,9 +45,13 @@ By establishing an optional qualification buffer, CURQ allows commercial teams t
 
 The Kanban pipeline functions as an architectural state machine representing the natural evolution of a customer relationship:
 
-```
-[ New ] ──────► [ Qualified ] ──────► [ Proposition ] ──────► [ Won ]
- (10%)               (30%)                 (70%)              (100%)
+```{mermaid}
+flowchart LR
+    S1["`**New**
+    (10% Probability)`"] --> S2["`**Qualified**
+    (30% Probability)`"] --> S3["`**Proposition**
+    (70% Probability)`"] --> S4["`**Won**
+    (100% Probability)`"]
 ```
 
 #### Probability as a Weighted Metric
@@ -88,16 +84,14 @@ This normalization allows commercial directors to directly compare pipeline yiel
 
 In sales operations, closing a deal as **Lost** is often perceived as a failure. In data-driven organizations, however, lost deal analytics represent the primary feedback loop for continuous product, pricing, and operational refinement.
 
-```
-                      ┌───────────────► [ Won ] (100% Probability)
-                      │
-[ Pipeline Stages ] ──┤
-                      │
-                      └───────────────► [ Lost ] (0% Probability)
-                                            │
-                                            ▼
-                                  Structured Lost Reason
-                           (Competitor, Pricing, Feature Gap)
+```{mermaid}
+flowchart LR
+    P["Pipeline Stages"] --> W["`**Won**
+    (100% Probability)`"]
+    P --> L["`**Lost**
+    (0% Probability)`"]
+    L --> R["`**Lost Reason**
+    *(Competitor / Price / Gap)*`"]
 ```
 
 #### Standardized Rejection Taxonomy
@@ -110,8 +104,8 @@ When sales representatives record structured lost reasons rather than unstructur
 
 ### Related Documentation
 * [Tutorial: Track Your First Lead from Inquiry to Won Deal](../getting-started/01-track-your-first-lead-from-inquiry-to-won-deal.md)
-* [How-To: Qualify and Convert Leads into Opportunities](../task-guides/02-convert-leads-to-opportunities.md)
-* [How-To: Manage Pipeline Stages and Won or Lost Deals](../task-guides/03-manage-pipeline-stages-and-won-lost-status.md)
-* [How-To: Configure Recurring Revenue Plans](../task-guides/08-configure-recurring-revenue-plans.md)
-* [Explanation: Understanding Lead Assignment and Predictive Scoring](./02-understanding-lead-assignment-and-predictive-scoring.md)
-* [Reference: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
+* [Task Guide: Qualify and Convert Leads into Opportunities](../task-guides/02-convert-leads-to-opportunities.md)
+* [Task Guide: Manage Pipeline Stages and Won or Lost Deals](../task-guides/03-manage-pipeline-stages-and-won-lost-status.md)
+* [Task Guide: Configure Recurring Revenue Plans](../task-guides/08-configure-recurring-revenue-plans.md)
+* [Core Concepts: Understanding Lead Assignment and Predictive Scoring](./02-understanding-lead-assignment-and-predictive-scoring.md)
+* [Settings and Fields: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

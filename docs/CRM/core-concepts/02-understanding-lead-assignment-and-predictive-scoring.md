@@ -1,4 +1,4 @@
-# Explanation: Understanding Lead Assignment and Predictive Scoring
+# Core Concepts: Understanding Lead Assignment and Predictive Scoring
 
 This document explains the automated routing logic, business rules, and statistical classification principles underlying rule-based lead allocation and predictive win scoring in CURQ.
 
@@ -19,34 +19,18 @@ CURQ resolves these challenges through a two-tier **Rule-Based Assignment** engi
 
 The assignment workflow functions as a sequential filtering and load-balancing pipeline:
 
-```
-                         Inbound Lead / Prospect
-                                    │
-                                    ▼
-                    Team Domain & Territory Matching
-              (e.g., Country == US, Expected Revenue >= 50,000)
-                                    │
-                                    ▼
-                           Target Sales Team
-                                    │
-                      Member Eligibility Filtering
-                (Excludes 'Skip auto assignment' users)
-                                    │
-                                    ▼
-                      Member-Specific Domain Check
-                 (e.g., Regional territory, Product line)
-                                    │
-                                    ▼
-                      Rolling 30-Day Capacity Check
-                 (Current 30-day count < assignment_max)
-                                    │
-                                    ▼
-                   Sequential Round-Robin Distribution
-                 (Balanced lead allocation across peers)
-                                    │
-                                    ▼
-                    Automatic Opportunity Conversion
-                  (_assign_and_convert_leads execution)
+```{mermaid}
+flowchart LR
+    subgraph S1 ["1. Team Routing Tier"]
+        A["Inbound Lead"] --> B["`**Territory Match**
+        Country & Revenue`"] --> C["Target Team"]
+    end
+    subgraph S2 ["2. Member Allocation Tier"]
+        C --> D["`**Capacity Check**
+        Reps & Quotas`"] --> E["`**Round-Robin**
+        Distribution`"] --> F["`**Converted Deal**
+        Opportunity`"]
+    end
 ```
 
 #### 1. Two-Tier Domain Hierarchy
@@ -101,7 +85,7 @@ To maintain scoring accuracy and data integrity, predictive lead scoring enforce
 ---
 
 ### Related Documentation
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](./01-understanding-leads-vs-opportunities.md)
-* [How-To: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
-* [How-To: Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)
-* [Reference: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
+* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](./01-understanding-leads-vs-opportunities.md)
+* [Task Guide: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
+* [Task Guide: Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)
+* [Settings and Fields: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)

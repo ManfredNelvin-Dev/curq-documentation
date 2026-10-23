@@ -1,4 +1,4 @@
-# How-To: Configure Custom Pipeline Stages
+# Task Guide: Configure Custom Pipeline Stages
 
 Create custom pipeline stages, adjust stage properties, configure folded columns, and reorder stages to match your sales methodology.
 
@@ -38,7 +38,7 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 4. Click **Save & Close**.
 
 > [!NOTE]
-> For detailed field constraints and pipeline behaviors, see [Reference: Pipeline Stage Properties](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#pipeline-stage-properties).
+> For detailed field constraints and pipeline behaviors, see [Settings and Fields: Pipeline Stage Properties](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#pipeline-stage-properties).
 
 ---
 
@@ -62,6 +62,6 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 ---
 
 ### Related Documentation
-* [Reference: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
-* [How-To: Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Settings and Fields: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
+* [Task Guide: Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
+* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

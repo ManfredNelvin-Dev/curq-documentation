@@ -719,6 +719,17 @@ function formatFaqCards() {
                 section.classList.remove('open');
                 answerDiv.style.maxHeight = '0px';
             } else {
+                // Auto-close any other currently open accordion item across the page
+                document.querySelectorAll('.faq-accordion-item.open').forEach(item => {
+                    if (item !== section) {
+                        item.classList.remove('open');
+                        const otherAnswer = item.querySelector('.faq-answer');
+                        if (otherAnswer) {
+                            otherAnswer.style.maxHeight = '0px';
+                        }
+                    }
+                });
+
                 section.classList.add('open');
                 answerDiv.style.maxHeight = answerInner.scrollHeight + 40 + 'px';
             }
@@ -782,6 +793,14 @@ function formatFaqCards() {
         const targetId = window.location.hash.substring(1);
         const targetSec = document.getElementById(targetId);
         if (targetSec && targetSec.classList.contains('faq-accordion-item')) {
+            document.querySelectorAll('.faq-accordion-item.open').forEach(item => {
+                if (item !== targetSec) {
+                    item.classList.remove('open');
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    if (otherAnswer) otherAnswer.style.maxHeight = '0px';
+                }
+            });
+
             targetSec.classList.add('open');
             const ans = targetSec.querySelector('.faq-answer');
             const inner = targetSec.querySelector('.faq-answer-inner');
@@ -955,6 +974,27 @@ function setupRelatedDocs() {
     });
 }
 
+function initMermaidSizing() {
+    function constrainSvgs() {
+        document.querySelectorAll('.mermaid svg, pre.mermaid > svg').forEach(svg => {
+            const vb = svg.getAttribute('viewBox');
+            if (vb) {
+                const parts = vb.trim().split(/[\s,]+/).map(Number);
+                if (parts.length >= 4 && parts[2] > 0) {
+                    const natWidth = parts[2];
+                    svg.style.setProperty('max-width', Math.min(natWidth, 680) + 'px', 'important');
+                    svg.style.setProperty('width', '100%', 'important');
+                }
+            }
+        });
+    }
+
+    const observer = new MutationObserver(constrainSvgs);
+    const content = document.querySelector('.sphinx-content') || document.body;
+    observer.observe(content, { childList: true, subtree: true });
+    constrainSvgs();
+}
+
 function initCurqDocs() {
     cleanHeadingNumbers();
     initSidebarScroll();
@@ -966,6 +1006,7 @@ function initCurqDocs() {
     initSidebars();
     initImageViewer();
     setupRelatedDocs();
+    initMermaidSizing();
 }
 
 if (document.readyState === 'loading') {

@@ -26,7 +26,35 @@ extensions = [
     "myst_parser",
     "sphinx_multiversion",
     "sphinx.ext.mathjax",
+    "sphinxcontrib.mermaid",
 ]
+
+# Allow ```mermaid code blocks to be parsed directly as mermaid directives
+myst_fence_as_directive = ["mermaid"]
+mermaid_version = "11.12.1"
+mermaid_width = "100%"
+mermaid_height = "auto"
+mermaid_light_theme = "base"
+mermaid_init_config = {
+    "startOnLoad": False,
+    "theme": "base",
+    "themeVariables": {
+        "fontFamily": "Inter, system-ui, -apple-system, sans-serif",
+        "fontSize": "13px",
+        "primaryColor": "#fff6d6",
+        "primaryTextColor": "#16345f",
+        "primaryBorderColor": "#ffbf3d",
+        "lineColor": "#16345f",
+        "secondaryColor": "#ffbf3d",
+        "tertiaryColor": "#ffffff",
+        "clusterBkg": "#fffdf5",
+        "clusterBorder": "#ffd875",
+        "edgeLabelBackground": "#ffffff",
+        "mainBkg": "#fff6d6",
+        "nodeBorder": "#ffbf3d",
+        "nodeTextColor": "#16345f",
+    },
+}
 
 myst_enable_extensions = [
     "colon_fence",

@@ -1,4 +1,4 @@
-# How-To: Create and Manage Pipeline Opportunities
+# Task Guide: Create and Manage Pipeline Opportunities
 
 Create commercial opportunities directly on the Kanban board or via detailed form view, assign customers and salespeople, configure win probabilities, and generate sales quotations.
 
@@ -28,7 +28,7 @@ Create commercial opportunities directly on the Kanban board or via detailed for
 The `Test Deal - Cloud Migration` deal card appears directly in the **New** column with its expected revenue (`€ 20,000.00`), customer (`Global Logistics Corp`), and scheduled activity icon.
 
 > [!NOTE]
-> For allowed formats, character constraints, and definitions of each field, see [Reference: Opportunity Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields).
+> For allowed formats, character constraints, and definitions of each field, see [Settings and Fields: Opportunity Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields).
 
 ---
 
@@ -77,7 +77,7 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
 5. CURQ saves your updates automatically.
 
 > [!NOTE]
-> For descriptions of tracking metadata and assignment duration metrics, see [Reference: Extra Information Tab Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#extra-information-tab-fields).
+> For descriptions of tracking metadata and assignment duration metrics, see [Settings and Fields: Extra Information Tab Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#extra-information-tab-fields).
 
 ---
 
@@ -101,6 +101,6 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
 ---
 
 ### Related Documentation
-* [Reference: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
-* [How-To: Qualify and Convert Leads into Opportunities](./02-convert-leads-to-opportunities.md)
-* [How-To: Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
+* [Settings and Fields: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
+* [Task Guide: Qualify and Convert Leads into Opportunities](./02-convert-leads-to-opportunities.md)
+* [Task Guide: Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)

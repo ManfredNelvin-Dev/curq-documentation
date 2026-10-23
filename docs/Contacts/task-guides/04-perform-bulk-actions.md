@@ -1,4 +1,4 @@
-# How-To: Perform Bulk Actions on Contacts
+# Task Guide: Perform Bulk Actions on Contacts
 
 Execute batch operations across multiple contacts simultaneously, including data export, archiving, reinstating records, bulk email and SMS messaging, and customer portal invitations.
 
@@ -62,7 +62,7 @@ To allow multiple customers to view their invoices, deliveries, and quotes onlin
 
 ## Related Documentation
 
-* [How-To: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
-* [How-To: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
-* [How-To: Merge Duplicate Contacts](./03-merge-duplicate-contacts.md)
-* [Explanation: Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)
+* [Task Guide: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
+* [Task Guide: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
+* [Task Guide: Merge Duplicate Contacts](./03-merge-duplicate-contacts.md)
+* [Core Concepts: Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)

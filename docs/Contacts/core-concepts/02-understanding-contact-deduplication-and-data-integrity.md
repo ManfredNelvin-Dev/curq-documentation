@@ -1,4 +1,4 @@
-# Explanation: Understanding Contact Deduplication and Data Integrity
+# Core Concepts: Understanding Contact Deduplication and Data Integrity
 
 Duplicate contacts are more than an address-book problem. In an integrated business system, customer records connect sales opportunities, quotations, invoices, deliveries, and communication history. When the same customer exists under multiple records, these relationships can become fragmented, making it harder for teams to maintain consistent information and understand the complete business relationship.
 
@@ -44,19 +44,17 @@ CURQ's Contacts module is part of a wider business system. Contact records can b
 
 A simplified view of these relationships is shown below:
 
-```
-                            ┌─────────────────────┐
-                            │   Contact Record    │
-                            └──────────┬──────────┘
-                                       │
-         ┌──────────────────┬──────────┴──────────┬──────────────────┐
-         ▼                  ▼                     ▼                  ▼
-   ┌───────────┐      ┌───────────┐         ┌───────────┐      ┌───────────┐
-   │   Sales   │      │    CRM    │         │Accounting │      │ Inventory │
-   ├───────────┤      ├───────────┤         ├───────────┤      ├───────────┤
-   │Quotations │      │Opptys     │         │Invoices   │      │Deliveries │
-   │Orders     │      │Activities │         │Credit Note│      │           │
-   └───────────┘      └───────────┘         └───────────┘      └───────────┘
+```{mermaid}
+flowchart LR
+    C["Contact Record"]
+    C --> S["`**Sales**
+    Orders & Quotes`"]
+    C --> CRM["`**CRM**
+    Deals & Activities`"]
+    C --> A["`**Accounting**
+    Invoices & Bills`"]
+    C --> I["`**Inventory**
+    Shipments & Deliveries`"]
 ```
 
 These relationships explain why contact cleanup requires more care than deleting a duplicate row from a spreadsheet.
@@ -89,30 +87,25 @@ When two or more records represent the same entity, merging can consolidate them
 
 Conceptually, the process is:
 
-```
-Before merging:
-┌───────────────────────┐        ┌───────────────────────┐
-│   [Acme Industries]   │        │   [Acme Industrial]   │
-│   • Quotations        │        │   • Invoices          │
-└───────────┬───────────┘        └───────────┬───────────┘
-            │                                │
-            └───────────────┬────────────────┘
-                            │ Review records
-                            ▼
-                    Merge duplicates
-                            │
-                            ▼
-            ┌───────────────────────────────┐
-            │ [Selected Surviving Contact]  │
-            │ • Quotations & Invoices       │
-            └───────────────────────────────┘
+```{mermaid}
+flowchart LR
+    subgraph BM ["Duplicate Records"]
+        D1["`**Acme Industries**
+        Quotes & Deals`"]
+        D2["`**Acme Industrial**
+        Invoices & Bills`"]
+    end
+    D1 --> M{"Merge"}
+    D2 --> M
+    M --> S["`**Consolidated Contact**
+    All Transactions Linked`"]
 ```
 
 The purpose of merging is to reduce duplicate contact entries and maintain a more coherent customer or supplier record.
 
 The precise behavior of the merge operation—including which field values are retained, how related records are handled, and which information is transferred—depends on the implemented functionality. Users should review the resulting contact and verify important related records after merging.
 
-For the step-by-step procedure, see [How-To: Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md).
+For the step-by-step procedure, see [Task Guide: Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md).
 
 ### 3. Archive Contacts That Are No Longer Active
 Not every contact that should disappear from day-to-day work is a duplicate. A supplier may stop trading, a customer relationship may end, or an individual contact may no longer be active. In these situations, archiving may be more appropriate than merging.
@@ -124,7 +117,7 @@ Not every contact that should disappear from day-to-day work is a duplicate. A s
 
 Archiving is conceptually different from deleting a contact. Whether an archived record remains accessible through particular searches, dropdowns, or historical views depends on the application's behavior.
 
-For related contact-management tasks, see [How-To: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md).
+For related contact-management tasks, see [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md).
 
 ---
 
@@ -181,7 +174,7 @@ Contact deduplication is ultimately a data-quality practice, not just an adminis
 
 ## Related Documentation
 
-* [Explanation: Understanding Unified Partner Architecture and Hierarchies](./01-understanding-unified-partner-architecture-and-hierarchies.md)
-* [How-To: Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md)
-* [How-To: Perform Bulk Actions on Contacts](../task-guides/04-perform-bulk-actions.md)
-* [Reference: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)
+* [Core Concepts: Understanding Unified Partner Architecture and Hierarchies](./01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Task Guide: Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md)
+* [Task Guide: Perform Bulk Actions on Contacts](../task-guides/04-perform-bulk-actions.md)
+* [Settings and Fields: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

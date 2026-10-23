@@ -1,4 +1,4 @@
-# How-To: Configure Predictive Lead Scoring
+# Task Guide: Configure Predictive Lead Scoring
 
 Configure automated win probability calculations, select statistical attributes, set historical lead cutoff dates, and retrain pipeline predictive scoring models.
 
@@ -33,7 +33,7 @@ Configure automated win probability calculations, select statistical attributes,
 5. In the **Consider leads created as of the:** field, select or enter a historical cutoff date (e.g., `12/28/2025` or 12–24 months prior). Records created before this threshold will be excluded, ensuring outdated sales cycles or discontinued pricing don't skew modern win predictions.
 
 > [!NOTE]
-> For mathematical details, Bayesian weighting rules, and parameter definitions, see [Reference: Predictive Lead Scoring Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#predictive-lead-scoring-parameters).
+> For mathematical details, Bayesian weighting rules, and parameter definitions, see [Settings and Fields: Predictive Lead Scoring Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#predictive-lead-scoring-parameters).
 
 ---
 
@@ -57,7 +57,7 @@ Configure automated win probability calculations, select statistical attributes,
 ---
 
 ### Related Documentation
-* [Reference: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
-* [Explanation: Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
-* [How-To: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
-* [How-To: Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)
+* [Settings and Fields: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
+* [Core Concepts: Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
+* [Task Guide: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
+* [Task Guide: Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)

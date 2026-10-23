@@ -4,19 +4,14 @@ Welcome to the CURQ Contacts application. CURQ uses a single, unified address bo
 
 In this tutorial, you will build a clear mental model of how CURQ organizes contact relationships and complete a hands-on exercise to create your first company contact and link an individual employee to it in 3 quick steps.
 
-```
-┌────────────────────────────────────────────────────────┐
-│               Company: Acme Technologies               │
-│  (Holds: Legal Name, Tax ID, Default Pricelist, Terms) │
-└───────────┬────────────────────────────────┬───────────┘
-            │                                │
-            ▼                                ▼
-┌───────────────────────────┐   ┌───────────────────────────┐
-│ Individual: George Willson│   │ Delivery Address:         │
-│ (Sales Director)          │   │ Acme Warehouse East       │
-│ • Direct Phone & Email    │   │ • Physical Street Address │
-│ • Inherits Company Terms  │   │ • Dispatched Deliveries   │
-└───────────────────────────┘   └───────────────────────────┘
+```{mermaid}
+flowchart LR
+    C["`**Company: Acme Technologies**
+    Tax ID • Terms • Pricelist`"]
+    C --> I["`**Employee: George Willson**
+    Sales Director • Email & Phone`"]
+    C --> D["`**Delivery Address**
+    Acme East Warehouse`"]
 ```
 
 ---
@@ -134,6 +129,6 @@ Now that you have created your first contact, explore the core capabilities and 
 ## Related Documentation
 
 * [Getting Started: Set Up an Enterprise Customer with Branch Locations](./02-set-up-an-enterprise-customer-with-branch-locations.md)
-* [How-To: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
-* [Explanation: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
-* [Reference: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)
+* [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
+* [Core Concepts: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Settings and Fields: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

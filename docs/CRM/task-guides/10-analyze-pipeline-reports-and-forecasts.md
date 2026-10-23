@@ -1,4 +1,4 @@
-# How-To: Analyze Pipeline Performance, Forecasts, and Team Activities
+# Task Guide: Analyze Pipeline Performance, Forecasts, and Team Activities
 
 Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, track lead inflow trends, and monitor team activity completion.
 
@@ -100,6 +100,6 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
 ---
 
 ### Related Documentation
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
-* [Reference: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
-* [How-To: Schedule and Execute Sales Activities](./04-schedule-and-track-sales-activities.md)
+* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Settings and Fields: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
+* [Task Guide: Schedule and Execute Sales Activities](./04-schedule-and-track-sales-activities.md)

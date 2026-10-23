@@ -943,7 +943,7 @@ a:hover {
     border-radius: 12px;
     padding: 18px 20px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
@@ -997,9 +997,9 @@ a:hover {
 }
 
 .channel-meta {
-    font-size: 13px;
-    color: #667085;
-    line-height: 1.45;
+    font-size: 14px;
+    color: #475467;
+    line-height: 1.5;
 }
 
 .channel-meta i {
@@ -1013,6 +1013,11 @@ a:hover {
     justify-content: space-between;
     align-items: flex-start;
     gap: 16px;
+    margin-bottom: 22px;
+}
+
+.faq-header-titles .column-subtitle {
+    margin-bottom: 0 !important;
 }
 
 .faq-view-all-link {
@@ -1231,9 +1236,9 @@ a:hover {
     }
 
     .support-hero-banner {
-        background: url('../images/support-hero-mobile.png') center bottom / 320px auto no-repeat,
+        background: url('../images/support-hero-mobile.png') center bottom / 240px auto no-repeat,
             linear-gradient(180deg, #fefce8 0%, #fef8dc 40%, #fef3ba 75%, #fef0a4 100%);
-        padding: 28px 20px 220px 20px;
+        padding: 28px 20px 210px 20px;
         border-radius: 14px;
         margin-bottom: 36px;
         min-height: auto;
@@ -1246,16 +1251,19 @@ a:hover {
 
     .support-hero-title {
         font-size: 23px !important;
+        margin-bottom: 10px !important;
     }
 
     .support-hero-description p {
         font-size: 14px;
+        margin-bottom: 4px !important;
     }
 
     .support-hero-actions {
         flex-direction: column;
         width: 100%;
         gap: 10px;
+        margin-top: 20px;
     }
 
     .hero-btn-primary,
@@ -1269,10 +1277,29 @@ a:hover {
         font-size: 19px !important;
     }
 
+    .support-columns-container {
+        gap: 40px;
+    }
+
     .faq-header-row {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .faq-header-titles .column-title {
+        margin-bottom: 6px !important;
+    }
+
+    .faq-header-titles .column-subtitle {
+        margin-bottom: 0 !important;
+    }
+
+    .faq-view-all-link {
+        margin-top: 0;
+        align-self: flex-end;
+        margin-left: auto;
     }
 
     .faq-accordion-header {
@@ -1308,18 +1335,49 @@ a:hover {
     }
 
     .support-hero-banner {
-        padding: 24px 16px 170px 16px;
-        background-size: 300px auto;
+        padding: 24px 16px 195px 16px;
+        background-size: 220px auto;
         border-radius: 12px;
-        margin-bottom: 28px;
+        margin-bottom: 32px;
     }
 
     .support-hero-title {
         font-size: 20px !important;
+        margin-bottom: 8px !important;
     }
 
     .support-hero-description p {
-        font-size: 13px;
+        font-size: 13.5px;
+        line-height: 1.5;
+        margin-bottom: 4px !important;
+    }
+
+    .support-hero-actions {
+        margin-top: 18px;
+        gap: 10px;
+    }
+
+    .support-columns-container {
+        gap: 36px;
+    }
+
+    .faq-header-row {
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .faq-header-titles .column-title {
+        margin-bottom: 6px !important;
+    }
+
+    .faq-header-titles .column-subtitle {
+        margin-bottom: 0 !important;
+    }
+
+    .faq-view-all-link {
+        margin-top: 0;
+        align-self: flex-end;
+        margin-left: auto;
     }
 
     .channel-icon-container {
@@ -1361,8 +1419,8 @@ a:hover {
 
 @media (max-width: 420px) {
     .support-hero-banner {
-        padding: 20px 14px 145px 14px;
-        background-size: 260px auto;
+        padding: 20px 14px 175px 14px;
+        background-size: 200px auto;
     }
 
     .contact-channel-card {
@@ -1496,4 +1554,131 @@ a:hover {
 
 .toc-container li:has(a[href="#related-documentation"]) {
     display: none !important;
+}
+
+/* =========================================================
+   CURQ Logo-Themed Mermaid Flowcharts
+   ========================================================= */
+.mermaid-container {
+    margin: 1.5rem auto !important;
+    max-width: 620px;
+    width: fit-content;
+    min-width: min(100%, 320px);
+    background: #ffffff;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    display: block !important;
+    text-align: center !important;
+    box-shadow: 0 2px 8px rgba(22, 52, 95, 0.05);
+}
+
+.mermaid-container > pre.mermaid,
+.mermaid-container > pre,
+pre.mermaid {
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    box-shadow: none !important;
+}
+
+.mermaid-container svg,
+pre.mermaid svg {
+    display: inline-block !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+/* CURQ Logo Yellow Theme for Flowchart Nodes */
+.mermaid .node rect,
+.mermaid .node polygon,
+.mermaid .node circle,
+.mermaid .node ellipse {
+    fill: #fff6d6 !important;
+    stroke: #ffbf3d !important;
+    stroke-width: 2px !important;
+    rx: 8px !important;
+    ry: 8px !important;
+}
+
+/* Edge & Arrow styling in CURQ Navy */
+.mermaid .edgePath .path,
+.mermaid .flowchart-link {
+    stroke: #16345f !important;
+    stroke-width: 1.75px !important;
+}
+
+.mermaid .marker,
+.mermaid marker path {
+    fill: #16345f !important;
+    stroke: #16345f !important;
+}
+
+/* Node text styling in CURQ Navy */
+.mermaid .node .label,
+.mermaid .node text,
+.mermaid .label text,
+.mermaid .node span {
+    fill: #16345f !important;
+    color: #16345f !important;
+    font-family: Inter, system-ui, -apple-system, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+}
+
+.mermaid .node strong,
+.mermaid .node b {
+    color: #16345f !important;
+    font-weight: 700 !important;
+}
+
+/* Edge labels (clean badges on connectors) */
+.mermaid .edgeLabel {
+    background-color: #ffffff !important;
+    color: #16345f !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 2px 6px !important;
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.mermaid .edgeLabel rect {
+    fill: #ffffff !important;
+    stroke: none !important;
+    opacity: 0.98 !important;
+}
+
+/* Subgraphs / Clusters (e.g. Sales Pipeline Kanban) */
+.mermaid .cluster rect {
+    fill: #fffdf5 !important;
+    stroke: #ffd875 !important;
+    stroke-width: 1.5px !important;
+    rx: 10px !important;
+    ry: 10px !important;
+}
+
+.mermaid .cluster .nodeLabel,
+.mermaid .cluster text {
+    fill: #16345f !important;
+    font-weight: 700 !important;
+    font-size: 12.5px !important;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+    .mermaid-container {
+        padding: 1rem 0.75rem !important;
+        margin: 1rem auto !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
 }

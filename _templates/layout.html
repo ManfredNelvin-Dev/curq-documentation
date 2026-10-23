@@ -235,7 +235,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.7/viewer.min.js" defer></script>
     <script src="{{ pathto('_static/js/main.js', 1) }}" defer></script>
-
+    {%- for js in script_files %}
+    {{ js_tag(js) }}
+    {%- endfor %}
 </body>
 
 </html>

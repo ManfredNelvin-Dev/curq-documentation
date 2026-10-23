@@ -1,4 +1,4 @@
-# Explanation: Understanding Unified Partner Architecture and Hierarchies
+# Core Concepts: Understanding Unified Partner Architecture and Hierarchies
 
 This document explains the architectural principles, data models, and business logic governing partner management in CURQ, contrasting the common business challenges of legacy systems with CURQ's unified solution.
 
@@ -20,17 +20,11 @@ In real-world commercial engagements, legal liability and physical goods rarely 
 * Invoices and formal tax notices must be directed to an Accounts Payable department at corporate headquarters or a centralized financial shared-services center.
 * Physical deliveries must be dispatched to regional fulfillment centers, manufacturing assembly plants, or temporary job sites equipped with specific loading docks, receiving hours, and freight requirements.
 
-```
-Traditional System Trap (Single Address Field):
-┌────────────────────────────────────────────────────────┐
-│               Customer: Acme Corporation                │
-│       Address: 100 Corporate Plaza, New York, NY       │
-└───────────────────────────┬────────────────────────────┘
-                            │
-            Single Address Used for Everything
-                            ▼
- ❌ Freight Carrier Delivers 20 Tons of Steel to 34th Floor Office!
- ❌ Vendor Invoices Mailed to Warehouse Dock Clerk and Lost!
+```{mermaid}
+flowchart LR
+    A["`**Customer: Acme Corp**
+    Single Corporate Address`"] -->|"Single Address Used"| B["`❌ Freight shipped to 34th floor!
+    ❌ Invoices lost at warehouse dock!`"]
 ```
 
 When software uses a simplistic single-address model, companies suffer continuous logistical failures:
@@ -46,16 +40,23 @@ Enterprise customers operate extensive corporate networks comprising holding com
 
 To eliminate data silos, commercial blind spots, and logistics failures, CURQ unifies all business actors into a single architectural entity: the **Partner** model.
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                           CURQ Partner Model                            │
-│                      (Single Architectural Entity)                      │
-├────────────────────┬────────────────────┬───────────────────────────────┤
-│    Transactions    │     Logistics      │          Financials           │
-│ • Sales Orders     │ • Delivery Docks   │ • Consolidated Invoicing      │
-│ • Vendor Bills     │ • Shipping Notes   │ • Automated Fiscal Tax Maps   │
-│ • CRM Pipeline     │ • Receiving Hours  │ • Unified Credit Limits       │
-└────────────────────┴────────────────────┴───────────────────────────────┘
+```{mermaid}
+flowchart TD
+    subgraph PM ["CURQ Partner Model (Single Architectural Entity)"]
+        direction LR
+        T["`**Transactions**
+        • Sales Orders
+        • Vendor Bills
+        • CRM Pipeline`"]
+        L["`**Logistics**
+        • Delivery Docks
+        • Shipping Notes
+        • Receiving Hours`"]
+        F["`**Financials**
+        • Consolidated Invoicing
+        • Automated Fiscal Tax Maps
+        • Unified Credit Limits`"]
+    end
 ```
 
 ### 1. Single Architectural Registry with Dynamic Relational Roles
@@ -75,19 +76,16 @@ This architectural unification provides immediate operational benefits:
 
 CURQ structures relationships through an intuitive parent-child hierarchy that separates **Legal Business Entities** (`Company`) from **Physical People** (`Individual`):
 
-```
-       ┌────────────────────────────────────────────────────────┐
-       │                Parent Company Record                   │
-       │       (Legal Entity, Tax ID, Fiscal Position)          │
-       └──────────────────────────┬─────────────────────────────┘
-                                  │
-         ┌────────────────────────┼────────────────────────┐
-         ▼                        ▼                        ▼
-┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐
-│ Individual Person│    │ Delivery Address │    │ Invoice Address  │
-│(Employee, Title, │    │ (Warehouse Dock, │    │(Accounts Payable,│
-│ Direct Email/Tel)│    │  Shipping Rules) │    │  Billing Email)  │
-└──────────────────┘    └──────────────────┘    └──────────────────┘
+```{mermaid}
+flowchart LR
+    P["`**Parent Company Record**
+    Legal Entity • Tax ID`"]
+    P --> I["`**Individual Person**
+    Employee • Direct Coordinates`"]
+    P --> D["`**Delivery Address**
+    Warehouse Dock • Freight`"]
+    P --> INV["`**Invoice Address**
+    Accounts Payable • Billing`"]
 ```
 
 ### 1. Company Records as Statutory & Fiscal Anchors
@@ -105,23 +103,13 @@ Individual records represent actual people (such as purchasing managers, account
 
 To solve the friction between physical logistics and legal billing, CURQ decouples addresses into specialized operational records attached directly to the parent company:
 
-```
-                  ┌─────────────────────────────────────┐
-                  │      Corporate Parent Account       │
-                  └──────────────┬───────────────┬──────┘
-                                 │               │
-        ┌────────────────────────┘               └────────────────────────┐
-        ▼                                                                 ▼
-┌─────────────────────────────────┐                     ┌─────────────────────────────────┐
-│     Delivery Address Card       │                     │      Invoice Address Card       │
-├─────────────────────────────────┤                     ├─────────────────────────────────┤
-│ • Regional Warehouse Dock       │                     │ • Accounts Payable Department   │
-│ • Freight Dock Receiving Hours  │                     │ • Dedicated Invoicing Email     │
-│ • Hazardous Materials Permitted │                     │ • Peppol / Electronic EDI ID    │
-└────────────────┬────────────────┘                     └────────────────┬────────────────┘
-                 │                                                       │
-                 ▼                                                       ▼
-      Warehouse Packing Slip                                      Customer Invoice
+```{mermaid}
+flowchart LR
+    P["Corporate Parent Account"]
+    P --> D["`**Delivery Address**
+    Regional Warehouse Dock`"] --> PS["Packing Slip"]
+    P --> I["`**Invoice Address**
+    Accounts Payable Dept`"] --> CI["Customer Invoice"]
 ```
 
 * **Invoice Address**: Anchors financial and legal documents. Automated PDF invoices, Peppol electronic EDI streams, and billing reminders are dispatched directly to the accounts payable email address.
@@ -160,7 +148,7 @@ To eliminate duplicate administrative setup across enterprise accounts with doze
 
 ## Related Documentation
 
-* [Explanation: Understanding Contact Deduplication and Data Integrity](./02-understanding-contact-deduplication-and-data-integrity.md)
+* [Core Concepts: Understanding Contact Deduplication and Data Integrity](./02-understanding-contact-deduplication-and-data-integrity.md)
 * [Getting Started: Overview & Create Your First Contact](../getting-started/01-create-your-first-contact.md)
-* [How-To: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
-* [Reference: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)
+* [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
+* [Settings and Fields: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

@@ -1,4 +1,4 @@
-# Reference: Default Deal Tags, Lost Reasons, and Activity Specifications
+# Settings and Fields: Default Deal Tags, Lost Reasons, and Activity Specifications
 
 This document details the configuration parameters, interval formulas, and status codes for activities, subscription revenues, and lost deal tracking in CURQ.
 
@@ -70,7 +70,7 @@ This document details the configuration parameters, interval formulas, and statu
 ---
 
 ### Related Documentation
-* [How-To: Schedule a Follow-Up Call and Manage Sales Activities](../task-guides/04-schedule-and-track-sales-activities.md)
-* [How-To: Configure Standardized Lost Reasons and Deal Tags](../task-guides/07-configure-lost-reasons-and-tags.md)
-* [How-To: Configure Recurring Revenue Plans](../task-guides/08-configure-recurring-revenue-plans.md)
-* [How-To: Configure Activity Types and Automated Activity Plans](../task-guides/09-configure-activity-types-and-plans.md)
+* [Task Guide: Schedule a Follow-Up Call and Manage Sales Activities](../task-guides/04-schedule-and-track-sales-activities.md)
+* [Task Guide: Configure Standardized Lost Reasons and Deal Tags](../task-guides/07-configure-lost-reasons-and-tags.md)
+* [Task Guide: Configure Recurring Revenue Plans](../task-guides/08-configure-recurring-revenue-plans.md)
+* [Task Guide: Configure Activity Types and Automated Activity Plans](../task-guides/09-configure-activity-types-and-plans.md)

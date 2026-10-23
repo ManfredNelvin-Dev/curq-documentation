@@ -1,4 +1,4 @@
-# How-To: Configure Geographic Data and Country Groups
+# Task Guide: Configure Geographic Data and Country Groups
 
 Configure country address formatting, add federal states, register cities for automated postal code completion, and build regional country groups for pricelists and tax positions.
 
@@ -38,7 +38,7 @@ Configure country address formatting, add federal states, register cities for au
 4. Click the cloud icon to save.
 
 > [!NOTE]
-> For ISO schemas, currency bindings, and address formatting toggles, see [Reference: Country Fields](../settings-and-fields/03-localization-and-country-settings.md#country-fields).
+> For ISO schemas, currency bindings, and address formatting toggles, see [Settings and Fields: Country Fields](../settings-and-fields/03-localization-and-country-settings.md#country-fields).
 
 ---
 
@@ -59,7 +59,7 @@ Configure country address formatting, add federal states, register cities for au
 4. Click outside the row or click **Save**.
 
 > [!NOTE]
-> For administrative subdivision specifications, see [Reference: Federal State Fields](../settings-and-fields/03-localization-and-country-settings.md#federal-state-fields).
+> For administrative subdivision specifications, see [Settings and Fields: Federal State Fields](../settings-and-fields/03-localization-and-country-settings.md#federal-state-fields).
 
 ---
 
@@ -83,7 +83,7 @@ When cities and postal codes are entered into this registry, typing a postal cod
 4. Click **Save** at the top left (or click outside the line).
 
 > [!NOTE]
-> For municipality parameter constraints, see [Reference: City Fields](../settings-and-fields/03-localization-and-country-settings.md#city-fields).
+> For municipality parameter constraints, see [Settings and Fields: City Fields](../settings-and-fields/03-localization-and-country-settings.md#city-fields).
 
 ---
 
@@ -108,7 +108,7 @@ Country groups combine multiple nations to apply shared sales pricelists or fisc
 6. Click the cloud icon to save.
 
 > [!NOTE]
-> For zone definitions and pricelist scoping rules, see [Reference: Country Group Fields](../settings-and-fields/03-localization-and-country-settings.md#country-group-fields).
+> For zone definitions and pricelist scoping rules, see [Settings and Fields: Country Group Fields](../settings-and-fields/03-localization-and-country-settings.md#country-group-fields).
 
 ---
 
@@ -121,7 +121,7 @@ Country groups combine multiple nations to apply shared sales pricelists or fisc
 
 ## Related Documentation
 
-* [How-To: Register and Authorize Partner Bank Accounts](./08-manage-partner-bank-accounts.md)
-* [How-To: Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [Task Guide: Register and Authorize Partner Bank Accounts](./08-manage-partner-bank-accounts.md)
+* [Task Guide: Create and Manage Contacts](./01-create-and-manage-contacts.md)
 * [Getting Started: Set Up an Enterprise Customer with Branch Locations](../getting-started/02-set-up-an-enterprise-customer-with-branch-locations.md)
-* [Reference: Geographic and Localization Settings](../settings-and-fields/03-localization-and-country-settings.md)
+* [Settings and Fields: Geographic and Localization Settings](../settings-and-fields/03-localization-and-country-settings.md)

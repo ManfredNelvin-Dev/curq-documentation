@@ -1,4 +1,4 @@
-# How-To: Generate and Track Sales Quotations from Opportunities
+# Task Guide: Generate and Track Sales Quotations from Opportunities
 
 Create commercial quotations directly from CRM opportunities, manage quote revisions, track customer proposals, and convert accepted quotes into confirmed sales orders.
 
@@ -77,6 +77,6 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 ---
 
 ### Related Documentation
-* [Reference: Opportunity Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields)
-* [How-To: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Settings and Fields: Opportunity Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields)
+* [Task Guide: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
+* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

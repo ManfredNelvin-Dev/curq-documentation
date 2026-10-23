@@ -1,4 +1,4 @@
-# How-To: Configure Recurring Revenue Plans
+# Task Guide: Configure Recurring Revenue Plans
 
 Enable subscription tracking, configure recurring billing intervals, and apply recurring plans to commercial opportunities.
 
@@ -48,7 +48,7 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
    ![CRM recurring plans drag reorder handle](../media/064.png)
 
 > [!NOTE]
-> For duration specifications and monthly normalization formulas, see [Reference: Recurring Revenue Plan Intervals](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#recurring-revenue-plan-intervals).
+> For duration specifications and monthly normalization formulas, see [Settings and Fields: Recurring Revenue Plan Intervals](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#recurring-revenue-plan-intervals).
 
 ---
 
@@ -81,7 +81,7 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 ---
 
 ### Related Documentation
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
-* [Reference: Default Deal Tags, Lost Reasons, and Activity Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
-* [How-To: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
-* [How-To: Configure Activity Types and Automated Activity Plans](./09-configure-activity-types-and-plans.md)
+* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Settings and Fields: Default Deal Tags, Lost Reasons, and Activity Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
+* [Task Guide: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
+* [Task Guide: Configure Activity Types and Automated Activity Plans](./09-configure-activity-types-and-plans.md)

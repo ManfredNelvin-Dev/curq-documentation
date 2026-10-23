@@ -1,4 +1,4 @@
-# Reference: Contact Form Field Definitions
+# Settings and Fields: Contact Form Field Definitions
 
 This document provides a factual, scannable catalog of all fields, toggles, and options available on CURQ contact forms.
 
@@ -146,8 +146,8 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ## Related Documentation
 
-* [How-To: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
-* [Reference: Bank Account Fields and Security Badges](./02-bank-account-security-and-fields.md)
-* [Reference: Geographic and Localization Settings](./03-localization-and-country-settings.md)
-* [Explanation: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
+* [Settings and Fields: Bank Account Fields and Security Badges](./02-bank-account-security-and-fields.md)
+* [Settings and Fields: Geographic and Localization Settings](./03-localization-and-country-settings.md)
+* [Core Concepts: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
 

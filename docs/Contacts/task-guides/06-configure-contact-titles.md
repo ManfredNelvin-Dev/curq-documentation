@@ -1,4 +1,4 @@
-# How-To: Configure and Assign Contact Titles
+# Task Guide: Configure and Assign Contact Titles
 
 Define standard and custom professional salutations with abbreviations (such as Dr., Prof., or Eng.) and assign them to individual contact cards for customer communications.
 
@@ -44,7 +44,7 @@ Define standard and custom professional salutations with abbreviations (such as 
 
 ## Related Documentation
 
-* [How-To: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
-* [How-To: Configure and Assign Industries](./07-configure-industries.md)
-* [How-To: Create and Manage Contacts](./01-create-and-manage-contacts.md)
-* [Reference: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)
+* [Task Guide: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
+* [Task Guide: Configure and Assign Industries](./07-configure-industries.md)
+* [Task Guide: Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [Settings and Fields: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

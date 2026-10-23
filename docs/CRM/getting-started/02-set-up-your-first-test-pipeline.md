@@ -92,6 +92,6 @@ Congratulations! You have successfully customized your sales pipeline by adding 
 
 ### Next Steps
 
-* To learn how to configure multi-team routing and automated lead distribution, see [How-To: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md).
-* To explore all stage parameters, see [Reference: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md).
-* To understand the commercial strategy behind stage velocity, see [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md).
+* To learn how to configure multi-team routing and automated lead distribution, see [Task Guide: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md).
+* To explore all stage parameters, see [Settings and Fields: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md).
+* To understand the commercial strategy behind stage velocity, see [Core Concepts: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md).

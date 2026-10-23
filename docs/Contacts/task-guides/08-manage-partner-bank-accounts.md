@@ -1,4 +1,4 @@
-# How-To: Register and Authorize Partner Bank Accounts
+# Task Guide: Register and Authorize Partner Bank Accounts
 
 Register banking institutions, link account numbers to vendor and customer cards, authorize accounts for outgoing electronic payments, and resolve security risk warnings.
 
@@ -29,7 +29,7 @@ Before adding partner accounts, register the banking institution with its offici
 6. Click the cloud icon to save.
 
 > [!NOTE]
-> For specifications and validation rules of institutional fields, see [Reference: Bank Directory Fields](../settings-and-fields/02-bank-account-security-and-fields.md#bank-directory-fields).
+> For specifications and validation rules of institutional fields, see [Settings and Fields: Bank Directory Fields](../settings-and-fields/02-bank-account-security-and-fields.md#bank-directory-fields).
 
 ---
 
@@ -58,7 +58,7 @@ You can attach a bank account directly from the partner's contact form or manage
    ![Bank Account form view showing account details and Send Money toggle](../media/038.png)
 
 > [!NOTE]
-> For parameter definitions of routing numbers and account holder reconciliation, see [Reference: Partner Bank Account Fields](../settings-and-fields/02-bank-account-security-and-fields.md#partner-bank-account-fields).
+> For parameter definitions of routing numbers and account holder reconciliation, see [Settings and Fields: Partner Bank Account Fields](../settings-and-fields/02-bank-account-security-and-fields.md#partner-bank-account-fields).
 
 ---
 
@@ -74,7 +74,7 @@ To prevent payment fraud, all newly added bank accounts start with an **Untruste
 6. Save the record. CURQ now allows outgoing automated wire payments to this account.
 
 > [!NOTE]
-> For system trigger conditions and behavior matrices of trust badges and alert banners, see [Reference: Security Badges and Risk Levels](../settings-and-fields/02-bank-account-security-and-fields.md#security-badges-and-risk-levels).
+> For system trigger conditions and behavior matrices of trust badges and alert banners, see [Settings and Fields: Security Badges and Risk Levels](../settings-and-fields/02-bank-account-security-and-fields.md#security-badges-and-risk-levels).
 
 ---
 
@@ -88,7 +88,7 @@ To prevent payment fraud, all newly added bank accounts start with an **Untruste
 
 ## Related Documentation
 
-* [How-To: Create and Manage Contacts](./01-create-and-manage-contacts.md)
-* [How-To: Configure Geographic Data and Country Groups](./09-configure-geographic-localization.md)
-* [How-To: Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
-* [Reference: Bank Account Fields and Security Badges](../settings-and-fields/02-bank-account-security-and-fields.md)
+* [Task Guide: Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [Task Guide: Configure Geographic Data and Country Groups](./09-configure-geographic-localization.md)
+* [Task Guide: Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
+* [Settings and Fields: Bank Account Fields and Security Badges](../settings-and-fields/02-bank-account-security-and-fields.md)

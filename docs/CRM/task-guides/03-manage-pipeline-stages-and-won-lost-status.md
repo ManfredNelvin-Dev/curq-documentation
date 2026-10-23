@@ -1,4 +1,4 @@
-# How-To: Manage Pipeline Stages and Won or Lost Deals
+# Task Guide: Manage Pipeline Stages and Won or Lost Deals
 
 Advance deals through visual Kanban stages, record won sales, apply standardized lost reasons, and restore archived opportunities.
 
@@ -45,7 +45,7 @@ When negotiations conclude without a sale, recording structured reasons ensures 
 5. The opportunity probability drops to **0%**, a red **Lost** ribbon attaches to the record, and the card archives from active Kanban views.
 
 > [!NOTE]
-> For standard reason categories and analytical definitions, see [Reference: Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
+> For standard reason categories and analytical definitions, see [Settings and Fields: Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
 
 ---
 
@@ -74,6 +74,6 @@ If a prospective client contacts your company again to resume discussions:
 ---
 
 ### Related Documentation
-* [Reference: Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog)
-* [How-To: Configure Standardized Lost Reasons and Deal Tags](./07-configure-lost-reasons-and-tags.md)
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Settings and Fields: Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog)
+* [Task Guide: Configure Standardized Lost Reasons and Deal Tags](./07-configure-lost-reasons-and-tags.md)
+* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

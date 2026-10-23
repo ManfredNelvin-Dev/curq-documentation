@@ -1,4 +1,4 @@
-# How-To: Create and Manage Contacts
+# Task Guide: Create and Manage Contacts
 
 Create corporate or individual partner profiles, link employees to parent companies, configure dedicated delivery and invoice addresses, and set commercial credit terms and sales order alerts.
 
@@ -28,7 +28,7 @@ Create corporate or individual partner profiles, link employees to parent compan
    * **Tax ID**: Enter the business VAT, GSTIN, or national tax registration number.
 
 > [!NOTE]
-> For descriptions, formats, and allowed values of every field on this form, see [Reference: Header and Identity Fields](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
+> For descriptions, formats, and allowed values of every field on this form, see [Settings and Fields: Header and Identity Fields](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
 
 5. Click the cloud icon at the top of the form (or navigate away) to save.
 
@@ -52,7 +52,7 @@ Large clients and vendors often operate across multiple locations. To ensure inv
 5. Click **Save & Close** (or **Save & New** to add another location immediately).
 
 > [!NOTE]
-> For technical definitions of each address type and EDI GLN rules, see [Reference: Contacts and Addresses Tab](../settings-and-fields/01-contact-form-field-definitions.md#contacts-and-addresses-tab).
+> For technical definitions of each address type and EDI GLN rules, see [Settings and Fields: Contacts and Addresses Tab](../settings-and-fields/01-contact-form-field-definitions.md#contacts-and-addresses-tab).
 
 > [!TIP]
 > When creating a Sales Order or Vendor Bill for this company, CURQ automatically defaults the **Delivery Address** and **Invoice Address** to the destinations configured here.
@@ -76,7 +76,7 @@ Large clients and vendors often operate across multiple locations. To ensure inv
    * Set supplier **Payment Terms** and **Supplier Payment Mode**.
 
 > [!NOTE]
-> For detailed definitions of sales pricelists, fiscal positions, and commercial register IDs, see [Reference: Sales and Purchase Tab](../settings-and-fields/01-contact-form-field-definitions.md#sales-and-purchase-tab).
+> For detailed definitions of sales pricelists, fiscal positions, and commercial register IDs, see [Settings and Fields: Sales and Purchase Tab](../settings-and-fields/01-contact-form-field-definitions.md#sales-and-purchase-tab).
 
 #### Configure Invoicing and Auto-Post Bill Rules
 1. Select the **Invoicing** tab on the contact form.
@@ -107,7 +107,7 @@ To alert your sales team about special handling or block bad debtors:
 5. Save the contact.
 
 > [!NOTE]
-> For behavioral rules and popup dialog specifications of alert levels, see [Reference: Internal Notes and Warnings Tab](../settings-and-fields/01-contact-form-field-definitions.md#internal-notes-and-warnings-tab).
+> For behavioral rules and popup dialog specifications of alert levels, see [Settings and Fields: Internal Notes and Warnings Tab](../settings-and-fields/01-contact-form-field-definitions.md#internal-notes-and-warnings-tab).
 
 #### Configure Personal Information, Geolocation, Membership, and Privacy (Optional)
 Depending on your operational requirements, configure secondary partner profile tabs:
@@ -146,6 +146,6 @@ Depending on your operational requirements, configure secondary partner profile 
 ## Related Documentation
 
 * [Getting Started: Overview & Create Your First Contact](../getting-started/01-create-your-first-contact.md)
-* [How-To: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
-* [How-To: Register and Authorize Partner Bank Accounts](./08-manage-partner-bank-accounts.md)
-* [Reference: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)
+* [Task Guide: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
+* [Task Guide: Register and Authorize Partner Bank Accounts](./08-manage-partner-bank-accounts.md)
+* [Settings and Fields: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

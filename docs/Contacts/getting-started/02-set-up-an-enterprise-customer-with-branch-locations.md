@@ -90,6 +90,6 @@ Congratulations! You have successfully configured a multi-branch corporate hiera
 ## Related Documentation
 
 * [Getting Started: Overview & Create Your First Contact](./01-create-your-first-contact.md)
-* [How-To: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
-* [How-To: Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
-* [Explanation: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
+* [Task Guide: Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
+* [Core Concepts: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
