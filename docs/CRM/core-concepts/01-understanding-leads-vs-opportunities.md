@@ -1,6 +1,6 @@
 # Explanation: Understanding Leads vs. Opportunities in CURQ
 
-This document explains the commercial logic, data architecture, and pipeline mechanics that govern prospect management, revenue modeling, and deal outcomes in CURQ 18 CRM.
+This document explains the commercial logic, data architecture, and pipeline mechanics that govern prospect management, revenue modeling, and deal outcomes in CURQ CRM.
 
 ---
 
@@ -78,11 +78,9 @@ Modern B2B engagements frequently combine one-off transactions with subscription
 If a sales pipeline measures only gross contract value, multi-year recurring deals artificially overshadow high-margin immediate sales. Conversely, measuring only first-year cash flow understates the long-term enterprise value of subscription accounts.
 
 #### Normalization via Monthly Recurring Revenue (MRR)
-CURQ resolves this discrepancy through automated recurring plan normalization:
+CURQ resolves this discrepancy through automated recurring plan normalization. By dividing the recurring contract value across the plan's duration in months, the system standardizes subscription commitments into a single monthly metric (Expected MRR).
 
-$$\text{Expected MRR} = \frac{\text{Recurring Revenue}}{\text{Duration in Months}}$$
-
-By converting multi-month subscription commitments into a normalized monthly metric, commercial directors can directly compare pipeline yield across diverse agreement durations alongside one-off deal values.
+This normalization allows commercial directors to directly compare pipeline yield across diverse agreement durations alongside one-off deal values.
 
 ---
 
@@ -111,9 +109,9 @@ When sales representatives record structured lost reasons rather than unstructur
 ---
 
 ### Related Documentation
-* [Tutorial: Track Your First Lead from Inquiry to Won Deal](../tutorials/01-track-your-first-lead-from-inquiry-to-won-deal.md)
-* [How-To: Qualify and Convert Leads into Opportunities](../how-to/02-convert-leads-to-opportunities.md)
-* [How-To: Manage Pipeline Stages and Won or Lost Deals](../how-to/03-manage-pipeline-stages-and-won-lost-status.md)
-* [How-To: Configure Recurring Revenue Plans](../how-to/08-configure-recurring-revenue-plans.md)
+* [Tutorial: Track Your First Lead from Inquiry to Won Deal](../getting-started/01-track-your-first-lead-from-inquiry-to-won-deal.md)
+* [How-To: Qualify and Convert Leads into Opportunities](../task-guides/02-convert-leads-to-opportunities.md)
+* [How-To: Manage Pipeline Stages and Won or Lost Deals](../task-guides/03-manage-pipeline-stages-and-won-lost-status.md)
+* [How-To: Configure Recurring Revenue Plans](../task-guides/08-configure-recurring-revenue-plans.md)
 * [Explanation: Understanding Lead Assignment and Predictive Scoring](./02-understanding-lead-assignment-and-predictive-scoring.md)
-* [Reference: Lead and Opportunity Form Field Definitions](../reference/01-lead-and-opportunity-field-definitions.md)
+* [Reference: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

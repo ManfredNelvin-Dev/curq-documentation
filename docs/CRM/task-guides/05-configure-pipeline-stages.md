@@ -38,7 +38,7 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 4. Click **Save & Close**.
 
 > [!NOTE]
-> For detailed field constraints and pipeline behaviors, see [Reference: Pipeline Stage Properties](../reference/02-pipeline-configuration-and-assignment-settings.md#pipeline-stage-properties).
+> For detailed field constraints and pipeline behaviors, see [Reference: Pipeline Stage Properties](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#pipeline-stage-properties).
 
 ---
 
@@ -62,6 +62,6 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 ---
 
 ### Related Documentation
-* [Reference: Pipeline Configuration and Assignment Settings](../reference/02-pipeline-configuration-and-assignment-settings.md)
+* [Reference: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
 * [How-To: Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](../explanation/01-understanding-leads-vs-opportunities.md)
+* [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

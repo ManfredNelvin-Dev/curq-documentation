@@ -33,7 +33,7 @@ Configure automated win probability calculations, select statistical attributes,
 5. In the **Consider leads created as of the:** field, select or enter a historical cutoff date (e.g., `12/28/2025` or 12–24 months prior). Records created before this threshold will be excluded, ensuring outdated sales cycles or discontinued pricing don't skew modern win predictions.
 
 > [!NOTE]
-> For mathematical details, Bayesian weighting rules, and parameter definitions, see [Reference: Predictive Lead Scoring Parameters](../reference/02-pipeline-configuration-and-assignment-settings.md#predictive-lead-scoring-parameters).
+> For mathematical details, Bayesian weighting rules, and parameter definitions, see [Reference: Predictive Lead Scoring Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#predictive-lead-scoring-parameters).
 
 ---
 
@@ -57,7 +57,7 @@ Configure automated win probability calculations, select statistical attributes,
 ---
 
 ### Related Documentation
-* [Reference: Pipeline Configuration and Assignment Settings](../reference/02-pipeline-configuration-and-assignment-settings.md)
-* [Explanation: Understanding Lead Assignment and Predictive Scoring](../explanation/02-understanding-lead-assignment-and-predictive-scoring.md)
+* [Reference: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
+* [Explanation: Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
 * [How-To: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
 * [How-To: Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)

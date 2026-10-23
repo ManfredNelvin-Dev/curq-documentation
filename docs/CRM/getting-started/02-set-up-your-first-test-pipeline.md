@@ -1,13 +1,13 @@
 # Getting Started: Setting Up Your First Test Pipeline
 
-Welcome to CURQ 18 CRM. In this introductory tutorial, you will learn how to configure your sales workspace by adding a custom pipeline stage, adjusting its win probability, and creating a test deal card.
+Welcome to CURQ CRM. In this introductory tutorial, you will learn how to configure your sales workspace by adding a custom pipeline stage, adjusting its win probability, and creating a test deal card.
 
 By the end of this exercise, you will understand how pipeline columns reflect your real-world sales process and feel confident customizing the Kanban board for your team.
 
 ---
 
 ### Prerequisites
-* Access to a standard CURQ 18 instance with the **CRM** app installed.
+* Access to a standard CURQ instance with the **CRM** app installed.
 * Standard default pipeline stages. No advanced permissions or multi-team configurations are needed.
 
 ---
@@ -69,6 +69,7 @@ Let us verify that your new stage works by adding a test deal:
 
    ![CRM pipeline quick creation card](../media/012.png)
 
+   * **Contact**: Select or type `Global Logistics Corp`.
    * **Opportunity**: Type `Test Deal - Cloud Migration`.
    * **Expected Revenue**: Enter `20000`.
 3. Click **Add**.
@@ -91,6 +92,6 @@ Congratulations! You have successfully customized your sales pipeline by adding 
 
 ### Next Steps
 
-* To learn how to configure multi-team routing and automated lead distribution, see [How-To: Configure Sales Teams and Rule-Based Lead Assignment](../how-to/06-configure-sales-teams-and-assignment.md).
-* To explore all stage parameters, see [Reference: Pipeline Configuration and Assignment Settings](../reference/02-pipeline-configuration-and-assignment-settings.md).
-* To understand the commercial strategy behind stage velocity, see [Explanation: Understanding Leads vs. Opportunities in CURQ](../explanation/01-understanding-leads-vs-opportunities.md).
+* To learn how to configure multi-team routing and automated lead distribution, see [How-To: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md).
+* To explore all stage parameters, see [Reference: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md).
+* To understand the commercial strategy behind stage velocity, see [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md).

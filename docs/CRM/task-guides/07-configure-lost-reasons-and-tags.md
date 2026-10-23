@@ -20,7 +20,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 6. Press **Enter** or click the cloud icon at the top of the window to save the reason.
 
 > [!NOTE]
-> For standard analytical categories and industry taxonomies, see [Reference: Standard Lost Reasons Catalog](../reference/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
+> For standard analytical categories and industry taxonomies, see [Reference: Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
 
 ---
 
@@ -40,7 +40,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 6. Press **Enter** or click away to save the new tag.
 
 > [!NOTE]
-> For recommended tag taxonomies and color schemes, see [Reference: Default Deal Tags](../reference/03-activity-types-recurring-plans-and-lost-reasons.md#default-deal-tags).
+> For recommended tag taxonomies and color schemes, see [Reference: Default Deal Tags](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#default-deal-tags).
 
 ---
 
@@ -65,7 +65,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 ---
 
 ### Related Documentation
-* [Reference: Activity Types, Recurring Plans, and Lost Reasons](../reference/03-activity-types-recurring-plans-and-lost-reasons.md)
+* [Reference: Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
 * [How-To: Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
 * [How-To: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
 * [How-To: Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)

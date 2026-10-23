@@ -1,6 +1,6 @@
 # Explanation: Understanding Lead Assignment and Predictive Scoring
 
-This document explains the mathematical foundations, automated routing logic, and statistical classification principles underlying rule-based lead allocation and predictive win scoring in CURQ 18.
+This document explains the automated routing logic, business rules, and statistical classification principles underlying rule-based lead allocation and predictive win scoring in CURQ.
 
 ---
 
@@ -70,19 +70,14 @@ Lead assignment operates through two complementary modes:
 
 ### The Mechanics of Predictive Lead Scoring
 
-Rather than relying on subjective intuition or static point heuristics (such as adding arbitrary points for clicking a link), CURQ implements a **Naïve Bayes statistical classifier** to calculate real-time win probabilities.
+Rather than relying on subjective intuition or static point heuristics (such as adding arbitrary points for clicking a link), CURQ implements statistical probability modeling to calculate real-time win probabilities.
 
-#### 1. The Naïve Bayes Probability Model
-The predictive scoring engine computes the posterior probability that an active opportunity will successfully close as **Won** given its observed categorical attributes:
+#### 1. How Predictive Probability is Calculated
+The predictive scoring engine evaluates an active opportunity's chances of closing as **Won** by comparing its observed attributes against historical deal outcomes:
 
-$$P(\text{Won} \mid X_1, X_2, \dots, X_n) = \frac{P(\text{Won}) \prod_{i=1}^{n} P(X_i \mid \text{Won})}{P(X_1, X_2, \dots, X_n)}$$
-
-Where:
-* $P(\text{Won})$ is the **prior probability**—the baseline historical close rate across all deals in the CRM database.
-* $P(X_i \mid \text{Won})$ is the **likelihood**—the frequency with which attribute $X_i$ (e.g., Country = Germany, Phone Quality = Valid) appears among historically successful deals.
-* $P(X_1, \dots, X_n)$ is the **marginal probability**—the overall frequency of those attribute values occurring across both Won and Lost deals.
-
-Under the conditional independence assumption of Naïve Bayes, the algorithm evaluates each attribute's statistical contribution independently, enabling lightweight, near-instantaneous recalculations without requiring external machine learning infrastructure.
+* **Baseline Win Rate**: The system begins with your overall historical win rate across all past opportunities in the database.
+* **Attribute Impact**: It analyzes how frequently each specific attribute (for example, stage, sales team, geographic location, or email and phone completeness) appeared among past won deals compared to lost deals.
+* **Calibrated Win Probability**: By evaluating the influence of each attribute, the algorithm produces a calibrated win probability percentage in real time without requiring external machine learning infrastructure.
 
 #### 2. Statistical Dimensions Evaluated
 The predictive engine stores frequency distributions in historical scoring frequency tables across specific deal dimensions:
@@ -97,7 +92,7 @@ The predictive engine stores frequency distributions in historical scoring frequ
   * **Marketing Attribution (`source_id`, `medium_id`)**: Measures historical conversion efficacy across marketing channels (e.g., organic search vs. paid advertising vs. partner referrals).
 
 #### 3. Data Governance and Algorithmic Prerequisites
-To maintain mathematical integrity, predictive lead scoring enforces strict data governance constraints:
+To maintain scoring accuracy and data integrity, predictive lead scoring enforces strict governance constraints:
 
 * **Lead Creation Cutoff Date**: Market dynamics, pricing tiers, and competitive environments evolve. Evaluating deals closed five years ago under obsolete pricing models skews modern predictions. Administrators configure a cutoff threshold (typically restricting data to the preceding 12 to 24 months) to ensure training sets reflect current commercial conditions.
 * **Sample Size & Cold-Start Behavior**: The Naïve Bayes model requires statistical significance to make accurate predictions (a recommended baseline of at least 50 to 200+ closed won/lost opportunities). In new installations or low-volume pipelines, the engine defaults to stage baseline probabilities until sufficient throughput is achieved.
@@ -107,6 +102,6 @@ To maintain mathematical integrity, predictive lead scoring enforces strict data
 
 ### Related Documentation
 * [Explanation: Understanding Leads vs. Opportunities in CURQ](./01-understanding-leads-vs-opportunities.md)
-* [How-To: Configure Sales Teams and Rule-Based Lead Assignment](../how-to/06-configure-sales-teams-and-assignment.md)
-* [How-To: Configure Predictive Lead Scoring](../how-to/11-configure-predictive-lead-scoring.md)
-* [Reference: Pipeline Configuration and Assignment Settings](../reference/02-pipeline-configuration-and-assignment-settings.md)
+* [How-To: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
+* [How-To: Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)
+* [Reference: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)

@@ -1,6 +1,6 @@
 # Reference: Lead and Opportunity Form Field Definitions
 
-This document details the data fields, validation specifications, and configuration parameters used on CURQ 18 opportunity and lead forms.
+This document details the data fields, validation specifications, and configuration parameters used on CURQ opportunity and lead forms.
 
 ---
 
@@ -65,6 +65,6 @@ This document details the data fields, validation specifications, and configurat
 ---
 
 ### Related Documentation
-* [How-To: Create and Manage Pipeline Opportunities](../how-to/01-create-and-manage-opportunities.md)
-* [How-To: Convert a Lead into an Opportunity](../how-to/02-convert-leads-to-opportunities.md)
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](../explanation/01-understanding-leads-vs-opportunities.md)
+* [How-To: Create and Manage Pipeline Opportunities](../task-guides/01-create-and-manage-opportunities.md)
+* [How-To: Convert a Lead into an Opportunity](../task-guides/02-convert-leads-to-opportunities.md)
+* [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

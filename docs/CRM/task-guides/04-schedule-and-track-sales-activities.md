@@ -24,7 +24,7 @@ Schedule follow-up calls, meetings, and tasks from deal records, and manage comm
 5. Click **Schedule** (or **Schedule & Mark as Done** if completing it immediately).
 
 > [!NOTE]
-> For default delay parameters, icon behaviors, and auto-chaining triggers, see [Reference: Activity Type Specifications](../reference/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
+> For default delay parameters, icon behaviors, and auto-chaining triggers, see [Reference: Activity Type Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
 
 ---
 
@@ -136,5 +136,5 @@ At the top right of **My Activities**, switch between visual execution layouts:
 ---
 
 ### Related Documentation
-* [Reference: Activity Types, Recurring Plans, and Lost Reasons](../reference/03-activity-types-recurring-plans-and-lost-reasons.md)
+* [Reference: Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
 * [How-To: Configure Activity Types and Automated Activity Plans](./09-configure-activity-types-and-plans.md)

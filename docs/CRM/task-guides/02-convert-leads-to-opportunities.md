@@ -42,7 +42,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 5. The system automatically saves the record as fields are completed.
 
 > [!NOTE]
-> For field formats and allowed constraints, see [Reference: Inbound Lead Form Fields](../reference/01-lead-and-opportunity-field-definitions.md#inbound-lead-form-fields).
+> For field formats and allowed constraints, see [Reference: Inbound Lead Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#inbound-lead-form-fields).
 
 ---
 
@@ -77,7 +77,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 5. Click **Create Opportunity**.
 
 > [!NOTE]
-> For behavioral rules and parameter outcomes of the conversion dialog, see [Reference: Lead Conversion Dialog Parameters](../reference/01-lead-and-opportunity-field-definitions.md#lead-conversion-dialog-parameters).
+> For behavioral rules and parameter outcomes of the conversion dialog, see [Reference: Lead Conversion Dialog Parameters](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#lead-conversion-dialog-parameters).
 
 ---
 
@@ -93,6 +93,6 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 ---
 
 ### Related Documentation
-* [Explanation: Understanding Leads vs. Opportunities in CURQ](../explanation/01-understanding-leads-vs-opportunities.md)
-* [Reference: Lead and Opportunity Form Field Definitions](../reference/01-lead-and-opportunity-field-definitions.md)
+* [Explanation: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Reference: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [How-To: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
