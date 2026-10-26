@@ -1,4 +1,4 @@
-# Core Concepts: Understanding Contact Deduplication and Data Integrity
+# Understanding Contact Deduplication and Data Integrity
 
 Duplicate contacts are more than an address-book problem. In an integrated business system, customer records connect sales opportunities, quotations, invoices, deliveries, and communication history. When the same customer exists under multiple records, these relationships can become fragmented, making it harder for teams to maintain consistent information and understand the complete business relationship.
 
@@ -105,7 +105,7 @@ The purpose of merging is to reduce duplicate contact entries and maintain a mor
 
 The precise behavior of the merge operation—including which field values are retained, how related records are handled, and which information is transferred—depends on the implemented functionality. Users should review the resulting contact and verify important related records after merging.
 
-For the step-by-step procedure, see [Task Guide: Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md).
+For the step-by-step procedure, see [Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md).
 
 ### 3. Archive Contacts That Are No Longer Active
 Not every contact that should disappear from day-to-day work is a duplicate. A supplier may stop trading, a customer relationship may end, or an individual contact may no longer be active. In these situations, archiving may be more appropriate than merging.
@@ -117,7 +117,7 @@ Not every contact that should disappear from day-to-day work is a duplicate. A s
 
 Archiving is conceptually different from deleting a contact. Whether an archived record remains accessible through particular searches, dropdowns, or historical views depends on the application's behavior.
 
-For related contact-management tasks, see [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md).
+For related contact-management tasks, see [Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md).
 
 ---
 
@@ -174,7 +174,7 @@ Contact deduplication is ultimately a data-quality practice, not just an adminis
 
 ## Related Documentation
 
-* [Core Concepts: Understanding Unified Partner Architecture and Hierarchies](./01-understanding-unified-partner-architecture-and-hierarchies.md)
-* [Task Guide: Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md)
-* [Task Guide: Perform Bulk Actions on Contacts](../task-guides/04-perform-bulk-actions.md)
-* [Settings and Fields: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)
+* [Understanding Unified Partner Architecture and Hierarchies](./01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md)
+* [Perform Bulk Actions on Contacts](../task-guides/04-perform-bulk-actions.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

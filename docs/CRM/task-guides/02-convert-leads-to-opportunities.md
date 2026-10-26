@@ -1,4 +1,4 @@
-# Task Guide: Convert a Lead into an Opportunity
+# Convert a Lead into an Opportunity
 
 Capture unqualified inquiries, evaluate prospect suitability, identify duplicate records, and convert qualified leads into pipeline opportunities.
 
@@ -42,7 +42,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 5. The system automatically saves the record as fields are completed.
 
 > [!NOTE]
-> For field formats and allowed constraints, see [Settings and Fields: Inbound Lead Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#inbound-lead-form-fields).
+> For field formats and allowed constraints, see [Inbound Lead Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#inbound-lead-form-fields).
 
 ---
 
@@ -77,7 +77,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 5. Click **Create Opportunity**.
 
 > [!NOTE]
-> For behavioral rules and parameter outcomes of the conversion dialog, see [Settings and Fields: Lead Conversion Dialog Parameters](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#lead-conversion-dialog-parameters).
+> For behavioral rules and parameter outcomes of the conversion dialog, see [Lead Conversion Dialog Parameters](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#lead-conversion-dialog-parameters).
 
 ---
 
@@ -93,6 +93,6 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 ---
 
 ### Related Documentation
-* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
-* [Settings and Fields: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
-* [Task Guide: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
+* [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
+* [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)

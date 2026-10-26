@@ -1,4 +1,4 @@
-# Settings and Fields: Geographic and Localization Settings
+# Geographic and Localization Settings
 
 This document details the configuration parameters, ISO standards, and data tables governing geographic localization in CURQ.
 
@@ -53,8 +53,8 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ## Related Documentation
 
-* [Settings and Fields: Bank Account Fields and Security Badges](./02-bank-account-security-and-fields.md)
-* [Settings and Fields: Contact Form Field Definitions](./01-contact-form-field-definitions.md)
-* [Task Guide: Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
-* [Core Concepts: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Bank Account Fields and Security Badges](./02-bank-account-security-and-fields.md)
+* [Contact Form Field Definitions](./01-contact-form-field-definitions.md)
+* [Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
+* [Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
 

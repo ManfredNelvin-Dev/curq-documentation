@@ -1,24 +1,8 @@
-# Getting Started: Overview & Track Your First Lead from Inquiry to Won Deal
+# Overview & Track Your First Lead from Inquiry to Won Deal
 
 Welcome to CURQ CRM. The **CRM** application serves as the pipeline intelligence and prospect engagement center. It provides end-to-end visibility into the customer acquisition journey, transforming raw inquiries into qualified pipeline opportunities, coordinating team follow-up activities, and synchronizing commercial proposals directly with Sales.
 
 In this tutorial, you will build a clear mental model of how CURQ organizes the sales cycle and complete a hands-on exercise to track your first lead from initial inquiry to won deal in 4 quick steps.
-
-```{mermaid}
-flowchart TD
-    A["`**Incoming Inquiries**
-    Web Forms • Emails • Events`"] --> B["`**CRM Leads**
-    Qualification Filter`"]
-    B -->|"Convert"| K1["New"]
-    
-    subgraph Pipeline ["Sales Pipeline Kanban"]
-        direction LR
-        K1["New"] --> K2["Qualified"] --> K3["Proposition"] --> K4["Won"]
-    end
-    
-    Pipeline --> Q["`**Quotation / Order**
-    Updates Expected Revenue`"]
-```
 
 ---
 
@@ -138,11 +122,11 @@ Now that you have completed your first sales cycle, explore the core capabilitie
 
 ## Related Documentation
 
-* [Getting Started: Setting Up Your First Test Pipeline](./02-set-up-your-first-test-pipeline.md)
-* [Task Guide: Create and Manage Opportunities](../task-guides/01-create-and-manage-opportunities.md)
-* [Task Guide: Qualify and Convert Leads into Opportunities](../task-guides/02-convert-leads-to-opportunities.md)
-* [Task Guide: Manage Pipeline Stages and Won/Lost Status](../task-guides/03-manage-pipeline-stages-and-won-lost-status.md)
-* [Task Guide: Configure Pipeline Stages](../task-guides/05-configure-pipeline-stages.md)
-* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
-* [Settings & Fields: Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
+* [Setting Up Your First Test Pipeline](./02-set-up-your-first-test-pipeline.md)
+* [Create and Manage Opportunities](../task-guides/01-create-and-manage-opportunities.md)
+* [Qualify and Convert Leads into Opportunities](../task-guides/02-convert-leads-to-opportunities.md)
+* [Manage Pipeline Stages and Won/Lost Status](../task-guides/03-manage-pipeline-stages-and-won-lost-status.md)
+* [Configure Pipeline Stages](../task-guides/05-configure-pipeline-stages.md)
+* [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [Frequently Asked Questions](../faq.md)

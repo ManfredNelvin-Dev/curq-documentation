@@ -1,4 +1,4 @@
-# Task Guide: Configure Activity Types and Automated Activity Plans
+# Configure Activity Types and Automated Activity Plans
 
 Standardize customer engagement actions, automate multi-step milestone task sequences, and launch activity plans on deals.
 
@@ -38,7 +38,7 @@ Standardize customer engagement actions, automate multi-step milestone task sequ
 6. CURQ auto-saves updates, or click the cloud icon in the top header to save immediately.
 
 > [!NOTE]
-> For action types, icon bindings, and chaining behaviors, see [Settings and Fields: Activity Type Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
+> For action types, icon bindings, and chaining behaviors, see [Activity Type Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
 
 ---
 
@@ -69,7 +69,7 @@ Activity Plans allow you to launch an entire sequence of milestone activities wi
 5. Click the cloud icon to save the plan template.
 
 > [!NOTE]
-> For plan parameters and assignment options, see [Settings and Fields: Activity Plan Structure](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-plan-structure).
+> For plan parameters and assignment options, see [Activity Plan Structure](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-plan-structure).
 
 ---
 
@@ -97,7 +97,7 @@ Activity Plans allow you to launch an entire sequence of milestone activities wi
 ---
 
 ### Related Documentation
-* [Settings and Fields: Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
-* [Task Guide: Schedule and Execute Sales Activities](./04-schedule-and-track-sales-activities.md)
-* [Task Guide: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
-* [Task Guide: Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)
+* [Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
+* [Schedule and Execute Sales Activities](./04-schedule-and-track-sales-activities.md)
+* [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
+* [Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)

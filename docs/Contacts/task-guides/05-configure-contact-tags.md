@@ -1,4 +1,4 @@
-# Task Guide: Configure and Assign Contact Tags
+# Configure and Assign Contact Tags
 
 Create color-coded labels, establish nested tag categories, assign badges to partner profiles, and filter contacts by tag across your directory.
 
@@ -68,7 +68,7 @@ You can create new tags directly while editing a contact form without navigating
 
 ## Related Documentation
 
-* [Task Guide: Create and Manage Contacts](./01-create-and-manage-contacts.md)
-* [Task Guide: Configure and Assign Contact Titles](./06-configure-contact-titles.md)
-* [Task Guide: Configure and Assign Industries](./07-configure-industries.md)
-* [Task Guide: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
+* [Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [Configure and Assign Contact Titles](./06-configure-contact-titles.md)
+* [Configure and Assign Industries](./07-configure-industries.md)
+* [Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)

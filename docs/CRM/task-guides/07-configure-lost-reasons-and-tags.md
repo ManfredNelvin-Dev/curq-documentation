@@ -1,4 +1,4 @@
-# Task Guide: Configure Standardized Lost Reasons and Deal Tags
+# Configure Standardized Lost Reasons and Deal Tags
 
 Configure standardized lost reason taxonomies and create color-coded deal tags to maintain structured pipeline reporting.
 
@@ -20,7 +20,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 6. Press **Enter** or click the cloud icon at the top of the window to save the reason.
 
 > [!NOTE]
-> For standard analytical categories and industry taxonomies, see [Settings and Fields: Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
+> For standard analytical categories and industry taxonomies, see [Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
 
 ---
 
@@ -40,7 +40,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 6. Press **Enter** or click away to save the new tag.
 
 > [!NOTE]
-> For recommended tag taxonomies and color schemes, see [Settings and Fields: Default Deal Tags](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#default-deal-tags).
+> For recommended tag taxonomies and color schemes, see [Default Deal Tags](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#default-deal-tags).
 
 ---
 
@@ -65,7 +65,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 ---
 
 ### Related Documentation
-* [Settings and Fields: Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
-* [Task Guide: Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
-* [Task Guide: Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
-* [Task Guide: Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)
+* [Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
+* [Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
+* [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
+* [Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)

@@ -1,4 +1,4 @@
-# Core Concepts: Understanding Unified Partner Architecture and Hierarchies
+# Understanding Unified Partner Architecture and Hierarchies
 
 This document explains the architectural principles, data models, and business logic governing partner management in CURQ, contrasting the common business challenges of legacy systems with CURQ's unified solution.
 
@@ -39,25 +39,6 @@ Enterprise customers operate extensive corporate networks comprising holding com
 ## How CURQ Solves It: The Unified Partner Model
 
 To eliminate data silos, commercial blind spots, and logistics failures, CURQ unifies all business actors into a single architectural entity: the **Partner** model.
-
-```{mermaid}
-flowchart TD
-    subgraph PM ["CURQ Partner Model (Single Architectural Entity)"]
-        direction LR
-        T["`**Transactions**
-        • Sales Orders
-        • Vendor Bills
-        • CRM Pipeline`"]
-        L["`**Logistics**
-        • Delivery Docks
-        • Shipping Notes
-        • Receiving Hours`"]
-        F["`**Financials**
-        • Consolidated Invoicing
-        • Automated Fiscal Tax Maps
-        • Unified Credit Limits`"]
-    end
-```
 
 ### 1. Single Architectural Registry with Dynamic Relational Roles
 Rather than relying on static database flags or separate tables, CURQ determines a partner's role through its **relational transaction links**:
@@ -148,7 +129,7 @@ To eliminate duplicate administrative setup across enterprise accounts with doze
 
 ## Related Documentation
 
-* [Core Concepts: Understanding Contact Deduplication and Data Integrity](./02-understanding-contact-deduplication-and-data-integrity.md)
-* [Getting Started: Overview & Create Your First Contact](../getting-started/01-create-your-first-contact.md)
-* [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
-* [Settings and Fields: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)
+* [Understanding Contact Deduplication and Data Integrity](./02-understanding-contact-deduplication-and-data-integrity.md)
+* [Overview & Create Your First Contact](../getting-started/01-create-your-first-contact.md)
+* [Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

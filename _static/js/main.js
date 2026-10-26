@@ -982,7 +982,7 @@ function initMermaidSizing() {
                 const parts = vb.trim().split(/[\s,]+/).map(Number);
                 if (parts.length >= 4 && parts[2] > 0) {
                     const natWidth = parts[2];
-                    svg.style.setProperty('max-width', Math.min(natWidth, 680) + 'px', 'important');
+                    svg.style.setProperty('max-width', Math.min(natWidth, 1020) + 'px', 'important');
                     svg.style.setProperty('width', '100%', 'important');
                 }
             }

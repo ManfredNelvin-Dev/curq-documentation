@@ -1,4 +1,4 @@
-# Getting Started: Set Up an Enterprise Customer with Branch Locations
+# Set Up an Enterprise Customer with Branch Locations
 
 Welcome to CURQ Contacts. In this tutorial, you will learn how to structure an enterprise customer account operating across multiple commercial sites: establishing a corporate headquarters record, attaching a dedicated shipping warehouse address, and configuring an accounts payable billing address.
 
@@ -89,7 +89,7 @@ Congratulations! You have successfully configured a multi-branch corporate hiera
 
 ## Related Documentation
 
-* [Getting Started: Overview & Create Your First Contact](./01-create-your-first-contact.md)
-* [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
-* [Task Guide: Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
-* [Core Concepts: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Overview & Create Your First Contact](./01-create-your-first-contact.md)
+* [Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
+* [Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
+* [Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)

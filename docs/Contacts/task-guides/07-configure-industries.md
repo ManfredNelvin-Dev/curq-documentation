@@ -1,4 +1,4 @@
-# Task Guide: Configure and Assign Industries
+# Configure and Assign Industries
 
 Configure economic sectors (such as Manufacturing, Retail, or IT/Communication), assign industry classifications to company profiles, and segment partners by sector.
 
@@ -60,7 +60,7 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 
 ## Related Documentation
 
-* [Task Guide: Configure and Assign Contact Titles](./06-configure-contact-titles.md)
-* [Task Guide: Register and Authorize Partner Bank Accounts](./08-manage-partner-bank-accounts.md)
-* [Task Guide: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
-* [Task Guide: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
+* [Configure and Assign Contact Titles](./06-configure-contact-titles.md)
+* [Register and Authorize Partner Bank Accounts](./08-manage-partner-bank-accounts.md)
+* [Configure and Assign Contact Tags](./05-configure-contact-tags.md)
+* [Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)

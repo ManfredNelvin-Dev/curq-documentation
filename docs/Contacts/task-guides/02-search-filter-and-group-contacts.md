@@ -1,4 +1,4 @@
-# Task Guide: Search, Filter, and Group Contacts
+# Search, Filter, and Group Contacts
 
 Search across partner details, apply built-in and custom multi-criteria filters, group contacts hierarchically, and save custom search views for quick access.
 
@@ -89,7 +89,7 @@ At the top right of the screen, click the view switcher icons:
 
 ## Related Documentation
 
-* [Task Guide: Create and Manage Contacts](./01-create-and-manage-contacts.md)
-* [Task Guide: Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
-* [Task Guide: Merge Duplicate Contacts](./03-merge-duplicate-contacts.md)
-* [Task Guide: Configure and Assign Contact Tags](./05-configure-contact-tags.md)
+* [Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
+* [Merge Duplicate Contacts](./03-merge-duplicate-contacts.md)
+* [Configure and Assign Contact Tags](./05-configure-contact-tags.md)

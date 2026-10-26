@@ -1,4 +1,4 @@
-# Getting Started: Overview & Create Your First Contact
+# Overview & Create Your First Contact
 
 Welcome to the CURQ Contacts application. CURQ uses a single, unified address book to manage all commercial counterparties—companies, individual contacts, branch delivery hubs, billing departments, and vendor bank accounts.
 
@@ -128,7 +128,7 @@ Now that you have created your first contact, explore the core capabilities and 
 
 ## Related Documentation
 
-* [Getting Started: Set Up an Enterprise Customer with Branch Locations](./02-set-up-an-enterprise-customer-with-branch-locations.md)
-* [Task Guide: Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
-* [Core Concepts: Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
-* [Settings and Fields: Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)
+* [Set Up an Enterprise Customer with Branch Locations](./02-set-up-an-enterprise-customer-with-branch-locations.md)
+* [Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
+* [Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

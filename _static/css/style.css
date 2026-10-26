@@ -1561,7 +1561,7 @@ a:hover {
    ========================================================= */
 .mermaid-container {
     margin: 1.5rem auto !important;
-    max-width: 620px;
+    max-width: min(100%, 1020px);
     width: fit-content;
     min-width: min(100%, 320px);
     background: #ffffff;

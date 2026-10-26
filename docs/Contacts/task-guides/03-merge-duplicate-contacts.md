@@ -1,4 +1,4 @@
-# Task Guide: Merge Duplicate Contacts
+# Merge Duplicate Contacts
 
 Identify and consolidate duplicate contact records into a single master profile, automatically reassigning all sales orders, invoices, stock moves, and communication logs.
 
@@ -58,7 +58,7 @@ When CURQ executes the consolidation:
 
 ## Related Documentation
 
-* [Task Guide: Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
-* [Task Guide: Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
-* [Task Guide: Create and Manage Contacts](./01-create-and-manage-contacts.md)
-* [Core Concepts: Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)
+* [Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
+* [Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
+* [Create and Manage Contacts](./01-create-and-manage-contacts.md)
+* [Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)

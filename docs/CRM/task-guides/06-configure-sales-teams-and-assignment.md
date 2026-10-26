@@ -1,4 +1,4 @@
-# Task Guide: Configure Sales Teams and Rule-Based Lead Assignment
+# Configure Sales Teams and Rule-Based Lead Assignment
 
 Organize sales teams, set monthly invoicing targets, configure territorial assignment domains, and automate lead allocation across team members.
 
@@ -30,7 +30,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 5. CURQ auto-saves updates, or click the cloud icon in the top header to save immediately.
 
 > [!NOTE]
-> For parameter specifications and capacity definitions, see [Settings and Fields: Sales Team Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#sales-team-parameters).
+> For parameter specifications and capacity definitions, see [Sales Team Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#sales-team-parameters).
 
 ---
 
@@ -65,7 +65,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 5. Click **Save** in the top action bar.
 
 > [!NOTE]
-> For cron interval options and execution descriptions, see [Settings and Fields: Rule-Based Assignment Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#rule-based-assignment-parameters).
+> For cron interval options and execution descriptions, see [Rule-Based Assignment Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#rule-based-assignment-parameters).
 
 ---
 
@@ -113,7 +113,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 ---
 
 ### Related Documentation
-* [Settings and Fields: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
-* [Core Concepts: Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
-* [Task Guide: Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)
-* [Task Guide: Convert Leads into Pipeline Opportunities](./02-convert-leads-to-opportunities.md)
+* [Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
+* [Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
+* [Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)
+* [Convert Leads into Pipeline Opportunities](./02-convert-leads-to-opportunities.md)

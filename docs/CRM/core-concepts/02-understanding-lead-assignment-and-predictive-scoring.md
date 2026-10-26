@@ -1,4 +1,4 @@
-# Core Concepts: Understanding Lead Assignment and Predictive Scoring
+# Understanding Lead Assignment and Predictive Scoring
 
 This document explains the automated routing logic, business rules, and statistical classification principles underlying rule-based lead allocation and predictive win scoring in CURQ.
 
@@ -85,7 +85,7 @@ To maintain scoring accuracy and data integrity, predictive lead scoring enforce
 ---
 
 ### Related Documentation
-* [Core Concepts: Understanding Leads vs. Opportunities in CURQ](./01-understanding-leads-vs-opportunities.md)
-* [Task Guide: Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
-* [Task Guide: Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)
-* [Settings and Fields: Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
+* [Understanding Leads vs. Opportunities in CURQ](./01-understanding-leads-vs-opportunities.md)
+* [Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
+* [Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)
+* [Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
