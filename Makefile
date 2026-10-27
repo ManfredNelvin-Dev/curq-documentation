@@ -20,9 +20,11 @@ help:
 
 # Build multi-version documentation using sphinx-multiversion
 multiversion:
+	@echo "[*] Fetching latest remote tags..."
+	@git fetch --tags --quiet origin 2>/dev/null || echo "[!] Notice: Remote tags fetch skipped (offline or remote unreachable)."
 	$(SPHINXMULTIVERSION) "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
-	@if [ -d "$(BUILDDIR)/html/main" ] && [ ! -d "$(BUILDDIR)/html/$(DEFAULT_VERSION)" ]; then \
-		cp -r "$(BUILDDIR)/html/main" "$(BUILDDIR)/html/$(DEFAULT_VERSION)"; \
+	@if [ -d "$(BUILDDIR)/html/main" ]; then \
+		rm -rf "$(BUILDDIR)/html/$(DEFAULT_VERSION)" && cp -r "$(BUILDDIR)/html/main" "$(BUILDDIR)/html/$(DEFAULT_VERSION)"; \
 	fi
 	@echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=$(DEFAULT_VERSION)/index.html"><script>window.location.replace("$(DEFAULT_VERSION)/index.html" + window.location.search + window.location.hash);</script></head><body><p>Redirecting to <a href="$(DEFAULT_VERSION)/index.html">$(DEFAULT_VERSION)</a>...</p></body></html>' > $(BUILDDIR)/html/index.html
 	@echo "[✓] Multi-version build complete. Root redirect -> $(DEFAULT_VERSION)/index.html"

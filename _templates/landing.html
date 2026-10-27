@@ -5,14 +5,18 @@
             <span>docs</span>
         </a>
         <div class="nav-selectors">
-            <select class="version-selector" onchange="window.location.href=this.value" aria-label="Version">
+            <select class="version-selector" id="landing-version-selector" onchange="onSidebarVersionChange(this)" aria-label="Version">
                 {% if versions %}
                 {% for item in versions %}
-                {% set display_v = '18.0' if item.name == 'main' else item.name %}
-                <option value="{{ item.url }}" {% if (current_version and current_version.name == item.name) or (item.name == 'main' and (not current_version or current_version.name == 'main' or current_version.name == '18.0')) %}selected{% endif %}>{{ display_v }}</option>
+                {% set display_v = (version or 'latest') if item.name == 'main' else item.name %}
+                <option value="{{ item.url }}" data-version="{{ display_v }}" {% if (current_version and current_version.name == item.name) or (item.name == 'main' and (not current_version or current_version.name == 'main')) %}selected{% endif %}>{{ display_v }}</option>
+                {% endfor %}
+                {% elif available_doc_versions %}
+                {% for v in available_doc_versions %}
+                <option value="/{{ v }}/index.html" data-version="{{ v }}" {% if v == ((current_version.name if current_version is defined and current_version.name is defined else current_version) or version) %}selected{% endif %}>{{ v }}</option>
                 {% endfor %}
                 {% else %}
-                <option value="" selected>{{ current_version.name if current_version is defined and current_version.name is defined else (current_version or '18.0') }}</option>
+                <option value="{{ version }}" data-version="{{ version }}" selected>{{ version }}</option>
                 {% endif %}
             </select>
             <select class="language-selector" onchange="switchLanguage(this.value)" aria-label="Language">

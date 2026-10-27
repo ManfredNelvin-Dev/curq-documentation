@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="whats-new-page-wrapper">
+    <!-- Header -->
+    <div class="whats-new-header">
+        <div class="whats-new-header-badge">
+            <span class="pulsing-dot"></span>
+            <span>{{ _('Release Notes') }}</span>
+        </div>
+
+        <h1 class="whats-new-main-title">
+            {{ _("What's New in CURQ") }} <span id="whats-new-version-heading-badge" class="version-heading-badge">v{{ active_release_version }}</span>
+        </h1>
+    </div>
+
+    <!-- Version Release Notes Panels -->
+    {% for rel in whats_new_releases %}
+    {% set is_active_rel = (rel.version == active_release_version) %}
+    <div class="version-release-panel{% if is_active_rel %} active{% endif %}"
+        id="panel-version-{{ rel.version|replace('.', '_') }}"
+        data-version="{{ rel.version }}">
+
+        <div class="release-notes-container">
+            <div class="release-notes-meta">
+                <h2 class="release-version-heading">{{ rel.title }}</h2>
+                <div class="release-version-submeta">
+                    <span class="release-notes-date">
+                        <i class="fa-regular fa-calendar"></i> {{ rel.date }}
+                    </span>
+                    {% if rel.status == 'Latest' %}
+                    <span class="release-status-pill latest">{{ _('Latest') }}</span>
+                    {% elif rel.status == 'Upcoming' %}
+                    <span class="release-status-pill upcoming">{{ _('Upcoming') }}</span>
+                    {% elif rel.status == 'Initial' %}
+                    <span class="release-status-pill initial">{{ _('Initial') }}</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            {% if rel.entries|length > 0 %}
+            <ul class="release-notes-list">
+                {% for item in rel.entries %}
+                <li class="release-note-item">
+                    {{ item.title }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <div class="release-notes-empty">
+                <p>{{ _('No release notes published yet for this version.') }}</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+function showReleaseForVersion(version) {
+    if (!version) return;
+    const cleanVer = String(version).trim().replace(/^v/, '');
+    const safeVer = cleanVer.replace(/\./g, '_');
+
+    const panels = document.querySelectorAll('.version-release-panel');
+    let matchedPanel = null;
+    panels.forEach(p => {
+        const pVer = p.getAttribute('data-version');
+        if (pVer === cleanVer || p.id === 'panel-version-' + safeVer) {
+            p.classList.add('active');
+            p.style.display = 'block';
+            matchedPanel = p;
+        } else {
+            p.classList.remove('active');
+            p.style.display = 'none';
+        }
+    });
+
+    if (!matchedPanel && panels.length > 0) {
+        panels[0].classList.add('active');
+        panels[0].style.display = 'block';
+    }
+
+    // Update heading badge
+    const headingBadge = document.getElementById('whats-new-version-heading-badge');
+    if (headingBadge) {
+        headingBadge.textContent = 'v' + cleanVer;
+    }
+
+    // Sync sidebar dropdown
+    const sidebarSelect = document.getElementById('sidebar-version-selector');
+    if (sidebarSelect) {
+        for (let i = 0; i < sidebarSelect.options.length; i++) {
+            const opt = sidebarSelect.options[i];
+            const optVer = opt.getAttribute('data-version') || opt.value;
+            if (optVer === cleanVer) {
+                sidebarSelect.selectedIndex = i;
+                break;
+            }
+        }
+    }
+
+    // Save to localStorage
+    localStorage.setItem('curq_doc_version', cleanVer);
+
+    // Update URL query string without reloading
+    if (window.history && window.history.replaceState) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('v', cleanVer);
+        window.history.replaceState(null, '', url.toString());
+    }
+}
+
+function initWhatsNewVersion() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let targetVer = urlParams.get('v');
+    if (!targetVer && window.location.hash) {
+        targetVer = window.location.hash.replace(/^#v?/, '');
+    }
+    if (!targetVer) {
+        targetVer = localStorage.getItem('curq_doc_version');
+    }
+    if (!targetVer) {
+        targetVer = '{{ active_release_version }}';
+    }
+    if (!targetVer) {
+        const firstPanel = document.querySelector('.version-release-panel');
+        if (firstPanel) {
+            targetVer = firstPanel.getAttribute('data-version');
+        }
+    }
+    showReleaseForVersion(targetVer);
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWhatsNewVersion);
+} else {
+    initWhatsNewVersion();
+}
+window.addEventListener('popstate', initWhatsNewVersion);
+</script>
+{% endblock %}

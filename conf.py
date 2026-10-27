@@ -1,11 +1,15 @@
-import json
 import os
-import re
-import subprocess
 import sys
-from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List
+
+# Add project root and local extensions to sys.path
+sys.path.insert(0, os.path.abspath("."))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from _ext import (
+    build_modules_context,
+    setup as _ext_setup,
+)
 
 # ---------------------------------------------------------
 # Project information
@@ -27,6 +31,7 @@ extensions = [
     "sphinx_multiversion",
     "sphinx.ext.mathjax",
     "sphinxcontrib.mermaid",
+    "sphinx_design",
 ]
 
 # Allow ```mermaid code blocks to be parsed directly as mermaid directives
@@ -119,212 +124,8 @@ source_suffix = {
 }
 
 # ---------------------------------------------------------
-# Module registry
+# HTML Context & Standalone Pages
 # ---------------------------------------------------------
-
-sys.path.insert(0, os.path.abspath("."))
-
-from module_registry import MODULE_REGISTRY
-
-
-# ---------------------------------------------------------
-# Sidebar labels
-# ---------------------------------------------------------
-
-SUBMENU_LABELS: Dict[str, str] = {
-    "00-overview": "Overview",
-    "01-manual": "Manual",
-    "02-procedures": "Procedures",
-    "03-articles": "Articles",
-    "04-faq": "FAQ",
-}
-
-
-# ---------------------------------------------------------
-# Build module documentation context
-# ---------------------------------------------------------
-
-def build_modules_context(sourcedir: str | None = None) -> List[Dict[str, Any]]:
-    """
-    Scan the docs/ directory and build module metadata
-    dictionaries for use in Sphinx HTML templates.
-    """
-
-    if sourcedir is None:
-        base_dir = Path(__file__).resolve().parent
-    else:
-        base_dir = Path(sourcedir).resolve()
-
-    doc_root = base_dir / "docs"
-    modules = []
-
-    # Match a leading number followed by a hyphen or space.
-    leading_number_re = re.compile(r"^\d+[-\s]+")
-
-    def get_category_order(cat_name: str) -> int:
-        """Return the display order for documentation categories."""
-
-        cat_lower = cat_name.lower()
-
-        if not cat_lower or "overview" in cat_lower:
-            return 0
-
-        if "getting started" in cat_lower or "tutorial" in cat_lower or "manual" in cat_lower:
-            return 1
-
-        if "task guide" in cat_lower or "how" in cat_lower or "procedure" in cat_lower or "configuration" in cat_lower:
-            return 2
-
-        if "settings" in cat_lower or "field" in cat_lower or "explanation" in cat_lower or "article" in cat_lower:
-            return 3
-
-        if "core concept" in cat_lower or "reference" in cat_lower:
-            return 4
-
-        if "faq" in cat_lower:
-            return 5
-
-        return 99
-
-    for folder_name, meta in MODULE_REGISTRY.items():
-        folder_path = doc_root / folder_name
-        if not folder_path.is_dir():
-            alt_path = doc_root / meta.get("display_name", "")
-            if alt_path.is_dir():
-                folder_path = alt_path
-                folder_name = meta["display_name"]
-            else:
-                alt_nospaces = doc_root / folder_name.replace(" ", "")
-                if alt_nospaces.is_dir():
-                    folder_path = alt_nospaces
-                    folder_name = folder_name.replace(" ", "")
-
-        pages = []
-
-        if folder_path.is_dir():
-
-            def get_sort_key(md_file: Path) -> tuple:
-                """Sort pages by category and filename."""
-
-                folder_rel = str(
-                    md_file.parent.relative_to(folder_path)
-                )
-
-                if folder_rel == ".":
-                    category_name = ""
-                    order = (
-                        5
-                        if "faq" in md_file.stem.lower()
-                        else 0
-                    )
-                else:
-                    category_name = (
-                        folder_rel
-                        .replace("-", " ")
-                        .replace("_", " ")
-                    )
-
-                    category_name = (
-                        leading_number_re.sub(
-                            "", category_name
-                        ).strip().title()
-                    )
-
-                    if category_name.lower() == "settings and fields":
-                        category_name = "Settings and Fields"
-                    elif category_name.lower() == "faq":
-                        category_name = "FAQ"
-
-                    order = get_category_order(category_name)
-
-                return order, category_name.lower(), md_file.name.lower()
-
-            md_files = sorted(
-                folder_path.rglob("*.md"),
-                key=get_sort_key,
-            )
-
-            for md_file in md_files:
-                basename = md_file.stem
-
-                pretty_name = (
-                    basename
-                    .replace("-", " ")
-                    .replace("_", " ")
-                )
-
-                pretty_name = (
-                    leading_number_re.sub(
-                        "", pretty_name
-                    ).strip()
-                )
-
-                pretty_name = " ".join(
-                    w if w.isupper() else w.capitalize()
-                    for w in pretty_name.split()
-                )
-
-                if pretty_name.lower() == "faq":
-                    pretty_name = "FAQ"
-
-                label = SUBMENU_LABELS.get(
-                    basename, pretty_name
-                )
-
-                rel_path = md_file.relative_to(base_dir)
-
-                page_path = rel_path.with_suffix("").as_posix()
-
-                folder_rel = str(
-                    md_file.parent.relative_to(folder_path)
-                )
-
-                if folder_rel == ".":
-                    category = ""
-                else:
-                    category = (
-                        folder_rel
-                        .replace("-", " ")
-                        .replace("_", " ")
-                    )
-
-                    category = (
-                        leading_number_re.sub(
-                            "", category
-                        ).strip().title()
-                    )
-
-                    if category.lower() == "settings and fields":
-                        category = "Settings and Fields"
-                    elif category.lower() == "faq":
-                        category = "FAQ"
-
-                pages.append(
-                    {
-                        "label": label,
-                        "page_path": page_path,
-                        "category": category,
-                    }
-                )
-
-        modules.append(
-            {
-                "folder": folder_name,
-                "display_name": meta["display_name"],
-                "icon": meta["icon"],
-                "description": meta["description"],
-                "sidebar_key": meta["sidebar_key"],
-                "pages": pages,
-                "has_docs": bool(pages),
-            }
-        )
-
-    modules.sort(
-        key=lambda module: module["display_name"].lower()
-    )
-
-    return modules
-
 
 html_context = {
     "modules": build_modules_context(),
@@ -337,90 +138,15 @@ html_context = {
     "default_language": "en",
 }
 
-# ---------------------------------------------------------
-# Additional standalone HTML templates
-# ---------------------------------------------------------
-
 html_additional_pages = {
     "docs/support": "support.html",
+    "docs/whats-new": "whats_new.html",
 }
 
-
-_GIT_FILE_DATES_CACHE: Dict[str, Dict[str, str]] = {}
-
-
-def get_git_file_dates_for_ref(ref: str = "HEAD") -> Dict[str, str]:
-    """
-    Extract and cache the exact last commit date for all repository files
-    for a specific Git reference (e.g. 'main', '0.1', '0.2', or 'HEAD').
-    Always runs in the true repository directory where conf.py is located.
-    """
-    global _GIT_FILE_DATES_CACHE
-    if ref in _GIT_FILE_DATES_CACHE:
-        return _GIT_FILE_DATES_CACHE[ref]
-
-    repo_root = Path(__file__).resolve().parent
-    dates: Dict[str, str] = {}
-    try:
-        cmd = [
-            "git",
-            "log",
-            ref,
-            "--name-only",
-            "--format=DATE:%cd",
-            "--date=format:%B %d, %Y",
-        ]
-        res = subprocess.check_output(
-            cmd,
-            cwd=repo_root,
-            stderr=subprocess.DEVNULL,
-            text=True,
-        )
-        current_date = None
-        for line in res.splitlines():
-            line = line.strip()
-            if line.startswith("DATE:"):
-                current_date = line[5:]
-            elif line and current_date:
-                if line not in dates:
-                    dates[line] = current_date
-    except Exception:
-        pass
-
-    _GIT_FILE_DATES_CACHE[ref] = dates
-    return dates
-
+# ---------------------------------------------------------
+# Sphinx Setup Hook
+# ---------------------------------------------------------
 
 def setup(app):
-    def on_html_page_context(app, pagename, templatename, context, doctree):
-        context["modules"] = build_modules_context(app.srcdir)
-
-        # In sphinx-multiversion, smv_current_version is set ('main', '0.1', '0.2')
-        # In single-version builds, fallback to 'HEAD'
-        target_ref = getattr(app.config, "smv_current_version", None) or "HEAD"
-        git_dates = get_git_file_dates_for_ref(target_ref)
-
-        page_date = None
-        if hasattr(app.env, "doc2path"):
-            try:
-                doc_path = Path(app.env.doc2path(pagename)).resolve()
-                srcdir = Path(app.srcdir).resolve()
-                rel_path = doc_path.relative_to(srcdir).as_posix()
-                page_date = git_dates.get(rel_path)
-            except Exception:
-                pass
-
-        # If not found in git (e.g. new uncommitted file), fall back to file mtime
-        if not page_date and hasattr(app.env, "doc2path"):
-            try:
-                doc_path = Path(app.env.doc2path(pagename)).resolve()
-                if doc_path.exists():
-                    mtime = doc_path.stat().st_mtime
-                    page_date = datetime.fromtimestamp(mtime).strftime("%B %d, %Y")
-            except Exception:
-                pass
-
-        context["page_last_updated"] = page_date
-        context["last_updated"] = page_date
-
-    app.connect("html-page-context", on_html_page_context)
+    """Delegate extension setup and context hooks to _ext package."""
+    return _ext_setup(app)

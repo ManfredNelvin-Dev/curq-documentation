@@ -75,6 +75,9 @@
                 {% elif pagename == 'docs/faq' or pagename == 'faq' %}
                 <span class="separator">/</span>
                 <a href="javascript:void(0)" class="current-section">{{ _('FAQ') }}</a>
+                {% elif pagename == 'docs/whats-new' or pagename == 'whats-new' %}
+                <span class="separator">/</span>
+                <a href="javascript:void(0)" class="current-section">{{ _("What's New") }}</a>
                 {% elif pagename == 'docs/support' or pagename == 'support' %}
                 <span class="separator">/</span>
                 <a href="javascript:void(0)" class="current-section">{{ _('Contact & Support') }}</a>
@@ -119,7 +122,7 @@
             </nav>
 
             <div
-                class="content-wrapper{% if pagename == 'docs/support' or pagename == 'support' %} support-content-layout{% endif %}">
+                class="content-wrapper{% if pagename in ['docs/support', 'support', 'docs/whats-new', 'whats-new'] %} support-content-layout full-width-layout{% endif %}">
                 <div class="sphinx-content">
                     {% block body %}{{ body|safe }}{% endblock %}
 
@@ -160,7 +163,7 @@
                 </div>
 
                 {% block right_sidebar %}
-                {% if pagename != 'docs/support' and pagename != 'support' %}
+                {% if pagename not in ['docs/support', 'support', 'docs/whats-new', 'whats-new'] %}
                 {% set is_standalone = is_standalone_page if is_standalone_page is defined else (pagename.endswith('00-overview') or pagename.endswith('/overview') or pagename.lower().endswith('faq') or pagename.lower() == 'docs/faq' or pagename == 'faq') %}
                 {% if toc or not is_standalone %}
                 <aside class="right-sidebar">

@@ -1430,6 +1430,225 @@ a:hover {
 }
 
 /* ==========================================================================
+   What's New / Release Notes Page Styles
+   ========================================================================== */
+
+.whats-new-page-wrapper {
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.whats-new-header {
+    margin-bottom: 28px;
+    border-bottom: 2px solid #eaecf0;
+    padding-bottom: 24px;
+}
+
+.whats-new-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fffdf5;
+    border: 1px solid #ffd875;
+    border-radius: 9999px;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #16345f;
+    margin-bottom: 14px;
+}
+
+.pulsing-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ffbf3d;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(255, 191, 61, 0.4);
+    animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+    0% { box-shadow: 0 0 0 0 rgba(255, 191, 61, 0.7); }
+    70% { box-shadow: 0 0 0 6px rgba(255, 191, 61, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 191, 61, 0); }
+}
+
+.whats-new-main-title {
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    color: #16345f !important;
+    margin: 0 !important;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.whats-new-main-title::before {
+    display: none !important;
+    content: none !important;
+}
+
+.version-heading-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #fff6d6;
+    border: 1px solid #ffbf3d;
+    color: #16345f;
+    padding: 3px 12px;
+    border-radius: 9999px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* Version Panels */
+.version-release-panel {
+    display: none;
+    animation: fadeInPanel 0.25s ease;
+}
+
+.version-release-panel.active {
+    display: block;
+}
+
+@keyframes fadeInPanel {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Clean Release Notes Layout */
+.release-notes-container {
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.release-notes-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #eaecf0;
+    flex-wrap: wrap;
+}
+
+.release-version-heading {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #16345f !important;
+    margin: 0 !important;
+}
+
+.release-version-heading::before {
+    display: none !important;
+    content: none !important;
+}
+
+.release-version-submeta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.release-notes-date {
+    font-size: 14px;
+    color: #475467;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.release-status-pill {
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.release-status-pill.latest {
+    background: #16345f;
+    color: #ffffff;
+}
+
+.release-status-pill.upcoming {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+.release-status-pill.initial {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.release-notes-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 0 24px 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.release-note-item {
+    position: relative;
+    padding-left: 26px;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #1e293b;
+    margin: 0;
+}
+
+.release-note-item::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 9px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ffbf3d;
+    box-shadow: 0 0 0 3px rgba(255, 191, 61, 0.25);
+}
+
+.release-notes-empty {
+    font-size: 15px;
+    color: #64748b;
+    padding: 24px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px dashed #cbd5e1;
+    margin: 16px 0 24px 0;
+}
+
+.release-notes-empty p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .release-notes-container {
+        padding: 20px;
+    }
+
+    .release-notes-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ==========================================================================
    Image Zoom / Lightbox Popup Modal (Border & Border-Radius Free)
    ========================================================================== */
 

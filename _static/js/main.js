@@ -60,6 +60,82 @@ function switchVersion(targetUrl) {
     }
 }
 
+function onSidebarVersionChange(selectEl) {
+    if (!selectEl) return;
+    const selectedOption = selectEl.options[selectEl.selectedIndex];
+    const targetUrl = selectedOption.value;
+    const ver = selectedOption.getAttribute('data-version') || selectEl.value;
+
+    if (ver) {
+        localStorage.setItem('curq_doc_version', ver);
+    }
+
+    // 1. If targetUrl points to a version page, navigate to it
+    if (targetUrl && (targetUrl.includes('.html') || targetUrl.includes('/'))) {
+        window.location.href = targetUrl;
+        return;
+    }
+
+    // 2. If targetUrl is a version identifier
+    if (ver) {
+        if (typeof showReleaseForVersion === 'function') {
+            showReleaseForVersion(ver);
+            return;
+        }
+        window.location.href = '/' + encodeURIComponent(ver) + '/index.html';
+    }
+}
+
+function onSidebarWhatsNewClick(event, linkEl) {
+    const sidebarSelect = document.getElementById('sidebar-version-selector');
+    let ver = null;
+    if (sidebarSelect && sidebarSelect.selectedIndex >= 0) {
+        const opt = sidebarSelect.options[sidebarSelect.selectedIndex];
+        ver = opt.getAttribute('data-version') || sidebarSelect.value;
+    }
+    if (!ver) {
+        ver = localStorage.getItem('curq_doc_version');
+    }
+    if (ver) {
+        localStorage.setItem('curq_doc_version', ver);
+        if (typeof showReleaseForVersion === 'function') {
+            event.preventDefault();
+            showReleaseForVersion(ver);
+            return;
+        }
+        const baseHref = linkEl.getAttribute('href').split('?')[0].split('#')[0];
+        linkEl.href = baseHref + '?v=' + encodeURIComponent(ver);
+    }
+}
+
+function syncSidebarVersionSelector() {
+    // Only synchronize version selector client-side on What's New page
+    // On documentation pages, Sphinx already sets the selected option for that version
+    if (typeof showReleaseForVersion !== 'function') {
+        return;
+    }
+    const savedVer = localStorage.getItem('curq_doc_version');
+    if (!savedVer) return;
+
+    const selectors = document.querySelectorAll('.version-selector');
+    selectors.forEach(sel => {
+        for (let i = 0; i < sel.options.length; i++) {
+            const opt = sel.options[i];
+            const optVer = opt.getAttribute('data-version') || opt.value;
+            if (optVer === savedVer) {
+                sel.selectedIndex = i;
+                break;
+            }
+        }
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', syncSidebarVersionSelector);
+} else {
+    syncSidebarVersionSelector();
+}
+
 function cleanHeadingNumbers() {
     const bodyHeadings = document.querySelectorAll('.sphinx-content h2, .sphinx-content h3');
     bodyHeadings.forEach(h => {
