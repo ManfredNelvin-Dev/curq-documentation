@@ -1,33 +1,17 @@
-# Chat and Communication FAQ
+# Discuss FAQ
 
-Frequently asked questions about channels, direct messages, chatter notes, and notifications in CURQ 18.
+## 1. Can external customers see internal notes logged in the document chatter?
+No. Notes logged using the **Log note** tab are strictly confidential and visible exclusively to internal system users. External customers, suppliers, and portal users only receive messages sent through the **Send message** tab.
 
----
+## 2. What is the difference between a public channel and a private channel?
+Public channels are open to all internal employees and can be freely discovered and joined from the channel search directory. Private channels are hidden from search and require an explicit invitation from an existing member or an automated group subscription rule.
 
-### 1. Can customers see internal notes logged in the document chatter?
+## 3. What happens when I tag a colleague with @name?
+CURQ immediately delivers a high-priority notification to that colleague's **Inbox** containing a direct link to the specific message or business record, regardless of whether they were previously following that thread.
 
-No. Notes logged using **Log note** are strictly internal and visible only to your coworkers. Customers only see messages sent through **Send message**.
+## 4. How do I stop receiving external email alerts and keep all notifications inside CURQ?
+Click your user avatar at the top right, select **Preferences**, and navigate to the **Preferences** tab. Change the **Notification** field from **Handle by Emails** to **Handle in Odoo**. All notifications will route directly to your platform **Inbox**, keeping your external email inbox clean.
 
----
+## 5. Can I use canned responses across sales quotations and invoice chatters?
+Yes. Canned responses work in every composer throughout CURQ. Type a colon (`:`) followed by the shortcut keyword (e.g., `:hello` or `:quote-followup`) in any channel, direct message, or document chatter, and press **Enter** to insert the pre-written substitution text.
 
-### 2. What is the difference between a public channel and a private channel?
-
-Public channels can be searched and joined by any internal employee. Private channels are hidden and require an invitation from an existing member.
-
----
-
-### 3. What happens when I tag a colleague with @name ?
-
-CURQ sends an immediate notification to that colleague's **Inbox** with a direct link to the conversation or document, even if they were not already following it.
-
----
-
-### 4. Can I stop receiving email alerts and keep notifications inside CURQ?
-
-Yes. Click your avatar at the top right, open **Preferences**, and change **Notification** to **Handle in Odoo**. All updates will stay in your CURQ Inbox instead of filling your personal email.
-
----
-
-### 5. Can I insert pre-written responses with a keyboard shortcut?
-
-Yes. Type a colon `:` followed by the shortcut keyword *(such as `:hello` or `:bank`)* in any message box, then press Enter to insert the complete pre-written response.

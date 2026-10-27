@@ -164,7 +164,9 @@
 
                 {% block right_sidebar %}
                 {% if pagename not in ['docs/support', 'support', 'docs/whats-new', 'whats-new'] %}
-                {% set is_standalone = is_standalone_page if is_standalone_page is defined else (pagename.endswith('00-overview') or pagename.endswith('/overview') or pagename.lower().endswith('faq') or pagename.lower() == 'docs/faq' or pagename == 'faq') %}
+                {% set is_standalone = is_standalone_page if is_standalone_page is defined else
+                (pagename.endswith('00-overview') or pagename.endswith('/overview') or pagename.lower().endswith('faq')
+                or pagename.lower() == 'docs/faq' or pagename == 'faq') %}
                 {% if toc or not is_standalone %}
                 <aside class="right-sidebar">
                     {% block right_sidebar_toc %}
@@ -178,7 +180,8 @@
                     {% endif %}
                     {% endblock %}
 
-                    {% set is_standalone = ('overview' in pagename.lower() or 'faq' in pagename.lower() or 'popular_articles' in pagename or 'landing_faq' in pagename) %}
+                    {% set is_standalone = ('overview' in pagename.lower() or 'faq' in pagename.lower() or
+                    'popular_articles' in pagename or 'landing_faq' in pagename) %}
                     {% if not is_standalone %}
                     <div class="right-sidebar-section">
                         <div class="right-sidebar-heading">{{ _('FURTHER WITH') }}</div>
