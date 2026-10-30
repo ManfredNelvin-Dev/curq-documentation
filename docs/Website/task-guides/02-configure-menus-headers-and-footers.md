@@ -1,10 +1,12 @@
-# Menu & Navigation
+# Configure Menus, Headers, and Footers
+
+This guide details how to build and organize navigation menus, dropdown submenus, mega menus, header branding, and footer layouts in CURQ 18 Website.
 
 Organize website structure, build hierarchical dropdowns, design responsive mega menus, and customize header and footer navigation layouts in CURQ 18.
 
 ---
 
-### 1. Accessing the Menu Editor
+## Task 1: Accessing the Menu Editor
 
 CURQ 18 provides visual menu management directly from the frontend website builder as well as through contextual inline editing popovers:
 
@@ -15,11 +17,11 @@ CURQ 18 provides visual menu management directly from the frontend website build
 3. Access the Menu Editor using one of the following methods:
    * **Method A (Top Administrative Bar)**: Click the **Site** menu in the top bar, then select **Menu Editor**.
 
-   ![CURQ Website top control bar with Site menu open highlighting the Menu Editor option](images/website-menu-editor-access-site-menu.png)
+   ![CURQ Website top control bar with Site menu open highlighting the Menu Editor option](../media/026.png)
 
    * **Method B (Inline Navbar Popover)**: In edit mode *(click the blue **Edit** button in the top bar)*, click directly on any navigation link in the header navbar. A floating popover appears showing the link destination with action buttons: click the **Edit Menu** icon *(sitemap hierarchy icon)* to launch the menu tree editor.
 
-   ![Header navbar in edit mode with link popover showing arrow pointing to the Edit Menu button](images/website-menu-editor-inline-popover-access.png)
+   ![Header navbar in edit mode with link popover showing arrow pointing to the Edit Menu button](../media/027.png)
 
 
 4. The **Edit Menu** modal opens, displaying your website's active navigation tree in an interactive sortable list.
@@ -27,17 +29,17 @@ CURQ 18 provides visual menu management directly from the frontend website build
 > [!NOTE]
 > Navigation items such as **Shop** (`/shop`) and **Courses** (`/slides`) are automatically added to this menu hierarchy when their respective apps (**eCommerce** and **eLearning**) are installed. You can rearrange their display sequence or rename them through the Edit Menu modal just like standard custom links.
 
-   ![Edit Menu modal dialog showing the list of existing navigation links, drag handles, edit icons, and add buttons](images/website-menu-editor-modal-overview.png)
+   ![Edit Menu modal dialog showing the list of existing navigation links, drag handles, edit icons, and add buttons](../media/028.png)
 
 ---
 
-### 2. Adding and Editing Menu Items
+## Task 2: Adding and Editing Menu Items
 
 Standard menu items link visitors directly to internal pages, page sections (anchors), external web addresses, or email mailto links:
 
 1. In the **Edit Menu** modal, locate the action buttons at the bottom: click **+ Add Menu Item** to create a standard navigation link *(or click **+ Add Mega Menu Item** for rich multi-column panels)*.
 
-   ![Edit Menu dialog highlighting the Add Menu Item and Add Mega Menu Item links at the bottom](images/website-menu-editor-add-buttons.png)
+   ![Edit Menu dialog highlighting the Add Menu Item and Add Mega Menu Item links at the bottom](../media/029.png)
 
 2. The **Add a menu item** dialog opens with two configuration fields:
    * **Name**: Enter the text label displayed in the website navigation bar *(such as `T&C`, `Services`, or `Contact Us`)*.
@@ -48,22 +50,22 @@ Standard menu items link visitors directly to internal pages, page sections (anc
      * **Email Links**: Type an email address *(such as `info@company.com`)*. CURQ automatically prefixes the destination with `mailto:` upon saving.
 3. Click **OK** to confirm the menu item.
 
-   ![Add a menu item modal showing Name input, Url or Email field with autocomplete suggestions highlighting terms and Ok button](images/website-menu-editor-add-item-modal.png)
+   ![Add a menu item modal showing Name input, Url or Email field with autocomplete suggestions highlighting terms and Ok button](../media/030.png)
 
 4. The newly created menu item appears immediately at the bottom of the navigation tree in the **Edit Menu** list.
 
-   ![Edit Menu dialog showing the newly created menu item highlighted at the bottom of the list](images/website-menu-editor-item-added.png)
+   ![Edit Menu dialog showing the newly created menu item highlighted at the bottom of the list](../media/031.png)
 
 5. To edit an existing menu item at any time:
    * Click the pencil icon *(**Edit Menu Item**)* next to the item in the list.
    * Update the label name or destination URL in the dialog, then click **OK**.
 6. Click **Save** in the bottom-left corner of the **Edit Menu** dialog to apply your changes to the live website. The new navigation item appears immediately in your website's header navbar.
 
-   ![Website frontend navbar showing the newly added menu link published live](images/website-navbar-new-item-added.png)
+   ![Website frontend navbar showing the newly added menu link published live](../media/032.png)
 
 ---
 
-### 3. Organizing Hierarchy and Dropdown Submenus
+## Task 3: Organizing Hierarchy and Dropdown Submenus
 
 Group related navigation items into clean dropdown submenus using intuitive drag-and-drop hierarchy controls:
 
@@ -72,14 +74,14 @@ Group related navigation items into clean dropdown submenus using intuitive drag
    * Each menu item features a drag handle *(three horizontal bars icon)* along the left column.
    * Click and hold the drag handle on the left side of the child menu item.
 
-   ![Edit Menu modal highlighting the drag handles on the left column and mega menu badges](images/website-menu-editor-drag-handles-mega-badge.png)
+   ![Edit Menu modal highlighting the drag handles on the left column and mega menu badges](../media/033.png)
 
 3. Drag the item vertically below the target parent menu item, then shift the cursor slightly to the **right**.
 4. A visual indentation indicator and width shift appear:
    * Releasing the mouse button indents the item under the parent menu item *(such as nesting `Contact us`, `Info`, and `T&C` under `Support`)*.
    * The indented items now function as submenu entries inside that parent's dropdown menu on the website navbar.
 
-   ![Edit Menu modal showing nested submenu items indented under Support with red indicator arrows](images/website-menu-editor-nested-dropdown-structure.png)
+   ![Edit Menu modal showing nested submenu items indented under Support with red indicator arrows](../media/034.png)
 
 5. Review hierarchy constraints and indicator badges:
    * **Two-Level Maximum Depth**: CURQ navigation menus support up to two hierarchy levels. You can nest submenu items under a primary root menu item, but you cannot nest a third level inside a submenu.
@@ -90,35 +92,35 @@ Group related navigation items into clean dropdown submenus using intuitive drag
    * *Important*: Deleting a parent menu item automatically removes all nested child submenu items beneath it.
 7. Click **Save** to write the updated navigation hierarchy to the database.
 
-   ![Frontend website navigation bar displaying the expanded Support dropdown menu containing Contact us, Info, and T&C](images/website-navbar-dropdown-preview.png)
+   ![Frontend website navigation bar displaying the expanded Support dropdown menu containing Contact us, Info, and T&C](../media/035.png)
 
 ---
 
-### 4. Creating and Styling Mega Menus
+## Task 4: Creating and Styling Mega Menus
 
 Mega menus replace narrow vertical dropdowns with expansive, multi-column navigation panels. They allow you to showcase categorized links, promotional banners, service thumbnails, and icons across the full viewport width:
 
 1. In the **Edit Menu** modal, click the **+ Add Mega Menu Item** link at the bottom.
 
-   ![Edit Menu dialog with arrow highlighting the Add Mega Menu Item link](images/website-menu-editor-add-mega-menu-link.png)
+   ![Edit Menu dialog with arrow highlighting the Add Mega Menu Item link](../media/036.png)
 
 2. In the dialog prompt:
    * Enter the **Name** for the mega menu category *(such as `Sitemap`, `Products`, or `Solutions`)*.
    * Notice that the URL field is automatically hidden and disabled because clicking a mega menu item toggles the interactive dropdown canvas panel rather than opening a single link.
 3. Click **OK**.
 
-   ![Add a menu item modal for Mega Menu showing Name input field without URL requirement](images/website-menu-editor-mega-menu-title-dialog.png)
+   ![Add a menu item modal for Mega Menu showing Name input field without URL requirement](../media/037.png)
 
 4. In the menu list, the new item appears with a blue **Mega Menu** badge pill:
    * *Hierarchy Rule*: Mega menus must always reside at the root navigation level. They cannot be nested as submenus inside another dropdown, nor can standard menu items in the dialog be dragged inside a mega menu item. Mega menu content is designed visually on the canvas.
 5. Click **Save** in the **Edit Menu** dialog.
 
-   ![Edit Menu dialog showing the newly created Sitemap item with the blue Mega Menu badge pill](images/website-menu-editor-drag-handles-mega-badge.png)
+   ![Edit Menu dialog showing the newly created Sitemap item with the blue Mega Menu badge pill](../media/033.png)
 
 6. Switch to **Edit** mode by clicking the blue **Edit** button in the top bar.
 7. In your website navbar, click the newly created mega menu link *(such as `Sitemap`)* to expand the mega menu canvas panel.
 
-   ![Live webpage canvas in edit mode displaying the expanded Sitemap mega menu with multi-column categories](images/website-mega-menu-canvas-preview.png)
+   ![Live webpage canvas in edit mode displaying the expanded Sitemap mega menu with multi-column categories](../media/038.png)
 
 8. Click anywhere inside the mega menu container to activate its customization controls in the right sidebar:
    * **Template**: CURQ provides 9 pre-designed layout templates. Select a template from the dropdown to instantly reformat the panel:
@@ -142,7 +144,7 @@ Mega menus replace narrow vertical dropdowns with expansive, multi-column naviga
      * **Open in New Window**: Toggle whether clicking this mega menu link opens in a new browser tab.
    * Drag additional building blocks *(such as **Buttons**, **Icons**, or **Columns**)* directly from the **Blocks** sidebar into the mega menu panel.
 
-   ![Mega menu canvas showing selected Laptops link and right Customize sidebar with URL, Label, Style, and Open in New Window options](images/website-mega-menu-inline-link-customize.png)
+   ![Mega menu canvas showing selected Laptops link and right Customize sidebar with URL, Label, Style, and Open in New Window options](../media/039.png)
 
 10. Configure conditional visibility per mega menu column or section:
     * Select a section within the mega menu panel.
@@ -158,7 +160,7 @@ Mega menus replace narrow vertical dropdowns with expansive, multi-column naviga
 
 ---
 
-### 5. Customizing Header Layout and Navbar Options
+## Task 5: Customizing Header Layout and Navbar Options
 
 The website header houses your main brand identity, navigation links, and primary call-to-action buttons. Customize its design system-wide:
 
@@ -185,9 +187,9 @@ The website header houses your main brand identity, navigation links, and primar
      * **Over The Content**: Creates a transparent header that floats over the top hero banner or cover block.
      * **Hidden**: Completely hides the header for distraction-free landing pages or special campaign pages.
 
-   ![Customize sidebar displaying Header options including Template selector, Scroll Effect, and Header Position](images/website-header-customize-sidebar-templates.png)
+   ![Customize sidebar displaying Header options including Template selector, Scroll Effect, and Header Position](../media/040.png)
 
-   ![Header Template dropdown menu expanded showing visual previews for all available header layouts](images/website-header-template-selector-dropdown.png)
+   ![Header Template dropdown menu expanded showing visual previews for all available header layouts](../media/041.png)
 
 4. Configure visible header elements:
    * Under the **Elements** panel in the sidebar, toggle one-click header components:
@@ -202,11 +204,11 @@ The website header houses your main brand identity, navigation links, and primar
    * Under **Header > Navbar**, adjust font family and pixel font size.
    * Under **Mobile Alignment**, choose how the hamburger toggle aligns on mobile devices: **Left**, **Center**, or **Right**.
 
-   ![Live page showing expanded Hamburger menu drawer with Elements toggle controls highlighted in the sidebar](images/website-header-elements-toggle-options.png)
+   ![Live page showing expanded Hamburger menu drawer with Elements toggle controls highlighted in the sidebar](../media/042.png)
 
 ---
 
-### 6. Customizing Footer Layout and Navigation Links
+## Task 6: Customizing Footer Layout and Navigation Links
 
 The footer provides persistent legal information, secondary navigation links, contact details, and copyright notices across all pages:
 
@@ -230,11 +232,11 @@ The footer provides persistent legal information, secondary navigation links, co
    * **Page Visibility**: Toggle **Page Visibility** checkbox to hide the footer on specific conversion or checkout pages while keeping it visible on the rest of the website.
 3. Edit links and footer text inline directly on the canvas, then click **Save** in the top bar.
 
-   ![Page canvas showing selected footer container and right Customize sidebar with Template, Colors, Slideout Effect, Copyright, and Page Visibility options](images/website-footer-customize-sidebar-templates.png)
+   ![Page canvas showing selected footer container and right Customize sidebar with Template, Colors, Slideout Effect, Copyright, and Page Visibility options](../media/043.png)
 
 ---
 
-### 7. Multi-Website Navigation Isolation
+## Task 7: Multi-Website Navigation Isolation
 
 When operating multiple brand websites within a single CURQ database:
 
@@ -245,3 +247,12 @@ When operating multiple brand websites within a single CURQ database:
 3. **Dedicated Brand Navigation**:
    * Each website maintains its own header and footer styling, brand logo, and navigation links.
    * Changes made within the Menu Editor are saved strictly under the active website context.
+
+---
+
+## Related Documentation
+
+* [Design Pages with Building Blocks](./01-design-pages-with-building-blocks.md)
+* [Manage Webpages and Redirections](./03-manage-webpages-and-redirections.md)
+* [Understanding Website Architecture and Content Delivery](../core-concepts/01-understanding-website-architecture-and-content-delivery.md)
+* [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md)

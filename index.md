@@ -4,6 +4,7 @@
 :hidden:
 :glob:
 
+docs/faq
 docs/*/*
 docs/*/*/*
 ```

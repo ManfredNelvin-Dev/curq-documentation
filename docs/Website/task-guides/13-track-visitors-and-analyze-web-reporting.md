@@ -1,4 +1,6 @@
-# Website Reporting & Analytics
+# Track Visitors and Analyze Web Reporting
+
+This guide covers monitoring the web analytics dashboard, evaluating online sales performance across pivot and graph views, tracking visitor sessions, and inspecting page view audit logs.
 
 Monitor online store revenue, track web visitor engagement, audit granular page views, and analyze website conversion performance in CURQ 18.
 
@@ -9,7 +11,7 @@ Monitor online store revenue, track web visitor engagement, audit granular page 
 
 ---
 
-### Accessing Website Reporting Menus
+## Task 1: Accessing Website Reporting Menus
 
 All website analytics and reporting tools are consolidated in the top administrative bar under the **Reporting** menu:
 
@@ -20,20 +22,15 @@ All website analytics and reporting tools are consolidated in the top administra
    * **Visitors**: Tracks live and historical visitor sessions, customer identification, and engagement activities.
    * **Page Views**: Displays the granular audit log of individual URLs, pages, and products viewed across your site.
 
-| Menu Option | Available Views | Primary Focus |
-| --- | --- | --- |
-| **Analytics** | Dashboard | Visitor traffic overview, page impressions, and web analytics integration *(Plausible)*. |
-| **Online Sales** | Pivot, Graph | Multi-dimensional analysis of confirmed web sales, product lines, customer countries, and revenue. |
-| **Visitors** | Kanban, List, Form, Graph | Online user tracking, visitor connection status, page histories, product interest, and direct outreach. |
-| **Page Views** | List, Graph | Granular event logging of every visited URL, timestamp, visitor session, and product page impression. |
+> For reporting menu descriptions, model bindings, and security access permissions, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ---
 
-### 1. Web Analytics Dashboard
+## Task 1: Web Analytics Dashboard
 
 The **Analytics** view (**Reporting** > **Analytics**) serves as the central traffic monitoring dashboard for your website.
 
-#### Features and Capabilities
+### Features and Capabilities
 
 * **Multi-Website Switching**: In multi-website environments, use the website selector buttons in the upper-right corner of the control panel to switch between domains and view isolated analytics per website.
 * **Go to Website**: Click the **Go to Website** button in the top bar to immediately navigate to the frontend of the active website.
@@ -45,38 +42,31 @@ The **Analytics** view (**Reporting** > **Analytics**) serves as the central tra
 
 ---
 
-### 2. Online Sales Analysis
+## Task 2: Online Sales Analysis
 
 The **Online Sales Analysis** (**Reporting** > **Online Sales**) provides deep analytical reporting using CURQ's multi-dimensional reporting engine.
 
 The report automatically filters to show only orders placed through the website, isolating online transactions from direct backend sales or point-of-sale orders.
 
-#### Default View and Filters
+### Default View and Filters
 
 * **Default Filter**: Pre-filtered with **Confirmed Orders**, focusing exclusively on validated customer purchases.
 * **Default Display**: Opens in a **Pivot** view with **Order Date** grouped along rows, **Status** across columns, and **Untaxed Amount** as the initial measure.
 * **Toggle View**: Switch between **Pivot** and **Graph** views using the view icons in the upper-right corner.
 
-![Online Sales Analysis opened in pivot view highlighting Confirmed Orders filter and view switchers](images/website-reporting-online-sales-pivot-view.png)
+![Online Sales Analysis opened in pivot view highlighting Confirmed Orders filter and view switchers](../media/115.png)
 
-#### Available Measures
+### Available Measures
 
-Click the **Measures** dropdown in the top-left corner of the view to plot or calculate any of the following metrics:
+Click the **Measures** dropdown in the top-left corner of the view to plot or calculate analytical metrics across your confirmed online sales orders:
 
-| Measure | Description |
-| --- | --- |
-| **Untaxed Amount** | Subtotal amount of sold items before taxes *(default measure)*. |
-| **Total** | Gross sales order total including applied taxes. |
-| **Qty Ordered** | Total number of product units ordered by online customers. |
-| **Qty Delivered** | Number of units fulfilled and delivered to customers. |
-| **Qty Invoiced** | Number of product units billed on customer invoices. |
-| **Qty to Invoice** | Fulfilled units pending invoice generation. |
-| **Discount Amount** | Cumulative discount amounts deducted from retail prices. |
-| **Gross Weight** | Total shipping weight of ordered products. |
-| **Volume** | Total cubic volume of ordered goods. |
-| **Count** | Total count of sales order line records matching the criteria. |
+> For mathematical calculation methods, tax handling, and measure definitions, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
-#### Grouping and Dimension Breakdown
+* **Revenue Measures**: Plot **Untaxed Amount** *(net revenue)*, **Total** *(gross amount)*, or cumulative **Discount Amount**.
+* **Volume Measures**: Analyze units via **Qty Ordered**, **Qty Delivered**, **Qty Invoiced**, and **Qty to Invoice**.
+* **Logistics & Activity**: Track freight impact via **Gross Weight**, cubic **Volume**, and order line **Count**.
+
+### Grouping and Dimension Breakdown
 
 Expand rows and columns in the Pivot table or group data points in the Graph view using standard dimensions:
 
@@ -88,9 +78,9 @@ Expand rows and columns in the Pivot table or group data points in the Graph vie
 * **Status**: Compare confirmed orders against cancelled or draft orders.
 * **Order Date**: Aggregate sales by Year, Quarter, Month, Week, or Day.
 
-![Online Sales Analysis pivot table breakdown menu showing grouping dimensions](images/website-reporting-online-sales-pivot-grouping-menu.png)
+![Online Sales Analysis pivot table breakdown menu showing grouping dimensions](../media/116.png)
 
-#### Graph View Customization
+### Graph View Customization
 
 When switching to **Graph** view, select between:
 
@@ -99,41 +89,33 @@ When switching to **Graph** view, select between:
 * **Pie Chart**: Visualize proportional category or geographic market share.
 * **Sorting**: Sort data in ascending or descending order directly from the graph control bar.
 
-![Online Sales Analysis displayed in bar chart graph view tracking untaxed total by month](images/website-reporting-online-sales-graph-view.png)
+![Online Sales Analysis displayed in bar chart graph view tracking untaxed total by month](../media/117.png)
 
 ---
 
-### 3. Website Visitors Tracking
+## Task 3: Website Visitors Tracking
 
 The **Visitors** menu (**Reporting** > **Visitors**) tracks individual web sessions, providing real-time audience intelligence, browsing history, and lead generation tools.
 
-#### View Modes and Filters
+### View Modes and Filters
 
 * **Default Filter**: Automatically filters for activity within the **Last 7 Days**.
 * **Supported Views**: **Kanban**, **List**, **Form**, and **Graph**.
 * **Visual Status**: In List and Kanban views, visitors currently browsing the site display a green presence indicator, while inactive visitors display an offline indicator.
 
-![Website visitors kanban view displaying visitor presence indicators, visits count, and outreach actions](images/website-reporting-visitors-kanban-view.png)
+![Website visitors kanban view displaying visitor presence indicators, visits count, and outreach actions](../media/118.png)
 
-#### Visitor List View
+### Visitor List View
 
-| Column | Description |
-| --- | --- |
-| **Country Flag** | Country flag icon representing the visitor's detected geographic location. |
-| **Name** | Identified contact name *(if customer is logged into the portal)* or auto-assigned anonymous visitor tag *(e.g., `Visitor #128`)*. |
-| **Last Connection** | Date and timestamp of the visitor's most recent interaction on the website. |
-| **Language** | Preferred browsing language detected from the visitor's browser or selected on the site. |
-| **Visits** | Cumulative count of site visits initiated by this visitor. |
-| **Pages** | Badges showing specific web pages visited during the session. |
-| **Products** | Badges listing eCommerce products inspected by the visitor. |
-| **Leads** | Total CRM leads associated with or generated by this visitor. |
-| **Direct Outreach** | Contextual action buttons allowing operators to trigger **Email**, **SMS**, or **Livechat** directly from the list row. |
+> For visitor tracking columns, presence indicators, and outreach action specifications, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
-#### Visitor Form View and Smart Buttons
+The List view organizes active and historical web sessions, displaying GeoIP country flags, contact names or auto-assigned visitor IDs, last connection timestamps, preferred languages, cumulative visit counts, visited page and product tags, linked CRM lead counts, and direct outreach shortcuts *(Email, SMS, Livechat)*.
+
+### Visitor Form View and Smart Buttons
 
 Clicking any visitor opens the detailed **Visitor Form**, displaying browsing history and related records:
 
-![Website visitor form view showing presence badge, visits counter, page views, and product views buttons](images/website-reporting-visitor-form-view.png)
+![Website visitor form view showing presence badge, visits counter, page views, and product views buttons](../media/119.png)
 
 * **Connected / Offline Badge**: Real-time presence indicator showing whether the visitor is currently browsing.
 * **Visits Counter**: Total visits logged for the visitor profile.
@@ -149,13 +131,13 @@ Clicking any visitor opens the detailed **Visitor Form**, displaying browsing hi
 
 When a visitor submits an inquiry through a website form configured to create opportunities, the **Leads** smart button displays the count of linked opportunities:
 
-![Website visitor form view highlighting the dynamic Leads smart button](images/website-reporting-visitor-form-leads-smart-button.png)
+![Website visitor form view highlighting the dynamic Leads smart button](../media/120.png)
 
 Clicking the **Leads** smart button opens the list of CRM opportunities associated with that visitor:
 
-![CRM opportunities list view filtered for the selected website visitor](images/website-reporting-visitor-linked-leads-list.png)
+![CRM opportunities list view filtered for the selected website visitor](../media/121.png)
 
-#### Direct Visitor Engagement
+### Direct Visitor Engagement
 
 Operators can initiate outbound communication directly from the visitor form header:
 
@@ -163,21 +145,21 @@ Operators can initiate outbound communication directly from the visitor form hea
 2. **Send SMS**: If a mobile phone number has been captured, click **Send SMS** to transmit a targeted text message.
 3. **Send Chat Request**: If the visitor is actively browsing online, click **Send chat request** to open a proactive live chat prompt on the visitor's screen (requires the **Live Chat** application).
 
-![Operator initiating live chat request from visitor form header](images/website-reporting-visitor-send-chat-request.png)
+![Operator initiating live chat request from visitor form header](../media/122.png)
 
 Once a message is exchanged, the conversation is permanently logged and the **Chats** smart button appears on the visitor profile:
 
-![Active chat conversation showing visitor response and the dynamic Chats smart button displayed](images/website-reporting-visitor-form-chats-smart-button.png)
+![Active chat conversation showing visitor response and the dynamic Chats smart button displayed](../media/123.png)
 
 ---
 
-### 4. Page Views Audit Log
+## Task 4: Page Views Audit Log
 
 The **Page Views** view (**Reporting** > **Page Views**) provides a granular log of page impressions across the site.
 
-![Page views audit log in list view displaying visitors, visited URLs, and timestamps](images/website-reporting-page-views-list-view.png)
+![Page views audit log in list view displaying visitors, visited URLs, and timestamps](../media/124.png)
 
-#### Event Logging and Search Filters
+### Event Logging and Search Filters
 
 Every time a visitor navigates to a URL, CURQ records an entry capturing the destination and session:
 
@@ -187,17 +169,13 @@ Every time a visitor navigates to a URL, CURQ records an entry capturing the des
   * **Urls & Pages**: Displays all tracked URLs including dynamic system routes.
   * **Products**: Filters for impressions on published eCommerce product pages.
 
-#### Page View Data Fields
+### Page View Data Fields
 
-| Field | Description |
-| --- | --- |
-| **Visitor** | Reference to the visitor profile that triggered the page impression. |
-| **Page** | Title of the managed page record *(if visiting a page created in Page Manager)*. |
-| **URL** | Complete relative route accessed by the visitor *(e.g., `/shop/furn-8888-desk` or `/contactus`)*. |
-| **Product** | Linked product record if the URL corresponds to an eCommerce product page. |
-| **Visit Date** | Exact date and timestamp when the URL was loaded. |
+> For audit logging columns, visitor session parameters, and page tracking attributes, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
-#### Grouping and Traffic Analysis
+The audit log captures granular web impression attributes including the visitor profile reference, managed page title, exact relative URL path route, linked catalog product, and the precise HTTP request timestamp.
+
+### Grouping and Traffic Analysis
 
 Use the **Group By** menu to aggregate traffic patterns:
 
@@ -207,4 +185,13 @@ Use the **Group By** menu to aggregate traffic patterns:
 * **Group by Date**: Analyze daily, weekly, or hourly traffic distribution to spot browsing surges.
 
 Switch to **Graph** view to plot URL impression volumes over time or compare product page popularity using bar and line charts.
+
+---
+
+## Related Documentation
+
+* [Manage Online Orders and Abandoned Carts](./07-manage-online-orders-and-abandoned-carts.md)
+* [Optimize SEO and Search Metadata](./04-optimize-seo-and-search-metadata.md)
+* [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
+* [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md)
 

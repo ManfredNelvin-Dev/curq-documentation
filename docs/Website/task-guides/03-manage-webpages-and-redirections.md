@@ -1,10 +1,12 @@
-# Page Management
+# Manage Webpages and Redirections
+
+This guide covers how to access the central Page Manager, configure page access permissions, publish or archive pages, and set up 301/302 URL redirects.
 
 Organize, configure, secure, and maintain web pages across your CURQ 18 websites using the centralized Page Manager and Page Properties dialog.
 
 ---
 
-### 1. Accessing the Page Manager
+## Task 1: Accessing the Page Manager
 
 The **Page Manager** provides a comprehensive control center where administrators can monitor publication status, SEO indexing, menu visibility, and website assignments across all pages.
 
@@ -13,39 +15,37 @@ To open the Page Manager:
 1. Open your CURQ 18 website in frontend preview mode.
 2. In the top administrative control bar, click **Site** > **Pages**.
 
-   ![CURQ Website top control bar with Site menu open highlighting the Pages option](images/website-pages-access-site-menu.png)
+   ![CURQ Website top control bar with Site menu open highlighting the Pages option](../media/044.png)
 
 CURQ opens the **Website Pages** manager interface with view-switching controls and filter tools:
 
 * **List View** *(Default)*: Tabular grid displaying all page attributes, ideal for comparing settings, sorting, and executing batch operations.
 
-  ![Website Pages manager in list view displaying Page Title, URL, Is Indexed, Is In Main Menu, and Is Published columns](images/website-pages-manager-list-view.png)
+  ![Website Pages manager in list view displaying Page Title, URL, Is Indexed, Is In Main Menu, and Is Published columns](../media/045.png)
 
 * **Kanban View**: Visual card layout highlighting page titles, homepage badges, URLs, and status indicators.
 
-  ![Website Pages manager in kanban view showing page cards with homepage icons, main menu badges, and published toggles](images/website-pages-manager-kanban-view.png)
+  ![Website Pages manager in kanban view showing page cards with homepage icons, main menu badges, and published toggles](../media/046.png)
 
 * **Search & Filters**: Quick-filter options to isolate published, unpublished, or tracked pages.
 
 ---
 
-### 2. Page Manager Columns & Indicators
+## Task 2: Page Manager Columns & Indicators
 
-In List view, the Page Manager organizes your website hierarchy with the following columns:
+In List view, the Page Manager provides an operational grid summarizing publication status, SEO indexing, menu placement, and multi-website routing for all site content.
 
-| Column | Description |
-| --- | --- |
-| **Page Title** | The public or internal display name of the webpage. Clicking a page opens it in live frontend preview. |
-| **Page URL** | The relative URL path route *(e.g., `/contactus`, `/about-us`, `/services`)*. |
-| **Indexed** | Toggle indicating whether search engines are allowed to index and surface this page in public search results. |
-| **Is In Main Menu** | Checkbox indicating whether an active link pointing to this page exists in the main header navigation menu. |
-| **SEO Optimized** | Indicator showing whether custom SEO metadata *(Meta Title, Meta Description, keywords)* has been configured. |
-| **Is Published** | Active status switch. Green indicates live and visible to visitors; grey/red indicates unpublished and restricted to administrators. |
-| **Website** | In multi-website environments, displays the specific website instance associated with the page *(empty if accessible across all websites)*. |
+> For complete column definitions, indexing flags, and operational attributes, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+
+Review your page records across the following core attributes:
+* **Page Title & URL**: Click any page title or path to launch live preview editing on the canvas.
+* **Indexing & SEO**: Verify whether search engines are permitted to crawl the page and check if custom metadata has been saved.
+* **Menu & Publication Status**: Check whether the page is linked in the main navbar and toggle the **Is Published** switch to make content public or internal.
+* **Website Assignment**: In multi-brand databases, confirm which website domain owns the page.
 
 ---
 
-### 3. Searching, Filtering, and Grouping Pages
+## Task 3: Searching, Filtering, and Grouping Pages
 
 When managing extensive websites with dozens or hundreds of pages, use the search and filter bar to locate specific content quickly:
 
@@ -59,7 +59,7 @@ When managing extensive websites with dozens or hundreds of pages, use the searc
 
 ---
 
-### 4. Performing Batch Actions on Pages
+## Task 4: Performing Batch Actions on Pages
 
 The Page Manager allows administrators to perform bulk maintenance operations across multiple selected pages simultaneously:
 
@@ -75,25 +75,27 @@ The Page Manager allows administrators to perform bulk maintenance operations ac
 
 ---
 
-### 5. Configuring Page Properties
+## Task 5: Configuring Page Properties
 
 The **Page Properties** dialog allows granular control over page URLs, redirects, homepage assignment, and search engine visibility.
 
-#### Opening Page Properties
+### Opening Page Properties
 
 You can access Page Properties through two methods:
 
 * **From the live page**: Navigate to the target page, then click **Site** > **This page** > **Properties** in the top administrative bar.
 
-  ![CURQ Website top control bar with Site menu open highlighting This page Properties option](images/website-page-properties-access-site-menu.png)
+  ![CURQ Website top control bar with Site menu open highlighting This page Properties option](../media/047.png)
 
 * **From the visual editor sidebar**: Click **Page** in the editor sidebar while editing.
 
 CURQ opens the **Page Properties** modal dialog:
 
-![Page Properties modal dialog showing Page Title, Page URL, In Menu, Is Homepage, Published, Publishing Date, Indexed, Visibility, and Is a Template options](images/website-page-properties-modal-overview.png)
+![Page Properties modal dialog showing Page Title, Page URL, In Menu, Is Homepage, Published, Publishing Date, Indexed, Visibility, and Is a Template options](../media/048.png)
 
-#### Core Page Properties
+### Core Page Properties
+
+> For technical specifications of page attributes, redirection codes (301 vs 302), and template behaviors, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 * **Page Title**: The human-readable name of the webpage, displayed in browser title bars and search results.
 * **Page URL**: The route path of the page *(e.g., `/our-mission`)*.
@@ -108,21 +110,23 @@ CURQ opens the **Page Properties** modal dialog:
 
 ---
 
-### 6. Page Visibility & Access Security
+## Task 6: Page Visibility & Access Security
 
 Control visitor access to individual pages using the **Visibility** setting in Page Properties:
+
+> For detailed security group parameters, password protection constraints, and access rules, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 1. Open **Site** > **This page** > **Properties**.
 2. Locate the **Visibility** dropdown field and select the desired security rule:
    * **Public**: Default setting. Anyone visiting the website can view the page.
    * **Signed In**: Restricts page access to authenticated portal users and internal employees. Anonymous visitors are prompted to log in.
-   * **Restricted Group**: Restricts page access to users belonging to specific security user groups. When selected, an **Authorized Groups** tag field appears to choose authorized user groups *(e.g., Portal, Editor, Sales / User)*.
-   * **With Password**: Protects the page behind a direct access code. When selected, enter a **Password** in the displayed field. Visitors must enter this password to view the page contents.
+   * **Restricted Group**: Restricts page access to users belonging to specific security user groups *(e.g., Portal, Editor, Sales / User)*.
+   * **With Password**: Protects the page behind a direct access code that visitors must supply.
 3. Click **Save** to enforce access restrictions immediately.
 
 ---
 
-### 7. Creating and Managing Page Templates
+## Task 7: Creating and Managing Page Templates
 
 Standardize brand layout designs by converting custom pages into reusable templates:
 
@@ -131,3 +135,13 @@ Standardize brand layout designs by converting custom pages into reusable templa
 3. Toggle the **Is a Template** switch to enabled.
 4. Click **Save**.
 5. When any team member clicks **+ New** > **Page**, this custom layout will now appear as an available template option under the page selector library, allowing instant replication of standard company page layouts.
+
+---
+
+## Related Documentation
+
+* [Design Pages with Building Blocks](./01-design-pages-with-building-blocks.md)
+* [Optimize SEO and Search Metadata](./04-optimize-seo-and-search-metadata.md)
+* [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
+* [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md)
+
