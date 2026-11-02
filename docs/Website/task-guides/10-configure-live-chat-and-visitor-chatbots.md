@@ -7,7 +7,7 @@ This guide details how to configure the website live chat widget, assign operato
 ## Task 1: Enable the Live Chat Widget on Your Website
 Checking **Allows your visitors to chat with you** injects the CURQ Live Chat widget onto the storefront:
 
-> For complete field definitions, channel attributes, and operator timeout rules, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For complete field definitions, channel attributes, and operator timeout rules, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 * **Channel Selection**: In the **Channel** field, select the operational channel *(such as `YourWebsite.com`)* assigned to this website.
 * **Operator Routing**: Incoming chats route directly to assigned staff members active in the Live Chat application.
@@ -32,7 +32,7 @@ Clicking the arrow icon next to the **Channel** dropdown opens the centralized L
 ## Task 2: Configure Widget Aesthetics and Greeting Options
 Configure customer-facing aesthetics and greeting copy for the floating widget:
 
-> For widget styling properties, color palettes, and greeting parameters, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For widget styling properties, color palettes, and greeting parameters, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ![Live Chat channel options tab showing button styling and window greetings](../media/139.png)
 
@@ -47,7 +47,7 @@ Configure customer-facing aesthetics and greeting copy for the floating widget:
 ## Task 3: Define Display Rules and Geographic Targeting
 Define URL path triggers, automated popup actions, and geographic restrictions governing when the chat window displays:
 
-> For regex trigger syntax, display actions, and GeoIP country rules, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For regex trigger syntax, display actions, and GeoIP country rules, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ![Live Chat channel rules tab displaying URL regex triggers and automated display actions](../media/140.png)
 
@@ -81,7 +81,7 @@ Review integration methods for native and third-party web properties:
 ### Conversational Chatbot Builder
 Clicking the **Chatbots** smart button on the channel form opens the linked automated conversational bot:
 
-> For chatbot step types, conditional branching rules, and satisfaction metrics, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For chatbot step types, conditional branching rules, and satisfaction metrics, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ![Chatbot script builder showing Welcome Bot decision tree, step types, and answer routing](../media/143.png)
 

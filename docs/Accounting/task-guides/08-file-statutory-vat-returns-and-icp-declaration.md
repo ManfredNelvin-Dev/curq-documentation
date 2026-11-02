@@ -11,8 +11,8 @@ Generate periodic Dutch VAT returns (*Omzetbelasting / BTW-aangifte*), audit sta
   ![Tax Definition tab showing VAT distribution accounts and statutory tax grids](../media/074.png)
   ![Tax Advanced Options tab showing tax labels, country, and presentation settings](../media/075.png)
 
-  > For complete tax computation algorithms and tax grid mapping specifications, see [Tax Configuration Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#tax-configuration-field-definitions).
-* Confirm that foreign EU business customers have verified VAT identification numbers in [Contacts](../../Contacts/task-guides/01-create-and-manage-contacts.md).
+  > For complete tax computation algorithms and tax grid mapping specifications, see [**Tax Configuration Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#tax-configuration-field-definitions).
+* Confirm that foreign EU business customers have verified VAT identification numbers in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
 * Verify your user account has **Billing Administrator** or **Accountant** access rights in CURQ.
 
 ---
@@ -144,16 +144,13 @@ Companies delivering goods or providing B2B services to clients in other EU memb
 4. After receiving confirmation from the tax authority, return to CURQ and click the green **Finalize** button in the top action bar:
    * The statement transitions to **Final** status.
    * The accounting tax period is permanently closed and protected against unauthorized retroactive modifications.
-5. In the top navigation bar, select **Accounting > Lock Dates** and advance the **Tax Return Lock Date** to the final date of the declared period to prevent any subsequent transactions from impacting filed tax boxes *(see [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md))*.
+5. In the top navigation bar, select **Accounting > Lock Dates** and advance the **Tax Return Lock Date** to the final date of the declared period to prevent any subsequent transactions from impacting filed tax boxes *(see [**Manage Lock Dates and Fiscal Year-End Closing**](./12-manage-lock-dates-and-fiscal-year-end-closing.md))*.
 
 ---
 
 ### Related Documentation
 
-* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
-* [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
-* [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)
 * [Statutory Tax Statement and ICP Field Definitions](../settings-and-fields/03-statutory-tax-statement-and-icp-field-definitions.md)
 * [Chart of Accounts, Taxes, and Journals Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md)
-* [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
+* [Export Statutory Tax Auditfiles (XAF 3.2)](./16-export-statutory-tax-auditfiles.md)
+* [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)

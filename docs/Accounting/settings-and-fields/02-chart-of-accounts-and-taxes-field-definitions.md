@@ -195,11 +195,7 @@ Redirects income and expense accounts to specialized foreign or export general l
 
 ## Related Documentation
 
-* [Customer Invoice and Vendor Bill Field Definitions](./01-customer-invoice-and-vendor-bill-field-definitions.md)
 * [Statutory Tax Statement and ICP Field Definitions](./03-statutory-tax-statement-and-icp-field-definitions.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
-* [Understanding the Invoice and Bill Lifecycle](../core-concepts/02-understanding-the-invoice-and-bill-lifecycle.md)
-* [Create and Validate Customer Invoices](../task-guides/01-create-and-validate-customer-invoices.md)
-* [Create and Process Vendor Bills](../task-guides/02-create-and-process-vendor-bills.md)
-* [Import and Reconcile Bank Statements](../task-guides/04-import-and-reconcile-bank-statements.md)
+* [File Statutory VAT Returns and ICP Declaration](../task-guides/08-file-statutory-vat-returns-and-icp-declaration.md)
 * [Generate Financial Reports and Trial Balance](../task-guides/07-generate-financial-reports-and-trial-balance.md)
+* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)

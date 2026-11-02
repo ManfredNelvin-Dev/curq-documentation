@@ -146,5 +146,4 @@ Configured when clicking **+ New** on the Auditfile export registry:
 * [File Statutory VAT Returns and ICP Declaration](../task-guides/08-file-statutory-vat-returns-and-icp-declaration.md)
 * [Export Statutory Tax Auditfiles (XAF 3.2)](../task-guides/16-export-statutory-tax-auditfiles.md)
 * [Chart of Accounts, Taxes, and Journals Field Definitions](./02-chart-of-accounts-and-taxes-field-definitions.md)
-* [Customer Invoice and Vendor Bill Field Definitions](./01-customer-invoice-and-vendor-bill-field-definitions.md)
 * [Generate Financial Reports and Trial Balance](../task-guides/07-generate-financial-reports-and-trial-balance.md)

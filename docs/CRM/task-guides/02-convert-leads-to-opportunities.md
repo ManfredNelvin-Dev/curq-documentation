@@ -41,8 +41,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 
 5. The system automatically saves the record as fields are completed.
 
-> [!NOTE]
-> For field formats and allowed constraints, see [Inbound Lead Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#inbound-lead-form-fields).
+> **Note:** For field formats and allowed constraints, see [**Inbound Lead Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#inbound-lead-form-fields).
 
 ---
 
@@ -76,8 +75,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 4. Verify or adjust the assigned **Salesperson** (e.g., `Siddharth Sathyan`) and **Sales Team**.
 5. Click **Create Opportunity**.
 
-> [!NOTE]
-> For behavioral rules and parameter outcomes of the conversion dialog, see [Lead Conversion Dialog Parameters](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#lead-conversion-dialog-parameters).
+> **Note:** For behavioral rules and parameter outcomes of the conversion dialog, see [**Lead Conversion Dialog Parameters**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#lead-conversion-dialog-parameters).
 
 ---
 

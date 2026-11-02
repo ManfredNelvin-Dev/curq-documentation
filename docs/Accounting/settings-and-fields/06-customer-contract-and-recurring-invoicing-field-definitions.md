@@ -255,6 +255,4 @@ Detail form view opened when inspecting an individual supplier contract line:
 * [Manage Customer Contracts and Recurring Invoicing](../task-guides/11-manage-customer-contracts-and-recurring-invoicing.md)
 * [Manage Supplier Contracts and Recurring Purchase Invoicing](../task-guides/15-manage-supplier-contracts-and-purchase-invoicing.md)
 * [Customer Invoice and Vendor Bill Field Definitions](./01-customer-invoice-and-vendor-bill-field-definitions.md)
-* [Payment, Bank, and Journal Entry Field Definitions](./04-payment-bank-and-journal-entry-field-definitions.md)
 * [Create and Validate Customer Invoices](../task-guides/01-create-and-validate-customer-invoices.md)
-* [Create and Process Vendor Bills](../task-guides/02-create-and-process-vendor-bills.md)

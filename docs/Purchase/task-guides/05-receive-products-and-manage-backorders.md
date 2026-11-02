@@ -13,7 +13,7 @@ This guide covers how to process incoming vendor shipments directly from purchas
 
 3. CURQ opens the linked incoming receipt form (`WH/IN/`).
 
-> For complete field definitions of warehouse receipts and stock moves, see [Warehouse Receipt and Vendor Bill Field Definitions](../settings-and-fields/03-warehouse-receipt-and-vendor-bill-field-definitions.md).
+> For complete field definitions of warehouse receipts and stock moves, see [**Warehouse Receipt and Vendor Bill Field Definitions**](../settings-and-fields/03-warehouse-receipt-and-vendor-bill-field-definitions.md).
 
 ---
 
@@ -108,8 +108,7 @@ If received goods are damaged, defective, or incorrect and must be returned to t
 
 ## Related Documentation
 
-* [Create and Process Your First Purchase Order](../getting-started/01-create-and-process-your-first-purchase-order.md)
 * [Generate and Validate Vendor Bills](./06-generate-and-validate-vendor-bills.md)
 * [Reconcile Vendor Bills with Bill Matching](./07-reconcile-vendor-bills-with-bill-matching.md)
-* [Understanding Bill Control and 3-Way Matching](../core-concepts/02-understanding-bill-control-and-3-way-matching.md)
 * [Warehouse Receipt and Vendor Bill Field Definitions](../settings-and-fields/03-warehouse-receipt-and-vendor-bill-field-definitions.md)
+* [Understanding Bill Control and 3-Way Matching](../core-concepts/02-understanding-bill-control-and-3-way-matching.md)

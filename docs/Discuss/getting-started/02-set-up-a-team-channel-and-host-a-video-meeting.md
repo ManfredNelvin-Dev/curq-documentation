@@ -103,8 +103,8 @@ Congratulations! You have configured a team communication channel and hosted an 
 ---
 
 ### Related Documentation
+
 * [Create and Manage Channels](../task-guides/01-create-and-manage-channels.md)
 * [Start and Manage Voice and Video Calls](../task-guides/04-start-and-manage-voice-and-video-calls.md)
 * [Voice and Video Hardware and Backgrounds](../task-guides/08-configure-voice-and-video-hardware-and-backgrounds.md)
 * [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
-* [Understanding Channels, Collaboration, and WebRTC Architecture](../core-concepts/02-understanding-channels-collaboration-and-webrtc-architecture.md)

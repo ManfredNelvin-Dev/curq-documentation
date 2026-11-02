@@ -15,7 +15,7 @@ This guide details configuring GDPR cookie consent banners, privacy policies, te
 
 Display a legal cookie consent banner informing visitors of site cookies:
 
-> For field explanations, allowed values, and privacy setting specifications, see [Privacy, Cookie Compliance, and Account Settings](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md).
+> For field explanations, allowed values, and privacy setting specifications, see [**Privacy, Cookie Compliance, and Account Settings**](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md).
 
 1. In the backend, open the **Website** application.
 2. Click **Configuration** > **Settings**.
@@ -39,7 +39,7 @@ Display a legal cookie consent banner informing visitors of site cookies:
 
 Prevent external platforms and embeds from loading until user consent is recorded:
 
-> For default blocked platform lists, domain formatting syntax, and script behavior, see [Third-Party Tracking and Blocked Domains](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md).
+> For default blocked platform lists, domain formatting syntax, and script behavior, see [**Third-Party Tracking and Blocked Domains**](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md).
 
 1. In **Website** > **Configuration** > **Settings** > **Privacy**, check **Block tracking 3rd-party services**.
    * CURQ automatically suppresses embeds from YouTube, Vimeo, Facebook, Twitter, and Google services until the visitor clicks **I agree**.
@@ -56,7 +56,7 @@ Prevent external platforms and embeds from loading until user consent is recorde
 
 Regulate how customers onboard and authenticate across your web properties:
 
-> For self-registration policies, default access rights, and cross-website credential rules, see [Customer Account Authentication Policies](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md).
+> For self-registration policies, default access rights, and cross-website credential rules, see [**Customer Account Authentication Policies**](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md).
 
 1. Under **Shared Customer Accounts**, check **Accounts are usable across all your multiple websites** if you operate multiple brand storefronts and want customers to authenticate globally with one set of credentials.
 2. Under **Customer Account**, choose your onboarding policy:
@@ -70,7 +70,7 @@ Regulate how customers onboard and authenticate across your web properties:
 
 Protect wholesale pricing or member catalogs behind account authentication:
 
-> For public vs authenticated catalog visibility rules and redirect behaviors, see [eCommerce Access Restriction Policies](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md).
+> For public vs authenticated catalog visibility rules and redirect behaviors, see [**eCommerce Access Restriction Policies**](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md).
 
 1. Under the **Ecommerce Access** setting, choose storefront visibility:
    * **All users**: Entire storefront (`/shop`) and prices are open to anonymous guests.

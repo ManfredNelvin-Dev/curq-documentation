@@ -19,8 +19,7 @@ The **HTML / CSS Editor** (Resource Editor) provides a code editing sidebar dire
 
    ![Resource Editor technical warning overlay advising caution when modifying core templates directly](../media/052.png)
 
-> [!WARNING]
-> Direct template modifications may conflict with future system upgrades:
+> **Warning:** Direct template modifications may conflict with future system upgrades:
 > * For tracking tags and analytics, use **Inject code in `<head>` or `<body>`** in website settings instead.
 > * For isolated script snippets on a single page, use the **Embed Code** building block.
 > * Click **Edit HTML anyway** to proceed into the code editor.

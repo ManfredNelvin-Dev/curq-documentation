@@ -44,7 +44,7 @@ Access the live website environment from the CURQ backend:
 
 Create a dedicated landing page for your organization:
 
-> For field explanations, allowed values, and page property definitions, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For field explanations, allowed values, and page property definitions, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 1. In the top administrative bar, click the **+ New** button:
 

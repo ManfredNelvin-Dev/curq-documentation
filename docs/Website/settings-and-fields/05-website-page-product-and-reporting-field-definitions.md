@@ -311,7 +311,5 @@ In `Reporting` > `Page Views`:
 
 * [Website Configuration and Domain Settings](./01-website-configuration-and-domain-settings.md)
 * [eCommerce Shop and Checkout Settings](./02-ecommerce-shop-and-checkout-settings.md)
-* [Delivery, Shipping, and Store Pickup Settings](./03-delivery-shipping-and-store-pickup-settings.md)
-* [Privacy, Cookie Compliance, and Account Settings](./04-privacy-cookie-compliance-and-account-settings.md)
 * [Manage Webpages and Redirections](../task-guides/03-manage-webpages-and-redirections.md)
 * [Track Visitors and Analyze Web Reporting](../task-guides/13-track-visitors-and-analyze-web-reporting.md)

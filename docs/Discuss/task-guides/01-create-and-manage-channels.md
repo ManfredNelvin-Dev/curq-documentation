@@ -20,8 +20,7 @@ Public channels are open to all internal employees and serve as transparent comm
 
    ![Created channel view](../media/004.png)
 
-> [!NOTE]
-> For technical definitions of channel access levels and privacy properties, see [Channel Form Properties](../settings-and-fields/01-channel-and-chat-settings-definitions.md).
+> **Note:** For technical definitions of channel access levels and privacy properties, see [**Channel Form Properties**](../settings-and-fields/01-channel-and-chat-settings-definitions.md).
 
 ---
 
@@ -52,8 +51,7 @@ To provide clear guidance to participants and establish channel governance:
    * **Auto Subscribe Groups**: Select one or more user groups (e.g., `Sales / User` or `Accountant`). All existing and newly created users in those groups are automatically enrolled into the channel without manual invitations.
 4. Click the cloud icon in the top-left toolbar to save changes.
 
-> [!TIP]
-> Use **Auto Subscribe Groups** for vital department channels (such as `#finance-ops` for accountants) so new hires are automatically placed into relevant channels upon account creation.
+> **Tip:** Use **Auto Subscribe Groups** for vital department channels (such as `#finance-ops` for accountants) so new hires are automatically placed into relevant channels upon account creation.
 
 ---
 

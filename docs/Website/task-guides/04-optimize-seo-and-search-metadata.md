@@ -27,7 +27,7 @@ CURQ opens the **Optimize SEO** modal dialog, presenting metadata inputs, search
 
 The top section of the dialog configures the metadata search engines read when crawling and indexing your page:
 
-> For search engine snippet specifications, character limits, and crawl rules, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For search engine snippet specifications, character limits, and crawl rules, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 * **Title**:
   * Enter a descriptive page title.
@@ -47,7 +47,7 @@ The top section of the dialog configures the metadata search engines read when c
 
 The **Keywords** tool audits your target terms against live page content, identifying whether keywords are placed strategically across HTML heading and content tags:
 
-> For detailed placement indicator definitions, heading hierarchy rules, and keyword density scoring, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For detailed placement indicator definitions, heading hierarchy rules, and keyword density scoring, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 1. In the **Keyword** input field, type a target keyword or keyphrase.
 2. Select the target **Language** from the adjacent dropdown *(keywords are evaluated per language)*.

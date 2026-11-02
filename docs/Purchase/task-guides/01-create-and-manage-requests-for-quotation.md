@@ -28,7 +28,7 @@ This guide covers how to initiate a new Request for Quotation (RFQ), select supp
 
 ![Request for Quotation form view showing vendor and order deadline fields](../media/002.png)
 
-> For complete field definitions across quotation headers and shipping terms, see [RFQ and Purchase Order Field Definitions](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+> For complete field definitions across quotation headers and shipping terms, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
 
 ---
 
@@ -64,7 +64,7 @@ Open the **Other Information** tab to verify commercial ownership, payment terms
 
 ![Other Information tab showing commercial and fiscal settings on RFQ form](../media/004.png)
 
-> For complete specifications of commercial fields, Incoterms, and payment terms, see [RFQ and Purchase Order Field Definitions](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+> For complete specifications of commercial fields, Incoterms, and payment terms, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
 
 ---
 

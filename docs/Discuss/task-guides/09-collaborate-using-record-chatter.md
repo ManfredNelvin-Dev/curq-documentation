@@ -17,8 +17,7 @@ Internal notes are strictly confidential to your company colleagues and are neve
 6. Click **Log**.
 7. The note is permanently timestamped on the record audit trail, and your colleague receives an immediate alert in their Discuss **Inbox**.
 
-> [!IMPORTANT]
-> Always verify that the composer tab is set to **Log note** when discussing pricing margins, internal approvals, or warehouse bottlenecks.
+> **Important:** Always verify that the composer tab is set to **Log note** when discussing pricing margins, internal approvals, or warehouse bottlenecks.
 
 ---
 

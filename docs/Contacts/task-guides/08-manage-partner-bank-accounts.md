@@ -28,8 +28,7 @@ Before adding partner accounts, register the banking institution with its offici
    * **Phone** & **Email**: Branch communication contacts.
 6. Click the cloud icon to save.
 
-> [!NOTE]
-> For specifications and validation rules of institutional fields, see [Bank Directory Fields](../settings-and-fields/02-bank-account-security-and-fields.md#bank-directory-fields).
+> **Note:** For specifications and validation rules of institutional fields, see [**Bank Directory Fields**](../settings-and-fields/02-bank-account-security-and-fields.md#bank-directory-fields).
 
 ---
 
@@ -57,8 +56,7 @@ You can attach a bank account directly from the partner's contact form or manage
 
    ![Bank Account form view showing account details and Send Money toggle](../media/038.png)
 
-> [!NOTE]
-> For parameter definitions of routing numbers and account holder reconciliation, see [Partner Bank Account Fields](../settings-and-fields/02-bank-account-security-and-fields.md#partner-bank-account-fields).
+> **Note:** For parameter definitions of routing numbers and account holder reconciliation, see [**Partner Bank Account Fields**](../settings-and-fields/02-bank-account-security-and-fields.md#partner-bank-account-fields).
 
 ---
 
@@ -73,8 +71,7 @@ To prevent payment fraud, all newly added bank accounts start with an **Untruste
 5. The status badge updates from **Untrusted** to **Trusted**.
 6. Save the record. CURQ now allows outgoing automated wire payments to this account.
 
-> [!NOTE]
-> For system trigger conditions and behavior matrices of trust badges and alert banners, see [Security Badges and Risk Levels](../settings-and-fields/02-bank-account-security-and-fields.md#security-badges-and-risk-levels).
+> **Note:** For system trigger conditions and behavior matrices of trust badges and alert banners, see [**Security Badges and Risk Levels**](../settings-and-fields/02-bank-account-security-and-fields.md#security-badges-and-risk-levels).
 
 ---
 

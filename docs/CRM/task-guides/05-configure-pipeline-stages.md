@@ -37,8 +37,7 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
    * **Requirements**: Enter internal criteria, guidelines, or milestone checklists displayed to salespeople to move an opportunity into this stage.
 4. Click **Save & Close**.
 
-> [!NOTE]
-> For detailed field constraints and pipeline behaviors, see [Pipeline Stage Properties](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#pipeline-stage-properties).
+> **Note:** For detailed field constraints and pipeline behaviors, see [**Pipeline Stage Properties**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#pipeline-stage-properties).
 
 ---
 

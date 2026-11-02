@@ -16,7 +16,7 @@ This guide covers setting up fixed and rule-based shipping methods, defining del
 
 Configure customer address handling and dynamic shipping cost computation:
 
-> For field explanations, allowed values, and delivery setting definitions, see [Delivery, Shipping, and Store Pickup Settings](../settings-and-fields/03-delivery-shipping-and-store-pickup-settings.md).
+> For field explanations, allowed values, and delivery setting definitions, see [**Delivery, Shipping, and Store Pickup Settings**](../settings-and-fields/03-delivery-shipping-and-store-pickup-settings.md).
 
 1. In the backend, open the **Website** application.
 2. Click **Configuration** > **Settings**.
@@ -31,7 +31,7 @@ Configure customer address handling and dynamic shipping cost computation:
 
 Define shipping providers, flat-rate options, tiered rules, and free delivery thresholds:
 
-> For carrier column definitions, provider calculation modes, and weight limits, see [Delivery Methods Specification](../settings-and-fields/03-delivery-shipping-and-store-pickup-settings.md).
+> For carrier column definitions, provider calculation modes, and weight limits, see [**Delivery Methods Specification**](../settings-and-fields/03-delivery-shipping-and-store-pickup-settings.md).
 
 1. Under the **Shipping Costs** setting, click the **Delivery Methods** link button *(or navigate to `Website` > `Configuration` > `eCommerce` > `Delivery Methods`)*.
 
@@ -52,7 +52,7 @@ Define shipping providers, flat-rate options, tiered rules, and free delivery th
 
 Allow local customers to collect their orders at physical retail stores and pay on-site:
 
-> For warehouse address fields, opening hours, geographic destination rules, and package dimension limits, see [Click & Collect and Store Pickup Parameters](../settings-and-fields/03-delivery-shipping-and-store-pickup-settings.md).
+> For warehouse address fields, opening hours, geographic destination rules, and package dimension limits, see [**Click & Collect and Store Pickup Parameters**](../settings-and-fields/03-delivery-shipping-and-store-pickup-settings.md).
 
 1. In **Website** > **Configuration** > **Settings** > **Delivery**, check the **Click & Collect** setting.
 2. Navigate to **Website** > **Configuration** > **eCommerce** > **Delivery Methods** and open the **Pick up in store** method.

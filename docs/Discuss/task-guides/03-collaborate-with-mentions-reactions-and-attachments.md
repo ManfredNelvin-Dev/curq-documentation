@@ -17,8 +17,7 @@ Mentioning a coworker draws their immediate attention to a conversation and send
 4. Press **Tab** or **Enter** (or click with your mouse) to insert the mention tag.
 5. Finish typing your note and press **Enter** to publish. The recipient receives an instant badge in their **Inbox** with a direct jump link to the specific message.
 
-> [!NOTE]
-> Mentioning `@channel` or `@everyone` alerts all enrolled members of that room simultaneously. Use broadcast mentions selectively to prevent notification fatigue.
+> **Note:** Mentioning `@channel` or `@everyone` alerts all enrolled members of that room simultaneously. Use broadcast mentions selectively to prevent notification fatigue.
 
 ---
 

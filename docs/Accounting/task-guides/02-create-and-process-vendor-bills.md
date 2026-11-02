@@ -6,7 +6,7 @@ Record supplier invoices, configure expense allocations and tax grids, verify ex
 
 ### Prerequisites
 
-* Ensure vendor contact profiles are registered in [Contacts](../../Contacts/task-guides/01-create-and-manage-contacts.md) with verified tax IDs and bank accounts for outgoing payments.
+* Ensure vendor contact profiles are registered in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) with verified tax IDs and bank accounts for outgoing payments.
 * Verify that general ledger expense accounts and input tax codes are configured in your chart of accounts.
 * Check that an active **Vendor Bills** journal exists with an assigned sequential prefix *(e.g., `BILL`)*.
 
@@ -49,7 +49,7 @@ Record supplier invoices, configure expense allocations and tax grids, verify ex
 
    ![Configured vendor bill with line items and totals](../media/013.png)
 
-> **Note:** For exhaustive descriptions of all line columns and general ledger booking rules, see [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
+> **Note:** For exhaustive descriptions of all line columns and general ledger booking rules, see [**Customer Invoice and Vendor Bill Field Definitions**](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
 
 ---
 
@@ -136,11 +136,7 @@ Accountants can manage supplier liability profiles and procurement tax codes dir
 
 ### Related Documentation
 
-* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
-* [Manage Supplier Contracts and Recurring Purchase Invoicing](./15-manage-supplier-contracts-and-purchase-invoicing.md)
-* [Manage Deferred Costs, Revenues, and Accruals](./14-manage-deferred-costs-revenues-and-accruals.md)
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
 * [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md)
 * [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
-* [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
+* [Manage Supplier Contracts and Recurring Purchase Invoicing](./15-manage-supplier-contracts-and-purchase-invoicing.md)

@@ -8,7 +8,7 @@ Issue customer credit notes (*Creditfacturen*), execute invoice reversals, apply
 
 * Ensure the target customer invoice is confirmed in **Posted** status before initiating an invoice-linked credit note.
 * Verify user permissions include **Billing Administrator** or **Accountant** access rights.
-* If issuing a monetary cash refund to the customer, ensure your bank journal and outgoing payment methods are configured in [Register and Reconcile Payments](./03-register-and-reconcile-payments.md).
+* If issuing a monetary cash refund to the customer, ensure your bank journal and outgoing payment methods are configured in [**Register and Reconcile Payments**](./03-register-and-reconcile-payments.md).
 
 ---
 
@@ -139,7 +139,7 @@ If the customer requests a monetary repayment via bank transfer rather than a ba
    * **In Payment Ribbon**: A prominent green **IN PAYMENT** banner appears in the upper-right corner of the credit note.
    * **Payments Smart Button**: A **Payments 1** smart button appears in the upper action bar, providing direct drill-down access to the registered bank payment record.
    * **Chatter Log**: The audit trail records: `Not Paid -> In Payment (Payment Status)`.
-   * **Bank Statement Clearing**: The payment sits in the liquidity clearing account `1101020` until the outbound bank statement transaction is imported and reconciled in [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md), at which point the ribbon transitions from **IN PAYMENT** to **PAID**.
+   * **Bank Statement Clearing**: The payment sits in the liquidity clearing account `1101020` until the outbound bank statement transaction is imported and reconciled in [**Import and Reconcile Bank Statements**](./04-import-and-reconcile-bank-statements.md), at which point the ribbon transitions from **IN PAYMENT** to **PAID**.
 
 ---
 

@@ -29,8 +29,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
      * **Invoicing Target**: Enter the monthly team revenue target in company currency (e.g., `10,000.00 / Month`).
 5. CURQ auto-saves updates, or click the cloud icon in the top header to save immediately.
 
-> [!NOTE]
-> For parameter specifications and capacity definitions, see [Sales Team Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#sales-team-parameters).
+> **Note:** For parameter specifications and capacity definitions, see [**Sales Team Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#sales-team-parameters).
 
 ---
 
@@ -64,8 +63,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
    * **Repeatedly**: Runs an automated background job (e.g., Every `1` `Hours`).
 5. Click **Save** in the top action bar.
 
-> [!NOTE]
-> For cron interval options and execution descriptions, see [Rule-Based Assignment Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#rule-based-assignment-parameters).
+> **Note:** For cron interval options and execution descriptions, see [**Rule-Based Assignment Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#rule-based-assignment-parameters).
 
 ---
 

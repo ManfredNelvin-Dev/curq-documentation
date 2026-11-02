@@ -207,9 +207,6 @@ To monitor all recurring revenue lines, recurrence cadences, and scheduled next 
 ### Related Documentation
 
 * [Contract and Recurring Invoicing Field Definitions (Customer and Supplier)](../settings-and-fields/06-customer-contract-and-recurring-invoicing-field-definitions.md)
-* [Manage Supplier Contracts and Recurring Purchase Invoicing](./15-manage-supplier-contracts-and-purchase-invoicing.md)
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Manage SEPA Direct Debit Orders and Mandates](./10-manage-sepa-direct-debit-orders-and-mandates.md)
-* [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
-* [Understanding the Invoice and Bill Lifecycle](../core-concepts/02-understanding-the-invoice-and-bill-lifecycle.md)
-
+* [Manage Supplier Contracts and Recurring Purchase Invoicing](./15-manage-supplier-contracts-and-purchase-invoicing.md)

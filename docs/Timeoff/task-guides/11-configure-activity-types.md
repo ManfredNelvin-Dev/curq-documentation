@@ -53,8 +53,7 @@ Under the **Activity Settings** section on the left, establish behavior and assi
 * **Keep Done**: Toggle whether completed activities remain visible in the record chatter feed.
 * **Default Note**: Add standard operating instructions or procedures into the rich-text note box.
 
-> [!NOTE]
-> For detailed specifications and field descriptions, see [Holidays, Mandatory Days, and Activity Specifications](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md).
+> **Note:** For detailed specifications and field descriptions, see [**Holidays, Mandatory Days, and Activity Specifications**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md).
 
 ---
 

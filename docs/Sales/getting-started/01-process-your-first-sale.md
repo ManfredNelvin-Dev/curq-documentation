@@ -115,8 +115,5 @@ You completed an end-to-end sales cycle in CURQ 18:
 
 * [Complete a Sale with Online Signature and Payment](./02-complete-a-sale-with-online-signature-and-payment.md)
 * [Create and Send Quotations](../task-guides/01-create-and-send-quotations.md)
-* [Configure Pricelists and Pricing Rules](../task-guides/08-configure-pricelists-and-pricing-rules.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
 * [Understanding the Sales Order Lifecycle and State Machine](../core-concepts/01-understanding-the-sales-order-lifecycle.md)
-* [Understanding Invoicing and Fulfillment](../core-concepts/02-understanding-invoicing-and-fulfillment.md)
-* [Frequently Asked Questions](../faq.md)

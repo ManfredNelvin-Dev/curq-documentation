@@ -70,7 +70,6 @@ In CURQ, the Auditfile export tool aggregates all posted journal entries, openin
 ### Related Documentation
 
 * [File Statutory VAT Returns and ICP Declaration](./08-file-statutory-vat-returns-and-icp-declaration.md)
+* [Statutory Tax Statement and ICP Field Definitions](../settings-and-fields/03-statutory-tax-statement-and-icp-field-definitions.md)
 * [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)
 * [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)
-* [Statutory Tax Statement and ICP Field Definitions](../settings-and-fields/03-statutory-tax-statement-and-icp-field-definitions.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)

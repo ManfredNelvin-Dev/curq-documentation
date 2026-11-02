@@ -88,8 +88,8 @@ flowchart LR
 ---
 
 ### Related Documentation
+
 * [Process Your First Sale from Quote to Invoice](../getting-started/01-process-your-first-sale.md)
 * [Confirm, Lock, and Unlock Sales Orders](../task-guides/03-confirm-and-lock-sales-orders.md)
 * [Generate Invoices from Sales Orders](../task-guides/04-invoice-sales-orders.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
-* [Frequently Asked Questions](../faq.md)

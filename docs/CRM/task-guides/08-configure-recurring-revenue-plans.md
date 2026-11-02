@@ -47,8 +47,7 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 
    ![CRM recurring plans drag reorder handle](../media/064.png)
 
-> [!NOTE]
-> For duration specifications and monthly normalization formulas, see [Recurring Revenue Plan Intervals](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#recurring-revenue-plan-intervals).
+> **Note:** For duration specifications and monthly normalization formulas, see [**Recurring Revenue Plan Intervals**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#recurring-revenue-plan-intervals).
 
 ---
 

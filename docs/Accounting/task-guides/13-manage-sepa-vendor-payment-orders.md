@@ -7,8 +7,8 @@ Aggregate verified supplier bills into batch payment orders, generate standardiz
 ### Prerequisites
 
 * Ensure your user account has **Billing Administrator**, **Accountant**, or **Financial Adviser** permissions.
-* Confirm that supplier bills are validated and open in [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md).
-* Verify that each vendor profile contains a valid recipient bank account (IBAN/BIC) in [Contacts](../../Contacts/task-guides/01-create-and-manage-contacts.md).
+* Confirm that supplier bills are validated and open in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md).
+* Verify that each vendor profile contains a valid recipient bank account (IBAN/BIC) in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
 * Ensure an outbound payment mode *(e.g., `SEPA Credit Transfer` or `Manual`)* is configured under **Configuration > Payment Modes** with a linked financial **Bank Journal**.
 
 ---
@@ -36,7 +36,7 @@ Rather than disbursing payments individually, CURQ enables finance teams to bund
 
    ![Vendor payment record in In Process state](../media/141.png)
 
-   > For full field specifications of vendor payment orders, batch headers, and XML parameters, see [Vendor Payment Order Batch Form Fields](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md#vendor-payment-order-batch-form-fields).
+   > For full field specifications of vendor payment orders, batch headers, and XML parameters, see [**Vendor Payment Order Batch Form Fields**](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md#vendor-payment-order-batch-form-fields).
 
 5. Configure the payment batch header parameters:
    * **Payment Mode**: Select your electronic disbursement mode *(e.g., `Manual` or `SEPA Credit Transfer`)*.
@@ -149,7 +149,7 @@ Once all lines, journals, and communication references are validated:
 
 When the actual cash disbursement is executed by your commercial bank:
 
-1. Import your periodic electronic bank statement *(CAMT.053 or CSV)* via [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md) or automatic Ponto synchronization.
+1. Import your periodic electronic bank statement *(CAMT.053 or CSV)* via [**Import and Reconcile Bank Statements**](./04-import-and-reconcile-bank-statements.md) or automatic Ponto synchronization.
 2. Open **Accounting > Reconcile** or the statement reconciliation widget.
 3. The bank statement will display a debit entry matching the payment order total *(e.g., `-€ 99.00`)*.
 4. Match the statement line against the outstanding payment order clearing lines.
@@ -172,5 +172,4 @@ When the actual cash disbursement is executed by your commercial bank:
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
 * [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md)
-* [Manage SEPA Direct Debit Orders and Mandates](./10-manage-sepa-direct-debit-orders-and-mandates.md)
 * [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)

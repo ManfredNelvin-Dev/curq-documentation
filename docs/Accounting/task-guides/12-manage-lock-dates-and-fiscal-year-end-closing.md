@@ -9,8 +9,8 @@ Configure reversible accounting period lock dates, protect filed statutory tax r
 * Ensure your user account is assigned the **Billing Administrator**, **Accountant**, or **Financial Adviser** role. Configuring lock dates requires administrative accounting privileges.
 * Verify that all bank accounts, credit cards, and suspense clearing accounts are fully reconciled through the target closing period.
 * Confirm that customer invoices and vendor bills for the period are posted to the general ledger.
-* Verify that fixed asset depreciation entries have been computed and posted via [Manage Fixed Assets and Depreciation](./06-manage-fixed-assets-and-depreciation.md).
-* Verify that statutory Dutch VAT returns have been finalized via [File Statutory VAT Returns and ICP Declaration](./08-file-statutory-vat-returns-and-icp-declaration.md).
+* Verify that fixed asset depreciation entries have been computed and posted via [**Manage Fixed Assets and Depreciation**](./06-manage-fixed-assets-and-depreciation.md).
+* Verify that statutory Dutch VAT returns have been finalized via [**File Statutory VAT Returns and ICP Declaration**](./08-file-statutory-vat-returns-and-icp-declaration.md).
 
 ---
 
@@ -105,7 +105,7 @@ Performing a formal fiscal year-end close in CURQ ensures that all operational s
 #### Step 6: Finalize Statutory Tax Returns
 
 1. Navigate to **Reporting > NL BTW Statement**.
-2. Generate and calculate the final Q4 VAT return covering `10/01/2026` through `12/31/2026` via [File Statutory VAT Returns and ICP Declaration](./08-file-statutory-vat-returns-and-icp-declaration.md).
+2. Generate and calculate the final Q4 VAT return covering `10/01/2026` through `12/31/2026` via [**File Statutory VAT Returns and ICP Declaration**](./08-file-statutory-vat-returns-and-icp-declaration.md).
 3. Validate, post, and click **Finalize** after submitting figures to the *Belastingdienst*.
 4. Generate the corresponding **NL ICP Statement** for Q4 cross-border EU transactions.
 5. Open **Accounting > Lock Dates** and set **Tax Return Lock Date** to `12/31/2026`.
@@ -184,7 +184,6 @@ If an external auditor requires an adjusting entry in a closed interim period or
 ### Related Documentation
 
 * [Create Manual Journal Entries](./05-create-manual-journal-entries.md)
-* [Manage Fixed Assets and Depreciation](./06-manage-fixed-assets-and-depreciation.md)
 * [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)
-* [File Statutory VAT Returns and ICP Declaration](./08-file-statutory-vat-returns-and-icp-declaration.md)
+* [Manage Fixed Assets and Depreciation](./06-manage-fixed-assets-and-depreciation.md)
 * [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)

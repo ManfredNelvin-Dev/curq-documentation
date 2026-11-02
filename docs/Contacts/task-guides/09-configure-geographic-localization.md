@@ -37,8 +37,7 @@ Configure country address formatting, add federal states, register cities for au
    * **Customer Name Position**: Choose where the recipient name appears relative to the street address (`Before Address` or `After Address`).
 4. Click the cloud icon to save.
 
-> [!NOTE]
-> For ISO schemas, currency bindings, and address formatting toggles, see [Country Fields](../settings-and-fields/03-localization-and-country-settings.md#country-fields).
+> **Note:** For ISO schemas, currency bindings, and address formatting toggles, see [**Country Fields**](../settings-and-fields/03-localization-and-country-settings.md#country-fields).
 
 ---
 
@@ -58,8 +57,7 @@ Configure country address formatting, add federal states, register cities for au
 
 4. Click outside the row or click **Save**.
 
-> [!NOTE]
-> For administrative subdivision specifications, see [Federal State Fields](../settings-and-fields/03-localization-and-country-settings.md#federal-state-fields).
+> **Note:** For administrative subdivision specifications, see [**Federal State Fields**](../settings-and-fields/03-localization-and-country-settings.md#federal-state-fields).
 
 ---
 
@@ -82,8 +80,7 @@ When cities and postal codes are entered into this registry, typing a postal cod
 
 4. Click **Save** at the top left (or click outside the line).
 
-> [!NOTE]
-> For municipality parameter constraints, see [City Fields](../settings-and-fields/03-localization-and-country-settings.md#city-fields).
+> **Note:** For municipality parameter constraints, see [**City Fields**](../settings-and-fields/03-localization-and-country-settings.md#city-fields).
 
 ---
 
@@ -107,8 +104,7 @@ Country groups combine multiple nations to apply shared sales pricelists or fisc
 
 6. Click the cloud icon to save.
 
-> [!NOTE]
-> For zone definitions and pricelist scoping rules, see [Country Group Fields](../settings-and-fields/03-localization-and-country-settings.md#country-group-fields).
+> **Note:** For zone definitions and pricelist scoping rules, see [**Country Group Fields**](../settings-and-fields/03-localization-and-country-settings.md#country-group-fields).
 
 ---
 

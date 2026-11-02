@@ -103,9 +103,8 @@ When sales representatives record structured lost reasons rather than unstructur
 ---
 
 ### Related Documentation
+
 * [Track Your First Lead from Inquiry to Won Deal](../getting-started/01-track-your-first-lead-from-inquiry-to-won-deal.md)
 * [Qualify and Convert Leads into Opportunities](../task-guides/02-convert-leads-to-opportunities.md)
-* [Manage Pipeline Stages and Won or Lost Deals](../task-guides/03-manage-pipeline-stages-and-won-lost-status.md)
-* [Configure Recurring Revenue Plans](../task-guides/08-configure-recurring-revenue-plans.md)
 * [Understanding Lead Assignment and Predictive Scoring](./02-understanding-lead-assignment-and-predictive-scoring.md)
 * [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

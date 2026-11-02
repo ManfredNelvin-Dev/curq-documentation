@@ -12,7 +12,7 @@ This guide covers how to navigate the Purchase Orders workspace, browse orders a
 
 ![Purchase Orders Default List View and Billing Status](../media/018.png)
 
-> For definitions of all columns and billing statuses in the list view, see [RFQ and Purchase Order Field Definitions](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+> For definitions of all columns and billing statuses in the list view, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
 
 ---
 

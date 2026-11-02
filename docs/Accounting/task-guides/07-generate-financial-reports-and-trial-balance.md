@@ -8,7 +8,7 @@ Generate, filter, analyze, and export core financial statements, including the P
 
 * Ensure regular journal entries, customer invoices, vendor bills, and bank statements are posted and reconciled in your general ledger.
 * Verify your Chart of Accounts hierarchy is properly configured with assigned account types *(Asset, Liability, Equity, Income, Expense)*.
-* Confirm periodic adjustments *(such as depreciation entries from [Manage Fixed Assets and Depreciation](./06-manage-fixed-assets-and-depreciation.md) and accruals from [Create Manual Journal Entries](./05-create-manual-journal-entries.md))* are posted for the target reporting period.
+* Confirm periodic adjustments *(such as depreciation entries from [**Manage Fixed Assets and Depreciation**](./06-manage-fixed-assets-and-depreciation.md) and accruals from [**Create Manual Journal Entries**](./05-create-manual-journal-entries.md))* are posted for the target reporting period.
 * Check that your user account has **Billing Administrator** or **Accountant** access rights in CURQ.
 
 ---
@@ -150,7 +150,7 @@ When reviewing ledger accounts or preparing for external audit inquiries, the Ge
 
    ![General Ledger parameters and account unfold](../media/069.png)
 
-   > For detailed specifications of all report parameters and column definitions, see [OCA General Ledger Report Wizard Field Definitions](../settings-and-fields/05-fixed-assets-and-financial-reports-field-definitions.md#oca-general-ledger-report-setup-wizard-fields).
+   > For detailed specifications of all report parameters and column definitions, see [**OCA General Ledger Report Wizard Field Definitions**](../settings-and-fields/05-fixed-assets-and-financial-reports-field-definitions.md#oca-general-ledger-report-setup-wizard-fields).
 
 4. Analyze the detailed transaction lines for each ledger account:
    * **`0215010 Verkrijgings- of vervaardigingsprijs inventaris`**:
@@ -363,17 +363,13 @@ CURQ automatically archives every compiled MIS report instance, providing financ
   * **Resolution:** Open the General Ledger for that account, filter by Credit transactions, and identify the inverted entry.
 * **Unposted Depreciation or Accruals Distorting Period Results**:
   * **Cause:** Month-end asset depreciation was computed but not validated, or recurring prepaid expense adjustments were omitted.
-  * **Resolution:** Run **Assets > Compute Assets** as documented in [Manage Fixed Assets and Depreciation](./06-manage-fixed-assets-and-depreciation.md) before locking the reporting period.
+  * **Resolution:** Run **Assets > Compute Assets** as documented in [**Manage Fixed Assets and Depreciation**](./06-manage-fixed-assets-and-depreciation.md) before locking the reporting period.
 
 ---
 
 ### Related Documentation
 
-* [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md)
-* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
-* [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
-* [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md)
-* [Create Manual Journal Entries](./05-create-manual-journal-entries.md)
-* [Manage Fixed Assets and Depreciation](./06-manage-fixed-assets-and-depreciation.md)
 * [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)
+* [Create Manual Journal Entries](./05-create-manual-journal-entries.md)
+* [Fixed Assets and Financial Reports Field Definitions](../settings-and-fields/05-fixed-assets-and-financial-reports-field-definitions.md)
 * [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)

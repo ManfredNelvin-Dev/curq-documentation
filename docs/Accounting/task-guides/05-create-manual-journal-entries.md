@@ -11,7 +11,7 @@ Record non-operational transactions, adjust general ledger balances, set up init
 
   ![Chart of Accounts configuration form showing code, name, and account type](../media/073.png)
 
-  > For complete Chart of Accounts field and RGS classification definitions, see [Chart of Accounts Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#chart-of-accounts-field-definitions).
+  > For complete Chart of Accounts field and RGS classification definitions, see [**Chart of Accounts Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#chart-of-accounts-field-definitions).
 * Ensure a **Miscellaneous Operations** journal *(or dedicated adjusting journal)* is configured in **Configuration > Journals**.
 * Confirm that the target accounting period is not blocked by a fiscal lock date.
 
@@ -181,7 +181,7 @@ For statutory compliance and tamper-evident audit trails, CURQ enables cryptogra
 ### Edge Cases & Recovery Steps
 
 * **Modifying a Posted Journal Entry**: If an error is discovered on a posted entry before the fiscal period is locked, open the entry and click **Reset to Draft**. Make the required line adjustments, verify that debits still equal credits, and click **Post**.
-* **Fiscal Lock Date Prevents Editing**: If an entry falls inside a locked period, CURQ prevents both **Reset to Draft** and direct edits *(see [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md))*. Do not modify the historical period; instead, use **Reverse Entry** or create a new adjusting entry in the current open fiscal period.
+* **Fiscal Lock Date Prevents Editing**: If an entry falls inside a locked period, CURQ prevents both **Reset to Draft** and direct edits *(see [**Manage Lock Dates and Fiscal Year-End Closing**](./12-manage-lock-dates-and-fiscal-year-end-closing.md))*. Do not modify the historical period; instead, use **Reverse Entry** or create a new adjusting entry in the current open fiscal period.
 * **Posting to Accounts Receivable or Payable Without a Partner**: CURQ requires a **Partner** on every line affecting receivable (`1101010`) or payable (`1203010`) accounts. If omitted, the general ledger will balance, but aged partner balance reports and reconciliation widgets will show unallocated partner balances.
 * **Foreign Currency Journal Entries**: When recording entries involving foreign currencies, ensure the company currency Debit/Credit amounts reflect the accurate converted rate while the **Amount in Currency** field stores the nominal foreign currency figure.
 
@@ -189,11 +189,7 @@ For statutory compliance and tamper-evident audit trails, CURQ enables cryptogra
 
 ### Related Documentation
 
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
 * [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)
-* [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
+* [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)
 * [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)
-* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
-* [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
-* [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
-* [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md)
+* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)

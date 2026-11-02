@@ -36,7 +36,7 @@ The **Customer Invoices** card monitors customer debt, collection urgency, and b
      * **Unpaid**: Total volume of posted customer invoices awaiting full settlement *(e.g., `3 Unpaid (€ 379.57)`)*.
      * **Late**: Overdue invoices that have exceeded contract maturity dates *(e.g., `2 Late (€ 280.57)`)*.
 3. Operational actions:
-   * Click **New** on the card to open a draft customer invoice directly pre-routed to `Customer Invoices` *(see [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md))*:
+   * Click **New** on the card to open a draft customer invoice directly pre-routed to `Customer Invoices` *(see [**Create and Validate Customer Invoices**](./01-create-and-validate-customer-invoices.md))*:
 
      ![Draft customer invoice initialized directly from the dashboard Customer Invoices card](../media/214.png)
 
@@ -47,14 +47,14 @@ The **Customer Invoices** card monitors customer debt, collection urgency, and b
 
      * **View**: Fast shortcuts to filtered views:
        * **Invoices**: Opens the sales invoice list view.
-       * **Credit Notes**: Opens customer credit notes *(see [Issue and Manage Customer Credit Notes](./09-issue-and-manage-customer-credit-notes.md))*.
+       * **Credit Notes**: Opens customer credit notes *(see [**Issue and Manage Customer Credit Notes**](./09-issue-and-manage-customer-credit-notes.md))*.
        * **Journal Items**: Opens the detailed debit/credit line ledger for this journal.
      * **New**: Fast creation actions:
        * **Invoice**: Initializes a new draft sales invoice.
        * **Credit Note**: Initializes a new customer refund voucher.
        * **Upload Invoices**: Launches the batch document import dialog.
      * **Reporting**:
-       * **Invoices Analysis**: Directly launches the multidimensional OLAP sales report *(see [Analyze Invoicing Trends and Product Margins](./18-analyze-invoicing-trends-and-product-margins.md))*.
+       * **Invoices Analysis**: Directly launches the multidimensional OLAP sales report *(see [**Analyze Invoicing Trends and Product Margins**](./18-analyze-invoicing-trends-and-product-margins.md))*.
      * **Color Palette**: Click any color swatch to customize the card vertical left border stripe for rapid visual identification.
      * **Configuration**: Opens the journal master definition to adjust sequence prefixes, default accounts, or allowed payment methods.
 
@@ -72,11 +72,11 @@ The **Vendor Bills** card tracks supplier procurement liabilities, payment stagi
      * **Late**: Overdue supplier invoices exposing the company to commercial interest or vendor credit holds *(e.g., `1 Late (€ 1,452.00)`)*.
 2. Operational actions:
    * Click **Upload** to ingest vendor invoices via automated PDF/OCR processing.
-   * Click **New** to open a blank manual vendor bill form pre-routed to `Vendor Bills` with sequence prefix `BILL/YYYY/MM/XXXX` *(see [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md))*:
+   * Click **New** to open a blank manual vendor bill form pre-routed to `Vendor Bills` with sequence prefix `BILL/YYYY/MM/XXXX` *(see [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md))*:
 
      ![Draft vendor bill initialized directly from the dashboard Vendor Bills card](../media/215.png)
 
-   * Click **1 To Pay** to batch outgoing SEPA credit transfers directly *(see [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md))*.
+   * Click **1 To Pay** to batch outgoing SEPA credit transfers directly *(see [**Manage SEPA Vendor Payment Orders**](./13-manage-sepa-vendor-payment-orders.md))*.
 
 ---
 
@@ -87,8 +87,8 @@ The **Bank** and **Cash** cards provide real-time liquidity oversight and automa
 1. Inspect the **Bank** card:
    * **Balance**: Displays the total general ledger book balance of the bank account *(e.g., `€ 252.89`)*.
    * **Balance Trendline**: Continuous linear plot tracking cumulative account balance fluctuations across recent accounting dates.
-   * **Import (OCA)**: Primary action button launching the electronic statement import wizard for CAMT.053, OFX, QIF, and CSV files *(see [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md))*.
-   * **Transactions**: Direct shortcut opening the interactive bank reconciliation interface to match statement lines against open invoices, bills, and transit accounts *(see [Register and Reconcile Payments](./03-register-and-reconcile-payments.md))*.
+   * **Import (OCA)**: Primary action button launching the electronic statement import wizard for CAMT.053, OFX, QIF, and CSV files *(see [**Import and Reconcile Bank Statements**](./04-import-and-reconcile-bank-statements.md))*.
+   * **Transactions**: Direct shortcut opening the interactive bank reconciliation interface to match statement lines against open invoices, bills, and transit accounts *(see [**Register and Reconcile Payments**](./03-register-and-reconcile-payments.md))*.
 2. Inspect the **Cash** card:
    * Displays physical vault and petty cash balances *(e.g., `€ 50.00`)* with independent reconciliation tools.
 
@@ -106,7 +106,7 @@ For workflows already detailed in dedicated guides, use the dashboard card as an
 
    ![Accruals draft journal entry form with ACCR sequence prefix and Journal Items tab](../media/210.png)
 
-   * *Detailed procedure*: [Manage Deferred Costs, Revenues, and Accruals](./14-manage-deferred-costs-revenues-and-accruals.md) and [Reverse a Journal Entry (Accruals)](./05-create-manual-journal-entries.md#task-4-reverse-a-journal-entry-accruals-and-adjustments).
+   * *Detailed procedure*: [**Manage Deferred Costs, Revenues, and Accruals**](./14-manage-deferred-costs-revenues-and-accruals.md) and [**Reverse a Journal Entry (Accruals)**](./05-create-manual-journal-entries.md#task-4-reverse-a-journal-entry-accruals-and-adjustments).
 
 2. **Exchange Difference**:
    * Dedicated sub-ledger recording realized foreign currency gains (`8501020`) and losses (`4501020`) calculated during multi-currency invoice settlements and bank statement reconciliations.
@@ -114,7 +114,7 @@ For workflows already detailed in dedicated guides, use the dashboard card as an
 
    ![Exchange Difference draft journal entry form with EXCH sequence prefix and Journal Items tab](../media/211.png)
 
-   * *Detailed procedure*: [Register and Reconcile Payments](./03-register-and-reconcile-payments.md).
+   * *Detailed procedure*: [**Register and Reconcile Payments**](./03-register-and-reconcile-payments.md).
 
 3. **Taxes**:
    * Dedicated sub-ledger recording quarterly VAT clearing vouchers, small business scheme (KOR) adjustments, and statutory payments to the tax office.
@@ -122,7 +122,7 @@ For workflows already detailed in dedicated guides, use the dashboard card as an
 
    ![Taxes draft journal entry form with TAX sequence prefix and Journal Items tab](../media/212.png)
 
-   * *Detailed procedure*: [File Statutory VAT Returns and ICP Declaration](./08-file-statutory-vat-returns-and-icp-declaration.md).
+   * *Detailed procedure*: [**File Statutory VAT Returns and ICP Declaration**](./08-file-statutory-vat-returns-and-icp-declaration.md).
 
 4. **Depreciations**:
    * Dedicated sub-ledger receiving automated monthly depreciation write-downs generated by the fixed asset management engine.
@@ -130,7 +130,7 @@ For workflows already detailed in dedicated guides, use the dashboard card as an
 
    ![Depreciations draft journal entry form with DEPR sequence prefix and Journal Items tab](../media/213.png)
 
-   * *Detailed procedure*: [Manage Fixed Assets and Depreciation](./06-manage-fixed-assets-and-depreciation.md).
+   * *Detailed procedure*: [**Manage Fixed Assets and Depreciation**](./06-manage-fixed-assets-and-depreciation.md).
 
 5. **Miscellaneous Operations**:
    * General journal sub-ledger used for miscellaneous year-end closing entries, opening balances, and unallocated non-commercial adjustments.
@@ -138,7 +138,7 @@ For workflows already detailed in dedicated guides, use the dashboard card as an
 
    ![Miscellaneous Operations draft journal entry form with MISC sequence prefix and Journal Items tab](../media/216.png)
 
-   * *Detailed procedure*: [Create Manual Journal Entries](./05-create-manual-journal-entries.md).
+   * *Detailed procedure*: [**Create Manual Journal Entries**](./05-create-manual-journal-entries.md).
 
 ---
 
@@ -197,7 +197,7 @@ Payroll transactions contain sensitive employee compensation details that must b
      * Credit: Net monetary amounts owed to employees *(e.g., `€ 8,000.00`)*.
 5. Verify total debits equal total credits (`€ 12,200.00 = € 12,200.00`) and click **Post**.
 6. When disbursing net wages to employee bank accounts via SEPA payment batching:
-   * Debit `1207010 Te betalen nettolonen` and Credit `1002010 Rekening-courant bank`, completely clearing the liability to zero *(see [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md))*.
+   * Debit `1207010 Te betalen nettolonen` and Credit `1002010 Rekening-courant bank`, completely clearing the liability to zero *(see [**Manage SEPA Vendor Payment Orders**](./13-manage-sepa-vendor-payment-orders.md))*.
 
 ---
 
@@ -220,7 +220,7 @@ For companies maintaining periodic inventory accounting or recording physical st
      * Debit: `0201010 Handelsgoederen voorraad` (Balance Sheet asset increase).
      * Credit: `7001090 Voorraadverschillen en afboekingen` (P&L expense reduction).
 5. Verify line balance and click **Post**.
-6. The updated inventory book balance immediately reflects in your Balance Sheet under current assets *(see [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md))*.
+6. The updated inventory book balance immediately reflects in your Balance Sheet under current assets *(see [**Generate Financial Reports and Trial Balance**](./07-generate-financial-reports-and-trial-balance.md))*.
 
 ---
 
@@ -233,7 +233,7 @@ For companies maintaining periodic inventory accounting or recording physical st
   ![Outgoing Payments tab](../media/078.png)
   ![Journal Advanced Settings tab](../media/079.png)
 
-  > For complete journal parameter specifications, see [Financial Journals Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#financial-journals-field-definitions).
+  > For complete journal parameter specifications, see [**Financial Journals Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#financial-journals-field-definitions).
 * **Unbalanced Dashboard Warning**: If a journal card displays an unexpected red alert icon, one or more unposted draft entries contain balance discrepancies. Click the card title to review and balance draft items.
 * **Filter Persistence**: Dashboard counters reflect real-time database state. If numbers appear unexpectedly low, verify the top search bar is clear and no restrictive partner or date filters are active.
 
@@ -244,9 +244,4 @@ For companies maintaining periodic inventory accounting or recording physical st
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
 * [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md)
-* [Create Manual Journal Entries](./05-create-manual-journal-entries.md)
-* [Manage Fixed Assets and Depreciation](./06-manage-fixed-assets-and-depreciation.md)
-* [File Statutory VAT Returns and ICP Declaration](./08-file-statutory-vat-returns-and-icp-declaration.md)
-* [Manage Deferred Costs, Revenues, and Accruals](./14-manage-deferred-costs-revenues-and-accruals.md)
-* [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
+* [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)

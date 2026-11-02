@@ -32,8 +32,7 @@ Configure automated win probability calculations, select statistical attributes,
    * **Source / Medium**: Evaluates marketing attribution channels.
 5. In the **Consider leads created as of the:** field, select or enter a historical cutoff date (e.g., `12/28/2025` or 12–24 months prior). Records created before this threshold will be excluded, ensuring outdated sales cycles or discontinued pricing don't skew modern win predictions.
 
-> [!NOTE]
-> For mathematical details, Bayesian weighting rules, and parameter definitions, see [Predictive Lead Scoring Parameters](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#predictive-lead-scoring-parameters).
+> **Note:** For mathematical details, Bayesian weighting rules, and parameter definitions, see [**Predictive Lead Scoring Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#predictive-lead-scoring-parameters).
 
 ---
 

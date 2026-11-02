@@ -53,8 +53,7 @@ CURQ automatically monitors user activity in the browser to inform coworkers of 
    * **Hollow circle (`○`)**: **Offline**. The user closed their browser tab, signed out, or lost connection.
    * **Green heart (`♥`)**: **System Assistant**. Indicates automated bots (such as CURQBot).
 
-> [!NOTE]
-> Presence indicators are automated by system heartbeat events. Users cannot manually force an "Away" or "Invisible" state while remaining active in the platform.
+> **Note:** Presence indicators are automated by system heartbeat events. Users cannot manually force an "Away" or "Invisible" state while remaining active in the platform.
 
 ---
 

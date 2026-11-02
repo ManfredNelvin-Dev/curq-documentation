@@ -116,9 +116,7 @@ In this tutorial, you completed a full financial cycle:
 
 ## Related Documentation
 
-* [Record Opening Balances During System Migration](../task-guides/05-create-manual-journal-entries.md#task-5-record-opening-balances-during-system-migration)
 * [Create and Validate Customer Invoices](../task-guides/01-create-and-validate-customer-invoices.md)
-* [Import and Reconcile Bank Statements](../task-guides/04-import-and-reconcile-bank-statements.md)
+* [Register and Reconcile Payments](../task-guides/03-register-and-reconcile-payments.md)
 * [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
 * [Understanding the Invoice and Bill Lifecycle](../core-concepts/02-understanding-the-invoice-and-bill-lifecycle.md)

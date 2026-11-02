@@ -143,8 +143,7 @@ Beyond commercial invoices and product margins, financial controllers must audit
 
 ### Related Documentation
 
-* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)
-* [Create Manual Journal Entries and Manage Analytic Items](./05-create-manual-journal-entries.md)
 * [Fixed Assets and Financial Reports Field Definitions](../settings-and-fields/05-fixed-assets-and-financial-reports-field-definitions.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
+* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
+* [Create Manual Journal Entries and Manage Analytic Items](./05-create-manual-journal-entries.md)

@@ -26,8 +26,7 @@ CURQ 18 provides visual menu management directly from the frontend website build
 
 4. The **Edit Menu** modal opens, displaying your website's active navigation tree in an interactive sortable list.
 
-> [!NOTE]
-> Navigation items such as **Shop** (`/shop`) and **Courses** (`/slides`) are automatically added to this menu hierarchy when their respective apps (**eCommerce** and **eLearning**) are installed. You can rearrange their display sequence or rename them through the Edit Menu modal just like standard custom links.
+> **Note:** Navigation items such as **Shop** (`/shop`) and **Courses** (`/slides`) are automatically added to this menu hierarchy when their respective apps (**eCommerce** and **eLearning**) are installed. You can rearrange their display sequence or rename them through the Edit Menu modal just like standard custom links.
 
    ![Edit Menu modal dialog showing the list of existing navigation links, drag handles, edit icons, and add buttons](../media/028.png)
 

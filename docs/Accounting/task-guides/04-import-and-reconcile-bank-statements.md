@@ -7,7 +7,7 @@ Import electronic bank statements, register manual bank transaction lines, match
 ### Prerequisites
 
 * Verify that your bank account is configured with an active journal *(e.g., `Bank`)* in your Chart of Accounts.
-* Verify that corresponding customer invoices in [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md) or vendor bills in [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md) are confirmed and in **Posted** or **In Payment** status.
+* Verify that corresponding customer invoices in [**Create and Validate Customer Invoices**](./01-create-and-validate-customer-invoices.md) or vendor bills in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md) are confirmed and in **Posted** or **In Payment** status.
 * If using automated bank synchronization *(e.g., MyPonto or direct banking feeds)*, ensure your financial institution connection is active and authorized.
 
 ---
@@ -203,9 +203,7 @@ When transferring liquidity between two accounts managed within CURQ *(such as t
 
 ### Related Documentation
 
+* [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
+* [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
-* [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
-* [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
-* [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)

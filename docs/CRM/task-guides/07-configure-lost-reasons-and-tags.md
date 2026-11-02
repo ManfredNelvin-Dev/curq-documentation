@@ -19,8 +19,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 5. In the inline **Description** field, enter your standardized reason title (e.g., `Competitor Selected` or `Technical Scope Incompatibility`).
 6. Press **Enter** or click the cloud icon at the top of the window to save the reason.
 
-> [!NOTE]
-> For standard analytical categories and industry taxonomies, see [Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
+> **Note:** For standard analytical categories and industry taxonomies, see [**Standard Lost Reasons Catalog**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
 
 ---
 
@@ -39,8 +38,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 5. In the **Color** column, click the color swatch box to open the swatch palette, then click a color index to visually style the tag badge.
 6. Press **Enter** or click away to save the new tag.
 
-> [!NOTE]
-> For recommended tag taxonomies and color schemes, see [Default Deal Tags](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#default-deal-tags).
+> **Note:** For recommended tag taxonomies and color schemes, see [**Default Deal Tags**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#default-deal-tags).
 
 ---
 

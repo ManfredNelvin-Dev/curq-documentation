@@ -6,8 +6,7 @@ Manage online sales orders, recover abandoned shopping carts, and configure webs
 
 ---
 
-> [!NOTE]
-> Installing the **eCommerce** app automatically creates the **Shop** navigation menu (`/shop`) in your website header, along with the shopping cart, wishlist shortcuts, and product catalog pages. The top administrative **eCommerce** menu also becomes available for managing orders and catalog settings. If your database only uses the base website builder without eCommerce, configure standard pages via [Page Management](./03-manage-webpages-and-redirections.md).
+> **Note:** Installing the **eCommerce** app automatically creates the **Shop** navigation menu (`/shop`) in your website header, along with the shopping cart, wishlist shortcuts, and product catalog pages. The top administrative **eCommerce** menu also becomes available for managing orders and catalog settings. If your database only uses the base website builder without eCommerce, configure standard pages via [**Page Management**](./03-manage-webpages-and-redirections.md).
 
 ---
 
@@ -38,12 +37,12 @@ The menu organizes your online store into three functional areas:
 * **Key Columns Displayed**:
   The Orders view tracks sales order numbers, checkout timestamps, customer contact accounts, originating website domains, assigned sales representatives, follow-up activities, legal companies, order totals, and invoice statuses.
 
-> For descriptions of sales order columns, invoice status values, and activity tracking, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For descriptions of sales order columns, invoice status values, and activity tracking, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 * **View Switcher**: Use the view icons in the upper-right corner to toggle between **List**, **Kanban cards**, and **Activities calendar**.
 
 * **All Sales Orders Filter**: To see orders across both physical and digital channels, remove the **From Website** filter chip in the search bar.
-* **Order Processing Guides**: For step-by-step instructions on confirming orders, delivery validation, and invoice generation, see [Confirm Sales Order](../../Sales/task-guides/03-confirm-and-lock-sales-orders.md), [Invoicing Sales Order](../../Sales/task-guides/04-invoice-sales-orders.md), and [Analyze Sales Orders](../../Sales/task-guides/13-sales-reporting-and-analytics.md).
+* **Order Processing Guides**: For step-by-step instructions on confirming orders, delivery validation, and invoice generation, see [**Confirm Sales Order**](../../Sales/task-guides/03-confirm-and-lock-sales-orders.md), [**Invoicing Sales Order**](../../Sales/task-guides/04-invoice-sales-orders.md), and [**Analyze Sales Orders**](../../Sales/task-guides/13-sales-reporting-and-analytics.md).
 
 ### Unpaid Orders (`eCommerce > Orders > Unpaid Orders`)
 
@@ -92,7 +91,7 @@ Clicking **Abandoned Carts** displays shopping sessions where visitors added ite
 
 CURQ tracks customer shopping journeys through three progressive stages: **Abandoned Carts** (uncompleted checkout sessions awaiting recovery), **Unpaid Orders** (submitted checkouts awaiting offline payment settlement like Wire Transfer), and **Confirmed Orders** (validated purchases ready for fulfillment and billing).
 
-> For detailed comparison criteria, transition states, and recovery triggers, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For detailed comparison criteria, transition states, and recovery triggers, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ### Customers (`eCommerce > Orders > Customers`)
 
@@ -102,7 +101,7 @@ Clicking **Customers** opens your address book of customer contacts and buyer ac
 
 * **Default View**: Opens directly in **Kanban card view** by default, with an option to toggle to **List view** using the switcher in the upper-right corner.
 * **Card Details**: Each card displays the contact avatar, display name, job title, company link, city, and country.
-* **Creating a Customer**: Clicking the **New** button opens a blank contact form with **Company** selected by default. Follow the step-by-step creation guide in [Create and Manage Contacts](../../Contacts/task-guides/01-create-and-manage-contacts.md).
+* **Creating a Customer**: Clicking the **New** button opens a blank contact form with **Company** selected by default. Follow the step-by-step creation guide in [**Create and Manage Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
 * **Customer Profile & Metrics**: Clicking any card opens the customer profile form:
   * **Sales Smart Button**: Displays the total count of quotations and sales orders, opening their full order history.
   * **Invoiced Smart Button**: Displays the cumulative billing amount for the customer.
@@ -110,7 +109,7 @@ Clicking **Customers** opens your address book of customer contacts and buyer ac
 
 ![Customer contact form highlighting Sales and Invoiced smart buttons tracking customer purchase history](../media/072.png)
 
-* **Search & Filters**: Search by name, email, or company, or use custom filters and grouping as described in [Search, Filter, and Group Contacts](../../Contacts/task-guides/02-search-filter-and-group-contacts.md).
+* **Search & Filters**: Search by name, email, or company, or use custom filters and grouping as described in [**Search, Filter, and Group Contacts**](../../Contacts/task-guides/02-search-filter-and-group-contacts.md).
 
 ---
 

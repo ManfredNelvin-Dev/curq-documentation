@@ -27,8 +27,7 @@ Create commercial opportunities directly on the Kanban board or via detailed for
 
 The `Test Deal - Cloud Migration` deal card appears directly in the **New** column with its expected revenue (`€ 20,000.00`), customer (`Global Logistics Corp`), and scheduled activity icon.
 
-> [!NOTE]
-> For allowed formats, character constraints, and definitions of each field, see [Opportunity Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields).
+> **Note:** For allowed formats, character constraints, and definitions of each field, see [**Opportunity Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields).
 
 ---
 
@@ -76,8 +75,7 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
    * **Days to Close**: Automatically tracked days elapsed to closed deal (`0.00`).
 5. CURQ saves your updates automatically.
 
-> [!NOTE]
-> For descriptions of tracking metadata and assignment duration metrics, see [Extra Information Tab Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#extra-information-tab-fields).
+> **Note:** For descriptions of tracking metadata and assignment duration metrics, see [**Extra Information Tab Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#extra-information-tab-fields).
 
 ---
 

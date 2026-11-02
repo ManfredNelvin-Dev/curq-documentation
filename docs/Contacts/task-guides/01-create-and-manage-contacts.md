@@ -27,8 +27,7 @@ Create corporate or individual partner profiles, link employees to parent compan
    * **Contact Information**: Enter **Phone**, **Mobile**, and **Email**.
    * **Tax ID**: Enter the business VAT, GSTIN, or national tax registration number.
 
-> [!NOTE]
-> For descriptions, formats, and allowed values of every field on this form, see [Header and Identity Fields](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
+> **Note:** For descriptions, formats, and allowed values of every field on this form, see [**Header and Identity Fields**](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
 
 5. Click the cloud icon at the top of the form (or navigate away) to save.
 
@@ -51,11 +50,9 @@ Large clients and vendors often operate across multiple locations. To ensure inv
 4. Enter the location name, direct contact phone, email, and street address.
 5. Click **Save & Close** (or **Save & New** to add another location immediately).
 
-> [!NOTE]
-> For technical definitions of each address type and EDI GLN rules, see [Contacts and Addresses Tab](../settings-and-fields/01-contact-form-field-definitions.md#contacts-and-addresses-tab).
+> **Note:** For technical definitions of each address type and EDI GLN rules, see [**Contacts and Addresses Tab**](../settings-and-fields/01-contact-form-field-definitions.md#contacts-and-addresses-tab).
 
-> [!TIP]
-> When creating a Sales Order or Vendor Bill for this company, CURQ automatically defaults the **Delivery Address** and **Invoice Address** to the destinations configured here.
+> **Tip:** When creating a Sales Order or Vendor Bill for this company, CURQ automatically defaults the **Delivery Address** and **Invoice Address** to the destinations configured here.
 
 ---
 
@@ -75,8 +72,7 @@ Large clients and vendors often operate across multiple locations. To ensure inv
    * Select **Is a Supplier** if you procure goods or services from this partner, and assign a responsible **Buyer**.
    * Set supplier **Payment Terms** and **Supplier Payment Mode**.
 
-> [!NOTE]
-> For detailed definitions of sales pricelists, fiscal positions, and commercial register IDs, see [Sales and Purchase Tab](../settings-and-fields/01-contact-form-field-definitions.md#sales-and-purchase-tab).
+> **Note:** For detailed definitions of sales pricelists, fiscal positions, and commercial register IDs, see [**Sales and Purchase Tab**](../settings-and-fields/01-contact-form-field-definitions.md#sales-and-purchase-tab).
 
 #### Configure Invoicing and Auto-Post Bill Rules
 1. Select the **Invoicing** tab on the contact form.
@@ -106,8 +102,7 @@ To alert your sales team about special handling or block bad debtors:
 4. In the text area below, type the exact message the user should see.
 5. Save the contact.
 
-> [!NOTE]
-> For behavioral rules and popup dialog specifications of alert levels, see [Internal Notes and Warnings Tab](../settings-and-fields/01-contact-form-field-definitions.md#internal-notes-and-warnings-tab).
+> **Note:** For behavioral rules and popup dialog specifications of alert levels, see [**Internal Notes and Warnings Tab**](../settings-and-fields/01-contact-form-field-definitions.md#internal-notes-and-warnings-tab).
 
 #### Configure Personal Information, Geolocation, Membership, and Privacy (Optional)
 Depending on your operational requirements, configure secondary partner profile tabs:

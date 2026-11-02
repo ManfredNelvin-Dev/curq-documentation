@@ -164,4 +164,3 @@ The expense report workflow advances through a sequential four-stage verificatio
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
 * [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md)
 * [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)

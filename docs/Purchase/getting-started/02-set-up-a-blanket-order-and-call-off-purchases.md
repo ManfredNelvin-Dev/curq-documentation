@@ -30,7 +30,7 @@ Establish a master purchasing contract for pre-negotiated quantities:
 
 ![New Blanket Order form view in Draft status](../media/047.png)
 
-> For detailed specifications of all agreement types and header parameters, see [RFQ, Purchase Order, and Blanket Order Field Definitions](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+> For detailed specifications of all agreement types and header parameters, see [**RFQ, Purchase Order, and Blanket Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
 
 ---
 

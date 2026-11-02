@@ -41,7 +41,7 @@ Controls shopper purchasing journeys, registration requirements, instant checkou
 | **Assignment** | Automatically assigns online confirmed sales orders to a designated internal commercial **Sales Team** *(e.g., `Website`)* and **Salesperson** for fulfillment and commission tracking. |
 | **Re-order From Portal** | Displays a **Re-order** button in the customer portal order history (`/my/orders`), allowing authenticated clients to duplicate past orders into an active shopping cart. |
 
-> For step-by-step procedures on managing checkout workflows and processing online sales, see [Manage Online Orders and Abandoned Carts](../task-guides/07-manage-online-orders-and-abandoned-carts.md).
+> For step-by-step procedures on managing checkout workflows and processing online sales, see [**Manage Online Orders and Abandoned Carts**](../task-guides/07-manage-online-orders-and-abandoned-carts.md).
 
 ---
 
@@ -52,10 +52,10 @@ Governs pricing presentation, discounts, product variants, inventory notices, an
 | Field Name | Description |
 | :--- | :--- |
 | **Display Product Prices** | Dictates public catalog price presentation (*Tax Excluded* or *Tax Included*). **Tax Excluded** is standard for B2B commercial portals; **Tax Included** complies with consumer B2C retail regulations. |
-| **Pricelists** | Activates multi-currency pricing, customer-specific contracts, and volume discount tiers. Linked to [Pricelists Specifications](../../Sales/settings-and-fields/02-pricing-pricelists-and-discount-specifications.md). |
+| **Pricelists** | Activates multi-currency pricing, customer-specific contracts, and volume discount tiers. Linked to [**Pricelists Specifications**](../../Sales/settings-and-fields/02-pricing-pricelists-and-discount-specifications.md). |
 | **Comparison Price** | Displays a strikethrough original price next to discounted sales prices *(e.g., ~~$ 100.00~~ $ 79.00)* to highlight promotional savings. |
 | **Product Reference Price** | Computes and displays unit pricing per standard unit of measure *(e.g., `$ 12.50 / kg`)* alongside total retail prices. |
-| **Product Variants** | Activates multi-attribute product matrices *(size, color, material)* on frontend product pages. Linked to [Configure Products and Variants](../../Sales/task-guides/06-configure-products-and-variants.md) and [Product Field Definitions](./05-website-page-product-and-reporting-field-definitions.md). |
+| **Product Variants** | Activates multi-attribute product matrices *(size, color, material)* on frontend product pages. Linked to [**Configure Products and Variants**](../../Sales/task-guides/06-configure-products-and-variants.md) and [**Product Field Definitions**](./05-website-page-product-and-reporting-field-definitions.md). |
 | **Discounts, Loyalty & Gift Card** | Activates coupon codes, gift card redemption, loyalty point tracking, and eWallet balances on shopping cart lines. |
 | **Wishlists** | Enables authenticated portal customers to bookmark favorite items for future purchasing. |
 | **Product Comparison Tool** | Enables a floating comparison tray where shoppers can evaluate specifications of up to 4 items side-by-side. |
@@ -108,7 +108,7 @@ Opening the template editor via the external link on **Invoice Email Template** 
 * **Manual Outreach Suppression**: If back-office staff manually dispatches a recovery email from **eCommerce** > **Orders** > **Abandoned Carts**, the automated background trigger is suppressed to prevent duplicate customer contact.
 * **Payment Error Isolation**: Transactions interrupted by payment gateway errors are held for manual review rather than triggering automated sales recovery.
 
-> For procedural instructions on monitoring carts and dispatching manual recovery campaigns, see [Manage Online Orders and Abandoned Carts](../task-guides/07-manage-online-orders-and-abandoned-carts.md).
+> For procedural instructions on monitoring carts and dispatching manual recovery campaigns, see [**Manage Online Orders and Abandoned Carts**](../task-guides/07-manage-online-orders-and-abandoned-carts.md).
 
 ---
 
@@ -117,5 +117,4 @@ Opening the template editor via the external link on **Invoice Email Template** 
 * [Manage Online Orders and Abandoned Carts](../task-guides/07-manage-online-orders-and-abandoned-carts.md)
 * [Configure Product Attributes, Ribbons, and Categories](../task-guides/08-configure-product-attributes-ribbons-and-categories.md)
 * [Configure Delivery Methods and Shipping Zones](../task-guides/11-configure-delivery-methods-and-shipping-zones.md)
-* [Website Page, Product, and Reporting Field Definitions](./05-website-page-product-and-reporting-field-definitions.md)
 * [Understanding eCommerce Checkout and Customer Portals](../core-concepts/02-understanding-ecommerce-checkout-and-customer-portals.md)

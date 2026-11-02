@@ -13,7 +13,7 @@ This guide covers how to identify and reconcile procurement billing discrepancie
 
 3. CURQ opens the linked **Bill Matching** workspace displaying the purchase order lines alongside billed quantities and unit prices.
 
-> For definitions of all columns and discrepancy flags in the bill matching workspace, see [Warehouse Receipt and Vendor Bill Field Definitions](../settings-and-fields/03-warehouse-receipt-and-vendor-bill-field-definitions.md).
+> For definitions of all columns and discrepancy flags in the bill matching workspace, see [**Warehouse Receipt and Vendor Bill Field Definitions**](../settings-and-fields/03-warehouse-receipt-and-vendor-bill-field-definitions.md).
 
 ---
 

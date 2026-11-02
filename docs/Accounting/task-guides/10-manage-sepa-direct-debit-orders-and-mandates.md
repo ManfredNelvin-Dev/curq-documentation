@@ -8,7 +8,7 @@ Configure customer bank mandates, prepare invoices for automatic direct debit co
 
 * Ensure SEPA Direct Debit is activated in **Accounting > Configuration > Settings** and your organization's official **Creditor Identifier** (*Incassant ID*) is configured.
 * Ensure the customer's bank account (IBAN and BIC) is verified on their partner contact card.
-* Ensure your bank current account is configured with an incoming payment method supporting `[sepa_direct_debit] SEPA Direct Debit for customers (inbound)` as defined in [Chart of Accounts, Taxes, and Journals Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md).
+* Ensure your bank current account is configured with an incoming payment method supporting `[sepa_direct_debit] SEPA Direct Debit for customers (inbound)` as defined in [**Chart of Accounts, Taxes, and Journals Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md).
 
 ---
 
@@ -122,8 +122,7 @@ Rather than executing individual collections, CURQ bundles all eligible open dir
    * *(Batch Retrieval Alternative)*: You can also use the top action button **Create Payment Lines from Journal Items** to filter and pull multiple customer invoices across defined due-date windows simultaneously.
 5. In the debit order header, select **`Bank`** in the **Bank Journal** field.
 
-   > [!WARNING]
-   > You must assign the destination **Bank Journal** before confirming the batch. Attempting to click **Confirm Payments** with a blank bank journal triggers an `Invalid Operation` error:
+   > **Warning:** You must assign the destination **Bank Journal** before confirming the batch. Attempting to click **Confirm Payments** with a blank bank journal triggers an `Invalid Operation` error:
    >
    > ![Missing Bank Journal validation error on payment order](../media/117.png)
 
@@ -228,5 +227,4 @@ Once the clearing bank processes the direct debit file and credits the net colle
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md)
-* [Chart of Accounts, Taxes, and Journals Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md)
 * [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)

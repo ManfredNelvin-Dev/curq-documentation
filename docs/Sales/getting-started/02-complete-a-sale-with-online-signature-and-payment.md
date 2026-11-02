@@ -115,9 +115,8 @@ You executed a zero-friction, automated commercial agreement:
 ---
 
 ## Related Documentation
+
 * [Process Your First Sale from Quote to Invoice](./01-process-your-first-sale.md)
 * [Manage Customer Approvals and Online Payments](../task-guides/05-manage-customer-approvals-and-payments.md)
 * [Configure Quotation Templates and PDF Quote Builder](../task-guides/09-configure-quotation-templates.md)
 * [Understanding the Sales Order Lifecycle and State Machine](../core-concepts/01-understanding-the-sales-order-lifecycle.md)
-* [Frequently Asked Questions](../faq.md)
-

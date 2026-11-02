@@ -6,9 +6,9 @@ Record incoming customer receipts, execute outgoing supplier disbursements, proc
 
 ### Prerequisites
 
-* Validate the corresponding customer invoices in [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md) or vendor bills in [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md).
+* Validate the corresponding customer invoices in [**Create and Validate Customer Invoices**](./01-create-and-validate-customer-invoices.md) or vendor bills in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md).
 * Verify that bank and cash journals *(e.g., `Bank`, `Cash`)* are configured with active accounts in your chart of accounts.
-* For electronic vendor disbursements, verify that the vendor profile contains a valid IBAN/BIC in [Contacts](../../Contacts/task-guides/01-create-and-manage-contacts.md).
+* For electronic vendor disbursements, verify that the vendor profile contains a valid IBAN/BIC in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
 
 ---
 
@@ -69,7 +69,7 @@ When paying an individual supplier invoice via direct bank transfer or manual di
 
 ### Task 3: Execute Batch Vendor Payments Using Payment Orders (SEPA)
 
-When managing high-volume accounts payable, processing bills individually is inefficient. CURQ allows you to aggregate multiple vendor bills into a single SEPA payment run *(detailed in [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md))*:
+When managing high-volume accounts payable, processing bills individually is inefficient. CURQ allows you to aggregate multiple vendor bills into a single SEPA payment run *(detailed in [**Manage SEPA Vendor Payment Orders**](./13-manage-sepa-vendor-payment-orders.md))*:
 
 1. Navigate to **Vendors > Payment Orders**.
 2. Click **+ New** to initialize a batch order with **Payment Type** set to `Outbound`.
@@ -106,7 +106,7 @@ If a customer makes an advance deposit before an invoice is issued, or when revi
    * Posts an accounting move debiting the bank transitory clearing account (`1002017 Outstanding Receipts`) and crediting customer receivables (`1101010 Handelsdebiteuren nominaal`).
    * The payment remains in the **In Process** state as an open unallocated credit on the customer's balance, ready for matching against future invoices or for clearing upon bank statement reconciliation.
 
-> For complete field descriptions, list view columns, and payment state lifecycles, see [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md).
+> For complete field descriptions, list view columns, and payment state lifecycles, see [**Payment, Bank, and Journal Entry Field Definitions**](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md).
 
 ---
 
@@ -135,7 +135,7 @@ CURQ uses a two-stage payment verification lifecycle to ensure compliance with f
 | **In Payment** | The payment transaction has been initiated and recorded internally in CURQ. Funds are held in a transitory clearing account *(e.g., Outstanding Receipts or Outstanding Payments)*. | The invoice or bill is considered settled operationally. Payment buttons are disabled and the partner balance reflects the disbursement. | Importing and reconciling the official bank statement. |
 | **Paid** | The bank transaction has cleared. The transitory clearing line has been matched against the actual bank journal line. | The final double-entry leg is complete: the clearing account is zeroed out and the true bank balance is adjusted. | Bank reconciliation confirmed. |
 
-> **Note:** To clear the transitory clearing account and transition a customer invoice or vendor bill from **In Payment** to **Paid**, follow the bank statement matching steps in [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md).
+> **Note:** To clear the transitory clearing account and transition a customer invoice or vendor bill from **In Payment** to **Paid**, follow the bank statement matching steps in [**Import and Reconcile Bank Statements**](./04-import-and-reconcile-bank-statements.md).
 
 ---
 
@@ -150,11 +150,7 @@ CURQ uses a two-stage payment verification lifecycle to ensure compliance with f
 
 ### Related Documentation
 
-* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
-* [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
-* [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md)
 * [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md)
-* [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
-* [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
+* [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md)
+* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)

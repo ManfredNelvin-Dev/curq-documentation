@@ -123,10 +123,6 @@ Now that you have completed your first sales cycle, explore the core capabilitie
 ## Related Documentation
 
 * [Setting Up Your First Test Pipeline](./02-set-up-your-first-test-pipeline.md)
-* [Create and Manage Opportunities](../task-guides/01-create-and-manage-opportunities.md)
 * [Qualify and Convert Leads into Opportunities](../task-guides/02-convert-leads-to-opportunities.md)
 * [Manage Pipeline Stages and Won/Lost Status](../task-guides/03-manage-pipeline-stages-and-won-lost-status.md)
-* [Configure Pipeline Stages](../task-guides/05-configure-pipeline-stages.md)
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
-* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
-* [Frequently Asked Questions](../faq.md)

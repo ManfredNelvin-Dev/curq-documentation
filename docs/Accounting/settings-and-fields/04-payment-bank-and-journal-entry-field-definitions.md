@@ -572,11 +572,5 @@ Accessible by clicking the three dots icon in the upper-right corner of any jour
 
 * [Register and Reconcile Payments](../task-guides/03-register-and-reconcile-payments.md)
 * [Import and Reconcile Bank Statements](../task-guides/04-import-and-reconcile-bank-statements.md)
-* [Create and Manage Manual Journal Entries](../task-guides/05-create-manual-journal-entries.md)
+* [Create Manual Journal Entries](../task-guides/05-create-manual-journal-entries.md)
 * [Manage SEPA Direct Debit Orders and Mandates](../task-guides/10-manage-sepa-direct-debit-orders-and-mandates.md)
-* [Manage Lock Dates and Fiscal Year-End Closing](../task-guides/12-manage-lock-dates-and-fiscal-year-end-closing.md)
-* [Manage SEPA Vendor Payment Orders](../task-guides/13-manage-sepa-vendor-payment-orders.md)
-* [Manage Deferred Costs, Revenues, and Accruals](../task-guides/14-manage-deferred-costs-revenues-and-accruals.md)
-* [Navigate and Use the Accounting Dashboard](../task-guides/19-navigate-and-use-the-accounting-dashboard.md)
-* [Customer Invoice and Vendor Bill Field Definitions](./01-customer-invoice-and-vendor-bill-field-definitions.md)
-* [Chart of Accounts, Taxes, and Journals Field Definitions](./02-chart-of-accounts-and-taxes-field-definitions.md)

@@ -78,7 +78,7 @@ Governs public visibility for `/shop`, product catalog pages, shopping carts, an
 | **All users** | Open to the general public. Anonymous visitors can browse items, inspect prices, and add products to carts, with guest checkout permitted based on checkout process rules. |
 | **Logged in users** | Locks catalog browsing behind authentication. Anonymous visitors attempting to access `/shop`, item pages, or cart URLs are redirected to `/web/login`, restricting purchasing exclusively to verified registered users. |
 
-> For step-by-step procedures on enforcing compliance policies, managing cookie texts, and restricting access, see [Configure Privacy, Cookies, and Compliance Policies](../task-guides/12-configure-privacy-cookies-and-compliance.md).
+> For step-by-step procedures on enforcing compliance policies, managing cookie texts, and restricting access, see [**Configure Privacy, Cookies, and Compliance Policies**](../task-guides/12-configure-privacy-cookies-and-compliance.md).
 
 ---
 
@@ -87,5 +87,4 @@ Governs public visibility for `/shop`, product catalog pages, shopping carts, an
 * [Configure Privacy, Cookies, and Compliance Policies](../task-guides/12-configure-privacy-cookies-and-compliance.md)
 * [Website Configuration and Domain Settings](./01-website-configuration-and-domain-settings.md)
 * [eCommerce Shop and Checkout Settings](./02-ecommerce-shop-and-checkout-settings.md)
-* [Website Page, Product, and Reporting Field Definitions](./05-website-page-product-and-reporting-field-definitions.md)
 * [Understanding Website Architecture and Content Delivery](../core-concepts/01-understanding-website-architecture-and-content-delivery.md)

@@ -37,8 +37,7 @@ Standardize customer engagement actions, automate multi-step milestone task sequ
      * **Schedule**: Enter the standard due delay (e.g., `2 days after previous activity deadline` or completion date).
 6. CURQ auto-saves updates, or click the cloud icon in the top header to save immediately.
 
-> [!NOTE]
-> For action types, icon bindings, and chaining behaviors, see [Activity Type Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
+> **Note:** For action types, icon bindings, and chaining behaviors, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
 
 ---
 
@@ -68,8 +67,7 @@ Activity Plans allow you to launch an entire sequence of milestone activities wi
    * **Trigger**: Select relative scheduling timing (e.g., `Before Plan Date` or `After Plan Date`).
 5. Click the cloud icon to save the plan template.
 
-> [!NOTE]
-> For plan parameters and assignment options, see [Activity Plan Structure](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-plan-structure).
+> **Note:** For plan parameters and assignment options, see [**Activity Plan Structure**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-plan-structure).
 
 ---
 

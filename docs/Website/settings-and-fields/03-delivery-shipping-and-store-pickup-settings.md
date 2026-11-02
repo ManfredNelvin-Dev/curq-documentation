@@ -72,7 +72,7 @@ Defines geographic eligibility, parcel dimension limits, and product tagging res
 | **Must Have Tags** | Order must contain products matching these catalog tags to qualify for store pickup. |
 | **Excluded Tags** | Prevents store pickup if the customer's order contains any product with these tags. |
 
-> For step-by-step procedures on setting up shipping carriers and zone limits, see [Configure Delivery Methods and Shipping Zones](../task-guides/11-configure-delivery-methods-and-shipping-zones.md).
+> For step-by-step procedures on setting up shipping carriers and zone limits, see [**Configure Delivery Methods and Shipping Zones**](../task-guides/11-configure-delivery-methods-and-shipping-zones.md).
 
 ---
 

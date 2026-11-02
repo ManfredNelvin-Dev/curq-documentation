@@ -44,8 +44,7 @@ When negotiations conclude without a sale, recording structured reasons ensures 
 4. Click **Mark as Lost**.
 5. The opportunity probability drops to **0%**, a red **Lost** ribbon attaches to the record, and the card archives from active Kanban views.
 
-> [!NOTE]
-> For standard reason categories and analytical definitions, see [Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
+> **Note:** For standard reason categories and analytical definitions, see [**Standard Lost Reasons Catalog**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
 
 ---
 

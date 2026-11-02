@@ -184,16 +184,14 @@ If commercial contract terms change or an invoice is amended mid-contract, CURQ 
   1. Reset the document to draft (if period lock dates permit), add the spread, and re-post.
   2. Navigate directly to **Accounting > Spread Costs/Revenues**, click **+ New**, and create a standalone spread table manually linked to the relevant general ledger accounts.
 * **Allowed Journals Restriction Error**: If clicking **Create Move** fails with `You cannot use this account in this journal, check the field 'Allowed Journals' on the related account`, the target revenue or expense account is restricted to sales or purchase journals only. To resolve this, open **Accounting > Configuration > Chart of Accounts**, select the account *(e.g., `8001010`)*, and add `Miscellaneous Operations` to the **Allowed Journals** field (or clear the field entirely so it can be used across all journals).
-* **Impact of Lock Dates on Accruals**: If an installment recognition date falls on or before an active **Tax Return Lock Date** or **Global Lock Date** *(see [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md))*, CURQ blocks move creation with an error. The recognition date must be updated to an open period or the lock date must be temporarily adjusted by an authorized financial adviser.
+* **Impact of Lock Dates on Accruals**: If an installment recognition date falls on or before an active **Tax Return Lock Date** or **Global Lock Date** *(see [**Manage Lock Dates and Fiscal Year-End Closing**](./12-manage-lock-dates-and-fiscal-year-end-closing.md))*, CURQ blocks move creation with an error. The recognition date must be updated to an open period or the lock date must be temporarily adjusted by an authorized financial adviser.
 * **Contract Cancellation / Early Termination**: If a customer terminates a subscription early, issue a credit note for the remaining unearned balance and click **Undo Spread** on the spread table to prevent future unearned revenue recognition entries from posting.
 
 ---
 
 ### Related Documentation
 
-* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
-* [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
 * [Create Manual Journal Entries](./05-create-manual-journal-entries.md)
 * [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)
-* [Manage Customer Contracts and Recurring Invoicing](./11-manage-customer-contracts-and-recurring-invoicing.md)
-* [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)
+* [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
+* [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)

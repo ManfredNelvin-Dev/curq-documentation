@@ -363,6 +363,5 @@ Displayed after clicking **View** in the Open Items wizard:
 
 * [Manage Fixed Assets and Depreciation](../task-guides/06-manage-fixed-assets-and-depreciation.md)
 * [Generate Financial Reports and Trial Balance](../task-guides/07-generate-financial-reports-and-trial-balance.md)
-* [Customer Invoice and Vendor Bill Field Definitions](./01-customer-invoice-and-vendor-bill-field-definitions.md)
 * [Payment, Bank, and Journal Entry Field Definitions](./04-payment-bank-and-journal-entry-field-definitions.md)
 * [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)

@@ -184,11 +184,7 @@ To safeguard financial reports from retroactive tampering after tax returns (*BT
 
 ### Related Documentation
 
-* [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md)
-* [Navigate and Use the Accounting Dashboard](../task-guides/19-navigate-and-use-the-accounting-dashboard.md)
 * [Create and Validate Customer Invoices](../task-guides/01-create-and-validate-customer-invoices.md)
 * [Create and Process Vendor Bills](../task-guides/02-create-and-process-vendor-bills.md)
 * [Register and Reconcile Payments](../task-guides/03-register-and-reconcile-payments.md)
-* [Import and Reconcile Bank Statements](../task-guides/04-import-and-reconcile-bank-statements.md)
 * [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
-* [Understanding Double-Entry Bookkeeping and Journals](./01-understanding-double-entry-bookkeeping-and-journals.md)

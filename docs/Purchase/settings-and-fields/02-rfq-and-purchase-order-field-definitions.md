@@ -181,7 +181,6 @@ Defines summary columns displayed on the central Purchase Agreements dashboard:
 ## Related Documentation
 
 * [Create and Manage Requests for Quotation](../task-guides/01-create-and-manage-requests-for-quotation.md)
-* [Set Up a Blanket Order and Call-Off Purchases](../getting-started/02-set-up-a-blanket-order-and-call-off-purchases.md)
 * [Confirm Purchase Orders and Manage Approvals](../task-guides/03-confirm-purchase-orders-and-manage-approvals.md)
 * [Track and Manage Purchase Orders Across Views](../task-guides/04-track-and-manage-purchase-orders-across-views.md)
 * [Understanding the Procurement Lifecycle and Order States](../core-concepts/01-understanding-the-procurement-lifecycle-and-order-states.md)

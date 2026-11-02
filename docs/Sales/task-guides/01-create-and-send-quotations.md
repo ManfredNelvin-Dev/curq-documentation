@@ -5,7 +5,7 @@ Create commercial offers, organize lines with sections and notes, attach optiona
 ---
 
 ### Prerequisites
-* Ensure customer records are registered in [Contacts](../../Contacts/task-guides/01-create-and-manage-contacts.md) or created directly from the quotation customer dropdown.
+* Ensure customer records are registered in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) or created directly from the quotation customer dropdown.
 * Verify products are configured in **Sales > Products > Products**.
 * Outgoing email servers must be operational in system settings.
 * *(Optional)* To use quotation templates, ensure they are enabled in **Sales > Configuration > Settings**:
@@ -135,9 +135,8 @@ Before sending, or while reviewing terms over the phone with a customer:
 ---
 
 ### Related Documentation
+
 * [Process Your First Sale from Quote to Invoice](../getting-started/01-process-your-first-sale.md)
 * [Confirm and Lock Sales Orders](./03-confirm-and-lock-sales-orders.md)
 * [Configure Quotation Templates and PDF Quote Builder](./09-configure-quotation-templates.md)
-* [Sales Reporting and Analytics](./13-sales-reporting-and-analytics.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
-

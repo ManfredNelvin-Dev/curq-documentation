@@ -35,7 +35,7 @@ CURQ opens the **Website Pages** manager interface with view-switching controls 
 
 In List view, the Page Manager provides an operational grid summarizing publication status, SEO indexing, menu placement, and multi-website routing for all site content.
 
-> For complete column definitions, indexing flags, and operational attributes, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For complete column definitions, indexing flags, and operational attributes, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 Review your page records across the following core attributes:
 * **Page Title & URL**: Click any page title or path to launch live preview editing on the canvas.
@@ -70,8 +70,7 @@ The Page Manager allows administrators to perform bulk maintenance operations ac
    * **Duplicate**: Clones the selected pages into new drafts with custom name prefixes.
    * **Delete**: Removes selected pages after evaluating URL dependencies across the system.
 
-> [!WARNING]
-> When deleting pages, CURQ analyzes URL dependencies *(such as links in menu items, internal buttons, or custom views)*. A confirmation dialog will list detected references and require checking **"I am sure about this"** before confirming deletion.
+> **Warning:** When deleting pages, CURQ analyzes URL dependencies *(such as links in menu items, internal buttons, or custom views)*. A confirmation dialog will list detected references and require checking **"I am sure about this"** before confirming deletion.
 
 ---
 
@@ -95,7 +94,7 @@ CURQ opens the **Page Properties** modal dialog:
 
 ### Core Page Properties
 
-> For technical specifications of page attributes, redirection codes (301 vs 302), and template behaviors, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For technical specifications of page attributes, redirection codes (301 vs 302), and template behaviors, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 * **Page Title**: The human-readable name of the webpage, displayed in browser title bars and search results.
 * **Page URL**: The route path of the page *(e.g., `/our-mission`)*.
@@ -114,7 +113,7 @@ CURQ opens the **Page Properties** modal dialog:
 
 Control visitor access to individual pages using the **Visibility** setting in Page Properties:
 
-> For detailed security group parameters, password protection constraints, and access rules, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For detailed security group parameters, password protection constraints, and access rules, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 1. Open **Site** > **This page** > **Properties**.
 2. Locate the **Visibility** dropdown field and select the desired security rule:

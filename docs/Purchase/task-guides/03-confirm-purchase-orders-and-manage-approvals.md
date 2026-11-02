@@ -74,7 +74,6 @@ To void or cancel a confirmed order:
 ## Related Documentation
 
 * [Create and Manage Requests for Quotation](./01-create-and-manage-requests-for-quotation.md)
-* [Track and Manage Purchase Orders Across Views](./04-track-and-manage-purchase-orders-across-views.md)
 * [Receive Products and Manage Backorders](./05-receive-products-and-manage-backorders.md)
-* [Understanding the Procurement Lifecycle and Order States](../core-concepts/01-understanding-the-procurement-lifecycle-and-order-states.md)
 * [Purchase Settings and General Configuration](../settings-and-fields/01-purchase-settings-and-general-configuration.md)
+* [Understanding the Procurement Lifecycle and Order States](../core-concepts/01-understanding-the-procurement-lifecycle-and-order-states.md)

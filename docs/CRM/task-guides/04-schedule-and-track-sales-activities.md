@@ -23,8 +23,7 @@ Schedule follow-up calls, meetings, and tasks from deal records, and manage comm
    * Click **Open Calendar** to check availability and book a meeting directly on the calendar grid, or click **Schedule** to log the task.
 5. Click **Schedule** (or **Schedule & Mark as Done** if completing it immediately).
 
-> [!NOTE]
-> For default delay parameters, icon behaviors, and auto-chaining triggers, see [Activity Type Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
+> **Note:** For default delay parameters, icon behaviors, and auto-chaining triggers, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
 
 ---
 

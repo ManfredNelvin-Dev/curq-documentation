@@ -28,7 +28,7 @@ flowchart LR
 
 Make your catalog items visible on the public `/shop` page:
 
-> For product catalog field explanations and publication indicators, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For product catalog field explanations and publication indicators, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 1. In the top administrative bar of the website, click **Site** and select **Products**:
 
@@ -66,7 +66,7 @@ Help shoppers browse your catalog efficiently with structured categories and bad
 
 Enable shoppers to settle purchases digitally or via offline commercial terms:
 
-> For payment provider field explanations, states, and currency constraints, see [eCommerce Shop and Checkout Settings](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md).
+> For payment provider field explanations, states, and currency constraints, see [**eCommerce Shop and Checkout Settings**](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md).
 
 1. Open **Website > Configuration > Settings**.
 2. Scroll to the **Shop - Payment** section and click **Payment Providers**:
@@ -89,7 +89,7 @@ Enable shoppers to settle purchases digitally or via offline commercial terms:
 
 Define how physical goods are dispatched to online shoppers:
 
-> For delivery method field explanations, carrier options, and store pickup parameters, see [Delivery, Shipping, and Store Pickup Settings](../settings-and-fields/03-delivery-shipping-and-store-pickup-settings.md).
+> For delivery method field explanations, carrier options, and store pickup parameters, see [**Delivery, Shipping, and Store Pickup Settings**](../settings-and-fields/03-delivery-shipping-and-store-pickup-settings.md).
 
 1. In **Website > Configuration > Settings**, scroll to **Shipping** and click **Shipping Methods**:
 

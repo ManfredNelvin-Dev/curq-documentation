@@ -332,8 +332,6 @@ Navigating to **Customers > Customers** or **Vendors > Vendors** displays counte
 ## Related Documentation
 
 * [Create and Validate Customer Invoices](../task-guides/01-create-and-validate-customer-invoices.md)
-* [Issue and Manage Customer Credit Notes](../task-guides/09-issue-and-manage-customer-credit-notes.md)
 * [Create and Process Vendor Bills](../task-guides/02-create-and-process-vendor-bills.md)
-* [Process and Reimburse Employee Expenses](../task-guides/17-process-and-reimburse-employee-expenses.md)
-* [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
+* [Issue and Manage Customer Credit Notes](../task-guides/09-issue-and-manage-customer-credit-notes.md)
+* [Understanding the Invoice and Bill Lifecycle](../core-concepts/02-understanding-the-invoice-and-bill-lifecycle.md)

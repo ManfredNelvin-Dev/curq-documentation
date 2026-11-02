@@ -31,7 +31,7 @@ Begin by drafting a quotation request to ask a supplier for pricing and delivery
 
 ![Request for Quotation form view showing vendor and order deadline fields](../media/002.png)
 
-> For detailed definitions of all header fields, tax rules, and delivery options, see [RFQ and Purchase Order Field Definitions](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+> For detailed definitions of all header fields, tax rules, and delivery options, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
 
 5. Under the **Products** tab, click **Add a product**:
    * Select your product in the **Product** column (e.g., *Fair Phone 5 (Black)*).
@@ -65,7 +65,7 @@ When the vendor confirms availability and accepts your pricing terms, convert th
 2. Click the blue **Confirm Order** button in the top action bar.
 3. The document status updates to **Purchase Order** (or **Locked** if automatic locking is active).
 
-> If your company enforces approval limits and the order exceeds the configured threshold, the order advances to **To Approve** and requires authorization from a Purchase Manager before confirmation. For configuration details, see [Purchase Settings and General Configuration](../settings-and-fields/01-purchase-settings-and-general-configuration.md).
+> If your company enforces approval limits and the order exceeds the configured threshold, the order advances to **To Approve** and requires authorization from a Purchase Manager before confirmation. For configuration details, see [**Purchase Settings and General Configuration**](../settings-and-fields/01-purchase-settings-and-general-configuration.md).
 
 ---
 

@@ -215,5 +215,4 @@ To monitor recurring vendor subscription expenses, equipment leases, and schedul
 * [Contract and Recurring Invoicing Field Definitions (Customer and Supplier)](../settings-and-fields/06-customer-contract-and-recurring-invoicing-field-definitions.md)
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
 * [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md)
-* [Manage Deferred Costs, Revenues, and Accruals](./14-manage-deferred-costs-revenues-and-accruals.md)
-* [Understanding the Invoice and Bill Lifecycle](../core-concepts/02-understanding-the-invoice-and-bill-lifecycle.md)
+* [Manage Customer Contracts and Recurring Invoicing](./11-manage-customer-contracts-and-recurring-invoicing.md)

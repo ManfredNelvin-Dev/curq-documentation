@@ -6,8 +6,8 @@ This guide covers organizing the public storefront catalog using eCommerce produ
 
 While general product settings (such as cost, invoicing policies, and warehouse routes) are managed in standard sales catalogs, website merchandising rules are configured under **eCommerce** > **Products**.
 
-* **Master Catalog & Inventory**: For setting up product templates, variants, and stock tracking, see [View All Products](../../Sales/task-guides/06-configure-products-and-variants.md).
-* **Frontend Pages & SEO**: For product page URLs, SEO metadata, and frontend layout editing, see [Products & Courses Management](./06-publish-and-manage-products-and-courses.md).
+* **Master Catalog & Inventory**: For setting up product templates, variants, and stock tracking, see [**View All Products**](../../Sales/task-guides/06-configure-products-and-variants.md).
+* **Frontend Pages & SEO**: For product page URLs, SEO metadata, and frontend layout editing, see [**Products & Courses Management**](./06-publish-and-manage-products-and-courses.md).
 
 ### Products & Website Visibility
 
@@ -39,7 +39,7 @@ You can publish or unpublish a product using either of two methods:
 
 When editing a product (**eCommerce** > **Products** > **Products**), configure promotional presentation and upselling rules across the **General Information** and **Sales** tabs:
 
-> For comprehensive field definitions, upsell mechanisms, and media specifications, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For comprehensive field definitions, upsell mechanisms, and media specifications, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ![Product form Sales tab overview showing merchandising configuration options](../media/076.png)
 
@@ -63,11 +63,11 @@ When shoppers add items with configured optional or accessory products to their 
 
 ### Pricelists & Web Pricing Rules
 
-General pricelist creation, pricing formulas, and wholesale tiers are managed in Sales; for complete setup instructions, see [Configuring Pricelists and Pricing Rules](../../Sales/task-guides/08-configure-pricelists-and-pricing-rules.md).
+General pricelist creation, pricing formulas, and wholesale tiers are managed in Sales; for complete setup instructions, see [**Configuring Pricelists and Pricing Rules**](../../Sales/task-guides/08-configure-pricelists-and-pricing-rules.md).
 
 Under **eCommerce** > **Products** > **Pricelists**, view and configure website-specific pricing rules:
 
-> For pricelist parameters, promo code syntax, and multi-currency rules, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For pricelist parameters, promo code syntax, and multi-currency rules, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ![Pricelists list view showing pricelist names, country groups, selectable flags, and assigned websites](../media/081.png)
 
@@ -105,7 +105,7 @@ Open any pricelist to configure options under the **Price Rules** and **Ecommerc
 
 Organize how items are grouped and navigated in your online store (`/shop`):
 
-> For category hierarchy settings and navigation properties, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For category hierarchy settings and navigation properties, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 1. In the top administrative bar, click **eCommerce** > **Products** > **eCommerce Categories**.
 
@@ -128,7 +128,7 @@ Organize how items are grouped and navigated in your online store (`/shop`):
 
 ### Attributes, Combo Choices & Tags
 
-General variant attributes, combo choices, and product tags are managed in Sales; for complete setup instructions, see [Configuring Product Attributes and Variants](../../Sales/task-guides/06-configure-products-and-variants.md), [Combo Choices Setup](../../Sales/task-guides/10-configure-product-combos.md), and [Product Tags Setup](../../Sales/task-guides/07-configure-product-categories-and-tags.md).
+General variant attributes, combo choices, and product tags are managed in Sales; for complete setup instructions, see [**Configuring Product Attributes and Variants**](../../Sales/task-guides/06-configure-products-and-variants.md), [**Combo Choices Setup**](../../Sales/task-guides/10-configure-product-combos.md), and [**Product Tags Setup**](../../Sales/task-guides/07-configure-product-categories-and-tags.md).
 
 Under **eCommerce** > **Products**, configure variant options, bundling, and catalog tags with website-specific settings:
 
@@ -136,7 +136,7 @@ Under **eCommerce** > **Products**, configure variant options, bundling, and cat
 
 Configure product attributes and their visibility in the online store:
 
-> For attribute display types, facet visibility modes, and ribbon styling options, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For attribute display types, facet visibility modes, and ribbon styling options, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ![Attributes list view showing attribute names, eCommerce categories, display types, and filter visibility](../media/091.png)
 

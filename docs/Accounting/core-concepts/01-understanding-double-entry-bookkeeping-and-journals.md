@@ -92,7 +92,7 @@ Journal Items are the individual debit and credit lines within the entry. They r
 
 ### Transaction Flow: From Invoicing to Payment
 
-To observe this model in practice, consider the standard sales cycle completed in [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md). A client purchases `€ 199.00` worth of goods and subsequently settles via bank transfer:
+To observe this model in practice, consider the standard sales cycle completed in [**Process Your First Customer Invoice and Payment**](../getting-started/01-process-your-first-customer-invoice-and-payment.md). A client purchases `€ 199.00` worth of goods and subsequently settles via bank transfer:
 
 ```mermaid
 sequenceDiagram
@@ -235,9 +235,6 @@ To fix an error on a posted entry:
 ### Related Documentation
 
 * [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md)
-* [Navigate and Use the Accounting Dashboard](../task-guides/19-navigate-and-use-the-accounting-dashboard.md)
-* [Record Opening Balances During System Migration](../task-guides/05-create-manual-journal-entries.md#task-5-record-opening-balances-during-system-migration)
-* [Create and Validate Customer Invoices](../task-guides/01-create-and-validate-customer-invoices.md)
-* [Create and Process Vendor Bills](../task-guides/02-create-and-process-vendor-bills.md)
-* [Import and Reconcile Bank Statements](../task-guides/04-import-and-reconcile-bank-statements.md)
+* [Create Manual Journal Entries](../task-guides/05-create-manual-journal-entries.md)
 * [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
+* [Understanding the Invoice and Bill Lifecycle](./02-understanding-the-invoice-and-bill-lifecycle.md)

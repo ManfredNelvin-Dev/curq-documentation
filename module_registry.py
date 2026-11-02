@@ -48,12 +48,6 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
         'description': 'Project Tracking',
         'sidebar_key': 'projects',
     },
-    'HR': {
-        'display_name': 'HR',
-        'icon': 'hr-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'hr',
-    },
     'Helpdesk': {
         'display_name': 'Helpdesk',
         'icon': 'helpdesk-icon.png',
@@ -66,11 +60,11 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
         'description': 'Email Campaigns',
         'sidebar_key': 'emailmarketing',
     },
-    'Appointments': {
-        'display_name': 'Appointments',
-        'icon': 'appointment-icon.png',
-        'description': 'Discover the module',
-        'sidebar_key': 'appointments',
+    'Calendar': {
+        'display_name': 'Calendar',
+        'icon': 'calendar-icon.png',
+        'description': 'Schedule & Meetings',
+        'sidebar_key': 'calendar',
     },
     'Dashboards': {
         'display_name': 'Dashboards',

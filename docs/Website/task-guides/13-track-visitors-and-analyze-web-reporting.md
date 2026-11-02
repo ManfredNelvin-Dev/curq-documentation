@@ -6,8 +6,7 @@ Monitor online store revenue, track web visitor engagement, audit granular page 
 
 ---
 
-> [!NOTE]
-> Website reporting features are accessible to users with the **Website / Editor and Designer** or **Sales / Administrator** access rights.
+> **Note:** Website reporting features are accessible to users with the **Website / Editor and Designer** or **Sales / Administrator** access rights.
 
 ---
 
@@ -22,7 +21,7 @@ All website analytics and reporting tools are consolidated in the top administra
    * **Visitors**: Tracks live and historical visitor sessions, customer identification, and engagement activities.
    * **Page Views**: Displays the granular audit log of individual URLs, pages, and products viewed across your site.
 
-> For reporting menu descriptions, model bindings, and security access permissions, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For reporting menu descriptions, model bindings, and security access permissions, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ---
 
@@ -60,7 +59,7 @@ The report automatically filters to show only orders placed through the website,
 
 Click the **Measures** dropdown in the top-left corner of the view to plot or calculate analytical metrics across your confirmed online sales orders:
 
-> For mathematical calculation methods, tax handling, and measure definitions, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For mathematical calculation methods, tax handling, and measure definitions, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 * **Revenue Measures**: Plot **Untaxed Amount** *(net revenue)*, **Total** *(gross amount)*, or cumulative **Discount Amount**.
 * **Volume Measures**: Analyze units via **Qty Ordered**, **Qty Delivered**, **Qty Invoiced**, and **Qty to Invoice**.
@@ -107,7 +106,7 @@ The **Visitors** menu (**Reporting** > **Visitors**) tracks individual web sessi
 
 ### Visitor List View
 
-> For visitor tracking columns, presence indicators, and outreach action specifications, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For visitor tracking columns, presence indicators, and outreach action specifications, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 The List view organizes active and historical web sessions, displaying GeoIP country flags, contact names or auto-assigned visitor IDs, last connection timestamps, preferred languages, cumulative visit counts, visited page and product tags, linked CRM lead counts, and direct outreach shortcuts *(Email, SMS, Livechat)*.
 
@@ -124,8 +123,7 @@ Clicking any visitor opens the detailed **Visitor Form**, displaying browsing hi
 * **Leads Smart Button**: Dynamic button that appears once the visitor has at least one linked CRM opportunity (requires the **CRM** application).
 * **Chats Smart Button**: Dynamic button that appears once the visitor has at least one recorded live chat conversation (requires the **Live Chat** application).
 
-> [!NOTE]
-> **Application Requirements for Visitor Actions**:
+> **Note (Application Requirements for Visitor Actions):**
 > * **Live Chat Application**: Required for the **Chats** smart button and the **Send chat request** button in the form header. If the Live Chat app is not installed, these controls do not appear on the visitor form.
 > * **CRM Application**: Required for the **Leads** smart button. If the CRM app is not installed, lead tracking controls do not appear on the visitor form.
 
@@ -171,7 +169,7 @@ Every time a visitor navigates to a URL, CURQ records an entry capturing the des
 
 ### Page View Data Fields
 
-> For audit logging columns, visitor session parameters, and page tracking attributes, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For audit logging columns, visitor session parameters, and page tracking attributes, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 The audit log captures granular web impression attributes including the visitor profile reference, managed page title, exact relative URL path route, linked catalog product, and the precise HTTP request timestamp.
 

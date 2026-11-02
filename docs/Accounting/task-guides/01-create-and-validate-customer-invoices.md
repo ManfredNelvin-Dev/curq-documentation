@@ -6,7 +6,7 @@ Generate customer invoices, structure billing lines with sections and notes, ver
 
 ### Prerequisites
 
-* Ensure client contact profiles are established in [Contacts](../../Contacts/task-guides/01-create-and-manage-contacts.md) with valid billing addresses and tax identification numbers.
+* Ensure client contact profiles are established in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) with valid billing addresses and tax identification numbers.
 * Verify that products and services are configured with appropriate sales accounts and default tax rules.
 * Check that an active **Customer Invoices** journal exists in your accounting configuration with an assigned sequence prefix.
 
@@ -59,7 +59,7 @@ Generate customer invoices, structure billing lines with sections and notes, ver
 
    ![Other Info tab showing payment terms, fiscal position, and bank account on customer invoice](../media/010.png)
 
-> **Note:** For exhaustive field definitions across all form tabs, see [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
+> **Note:** For exhaustive field definitions across all form tabs, see [**Customer Invoice and Vendor Bill Field Definitions**](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
 
 ---
 
@@ -153,7 +153,7 @@ If an invoice contains errors or merchandise is returned after posting:
    * **Reverse and Create Invoice**: Reverses the current invoice and immediately opens a new editable draft invoice pre-filled with the original line items for quick correction and re-validation.
    * **Discard**: Cancels the operation without altering the invoice.
 
-> For comprehensive workflows on creating standalone credit notes from **Customers > Credit Notes**, allocating credit balances, and issuing monetary refunds, see [Issue and Manage Customer Credit Notes](./09-issue-and-manage-customer-credit-notes.md).
+> For comprehensive workflows on creating standalone credit notes from **Customers > Credit Notes**, allocating credit balances, and issuing monetary refunds, see [**Issue and Manage Customer Credit Notes**](./09-issue-and-manage-customer-credit-notes.md).
 
 ---
 
@@ -197,17 +197,13 @@ Accountants can review customer receivables profiles and catalog tax assignments
   ![Fiscal Positions form showing domestic and export tax mapping rules](../media/080.png)
   ![Fiscal Positions Account Mapping tab](../media/081.png)
 
-  > For complete fiscal position configuration specifications, see [Fiscal Positions Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#fiscal-positions-field-definitions).
+  > For complete fiscal position configuration specifications, see [**Fiscal Positions Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#fiscal-positions-field-definitions).
 
 ---
 
 ### Related Documentation
 
-* [Process Your First Customer Invoice and Payment](../getting-started/01-process-your-first-customer-invoice-and-payment.md)
-* [Manage Customer Contracts and Recurring Invoicing](./11-manage-customer-contracts-and-recurring-invoicing.md)
-* [Manage Deferred Costs, Revenues, and Accruals](./14-manage-deferred-costs-revenues-and-accruals.md)
-* [Issue and Manage Customer Credit Notes](./09-issue-and-manage-customer-credit-notes.md)
-* [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
+* [Issue and Manage Customer Credit Notes](./09-issue-and-manage-customer-credit-notes.md)
 * [Customer Invoice and Vendor Bill Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
-* [Understanding Double-Entry Bookkeeping and Journals](../core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
+* [Understanding the Invoice and Bill Lifecycle](../core-concepts/02-understanding-the-invoice-and-bill-lifecycle.md)

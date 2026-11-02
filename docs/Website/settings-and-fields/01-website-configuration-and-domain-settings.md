@@ -23,7 +23,7 @@ The **Website Info** configuration block establishes the foundational identity, 
 * **Language Prefixes**: Non-default languages are injected into URL routes using ISO-639-1 language codes (e.g., `/nl/shop` vs. `/shop`).
 * **Favicon Cache**: Favicon assets are cached by browsers and CDNs at the root path `/web/image/website/{website_id}/favicon`.
 
-> For procedural instructions on managing domains, pages, and redirects, see [Manage Webpages and Redirections](../task-guides/03-manage-webpages-and-redirections.md).
+> For procedural instructions on managing domains, pages, and redirects, see [**Manage Webpages and Redirections**](../task-guides/03-manage-webpages-and-redirections.md).
 
 ---
 
@@ -71,7 +71,7 @@ The **SEO** configuration block controls search crawler directives, tracking tag
 * **Site Identifier**: The registered domain name matching the Plausible site record *(e.g., `curq.nl`)*.
 * **Cookie-Free Advantage**: Operates without client-side cookies or personal data storage, exempt from GDPR consent banner requirements.
 
-> For step-by-step instructions on configuring page-level SEO and metadata, see [Optimize SEO and Search Metadata](../task-guides/04-optimize-seo-and-search-metadata.md).
+> For step-by-step instructions on configuring page-level SEO and metadata, see [**Optimize SEO and Search Metadata**](../task-guides/04-optimize-seo-and-search-metadata.md).
 
 ---
 

@@ -105,7 +105,7 @@ The purpose of merging is to reduce duplicate contact entries and maintain a mor
 
 The precise behavior of the merge operation—including which field values are retained, how related records are handled, and which information is transferred—depends on the implemented functionality. Users should review the resulting contact and verify important related records after merging.
 
-For the step-by-step procedure, see [Merge Duplicate Contacts](../task-guides/03-merge-duplicate-contacts.md).
+For the step-by-step procedure, see [**Merge Duplicate Contacts**](../task-guides/03-merge-duplicate-contacts.md).
 
 ### 3. Archive Contacts That Are No Longer Active
 Not every contact that should disappear from day-to-day work is a duplicate. A supplier may stop trading, a customer relationship may end, or an individual contact may no longer be active. In these situations, archiving may be more appropriate than merging.
@@ -117,7 +117,7 @@ Not every contact that should disappear from day-to-day work is a duplicate. A s
 
 Archiving is conceptually different from deleting a contact. Whether an archived record remains accessible through particular searches, dropdowns, or historical views depends on the application's behavior.
 
-For related contact-management tasks, see [Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md).
+For related contact-management tasks, see [**Create and Manage Contacts**](../task-guides/01-create-and-manage-contacts.md).
 
 ---
 

@@ -6,8 +6,7 @@ Monitor, publish, and manage eCommerce products and eLearning course pages in CU
 
 ---
 
-> [!NOTE]
-> The **Products** option requires the **eCommerce** app to be installed, while the **Courses** option requires the **eLearning** app. If either app is not installed in your database, its corresponding option will not appear in the **Site** menu.
+> **Note:** The **Products** option requires the **eCommerce** app to be installed, while the **Courses** option requires the **eLearning** app. If either app is not installed in your database, its corresponding option will not appear in the **Site** menu.
 
 ---
 
@@ -31,7 +30,7 @@ The **Product Pages** manager displays your store catalog with website-specific 
 ### List View
 ![Product Pages manager in list view showing Product Name, Website URL, Categories, Sales Price, On Hand stock, SEO optimized, and Is Published columns](../media/058.png)
 
-> For complete column definitions, inventory indicators, and quick-creation field formats, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For complete column definitions, inventory indicators, and quick-creation field formats, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 The List view displays key storefront attributes including product display names, public URL paths (`/shop/...`), assigned eCommerce categories, retail sales prices, real-time on-hand stock quantities, SEO optimization flags, and read-only publication toggles.
 
@@ -81,7 +80,7 @@ The **Course Pages** manager organizes online learning programs with progress, a
 ### List View
 ![Course Pages manager in list view displaying Name, Website URL, Responsible avatar, Course Type, Show Course To audience, and Published toggles](../media/062.png)
 
-> For course manager columns, audience access rules, and enrollment policy specifications, see [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
+> For course manager columns, audience access rules, and enrollment policy specifications, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 The List view provides real-time course oversight, displaying course titles, public URL routes (`/slides/...`), designated responsible instructors, course classification types, target audience access permissions, SEO optimization badges, and publication status toggles.
 

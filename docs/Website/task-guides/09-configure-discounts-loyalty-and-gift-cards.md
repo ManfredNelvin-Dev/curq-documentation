@@ -4,9 +4,9 @@ This guide covers setting up customer loyalty rewards, promotional discount coup
 
 ## Task 1: Enabling or Disabling Programs for the Website
 
-General promotional campaigns, loyalty programs, and gift card generation are managed in Sales; for complete setup instructions, see [Pricing, Pricelists, and Discount Specifications](../../Sales/settings-and-fields/02-pricing-pricelists-and-discount-specifications.md) and [eCommerce Shop and Checkout Settings](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md).
+General promotional campaigns, loyalty programs, and gift card generation are managed in Sales; for complete setup instructions, see [**Pricing, Pricelists, and Discount Specifications**](../../Sales/settings-and-fields/02-pricing-pricelists-and-discount-specifications.md) and [**eCommerce Shop and Checkout Settings**](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md).
 
-> For detailed reward structures, point calculation formulas, and gift card field definitions, see [eCommerce Shop and Checkout Settings](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md) and [Pricing, Pricelists, and Discount Specifications](../../Sales/settings-and-fields/02-pricing-pricelists-and-discount-specifications.md).
+> For detailed reward structures, point calculation formulas, and gift card field definitions, see [**eCommerce Shop and Checkout Settings**](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md) and [**Pricing, Pricelists, and Discount Specifications**](../../Sales/settings-and-fields/02-pricing-pricelists-and-discount-specifications.md).
 
 All promotional, coupon, and gift card programs share the same master records between Sales and eCommerce. To control whether a program is active on your website:
 
