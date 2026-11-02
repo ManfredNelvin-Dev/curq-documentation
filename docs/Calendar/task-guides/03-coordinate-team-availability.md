@@ -11,8 +11,10 @@ When arranging sessions involving several colleagues, you can overlay their indi
 1. Open **Calendar** and switch to **Day** or **Week** view for granular hourly visibility.
 2. In the right-hand panel, locate the **Attendees** section.
 3. Check the checkbox next to each colleague whose availability you need to consult.
-4. If a colleague's name is not listed, click **+ Add** in the attendees header and select their user profile.
+4. If a colleague's name is not listed, click **+ Add Attendees** in the attendees section and select their user profile.
 5. CURQ dynamically overlays their scheduled bookings on the time grid, rendering each attendee in a distinct color.
+
+   ![Attendees section in the right-side calendar panel](../media/018.png)
 
 ---
 

@@ -4,7 +4,7 @@ Custom Sphinx extensions and build-time context generators for CURQ documentatio
 
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 from .git_metadata import get_git_file_dates_for_ref
 from .modules_context import build_modules_context
@@ -18,6 +18,31 @@ __all__ = [
 ]
 
 
+def get_available_doc_versions(app) -> List[str]:
+    """
+    Returns all available doc versions: active release (18.0)
+    plus all numeric Git tags (0.4, 0.3, 0.2, 0.1) in descending order.
+    """
+    import subprocess
+    import re
+
+    doc_version = getattr(app.config, "version", "18.0")
+    tag_pattern = getattr(app.config, "smv_tag_whitelist", r"^v?\d+(\.\d+)*$")
+    try:
+        out = subprocess.check_output(["git", "tag", "-l"], text=True, stderr=subprocess.DEVNULL)
+        pat = re.compile(tag_pattern)
+        tags = [t.strip() for t in out.splitlines() if pat.match(t.strip())]
+    except Exception:
+        tags = []
+
+    def parse_ver(v):
+        return [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", v)]
+
+    tags.sort(key=parse_ver, reverse=True)
+    versions = [doc_version] + [t for t in tags if t != doc_version]
+    return versions
+
+
 def setup(app) -> Dict[str, Any]:
     """
     Sphinx extension entrypoint. Connects context injectors and page hooks.
@@ -27,21 +52,12 @@ def setup(app) -> Dict[str, Any]:
         context["modules"] = build_modules_context(app.srcdir)
 
         releases = get_whats_new_from_git(app)
-        context["available_doc_versions"] = [r["version"] for r in releases]
+        doc_version = getattr(app.config, "version", "18.0")
+        context["available_doc_versions"] = get_available_doc_versions(app)
         context["whats_new_releases"] = releases
 
         if pagename in ("docs/whats-new", "whats-new"):
-            active_ver = getattr(app.config, "smv_current_version", None)
-            active_has_entries = any(r["version"] == active_ver and r.get("entries") for r in releases)
-            if not active_ver or active_ver == "main" or not active_has_entries:
-                active_ver = None
-                for r in releases:
-                    if r.get("entries"):
-                        active_ver = r["version"]
-                        break
-                if not active_ver and releases:
-                    active_ver = releases[0]["version"]
-            context["active_release_version"] = active_ver
+            context["active_release_version"] = doc_version
 
         # In sphinx-multiversion, smv_current_version is set ('main', '0.1', '0.2')
         # In single-version builds, fallback to 'HEAD'

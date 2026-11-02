@@ -1512,28 +1512,6 @@ a:hover {
     font-weight: 800;
 }
 
-/* Version Panels */
-.version-release-panel {
-    display: none;
-    animation: fadeInPanel 0.25s ease;
-}
-
-.version-release-panel.active {
-    display: block;
-}
-
-@keyframes fadeInPanel {
-    from {
-        opacity: 0;
-        transform: translateY(6px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Clean Release Notes Layout */
 .release-notes-container {
     background: #ffffff;

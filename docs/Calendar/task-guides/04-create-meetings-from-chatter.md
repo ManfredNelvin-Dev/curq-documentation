@@ -8,9 +8,12 @@ This guide covers how to schedule meetings and calendar activities directly from
 
 You can initiate a calendar event directly from any business document that supports chatter:
 
-1. Open the target record (for example, a CRM Opportunity, Project Task, or Contact card).
+1. Open the target record (for example, a Quotation / Sales Order, CRM Opportunity, Project Task, or Contact card).
 2. Scroll to the **Chatter** section on the right or bottom of the form.
 3. Click the **Activities** button (clock icon) to open the **Schedule Activity** modal dialog.
+
+   ![Schedule Activity button in record chatter](../media/017.png)
+
 4. In the **Activity Type** field, select an activity type linked to the calendar, such as **Meeting** or **Call for Demo**.
 5. Set the **Due Date** and enter a brief summary or agenda in the note area.
 6. Click **Open Calendar** to transition directly into the Calendar application with the customer and record pre-linked.

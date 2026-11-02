@@ -16,18 +16,34 @@ DEFAULT_VERSION     ?= 18.0
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: help Makefile multiversion livehtml clean
+.PHONY: help Makefile multiversion multiversion-prod livehtml clean
 
-# Build multi-version documentation using sphinx-multiversion
+# Build multi-version documentation for local development (includes working-tree preview overlay)
 multiversion:
 	@echo "[*] Fetching latest remote tags..."
-	@git fetch --tags --quiet origin 2>/dev/null || echo "[!] Notice: Remote tags fetch skipped (offline or remote unreachable)."
+	@git fetch --tags --quiet 2>/dev/null || true
 	$(SPHINXMULTIVERSION) "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
+	@echo "[*] Building $(DEFAULT_VERSION) from current working tree..."
+	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/$(DEFAULT_VERSION)" $(SPHINXOPTS)
 	@if [ -d "$(BUILDDIR)/html/main" ]; then \
-		rm -rf "$(BUILDDIR)/html/$(DEFAULT_VERSION)" && cp -r "$(BUILDDIR)/html/main" "$(BUILDDIR)/html/$(DEFAULT_VERSION)"; \
+		cp -r "$(BUILDDIR)/html/$(DEFAULT_VERSION)/." "$(BUILDDIR)/html/main/"; \
 	fi
-	@echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=$(DEFAULT_VERSION)/index.html"><script>window.location.replace("$(DEFAULT_VERSION)/index.html" + window.location.search + window.location.hash);</script></head><body><p>Redirecting to <a href="$(DEFAULT_VERSION)/index.html">$(DEFAULT_VERSION)</a>...</p></body></html>' > $(BUILDDIR)/html/index.html
-	@echo "[✓] Multi-version build complete. Root redirect -> $(DEFAULT_VERSION)/index.html"
+	@echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/$(DEFAULT_VERSION)/index.html"><script>window.location.replace("/$(DEFAULT_VERSION)/index.html" + window.location.search + window.location.hash);</script></head><body><p>Redirecting to <a href="/$(DEFAULT_VERSION)/index.html">$(DEFAULT_VERSION)</a>...</p></body></html>' > $(BUILDDIR)/html/index.html
+	@echo "[✓] Local multi-version build complete. Root redirect -> /$(DEFAULT_VERSION)/index.html"
+
+# Build multi-version documentation for production (strictly builds committed git tags & branches)
+multiversion-prod:
+	@echo "[*] Ensuring git safe directory..."
+	@git config --global --add safe.directory "$$(pwd)" 2>/dev/null || true
+	@echo "[*] Fetching remote tags..."
+	@git fetch --tags --quiet 2>/dev/null || true
+	$(SPHINXMULTIVERSION) "$(SOURCEDIR)" "$(BUILDDIR)/html" $(SPHINXOPTS)
+	@if [ ! -d "$(BUILDDIR)/html/$(DEFAULT_VERSION)" ] && [ -d "$(BUILDDIR)/html/main" ]; then \
+		echo "[*] Aliasing main -> $(DEFAULT_VERSION)..."; \
+		cp -r "$(BUILDDIR)/html/main" "$(BUILDDIR)/html/$(DEFAULT_VERSION)"; \
+	fi
+	@echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/$(DEFAULT_VERSION)/index.html"><script>window.location.replace("/$(DEFAULT_VERSION)/index.html" + window.location.search + window.location.hash);</script></head><body><p>Redirecting to <a href="/$(DEFAULT_VERSION)/index.html">$(DEFAULT_VERSION)</a>...</p></body></html>' > $(BUILDDIR)/html/index.html
+	@echo "[✓] Production multi-version build complete. Root redirect -> /$(DEFAULT_VERSION)/index.html"
 
 # Live preview server with auto-rebuild (official sphinx-doc/sphinx-autobuild)
 livehtml:

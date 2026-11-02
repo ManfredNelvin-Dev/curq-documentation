@@ -7,14 +7,15 @@ FROM python:3.12-slim AS builder
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y --no-install-recommends make && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends make git && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app/
 
-RUN make html
+RUN git config --global --add safe.directory /app || true
+RUN make multiversion-prod
 
 FROM nginx:alpine
 

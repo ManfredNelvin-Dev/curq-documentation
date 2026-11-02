@@ -853,3 +853,24 @@
         width: 100%;
     }
 }
+
+/* ==========================================================================
+   What's New Heading Resets
+   ========================================================================== */
+.sphinx-content .whats-new-page-wrapper h1,
+.sphinx-content .whats-new-page-wrapper h2,
+.sphinx-content .whats-new-page-wrapper h3,
+.sphinx-content .whats-new-page-wrapper h4,
+.sphinx-content .whats-new-page-wrapper .release-version-heading {
+    counter-increment: none !important;
+    counter-reset: none !important;
+}
+
+.sphinx-content .whats-new-page-wrapper h1::before,
+.sphinx-content .whats-new-page-wrapper h2::before,
+.sphinx-content .whats-new-page-wrapper h3::before,
+.sphinx-content .whats-new-page-wrapper h4::before,
+.sphinx-content .whats-new-page-wrapper .release-version-heading::before {
+    content: none !important;
+    display: none !important;
+}

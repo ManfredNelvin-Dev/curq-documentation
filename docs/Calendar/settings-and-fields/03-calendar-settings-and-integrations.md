@@ -43,6 +43,5 @@ Before releasing calendar and appointment features across your organization, ver
 
 ## Related Documentation
 
-* [Create Meetings from Chatter](../task-guides/05-create-meetings-from-chatter.md)
-* [Share Appointment Availability](../task-guides/04-share-appointment-availability.md)
+* [Create Meetings from Chatter](../task-guides/04-create-meetings-from-chatter.md)
 * [Meeting Form Field Definitions](./01-meeting-form-field-definitions.md)

@@ -78,35 +78,14 @@ function onSidebarVersionChange(selectEl) {
 
     // 2. If targetUrl is a version identifier
     if (ver) {
-        if (typeof showReleaseForVersion === 'function') {
-            showReleaseForVersion(ver);
-            return;
-        }
         window.location.href = '/' + encodeURIComponent(ver) + '/index.html';
     }
 }
 
 function onSidebarWhatsNewClick(event, linkEl) {
-    const sidebarSelect = document.getElementById('sidebar-version-selector');
-    let ver = null;
-    if (sidebarSelect && sidebarSelect.selectedIndex >= 0) {
-        const opt = sidebarSelect.options[sidebarSelect.selectedIndex];
-        ver = opt.getAttribute('data-version') || sidebarSelect.value;
-    }
-    if (!ver) {
-        ver = localStorage.getItem('curq_doc_version');
-    }
-    if (ver) {
-        localStorage.setItem('curq_doc_version', ver);
-        if (typeof showReleaseForVersion === 'function') {
-            event.preventDefault();
-            showReleaseForVersion(ver);
-            return;
-        }
-        const baseHref = linkEl.getAttribute('href').split('?')[0].split('#')[0];
-        linkEl.href = baseHref + '?v=' + encodeURIComponent(ver);
-    }
+    // Direct navigation without version query
 }
+
 
 function syncSidebarVersionSelector() {
     // Only synchronize version selector client-side on What's New page

@@ -1,6 +1,195 @@
 {% extends "layout.html" %}
 
 {% block body %}
+<style>
+/* Reset heading numbering counters and pseudo-elements on What's New page */
+.sphinx-content .whats-new-page-wrapper h1,
+.sphinx-content .whats-new-page-wrapper h2,
+.sphinx-content .whats-new-page-wrapper h3,
+.sphinx-content .whats-new-page-wrapper h4,
+.sphinx-content .whats-new-page-wrapper .release-version-heading,
+.whats-new-page-wrapper h1,
+.whats-new-page-wrapper h2,
+.whats-new-page-wrapper h3,
+.whats-new-page-wrapper h4,
+.release-notes-container h2,
+.release-notes-body h2,
+.release-notes-body h3 {
+    counter-increment: none !important;
+    counter-reset: none !important;
+}
+
+.sphinx-content .whats-new-page-wrapper h1::before,
+.sphinx-content .whats-new-page-wrapper h2::before,
+.sphinx-content .whats-new-page-wrapper h3::before,
+.sphinx-content .whats-new-page-wrapper h4::before,
+.sphinx-content .whats-new-page-wrapper .release-version-heading::before,
+.whats-new-page-wrapper h1::before,
+.whats-new-page-wrapper h2::before,
+.whats-new-page-wrapper h3::before,
+.whats-new-page-wrapper h4::before,
+.release-notes-container h2::before,
+.release-notes-body h2::before,
+.release-notes-body h3::before,
+.sphinx-content .release-notes-container h2::before,
+.sphinx-content .release-notes-body h2::before,
+.sphinx-content .release-notes-body h3::before {
+    content: none !important;
+    display: none !important;
+}
+
+.release-notes-container {
+    background: #ffffff !important;
+    border: 1px solid #eaecf0 !important;
+    border-radius: 12px !important;
+    padding: 28px 32px !important;
+    margin-top: 24px !important;
+    box-shadow: 0 1px 4px rgba(16, 24, 40, 0.05) !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.release-notes-container:hover {
+    border-color: #d0d5dd !important;
+    box-shadow: 0 4px 14px rgba(16, 24, 40, 0.08) !important;
+}
+
+.release-notes-meta {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 22px !important;
+    border-bottom: 1px solid #eaecf0 !important;
+    flex-wrap: wrap !important;
+}
+
+.release-meta-title-group {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+}
+
+.release-version-heading {
+    margin: 0 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #16345f !important;
+    line-height: 1.2 !important;
+}
+
+.release-version-submeta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.release-notes-date {
+    font-size: 14px !important;
+    color: #475467 !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.release-status-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    padding: 3px 10px !important;
+    border-radius: 9999px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.release-status-pill.latest {
+    background: #16345f !important;
+    color: #ffffff !important;
+}
+
+.release-status-pill.upcoming {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border: 1px solid #fde68a !important;
+}
+
+.release-status-pill.initial {
+    background: #f1f5f9 !important;
+    color: #475569 !important;
+}
+
+.release-notes-body h2 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #16345f !important;
+    margin: 22px 0 10px 0 !important;
+    padding-bottom: 6px !important;
+    border-bottom: 1px solid #f2f4f7 !important;
+}
+
+.release-notes-body h2:first-of-type {
+    margin-top: 0 !important;
+}
+
+.release-notes-body h3 {
+    font-size: 15.5px !important;
+    font-weight: 600 !important;
+    color: #1e293b !important;
+    margin: 18px 0 8px 0 !important;
+}
+
+.release-notes-body p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #334155 !important;
+    margin: 0 0 12px 0 !important;
+}
+
+.release-notes-body ul {
+    margin: 0 0 16px 0 !important;
+    padding-left: 24px !important;
+    list-style-type: disc !important;
+}
+
+.release-notes-body li {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #334155 !important;
+    margin-bottom: 8px !important;
+}
+
+.release-notes-body a {
+    color: #16345f !important;
+    font-weight: 600 !important;
+    text-decoration: underline !important;
+    text-decoration-color: #ffd875 !important;
+    text-underline-offset: 2px !important;
+    transition: color 0.15s ease, text-decoration-color 0.15s ease !important;
+}
+
+.release-notes-body a:hover {
+    color: #ffbf3d !important;
+    text-decoration-color: #16345f !important;
+}
+
+.release-notes-body code {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-size: 13.5px !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.release-notes-body strong {
+    font-weight: 700 !important;
+    color: #0f172a !important;
+}
+</style>
+
 <div class="whats-new-page-wrapper">
     <!-- Header -->
     <div class="whats-new-header">
@@ -10,24 +199,22 @@
         </div>
 
         <h1 class="whats-new-main-title">
-            {{ _("What's New in CURQ") }} <span id="whats-new-version-heading-badge" class="version-heading-badge">v{{ active_release_version }}</span>
+            {{ _("What's New in CURQ") }}
         </h1>
+        <p class="whats-new-subtitle">
+            {{ _("Official release notes and changelog for CURQ 18.0 addons.") }}
+        </p>
     </div>
 
-    <!-- Version Release Notes Panels -->
-    {% for rel in whats_new_releases %}
-    {% set is_active_rel = (rel.version == active_release_version) %}
-    <div class="version-release-panel{% if is_active_rel %} active{% endif %}"
-        id="panel-version-{{ rel.version|replace('.', '_') }}"
-        data-version="{{ rel.version }}">
-
-        <div class="release-notes-container">
+    <!-- Release Notes Feed -->
+    <div class="whats-new-feed">
+        {% for rel in whats_new_releases %}
+        <section class="release-notes-container" id="release-{{ rel.version|replace('.', '-') }}" aria-labelledby="heading-{{ rel.version|replace('.', '-') }}">
             <div class="release-notes-meta">
-                <h2 class="release-version-heading">{{ rel.title }}</h2>
-                <div class="release-version-submeta">
-                    <span class="release-notes-date">
-                        <i class="fa-regular fa-calendar"></i> {{ rel.date }}
-                    </span>
+                <div class="release-meta-title-group">
+                    <h2 class="release-version-heading" id="heading-{{ rel.version|replace('.', '-') }}">
+                        {{ rel.title }}
+                    </h2>
                     {% if rel.status == 'Latest' %}
                     <span class="release-status-pill latest">{{ _('Latest') }}</span>
                     {% elif rel.status == 'Upcoming' %}
@@ -36,9 +223,21 @@
                     <span class="release-status-pill initial">{{ _('Initial') }}</span>
                     {% endif %}
                 </div>
+
+                {% if rel.date %}
+                <div class="release-version-submeta">
+                    <span class="release-notes-date">
+                        <i class="fa-regular fa-calendar"></i> {{ rel.date }}
+                    </span>
+                </div>
+                {% endif %}
             </div>
 
-            {% if rel.entries|length > 0 %}
+            {% if rel.body_html %}
+            <div class="release-notes-body">
+                {{ rel.body_html | safe }}
+            </div>
+            {% elif rel.entries|length > 0 %}
             <ul class="release-notes-list">
                 {% for item in rel.entries %}
                 <li class="release-note-item">
@@ -51,92 +250,12 @@
                 <p>{{ _('No release notes published yet for this version.') }}</p>
             </div>
             {% endif %}
+        </section>
+        {% else %}
+        <div class="release-notes-empty">
+            <p>{{ _('No release notes available at this time.') }}</p>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
-
-<script>
-function showReleaseForVersion(version) {
-    if (!version) return;
-    const cleanVer = String(version).trim().replace(/^v/, '');
-    const safeVer = cleanVer.replace(/\./g, '_');
-
-    const panels = document.querySelectorAll('.version-release-panel');
-    let matchedPanel = null;
-    panels.forEach(p => {
-        const pVer = p.getAttribute('data-version');
-        if (pVer === cleanVer || p.id === 'panel-version-' + safeVer) {
-            p.classList.add('active');
-            p.style.display = 'block';
-            matchedPanel = p;
-        } else {
-            p.classList.remove('active');
-            p.style.display = 'none';
-        }
-    });
-
-    if (!matchedPanel && panels.length > 0) {
-        panels[0].classList.add('active');
-        panels[0].style.display = 'block';
-    }
-
-    // Update heading badge
-    const headingBadge = document.getElementById('whats-new-version-heading-badge');
-    if (headingBadge) {
-        headingBadge.textContent = 'v' + cleanVer;
-    }
-
-    // Sync sidebar dropdown
-    const sidebarSelect = document.getElementById('sidebar-version-selector');
-    if (sidebarSelect) {
-        for (let i = 0; i < sidebarSelect.options.length; i++) {
-            const opt = sidebarSelect.options[i];
-            const optVer = opt.getAttribute('data-version') || opt.value;
-            if (optVer === cleanVer) {
-                sidebarSelect.selectedIndex = i;
-                break;
-            }
-        }
-    }
-
-    // Save to localStorage
-    localStorage.setItem('curq_doc_version', cleanVer);
-
-    // Update URL query string without reloading
-    if (window.history && window.history.replaceState) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('v', cleanVer);
-        window.history.replaceState(null, '', url.toString());
-    }
-}
-
-function initWhatsNewVersion() {
-    const urlParams = new URLSearchParams(window.location.search);
-    let targetVer = urlParams.get('v');
-    if (!targetVer && window.location.hash) {
-        targetVer = window.location.hash.replace(/^#v?/, '');
-    }
-    if (!targetVer) {
-        targetVer = localStorage.getItem('curq_doc_version');
-    }
-    if (!targetVer) {
-        targetVer = '{{ active_release_version }}';
-    }
-    if (!targetVer) {
-        const firstPanel = document.querySelector('.version-release-panel');
-        if (firstPanel) {
-            targetVer = firstPanel.getAttribute('data-version');
-        }
-    }
-    showReleaseForVersion(targetVer);
-}
-
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initWhatsNewVersion);
-} else {
-    initWhatsNewVersion();
-}
-window.addEventListener('popstate', initWhatsNewVersion);
-</script>
 {% endblock %}
