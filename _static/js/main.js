@@ -1,8 +1,14 @@
 // Language Switcher Logic
 async function switchLanguage(lang) {
-    const currentPath = window.location.pathname;
-
     localStorage.setItem('preferred_lang', lang);
+
+    // If on What's New page, toggle between English (NEWS.md) and Dutch (NEWS.nl_NL.md)
+    if (typeof window.setWhatsNewLanguage === 'function') {
+        window.setWhatsNewLanguage(lang);
+        return;
+    }
+
+    const currentPath = window.location.pathname;
 
     const defaultLang = (window.CURQ_CONFIG && window.CURQ_CONFIG.defaultLang) ? window.CURQ_CONFIG.defaultLang : 'en';
     const supportedLangs = (window.CURQ_CONFIG && window.CURQ_CONFIG.supportedLangs) ? window.CURQ_CONFIG.supportedLangs : [];

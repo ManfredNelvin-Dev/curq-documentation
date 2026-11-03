@@ -51,10 +51,12 @@ def setup(app) -> Dict[str, Any]:
     def on_html_page_context(app, pagename, templatename, context, doctree):
         context["modules"] = build_modules_context(app.srcdir)
 
-        releases = get_whats_new_from_git(app)
+        releases = get_whats_new_from_git(app, "en")
+        releases_nl = get_whats_new_from_git(app, "nl")
         doc_version = getattr(app.config, "version", "18.0")
         context["available_doc_versions"] = get_available_doc_versions(app)
         context["whats_new_releases"] = releases
+        context["whats_new_releases_nl"] = releases_nl
 
         if pagename in ("docs/whats-new", "whats-new"):
             context["active_release_version"] = doc_version

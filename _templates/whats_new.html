@@ -191,36 +191,51 @@
 </style>
 
 <div class="whats-new-page-wrapper">
-    <!-- Header -->
-    <div class="whats-new-header">
+    <!-- English Header -->
+    <div class="whats-new-header" id="whats-new-header-en">
         <div class="whats-new-header-badge">
             <span class="pulsing-dot"></span>
-            <span>{{ _('Release Notes') }}</span>
+            <span>Release Notes</span>
         </div>
 
         <h1 class="whats-new-main-title">
-            {{ _("What's New in CURQ") }}
+            What's New in CURQ
         </h1>
         <p class="whats-new-subtitle">
-            {{ _("Official release notes and changelog for CURQ 18.0 addons.") }}
+            Official release notes and changelog for CURQ 18.0 addons.
         </p>
     </div>
 
-    <!-- Release Notes Feed -->
-    <div class="whats-new-feed">
+    <!-- Dutch Header -->
+    <div class="whats-new-header" id="whats-new-header-nl" style="display: none;">
+        <div class="whats-new-header-badge">
+            <span class="pulsing-dot"></span>
+            <span>Releasenotities</span>
+        </div>
+
+        <h1 class="whats-new-main-title">
+            Wat is er nieuw in CURQ
+        </h1>
+        <p class="whats-new-subtitle">
+            Officiële releasenotities en changelog voor CURQ 18.0 addons.
+        </p>
+    </div>
+
+    <!-- English Release Notes Feed (NEWS.md) -->
+    <div class="whats-new-feed" id="whats-new-feed-en">
         {% for rel in whats_new_releases %}
-        <section class="release-notes-container" id="release-{{ rel.version|replace('.', '-') }}" aria-labelledby="heading-{{ rel.version|replace('.', '-') }}">
+        <section class="release-notes-container" id="release-en-{{ rel.version|replace('.', '-') }}" aria-labelledby="heading-en-{{ rel.version|replace('.', '-') }}">
             <div class="release-notes-meta">
                 <div class="release-meta-title-group">
-                    <h2 class="release-version-heading" id="heading-{{ rel.version|replace('.', '-') }}">
+                    <h2 class="release-version-heading" id="heading-en-{{ rel.version|replace('.', '-') }}">
                         {{ rel.title }}
                     </h2>
                     {% if rel.status == 'Latest' %}
-                    <span class="release-status-pill latest">{{ _('Latest') }}</span>
+                    <span class="release-status-pill latest">Latest</span>
                     {% elif rel.status == 'Upcoming' %}
-                    <span class="release-status-pill upcoming">{{ _('Upcoming') }}</span>
+                    <span class="release-status-pill upcoming">Upcoming</span>
                     {% elif rel.status == 'Initial' %}
-                    <span class="release-status-pill initial">{{ _('Initial') }}</span>
+                    <span class="release-status-pill initial">Initial</span>
                     {% endif %}
                 </div>
 
@@ -247,15 +262,108 @@
             </ul>
             {% else %}
             <div class="release-notes-empty">
-                <p>{{ _('No release notes published yet for this version.') }}</p>
+                <p>No release notes published yet for this version.</p>
             </div>
             {% endif %}
         </section>
         {% else %}
         <div class="release-notes-empty">
-            <p>{{ _('No release notes available at this time.') }}</p>
+            <p>No release notes available at this time.</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Dutch Release Notes Feed (NEWS.nl_NL.md) -->
+    <div class="whats-new-feed" id="whats-new-feed-nl" style="display: none;">
+        {% for rel in whats_new_releases_nl %}
+        <section class="release-notes-container" id="release-nl-{{ rel.version|replace('.', '-') }}" aria-labelledby="heading-nl-{{ rel.version|replace('.', '-') }}">
+            <div class="release-notes-meta">
+                <div class="release-meta-title-group">
+                    <h2 class="release-version-heading" id="heading-nl-{{ rel.version|replace('.', '-') }}">
+                        {{ rel.title }}
+                    </h2>
+                    {% if rel.status in ('Latest', 'Nieuwste') %}
+                    <span class="release-status-pill latest">Nieuwste</span>
+                    {% elif rel.status in ('Upcoming', 'Binnenkort') %}
+                    <span class="release-status-pill upcoming">Binnenkort</span>
+                    {% elif rel.status in ('Initial', 'Initieel') %}
+                    <span class="release-status-pill initial">Initieel</span>
+                    {% endif %}
+                </div>
+
+                {% if rel.date %}
+                <div class="release-version-submeta">
+                    <span class="release-notes-date">
+                        <i class="fa-regular fa-calendar"></i> {{ rel.date }}
+                    </span>
+                </div>
+                {% endif %}
+            </div>
+
+            {% if rel.body_html %}
+            <div class="release-notes-body">
+                {{ rel.body_html | safe }}
+            </div>
+            {% elif rel.entries|length > 0 %}
+            <ul class="release-notes-list">
+                {% for item in rel.entries %}
+                <li class="release-note-item">
+                    {{ item.title }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <div class="release-notes-empty">
+                <p>Er zijn nog geen releasenotities gepubliceerd voor deze versie.</p>
+            </div>
+            {% endif %}
+        </section>
+        {% else %}
+        <div class="release-notes-empty">
+            <p>Er zijn op dit moment geen releasenotities beschikbaar.</p>
         </div>
         {% endfor %}
     </div>
 </div>
+
+<script>
+function setWhatsNewLanguage(lang) {
+    var isNl = (lang === 'nl' || lang === 'nl_NL');
+    var enHeader = document.getElementById('whats-new-header-en');
+    var nlHeader = document.getElementById('whats-new-header-nl');
+    var enFeed = document.getElementById('whats-new-feed-en');
+    var nlFeed = document.getElementById('whats-new-feed-nl');
+
+    if (enHeader) enHeader.style.display = isNl ? 'none' : 'block';
+    if (nlHeader) nlHeader.style.display = isNl ? 'block' : 'none';
+    if (enFeed) enFeed.style.display = isNl ? 'none' : 'block';
+    if (nlFeed) nlFeed.style.display = isNl ? 'block' : 'none';
+
+    try {
+        localStorage.setItem('preferred_lang', isNl ? 'nl' : 'en');
+    } catch (e) {}
+
+    // Synchronize all language selector dropdowns
+    var selectors = document.querySelectorAll('.language-selector');
+    selectors.forEach(function(sel) {
+        sel.value = isNl ? 'nl' : 'en';
+    });
+}
+
+// Expose globally so main.js switchLanguage calls it
+window.setWhatsNewLanguage = setWhatsNewLanguage;
+
+// Run immediately on page load
+(function() {
+    var preferred = 'en';
+    try {
+        var urlLang = new URLSearchParams(window.location.search).get('lang');
+        preferred = urlLang || localStorage.getItem('preferred_lang') || 'en';
+    } catch(e) {}
+
+    if (preferred === 'nl' || preferred === 'nl_NL') {
+        setWhatsNewLanguage('nl');
+    }
+})();
+</script>
 {% endblock %}

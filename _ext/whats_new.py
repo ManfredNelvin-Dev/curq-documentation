@@ -12,17 +12,23 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 import markdown_it
 
-_WHATS_NEW_CACHE: Optional[List[Dict[str, Any]]] = None
+_WHATS_NEW_CACHE: Dict[str, List[Dict[str, Any]]] = {}
 
 RELEASE_HEADER_REGEX = r"^#\ (?P<project>.*?)\ (?P<version>[^\ ]+)\ \((?P<date>[^)]+)\)\s*\n(?P<content>.*?)(?=^#\ |\Z)"
 
+NL_MONTHS = {
+    1: "januari", 2: "februari", 3: "maart", 4: "april", 5: "mei", 6: "juni",
+    7: "juli", 8: "augustus", 9: "september", 10: "oktober", 11: "november", 12: "december"
+}
 
-def load_news_content(app=None) -> str:
+
+def load_news_content(app=None, lang: Optional[str] = None) -> str:
     """
     Fetch NEWS.md directly from the GitHub addons-curq repository.
-    Does not fetch from local directories or write any fallback file to disk.
+    Fetches NEWS.nl_NL.md for Dutch, or NEWS.md for English.
     """
-    lang = getattr(app.config, "language", "en") if app and hasattr(app, "config") else "en"
+    if not lang:
+        lang = getattr(app.config, "language", "en") if app and hasattr(app, "config") else "en"
     filename = "NEWS.nl_NL.md" if lang in ("nl", "nl_NL") else "NEWS.md"
 
     gh_url = f"https://raw.githubusercontent.com/onesteinbv/addons-curq/18.0/{filename}"
@@ -46,7 +52,7 @@ def load_news_content(app=None) -> str:
     return ""
 
 
-def parse_news_markdown(raw_content: str) -> List[Dict[str, Any]]:
+def parse_news_markdown(raw_content: str, lang: str = "en") -> List[Dict[str, Any]]:
     r"""
     Parse NEWS.md using the exact regex pattern defined in addons-curq's release_note module:
     r"^#\ (?P<project>.*?)\ (?P<version>[^\ ]+)\ \((?P<date>[^)]+)\)\s*\n(?P<content>.*?)(?=^#\ |\Z)"
@@ -67,7 +73,10 @@ def parse_news_markdown(raw_content: str) -> List[Dict[str, Any]]:
         for fmt in ("%Y-%m-%d", "%d-%m-%Y"):
             try:
                 dt = datetime.strptime(raw_date, fmt)
-                formatted_date = dt.strftime("%B %d, %Y")
+                if lang in ("nl", "nl_NL"):
+                    formatted_date = f"{dt.day} {NL_MONTHS.get(dt.month, '')} {dt.year}"
+                else:
+                    formatted_date = dt.strftime("%B %d, %Y")
                 break
             except Exception:
                 pass
@@ -87,13 +96,17 @@ def parse_news_markdown(raw_content: str) -> List[Dict[str, Any]]:
                 clean_item = re.sub(r"^[-*+]\s*", "", line_s)
                 entries.append({"title": clean_item})
 
+        status_label = "Latest" if i == 0 else "Stable"
+        if lang in ("nl", "nl_NL"):
+            status_label = "Nieuwste" if i == 0 else "Stabiel"
+
         releases.append({
             "project": project,
             "version": version,
             "title": f"{project} {version}",
             "date": formatted_date,
             "raw_date": raw_date,
-            "status": "Latest" if i == 0 else "Stable",
+            "status": status_label,
             "body_html": body_html,
             "body_md": content,
             "entries": entries,
@@ -102,19 +115,23 @@ def parse_news_markdown(raw_content: str) -> List[Dict[str, Any]]:
     return releases
 
 
-def get_whats_new(app=None) -> List[Dict[str, Any]]:
+def get_whats_new(app=None, lang: Optional[str] = None) -> List[Dict[str, Any]]:
     """
-    Fetch and parse NEWS.md into structured releases.
-    Cached in-memory only for the duration of the Sphinx build process.
+    Fetch and parse NEWS.md into structured releases for specified language ('en' or 'nl').
+    Cached in-memory for the duration of the Sphinx build process.
     """
     global _WHATS_NEW_CACHE
-    if _WHATS_NEW_CACHE is not None:
-        return _WHATS_NEW_CACHE
+    if not lang:
+        lang = getattr(app.config, "language", "en") if app and hasattr(app, "config") else "en"
+    cache_key = "nl" if lang in ("nl", "nl_NL") else "en"
 
-    raw_content = load_news_content(app)
-    releases = parse_news_markdown(raw_content) if raw_content else []
+    if cache_key in _WHATS_NEW_CACHE:
+        return _WHATS_NEW_CACHE[cache_key]
 
-    _WHATS_NEW_CACHE = releases
+    raw_content = load_news_content(app, lang=cache_key)
+    releases = parse_news_markdown(raw_content, lang=cache_key) if raw_content else []
+
+    _WHATS_NEW_CACHE[cache_key] = releases
     return releases
 
 
