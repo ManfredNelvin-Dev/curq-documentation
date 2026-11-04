@@ -2,10 +2,9 @@
 
 Enable multiple units of measure, establish measurement categories, define conversion ratios, and sell products in diverse packaging units in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Enable **Units of Measure** in **Sales > Configuration > Settings**.
+> **Prerequisites**
+> * Enable **Units of Measure** in **Sales > Configuration > Settings**.
 
 ---
 

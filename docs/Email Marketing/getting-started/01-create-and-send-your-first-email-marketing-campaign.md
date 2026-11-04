@@ -18,7 +18,7 @@ flowchart LR
 ```
 
 > **Prerequisites**
-> * Access to a standard CURQ instance with the **Email Marketing** app installed (`mass_mailing`).
+> * Access to a standard CURQ instance with the **Email Marketing** app installed.
 > * Outgoing email server configured or active demo email credentials.
 > * Basic contact permissions to create and manage mailing lists.
 
@@ -56,6 +56,8 @@ Set up a dedicated subscriber container for your email broadcast:
    * **Mandatory Partner**: Check this option if contacts on this list must be linked to an existing partner record in CURQ Contacts.
    * **Partner Tag**: Optionally assign an internal partner tag to categorize subscriber contacts.
    * **Show In Preferences ?**: Check this option to allow contacts to subscribe or unsubscribe from this list on their customer preference portal page.
+
+> For complete subscriber list properties and category options, see [**Mailing List Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-list-fields).
 
 ---
 
@@ -97,6 +99,9 @@ Initialize and compose your email broadcast:
    * **Subject**: Enter a compelling subject line *(e.g., `New Sale on all T-shirts`)*.
    * **Recipients**: Keep the default `Mailing List` selection.
    * **Mailing Lists**: Select your newly created subscriber list *(e.g., `Consumer Newsletter`)*.
+
+> For complete header attributes, audience filter parameters, and A/B testing rules, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-record-fields).
+
 5. In the **Mail Body** tab, select a pre-designed layout from the template grid *(such as `Plain Text`, `Start From Scratch`, `Welcome Message`, `Event Promo`, `Newsletter`, or `Coupon Code`)*.
 6. Use the visual drag-and-drop editor to customize headers, text blocks, call-to-action buttons, and product cards.
 
@@ -137,6 +142,7 @@ Verify message layout before launching the broadcast to your subscribers:
 
 ## Related Documentation
 
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)
 * [Manage Subscriber Lists and Track Campaign Engagement](./02-manage-subscriber-lists-and-track-campaign-engagement.md)
 * [Design, Schedule, and Send Email Mailings](../task-guides/04-design-schedule-and-send-email-mailings.md)
 * [Understanding Email Marketing Architecture and Delivery Mechanisms](../core-concepts/01-understanding-email-marketing-architecture-and-delivery-mechanisms.md)

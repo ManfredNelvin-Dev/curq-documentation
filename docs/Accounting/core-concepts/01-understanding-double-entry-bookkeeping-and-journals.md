@@ -17,7 +17,7 @@ $$\text{Assets} = \text{Liabilities} + \text{Equity}$$
 ```mermaid
 flowchart LR
     subgraph Accounting Equation
-        direction TB
+        direction LR
         A["`**Assets**
         Cash, Receivables, Inventory
         *(Normal Balance: Debit)*`"]
@@ -29,8 +29,8 @@ flowchart LR
         E["`**Equity**
         Retained Earnings, Capital
         *(Normal Balance: Credit)*`"]
+        A --- EQ --- L --- P --- E
     end
-    A --- EQ --- L --- P --- E
 ```
 
 #### Understanding Debits and Credits in CURQ
@@ -206,12 +206,17 @@ graph TD
 CURQ protects audit trails and statutory records by enforcing strict state progression on journal entries:
 
 ```mermaid
-stateDiagram-v2
-    [*] --> Draft : Create
-    Draft --> Posted : Confirm / Post
-    Draft --> Cancelled : Delete / Discard
-    Posted --> Cancelled : Reset to Draft (If Unlocked)
-    Posted --> Reversed : Reverse Entry / Credit Note
+flowchart LR
+    Start([Create Entry]) --> Draft
+    Draft["`**Draft**
+    Editable · No GL Impact`"] -->|Confirm & Post| Posted["`**Posted**
+    Validated & Locked in GL`"]
+    Posted -->|Reverse Entry| Reversed["`**Reversed**
+    Mirroring Contra-Entry`"]
+
+    Draft -.->|Delete or Discard| Cancelled["`**Cancelled**
+    Voided Transaction`"]
+    Posted -.->|Reset to Draft| Cancelled
 ```
 
 #### 1. Draft State (`Draft`)

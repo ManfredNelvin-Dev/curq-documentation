@@ -50,6 +50,8 @@ Before engaging the clock, establish the task parameters for the tracking sessio
    * **Description**: Provide an operational summary of the activity underway *(e.g., `Server setup`)*.
    * **Start Time**: CURQ automatically initializes this field with the current system timestamp.
 
+> For complete field descriptions, timestamps, and task constraints, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+
 ---
 
 ## Start the Real-Time Work Timer
@@ -97,19 +99,9 @@ Conclude your tracking session and verify that your hours are safely logged:
 
 ---
 
-## Summary of Achievements
-
-In this tutorial, you learned to:
-* Access and launch the **Start work** live timer dialog.
-* Associate running timers with specific project deliverables and work descriptions.
-* Run background tracking while navigating across CURQ applications.
-* Switch between tasks safely using the automatic session overlap safeguard.
-* Convert live timer sessions directly into timesheet records and weekly sheet entries.
-
----
-
 ## Related Documentation
 
 * [Log Your First Timesheet and Submit for Approval](./01-log-your-first-timesheet-and-submit-for-approval.md)
 * [Track Active Sessions with the Work Timer](../task-guides/03-track-active-sessions-with-the-work-timer.md)
 * [Manage Daily Timesheets and Line Entries](../task-guides/02-manage-daily-timesheets-and-line-entries.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)

@@ -55,6 +55,8 @@ Maintain list hygiene by managing subscriber memberships:
 
    ![Removing a mailing list assignment line on the contact form](../media/021.png)
 
+> For complete subscriber profile attributes and opt-out flags, see [**Mailing Contact Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-contact-fields).
+
 ---
 
 ## Step 3: Monitor Real-Time Metrics via Smart Buttons
@@ -80,6 +82,8 @@ Track live engagement directly from the mailing list and campaign headers:
    * **Quotations & Leads**: Pipeline leads and quotation orders initiated via campaign responses.
    * **Mailings**: Total number of email broadcasts associated with the campaign.
    * **Clicks**: Total tracked link clickthroughs across all campaign mailings.
+
+> For KPI calculation rules and delivery rate formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#analytical-smart-button-metrics).
 
 ---
 
@@ -124,6 +128,7 @@ Investigate why recipients unsubscribe to improve content relevance and cadence:
 
 ## Related Documentation
 
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)
 * [Create and Send Your First Email Marketing Campaign](./01-create-and-send-your-first-email-marketing-campaign.md)
 * [Generate and Analyze Email Marketing Reports](../task-guides/06-generate-and-analyze-email-marketing-reports.md)
 * [Manage Blacklisted Emails and Opt-Out Reasons](../task-guides/05-manage-blacklisted-emails-and-opt-out-reasons.md)

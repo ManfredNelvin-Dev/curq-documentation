@@ -6,19 +6,19 @@ This document provides a factual, scannable reference catalog of configuration m
 
 ## Dashboard Group Configuration Fields
 
-The following fields define dashboard groups in **Dashboards > Configuration > Dashboards** (`spreadsheet.dashboard.group`):
+The following fields define dashboard groups in **Dashboards > Configuration > Dashboards**:
 
 | Field Name | Description |
 | :--- | :--- |
 | **Name** | The unique title of the dashboard group (such as `Sales`, `Finance`, `Logistics`, or `Human Resources`). Displayed as a top-level category header in the sidebar navigation drawer. |
 | **Sequence** | Numerical integer determining the top-to-bottom sorting order of the group in the sidebar. Adjusted visually via drag-and-drop handles in the list view. |
-| **Spreadsheets** | One-to-many relationship linking individual spreadsheet dashboards (`spreadsheet.dashboard`) to this category group. |
+| **Spreadsheets** | One-to-many relationship linking individual spreadsheet dashboards to this category group. |
 
 ---
 
 ## Spreadsheet Dashboard Line Attributes
 
-The following settings are configured per dashboard line under the **Spreadsheets** tab (`spreadsheet.dashboard`):
+The following settings are configured per dashboard line under the **Spreadsheets** tab:
 
 | Field Name | Description |
 | :--- | :--- |

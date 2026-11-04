@@ -2,11 +2,10 @@
 
 Configure sales analysis graph views, evaluate performance across sales teams, products, and customers, and build dynamic multi-dimensional Pivot tables in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Confirmed sales orders, quotations, and customer invoices in the database.
-* Appropriate access rights to the **Reporting** menu (Sales User: Show all leads / Sales Administrator).
+> **Prerequisites**
+> * Confirmed sales orders, quotations, and customer invoices in the database.
+> * Appropriate access rights to the **Reporting** menu (Sales User: Show all leads / Sales Administrator).
 
 ---
 

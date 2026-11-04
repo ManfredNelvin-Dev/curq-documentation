@@ -21,6 +21,8 @@ Search across partner details, apply built-in and custom multi-criteria filters,
 
    ![Contacts dynamic search dropdown](../media/015.png)
 
+> For complete field definitions and search attribute details, see [**Contact Form Field Definitions**](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
+
 ---
 
 ### Task 2: Apply Filters and Custom Rules
@@ -93,3 +95,4 @@ At the top right of the screen, click the view switcher icons:
 * [Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
 * [Merge Duplicate Contacts](./03-merge-duplicate-contacts.md)
 * [Configure and Assign Contact Tags](./05-configure-contact-tags.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

@@ -2,15 +2,13 @@
 
 Configure reversible accounting period lock dates, protect filed statutory tax returns, execute the annual financial closing workflow, transfer net profit or loss to equity, and permanently seal historical fiscal years in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure your user account is assigned the **Billing Administrator**, **Accountant**, or **Financial Adviser** role. Configuring lock dates requires administrative accounting privileges.
-* Verify that all bank accounts, credit cards, and suspense clearing accounts are fully reconciled through the target closing period.
-* Confirm that customer invoices and vendor bills for the period are posted to the general ledger.
-* Verify that fixed asset depreciation entries have been computed and posted via [**Manage Fixed Assets and Depreciation**](./06-manage-fixed-assets-and-depreciation.md).
-* Verify that statutory Dutch VAT returns have been finalized via [**File Statutory VAT Returns and ICP Declaration**](./08-file-statutory-vat-returns-and-icp-declaration.md).
+> **Prerequisites**
+> * Ensure your user account is assigned the **Billing Administrator**, **Accountant**, or **Financial Adviser** role. Configuring lock dates requires administrative accounting privileges.
+> * Verify that all bank accounts, credit cards, and suspense clearing accounts are fully reconciled through the target closing period.
+> * Confirm that customer invoices and vendor bills for the period are posted to the general ledger.
+> * Verify that fixed asset depreciation entries have been computed and posted via [**Manage Fixed Assets and Depreciation**](./06-manage-fixed-assets-and-depreciation.md).
+> * Verify that statutory Dutch VAT returns have been finalized via [**File Statutory VAT Returns and ICP Declaration**](./08-file-statutory-vat-returns-and-icp-declaration.md).
 
 ---
 

@@ -2,11 +2,10 @@
 
 Configure digital signatures, require online prepayments, set deposit percentages, and connect payment provider gateways in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Sales Administrator rights to modify settings and payment gateways.
-* Valid merchant account credentials (if connecting live online payment providers like Stripe, PayPal, or Adyen).
+> **Prerequisites**
+> * Sales Administrator rights to modify settings and payment gateways.
+> * Valid merchant account credentials (if connecting live online payment providers like Stripe, PayPal, or Adyen).
 
 ---
 

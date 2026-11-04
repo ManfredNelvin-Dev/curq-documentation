@@ -2,12 +2,11 @@
 
 Establish multi-currency price lists, configure volume quantity tiers, and automate formula-based margin pricing rules in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Enable **Pricelists** in **Sales > Configuration > Settings**. Select **Advanced price rules (discounts, formulas)** to unlock volume breaks and margin controls.
-
-   ![Enable pricelists setting](../media/087.png)
+> **Prerequisites**
+> * Enable **Pricelists** in **Sales > Configuration > Settings**. Select **Advanced price rules (discounts, formulas)** to unlock volume breaks and margin controls.
+>
+>    ![Enable pricelists setting](../media/087.png)
 
 ---
 

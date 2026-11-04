@@ -66,6 +66,7 @@ myst_enable_extensions = [
     "dollarmath",
     "amsmath",
 ]
+myst_heading_anchors = 3
 
 # ---------------------------------------------------------
 # Sphinx Multi-Version configuration

@@ -2,13 +2,11 @@
 
 Record supplier invoices, configure expense allocations and tax grids, verify external bill numbers, post payables to the general ledger, and process vendor refunds in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure vendor contact profiles are registered in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) with verified tax IDs and bank accounts for outgoing payments.
-* Verify that general ledger expense accounts and input tax codes are configured in your chart of accounts.
-* Check that an active **Vendor Bills** journal exists with an assigned sequential prefix *(e.g., `BILL`)*.
+> **Prerequisites**
+> * Ensure vendor contact profiles are registered in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) with verified tax IDs and bank accounts for outgoing payments.
+> * Verify that general ledger expense accounts and input tax codes are configured in your chart of accounts.
+> * Check that an active **Vendor Bills** journal exists with an assigned sequential prefix *(e.g., `BILL`)*.
 
 ---
 

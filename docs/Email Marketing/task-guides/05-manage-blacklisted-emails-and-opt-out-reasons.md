@@ -31,6 +31,8 @@ Manage individual suppression records:
 
    ![Clicking Unblacklist on the Blacklisted Email Addresses form](../media/040.png)
 
+> For complete field definitions and suppression criteria, see [**Global Email Blacklist Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#global-email-blacklist-specifications).
+
 ---
 
 ## Task 3: Configure Custom Opt-Out Feedback Reasons
@@ -48,6 +50,8 @@ Customize the reasons presented to recipients during the unsubscribe process:
 3. Click **New** to add a new category *(such as `Receiving too frequently` or `No longer in this industry`)*.
 4. Save the record. The reason will now appear on subscriber self-service unsubscribe pages.
 
+> For complete field definitions and configuration details, see [**Opt-Out Reasons Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#opt-out-reasons-specifications).
+
 ---
 
 ## Edge Cases & Recovery Steps
@@ -62,3 +66,4 @@ Customize the reasons presented to recipients during the unsubscribe process:
 * [Manage Subscriber Lists and Track Campaign Engagement](../getting-started/02-manage-subscriber-lists-and-track-campaign-engagement.md)
 * [Generate and Analyze Email Marketing Reports](./06-generate-and-analyze-email-marketing-reports.md)
 * [Understanding Campaign Lifecycles and Subscriber Governance](../core-concepts/02-understanding-campaign-lifecycles-and-subscriber-governance.md)
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)

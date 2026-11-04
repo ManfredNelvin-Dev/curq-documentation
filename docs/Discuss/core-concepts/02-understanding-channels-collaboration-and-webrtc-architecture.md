@@ -9,21 +9,25 @@ This document explains the information topology of team channels, the dynamics o
 Effective enterprise communication requires balancing open transparency with confidential security. CURQ structures group communications into distinct architectural spaces to support varying levels of organizational scope:
 
 ```{mermaid}
-flowchart TD
-    subgraph "Organizational Communication Spectrum"
-        PUB["`**Public Channels (#general, #news)**
-        • Open Discovery & Self-Subscription
-        • Cross-Functional Transparency
-        • Company-Wide Alignment`"]
-        PRIV["`**Private Channels (#leadership, #hiring)**
-        • Explicit Member Invitations Only
-        • Departmental & Project Isolation
-        • Hidden from Directory Searches`"]
-        DM["`**Ad-Hoc Group Chats**
-        • Lightweight Multi-Party Peer Streams
-        • Zero Channel Directory Overhead
-        • Transient Collaboration Pods`"]
-    end
+flowchart LR
+    ROOT["`**Discuss Workspace**
+    Communication Scope`"] --> PUB["`**Public Channels**
+    _#general, #news_
+    • Open discovery & self-subscription
+    • Cross-functional transparency
+    • Company-wide alignment`"]
+
+    ROOT --> PRIV["`**Private Channels**
+    _#leadership, #hiring_
+    • Explicit invitations only
+    • Departmental & project isolation
+    • Hidden from directory searches`"]
+
+    ROOT --> DM["`**Ad-Hoc Group Chats**
+    _Direct & peer chats_
+    • Lightweight multi-party streams
+    • Zero channel directory overhead
+    • Transient collaboration pods`"]
 ```
 
 ## 1. Public Channels: Cross-Functional Transparency
@@ -47,19 +51,20 @@ Operational friction in enterprise workflows rarely occurs *within* departments;
 
 ```{mermaid}
 flowchart LR
-    subgraph "Cross-Department Synchronization"
-        S["`**Sales**
-        • Confirmed Order
-        • Chatter Note @Warehouse`"] --> W["`**Warehouse & Logistics**
-        • Pack & Pick Verification
-        • Sync in #operations`"]
-        W --> A["`**Accounting & Billing**
-        • Immediate Invoice Generation
-        • Canned Terms Applied`"]
-        W <--> M["`**Instant Ad-Hoc Meeting**
-        • 2-Minute Video Sync
-        • Visual Packaging Check`"]
-    end
+    S["`**1. Sales Order**
+    Confirmed order logged
+    Chatter note @Warehouse`"] --> W["`**2. Warehouse & Logistics**
+    Pack & pick verification
+    Status sync in #operations`"]
+
+    W --> A["`**3. Accounting & Billing**
+    Immediate invoice generated
+    Automated customer update`"]
+
+    W -.->|"Optional visual check"| M["`**Ad-Hoc Video Sync**
+    2-minute WebRTC meeting
+    Instant packaging verification`"]
+    M -.->|"Approved"| W
 ```
 
 ## 1. Breaking the Inter-Departmental Delay Loop
@@ -97,16 +102,14 @@ Choosing the right communication medium determines whether an organization maint
 CURQ incorporates modern WebRTC (Web Real-Time Communication) protocols directly into the browser client, eliminating the requirement for third-party meeting licenses, desktop client installations, or proprietary conferencing servers:
 
 ```{mermaid}
-flowchart TD
-    subgraph "WebRTC Peer Connection"
-        A["`**User A Browser**
-        • Microphone & Camera
-        • Client-Side Canvas Blur
-        • DTLS-SRTP Media Packetizer`"] <===>|"Encrypted Audio/Video (SRTP)"| B["`**User B Browser**
-        • Audio Output & Video Renderer
-        • Hardware Acceleration
-        • Jitter Buffer Management`"]
-    end
+flowchart LR
+    A["`**User A Browser**
+    • Microphone & camera input
+    • Client-side background blur
+    • DTLS-SRTP packetizer`"] <===>|"Encrypted Audio / Video (SRTP)"| B["`**User B Browser**
+    • Audio output & video rendering
+    • Hardware acceleration
+    • Jitter buffer management`"]
 ```
 
 ## 1. Browser-Native Execution Without Third-Party Plugins

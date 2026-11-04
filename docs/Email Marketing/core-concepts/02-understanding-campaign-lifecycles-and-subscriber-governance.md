@@ -13,6 +13,8 @@ Each marketing broadcast moves through a deterministic series of workflow stages
 * **Sending**: The asynchronous worker has commenced batch transmission. Emails are currently being formatted and passed to the outgoing SMTP relay.
 * **Sent**: All messages in the mailing have been delivered to the outgoing mail server. Analytics smart buttons and reporting charts are populated with real-time delivery and interaction data.
 
+> For complete stage specifications and composer field attributes, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-record-fields).
+
 ---
 
 ## Dynamic Recipient Targeting Models
@@ -90,6 +92,8 @@ When compiling the final recipient list during dispatch, CURQ applies a strict m
 3. **List-Specific Opt-Out**: Skips contacts marked as opted out on the target mailing list.
 4. **Global Blacklist Check**: Automatically drops any email address registered on the organizational blacklist. This overrides all mailing list subscriptions across all modules.
 
+> For complete suppression specifications and blacklist attributes, see [**Global Email Blacklist Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#global-email-blacklist-specifications).
+
 ---
 
 ## Core Engagement Metrics and Calculations
@@ -103,6 +107,8 @@ When compiling the final recipient list during dispatch, CURQ applies a strict m
 | **Bounce Rate** | `(Bounced / Sent) * 100` | Measures list cleanliness; rates above 2% indicate outdated data. |
 | **Unsubscribe Rate** | `(Opted Out / Delivered) * 100` | Monitors audience fatigue or irrelevant content frequency. |
 
+> For complete metric definitions and calculation formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#analytical-smart-button-metrics).
+
 ---
 
 ## Related Documentation
@@ -110,3 +116,4 @@ When compiling the final recipient list during dispatch, CURQ applies a strict m
 * [Understanding Email Marketing Architecture and Delivery Mechanisms](./01-understanding-email-marketing-architecture-and-delivery-mechanisms.md)
 * [Create and Send Your First Email Marketing Campaign](../getting-started/01-create-and-send-your-first-email-marketing-campaign.md)
 * [Manage Blacklisted Emails and Opt-Out Reasons](../task-guides/05-manage-blacklisted-emails-and-opt-out-reasons.md)
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)

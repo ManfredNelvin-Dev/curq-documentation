@@ -2,12 +2,10 @@
 
 This guide details configuring GDPR cookie consent banners, privacy policies, terms of service agreements, blocked tracking domains, and customer portal registration policies in CURQ 18.
 
----
 
-## Prerequisites
-
-* **Administration**: User must have **Settings** rights to access and modify system configurations.
-* **Website**: User must have **Editor and Designer** access rights to manage website settings.
+> **Prerequisites**
+> * **Administration**: User must have **Settings** rights to access and modify system configurations.
+> * **Website**: User must have **Editor and Designer** access rights to manage website settings.
 
 ---
 

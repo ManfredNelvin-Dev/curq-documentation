@@ -2,11 +2,10 @@
 
 Organize catalog items, browse and filter products in Kanban and List views, establish hierarchical category trees, configure warehouse removal strategies, set inventory costing methods, and manage centralized product tags in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Access permissions as Sales Administrator.
-* Products registered in the catalog under **Sales > Products > Products**.
+> **Prerequisites**
+> * Access permissions as Sales Administrator.
+> * Products registered in the catalog under **Sales > Products > Products**.
 
 ---
 

@@ -53,6 +53,8 @@ When an employee has completed overtime work, earned compensatory time, or requi
 4. The request transitions to **To Approve** status and automatically alerts your manager or HR officer via the chatter activity feed.
 5. Once your manager reviews and approves the request, your balance card on the **Dashboard** increases immediately.
 
+> For complete field definitions and configuration options, see [**Allocation Record Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#allocation-record-attributes).
+
 ---
 
 ### Task 4: Filter and Search Allocation Records
@@ -77,3 +79,4 @@ Locate specific allocation records across historical cycles:
 * [Submit Your First Time Off Request](../getting-started/01-submit-your-first-time-off-request.md)
 * [Set Up Your First Leave Allocation](../getting-started/02-set-up-your-first-leave-allocation.md)
 * [Grant and Validate Employee Allocations](./05-grant-and-validate-employee-allocations.md)
+* [Accrual Plans and Milestone Specifications](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md)

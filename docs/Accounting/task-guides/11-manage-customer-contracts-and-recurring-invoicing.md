@@ -2,14 +2,12 @@
 
 Recurring contracts automate subscription billing for ongoing services, software licenses, maintenance retainers, and scheduled deliveries. In CURQ, the Contracts module links customer agreements directly to automated accounting entries, issuing draft or posted customer invoices on fixed recurring cycles without repetitive manual entry.
 
----
 
-### Prerequisites
-
-* Ensure the customer partner record is created with designated billing addresses and payment terms under **Accounting > Customers > Customers**.
-* If collecting recurring settlements electronically via SEPA Direct Debit, verify that an active banking mandate and customer IBAN are validated under **Accounting > Customers > Banking Mandates**.
-* Configure recurring service or subscription products under **Sales > Products** with the appropriate revenue accounts and VAT rates.
-* *(Optional)* Prepare a standard contract template under **Accounting > Configuration > Contract Templates** to pre-fill billing rules, lines, and journals for standard subscription offerings.
+> **Prerequisites**
+> * Ensure the customer partner record is created with designated billing addresses and payment terms under **Accounting > Customers > Customers**.
+> * If collecting recurring settlements electronically via SEPA Direct Debit, verify that an active banking mandate and customer IBAN are validated under **Accounting > Customers > Banking Mandates**.
+> * Configure recurring service or subscription products under **Sales > Products** with the appropriate revenue accounts and VAT rates.
+> * *(Optional)* Prepare a standard contract template under **Accounting > Configuration > Contract Templates** to pre-fill billing rules, lines, and journals for standard subscription offerings.
 
 ---
 

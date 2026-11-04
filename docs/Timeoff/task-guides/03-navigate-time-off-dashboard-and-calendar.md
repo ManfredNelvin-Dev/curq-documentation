@@ -104,6 +104,8 @@ The right-hand panel spotlights key corporate dates:
 * **Mandatory Days**: Company-designated dates requiring attendance *(such as annual inventory counts or executive summits)*. Time-off requests are locked and cannot be booked on these dates.
 * **Public Holidays**: Official statutory holidays configured for your working calendar. Public holidays are automatically excluded from leave deductions when the time-off type is configured accordingly.
 
+> For complete field definitions and configuration options, see [**Public Holiday Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#public-holiday-attributes) and [**Mandatory Day Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#mandatory-day-attributes).
+
 ---
 
 ### Task 8: Use the Manager All Time Off Overview
@@ -138,3 +140,4 @@ Managers and HR officers can inspect leave schedules across their entire departm
 * [Request Time Off and Manage Leave](./01-request-time-off-and-manage-leave.md)
 * [Review, Approve, and Manage Team Time Off](./04-review-approve-and-manage-team-time-off.md)
 * [Configure Public Holidays and Mandatory Days](./09-configure-public-holidays-and-mandatory-days.md)
+* [Holidays, Mandatory Days, and Activity Specifications](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md)

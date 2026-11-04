@@ -2,14 +2,12 @@
 
 Generate, filter, analyze, and export core financial statements, including the Profit and Loss (P&L) Statement, Balance Sheet, Trial Balance, General Ledger, and Aged Partner Balances, in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure regular journal entries, customer invoices, vendor bills, and bank statements are posted and reconciled in your general ledger.
-* Verify your Chart of Accounts hierarchy is properly configured with assigned account types *(Asset, Liability, Equity, Income, Expense)*.
-* Confirm periodic adjustments *(such as depreciation entries from [**Manage Fixed Assets and Depreciation**](./06-manage-fixed-assets-and-depreciation.md) and accruals from [**Create Manual Journal Entries**](./05-create-manual-journal-entries.md))* are posted for the target reporting period.
-* Check that your user account has **Billing Administrator** or **Accountant** access rights in CURQ.
+> **Prerequisites**
+> * Ensure regular journal entries, customer invoices, vendor bills, and bank statements are posted and reconciled in your general ledger.
+> * Verify your Chart of Accounts hierarchy is properly configured with assigned account types *(Asset, Liability, Equity, Income, Expense)*.
+> * Confirm periodic adjustments *(such as depreciation entries from [**Manage Fixed Assets and Depreciation**](./06-manage-fixed-assets-and-depreciation.md) and accruals from [**Create Manual Journal Entries**](./05-create-manual-journal-entries.md))* are posted for the target reporting period.
+> * Check that your user account has **Billing Administrator** or **Accountant** access rights in CURQ.
 
 ---
 

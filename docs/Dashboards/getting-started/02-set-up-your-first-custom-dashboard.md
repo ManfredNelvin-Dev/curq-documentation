@@ -16,7 +16,7 @@ flowchart LR
 ```
 
 > **Prerequisites**
-> * Access to a standard CURQ instance with the **Dashboards** (`spreadsheet_dashboard`) and **My Dashboard** (`board`) modules installed.
+> * Access to a standard CURQ instance with the **Dashboards** and **My Dashboard** modules installed.
 > * Standard user account permissions.
 
 ---
@@ -98,20 +98,10 @@ Tailor widget positioning and visibility to maintain a clean workspace:
 
 ---
 
-## Summary of Achievements
-
-In this tutorial, you learned to:
-* Filter operational views and pin them to your personal workspace using the gear menu.
-* Access and navigate **My Dashboard**.
-* Switch between 1, 2, and 3 column responsive layouts.
-* Drag-and-drop widgets to prioritize critical morning tasks.
-* Minimize and fold cards to maximize workspace efficiency.
-
----
-
 ## Related Documentation
 
 * [Explore Standard Dashboards and KPIs](./01-explore-standard-dashboards-and-kpis.md)
 * [Create and Manage My Dashboard](../task-guides/02-create-and-manage-my-dashboard.md)
+* [Dashboard Configuration and Group Specifications](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md)
 * [Understanding Spreadsheet Dashboards vs. My Dashboard](../core-concepts/01-understanding-spreadsheet-dashboards-vs-my-dashboard.md)
 

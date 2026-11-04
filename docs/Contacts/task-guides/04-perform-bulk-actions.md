@@ -24,6 +24,8 @@ Execute batch operations across multiple contacts simultaneously, including data
 4. Select the fields you wish to include, or use a saved export template.
 5. Click **Export**.
 
+> For complete field definitions and exportable partner attributes, see [**Contact Form Field Definitions**](../settings-and-fields/01-contact-form-field-definitions.md).
+
 #### 2. Archive or Unarchive Contacts in Bulk
 To clean up inactive leads or expired vendors without deleting past transactions:
 * **To Archive**: Select the contacts, click **Actions > Archive**, and confirm. The contacts will disappear from default views.
@@ -66,3 +68,4 @@ To allow multiple customers to view their invoices, deliveries, and quotes onlin
 * [Configure and Assign Contact Tags](./05-configure-contact-tags.md)
 * [Merge Duplicate Contacts](./03-merge-duplicate-contacts.md)
 * [Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

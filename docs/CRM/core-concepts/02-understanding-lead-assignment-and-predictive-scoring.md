@@ -35,20 +35,20 @@ flowchart LR
 
 #### 1. Two-Tier Domain Hierarchy
 Lead routing evaluates criteria at both the team and individual representative levels:
-* **Team Assignment Domains**: When an inquiry arrives (via web form, email alias, or API import), the engine matches lead properties against team-level domain expressions (`assignment_domain`). This routes enterprise opportunities to the Enterprise Sales Team, technical inquiries to Solutions Engineering, or regional leads to localized sales units.
-* **Member Assignment Domains**: Within a team, individual sales representatives can have dedicated sub-domains (`assignment_domain` on the team member profile). For instance, a multilingual representative can be targeted exclusively for leads originating from French- or German-speaking territories.
+* **Team Assignment Domains**: When an inquiry arrives (via web form, email alias, or API import), the engine matches lead properties against team-level domain filter expressions. This routes enterprise opportunities to the Enterprise Sales Team, technical inquiries to Solutions Engineering, or regional leads to localized sales units.
+* **Member Assignment Domains**: Within a team, individual sales representatives can have dedicated filtering criteria configured on their member profile. For instance, a multilingual representative can be targeted exclusively for leads originating from French- or German-speaking territories.
 
 #### 2. Capacity Governance & Load Balancing
 To maintain balanced workloads, the assignment engine enforces rolling capacity ceilings:
-* **Rolling 30-Day Capacity (`assignment_max`)**: Each team member has a configurable threshold defining the maximum volume of leads they can receive in a rolling 30-day window.
+* **Rolling 30-Day Capacity**: Each team member has a configurable threshold defining the maximum volume of leads they can receive in a rolling 30-day window.
 * **Dynamic Capacity Bypass**: If a representative reaches their 30-day quota, the distribution algorithm automatically bypasses them and routes subsequent matching prospects to eligible colleagues with available capacity.
-* **Assignment Opt-Out (`assignment_optout`)**: Representatives on leave, supervisors, or team leaders can enable **Skip auto assignment**, exempting their profiles from automated distribution without removing them from team performance reporting.
+* **Assignment Opt-Out**: Representatives on leave, supervisors, or team leaders can enable **Skip auto assignment**, exempting their profiles from automated distribution without removing them from team performance reporting.
 
 #### 3. Execution Triggers and Automatic Conversion
 Lead assignment operates through two complementary modes:
 * **On-Demand Manual Execution**: Team leaders can trigger distribution instantly by clicking **Assign Leads** on the sales team form view.
 * **Automated Scheduled Cron**: Organizations can schedule automated routing runs (e.g., every hour) via background cron automation.
-* **Automatic Opportunity Conversion**: When rule-based assignment allocates a lead to a salesperson, CURQ automatically executes `_assign_and_convert_leads`, transitioning the unscrubbed lead record into a qualified opportunity within the representative’s active pipeline board.
+* **Automatic Opportunity Conversion**: When rule-based assignment allocates a lead to a salesperson, CURQ automatically transitions the unscrubbed lead record into a qualified opportunity within the representative’s active pipeline board.
 
 ---
 
@@ -70,10 +70,10 @@ The predictive engine stores frequency distributions in historical scoring frequ
   * **Stage**: Stage progression serves as the structural anchor of probability. As an opportunity advances from *New* to *Qualified* to *Proposition*, its baseline probability rises to match historical stage completion rates.
   * **Sales Team**: Accounts for differing closing rates across different sales units and commercial go-to-market motions.
 * **Configurable Categorical Dimensions**:
-  * **Phone Quality (`phone_state`)**: Evaluates the completeness, format validity, and presence of direct telephone numbers.
-  * **Email Quality (`email_state`)**: Evaluates deliverability, corporate domain structure, and verified sender records.
-  * **Geographical Attributes (`country_id`, `state_id`)**: Factors regional conversion variances and territory-specific win rates.
-  * **Marketing Attribution (`source_id`, `medium_id`)**: Measures historical conversion efficacy across marketing channels (e.g., organic search vs. paid advertising vs. partner referrals).
+  * **Phone Quality**: Evaluates the completeness, format validity, and presence of direct telephone numbers.
+  * **Email Quality**: Evaluates deliverability, corporate domain structure, and verified sender records.
+  * **Geographical Attributes**: Factors regional conversion variances and territory-specific win rates across countries and states.
+  * **Marketing Attribution**: Measures historical conversion efficacy across marketing channels (e.g., organic search vs. paid advertising vs. partner referrals).
 
 #### 3. Data Governance and Algorithmic Prerequisites
 To maintain scoring accuracy and data integrity, predictive lead scoring enforces strict governance constraints:

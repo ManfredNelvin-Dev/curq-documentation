@@ -2,13 +2,11 @@
 
 This tutorial walks you through the complete procurement lifecycle in CURQ 18—from creating and sending an initial Request for Quotation (RFQ), through order confirmation and warehouse receiving, to generating and validating the final vendor bill.
 
----
 
-## Prerequisites
-Before starting, ensure you have:
-* Access to the **Purchase**, **Inventory**, and **Accounting** / **Invoicing** applications in CURQ.
-* At least one vendor contact record created in **Contacts**.
-* At least one product configured as a storable product in your database.
+> **Prerequisites**
+> * Access to the **Purchase**, **Inventory**, and **Accounting** / **Invoicing** applications in CURQ.
+> * At least one vendor contact record created in **Contacts**.
+> * At least one product configured as a storable product in your database.
 
 ---
 

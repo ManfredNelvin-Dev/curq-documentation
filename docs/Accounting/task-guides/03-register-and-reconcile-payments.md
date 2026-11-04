@@ -2,13 +2,11 @@
 
 Record incoming customer receipts, execute outgoing supplier disbursements, process batch SEPA payment orders, allocate advance payments, and understand the transition from "In Payment" to "Paid" in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Validate the corresponding customer invoices in [**Create and Validate Customer Invoices**](./01-create-and-validate-customer-invoices.md) or vendor bills in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md).
-* Verify that bank and cash journals *(e.g., `Bank`, `Cash`)* are configured with active accounts in your chart of accounts.
-* For electronic vendor disbursements, verify that the vendor profile contains a valid IBAN/BIC in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
+> **Prerequisites**
+> * Validate the corresponding customer invoices in [**Create and Validate Customer Invoices**](./01-create-and-validate-customer-invoices.md) or vendor bills in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md).
+> * Verify that bank and cash journals *(e.g., `Bank`, `Cash`)* are configured with active accounts in your chart of accounts.
+> * For electronic vendor disbursements, verify that the vendor profile contains a valid IBAN/BIC in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
 
 ---
 

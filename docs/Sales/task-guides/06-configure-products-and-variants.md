@@ -2,12 +2,11 @@
 
 Create master product catalog items, configure attributes and variations, set variant price surcharges, and assign catalog tags in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* To manage multi-attribute items, verify that **Variants** is enabled in **Sales > Configuration > Settings**:
-
-   ![Enable variants setting in Sales settings](../media/052.png)
+> **Prerequisites**
+> * To manage multi-attribute items, verify that **Variants** is enabled in **Sales > Configuration > Settings**:
+>
+>    ![Enable variants setting in Sales settings](../media/052.png)
 
 ---
 

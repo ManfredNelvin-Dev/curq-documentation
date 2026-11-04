@@ -101,16 +101,6 @@ When the customer agrees to the proposal:
 
 ---
 
-## What You Accomplished
-
-You completed an end-to-end sales cycle in CURQ 18:
-* Created and customized a professional customer offer.
-* Dispatched the quote with an automated PDF attachment.
-* Transitioned the prospect into a confirmed legal sales order.
-* Generated the accounting invoice and collected payment.
-
----
-
 ## Related Documentation
 
 * [Complete a Sale with Online Signature and Payment](./02-complete-a-sale-with-online-signature-and-payment.md)

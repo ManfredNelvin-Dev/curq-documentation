@@ -2,12 +2,11 @@
 
 Create standardized quotation templates, configure default product bundles, and attach professional PDF Quote Builder header and footer cover pages in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Enable **Quotation Templates** in **Sales > Configuration > Settings**.
-
-   ![Enable quotation templates setting](../media/093.png)
+> **Prerequisites**
+> * Enable **Quotation Templates** in **Sales > Configuration > Settings**.
+>
+>    ![Enable quotation templates setting](../media/093.png)
 
 ---
 

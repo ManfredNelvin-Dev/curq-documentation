@@ -2,18 +2,16 @@
 
 Generate periodic Dutch VAT returns (*Omzetbelasting / BTW-aangifte*), audit statutory tax boxes (Rubrieken 1 t/m 5), drill down into underlying invoices, incorporate late-posted transactions, generate EU Intra-Community Transactions (*ICP-opgave*), and finalize tax periods in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure all customer invoices and vendor bills for the reporting period are posted to the general ledger with assigned tax grids *(e.g., `+1a`, `+3a`, `5b`)* mapped in **Accounting > Configuration > Taxes**:
-
-  ![Tax Definition tab showing VAT distribution accounts and statutory tax grids](../media/074.png)
-  ![Tax Advanced Options tab showing tax labels, country, and presentation settings](../media/075.png)
-
-  > For complete tax computation algorithms and tax grid mapping specifications, see [**Tax Configuration Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#tax-configuration-field-definitions).
-* Confirm that foreign EU business customers have verified VAT identification numbers in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
-* Verify your user account has **Billing Administrator** or **Accountant** access rights in CURQ.
+> **Prerequisites**
+> * Ensure all customer invoices and vendor bills for the reporting period are posted to the general ledger with assigned tax grids *(e.g., `+1a`, `+3a`, `5b`)* mapped in **Accounting > Configuration > Taxes**:
+>
+>   ![Tax Definition tab showing VAT distribution accounts and statutory tax grids](../media/074.png)
+>   ![Tax Advanced Options tab showing tax labels, country, and presentation settings](../media/075.png)
+>
+>   > For complete tax computation algorithms and tax grid mapping specifications, see [**Tax Configuration Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#tax-configuration-field-definitions).
+> * Confirm that foreign EU business customers have verified VAT identification numbers in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
+> * Verify your user account has **Billing Administrator** or **Accountant** access rights in CURQ.
 
 ---
 

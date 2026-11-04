@@ -2,13 +2,11 @@
 
 Generate customer invoices, structure billing lines with sections and notes, verify automated tax computations, post records to the general ledger, deliver commercial documents to clients, and issue credit notes in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure client contact profiles are established in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) with valid billing addresses and tax identification numbers.
-* Verify that products and services are configured with appropriate sales accounts and default tax rules.
-* Check that an active **Customer Invoices** journal exists in your accounting configuration with an assigned sequence prefix.
+> **Prerequisites**
+> * Ensure client contact profiles are established in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) with valid billing addresses and tax identification numbers.
+> * Verify that products and services are configured with appropriate sales accounts and default tax rules.
+> * Check that an active **Customer Invoices** journal exists in your accounting configuration with an assigned sequence prefix.
 
 ---
 

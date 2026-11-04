@@ -41,6 +41,8 @@ flowchart LR
 
    ![Other info settings enabling online signature and payment](../media/008.png)
 
+> For complete field definitions, pricing parameters, and delivery options, see [**Other Info Tab Fields**](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md#other-info-tab-fields).
+
 5. In the top action bar, click the cloud icon (or press `Ctrl+S`) to save the quotation.
 
 ---
@@ -105,18 +107,10 @@ Return to the backend sales interface (or close the preview tab):
 
 ---
 
-## What You Accomplished
-
-You executed a zero-friction, automated commercial agreement:
-* Eliminated paper scanning and physical contract mailing.
-* Guaranteed cash collection upfront before releasing inventory reserves.
-* Automated the handoff between sales, warehouse fulfillment, and finance.
-
----
-
 ## Related Documentation
 
 * [Process Your First Sale from Quote to Invoice](./01-process-your-first-sale.md)
 * [Manage Customer Approvals and Online Payments](../task-guides/05-manage-customer-approvals-and-payments.md)
 * [Configure Quotation Templates and PDF Quote Builder](../task-guides/09-configure-quotation-templates.md)
+* [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
 * [Understanding the Sales Order Lifecycle and State Machine](../core-concepts/01-understanding-the-sales-order-lifecycle.md)

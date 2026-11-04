@@ -19,9 +19,11 @@ flowchart LR
 
 ## Hands-On Exercise: Send Your First Message and Collaborate
 
-## Prerequisites
-* Access to a standard CURQ instance with the **Discuss** app installed.
-* Standard default user accounts. No special administrative permissions or third-party meeting plugins are required.
+
+
+> **Prerequisites**
+> * Access to a standard CURQ instance with the **Discuss** app installed.
+> * Standard default user accounts. No special administrative permissions or third-party meeting plugins are required.
 
 ---
 

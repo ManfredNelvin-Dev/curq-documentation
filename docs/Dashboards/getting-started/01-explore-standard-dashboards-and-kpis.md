@@ -1,6 +1,6 @@
 # Explore Standard Dashboards and KPIs
 
-Welcome to CURQ Dashboards. The **Dashboards** application delivers real-time business visibility across your entire organization by consolidating critical metrics, financial performance, and operational health into interactive visual workspaces. Powered by the enterprise `spreadsheet_dashboard` engine, standard dashboards eliminate manual spreadsheet compiling and provide instant insights with live drill-down capabilities.
+Welcome to CURQ Dashboards. The **Dashboards** application delivers real-time business visibility across your entire organization by consolidating critical metrics, financial performance, and operational health into interactive visual workspaces. Powered by the enterprise CURQ Spreadsheet engine, standard dashboards eliminate manual spreadsheet compiling and provide instant insights with live drill-down capabilities.
 
 In this tutorial, you will explore how CURQ organizes enterprise dashboards, understand the KPI hierarchy, and complete a hands-on exercise to navigate dashboards, apply filters, and drill down into transactional records in 5 quick steps.
 
@@ -16,7 +16,7 @@ flowchart LR
 ```
 
 > **Prerequisites**
-> * Access to a standard CURQ instance with the **Dashboards** app installed (`spreadsheet_dashboard`).
+> * Access to a standard CURQ instance with the **Dashboards** app installed.
 > * Standard user account permissions with access to departmental modules (such as Sales or CRM).
 
 ---
@@ -96,16 +96,6 @@ Every metric card and chart element is linked directly to the underlying transac
    ![Filtered list of records opened from dashboard drill down](../media/006.png)
 
 3. Review the individual transactions, update records, or click the **Dashboards** breadcrumb at the top left to return to your dashboard view.
-
----
-
-## Summary of Achievements
-
-In this tutorial, you learned to:
-* Navigate departmental dashboard groups in the left sidebar.
-* Interpret headline summary metrics, growth indicators, and top performer cards.
-* Apply multi-dimensional date and category filters.
-* Drill down from high-level visual KPIs into granular source records.
 
 ---
 

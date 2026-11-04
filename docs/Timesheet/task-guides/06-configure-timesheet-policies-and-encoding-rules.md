@@ -55,6 +55,8 @@ Designate who is authorized to review and validate submitted employee timesheets
    * **By HR Managers**: Restricts validation authority exclusively to senior HR managers.
    * **By Timesheets Managers**: Directs review notifications to departmental timesheet supervisors.
 
+> For complete parameter descriptions, default values, and operational impacts of each setting, see [**Global System Settings**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#global-system-settings).
+
 ---
 
 ### Task 5: Save and Apply System Changes
@@ -67,6 +69,7 @@ Designate who is authorized to review and validate submitted employee timesheets
 
 ### Related Documentation
 
+* [Timesheet Configuration and Review Specifications](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md)
 * [Generate and Analyze Timesheet Reports](./07-generate-and-analyze-timesheet-reports.md)
 * [Review, Approve, and Refuse Timesheet Sheets](./04-review-approve-and-refuse-timesheet-sheets.md)
 * [Understanding Timesheet Architecture and Project Integration](../core-concepts/01-understanding-timesheet-architecture-and-project-integration.md)

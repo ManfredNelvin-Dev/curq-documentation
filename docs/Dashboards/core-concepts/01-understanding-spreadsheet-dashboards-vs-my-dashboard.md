@@ -1,6 +1,6 @@
 # Understanding Spreadsheet Dashboards vs. My Dashboard
 
-This document explains the architectural principles, underlying data pipelines, and operational paradigms distinguishing CURQ's two dashboard frameworks: **Standard Spreadsheet Dashboards** (`spreadsheet_dashboard`) and **My Dashboard** (`board`). Understanding this distinction allows organizations to build effective reporting architectures that balance strategic aggregate analytics with daily tactical execution.
+This document explains the architectural principles, underlying data pipelines, and operational paradigms distinguishing CURQ's two dashboard frameworks: **Standard Spreadsheet Dashboards** and **My Dashboard**. Understanding this distinction allows organizations to build effective reporting architectures that balance strategic aggregate analytics with daily tactical execution.
 
 ---
 
@@ -18,18 +18,18 @@ Modern enterprise management demands two fundamentally different analytical capa
 
 Traditional ERP solutions often attempt to force both use cases into a single rigid interface, resulting in either sluggish operational lists cluttered with complex formulas or rigid executive charts that cannot link back to frontline tasks.
 
-CURQ solves this by implementing two specialized dashboard architectures: **Standard Dashboards** (`spreadsheet_dashboard`) for aggregated cross-functional reporting, and **My Dashboard** (`board`) for personalized operational tracking.
+CURQ solves this by implementing two specialized dashboard architectures: **Standard Dashboards** for aggregated cross-functional reporting, and **My Dashboard** for personalized operational tracking.
 
 ---
 
 ## Architectural Comparison
 
-| Architectural Dimension | Standard Dashboards (`spreadsheet_dashboard`) | My Dashboard (`board`) |
+| Architectural Dimension | Standard Dashboards | My Dashboard |
 | :--- | :--- | :--- |
-| **Primary Framework** | Odoo Spreadsheet Engine (`spreadsheet_dashboard`). | Action Window Board Engine (`board`). |
+| **Primary Framework** | CURQ Spreadsheet Engine. | Action Window Board Engine. |
 | **Primary Audience** | Executives, department managers, business analysts. | Individual contributors, operators, team members. |
 | **Scope & Privacy** | Organization-wide or department-wide; shared layout across authorized roles. | 100% private per user login; layout and pinned cards visible only to the creator. |
-| **Data Engine** | Embedded spreadsheet grid executing dynamic mathematical formulas (`=SUM`, `=AVERAGE`). | Relational database views embedding live action windows (`ir.actions.act_window`). |
+| **Data Engine** | Embedded spreadsheet grid executing dynamic mathematical formulas (`=SUM`, `=AVERAGE`). | Relational database views embedding live action windows. |
 | **Filter Mechanics** | Global header filters (Date, Country, Product, Team) that recalculate all connected widgets simultaneously. | Independent per-widget query domains configured at the time of pinning. |
 | **Drill-Down Capability** | Clicking a KPI card or chart bar dynamically opens filtered source records. | Embedded records are directly clickable to open full form views. |
 | **Creation Mechanism** | Created by System Administrators via **Configuration > Dashboards**. | Self-service; pinned by any user via the view's **Actions / Settings (⚙) > Dashboard** menu. |
@@ -48,10 +48,10 @@ Spreadsheets contain specialized formulas (such as `=ODOO.PIVOT(...)` or `=ODOO.
 4. Bound SVG charts and Scorecards update immediately to reflect the calculated cells.
 
 ### Drill-Down Action Routing
-Each KPI card and chart series can be configured with an underlying Odoo model and search domain. When an executive clicks on the **Quotations** card:
+Each KPI card and chart series can be configured with an underlying business model and search filter. When an executive clicks on the **Quotations** card:
 * The dashboard framework extracts the active global filters.
-* It constructs an `ir.actions.act_window` action with a combined domain filter.
-* The system opens the standard list view for `sale.order`, pre-filtered to the exact records contributing to that KPI.
+* It constructs an action window with a combined domain filter.
+* The system opens the standard list view for Sales Orders, pre-filtered to the exact records contributing to that KPI.
 
 ---
 
@@ -61,8 +61,8 @@ My Dashboard functions as a modular layout container that aggregates disparate a
 
 ### View Serialization and Embedding
 When a user clicks **Actions / Settings (⚙) > Dashboard** on a view:
-1. CURQ extracts the active view definition: the target model (e.g., `account.move`), the view type (e.g., `list`), and the active search domain (e.g., `[('state', '=', 'posted'), ('payment_state', '=', 'not_paid')]`).
-2. It writes a record to `board.board` associated with the user's specific partner profile.
+1. CURQ extracts the active view definition: the target view (e.g., Invoices), the view type (e.g., list), and the active search filter criteria.
+2. It registers the dashboard widget associated with the user's personal profile.
 3. The widget definition is serialized into an XML architecture stored in the user's session profile.
 
 ### Live Transactional Execution
@@ -93,4 +93,6 @@ Use this operational guideline when deciding where to build or access reports:
 * [Explore Standard Dashboards and KPIs](../getting-started/01-explore-standard-dashboards-and-kpis.md)
 * [Set Up Your First Custom Dashboard](../getting-started/02-set-up-your-first-custom-dashboard.md)
 * [Understanding Dashboard Security and Data Aggregation](./02-understanding-dashboard-security-and-data-aggregation.md)
+* [Dashboard Configuration and Group Specifications](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md)
+* [Dashboard Chart and Filter Definitions](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md)
 

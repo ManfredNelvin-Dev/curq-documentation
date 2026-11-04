@@ -57,7 +57,7 @@ flowchart LR
 #### Probability as a Weighted Metric
 Each stage carries an architectural probability factor reflecting the historical likelihood of closure. As deals move to the right:
 1. **Uncertainty Decreases**: Customer requirements are scoped, technical feasibility is demonstrated, and pricing agreements are submitted.
-2. **Prorated Value Increases**: The system computes **Prorated Revenue** (`Expected Revenue * Probability`), allowing leadership to plan working capital and production based on statistically realistic revenue expectations.
+2. **Prorated Value Increases**: The system computes **Prorated Revenue** (calculated as Expected Revenue multiplied by Probability), allowing leadership to plan working capital and production based on statistically realistic revenue expectations.
 
 #### Stage Transitions and Quotation Integration
 When an opportunity reaches the proposition milestone, commercial representatives generate formal sales quotations directly from the deal record. This architectural link connects CRM data directly to inventory reserves, accounting ledgers, and delivery scheduling upon contract signature.

@@ -37,6 +37,8 @@ Before taking an approval action, audit the sheet's entries for accuracy:
    * Verify that time is assigned to the correct projects and deliverable tasks.
    * Ensure billable client deliverables contain the correct sales order item.
 
+> For periodic sheet attributes, matrix specifications, and line details, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#periodic-timesheet-sheet-fields) and [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#summary-matrix-grid-specifications).
+
 ---
 
 ### Task 3: Approve the Timesheet Sheet
@@ -59,6 +61,8 @@ If a sheet contains inaccurate hours, missing descriptions, or misallocated task
 3. The sheet status reverts from `Waiting Review` back to `Open`.
 4. The record immediately reappears in the employee's **My Timesheets to Submit** queue so they can update lines and resubmit.
 
+> For workflow stage definitions, trigger actions, and access restrictions, see [**Timesheet Sheet Workflow Lifecycle Transitions**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#timesheet-sheet-workflow-lifecycle-transitions).
+
 ---
 
 ### Post-Validation Outcomes
@@ -74,3 +78,5 @@ If a sheet contains inaccurate hours, missing descriptions, or misallocated task
 * [Understanding Timesheet Sheet Approval and Billing Workflows](../core-concepts/02-understanding-timesheet-sheet-approval-and-billing-workflows.md)
 * [Audit All Timesheets and Periodic Sheets](./05-audit-all-timesheets-and-periodic-sheets.md)
 * [Create and Submit Timesheet Sheets](./01-create-and-submit-timesheet-sheets.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)
+* [Timesheet Configuration and Review Specifications](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md)

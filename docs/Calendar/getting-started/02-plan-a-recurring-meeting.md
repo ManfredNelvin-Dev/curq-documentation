@@ -2,13 +2,10 @@
 
 This tutorial guides you through setting up repeating events in CURQ 18 Calendar, configuring daily, weekly, or monthly repetition cycles, and establishing recurrence termination rules.
 
----
 
-## Prerequisites
-
-Before starting, ensure that:
-* You have permission to create calendar events.
-* You have determined the recurring schedule and participant list for the series.
+> **Prerequisites**
+> * You have permission to create calendar events.
+> * You have determined the recurring schedule and participant list for the series.
 
 ---
 

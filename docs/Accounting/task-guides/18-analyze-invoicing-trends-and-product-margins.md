@@ -7,13 +7,11 @@ CURQ delivers three complementary managerial accounting tools under **Reporting 
 2. **Product Margins**: A specialized analytical engine calculating turnover, cost of goods sold, and gross margin percentages per product over specified accounting periods.
 3. **Analytic Report**: An operational cost ledger tracking project timesheets, labor duration, billable task allocations, and sales order links across personnel.
 
----
 
-### Prerequisites
-
-* Ensure customer invoices and vendor bills are validated and posted so their financial figures populate analytical cubes.
-* Verify that sales products have accurate cost prices (*Cost*) configured under **Products** to ensure gross margin calculations reflect actual procurement costs.
-* Verify that user permissions grant Financial Adviser, Billing Manager, or Chief Accountant administrative access.
+> **Prerequisites**
+> * Ensure customer invoices and vendor bills are validated and posted so their financial figures populate analytical cubes.
+> * Verify that sales products have accurate cost prices (*Cost*) configured under **Products** to ensure gross margin calculations reflect actual procurement costs.
+> * Verify that user permissions grant Financial Adviser, Billing Manager, or Chief Accountant administrative access.
 
 ---
 

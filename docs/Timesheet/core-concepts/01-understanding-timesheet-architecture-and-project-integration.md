@@ -1,19 +1,19 @@
 # Understanding Timesheet Architecture and Project Integration
 
-This document examines the underlying architecture, data models, analytic accounting connections, and project management integrations that power CURQ Timesheets. Understanding these architectural mechanisms enables operational managers and financial controllers to track resource effort, monitor deliverable budgets, and automate professional service invoicing.
+This document examines the underlying architecture, operational structure, analytic accounting connections, and project management integrations that power CURQ Timesheets. Understanding these architectural mechanisms enables operational managers and financial controllers to track resource effort, monitor deliverable budgets, and automate professional service invoicing.
 
 ---
 
-## Core Data Models and Operational Dual-Layer Architecture
+## Core Data Architecture and Operational Dual-Layer Structure
 
 CURQ Timesheets operates on a unified, dual-layer architectural model that balances detailed operational tracking with structured periodic approvals:
 
-1. **Granular Activity Layer (`account.analytic.line`)**:
+1. **Granular Activity Layer**:
    * Every recorded duration, whether generated via the live timer, mobile interface, or manual entry, forms an individual analytic line.
    * Each entry stores atomic activity metadata: date, employee, duration, project, task, and description.
    * Direct binding to the analytic accounting ledger guarantees real-time cost tracking against project budgets.
 
-2. **Periodic Aggregate Layer (`hr_timesheet.sheet`)**:
+2. **Periodic Aggregate Layer**:
    * Groups atomic timesheet entries into structured organizational cycles *(weekly, bi-weekly, or monthly)*.
    * Serves as the governance and legal approval document for payroll validation and client billing release.
    * Enforces period boundaries, approval workflows, and immutability once validated by reviewers.
@@ -23,7 +23,7 @@ flowchart TD
     subgraph Capture["Operational Time Capture"]
         A["`**Live Work Timer**
         Real-Time Session`"] --> C["`**Atomic Timesheet Line**
-        account.analytic.line`"]
+        Individual Log Entry`"]
         B["`**Manual Daily Entry**
         My Timesheets`"] --> C
     end
@@ -47,7 +47,7 @@ flowchart TD
 
 The table below contrasts the functions, behaviors, and access models of the two timesheet tiers:
 
-| Architectural Dimension | Atomic Timesheet Entries (`account.analytic.line`) | Periodic Timesheet Sheets (`hr_timesheet.sheet`) |
+| Architectural Dimension | Atomic Timesheet Entries | Periodic Timesheet Sheets |
 | :--- | :--- | :--- |
 | **Primary Objective** | Operational tracking of effort on tasks and deliverables. | Administrative validation, compliance, and billing release. |
 | **Workspace Location** | **My Timesheets** & **All Timesheets** | **My Timesheet Sheets** & **Timesheet Sheets to Review** |
@@ -60,7 +60,7 @@ The table below contrasts the functions, behaviors, and access models of the two
 
 ## Project and Task Deliverable Integration
 
-Timesheets natively tie into the CURQ **Project** application (`project`) to ensure accurate effort accounting:
+Timesheets natively tie into the CURQ **Project** application to ensure accurate effort accounting:
 
 ### Hierarchical Task Allocation
 

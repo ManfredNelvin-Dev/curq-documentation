@@ -4,16 +4,14 @@ In accrual accounting, revenues and expenses must be recognized in the accountin
 
 This guide explains how to set up spread templates, link spread schedules directly to customer invoice and vendor bill lines, manage spread tables, and generate periodic recognition journal entries.
 
----
 
-### Prerequisites
-
-* Ensure that appropriate balance sheet accrual and deferral accounts are configured in your Chart of Accounts:
-  * **Deferred Revenue / Accrued Liability**: Account for unearned customer income *(e.g., `2101010 Vooruitontvangen bedragen` or `Overlopende passiva`)*.
-  * **Deferred Expense / Prepaid Asset**: Account for prepaid supplier expenses *(e.g., `1301010 Vooruitbetaalde kosten` or `Overlopende activa`)*.
-  * **Revenue Account**: Operating income account receiving monthly recognition entries *(e.g., `8001010 Omzet`)*.
-  * **Expense Account**: Operating expense account receiving monthly cost entries *(e.g., `4301010 Huurkosten` or `4401010 Softwarelicenties`)*.
-* Confirm that an appropriate **Miscellaneous Operations** journal exists to record periodic spreading adjustments without mixing them into customer sales or vendor purchase journals.
+> **Prerequisites**
+> * Ensure that appropriate balance sheet accrual and deferral accounts are configured in your Chart of Accounts:
+>   * **Deferred Revenue / Accrued Liability**: Account for unearned customer income *(e.g., `2101010 Vooruitontvangen bedragen` or `Overlopende passiva`)*.
+>   * **Deferred Expense / Prepaid Asset**: Account for prepaid supplier expenses *(e.g., `1301010 Vooruitbetaalde kosten` or `Overlopende activa`)*.
+>   * **Revenue Account**: Operating income account receiving monthly recognition entries *(e.g., `8001010 Omzet`)*.
+>   * **Expense Account**: Operating expense account receiving monthly cost entries *(e.g., `4301010 Huurkosten` or `4401010 Softwarelicenties`)*.
+> * Confirm that an appropriate **Miscellaneous Operations** journal exists to record periodic spreading adjustments without mixing them into customer sales or vendor purchase journals.
 
 ---
 
@@ -44,6 +42,9 @@ This guide explains how to set up spread templates, link spread schedules direct
    * **Number of Repetitions**: Set to `12` monthly installments.
    * **Period Type**: Set to `Month`.
    * **Start Date**: Enter the inception date *(e.g., `10/01/2026`)*.
+
+> For chart of accounts configurations, allowed journals, and account classifications, see [**Chart of Accounts Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#chart-of-accounts-field-definitions).
+
 6. Click the Save icon:
    * CURQ saves the spread board record and displays the pending unposted balances:
 
@@ -195,3 +196,4 @@ If commercial contract terms change or an invoice is amended mid-contract, CURQ 
 * [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
+* [Chart of Accounts and Taxes Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md)

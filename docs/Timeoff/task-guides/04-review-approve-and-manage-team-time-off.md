@@ -82,6 +82,8 @@ Administrators and managers can record absences on behalf of team members who ar
    * **Supporting Document**: If required by organizational policy, click **Attach File** to upload documentation *(such as a physician's note or medical certificate)*.
 4. Click the cloud save icon or navigate away to persist the request. The request is submitted in **To Approve** stage and can be validated immediately by the manager or HR officer.
 
+> For complete field definitions and validation rules, see [**Employee Leave Request Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#employee-leave-request-fields).
+
 ---
 
 ### Edge Cases & Recovery Steps
@@ -97,3 +99,4 @@ Administrators and managers can record absences on behalf of team members who ar
 * [Grant and Validate Employee Allocations](./05-grant-and-validate-employee-allocations.md)
 * [Understanding Multi-Tier Approvals and Allocation Mechanisms](../core-concepts/02-understanding-multi-tier-approvals-and-allocation-mechanisms.md)
 * [Configure Time Off Types](./07-configure-time-off-types.md)
+* [Time Off Types and Request Field Definitions](../settings-and-fields/01-time-off-types-and-request-field-definitions.md)

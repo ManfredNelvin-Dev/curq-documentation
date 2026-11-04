@@ -44,6 +44,7 @@ flowchart TD
     subgraph Inbound["Delivery Feedback & Processing"]
         F --> H["`**Recipient Mail Server**
         Inbox / Spam Filter`"]
+        G --> H
         H -->|Hard / Soft Bounce| I["`**VERP Return-Path**
         Automated Bounce Handler`"]
         H -->|URL Click| J["`**Link Tracker**
@@ -84,11 +85,13 @@ To maintain high deliverability and avoid spam classification, CURQ integrates s
 CURQ employs **Variable Envelope Return Path (VERP)** to detect and process undeliverable messages automatically:
 
 * Outgoing emails receive a customized `Return-Path` header formatted as:  
-  `bounce-<mailing_id>-<contact_id>@yourdomain.com`
+  `bounce-<mailing-id>-<contact-id>@yourdomain.com`
 * When a remote mail transfer agent rejects the message, the bounce notification is returned to the unique VERP address.
 * The CURQ mail gateway parses the incoming bounce, extracts the matching mailing ID and contact ID, and updates the recipient's trace status:
   * **Soft Bounce**: Temporary issue *(e.g., recipient inbox full)*. Logged as bounced without immediately disabling the subscriber.
   * **Hard Bounce**: Permanent delivery failure *(e.g., domain does not exist or invalid address)*. Automatically increments the contact's bounce counter and prevents future dispatches.
+
+> For complete field definitions and delivery tracking attributes, see [**Mailing and Campaign Field Definitions**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md).
 
 ---
 
@@ -109,3 +112,4 @@ CURQ employs **Variable Envelope Return Path (VERP)** to detect and process unde
 
 * [Understanding Campaign Lifecycles and Subscriber Governance](./02-understanding-campaign-lifecycles-and-subscriber-governance.md)
 * [Design, Schedule, and Send Email Mailings](../task-guides/04-design-schedule-and-send-email-mailings.md)
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)

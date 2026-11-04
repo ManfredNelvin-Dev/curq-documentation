@@ -24,6 +24,8 @@ Employees can initiate a leave request from the dedicated self-service view:
 8. If the leave type requires verification *(such as a medical certificate)*, attach the necessary file under **Supporting Document**.
 9. Click **Save & Close** to submit the request for approval.
 
+> For complete field definitions and validation behavior, see [**Employee Leave Request Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#employee-leave-request-fields).
+
 ---
 
 ### Task 2: Request Full-Day or Multi-Day Absences
@@ -114,3 +116,4 @@ Once submitted, monitor your request through its approval milestones in **My Tim
 * [Submit Your First Time Off Request](../getting-started/01-submit-your-first-time-off-request.md)
 * [Navigate Time Off Dashboard and Calendar](./03-navigate-time-off-dashboard-and-calendar.md)
 * [Review, Approve, and Manage Team Time Off](./04-review-approve-and-manage-team-time-off.md)
+* [Time Off Types and Request Field Definitions](../settings-and-fields/01-time-off-types-and-request-field-definitions.md)

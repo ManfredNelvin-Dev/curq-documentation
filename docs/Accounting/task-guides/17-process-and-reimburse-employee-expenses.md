@@ -2,14 +2,12 @@
 
 Employee expense management in CURQ integrates employee out-of-pocket spending, travel claims, and corporate card transactions directly into the accounting system. When employees incur business expenses on behalf of the company, expense reports group individual receipts into formal reimbursement vouchers that route through manager approval, post to general ledger expense accounts, and generate accounts payable obligations to reimburse staff.
 
----
 
-### Prerequisites
-
-* Ensure that employee profiles exist with designated private addresses, linked user accounts, and home bank accounts (IBAN) for reimbursement under **Employees** (or **Contacts**).
-* Configure expense categories and products under **Expenses > Configuration > Expense Categories** (or **Accounting > Configuration > Products**) with appropriate general ledger expense accounts and deductible input VAT rates.
-* Set up an internal expense journal *(typically `Miscellaneous Operations` or a dedicated `Expenses` purchase journal)*.
-* Verify user permissions granting Employee Expense Officer, Accountant, or Financial Adviser rights.
+> **Prerequisites**
+> * Ensure that employee profiles exist with designated private addresses, linked user accounts, and home bank accounts (IBAN) for reimbursement under **Employees** (or **Contacts**).
+> * Configure expense categories and products under **Expenses > Configuration > Expense Categories** (or **Accounting > Configuration > Products**) with appropriate general ledger expense accounts and deductible input VAT rates.
+> * Set up an internal expense journal *(typically `Miscellaneous Operations` or a dedicated `Expenses` purchase journal)*.
+> * Verify user permissions granting Employee Expense Officer, Accountant, or Financial Adviser rights.
 
 ---
 

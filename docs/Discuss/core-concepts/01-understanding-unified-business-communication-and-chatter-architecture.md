@@ -9,17 +9,12 @@ This document explains the architectural principles, information topology, and b
 In modern business environments, employees rely heavily on digital communication to manage daily operations. However, traditional enterprise architectures almost universally separate the software where work is executed (ERP, CRM, Invoicing) from the software where work is discussed (email clients, standalone instant messaging apps like Slack or Microsoft Teams, and personal phone chats):
 
 ```{mermaid}
-flowchart TD
-    subgraph "Legacy Fragmented Operations"
-        E["`**External Email Client**
-        Scattered Customer Negotiations`"]
-        S["`**Standalone Chat App**
-        Internal Whispers & Lost Notes`"]
-        ERP["`**ERP / CRM Database**
-        Silent Records Without Context`"]
-    end
-    E -.->|"Broken Links"| ERP
-    S -.->|"Lost Context"| ERP
+flowchart LR
+    E["`**External Email Client**
+    Scattered negotiations`"] -.->|"Broken links"| ERP["`**Isolated ERP / CRM**
+    Records lack context`"]
+    S["`**Standalone Chat App**
+    Lost notes & silos`"] -.->|"Missing context"| ERP
 ```
 
 This structural division introduces severe operational vulnerabilities, financial blind spots, and communication overhead:
@@ -47,13 +42,11 @@ To eliminate information fragmentation and communication blind spots, CURQ embed
 
 ```{mermaid}
 flowchart LR
-    subgraph "Unified CURQ Architecture"
-        D["`**Discuss Workspace**
-        Channels & Direct Chats`"] <===> R["`**Record Chatter Engine**
-        Sales • CRM • Invoicing • Inventory`"]
-        R <===> I["`**Central Inbox**
-        Prioritized Action Stream`"]
-    end
+    D["`**Discuss Workspace**
+    Channels & direct chats`"] <===> R["`**Record Chatter Engine**
+    Sales • CRM • Invoicing • Inventory`"]
+    R <===> I["`**Central Inbox**
+    Prioritized action stream`"]
 ```
 
 ## 1. The Record Chatter Architecture
@@ -70,19 +63,19 @@ Rather than treating communication as a separate, external layer, CURQ binds con
 A critical requirement of enterprise communication is the strict demarcation between internal collaboration and customer-facing correspondence. CURQ enforces this architectural boundary directly inside the Chatter engine:
 
 ```{mermaid}
-flowchart TD
-    subgraph "Chatter Permission Boundaries"
-        N["`**Log Note (Internal)**
-        • Confidential to Coworkers
-        • Yellow/Neutral Visual Indicator
-        • Never dispatched to external contacts
-        • Ideal for margin debates & warehouse checks`"]
-        M["`**Send Message (External & Internal)**
-        • Dispatched via Email to Customer
-        • Visible to External Portal Users
-        • Timestamped in Document Audit Stream
-        • Ideal for quotes, tracking links & invoices`"]
-    end
+flowchart LR
+    A["`**Chatter Action**
+    Author drafts update`"] --> B{"`**Audience Scope**`"}
+
+    B -->|Internal Only| N["`**Log Note (Internal)**
+    • Confidential to coworkers
+    • Never dispatched externally
+    • Ideal for margin checks & warehouse notes`"]
+
+    B -->|Customer & Staff| M["`**Send Message (Public)**
+    • Dispatched via email to customer
+    • Visible in customer portal
+    • Ideal for quotes, tracking & invoices`"]
 ```
 
 ## 1. Log Note: Private Operational Alignment

@@ -4,11 +4,10 @@ Welcome to CURQ CRM. In this introductory tutorial, you will learn how to config
 
 By the end of this exercise, you will understand how pipeline columns reflect your real-world sales process and feel confident customizing the Kanban board for your team.
 
----
 
-### Prerequisites
-* Access to a standard CURQ instance with the **CRM** app installed.
-* Standard default pipeline stages. No advanced permissions or multi-team configurations are needed.
+> **Prerequisites**
+> * Access to a standard CURQ instance with the **CRM** app installed.
+> * Standard default pipeline stages. No advanced permissions or multi-team configurations are needed.
 
 ---
 

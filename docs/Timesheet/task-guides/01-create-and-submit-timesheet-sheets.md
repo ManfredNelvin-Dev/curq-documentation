@@ -32,6 +32,8 @@ After clicking **New**, a blank timesheet sheet opens in the initial stage:
 * **Status Workflow**: The status bar in the upper-right tracks progress through `New` → `Open` → `Waiting Review` → `Approved`.
 * **Summary Tab**: Selected by default, displaying a placeholder banner until your first project line is added.
 
+> For complete field definitions, period boundary calculations, and lifecycle states, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#periodic-timesheet-sheet-fields) and [**Timesheet Sheet Workflow Lifecycle Transitions**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#timesheet-sheet-workflow-lifecycle-transitions).
+
 ---
 
 ### Task 3: Add Project Lines to the Sheet
@@ -60,6 +62,8 @@ Once you add a project line, the sheet transitions to the **Open** stage:
 4. The system dynamically calculates daily totals across the bottom row as well as overall total hours for the sheet.
 5. To log work for additional activities within the same period, use the **Select Project ?** field beneath the table and add more lines.
 
+> For grid dimensions, row and column calculations, and cell editing behaviors, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#summary-matrix-grid-specifications).
+
 ---
 
 ### Task 5: Log Detailed Entries via the Details Tab
@@ -77,6 +81,8 @@ For granular time tracking or to record individual work descriptions:
    * **Task**: The individual deliverable within the project *(e.g., `Backend development`)*.
    * **Description**: A brief explanation detailing the work completed *(e.g., `Initial project setup`)*.
    * **Hours**: The amount of time spent on the activity *(e.g., `04:00`)*.
+
+> For field definitions, operational behaviors, and sales order item linkages, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
 
 ---
 
@@ -97,4 +103,6 @@ Entries recorded on the **Details** tab automatically synchronize with the **Sum
 
 * [Log Your First Timesheet and Submit for Approval](../getting-started/01-log-your-first-timesheet-and-submit-for-approval.md)
 * [Review, Approve, and Refuse Timesheet Sheets](./04-review-approve-and-refuse-timesheet-sheets.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)
+* [Timesheet Configuration and Review Specifications](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md)
 * [Understanding Timesheet Sheet Approval and Billing Workflows](../core-concepts/02-understanding-timesheet-sheet-approval-and-billing-workflows.md)

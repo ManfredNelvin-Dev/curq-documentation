@@ -63,6 +63,8 @@ Specify the employee recipient, time-off category, entitlement quantity, and val
 5. **Assign the Employee**: In the **Employee** field, select the target team member *(e.g., `George Watson`)*.
 6. **Add an Operational Reason**: Enter explanatory context in the **Add a reason...** note area.
 
+> For complete field definitions and configuration options, see [**Allocation Record Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#allocation-record-attributes).
+
 ---
 
 ## Approve and Validate the Allocation
@@ -111,3 +113,4 @@ In this tutorial, you learned to:
 * [Submit Your First Time Off Request](./01-submit-your-first-time-off-request.md)
 * [Grant and Validate Employee Allocations](../task-guides/05-grant-and-validate-employee-allocations.md)
 * [Understanding Multi-Tier Approvals and Allocation Mechanisms](../core-concepts/02-understanding-multi-tier-approvals-and-allocation-mechanisms.md)
+* [Accrual Plans and Milestone Specifications](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md)

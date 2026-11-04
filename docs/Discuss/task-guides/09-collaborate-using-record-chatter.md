@@ -30,6 +30,9 @@ When you need to communicate directly with the customer or vendor associated wit
 2. Review the list of followers who will receive the message.
 3. Type your customer-facing update (e.g., dispatch notices, shipment tracking links, or quotation clarifications).
 4. You can type `:canned-response` to insert pre-approved customer communication templates.
+
+> For shortcut syntax and template substitution rules, see [**Voice, Video, and Canned Responses Specifications**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#canned-response-field-specifications).
+
 5. Click **Send**.
 6. CURQ dispatches the message as an official email to all external followers and logs the transmission in the document's permanent audit trail.
 
@@ -72,4 +75,6 @@ Control which business transactions send notifications into your Discuss Inbox:
 * [Send Direct and Group Messages](02-send-direct-and-group-messages.md)
 * [Configure Notification Preferences and Do-Not-Disturb](05-configure-notification-preferences-and-dnd.md)
 * [Create and Use Canned Responses](06-create-and-use-canned-responses.md)
+* [Notification and User Preferences Specifications](../settings-and-fields/02-notifications-and-user-preferences-specifications.md)
+* [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
 * [Understanding Unified Business Communication and Chatter Architecture](../core-concepts/01-understanding-unified-business-communication-and-chatter-architecture.md)

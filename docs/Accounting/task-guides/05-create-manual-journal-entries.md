@@ -2,18 +2,16 @@
 
 Record non-operational transactions, adjust general ledger balances, set up initial opening balances, manage month-end accruals, and reverse adjusting entries in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure your user role has **Accounting / Officer** or **Administrator** permissions.
-* Verify that your Chart of Accounts is configured with active general ledger accounts under **Accounting > Configuration > Chart of Accounts**:
-
-  ![Chart of Accounts configuration form showing code, name, and account type](../media/073.png)
-
-  > For complete Chart of Accounts field and RGS classification definitions, see [**Chart of Accounts Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#chart-of-accounts-field-definitions).
-* Ensure a **Miscellaneous Operations** journal *(or dedicated adjusting journal)* is configured in **Configuration > Journals**.
-* Confirm that the target accounting period is not blocked by a fiscal lock date.
+> **Prerequisites**
+> * Ensure your user role has **Accounting / Officer** or **Administrator** permissions.
+> * Verify that your Chart of Accounts is configured with active general ledger accounts under **Accounting > Configuration > Chart of Accounts**:
+>
+>   ![Chart of Accounts configuration form showing code, name, and account type](../media/073.png)
+>
+>   > For complete Chart of Accounts field and RGS classification definitions, see [**Chart of Accounts Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#chart-of-accounts-field-definitions).
+> * Ensure a **Miscellaneous Operations** journal *(or dedicated adjusting journal)* is configured in **Configuration > Journals**.
+> * Confirm that the target accounting period is not blocked by a fiscal lock date.
 
 ---
 

@@ -2,15 +2,14 @@
 
 Create commercial offers, organize lines with sections and notes, attach optional add-on products, deliver proposals via email, track customer views, and print formal PDF quotes in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Ensure customer records are registered in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) or created directly from the quotation customer dropdown.
-* Verify products are configured in **Sales > Products > Products**.
-* Outgoing email servers must be operational in system settings.
-* *(Optional)* To use quotation templates, ensure they are enabled in **Sales > Configuration > Settings**:
-
-   ![Enable Quotation Templates in Sales settings](../media/014.png)
+> **Prerequisites**
+> * Ensure customer records are registered in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md) or created directly from the quotation customer dropdown.
+> * Verify products are configured in **Sales > Products > Products**.
+> * Outgoing email servers must be operational in system settings.
+> * *(Optional)* To use quotation templates, ensure they are enabled in **Sales > Configuration > Settings**:
+>
+>    ![Enable Quotation Templates in Sales settings](../media/014.png)
 
 ---
 

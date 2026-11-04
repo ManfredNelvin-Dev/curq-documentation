@@ -2,11 +2,10 @@
 
 Identify and consolidate duplicate contact records into a single master profile, automatically reassigning all sales orders, invoices, stock moves, and communication logs.
 
----
 
-### Prerequisites
-* You must have permissions to modify and delete contact records.
-* The records to be merged should represent the same legal entity or individual person.
+> **Prerequisites**
+> * You must have permissions to modify and delete contact records.
+> * The records to be merged should represent the same legal entity or individual person.
 
 ---
 
@@ -37,6 +36,8 @@ The **Merge** window displays the selected records and lets you define the survi
    * To add another duplicate record, click **Add a line** and search for the contact.
 3. Click **Merge Contacts** (or **Cancel** / **Skip these contacts** to abort without altering records).
 
+> For complete field definitions and identity attributes, see [**Header and Identity Fields**](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
+
 ---
 
 ### What Happens During the Merge
@@ -62,3 +63,4 @@ When CURQ executes the consolidation:
 * [Perform Bulk Actions on Contacts](./04-perform-bulk-actions.md)
 * [Create and Manage Contacts](./01-create-and-manage-contacts.md)
 * [Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

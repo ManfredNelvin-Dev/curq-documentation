@@ -48,6 +48,8 @@ Categorizes logged hours by commercial billing classification *(e.g., Billable o
 
 ![Timesheets by Billing Type pivot matrix report](../media/017.png)
 
+> For billing models, invoicing mechanisms, and revenue calculations, see [**Service Product Billing Rules**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#service-product-billing-rules).
+
 ---
 
 ### Task 3: Select Quantitative Measures
@@ -101,4 +103,6 @@ Export structured timesheet analyses for executive presentations, payroll reconc
 
 * [Audit All Timesheets and Periodic Sheets](./05-audit-all-timesheets-and-periodic-sheets.md)
 * [Configure Timesheet Policies and Encoding Rules](./06-configure-timesheet-policies-and-encoding-rules.md)
+* [Timesheet Configuration and Review Specifications](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)
 * [Understanding Timesheet Architecture and Project Integration](../core-concepts/01-understanding-timesheet-architecture-and-project-integration.md)

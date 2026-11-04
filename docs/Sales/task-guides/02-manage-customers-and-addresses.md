@@ -2,11 +2,10 @@
 
 Create customer records, configure multiple delivery and invoicing addresses, set commercial pricing terms, and establish sales order warning rules in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Sales User or Administrator access in CURQ 18.
-* *(Optional)* To enable warning pop-ups, check **Sale Warnings** in **Sales > Configuration > Settings**.
+> **Prerequisites**
+> * Sales User or Administrator access in CURQ 18.
+> * *(Optional)* To enable warning pop-ups, check **Sale Warnings** in **Sales > Configuration > Settings**.
 
 ---
 

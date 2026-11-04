@@ -16,7 +16,7 @@ flowchart LR
 ```
 
 > **Prerequisites**
-> * Access to a standard CURQ instance with the **Timesheets** app installed (`hr_timesheet`).
+> * Access to a standard CURQ instance with the **Timesheets** app installed.
 > * An active employee profile associated with your user login.
 > * At least one active project with tasks assigned to your user in **Project**.
 
@@ -51,6 +51,8 @@ Initialize a new timesheet container for the active reporting period:
    * **Company**: Displays your assigned company entity *(e.g., `Siddharth`)*.
    * **Workflow Stage**: Visual indicator at the top right confirms the sheet is currently in `New` status.
 
+> For complete field descriptions, cycle rules, and status parameters, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#periodic-timesheet-sheet-fields).
+
 ---
 
 ## Add Project and Task Deliverable Lines
@@ -68,6 +70,8 @@ Record time spent on specific deliverables:
 
 7. The line is saved directly to your sheet and the status transitions to **Open**.
 
+> For detailed field descriptions, operational behaviors, and billing mappings, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+
 ---
 
 ## Verify Hours in the Weekly Matrix Summary
@@ -81,6 +85,8 @@ Inspect your total daily hours and verify workload distribution:
 2. Review the daily columns *(Mon, Tue, Wed, Thu, Fri, Sat, Sun)* to verify recorded hours *(e.g., `04:00` on `Mon, Oct 26`)*.
 3. Check the end-of-row and daily bottom totals to verify accumulated workload distribution *(e.g., `04:00` total)*.
 4. If required, click any cell directly within the matrix grid to adjust or enter additional hours.
+
+> For matrix dimensions, total calculations, and bidirectional synchronization rules, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#summary-matrix-grid-specifications).
 
 ---
 
@@ -100,19 +106,9 @@ Finalize your entries and lock the sheet for managerial review:
 
 ---
 
-## Summary of Achievements
-
-In this tutorial, you learned to:
-* Navigate to the **My Timesheet Sheets** workspace.
-* Create a periodic timesheet sheet for the active workweek.
-* Allocate working hours across specific projects and tasks.
-* Audit daily and weekly workload totals using the matrix summary grid.
-* Submit timesheet sheets to authorized reviewers for formal validation.
-
----
-
 ## Related Documentation
 
 * [Track Live Work Hours with the Timer](./02-track-live-work-hours-with-the-timer.md)
 * [Create and Submit Timesheet Sheets](../task-guides/01-create-and-submit-timesheet-sheets.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)
 * [Understanding Timesheet Architecture and Project Integration](../core-concepts/01-understanding-timesheet-architecture-and-project-integration.md)

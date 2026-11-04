@@ -2,11 +2,10 @@
 
 Transition quotations into binding sales orders, manage automatic order locking, perform authorized revisions, and process order cancellations in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* An open quotation in **Draft** or **Quotation Sent** status.
-* Appropriate user access rights (Sales User or Sales Administrator).
+> **Prerequisites**
+> * An open quotation in **Draft** or **Quotation Sent** status.
+> * Appropriate user access rights (Sales User or Sales Administrator).
 
 ---
 

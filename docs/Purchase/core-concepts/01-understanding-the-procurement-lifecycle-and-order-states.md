@@ -8,18 +8,21 @@ This guide explains the architectural principles, state transitions, operational
 
 Procurement in CURQ 18 is structured as an integrated lifecycle that coordinates commercial purchasing negotiations, physical warehouse receiving, and accounts payable validation across a single database model.
 
-```mermaid
-stateDiagram-v2
-    [*] --> RFQ : Create Draft
-    RFQ --> RFQ_Sent : Send by Email / Print
-    RFQ_Sent --> To_Approve : Total > Threshold
-    RFQ_Sent --> Purchase_Order : Total <= Threshold
-    To_Approve --> Purchase_Order : Manager Approves
-    Purchase_Order --> Locked : Lock Confirmed Order
-    Purchase_Order --> Cancelled : Cancel Order
-    Locked --> Cancelled : Unlock & Cancel
-    Purchase_Order --> Warehouse_Receipt : Generates Stock Move
-    Purchase_Order --> Vendor_Bill : Generates Billing Lines
+```{mermaid}
+flowchart LR
+    RFQ["`**1. RFQ**
+    Draft Quotation`"] -->|Send to Vendor| Sent["`**2. RFQ Sent**
+    Awaiting Response`"]
+    RFQ -->|Direct Confirm| PO["`**3. Purchase Order**
+    Confirmed Contract`"]
+    Sent -->|Confirm Order| PO
+
+    PO -->|Auto-Lock| Locked["`**4. Locked**
+    Protected from Edits`"]
+
+    RFQ -.->|Cancel| Can["`**5. Cancelled**
+    Voided Document`"]
+    PO -.->|Cancel| Can
 ```
 
 ### Stage 1: Request for Quotation (RFQ)
@@ -33,23 +36,18 @@ Advancing to **RFQ Sent** signals that the quotation has been transmitted to the
 * The system logs an audit copy of the message and PDF attachment in the record chatter.
 * The primary action button shifts to **Confirm Order**, highlighting that the document is ready for conversion as soon as the vendor confirms pricing and terms.
 
-### Stage 3: To Approve (Optional Approval Gate)
-When organizational approval controls are active, orders exceeding a defined monetary limit (e.g., `$ 5,000.00`) cannot transition directly from quotation to confirmed purchase order. Instead, they enter the **To Approve** stage:
-* The order remains unconfirmed and cannot generate warehouse receipts.
-* A user with *Purchase Manager* rights must review the commercial terms and click **Approve Order**.
-
-### Stage 4: Purchase Order
+### Stage 3: Purchase Order
 Confirming an order establishes a legally binding commercial agreement with the supplier. Transitioning to **Purchase Order**:
 * **Generates Warehouse Receipts**: CURQ automatically creates an incoming receipt (`WH/IN/`) in the Inventory application, scheduling warehouse dock receiving.
 * **Activates Billable Lines**: The order becomes eligible for vendor bill generation according to the configured bill control policy.
 * **Updates Lead Times**: The vendor's promised delivery date feeds directly into manufacturing schedules and sales order delivery forecasts.
 
-### Stage 5: Locked (Default State)
+### Stage 4: Locked (Default State)
 When the *Lock Confirmed Orders* setting is enabled (the system default), confirming a purchase order immediately locks the record:
 * Prevents accidental price edits, quantity modifications, or item deletions that could de-synchronize warehouse delivery receipts or accounts payable records.
 * Authorized users can temporarily click **Unlock** if legitimate post-confirmation adjustments are required.
 
-### Stage 6: Cancelled
+### Stage 5: Cancelled
 Cancelling a purchase order halts all downstream procurement operations:
 * Cancels any unvalidated incoming warehouse delivery pickings linked to the order.
 * Releases any reserved supplier capacity or expected stock counts.
@@ -69,7 +67,7 @@ flowchart LR
     VB -->|"Reconciles Costs"| 3WAY
 ```
 
-1. **Purchase Order to Warehouse Receipt**: Confirming the purchase order creates linked `stock.move` records. Warehouse operators receive goods against these moves without seeing supplier pricing or sensitive commercial data.
+1. **Purchase Order to Warehouse Receipt**: Confirming the purchase order creates linked incoming warehouse receipt records. Warehouse operators receive goods against these receipts without seeing supplier pricing or sensitive commercial data.
 2. **Purchase Order to Vendor Bill**: Accounts payable creates vendor bills referencing the purchase order. Billed quantities and costs are checked against the agreed purchase order terms.
 3. **Receipt to Bill Reconciliation**: Through 3-way matching, CURQ verifies that invoiced amounts correspond to physically delivered quantities, preventing overbilling on short shipments.
 

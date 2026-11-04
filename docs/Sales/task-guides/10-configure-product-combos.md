@@ -2,10 +2,9 @@
 
 Configure combo choices, package multi-item product bundles, and select flexible customer options in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Base catalog products that will form the individual combo choices must exist in **Sales > Products > Products**.
+> **Prerequisites**
+> * Base catalog products that will form the individual combo choices must exist in **Sales > Products > Products**.
 
 ---
 

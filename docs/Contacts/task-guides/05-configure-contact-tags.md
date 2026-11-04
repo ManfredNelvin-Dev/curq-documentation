@@ -24,6 +24,8 @@ Create color-coded labels, establish nested tag categories, assign badges to par
 
 5. Click **Save** at the top left (or click outside the row) to commit the new tag.
 
+> For complete field definitions and header attributes, see [**Header and Identity Fields**](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
+
 ---
 
 ### Task 2: Create a Tag on the Fly
@@ -72,3 +74,4 @@ You can create new tags directly while editing a contact form without navigating
 * [Configure and Assign Contact Titles](./06-configure-contact-titles.md)
 * [Configure and Assign Industries](./07-configure-industries.md)
 * [Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

@@ -2,10 +2,9 @@
 
 Organize regional or product sales teams, set monthly invoicing revenue targets, and classify commercial deals using color-coded order tags in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* Access permissions as Sales Administrator.
+> **Prerequisites**
+> * Access permissions as Sales Administrator.
 
 ---
 

@@ -17,10 +17,12 @@ flowchart LR
 
 ## Hands-On Exercise: Set Up a Channel and Host a Meeting
 
-## Prerequisites
-* Access to a standard CURQ instance with the **Discuss** app installed.
-* A computer equipped with a functional microphone and webcam (optional for screen sharing).
-* A modern web browser (Google Chrome, Mozilla Firefox, or Microsoft Edge) with permissions enabled for media devices.
+
+
+> **Prerequisites**
+> * Access to a standard CURQ instance with the **Discuss** app installed.
+> * A computer equipped with a functional microphone and webcam (optional for screen sharing).
+> * A modern web browser (Google Chrome, Mozilla Firefox, or Microsoft Edge) with permissions enabled for media devices.
 
 ---
 

@@ -18,9 +18,11 @@ flowchart LR
 
 ## Hands-On Exercise: Create Your First Contact
 
-### Prerequisites
-* Access to a standard CURQ instance with the **Contacts** app installed.
-* Standard default settings. No prior configuration or administrative permissions are necessary.
+
+
+> **Prerequisites**
+> * Access to a standard CURQ instance with the **Contacts** app installed.
+> * Standard default settings. No prior configuration or administrative permissions are necessary.
 
 ---
 

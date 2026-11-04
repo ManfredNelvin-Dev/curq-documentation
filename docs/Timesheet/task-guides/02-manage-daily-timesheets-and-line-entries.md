@@ -34,6 +34,8 @@ Log individual time entries quickly without opening a periodic sheet:
    * **Time Spent**: Enter the duration *(e.g., `04:00`)*.
 4. Click anywhere outside the row to save the entry inline.
 
+> For complete field descriptions, allowed formats, and default value rules, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+
 ---
 
 ### Task 3: Filter and Group Daily Logs
@@ -83,4 +85,5 @@ To audit and organize hours awaiting managerial submission:
 
 * [Create and Submit Timesheet Sheets](./01-create-and-submit-timesheet-sheets.md)
 * [Track Active Sessions with the Work Timer](./03-track-active-sessions-with-the-work-timer.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)
 * [Understanding Timesheet Architecture and Project Integration](../core-concepts/01-understanding-timesheet-architecture-and-project-integration.md)

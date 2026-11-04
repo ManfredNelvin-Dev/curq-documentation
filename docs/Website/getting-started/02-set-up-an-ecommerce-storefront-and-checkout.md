@@ -18,7 +18,7 @@ flowchart LR
 ```
 
 > **Prerequisites**
-> * Access to CURQ with the **Website** and **eCommerce** applications installed (`website_sale`).
+> * Access to CURQ with the **Website** and **eCommerce** applications installed.
 > * Inventory items configured in the catalog with sales prices and stock tracking.
 > * Administrative permissions to configure payment providers and shipping methods.
 

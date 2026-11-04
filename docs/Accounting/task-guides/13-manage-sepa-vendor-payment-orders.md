@@ -2,14 +2,12 @@
 
 Aggregate verified supplier bills into batch payment orders, generate standardized ISO 20022 SEPA XML credit transfer files (`pain.001`), process outbound banking files, and reconcile batch disbursements in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure your user account has **Billing Administrator**, **Accountant**, or **Financial Adviser** permissions.
-* Confirm that supplier bills are validated and open in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md).
-* Verify that each vendor profile contains a valid recipient bank account (IBAN/BIC) in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
-* Ensure an outbound payment mode *(e.g., `SEPA Credit Transfer` or `Manual`)* is configured under **Configuration > Payment Modes** with a linked financial **Bank Journal**.
+> **Prerequisites**
+> * Ensure your user account has **Billing Administrator**, **Accountant**, or **Financial Adviser** permissions.
+> * Confirm that supplier bills are validated and open in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md).
+> * Verify that each vendor profile contains a valid recipient bank account (IBAN/BIC) in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
+> * Ensure an outbound payment mode *(e.g., `SEPA Credit Transfer` or `Manual`)* is configured under **Configuration > Payment Modes** with a linked financial **Bank Journal**.
 
 ---
 

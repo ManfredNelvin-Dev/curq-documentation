@@ -2,13 +2,11 @@
 
 This guide covers setting up fixed and rule-based shipping methods, defining delivery zones, and enabling free shipping thresholds and in-store pickup in CURQ 18.
 
----
 
-## Prerequisites
-
-* **Administration**: User must have **Settings** rights to access and modify system configurations.
-* **Website**: User must have **Editor and Designer** access rights to manage eCommerce settings.
-* **eCommerce Application**: The **eCommerce** app must be installed in the database to display the Delivery settings block.
+> **Prerequisites**
+> * **Administration**: User must have **Settings** rights to access and modify system configurations.
+> * **Website**: User must have **Editor and Designer** access rights to manage eCommerce settings.
+> * **eCommerce Application**: The **eCommerce** app must be installed in the database to display the Delivery settings block.
 
 ---
 

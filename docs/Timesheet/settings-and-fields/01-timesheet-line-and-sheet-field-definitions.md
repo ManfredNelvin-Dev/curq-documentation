@@ -8,7 +8,7 @@ This reference catalog provides field definitions, operational behaviors, and va
 
 The following fields define individual atomic timesheet logs in **My Timesheets**, **All Timesheets**, and the work timer:
 
-| Field Name | Description & Operational Behavior |
+| Field Name | Description |
 | :--- | :--- |
 | **Start Time / Date** | Calendar timestamp when the work occurred. Defaults to current system time; determines chronological placement. |
 | **Employee** | Team member who executed the work. Inherited automatically from the active login session or assigned by manager. |
@@ -28,7 +28,7 @@ The following fields define individual atomic timesheet logs in **My Timesheets*
 
 The following fields define periodic timesheet governance containers in **My Timesheet Sheets** and **Timesheet Sheets to Review**:
 
-| Field Name | Description & Operational Behavior |
+| Field Name | Description |
 | :--- | :--- |
 | **Employee** | Employee whose time logs are aggregated within the sheet. |
 | **Period** | Human-readable label indicating reporting cycle *(e.g., `Weeks 42, 2026 - 43, 2026`)*. |

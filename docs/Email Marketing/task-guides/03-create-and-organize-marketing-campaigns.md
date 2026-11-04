@@ -30,6 +30,8 @@ Define a new strategic marketing initiative directly from the Kanban board:
    * **Responsible**: Assign the marketing team member overseeing campaign execution.
    * **Tags**: Add organizational tags for filtering and reporting classification.
 
+> For complete campaign field definitions, tags, and stage attributes, see [**Campaign Header Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#campaign-header-fields).
+
    ![Entering campaign name, responsible person, and tags with Add and Edit buttons highlighted](../media/010.png)
 
 3. Click **Add** (highlighted in red) to immediately create the campaign card on the board, or click **Edit** (highlighted in red) to open the full campaign form for advanced configuration.
@@ -81,6 +83,8 @@ Monitor real-time deliverability, engagement, and conversion metrics across link
    * **Quotations / Invoiced**: Financial value of sales quotations and confirmed customer invoices resulting from the campaign mailing.
    * **Received / Bounced**: Percentage of successfully delivered messages versus failed email dispatches.
 
+> For smart button metrics, revenue calculation, and conversion tracking, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#analytical-smart-button-metrics).
+
 ---
 
 ## Edge Cases & Recovery Steps
@@ -92,5 +96,6 @@ Monitor real-time deliverability, engagement, and conversion metrics across link
 
 ## Related Documentation
 
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)
 * [Design, Schedule, and Send Email Mailings](./04-design-schedule-and-send-email-mailings.md)
 * [Understanding Campaign Lifecycles and Subscriber Governance](../core-concepts/02-understanding-campaign-lifecycles-and-subscriber-governance.md)

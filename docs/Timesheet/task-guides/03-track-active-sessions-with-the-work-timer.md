@@ -30,6 +30,8 @@ Configure activity metadata before launching the clock:
    * **Description**: Enter an operational summary describing the work about to be performed.
    * **Start Time**: Initialized automatically with the current system timestamp.
 
+> For complete session field descriptions and validation behaviors, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+
 ---
 
 ### Task 3: Run and Monitor the Active Timer
@@ -67,7 +69,7 @@ To switch activities when an active timer is already running:
 Conclude your tracking session and convert time into persistent records:
 
 1. When work on the deliverable concludes, stop the active timer.
-2. The duration is converted into an atomic timesheet record (`account.analytic.line`).
+2. The duration is converted into an atomic timesheet record.
 3. The entry immediately reflects in your **My Timesheets** log and aggregates into the active **My Timesheet Sheets** weekly matrix grid.
 
 ---
@@ -77,3 +79,4 @@ Conclude your tracking session and convert time into persistent records:
 * [Track Live Work Hours with the Timer](../getting-started/02-track-live-work-hours-with-the-timer.md)
 * [Manage Daily Timesheets and Line Entries](./02-manage-daily-timesheets-and-line-entries.md)
 * [Create and Submit Timesheet Sheets](./01-create-and-submit-timesheet-sheets.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)

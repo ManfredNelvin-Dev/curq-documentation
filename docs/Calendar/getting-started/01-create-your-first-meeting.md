@@ -2,14 +2,11 @@
 
 This tutorial guides you through scheduling an event in CURQ 18 Calendar, specifying time slots, inviting internal and external attendees, configuring video-call links, and setting up automated reminder notifications.
 
----
 
-## Prerequisites
-
-Before starting, ensure that:
-* You have access to the **Calendar** application on your CURQ dashboard.
-* Your user profile is assigned basic calendar scheduling permissions.
-* Outgoing email servers are configured if sending invitations to external participants.
+> **Prerequisites**
+> * You have access to the **Calendar** application on your CURQ dashboard.
+> * Your user profile is assigned basic calendar scheduling permissions.
+> * Outgoing email servers are configured if sending invitations to external participants.
 
 ---
 

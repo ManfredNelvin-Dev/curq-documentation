@@ -2,13 +2,11 @@
 
 Import electronic bank statements, register manual bank transaction lines, match statement transactions against open customer invoices, vendor bills, and transit payments, and finalize the transition from "In Payment" to "Paid" in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Verify that your bank account is configured with an active journal *(e.g., `Bank`)* in your Chart of Accounts.
-* Verify that corresponding customer invoices in [**Create and Validate Customer Invoices**](./01-create-and-validate-customer-invoices.md) or vendor bills in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md) are confirmed and in **Posted** or **In Payment** status.
-* If using automated bank synchronization *(e.g., MyPonto or direct banking feeds)*, ensure your financial institution connection is active and authorized.
+> **Prerequisites**
+> * Verify that your bank account is configured with an active journal *(e.g., `Bank`)* in your Chart of Accounts.
+> * Verify that corresponding customer invoices in [**Create and Validate Customer Invoices**](./01-create-and-validate-customer-invoices.md) or vendor bills in [**Create and Process Vendor Bills**](./02-create-and-process-vendor-bills.md) are confirmed and in **Posted** or **In Payment** status.
+> * If using automated bank synchronization *(e.g., MyPonto or direct banking feeds)*, ensure your financial institution connection is active and authorized.
 
 ---
 

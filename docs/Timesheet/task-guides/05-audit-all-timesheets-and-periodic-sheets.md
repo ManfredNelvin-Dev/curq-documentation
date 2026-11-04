@@ -31,6 +31,8 @@ The list view consolidates key operational metadata for each timesheet cycle:
 * **Status**: Workflow state *(e.g., `Open`, `Waiting Review`, or `Approved`)*.
 * **Total Time**: Cumulative working hours recorded across all activities in the sheet.
 
+> For complete field descriptions, cycle rules, and status parameters, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#periodic-timesheet-sheet-fields).
+
 ---
 
 ### Task 3: Examine Summary and Line Item Breakdowns
@@ -42,6 +44,8 @@ Click any timesheet sheet row to open the complete inspection view:
 1. **Summary Grid**: Review the matrix distribution of hours by project, task, and daily date column. Verify that hours align with standard weekly expectations.
 2. **Details Tab**: Review individual task descriptions, start times, and linked sales order items to ensure client billable work is accurately tagged.
 3. **Chatter Activity**: Check employee notes, submission timestamps, and previous review feedback.
+
+> For matrix grid calculations and atomic line parameters, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#summary-matrix-grid-specifications) and [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
 
 ---
 
@@ -68,4 +72,6 @@ Use advanced filtering and grouping to identify missing submissions and track re
 
 * [Review, Approve, and Refuse Timesheet Sheets](./04-review-approve-and-refuse-timesheet-sheets.md)
 * [Generate and Analyze Timesheet Reports](./07-generate-and-analyze-timesheet-reports.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)
+* [Timesheet Configuration and Review Specifications](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md)
 * [Understanding Timesheet Architecture and Project Integration](../core-concepts/01-understanding-timesheet-architecture-and-project-integration.md)

@@ -2,14 +2,12 @@
 
 Recurring supplier contracts automate the receipt and booking of recurring vendor expenses, such as commercial leases, software subscriptions, maintenance service contracts, and periodic utility charges. In CURQ, the Supplier Contracts module links vendor agreements directly to automated accounting entries, issuing draft vendor bills on fixed recurring cycles without manual re-entry.
 
----
 
-### Prerequisites
-
-* Ensure the vendor partner record is configured with designated payment terms, billing addresses, and supplier bank account details under **Accounting > Vendors > Vendors**.
-* If settling recurring vendor commitments electronically through SEPA credit transfers, verify that the vendor IBAN and BIC are validated.
-* Configure expense products or recurring service items under **Purchase > Products** (or **Sales > Products**) with the appropriate expense accounts and input VAT rates.
-* Verify user permissions in CURQ with Accountant or Financial Adviser access rights.
+> **Prerequisites**
+> * Ensure the vendor partner record is configured with designated payment terms, billing addresses, and supplier bank account details under **Accounting > Vendors > Vendors**.
+> * If settling recurring vendor commitments electronically through SEPA credit transfers, verify that the vendor IBAN and BIC are validated.
+> * Configure expense products or recurring service items under **Purchase > Products** (or **Sales > Products**) with the appropriate expense accounts and input VAT rates.
+> * Verify user permissions in CURQ with Accountant or Financial Adviser access rights.
 
 ---
 

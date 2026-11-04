@@ -2,13 +2,11 @@
 
 Configure customer bank mandates, prepare invoices for automatic direct debit collection, generate ISO 20022 SEPA XML collection files (`pain.008`), and reconcile batch collections in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure SEPA Direct Debit is activated in **Accounting > Configuration > Settings** and your organization's official **Creditor Identifier** (*Incassant ID*) is configured.
-* Ensure the customer's bank account (IBAN and BIC) is verified on their partner contact card.
-* Ensure your bank current account is configured with an incoming payment method supporting `[sepa_direct_debit] SEPA Direct Debit for customers (inbound)` as defined in [**Chart of Accounts, Taxes, and Journals Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md).
+> **Prerequisites**
+> * Ensure SEPA Direct Debit is activated in **Accounting > Configuration > Settings** and your organization's official **Creditor Identifier** (*Incassant ID*) is configured.
+> * Ensure the customer's bank account (IBAN and BIC) is verified on their partner contact card.
+> * Ensure your bank current account is configured with an incoming payment method supporting `[sepa_direct_debit] SEPA Direct Debit for customers (inbound)` as defined in [**Chart of Accounts, Taxes, and Journals Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md).
 
 ---
 

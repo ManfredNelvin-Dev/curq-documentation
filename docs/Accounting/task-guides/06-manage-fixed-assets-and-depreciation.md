@@ -14,13 +14,11 @@ In CURQ Accounting, the asset management workflow automates this accounting cycl
 * **Automated Accounting**: Generate and post periodic journal entries debiting depreciation expense and crediting accumulated depreciation.
 * **Disposal & Sales**: Process retirement, write-offs, or sales of assets with automated capital gain or loss recognition.
 
----
 
-### Prerequisites
-
-* User permissions for **Accounting / Adviser** or **Accounting / Billing**.
-* Capital asset balance sheet accounts and depreciation expense accounts established in your Chart of Accounts.
-* A designated journal for asset depreciation *(typically `Miscellaneous Operations` or a dedicated `Depreciation Journal`)*.
+> **Prerequisites**
+> * User permissions for **Accounting / Adviser** or **Accounting / Billing**.
+> * Capital asset balance sheet accounts and depreciation expense accounts established in your Chart of Accounts.
+> * A designated journal for asset depreciation *(typically `Miscellaneous Operations` or a dedicated `Depreciation Journal`)*.
 
 ---
 

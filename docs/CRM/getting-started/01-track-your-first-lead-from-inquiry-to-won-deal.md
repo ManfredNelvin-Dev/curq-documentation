@@ -8,9 +8,11 @@ In this tutorial, you will build a clear mental model of how CURQ organizes the 
 
 ## Hands-On Exercise: Track Your First Lead from Inquiry to Won Deal
 
-### Prerequisites
-* Access to a standard CURQ instance with the **CRM** app installed.
-* Standard default pipeline stages (*New*, *Qualified*, *Proposition*, *Won*). No special configuration is required.
+
+
+> **Prerequisites**
+> * Access to a standard CURQ instance with the **CRM** app installed.
+> * Standard default pipeline stages (*New*, *Qualified*, *Proposition*, *Won*). No special configuration is required.
 
 ---
 
@@ -28,6 +30,8 @@ In this tutorial, you will build a clear mental model of how CURQ organizes the 
    * **Expected Revenue**: Enter `15000`.
    * **Priority**: Click the second star to set a high priority rating (`★★☆`).
 5. Click **Add**.
+
+> For allowed formats, character constraints, and definitions of each field, see [**Opportunity Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields).
 
 Your new deal card appears immediately in the **New** stage column:
 
@@ -48,6 +52,9 @@ Now, let us schedule an initial discovery call so your team knows what step to t
    * **Activity Type**: Select **Call**.
    * **Summary**: Type `Initial discovery call with procurement team`.
    * **Due Date**: Select tomorrow's date (e.g., `10/18/2026`).
+
+> For default delay parameters, icon behaviors, and chaining triggers, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
+
 4. Click the dark blue **Schedule** button:
 
    ![CRM opportunity schedule activity modal](../media/004.png)
@@ -122,6 +129,7 @@ Now that you have completed your first sales cycle, explore the core capabilitie
 
 ## Related Documentation
 
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [Setting Up Your First Test Pipeline](./02-set-up-your-first-test-pipeline.md)
 * [Qualify and Convert Leads into Opportunities](../task-guides/02-convert-leads-to-opportunities.md)
 * [Manage Pipeline Stages and Won/Lost Status](../task-guides/03-manage-pipeline-stages-and-won-lost-status.md)

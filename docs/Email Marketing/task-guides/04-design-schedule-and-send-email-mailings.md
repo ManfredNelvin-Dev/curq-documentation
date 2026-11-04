@@ -34,6 +34,8 @@ Define message identification and target audience:
    * **Recipients**: Choose **Mailing List** or select a business model *(e.g., `Contacts` or `Lead/Opportunity`)*.
    * **Select Mailing Lists**: Choose one or more subscriber lists to receive the broadcast.
 
+> For complete field definitions and configuration specifications, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-record-fields).
+
 ---
 
 ## Task 3: Choose a Responsive Layout Template
@@ -84,3 +86,4 @@ Dispatch the campaign to your target audience:
 * [Create and Send Your First Email Marketing Campaign](../getting-started/01-create-and-send-your-first-email-marketing-campaign.md)
 * [Generate and Analyze Email Marketing Reports](./06-generate-and-analyze-email-marketing-reports.md)
 * [Understanding Email Marketing Architecture and Delivery Mechanisms](../core-concepts/01-understanding-email-marketing-architecture-and-delivery-mechanisms.md)
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)

@@ -2,17 +2,16 @@
 
 Generate customer invoices from confirmed sales orders, bill down payments and retainers, and batch-process pending orders to invoice in CURQ 18 Sales.
 
----
 
-### Prerequisites
-* A confirmed sales order in **Sales Order** status (e.g., `S00045`).
-* If products use the **Invoice what is delivered** policy, warehouse delivery slips (e.g., `WH/OUT/00072`) must be validated before invoiceable lines appear:
-
-   ![Validate warehouse delivery slip to unlock invoicing for delivered products](../media/031.png)
-
-* Sales invoicing settings configured in **Sales > Configuration > Settings**:
-
-   ![Default invoicing policy setting in Sales configuration](../media/032.png)
+> **Prerequisites**
+> * A confirmed sales order in **Sales Order** status (e.g., `S00045`).
+> * If products use the **Invoice what is delivered** policy, warehouse delivery slips (e.g., `WH/OUT/00072`) must be validated before invoiceable lines appear:
+>
+>    ![Validate warehouse delivery slip to unlock invoicing for delivered products](../media/031.png)
+>
+> * Sales invoicing settings configured in **Sales > Configuration > Settings**:
+>
+>    ![Default invoicing policy setting in Sales configuration](../media/032.png)
 
 ---
 

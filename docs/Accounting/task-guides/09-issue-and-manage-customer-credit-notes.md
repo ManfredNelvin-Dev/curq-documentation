@@ -2,13 +2,11 @@
 
 Issue customer credit notes (*Creditfacturen*), execute invoice reversals, apply partial billing adjustments for merchandise returns, process customer refunds, and reconcile credit balances against open accounts receivable in CURQ Accounting.
 
----
 
-### Prerequisites
-
-* Ensure the target customer invoice is confirmed in **Posted** status before initiating an invoice-linked credit note.
-* Verify user permissions include **Billing Administrator** or **Accountant** access rights.
-* If issuing a monetary cash refund to the customer, ensure your bank journal and outgoing payment methods are configured in [**Register and Reconcile Payments**](./03-register-and-reconcile-payments.md).
+> **Prerequisites**
+> * Ensure the target customer invoice is confirmed in **Posted** status before initiating an invoice-linked credit note.
+> * Verify user permissions include **Billing Administrator** or **Accountant** access rights.
+> * If issuing a monetary cash refund to the customer, ensure your bank journal and outgoing payment methods are configured in [**Register and Reconcile Payments**](./03-register-and-reconcile-payments.md).
 
 ---
 

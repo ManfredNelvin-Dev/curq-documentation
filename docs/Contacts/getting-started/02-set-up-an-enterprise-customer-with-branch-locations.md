@@ -4,11 +4,10 @@ Welcome to CURQ Contacts. In this tutorial, you will learn how to structure an e
 
 By the end of this exercise, you will understand how CURQ routes sales deliveries and accounting invoices to distinct branch facilities automatically.
 
----
 
-### Prerequisites
-* Access to a standard CURQ instance with the **Contacts** app installed.
-* Standard default settings. No special multi-company permissions or configuration modules are needed.
+> **Prerequisites**
+> * Access to a standard CURQ instance with the **Contacts** app installed.
+> * Standard default settings. No special multi-company permissions or configuration modules are needed.
 
 ---
 
@@ -85,6 +84,8 @@ Let us confirm how the parent company card displays its connected operational fa
 
 Congratulations! You have successfully configured a multi-branch corporate hierarchy. Whenever your commercial team creates a Sales Order for `Global Logistics Corp`, CURQ automatically routes physical deliveries to the Gary warehouse and accounting invoices to the Chicago AP department.
 
+> For complete field definitions and address routing options, see [**Contacts and Addresses Tab**](../settings-and-fields/01-contact-form-field-definitions.md#contacts-and-addresses-tab).
+
 ---
 
 ## Related Documentation
@@ -93,3 +94,4 @@ Congratulations! You have successfully configured a multi-branch corporate hiera
 * [Create and Manage Contacts](../task-guides/01-create-and-manage-contacts.md)
 * [Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
 * [Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

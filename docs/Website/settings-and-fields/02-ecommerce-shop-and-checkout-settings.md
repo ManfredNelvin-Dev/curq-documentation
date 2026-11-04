@@ -88,8 +88,8 @@ Opening the template editor via the external link on **Invoice Email Template** 
 | Field Name | Description |
 | :--- | :--- |
 | **Name** | Administrative label for the notification template *(default: `Invoice: Sending`)*. |
-| **Applies to** | Underlying data model providing dynamic variables (`Journal Entry` / `account.move`). |
-| **Subject** | Dynamic text template rendered as the customer email subject line *(e.g., `{{ object.company_id.name }} Invoice (Ref {{ object.name or 'n/a' }})`)*. |
+| **Applies to** | Underlying business document providing dynamic variables (`Journal Entry` / Customer Invoices). |
+| **Subject** | Dynamic text template rendered as the customer email subject line *(e.g., `{{ company.name }} Invoice (Ref {{ invoice.name or 'n/a' }})`)*. |
 | **Report to be Generated** | Automated QWeb PDF document rendered and attached to the outgoing notification (`Invoices`). |
 
 ---

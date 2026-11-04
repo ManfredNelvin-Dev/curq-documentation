@@ -37,6 +37,8 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 4. Select the sector from the dropdown list (for example, `Manufacturing` or `IT/Communication`).
 5. Click the cloud icon to save.
 
+> For complete field definitions and sales/purchase configuration options, see [**Sales and Purchase Tab**](../settings-and-fields/01-contact-form-field-definitions.md#sales-and-purchase-tab).
+
 ---
 
 ### Task 3: Filter Companies by Industry
@@ -64,3 +66,4 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 * [Register and Authorize Partner Bank Accounts](./08-manage-partner-bank-accounts.md)
 * [Configure and Assign Contact Tags](./05-configure-contact-tags.md)
 * [Search, Filter, and Group Contacts](./02-search-filter-and-group-contacts.md)
+* [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md)

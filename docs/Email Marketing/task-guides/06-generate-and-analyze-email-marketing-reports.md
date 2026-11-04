@@ -32,6 +32,8 @@ Inspect data across different analytical dimensions:
    * **Clicked**: Total and percentage of recipients who clicked at least one link.
    * **Bounced**: Total undelivered emails returned due to delivery issues.
 
+> For complete metric definitions and calculation formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#analytical-smart-button-metrics).
+
 ---
 
 ## Task 3: Apply Filters and Groupings
@@ -77,3 +79,4 @@ Review why recipients are opting out of communications:
 * [Manage Subscriber Lists and Track Campaign Engagement](../getting-started/02-manage-subscriber-lists-and-track-campaign-engagement.md)
 * [Manage Blacklisted Emails and Opt-Out Reasons](./05-manage-blacklisted-emails-and-opt-out-reasons.md)
 * [Understanding Campaign Lifecycles and Subscriber Governance](../core-concepts/02-understanding-campaign-lifecycles-and-subscriber-governance.md)
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)

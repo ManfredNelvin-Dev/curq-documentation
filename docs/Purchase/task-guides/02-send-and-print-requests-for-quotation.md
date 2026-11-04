@@ -18,6 +18,8 @@ This guide covers how to email Requests for Quotation (RFQs) with automated PDF 
    * **Attachments**: An automatically compiled PDF document titled `Request for Quotation - P00093.pdf` (or localized `Offerteaanvraag - P00093.pdf`).
    * *(Optional)* Click the paperclip attachment icon to attach external technical drawings, specifications, or compliance documents.
 
+> For complete field definitions across quotation headers and document states, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+
 ![Compose Email popup with attached RFQ PDF and message body](../media/006.png)
 
 4. Review or edit the message text, then click **Send**.
@@ -61,4 +63,5 @@ While the document remains in the **RFQ Sent** stage:
 
 * [Create and Manage Requests for Quotation](./01-create-and-manage-requests-for-quotation.md)
 * [Confirm Purchase Orders and Manage Approvals](./03-confirm-purchase-orders-and-manage-approvals.md)
+* [RFQ and Purchase Order Field Definitions](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md)
 * [Understanding the Procurement Lifecycle and Order States](../core-concepts/01-understanding-the-procurement-lifecycle-and-order-states.md)
