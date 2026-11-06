@@ -4,7 +4,9 @@ Create public and private communication rooms, configure channel access permissi
 
 ---
 
-## Task 1: Create a Public Channel
+## 1. Create and Configure Channels
+
+### 1.1 Create a Public Channel
 
 Public channels are open to all internal employees and serve as transparent communication spaces for company-wide announcements, general discussions, or cross-functional interest groups.
 
@@ -24,7 +26,7 @@ Public channels are open to all internal employees and serve as transparent comm
 
 ---
 
-## Task 2: Create a Private Restricted Channel
+### 1.2 Create a Private Restricted Channel
 
 Private channels restrict access to invited participants only. They do not appear in public search directories for non-members, making them ideal for sensitive executive discussions, HR reviews, or private project pods.
 
@@ -41,7 +43,7 @@ Private channels restrict access to invited participants only. They do not appea
 
 ---
 
-## Task 3: Configure Channel Descriptions and Access Rules
+### 1.3 Configure Channel Descriptions and Access Rules
 
 To provide clear guidance to participants and establish channel governance:
 
@@ -55,9 +57,9 @@ To provide clear guidance to participants and establish channel governance:
 
 ---
 
-## Task 4: Add or Remove Channel Members
+## 2. Add or Remove Channel Members
 
-### Add Teammates to a Channel
+### 2.1 Add Teammates to a Channel
 1. Open the target channel in Discuss.
 2. In the top-right header toolbar, click the **People** icon to expand the members drawer:
 
@@ -69,7 +71,7 @@ To provide clear guidance to participants and establish channel governance:
 
    ![Channel members tab](../media/015.png)
 
-### Remove Members from a Channel
+### 2.2 Remove Members from a Channel
 1. Open the channel settings form (Gear icon) and navigate to the **Members** tab.
 2. Locate the person you wish to remove from the list.
 3. Click the **Trash Can** (Delete) icon on the right end of their row.
@@ -77,7 +79,7 @@ To provide clear guidance to participants and establish channel governance:
 
 ---
 
-## Task 5: Search and Join an Existing Channel
+## 3. Search and Join an Existing Channel
 
 If a colleague has already created a public channel and you want to participate:
 
@@ -91,7 +93,7 @@ If a colleague has already created a public channel and you want to participate:
 
 ---
 
-## Task 6: Leave or Unsubscribe from a Channel
+## 4. Leave or Unsubscribe from a Channel
 
 When a project concludes or you no longer require updates from a specific room:
 
@@ -102,7 +104,7 @@ When a project concludes or you no longer require updates from a specific room:
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Send Direct and Group Messages](02-send-direct-and-group-messages.md)
 * [Collaborate with Mentions, Reactions, and Attachments](03-collaborate-with-mentions-reactions-and-attachments.md)
 * [Channel and Chat Settings Definitions](../settings-and-fields/01-channel-and-chat-settings-definitions.md)

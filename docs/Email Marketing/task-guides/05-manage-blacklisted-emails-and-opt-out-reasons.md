@@ -4,7 +4,9 @@ This guide covers how to access the global email blacklist, manually manage supp
 
 ---
 
-## Task 1: Access Blacklisted Email Addresses
+## 1. Manage Blacklisted Email Addresses
+
+### 1.1 Access Blacklisted Email Addresses
 
 Open the global suppression list:
 
@@ -18,7 +20,7 @@ Open the global suppression list:
 
 ---
 
-## Task 2: Manually Register or Unblacklist an Email Address
+### 1.2 Manually Register or Unblacklist an Email Address
 
 Manage individual suppression records:
 
@@ -35,7 +37,7 @@ Manage individual suppression records:
 
 ---
 
-## Task 3: Configure Custom Opt-Out Feedback Reasons
+## 2. Configure Custom Opt-Out Feedback Reasons
 
 Customize the reasons presented to recipients during the unsubscribe process:
 

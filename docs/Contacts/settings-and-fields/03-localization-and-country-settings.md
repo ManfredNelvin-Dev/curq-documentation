@@ -4,7 +4,7 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ---
 
-### Country Fields
+## Country Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -20,7 +20,7 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ---
 
-### Federal State Fields
+## Federal State Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -30,7 +30,7 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ---
 
-### City Fields
+## City Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -41,7 +41,7 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ---
 
-### Country Group Fields
+## Country Group Fields
 
 | Field Name | Description |
 | :--- | :--- |

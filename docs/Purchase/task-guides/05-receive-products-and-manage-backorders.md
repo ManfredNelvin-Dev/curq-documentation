@@ -4,7 +4,9 @@ This guide covers how to process incoming vendor shipments directly from purchas
 
 ---
 
-## Task 1: Open the Incoming Warehouse Receipt
+## 1. Receive Products and Validate Deliveries
+
+### 1.1 Open the Incoming Warehouse Receipt
 
 1. Open the confirmed purchase order from **Purchase → Orders → Purchase Orders**.
 2. Click the **Receive Products** button in the top action bar, or click the **Receipt** smart button in the top-right stat area.
@@ -17,7 +19,7 @@ This guide covers how to process incoming vendor shipments directly from purchas
 
 ---
 
-## Task 2: Validate Full Delivery Receipts
+### 1.2 Validate Full Delivery Receipts
 
 1. Under the **Operations** tab, verify that physical deliveries match the **Demand** column.
 2. If quantities match exactly, click **Validate** in the top action bar.
@@ -28,7 +30,7 @@ This guide covers how to process incoming vendor shipments directly from purchas
 
 ---
 
-## Task 3: Handle Partial Deliveries and Automated Backorders
+## 2. Handle Partial Deliveries and Automated Backorders
 
 When a supplier delivers fewer items than originally ordered:
 
@@ -64,7 +66,7 @@ When a supplier delivers fewer items than originally ordered:
 
 ---
 
-## Task 4: Handle Over-Deliveries
+## 3. Handle Over-Deliveries
 
 When a supplier ships more items than ordered:
 
@@ -77,7 +79,7 @@ When a supplier ships more items than ordered:
 
 ---
 
-## Task 5: Process Vendor Returns
+## 4. Process Vendor Returns
 
 If received goods are damaged, defective, or incorrect and must be returned to the supplier:
 

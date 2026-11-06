@@ -18,9 +18,9 @@ flowchart LR
 
 ---
 
-## Hands-On Exercise: Process Your First Sale from Quote to Invoice
+## 1. Hands-On Exercise: Process Your First Sale from Quote to Invoice
 
-### Scenario Overview
+### 1.1 Scenario Overview
 
 A prospective customer, **John Doe**, contacts your sales department requesting a quotation for mobile devices:
 * **Product**: `Fair Phone 5 (Black)`
@@ -36,7 +36,7 @@ flowchart LR
 
 ---
 
-## Step 1: Create a Draft Quotation
+### 1.2 Create a Draft Quotation
 
 1. Open the **Sales** app from your main CURQ dashboard.
 2. In the top action bar, click **+ New** to open a blank quotation form.
@@ -48,7 +48,7 @@ flowchart LR
 
 ---
 
-## Step 2: Add Products to the Order
+### 1.3 Add Products to the Order
 
 1. Under the **Order Lines** tab, click **Add a product**.
 2. In the **Product** column, select `Fair Phone 5 (Black)`.
@@ -60,7 +60,7 @@ flowchart LR
 
 ---
 
-## Step 3: Send the Quotation to the Customer
+### 1.4 Send the Quotation to the Customer
 
 1. In the top-left action header, click **Send by Email**.
 
@@ -75,7 +75,7 @@ flowchart LR
 
 ---
 
-## Step 4: Confirm the Sales Order
+### 1.5 Confirm the Sales Order
 
 When the customer agrees to the proposal:
 
@@ -88,7 +88,7 @@ When the customer agrees to the proposal:
 
 ---
 
-## Step 5: Create the Customer Invoice and Record Payment
+### 1.6 Create the Customer Invoice and Record Payment
 
 1. With the order confirmed, click **Create Invoice** in the top action bar.
 2. In the modal dialog, ensure **Regular invoice** is selected, then click **Create Draft**.

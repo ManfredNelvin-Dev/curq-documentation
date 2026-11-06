@@ -42,16 +42,16 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
         'description': 'Stock Management',
         'sidebar_key': 'inventory',
     },
-    'Projects': {
-        'display_name': 'Projects',
+    'Project': {
+        'display_name': 'Project',
         'icon': 'project-icon.png',
         'description': 'Project Tracking',
-        'sidebar_key': 'projects',
+        'sidebar_key': 'project',
     },
     'Helpdesk': {
         'display_name': 'Helpdesk',
         'icon': 'helpdesk-icon.png',
-        'description': 'Discover the module',
+        'description': 'Customer Support',
         'sidebar_key': 'helpdesk',
     },
     'Email Marketing': {

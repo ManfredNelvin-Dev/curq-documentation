@@ -6,7 +6,7 @@ In this tutorial, you will build a clear mental model of how CURQ organizes the 
 
 ---
 
-## Hands-On Exercise: Track Your First Lead from Inquiry to Won Deal
+## 1. Hands-On Exercise: Track Your First Lead from Inquiry to Won Deal
 
 
 
@@ -16,7 +16,7 @@ In this tutorial, you will build a clear mental model of how CURQ organizes the 
 
 ---
 
-### Step 1: Open the Pipeline and Create an Opportunity
+### 1.1 Open the Pipeline and Create an Opportunity
 
 1. From the main CURQ dashboard, click the **CRM** app icon to open **My Pipeline**.
 2. Notice the visual columns representing pipeline stages: **New**, **Qualified**, **Proposition**, and **Won**.
@@ -39,7 +39,7 @@ Your new deal card appears immediately in the **New** stage column:
 
 ---
 
-### Step 2: Schedule a Follow-Up Activity
+### 1.2 Schedule a Follow-Up Activity
 
 Now, let us schedule an initial discovery call so your team knows what step to take next.
 
@@ -65,7 +65,7 @@ Now, let us schedule an initial discovery call so your team knows what step to t
 
 ---
 
-### Step 3: Advance the Deal Through Pipeline Stages
+### 1.3 Advance the Deal Through Pipeline Stages
 
 As your conversation progresses, move the deal forward along your sales cycle:
 
@@ -79,7 +79,7 @@ Notice how the stage totals at the top of the **Qualified** column update automa
 
 ---
 
-### Step 4: Mark the Opportunity as Won
+### 1.4 Mark the Opportunity as Won
 
 After the customer approves the proposal, finalize the deal:
 
@@ -97,30 +97,30 @@ Congratulations! You have completed your first sales cycle in CURQ CRM. You now 
 
 ---
 
-## Exploring Further: Key Capabilities of CURQ CRM
+## 2. Exploring Further: Key Capabilities of CURQ CRM
 
 Now that you have completed your first sales cycle, explore the core capabilities and architectural principles that govern the CRM module:
 
-### 1. Lead Intake & Qualification Funnel
+### 2.1 Lead Intake & Qualification Funnel
 * **Two-Tier Qualification Engine**: Capture raw inquiries from website forms, incoming emails, phone calls, and marketing campaigns as **Leads**. Dedicated development reps (BDRs/SDRs) qualify prospective buyers before converting them into pipeline opportunities, keeping primary revenue forecasts clean.
 * **Smart Deduplication & Contact Linking**: Automatically check incoming leads against existing contacts to prevent duplicate partner records, link historical correspondence, or establish new company and individual accounts.
 
-### 2. Visual Pipeline & Opportunity Governance
+### 2.2 Visual Pipeline & Opportunity Governance
 * **Interactive Kanban Pipeline**: Track deals across customizable stages reflecting your sales methodology. Drag-and-drop cards to advance stages, adjust priority stars, and instantly view stage totals and weighted revenue.
 * **Expected Revenue & Probabilities**: Calculate realistic revenue projections based on deal value and closing probabilities. As deals progress through stages, probabilities update automatically to reflect higher closing confidence.
 * **Recurring Revenue & MRR**: Track monthly, quarterly, and annual subscription contracts with dedicated recurring revenue plans and contract duration metrics.
 
-### 3. Activity Scheduling & Follow-Up Automation
+### 2.3 Activity Scheduling & Follow-Up Automation
 * **Activity-Driven Selling**: Schedule next steps (calls, meetings, emails, reminders) directly on opportunity cards. Color-coded badges indicate overdue (red), due today (orange), and future (green) activities.
 * **Automated Activity Plans**: Trigger standardized follow-up sequences (e.g., *Onboarding Follow-Up* or *Enterprise Demo Plan*) that generate multi-step tasks across team members upon stage transitions.
 * **Integrated Calendar & Communications**: Sync appointments with external calendars and log client communications directly within the Chatter feed for complete team visibility.
 
-### 4. Predictive Scoring & Rule-Based Routing
+### 2.4 Predictive Scoring & Rule-Based Routing
 * **Predictive Lead Scoring**: Leverage machine learning to evaluate historical conversion data against key attributes (stage, geography, email/phone quality, acquisition source). The algorithm assigns data-backed win probabilities, eliminating optimistic sales bias.
 * **Rule-Based Lead Assignment**: Automatically route leads to regional or specialized sales teams using territory domain filters (country, state, language, tag).
 * **Capacity-Capped Round-Robin**: Distribute leads fairly among team members while enforcing individual monthly lead capacity limits to prevent team overload.
 
-### 5. Sales Integration & Win/Lost Analytics
+### 2.5 Sales Integration & Win/Lost Analytics
 * **Seamless Quotation Integration**: Generate formal quotations directly from the opportunity card. The quotation untaxed total synchronizes with the opportunity's expected revenue.
 * **Automated Won Progression**: When a client accepts and confirms a quotation, the linked opportunity automatically transitions to **Won** with 100% probability.
 * **Lost Reason Governance**: Prevent record deletion by requiring structured **Lost Reasons** (e.g., *Too Expensive*, *Competitor*, *Missing Feature*) when archiving lost deals. Management can analyze win/loss ratios in Pivot reports to uncover product gaps, pricing friction, and campaign quality.

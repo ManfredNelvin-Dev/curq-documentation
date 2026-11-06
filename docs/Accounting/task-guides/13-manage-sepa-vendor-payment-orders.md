@@ -11,7 +11,9 @@ Aggregate verified supplier bills into batch payment orders, generate standardiz
 
 ---
 
-### Task 1: Initialize an Outgoing Payment Order
+## 1. SEPA Vendor Payment Batch Processing
+
+### 1.1 Initialize an Outgoing Payment Order
 
 Rather than disbursing payments individually, CURQ enables finance teams to bundle multiple approved supplier bills into a single structured payment run.
 
@@ -48,32 +50,32 @@ Rather than disbursing payments individually, CURQ enables finance teams to bund
 
 ---
 
-### Task 2: Populate Supplier Invoices into the Payment Batch
+### 1.2 Populate Supplier Invoices into the Payment Batch
 
 CURQ provides three methods to attach approved vendor bills to a payment order:
 
-#### Method A: Batch Generation via Journal Items (Recommended for High Volume)
+#### 1.2.1 Method A: Batch Generation via Journal Items (Recommended for High Volume)
 1. In the top-left action bar of the payment order, click **Create Payment Lines from Journal Items**.
 2. In the selection wizard:
    * Set the maturity date filter *(e.g., all bills due on or before `10/31/2026`)*.
    * Select target move status **All Posted Entries**.
 3. Click **Populate** to pull all matching open vendor payables (`1203010`) into the batch automatically.
 
-#### Method B: Manual Transaction Line Entry
+#### 1.2.2 Method B: Manual Transaction Line Entry
 1. Under the **Transactions** tab, click **Add a line**.
 2. Select the specific supplier bill or payable journal item.
 3. CURQ populates counterparty, due date, open amount, and payment reference:
 
    ![Populated Payment Order PAY0001 with Acme Technologies bill](../media/144.png)
 
-#### Method C: Direct Selection from Vendor Bills List
+#### 1.2.3 Method C: Direct Selection from Vendor Bills List
 1. Navigate to **Vendors > Bills**.
 2. Filter by status `To Pay` and select the checkboxes next to the bills to disburse.
 3. In the **Action** menu at the top center, select **Add to Payment Order**.
 
 ---
 
-### Task 3: Verify Mandatory Remittance Information and Bank Details
+### 1.3 Verify Mandatory Remittance Information and Bank Details
 
 Before confirming any outbound payment batch, verify that every transaction line contains complete banking information:
 
@@ -92,7 +94,7 @@ Before confirming any outbound payment batch, verify that every transaction line
 
 ---
 
-### Task 4: Confirm the Payment Order
+### 1.4 Confirm the Payment Order
 
 Once all lines, journals, and communication references are validated:
 
@@ -109,7 +111,7 @@ Once all lines, journals, and communication references are validated:
 
 ---
 
-### Task 5: Generate and Export the Banking File
+### 1.5 Generate and Export the Banking File
 
 1. In the top action bar, click **Generate Payment File**.
 2. CURQ compiles the batch into a standardized ISO 20022 XML credit transfer file (`pain.001.001.03` for SEPA):
@@ -125,7 +127,7 @@ Once all lines, journals, and communication references are validated:
 
 ---
 
-### Task 6: Transmit File to Bank and Finalize the Order
+### 1.6 Transmit File to Bank and Finalize the Order
 
 1. Log in to your commercial banking portal *(such as ING InsideBusiness, ABN AMRO Access Online, or Rabobank Corporate)*.
 2. Navigate to the batch payment or SEPA file upload section and upload the downloaded XML file.
@@ -143,7 +145,7 @@ Once all lines, journals, and communication references are validated:
 
 ---
 
-### Task 7: Reconcile Batch Disbursements Against Bank Statements
+## 2. Reconcile Batch Disbursements Against Bank Statements
 
 When the actual cash disbursement is executed by your commercial bank:
 
@@ -157,7 +159,7 @@ When the actual cash disbursement is executed by your commercial bank:
 
 ---
 
-### Edge Cases & Troubleshooting
+## Edge Cases & Troubleshooting
 
 * **Missing Bank Journal Error**: If clicking Confirm Payments returns `Missing Bank Journal on payment order`, verify that your Payment Mode under **Configuration > Payment Modes** has its **Link to Bank Account?** set to `Fixed` with an assigned Bank Journal, or select `Bank` directly in the header.
 * **Missing Communication on Payment Line**: If confirmation fails with `Communication is empty`, click **View** on the transaction line and enter the vendor bill number or invoice reference.
@@ -165,7 +167,7 @@ When the actual cash disbursement is executed by your commercial bank:
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)

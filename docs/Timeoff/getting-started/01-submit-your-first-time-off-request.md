@@ -21,7 +21,9 @@ flowchart LR
 
 ---
 
-## Open the Time Off Dashboard
+## 1. Submit and Track Time Off Requests
+
+### 1.1 Open the Time Off Dashboard
 
 Begin by navigating to the centralized employee leave workspace:
 
@@ -36,7 +38,7 @@ Begin by navigating to the centralized employee leave workspace:
 
 ---
 
-## Check Available Leave Balances
+### 1.2 Check Available Leave Balances
 
 Before submitting a request, verify your remaining entitlements to prevent scheduling conflicts or negative balance restrictions:
 
@@ -54,7 +56,7 @@ Before submitting a request, verify your remaining entitlements to prevent sched
 
 ---
 
-## Create a New Leave Request
+### 1.3 Create a New Leave Request
 
 When ready to book an absence, open the request dialog:
 
@@ -70,7 +72,7 @@ When ready to book an absence, open the request dialog:
 
 ---
 
-## Configure Dates, Duration, and Attachments
+### 1.4 Configure Dates, Duration, and Attachments
 
 CURQ supports full-day absences, partial half-days, and hourly increments:
 
@@ -87,7 +89,7 @@ CURQ supports full-day absences, partial half-days, and hourly increments:
 
 ---
 
-## Submit and Track Request Status
+### 1.5 Submit and Track Request Status
 
 Once all details are verified, finalize your submission:
 
@@ -110,7 +112,7 @@ Once all details are verified, finalize your submission:
 
 ---
 
-## Summary of Achievements
+## 2. Summary of Achievements
 
 In this tutorial, you learned to:
 * Navigate to the personal **Time Off Dashboard** and inspect leave balance cards.

@@ -15,7 +15,9 @@ Record non-operational transactions, adjust general ledger balances, set up init
 
 ---
 
-### Task 1: Create a Draft Journal Entry
+## 1. Create and Post Manual Journal Entries
+
+### 1.1 Create a Draft Journal Entry
 
 Use a manual journal entry when recording transactions that do not originate from customer invoices, vendor bills, or bank statement lines *(such as payroll journals, depreciation adjustments, tax settlement entries, or cost corrections)*.
 
@@ -34,7 +36,7 @@ Use a manual journal entry when recording transactions that do not originate fro
 
 ---
 
-### Task 2: Add Balanced Journal Items (Debits and Credits)
+### 1.2 Add Balanced Journal Items (Debits and Credits)
 
 Under double-entry bookkeeping rules, every journal entry must balance: the total value of all debit lines must equal the total value of all credit lines.
 
@@ -57,7 +59,7 @@ Under double-entry bookkeeping rules, every journal entry must balance: the tota
 
 ---
 
-### Task 3: Post the Journal Entry to the General Ledger
+### 1.3 Post the Journal Entry to the General Ledger
 
 1. Review all lines, accounts, and dates for accuracy.
 2. In the upper action bar, click **Post**.
@@ -71,7 +73,7 @@ Under double-entry bookkeeping rules, every journal entry must balance: the tota
 
 ---
 
-### Task 4: Reverse a Journal Entry (Accruals and Adjustments)
+## 2. Reverse a Journal Entry (Accruals and Adjustments)
 
 Reversals are standard practice for temporary month-end accruals *(e.g., estimating an unbilled utility expense at month-end and reversing it on the first day of the following month)* or correcting posted accounting errors.
 
@@ -91,7 +93,7 @@ Reversals are standard practice for temporary month-end accruals *(e.g., estimat
 
 ---
 
-### Task 5: Record Opening Balances During System Migration
+## 3. Record Opening Balances During System Migration
 
 When transitioning to CURQ from a legacy accounting system, record historical asset, liability, and equity balances as of your cutover date:
 
@@ -114,7 +116,7 @@ When transitioning to CURQ from a legacy accounting system, record historical as
 
 ---
 
-### Task 6: Audit and Manage Analytic Items
+## 4. Audit and Manage Analytic Items
 
 Analytic items represent the managerial accounting ledger in CURQ. Unlike statutory journal items that post strictly to balanced general ledger accounts, analytic items track operational revenues and project costs across projects, departments, and cost centers.
 
@@ -137,7 +139,7 @@ Analytic items represent the managerial accounting ledger in CURQ. Unlike statut
 
 ---
 
-### Task 7: Audit the Global Journal Items Ledger
+## 5. Audit the Global Journal Items Ledger
 
 While the Journal Entries view displays balanced accounting vouchers, the **Journal Items** registry presents a global, line-level ledger of all individual debit and credit movements across every journal:
 
@@ -160,7 +162,7 @@ While the Journal Entries view displays balanced accounting vouchers, the **Jour
 
 ---
 
-### Task 8: Lock and Secure Entries with Cryptographic Hash Chaining
+## 6. Lock and Secure Entries with Cryptographic Hash Chaining
 
 For statutory compliance and tamper-evident audit trails, CURQ enables cryptographic hash chaining to permanently lock posted entries:
 
@@ -176,7 +178,7 @@ For statutory compliance and tamper-evident audit trails, CURQ enables cryptogra
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Modifying a Posted Journal Entry**: If an error is discovered on a posted entry before the fiscal period is locked, open the entry and click **Reset to Draft**. Make the required line adjustments, verify that debits still equal credits, and click **Post**.
 * **Fiscal Lock Date Prevents Editing**: If an entry falls inside a locked period, CURQ prevents both **Reset to Draft** and direct edits *(see [**Manage Lock Dates and Fiscal Year-End Closing**](./12-manage-lock-dates-and-fiscal-year-end-closing.md))*. Do not modify the historical period; instead, use **Reverse Entry** or create a new adjusting entry in the current open fiscal period.
@@ -185,7 +187,7 @@ For statutory compliance and tamper-evident audit trails, CURQ enables cryptogra
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)
 * [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)

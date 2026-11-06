@@ -6,7 +6,9 @@ Organize website structure, build hierarchical dropdowns, design responsive mega
 
 ---
 
-## Task 1: Accessing the Menu Editor
+## 1. Menu Structure and Hierarchy Configuration
+
+### 1.1 Accessing the Menu Editor
 
 CURQ 18 provides visual menu management directly from the frontend website builder as well as through contextual inline editing popovers:
 
@@ -32,7 +34,7 @@ CURQ 18 provides visual menu management directly from the frontend website build
 
 ---
 
-## Task 2: Adding and Editing Menu Items
+### 1.2 Adding and Editing Menu Items
 
 Standard menu items link visitors directly to internal pages, page sections (anchors), external web addresses, or email mailto links:
 
@@ -64,7 +66,7 @@ Standard menu items link visitors directly to internal pages, page sections (anc
 
 ---
 
-## Task 3: Organizing Hierarchy and Dropdown Submenus
+### 1.3 Organizing Hierarchy and Dropdown Submenus
 
 Group related navigation items into clean dropdown submenus using intuitive drag-and-drop hierarchy controls:
 
@@ -95,7 +97,7 @@ Group related navigation items into clean dropdown submenus using intuitive drag
 
 ---
 
-## Task 4: Creating and Styling Mega Menus
+### 1.4 Creating and Styling Mega Menus
 
 Mega menus replace narrow vertical dropdowns with expansive, multi-column navigation panels. They allow you to showcase categorized links, promotional banners, service thumbnails, and icons across the full viewport width:
 
@@ -159,7 +161,7 @@ Mega menus replace narrow vertical dropdowns with expansive, multi-column naviga
 
 ---
 
-## Task 5: Customizing Header Layout and Navbar Options
+## 2. Customizing Header Layout and Navbar Options
 
 The website header houses your main brand identity, navigation links, and primary call-to-action buttons. Customize its design system-wide:
 
@@ -207,7 +209,7 @@ The website header houses your main brand identity, navigation links, and primar
 
 ---
 
-## Task 6: Customizing Footer Layout and Navigation Links
+## 3. Customizing Footer Layout and Navigation Links
 
 The footer provides persistent legal information, secondary navigation links, contact details, and copyright notices across all pages:
 
@@ -235,7 +237,7 @@ The footer provides persistent legal information, secondary navigation links, co
 
 ---
 
-## Task 7: Multi-Website Navigation Isolation
+## 4. Multi-Website Navigation Isolation
 
 When operating multiple brand websites within a single CURQ database:
 

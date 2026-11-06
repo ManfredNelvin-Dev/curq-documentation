@@ -10,7 +10,7 @@ Monitor, publish, and manage eCommerce products and eLearning course pages in CU
 
 ---
 
-## Task 1: Accessing Product & Course Pages
+## 1. Access Product & Course Pages
 
 Administrators can inspect all published and unpublished catalog items directly from the frontend top bar without opening backend settings:
 
@@ -23,18 +23,18 @@ Both menus open a unified manager interface providing synchronized List and Kanb
 
 ---
 
-## Task 2: Managing Product Pages
+## 2. Managing Product Pages
 
 The **Product Pages** manager displays your store catalog with website-specific indicators across List and Kanban views:
 
-### List View
+### 2.1 List View
 ![Product Pages manager in list view showing Product Name, Website URL, Categories, Sales Price, On Hand stock, SEO optimized, and Is Published columns](../media/058.png)
 
 > For complete column definitions, inventory indicators, and quick-creation field formats, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 The List view displays key storefront attributes including product display names, public URL paths (`/shop/...`), assigned eCommerce categories, retail sales prices, real-time on-hand stock quantities, SEO optimization flags, and read-only publication toggles.
 
-### Creating a New Product from Product Pages
+### 2.2 Creating a New Product from Product Pages
 
 You can add a new product directly from the Product Pages manager without navigating away to backend sales forms:
 
@@ -53,7 +53,7 @@ You can add a new product directly from the Product Pages manager without naviga
 
    ![New Product creation modal displaying Product Name, photo upload, Sales Price, and Category fields](../media/060.png)
 
-### Kanban View
+### 2.3 Kanban View
 
 Click the **Kanban** icon in the upper-right corner of the control bar to view products as cards:
 
@@ -62,7 +62,7 @@ Click the **Kanban** icon in the upper-right corner of the control bar to view p
 * **Card Information**: Each card displays the product image, title, website URL route, retail price, and website domain badge *(in multi-website mode)*.
 * **One-Click Publishing**: The footer of each card includes an interactive **Published / Not Published** toggle switch. Clicking this toggle immediately publishes or unpublishes the product online without requiring you to open the full product form or frontend page.
 
-### Product Batch Actions
+### 2.4 Product Batch Actions
 
 From the list view:
 1. Select target products using the checkboxes on the left.
@@ -73,18 +73,18 @@ From the list view:
 
 ---
 
-## Task 3: Managing Course Pages
+## 3. Managing Course Pages
 
 The **Course Pages** manager organizes online learning programs with progress, audience access, and visibility tracking:
 
-### List View
+### 3.1 List View
 ![Course Pages manager in list view displaying Name, Website URL, Responsible avatar, Course Type, Show Course To audience, and Published toggles](../media/062.png)
 
 > For course manager columns, audience access rules, and enrollment policy specifications, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 The List view provides real-time course oversight, displaying course titles, public URL routes (`/slides/...`), designated responsible instructors, course classification types, target audience access permissions, SEO optimization badges, and publication status toggles.
 
-### Creating a New Course from Course Pages
+### 3.2 Creating a New Course from Course Pages
 
 You can create an online course directly from the Course Pages manager:
 
@@ -103,7 +103,7 @@ You can create an online course directly from the Course Pages manager:
 
 ![New Course creation modal displaying Course Title, layout cards, and Enroll Policy](../media/063.png)
 
-### Kanban View
+### 3.3 Kanban View
 
 Click the **Kanban** icon in the upper-right corner to view courses in card format:
 
@@ -112,7 +112,7 @@ Click the **Kanban** icon in the upper-right corner to view courses in card form
 * **Card Information**: Each card presents the course cover image, title, instructor, visibility settings, and enrolled attendee metrics.
 * **One-Click Publishing**: An interactive **Published / Not Published** toggle switch is located in the card footer, enabling you to publish or take a course offline without opening the course form.
 
-### Course Batch Actions
+### 3.4 Course Batch Actions
 
 From the list view:
 1. Select target courses using the row checkboxes.

@@ -10,7 +10,9 @@ Record incoming customer receipts, execute outgoing supplier disbursements, proc
 
 ---
 
-### Task 1: Register an Incoming Customer Payment Directly from an Invoice
+## 1. Direct Payment Registration on Documents
+
+### 1.1 Register an Incoming Customer Payment Directly from an Invoice
 
 When a customer pays an invoice by wire transfer, cash, or credit card:
 
@@ -36,7 +38,7 @@ When a customer pays an invoice by wire transfer, cash, or credit card:
 
 ---
 
-### Task 2: Register an Outgoing Vendor Bill Payment Directly from a Bill
+### 1.2 Register an Outgoing Vendor Bill Payment Directly from a Bill
 
 When paying an individual supplier invoice via direct bank transfer or manual disbursement:
 
@@ -65,7 +67,7 @@ When paying an individual supplier invoice via direct bank transfer or manual di
 
 ---
 
-### Task 3: Execute Batch Vendor Payments Using Payment Orders (SEPA)
+## 2. Execute Batch Vendor Payments Using Payment Orders (SEPA)
 
 When managing high-volume accounts payable, processing bills individually is inefficient. CURQ allows you to aggregate multiple vendor bills into a single SEPA payment run *(detailed in [**Manage SEPA Vendor Payment Orders**](./13-manage-sepa-vendor-payment-orders.md))*:
 
@@ -79,7 +81,7 @@ When managing high-volume accounts payable, processing bills individually is ine
 
 ---
 
-### Task 4: Record Standalone Payments and Advance Prepayments
+## 3. Record Standalone Payments and Advance Prepayments
 
 If a customer makes an advance deposit before an invoice is issued, or when reviewing direct payment movements:
 
@@ -108,7 +110,7 @@ If a customer makes an advance deposit before an invoice is issued, or when revi
 
 ---
 
-### Task 5: Match Outstanding Credits and Advance Payments to Open Invoices
+## 4. Match Outstanding Credits and Advance Payments to Open Invoices
 
 When an invoice or bill is validated for a partner who has existing advance payments or credit notes:
 
@@ -124,7 +126,7 @@ When an invoice or bill is validated for a partner who has existing advance paym
 
 ---
 
-### Task 6: Understand the "In Payment" vs "Paid" Lifecycle
+## 5. Understand the "In Payment" vs "Paid" Lifecycle
 
 CURQ uses a two-stage payment verification lifecycle to ensure compliance with financial accounting standards:
 
@@ -137,7 +139,7 @@ CURQ uses a two-stage payment verification lifecycle to ensure compliance with f
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Partial Customer Payments**: If a customer pays less than the total invoice value, enter the received amount in the **Pay** dialog. CURQ leaves the invoice in **Posted** status with an **IN PAYMENT** indicator, while displaying the remaining unpaid balance in **Amount Due**.
 * **Bounced or Rejected Payments**: If an electronic transfer fails after registration, open the invoice or bill, click the **Payments** smart button, open the payment record, and click **Unreconcile** or **Reset to Draft**. The invoice immediately reverts to unpaid status with its full balance due.
@@ -146,7 +148,7 @@ CURQ uses a two-stage payment verification lifecycle to ensure compliance with f
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Import and Reconcile Bank Statements](./04-import-and-reconcile-bank-statements.md)
 * [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md)

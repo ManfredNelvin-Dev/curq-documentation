@@ -4,7 +4,9 @@ Activity Types allow human resources teams to standardize follow-up actions, sch
 
 ---
 
-### Task 1: Access the Activity Types Catalog
+## 1. Create and Configure Activity Types
+
+### 1.1 Access the Activity Types Catalog
 
 1. Open the **Time Off** application.
 2. In the top navigation bar, click **Configuration** and select **Activity Types**:
@@ -19,7 +21,7 @@ Activity Types allow human resources teams to standardize follow-up actions, sch
 
 ---
 
-### Task 2: Create a New Activity Type
+### 1.2 Create a New Activity Type
 
 1. In the top-left action bar, click **+ New** (highlighted in red) to open a blank activity configuration form:
 
@@ -33,7 +35,7 @@ Activity Types allow human resources teams to standardize follow-up actions, sch
 
 ---
 
-### Task 3: Configure Activity Settings and Behavior
+### 1.3 Configure Activity Settings and Behavior
 
 Under the **Activity Settings** section on the left, establish behavior and assignments:
 
@@ -57,7 +59,7 @@ Under the **Activity Settings** section on the left, establish behavior and assi
 
 ---
 
-### Task 4: Configure Next Activity Automation and Chaining
+## 2. Configure Next Activity Automation and Chaining
 
 Under the **Next Activity** section on the right, automate workflow progression:
 
@@ -72,7 +74,7 @@ Click the cloud save icon in the upper-left form header (or navigate away) to sa
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Activity Restricted to Wrong Model**: If an activity type does not appear in the Time Off request chatter, verify that the **Model** field is set to **Time Off** rather than an unrelated model.
 * **Chained Activity Did Not Auto-Schedule**: If a follow-up activity was expected to schedule automatically upon completion, check that **Chaining Type** is set to **Trigger Next Activity** instead of **Suggest Next Activity**.

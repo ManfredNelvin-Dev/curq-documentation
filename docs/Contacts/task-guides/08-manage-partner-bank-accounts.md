@@ -4,7 +4,9 @@ Register banking institutions, link account numbers to vendor and customer cards
 
 ---
 
-### Task 1: Register a Bank Institution
+## 1. Register Bank Institutions and Accounts
+
+### 1.1 Register a Bank Institution
 
 Before adding partner accounts, register the banking institution with its official identifier:
 
@@ -32,18 +34,18 @@ Before adding partner accounts, register the banking institution with its offici
 
 ---
 
-### Task 2: Add a Bank Account to a Partner Contact
+### 1.2 Add a Bank Account to a Partner Contact
 
 You can attach a bank account directly from the partner's contact form or manage accounts from the centralized registry:
 
-#### Option A: Directly on the Contact Form
+#### 1.2.1 Option A: Directly on the Contact Form
 1. In **Contacts**, open the vendor or customer card.
 2. Select the **Invoicing** tab.
 3. In the **Bank Accounts** table, click **Add a line**.
 4. Enter the **Account Number** (or IBAN) and select the **Bank** from the registry.
 5. Click **Save**.
 
-#### Option B: Centralized Bank Accounts Registry
+#### 1.2.2 Option B: Centralized Bank Accounts Registry
 1. In the top navigation bar, click **Configuration > Bank Accounts**.
 
    ![Configuration menu dropdown showing Bank Accounts highlighted](../media/036.png)
@@ -60,7 +62,7 @@ You can attach a bank account directly from the partner's contact form or manage
 
 ---
 
-### Task 3: Authorize and Trust an Account for Outgoing Payments
+## 2. Authorize and Trust an Account for Outgoing Payments
 
 To prevent payment fraud, all newly added bank accounts start with an **Untrusted** status. Outgoing batch payments (vendor payouts and customer refunds) are blocked until verified:
 
@@ -75,7 +77,7 @@ To prevent payment fraud, all newly added bank accounts start with an **Untruste
 
 ---
 
-### Edge Cases & Security Warnings
+## Edge Cases & Security Warnings
 
 * **High Risk Warning (Payment Service Provider)**: If CURQ detects that an account number belongs to a money transfer intermediary or virtual wallet rather than an established commercial bank, a **High Risk** banner appears. Perform a phone verification using known company numbers before authorizing the account.
 * **Medium Risk Warning (Country Mismatch)**: If a vendor's primary business address is in one country (e.g., France) but the IBAN country code is from another (e.g., Cyprus), CURQ flags a **Country Mismatch** alert. Confirm cross-border invoicing validity with the vendor's finance team.

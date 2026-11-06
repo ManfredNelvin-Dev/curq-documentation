@@ -4,7 +4,7 @@ This document explains the automated routing logic, business rules, and statisti
 
 ---
 
-### Automated Lead Routing vs. Manual Allocation
+## Automated Lead Routing vs. Manual Allocation
 
 In high-volume sales organizations, assigning incoming leads manually creates severe operational bottlenecks:
 * **Response Latency**: Industry research demonstrates that contacting an inbound prospect within five minutes yields significantly higher conversion rates than responding after an hour. Manual allocation introduces administrative friction and delayed follow-up.
@@ -15,7 +15,7 @@ CURQ resolves these challenges through a two-tier **Rule-Based Assignment** engi
 
 ---
 
-### Architecture of Rule-Based Lead Assignment
+## Architecture of Rule-Based Lead Assignment
 
 The assignment workflow functions as a sequential filtering and load-balancing pipeline:
 
@@ -33,18 +33,18 @@ flowchart LR
     end
 ```
 
-#### 1. Two-Tier Domain Hierarchy
+### 1. Two-Tier Domain Hierarchy
 Lead routing evaluates criteria at both the team and individual representative levels:
 * **Team Assignment Domains**: When an inquiry arrives (via web form, email alias, or API import), the engine matches lead properties against team-level domain filter expressions. This routes enterprise opportunities to the Enterprise Sales Team, technical inquiries to Solutions Engineering, or regional leads to localized sales units.
 * **Member Assignment Domains**: Within a team, individual sales representatives can have dedicated filtering criteria configured on their member profile. For instance, a multilingual representative can be targeted exclusively for leads originating from French- or German-speaking territories.
 
-#### 2. Capacity Governance & Load Balancing
+### 2. Capacity Governance & Load Balancing
 To maintain balanced workloads, the assignment engine enforces rolling capacity ceilings:
 * **Rolling 30-Day Capacity**: Each team member has a configurable threshold defining the maximum volume of leads they can receive in a rolling 30-day window.
 * **Dynamic Capacity Bypass**: If a representative reaches their 30-day quota, the distribution algorithm automatically bypasses them and routes subsequent matching prospects to eligible colleagues with available capacity.
 * **Assignment Opt-Out**: Representatives on leave, supervisors, or team leaders can enable **Skip auto assignment**, exempting their profiles from automated distribution without removing them from team performance reporting.
 
-#### 3. Execution Triggers and Automatic Conversion
+### 3. Execution Triggers and Automatic Conversion
 Lead assignment operates through two complementary modes:
 * **On-Demand Manual Execution**: Team leaders can trigger distribution instantly by clicking **Assign Leads** on the sales team form view.
 * **Automated Scheduled Cron**: Organizations can schedule automated routing runs (e.g., every hour) via background cron automation.
@@ -52,18 +52,18 @@ Lead assignment operates through two complementary modes:
 
 ---
 
-### The Mechanics of Predictive Lead Scoring
+## The Mechanics of Predictive Lead Scoring
 
 Rather than relying on subjective intuition or static point heuristics (such as adding arbitrary points for clicking a link), CURQ implements statistical probability modeling to calculate real-time win probabilities.
 
-#### 1. How Predictive Probability is Calculated
+### 1. How Predictive Probability is Calculated
 The predictive scoring engine evaluates an active opportunity's chances of closing as **Won** by comparing its observed attributes against historical deal outcomes:
 
 * **Baseline Win Rate**: The system begins with your overall historical win rate across all past opportunities in the database.
 * **Attribute Impact**: It analyzes how frequently each specific attribute (for example, stage, sales team, geographic location, or email and phone completeness) appeared among past won deals compared to lost deals.
 * **Calibrated Win Probability**: By evaluating the influence of each attribute, the algorithm produces a calibrated win probability percentage in real time without requiring external machine learning infrastructure.
 
-#### 2. Statistical Dimensions Evaluated
+### 2. Statistical Dimensions Evaluated
 The predictive engine stores frequency distributions in historical scoring frequency tables across specific deal dimensions:
 
 * **Mandatory Baseline Dimensions**:
@@ -75,7 +75,7 @@ The predictive engine stores frequency distributions in historical scoring frequ
   * **Geographical Attributes**: Factors regional conversion variances and territory-specific win rates across countries and states.
   * **Marketing Attribution**: Measures historical conversion efficacy across marketing channels (e.g., organic search vs. paid advertising vs. partner referrals).
 
-#### 3. Data Governance and Algorithmic Prerequisites
+### 3. Data Governance and Algorithmic Prerequisites
 To maintain scoring accuracy and data integrity, predictive lead scoring enforces strict governance constraints:
 
 * **Lead Creation Cutoff Date**: Market dynamics, pricing tiers, and competitive environments evolve. Evaluating deals closed five years ago under obsolete pricing models skews modern predictions. Administrators configure a cutoff threshold (typically restricting data to the preceding 12 to 24 months) to ensure training sets reflect current commercial conditions.
@@ -84,7 +84,7 @@ To maintain scoring accuracy and data integrity, predictive lead scoring enforce
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Understanding Leads vs. Opportunities in CURQ](./01-understanding-leads-vs-opportunities.md)
 * [Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
 * [Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)

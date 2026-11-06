@@ -4,7 +4,9 @@ Coordinate cross-departmental operations, log internal audit notes, send custome
 
 ---
 
-## Task 1: Log Internal Private Notes
+## 1. Record Chatter Notes and Customer Messages
+
+### 1.1 Log Internal Private Notes
 
 Internal notes are strictly confidential to your company colleagues and are never visible to external clients, suppliers, or portal users:
 
@@ -21,7 +23,7 @@ Internal notes are strictly confidential to your company colleagues and are neve
 
 ---
 
-## Task 2: Send External Customer Messages
+### 1.2 Send External Customer Messages
 
 When you need to communicate directly with the customer or vendor associated with the document:
 
@@ -38,7 +40,7 @@ When you need to communicate directly with the customer or vendor associated wit
 
 ---
 
-## Task 3: Schedule and Track Follow-Up Activities
+## 2. Schedule and Track Follow-Up Activities
 
 Ensure critical tasks are completed on time without letting actions slip through the cracks:
 
@@ -53,17 +55,17 @@ Ensure critical tasks are completed on time without letting actions slip through
 
 ---
 
-## Task 4: Follow and Unfollow Records to Control Notifications
+## 3. Follow and Unfollow Records to Control Notifications
 
 Control which business transactions send notifications into your Discuss Inbox:
 
-### Follow a Document
+### 3.1 Follow a Document
 1. Open the target transaction record.
 2. In the top-right corner of the Chatter pane, click the **Follow** button.
 3. You are now subscribed to automated status updates (such as order confirmation, delivery validation, or invoice payment).
 4. Hover over the **Following** button and click the dropdown arrow to customize which specific subtype events notify you (e.g., *Discussions Only*, *Activities Only*, or *All Stage Changes*).
 
-### Unfollow a Document
+### 3.2 Unfollow a Document
 1. Open the document you wish to stop tracking.
 2. Hover over the **Following** button in the Chatter pane.
 3. The button label changes to red text: **Unfollow**.
@@ -71,7 +73,7 @@ Control which business transactions send notifications into your Discuss Inbox:
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Send Direct and Group Messages](02-send-direct-and-group-messages.md)
 * [Configure Notification Preferences and Do-Not-Disturb](05-configure-notification-preferences-and-dnd.md)
 * [Create and Use Canned Responses](06-create-and-use-canned-responses.md)

@@ -15,9 +15,9 @@ flowchart LR
 
 ---
 
-## Hands-On Exercise: From Invoice to Settlement
+## 1. Hands-On Exercise: From Invoice to Settlement
 
-### Scenario Overview
+### 1.1 Scenario Overview
 
 Your company delivers merchandise to a corporate client, **Acme Technologies**:
 * **Customer**: `Acme Technologies`
@@ -28,7 +28,7 @@ Your company delivers merchandise to a corporate client, **Acme Technologies**:
 
 ---
 
-## Step 1: Create a Draft Customer Invoice
+### 1.2 Create a Draft Customer Invoice
 
 1. Open the **Accounting** app from your main CURQ dashboard.
 2. In the top navigation menu, select **Customers > Invoices**.
@@ -46,7 +46,7 @@ Your company delivers merchandise to a corporate client, **Acme Technologies**:
 
 ---
 
-## Step 2: Add Invoice Lines and Verify Automatic Tax Computation
+### 1.3 Add Invoice Lines and Verify Automatic Tax Computation
 
 1. Under the **Invoice Lines** tab, click **Add a line**.
 2. In the **Product** column, select `Fair Phone 5 (White)`.
@@ -63,7 +63,7 @@ Your company delivers merchandise to a corporate client, **Acme Technologies**:
 
 ---
 
-## Step 3: Confirm and Post the Invoice
+### 1.4 Confirm and Post the Invoice
 
 When your invoice details are verified:
 
@@ -81,7 +81,7 @@ When your invoice details are verified:
 
 ---
 
-## Step 4: Register Customer Payment
+### 1.5 Register Customer Payment
 
 When the customer pays via bank transfer or cash:
 
@@ -104,7 +104,7 @@ When the customer pays via bank transfer or cash:
 
 ---
 
-## What You Accomplished
+## 2. What You Accomplished
 
 In this tutorial, you completed a full financial cycle:
 * Created an initial customer invoice draft without risking premature ledger postings.

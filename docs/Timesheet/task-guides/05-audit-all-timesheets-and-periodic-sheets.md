@@ -4,7 +4,9 @@ This guide explains how administrators, department leads, and operations manager
 
 ---
 
-### Task 1: Access the All Timesheet Sheets Overview
+## 1. Audit Employee Timesheet Sheets
+
+### 1.1 Access the All Timesheet Sheets Overview
 
 The **All Timesheet Sheets** workspace provides centralized administrative oversight across all company staff:
 
@@ -18,7 +20,7 @@ The **All Timesheet Sheets** workspace provides centralized administrative overs
 
 ---
 
-### Task 2: Inspect Employee Timesheet Sheets
+### 1.2 Inspect Employee Timesheet Sheets
 
 The list view consolidates key operational metadata for each timesheet cycle:
 
@@ -35,7 +37,7 @@ The list view consolidates key operational metadata for each timesheet cycle:
 
 ---
 
-### Task 3: Examine Summary and Line Item Breakdowns
+### 1.3 Examine Summary and Line Item Breakdowns
 
 Click any timesheet sheet row to open the complete inspection view:
 
@@ -49,7 +51,7 @@ Click any timesheet sheet row to open the complete inspection view:
 
 ---
 
-### Task 4: Apply Administrative Filters and Groupings
+## 2. Apply Administrative Filters and Groupings
 
 Use advanced filtering and grouping to identify missing submissions and track reviewer backlogs:
 
@@ -68,7 +70,7 @@ Use advanced filtering and grouping to identify missing submissions and track re
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Review, Approve, and Refuse Timesheet Sheets](./04-review-approve-and-refuse-timesheet-sheets.md)
 * [Generate and Analyze Timesheet Reports](./07-generate-and-analyze-timesheet-reports.md)

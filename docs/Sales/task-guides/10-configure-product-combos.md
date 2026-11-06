@@ -8,7 +8,9 @@ Configure combo choices, package multi-item product bundles, and select flexible
 
 ---
 
-### Task 1: Create Combo Choices
+## 1. Configure Combo Choices and Master Products
+
+### 1.1 Create Combo Choices
 
 Combo choices define the selectable categories or subgroups from which customers or salespeople select items *(such as choosing a main item, accessory, or warranty tier)*:
 
@@ -31,13 +33,13 @@ Combo choices define the selectable categories or subgroups from which customers
 
 ---
 
-### Task 2: Create the Master Combo Product
+### 1.2 Create the Master Combo Product
 
 1. Navigate to **Sales > Products > Products** and click **+ New**.
 2. Enter the bundle name *(e.g., `Mobile combo`)*.
 3. In the **General Information** tab:
    * Set **Product Type** to **Combo**.
-   * In **Combo Choices**, select the option groups created in Task 1 *(e.g., `Mobile combo`)*.
+   * In **Combo Choices**, select the option groups created in Step 1.1 *(e.g., `Mobile combo`)*.
    * In **Sales Price**, enter the base bundle package price *(e.g., `€ 250.00`)*.
 
    ![Product template form showing Product Type set to Combo, Combo Choices tags, and Sales Price](../media/109.png)
@@ -46,7 +48,7 @@ Combo choices define the selectable categories or subgroups from which customers
 
 ---
 
-### Task 3: Add and Configure Combos on Quotations
+## 2. Add and Configure Combos on Quotations
 
 1. Open **Sales > Orders > Quotations** and click **+ New**.
 2. Under **Order Lines**, click **Add a product** and select your master combo product *(e.g., `Mobile combo`)*.
@@ -63,13 +65,13 @@ Combo choices define the selectable categories or subgroups from which customers
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Inventory Reservations on Combo Components**: When a sales order containing a combo is confirmed, CURQ reserves stock for the individual chosen components (Goods/Storable items) in inventory, ensuring warehouse dispatchers receive accurate picking slips.
 * **Component Out of Stock**: If one choice within a combo is depleted in the warehouse, sales reps can edit the quote line before confirmation and choose an alternative item from the combo choice pool.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Products and Product Variants](./06-configure-products-and-variants.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

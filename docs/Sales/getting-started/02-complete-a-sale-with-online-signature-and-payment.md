@@ -4,7 +4,9 @@ Follow this walkthrough to experience how modern B2B transactions close in CURQ 
 
 ---
 
-## Scenario Overview
+## 1. Complete Online Signature and Payment Workflow
+
+### 1.1 Scenario Overview
 
 Your company prepares an international commercial quote for **Acme Technologies**:
 * **Customer**: `Acme Technologies` (100 Innovation Way, Austin, TX, United States)
@@ -27,7 +29,7 @@ flowchart LR
 
 ---
 
-## Step 1: Draft the Quotation with Online Terms
+### 1.2 Draft the Quotation with Online Terms
 
 1. In the **Sales** app, click **+ New**.
 2. In the **Customer** field, select `Acme Technologies`.
@@ -47,7 +49,7 @@ flowchart LR
 
 ---
 
-## Step 2: Preview the Customer Portal
+### 1.3 Preview the Customer Portal
 
 To simulate the exact customer experience without leaving your desk:
 
@@ -60,7 +62,7 @@ To simulate the exact customer experience without leaving your desk:
 
 ---
 
-## Step 3: Draw the Electronic Signature
+### 1.4 Draw the Electronic Signature
 
 1. On the portal page, locate the action buttons at the bottom right and click **Sign & Pay**.
 2. The **Validate Order** modal dialog opens:
@@ -73,7 +75,7 @@ To simulate the exact customer experience without leaving your desk:
 
 ---
 
-## Step 4: Submit Online Prepayment
+### 1.5 Submit Online Prepayment
 
 Immediately after signature submission, a notification banner appears:
 *"Thank You! Your order has been signed but still needs to be paid to be confirmed."*
@@ -94,7 +96,7 @@ Immediately after signature submission, a notification banner appears:
 
 ---
 
-## Step 5: Verify Automated Backend Execution
+### 1.6 Verify Automated Backend Execution
 
 Return to the backend sales interface (or close the preview tab):
 

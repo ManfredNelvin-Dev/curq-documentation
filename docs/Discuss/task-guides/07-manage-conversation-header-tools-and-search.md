@@ -4,7 +4,9 @@ Search conversation history, inspect shared attachments, govern external upload 
 
 ---
 
-## Task 1: Search Message History within a Conversation
+## 1. Conversation Search and File Attachments
+
+### 1.1 Search Message History within a Conversation
 
 Quickly locate previous decisions, quotes, tracking numbers, or coworker responses without scrolling through hundreds of lines of text:
 
@@ -20,7 +22,7 @@ Quickly locate previous decisions, quotes, tracking numbers, or coworker respons
 
 ---
 
-## Task 2: Browse Attachments in the Files Drawer
+### 1.2 Browse Attachments in the Files Drawer
 
 Locate files, contracts, PDF specifications, and images shared across the lifetime of a conversation:
 
@@ -37,7 +39,7 @@ Locate files, contracts, PDF specifications, and images shared across the lifeti
 
 ---
 
-## Task 3: Configure External User Upload Security
+## 2. Configure External User Upload Security
 
 Channels that include external portal users, suppliers, or client guests require file upload governance to protect corporate storage and prevent malicious file uploads:
 
@@ -50,11 +52,11 @@ Channels that include external portal users, suppliers, or client guests require
 
 ---
 
-## Task 4: Pin and Unpin Critical Messages
+## 3. Pin and Unpin Critical Messages
 
 Keep crucial announcements, channel rules, working hours, or project deadlines permanently accessible to all channel members:
 
-### Pin an Announcement
+### 3.1 Pin an Announcement
 1. Locate the target message in the chat feed.
 2. Hover over the message bubble and click the **Three Vertical Dots** (More Actions) menu.
 3. Select **Pin**:
@@ -63,7 +65,7 @@ Keep crucial announcements, channel rules, working hours, or project deadlines p
 
 4. The message receives a small pin icon and is added to the channel's pinned registry.
 
-### Consult and Unpin Announcements
+### 3.2 Consult and Unpin Announcements
 1. Click the **Push Pin** icon in the top-right header toolbar to open the pinned messages drawer.
 2. All active pinned messages appear in order.
 3. Click a pinned item to scroll the conversation view directly to its original posting context.
@@ -71,7 +73,7 @@ Keep crucial announcements, channel rules, working hours, or project deadlines p
 
 ---
 
-## Task 5: View and Manage Conversation Participants
+## 4. View and Manage Conversation Participants
 
 Inspect live member presence and enroll new teammates:
 
@@ -86,7 +88,7 @@ Inspect live member presence and enroll new teammates:
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Manage Channels](01-create-and-manage-channels.md)
 * [Send Direct and Group Messages](02-send-direct-and-group-messages.md)
 * [Channel and Chat Settings Definitions](../settings-and-fields/01-channel-and-chat-settings-definitions.md)

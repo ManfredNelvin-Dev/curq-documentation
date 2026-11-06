@@ -4,7 +4,9 @@ Create color-coded labels, establish nested tag categories, assign badges to par
 
 ---
 
-### Task 1: Create a Contact Tag from Configuration
+## 1. Create and Assign Contact Tags
+
+### 1.1 Create a Contact Tag from Configuration
 
 1. Open the **Contacts** app.
 2. In the top navigation menu, click **Configuration > Contact Tags**.
@@ -28,7 +30,7 @@ Create color-coded labels, establish nested tag categories, assign badges to par
 
 ---
 
-### Task 2: Create a Tag on the Fly
+### 1.2 Create a Tag on the Fly
 
 You can create new tags directly while editing a contact form without navigating away:
 
@@ -40,7 +42,7 @@ You can create new tags directly while editing a contact form without navigating
 
 ---
 
-### Task 3: Assign Tags to Contacts
+### 1.3 Assign Tags to Contacts
 
 1. Open the target contact card.
 2. Click into the **Tags** field.
@@ -52,7 +54,7 @@ You can create new tags directly while editing a contact form without navigating
 
 ---
 
-### Task 4: Filter the Directory by Tag
+## 2. Filter the Directory by Tag
 
 1. In the main **Contacts** directory, click the search bar.
 2. Type the tag name (for example, `VIP`).
@@ -61,7 +63,7 @@ You can create new tags directly while editing a contact form without navigating
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Deactivating Outdated Tags**: To prevent employees from selecting retired tags without deleting them from historical records, navigate to **Configuration > Contact Tags**, click into the tag, and switch off the **Active** toggle.
 * **Removing a Tag from a Contact**: Click the small **x** on the tag badge directly within the **Tags** field on the contact form, then save.

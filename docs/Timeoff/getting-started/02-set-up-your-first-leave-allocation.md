@@ -22,7 +22,9 @@ flowchart LR
 
 ---
 
-## Open the Allocations Management View
+## 1. Configure and Validate Leave Allocations
+
+### 1.1 Open the Allocations Management View
 
 Access the centralized administrative interface for granting and auditing leave entitlements:
 
@@ -37,7 +39,7 @@ Access the centralized administrative interface for granting and auditing leave 
 
 ---
 
-## Create a New Allocation Record
+### 1.2 Create a New Allocation Record
 
 Initialize a blank allocation form to grant a new leave entitlement:
 
@@ -50,7 +52,7 @@ Initialize a blank allocation form to grant a new leave entitlement:
 
 ---
 
-## Configure Allocation Details and Validity
+### 1.3 Configure Allocation Details and Validity
 
 Specify the employee recipient, time-off category, entitlement quantity, and validity window:
 
@@ -67,7 +69,7 @@ Specify the employee recipient, time-off category, entitlement quantity, and val
 
 ---
 
-## Approve and Validate the Allocation
+### 1.4 Approve and Validate the Allocation
 
 Submit and authorize the allocation to finalize the employee's entitlement:
 
@@ -84,7 +86,7 @@ Submit and authorize the allocation to finalize the employee's entitlement:
 
 ---
 
-## Verify Updated Balances on Employee Profile
+### 1.5 Verify Updated Balances on Employee Profile
 
 Confirm that the newly approved allocation is immediately available for employee booking:
 
@@ -97,7 +99,7 @@ Confirm that the newly approved allocation is immediately available for employee
 
 ---
 
-## Summary of Achievements
+## 2. Summary of Achievements
 
 In this tutorial, you learned to:
 * Access the **Management → Allocations** interface.

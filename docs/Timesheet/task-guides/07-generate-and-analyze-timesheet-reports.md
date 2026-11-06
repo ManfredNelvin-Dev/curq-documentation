@@ -4,7 +4,9 @@ This guide demonstrates how project leaders, finance managers, and department he
 
 ---
 
-### Task 1: Access Timesheet Reports
+## 1. Timesheet Reporting Views and Quantitative Measures
+
+### 1.1 Access Timesheet Reports
 
 Open the reporting suite from the Timesheets navigation interface:
 
@@ -20,29 +22,29 @@ Open the reporting suite from the Timesheets navigation interface:
 
 ---
 
-### Task 2: Analyze Dedicated Reporting Views
+### 1.2 Analyze Dedicated Reporting Views
 
 CURQ provides four targeted reporting perspectives tailored for resource allocation and financial auditing:
 
-#### Timesheets by Employee
+#### 1.2.1 Timesheets by Employee
 
 Aggregates recorded working hours grouped by employee to assess workload balance and team utilization:
 
 ![Timesheets by Employee pivot matrix report](../media/018.png)
 
-#### Timesheets by Project
+#### 1.2.2 Timesheets by Project
 
 Summarizes cumulative time investments across client accounts and internal initiatives to audit budget burn rates:
 
 ![Timesheets by Project pivot matrix report](../media/019.png)
 
-#### Timesheets by Task
+#### 1.2.3 Timesheets by Task
 
 Provides an in-depth operational breakdown by individual task deliverables, highlighting deliverables with high effort consumption:
 
 ![Timesheets by Task pivot matrix report showing expanded project tasks](../media/020.png)
 
-#### Timesheets by Billing Type
+#### 1.2.4 Timesheets by Billing Type
 
 Categorizes logged hours by commercial billing classification *(e.g., Billable on Timesheets, Fixed Price, Non-Billable)*:
 
@@ -52,7 +54,7 @@ Categorizes logged hours by commercial billing classification *(e.g., Billable o
 
 ---
 
-### Task 3: Select Quantitative Measures
+### 1.3 Select Quantitative Measures
 
 Customize the numerical metrics calculated within your pivot tables and visual charts:
 
@@ -71,7 +73,7 @@ Customize the numerical metrics calculated within your pivot tables and visual c
 
 ---
 
-### Task 4: Search, Filter, and Group Reporting Data
+## 2. Search, Filter, and Group Reporting Data
 
 Refine your analytical dataset using multi-level search and grouping controls:
 
@@ -89,7 +91,7 @@ Refine your analytical dataset using multi-level search and grouping controls:
 
 ---
 
-### Task 5: Export Analytical Data
+## 3. Export Analytical Data
 
 Export structured timesheet analyses for executive presentations, payroll reconciliation, or client auditing:
 
@@ -99,7 +101,7 @@ Export structured timesheet analyses for executive presentations, payroll reconc
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Audit All Timesheets and Periodic Sheets](./05-audit-all-timesheets-and-periodic-sheets.md)
 * [Configure Timesheet Policies and Encoding Rules](./06-configure-timesheet-policies-and-encoding-rules.md)

@@ -9,7 +9,9 @@ Configure digital signatures, require online prepayments, set deposit percentage
 
 ---
 
-### Task 1: Enable Online Signature and Payment Globally
+## 1. Online Signature and Payment Configuration
+
+### 1.1 Enable Online Signature and Payment Globally
 
 1. Open **Sales > Configuration > Settings**.
 2. Locate the **Quotations & Orders** section:
@@ -27,7 +29,7 @@ Configure digital signatures, require online prepayments, set deposit percentage
 
 ---
 
-### Task 2: Configure Quotation-Specific and Template Sign and Pay Rules
+### 1.2 Configure Quotation-Specific and Template Sign and Pay Rules
 
 You can establish default rules on quotation templates or customize policies on individual contracts:
 
@@ -48,7 +50,7 @@ You can establish default rules on quotation templates or customize policies on 
 
 ---
 
-### Task 3: Configure Payment Providers
+### 1.3 Configure Payment Providers
 
 To offer credit cards, instant bank transfers, or mobile wallets in the customer portal:
 
@@ -75,7 +77,7 @@ To offer credit cards, instant bank transfers, or mobile wallets in the customer
 
 ---
 
-### Task 4: The Customer Signing Experience and Offline Overrides
+## 2. Customer Signing Experience and Offline Overrides
 
 1. **Customer Portal Signing**:
    * When customers open the quote online, clicking **Sign & Pay** launches the signature modal with Draw, Auto-type, and Load options:
@@ -91,14 +93,14 @@ To offer credit cards, instant bank transfers, or mobile wallets in the customer
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Customer Paid but Webhook Failed to Confirm Order**: If a payment processor charges the customer but network latency prevents the automated callback, open the sales order Chatter. Locate the transaction ID, click into the transaction, and click **Capture Transaction** or click **Confirm** manually on the order.
 * **Customer Signature Audit Trail Needed**: If legal counsel requires proof of signature, open the sales order Chatter. Click on the attached `Order_S00042_Signed.pdf`. The document includes the visual signature, signer's printed name, UTC timestamp, and client IP address.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Complete a Sale with Online Signature and Payment](../getting-started/02-complete-a-sale-with-online-signature-and-payment.md)
 * [Understanding the Sales Order Lifecycle and State Machine](../core-concepts/01-understanding-the-sales-order-lifecycle.md)
 * [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

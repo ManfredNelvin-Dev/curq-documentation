@@ -6,7 +6,9 @@ Build, customize, and publish responsive web pages using the drag-and-drop websi
 
 ---
 
-## Task 1: Opening the Website Editor
+## 1. Page Creation and Block Design Workflow
+
+### 1.1 Opening the Website Editor
 
 To access the website frontend and editing tools:
 
@@ -23,7 +25,7 @@ To access the website frontend and editing tools:
 
 ---
 
-## Task 2: Creating a New Webpage
+### 1.2 Creating a New Webpage
 
 To start a new webpage:
 
@@ -55,7 +57,7 @@ To start a new webpage:
 
 ---
 
-## Task 3: Adding Content Using Building Blocks
+### 1.3 Adding Content Using Building Blocks
 
 The drag-and-drop editor provides a library of pre-designed responsive blocks in the right-hand **Blocks** sidebar:
 
@@ -77,7 +79,7 @@ The drag-and-drop editor provides a library of pre-designed responsive blocks in
 
 ---
 
-## Task 4: Editing Text and Button Links Inline
+### 1.4 Editing Text and Button Links Inline
 
 Every element on the canvas can be edited directly without opening separate dialog forms:
 
@@ -115,7 +117,7 @@ Every element on the canvas can be edited directly without opening separate dial
 
 ---
 
-## Task 5: Replacing and Formatting Media
+### 1.5 Replacing and Formatting Media
 
 To replace stock placeholder pictures with company media:
 
@@ -145,7 +147,7 @@ To replace stock placeholder pictures with company media:
 
 ---
 
-## Task 6: Customizing Section Layout and Styling
+### 1.6 Customizing Section Layout and Styling
 
 When an entire block section is selected, the right sidebar switches to the **Customize** panel to control section geometry:
 
@@ -165,7 +167,7 @@ When an entire block section is selected, the right sidebar switches to the **Cu
 
 ---
 
-## Task 7: Managing Site-Wide Themes and Brand Styling
+## 2. Managing Site-Wide Themes and Brand Styling
 
 To maintain visual consistency across all pages without restyling blocks one by one:
 
@@ -188,7 +190,7 @@ To maintain visual consistency across all pages without restyling blocks one by 
 
 ---
 
-## Task 8: Previewing Responsive Layouts
+## 3. Previewing Responsive Layouts
 
 To verify how the page renders on smaller screens before going live:
 
@@ -205,7 +207,7 @@ To verify how the page renders on smaller screens before going live:
 
 ---
 
-## Task 9: Saving and Publishing the Page
+## 4. Saving and Publishing the Page
 
 Once your design and copy are finalized:
 

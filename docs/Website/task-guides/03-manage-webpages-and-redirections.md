@@ -6,7 +6,9 @@ Organize, configure, secure, and maintain web pages across your CURQ 18 websites
 
 ---
 
-## Task 1: Accessing the Page Manager
+## 1. Page Manager Navigation and Batch Actions
+
+### 1.1 Accessing the Page Manager
 
 The **Page Manager** provides a comprehensive control center where administrators can monitor publication status, SEO indexing, menu visibility, and website assignments across all pages.
 
@@ -31,7 +33,7 @@ CURQ opens the **Website Pages** manager interface with view-switching controls 
 
 ---
 
-## Task 2: Page Manager Columns & Indicators
+### 1.2 Page Manager Columns & Indicators
 
 In List view, the Page Manager provides an operational grid summarizing publication status, SEO indexing, menu placement, and multi-website routing for all site content.
 
@@ -45,7 +47,7 @@ Review your page records across the following core attributes:
 
 ---
 
-## Task 3: Searching, Filtering, and Grouping Pages
+### 1.3 Searching, Filtering, and Grouping Pages
 
 When managing extensive websites with dozens or hundreds of pages, use the search and filter bar to locate specific content quickly:
 
@@ -59,7 +61,7 @@ When managing extensive websites with dozens or hundreds of pages, use the searc
 
 ---
 
-## Task 4: Performing Batch Actions on Pages
+### 1.4 Performing Batch Actions on Pages
 
 The Page Manager allows administrators to perform bulk maintenance operations across multiple selected pages simultaneously:
 
@@ -74,11 +76,11 @@ The Page Manager allows administrators to perform bulk maintenance operations ac
 
 ---
 
-## Task 5: Configuring Page Properties
+## 2. Configuring Page Properties
 
 The **Page Properties** dialog allows granular control over page URLs, redirects, homepage assignment, and search engine visibility.
 
-### Opening Page Properties
+### 2.1 Opening Page Properties
 
 You can access Page Properties through two methods:
 
@@ -92,7 +94,7 @@ CURQ opens the **Page Properties** modal dialog:
 
 ![Page Properties modal dialog showing Page Title, Page URL, In Menu, Is Homepage, Published, Publishing Date, Indexed, Visibility, and Is a Template options](../media/048.png)
 
-### Core Page Properties
+### 2.2 Core Page Properties
 
 > For technical specifications of page attributes, redirection codes (301 vs 302), and template behaviors, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
@@ -109,7 +111,7 @@ CURQ opens the **Page Properties** modal dialog:
 
 ---
 
-## Task 6: Page Visibility & Access Security
+## 3. Page Visibility & Access Security
 
 Control visitor access to individual pages using the **Visibility** setting in Page Properties:
 
@@ -125,7 +127,7 @@ Control visitor access to individual pages using the **Visibility** setting in P
 
 ---
 
-## Task 7: Creating and Managing Page Templates
+## 4. Creating and Managing Page Templates
 
 Standardize brand layout designs by converting custom pages into reusable templates:
 

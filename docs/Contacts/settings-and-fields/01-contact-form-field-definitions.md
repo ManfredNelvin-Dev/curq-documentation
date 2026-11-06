@@ -4,7 +4,7 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ---
 
-### Header and Identity Fields
+## Header and Identity Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -25,7 +25,7 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ---
 
-### Contacts and Addresses Tab
+## Contacts and Addresses Tab
 
 | Address Type | Key Behaviors & Purpose |
 | :--- | :--- |
@@ -37,9 +37,9 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ---
 
-### Sales and Purchase Tab
+## Sales and Purchase Tab
 
-#### Sales Section
+### Sales Section
 | Field Name | Description |
 | :--- | :--- |
 | **Salesperson** | Internal system user assigned to manage customer relationships and commercial transactions. |
@@ -48,18 +48,18 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 | **Pricelist** | Commercial pricelist governing customer discounts, margin rules, and transaction currency. Inherited from parent company if linked. |
 | **Delivery Method** | Default shipping carrier or fulfillment rule applied to customer deliveries (e.g., `Standard Delivery`, `Express Freight`). |
 
-#### Purchase Section
+### Purchase Section
 | Field Name | Description |
 | :--- | :--- |
 | **Payment Terms** | Agreed settlement deadline applied to incoming vendor bills and purchase orders. |
 | **Payment Method** | Default payment channel used by the enterprise to settle vendor payables (e.g., `Manual`, `Bank Transfer`, `Checks`). |
 
-#### Fiscal Information Section
+### Fiscal Information Section
 | Field Name | Description |
 | :--- | :--- |
 | **Fiscal Position** | Tax mapping rule that replaces or adapts product taxes according to domestic, intra-community, or international trade agreements. |
 
-#### Miscellaneous Section
+### Miscellaneous Section
 | Field Name | Description |
 | :--- | :--- |
 | **Reference** | Internal alphanumeric identifier or legacy account number assigned by the internal organization. |
@@ -70,30 +70,30 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ---
 
-### Invoicing Tab
+## Invoicing Tab
 
-#### Bank Accounts Sub-Table
+### Bank Accounts Sub-Table
 | Column | Description |
 | :--- | :--- |
 | **Account Number** | Full bank account number or IBAN. |
 | **Bank** | Linked banking institution from the Bank Registry. |
 | **Send Money** | Toggle switch indicating **Untrusted** or **Trusted** status for outgoing cash disbursements. |
 
-#### Customer Invoices Section
+### Customer Invoices Section
 | Field Name | Description |
 | :--- | :--- |
 | **Invoice sending** | Default delivery mode when finalizing customer invoices (`Download` or `by Email`). |
 | **eInvoice format** | Electronic Data Interchange (EDI) format standard used when exporting structured invoice files for government gateways (e.g., `France (FacturX)`, `EU Standard (Peppol Bis 3.0)`, `Germany (ZUGFeRD)`, `Germany (XRechnung)`, `Netherlands (NLCIUS)`). |
 | **Peppol ID** | Official public registry identifier (e.g., SIRET, KvK, Leitweg-ID, EIN) used for cross-border e-invoicing transmission. |
 
-#### Automation Section
+### Automation Section
 | Setting | Description |
 | :--- | :--- |
 | **Auto-post bills** | Controls validation behavior for incoming vendor bills from this partner: **Always** (automatically posts upon creation), **Ask after 3 validations without edits** (prompts to enable after three unmodified bills), or **Never** (mandates manual confirmation). |
 
 ---
 
-### Internal Notes and Warnings Tab
+## Internal Notes and Warnings Tab
 
 | Setting | Description |
 | :--- | :--- |
@@ -103,7 +103,7 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ---
 
-### Personal Information Tab
+## Personal Information Tab
 
 | Field Name | Description |
 | :--- | :--- |
@@ -111,7 +111,7 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ---
 
-### Partner Assignment Tab
+## Partner Assignment Tab
 
 | Field Name | Description |
 | :--- | :--- |
@@ -120,7 +120,7 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ---
 
-### Membership Tab
+## Membership Tab
 
 | Field Name | Description |
 | :--- | :--- |
@@ -132,7 +132,7 @@ This document provides a factual, scannable catalog of all fields, toggles, and 
 
 ---
 
-### Privacy Tab
+## Privacy Tab
 
 | Field Name | Description |
 | :--- | :--- |

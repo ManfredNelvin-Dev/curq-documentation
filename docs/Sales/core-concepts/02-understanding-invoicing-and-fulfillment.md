@@ -4,7 +4,7 @@ This document explains the commercial logic, financial risk models, and cross-mo
 
 ---
 
-### The Operational Dilemma: When to Recognize a Billable Event
+## The Operational Dilemma: When to Recognize a Billable Event
 
 In commerce, determining the precise moment a quotation converts into a billable customer liability is a critical balance between cash flow optimization and operational accuracy:
 
@@ -20,11 +20,11 @@ flowchart LR
 
 ---
 
-### Invoicing Policy Architecture
+## Invoicing Policy Architecture
 
 CURQ enforces invoicing rules at the individual product level via the **Invoicing Policy** configuration, directing how sales order lines translate into draft customer invoices:
 
-#### 1. Ordered Quantities (`order`)
+### 1. Ordered Quantities (`order`)
 Under this policy, customer invoices are generated based on the agreed quantity specified in the confirmed sales order, regardless of warehouse shipment status.
 
 * **Cash Flow Advantage**: Secures immediate liquidity by billing the client prior to incurring packaging, freight, or procurement costs.
@@ -34,7 +34,7 @@ Under this policy, customer invoices are generated based on the agreed quantity 
   * Made-to-order manufacturing requiring upfront customer commitment.
 * **Accounting Risk**: If supply chain bottlenecks prevent fulfillment or products are returned, accounting staff must issue credit notes and process customer refunds to clear unearned revenue balances.
 
-#### 2. Delivered Quantities (`delivery`)
+### 2. Delivered Quantities (`delivery`)
 Under this policy, an order line becomes invoiceable only after warehouse personnel physically dispatch goods and validate the corresponding delivery slip.
 
 * **Operational Accuracy**: The invoice precisely mirrors what was loaded onto the delivery truck. If 100 units were ordered but only 80 were in stock, the customer is billed strictly for 80 units.
@@ -46,7 +46,7 @@ Under this policy, an order line becomes invoiceable only after warehouse person
 
 ---
 
-### The Three-Way Cross-Module Handshake
+## The Three-Way Cross-Module Handshake
 
 A sale does not exist in isolation; CURQ architecture binds the commercial order, warehouse dispatch, and general ledger into a synchronized tripartite workflow:
 
@@ -66,7 +66,7 @@ flowchart LR
 
 ---
 
-### Handling Partial Shipments and Backorders
+## Handling Partial Shipments and Backorders
 
 When inventory constraints necessitate splitting an order into multiple shipments:
 
@@ -78,7 +78,7 @@ When inventory constraints necessitate splitting an order into multiple shipment
 
 ---
 
-### Unbilled Revenue Governance: The "Orders to Invoice" Queue
+## Unbilled Revenue Governance: The "Orders to Invoice" Queue
 
 In high-volume distribution centers, sales representatives should not manually check every individual order to see if warehouse dispatch has finished.
 
@@ -90,7 +90,7 @@ Whenever $\text{Invoiceable Units} > 0$, the sales order surfaces automatically 
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Generate Invoices from Sales Orders](../task-guides/04-invoice-sales-orders.md)
 * [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)
 * [Understanding the Sales Order Lifecycle and State Machine](./01-understanding-the-sales-order-lifecycle.md)

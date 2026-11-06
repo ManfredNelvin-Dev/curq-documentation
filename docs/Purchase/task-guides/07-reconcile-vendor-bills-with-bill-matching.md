@@ -4,7 +4,9 @@ This guide covers how to identify and reconcile procurement billing discrepancie
 
 ---
 
-## Task 1: Access the Bill Matching Workspace
+## 1. Reconcile Vendor Bills via Bill Matching
+
+### 1.1 Access the Bill Matching Workspace
 
 1. Open the confirmed purchase order from **Purchase → Orders → Purchase Orders**.
 2. Click the **Bill Matching** smart button in the top-right stat area.
@@ -17,7 +19,7 @@ This guide covers how to identify and reconcile procurement billing discrepancie
 
 ---
 
-## Task 2: Match Lines and Identify Discrepancies
+### 1.2 Match Lines and Identify Discrepancies
 
 1. Review the paired purchase order lines and vendor bill lines:
    * **Exact Match**: Billed quantities and unit prices match confirmed purchase order lines and validated warehouse receipts exactly.
@@ -26,7 +28,7 @@ This guide covers how to identify and reconcile procurement billing discrepancie
 
 ---
 
-## Task 3: Reconcile and Match Discrepancies
+### 1.3 Reconcile and Match Discrepancies
 
 1. Select the lines to reconcile using the checkboxes on the left.
 2. A selection toolbar appears displaying the count of selected records (e.g., `2 selected`).

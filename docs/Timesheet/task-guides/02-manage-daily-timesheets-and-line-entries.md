@@ -4,7 +4,9 @@ This guide explains how to view, log, filter, and audit individual working hours
 
 ---
 
-### Task 1: Access the My Timesheets Log
+## 1. Log and Organize Daily Timesheets
+
+### 1.1 Access the My Timesheets Log
 
 The **My Timesheets** view presents a detailed list of every atomic time entry logged by your user account:
 
@@ -17,7 +19,7 @@ The **My Timesheets** view presents a detailed list of every atomic time entry l
 
 ---
 
-### Task 2: Record an Individual Line Entry Inline
+### 1.2 Record an Individual Line Entry Inline
 
 Log individual time entries quickly without opening a periodic sheet:
 
@@ -38,7 +40,7 @@ Log individual time entries quickly without opening a periodic sheet:
 
 ---
 
-### Task 3: Filter and Group Daily Logs
+### 1.3 Filter Daily Logs
 
 Use search, filter, and grouping mechanisms to audit your logged hours:
 
@@ -56,7 +58,9 @@ Use search, filter, and grouping mechanisms to audit your logged hours:
 
 ---
 
-### Task 4: Access the Unsubmitted Timesheet Queue
+## 2. Manage Unsubmitted Timesheet Hours
+
+### 2.1 Access the Unsubmitted Timesheet Queue
 
 To audit and organize hours awaiting managerial submission:
 
@@ -71,7 +75,7 @@ To audit and organize hours awaiting managerial submission:
 
 ---
 
-### Task 5: Review and Manage Unsubmitted Hours
+### 2.2 Review and Manage Unsubmitted Hours
 
 1. **Project Subtotals**: Inspect unsubmitted records grouped by project *(such as `Development (3)` totaling `07:00` hours)* to identify unallocated effort.
 2. **Inline Adjustments**: Click **Add a line** directly within any project grouping to add missing work entries.
@@ -81,7 +85,7 @@ To audit and organize hours awaiting managerial submission:
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Create and Submit Timesheet Sheets](./01-create-and-submit-timesheet-sheets.md)
 * [Track Active Sessions with the Work Timer](./03-track-active-sessions-with-the-work-timer.md)

@@ -4,7 +4,9 @@ This guide covers how to analyze mass mailing metrics, evaluate delivery and cli
 
 ---
 
-## Task 1: Access Mass Mailing Analysis
+## 1. Mass Mailing Analytical Views and Measures
+
+### 1.1 Access Mass Mailing Analysis
 
 Open the centralized marketing analytics dashboard:
 
@@ -18,7 +20,7 @@ Open the centralized marketing analytics dashboard:
 
 ---
 
-## Task 2: Switch Analytical Views and Apply Measures
+### 1.2 Switch Analytical Views and Apply Measures
 
 Inspect data across different analytical dimensions:
 
@@ -36,7 +38,7 @@ Inspect data across different analytical dimensions:
 
 ---
 
-## Task 3: Apply Filters and Groupings
+### 1.3 Apply Filters and Groupings
 
 Segment reporting data to compare campaigns and timeframes:
 
@@ -51,7 +53,7 @@ Segment reporting data to compare campaigns and timeframes:
 
 ---
 
-## Task 4: Inspect Opt-Out Feedback Analytics
+## 2. Inspect Opt-Out Feedback Analytics
 
 Review why recipients are opting out of communications:
 

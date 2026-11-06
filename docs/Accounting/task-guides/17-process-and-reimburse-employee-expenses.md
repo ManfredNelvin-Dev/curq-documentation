@@ -11,7 +11,9 @@ Employee expense management in CURQ integrates employee out-of-pocket spending, 
 
 ---
 
-### Task 1: Access the Employee Expenses Registry
+## 1. Employee Expense Processing and Settlement
+
+### 1.1 Access the Employee Expenses Registry
 
 1. In the top navigation bar, select **Accounting > Vendors > Employee Expenses**.
 2. Review the central expense report registry:
@@ -28,7 +30,7 @@ Employee expense management in CURQ integrates employee out-of-pocket spending, 
 
 ---
 
-### Task 2: Create a New Expense Report
+### 1.2 Create a New Expense Report
 
 1. In the top-left action bar of the Employee Expenses registry, click **+ New**:
 
@@ -44,7 +46,7 @@ Employee expense management in CURQ integrates employee out-of-pocket spending, 
 
 ---
 
-### Task 3: Add Individual Expense Lines and Receipts
+### 1.3 Add Individual Expense Lines and Receipts
 
 1. Under the **Expense** tab, click **Add a line** to open the **Create Expense Lines** dialog:
 
@@ -75,11 +77,11 @@ Employee expense management in CURQ integrates employee out-of-pocket spending, 
 
 ---
 
-### Task 4: Submit, Approve, and Post Expense Reports
+### 1.4 Submit, Approve, and Post Expense Reports
 
 The expense report workflow advances through a sequential four-stage verification cycle:
 
-#### Stage 1: Submission
+#### 1.4.1 Stage 1: Submission
 1. Review all lines, attached receipts, and computed tax totals.
 2. Click **Submit to Manager** in the top action bar:
    * The status pipeline advances from `To Submit` to `Submitted`.
@@ -88,14 +90,14 @@ The expense report workflow advances through a sequential four-stage verificatio
 
    ![Submitted expense report awaiting managerial approval showing status bar and chatter activity](../media/175.png)
 
-#### Stage 2: Managerial Approval
+#### 1.4.2 Stage 2: Managerial Approval
 1. The approving manager opens the submitted report.
 2. Verify business justification, receipt attachments, and line items.
 3. Click **Approve**:
    * The status pipeline advances to `Approved`.
    * If rejected, the manager clicks **Refuse**, entering an explanation reason in the dialog. The report returns to draft status for employee revision.
 
-#### Stage 3: Accounting Posting
+#### 1.4.3 Stage 3: Accounting Posting
 1. Once approved, an accountant reviews tax codes and general ledger distributions.
 2. Click **Post Journal Entries**:
    * CURQ generates a balanced journal voucher in the general ledger:
@@ -119,7 +121,7 @@ The expense report workflow advances through a sequential four-stage verificatio
 
 ---
 
-### Task 5: Settle Employee Reimbursement
+### 1.5 Settle Employee Reimbursement
 
 1. Open the posted expense report under **Accounting > Vendors > Employee Expenses**.
 2. Click **Pay** in the upper-left action bar to open the payment settlement dialog:
@@ -147,7 +149,7 @@ The expense report workflow advances through a sequential four-stage verificatio
 
 ---
 
-### Edge Cases and Recovery Steps
+## Edge Cases and Recovery Steps
 
 * **Personal Purchase Mixed with Business Expense**: If an employee receipt contains both business and personal items, edit the **Subtotal** on the expense line to reflect only the deductible business portion. Do not claim the personal fraction.
 * **Refused Expense Resubmission**: When an expense is refused due to missing documentation, open the report, upload the requested receipt in Chatter, adjust line amounts if required, and click **Reset to Draft** followed by **Submit to Manager**.
@@ -156,7 +158,7 @@ The expense report workflow advances through a sequential four-stage verificatio
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)

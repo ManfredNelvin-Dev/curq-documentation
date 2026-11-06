@@ -4,7 +4,9 @@ This guide covers how to schedule meetings and calendar activities directly from
 
 ---
 
-## Task 1: Schedule a Meeting Activity from a Record
+## 1. Chatter Meeting Activities Workflow
+
+### 1.1 Schedule a Meeting Activity from a Record
 
 You can initiate a calendar event directly from any business document that supports chatter:
 
@@ -20,7 +22,7 @@ You can initiate a calendar event directly from any business document that suppo
 
 ---
 
-## Task 2: Complete and Log Meeting Activities
+### 1.2 Complete and Log Meeting Activities
 
 Once a scheduled calendar meeting has concluded, update the originating record:
 

@@ -4,7 +4,7 @@ This document provides rule priority hierarchies, pricing methods, and conversio
 
 ---
 
-### Pricelist Rule Computation Methods
+## Pricelist Rule Computation Methods
 
 | Method | Description |
 | :--- | :--- |
@@ -12,7 +12,7 @@ This document provides rule priority hierarchies, pricing methods, and conversio
 | **Percentage** | Deducts a specified percentage discount from the baseline sales price. |
 | **Formula** | Computes price dynamically from a chosen base (Sales Price, Cost, or Other Pricelist) with percentage discounts, fixed surcharges, and optional margin boundaries. |
 
-#### Formula Margin Boundary Enforcement
+### Formula Margin Boundary Enforcement
 When **Formula** is used with **Min. Margin** and **Max. Margin** relative to the selected valuation baseline:
 
 * **Base Valuation**: Configurable as **Sales Price**, **Cost**, or **Other Pricelist**.
@@ -22,7 +22,7 @@ When **Formula** is used with **Min. Margin** and **Max. Margin** relative to th
 
 ---
 
-### Pricelist Specificity Hierarchy
+## Pricelist Specificity Hierarchy
 
 When a single sales order line qualifies for multiple competing pricelist rules, CURQ evaluates rules in descending order of specificity:
 
@@ -37,7 +37,7 @@ When a single sales order line qualifies for multiple competing pricelist rules,
 
 ---
 
-### Units of Measure (UoM) Conversion Ratios
+## Units of Measure (UoM) Conversion Ratios
 
 Units within the same category convert dynamically using the reference unit ratio:
 
@@ -49,7 +49,7 @@ Units within the same category convert dynamically using the reference unit rati
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Pricelists and Pricing Rules](../task-guides/08-configure-pricelists-and-pricing-rules.md)
 * [Configure Units of Measure](../task-guides/11-configure-units-of-measure.md)
 

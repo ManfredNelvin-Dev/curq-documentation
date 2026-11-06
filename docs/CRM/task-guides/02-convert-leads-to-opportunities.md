@@ -4,7 +4,9 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 
 ---
 
-### Task 1: Enable the Leads Intake Workflow
+## 1. Inbound Lead Intake Workflow
+
+### 1.1 Enable the Leads Intake Workflow
 
 1. Open the **CRM** app.
 2. In the top navigation bar, click **Configuration > Settings**.
@@ -18,7 +20,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 
 ---
 
-### Task 2: Create and Manage Inbound Leads
+### 1.2 Create and Manage Inbound Leads
 
 1. In the top navigation bar, click **Leads**.
 2. Click **+ New** at the top left of the list view.
@@ -45,7 +47,9 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 
 ---
 
-### Task 3: Check for Duplicates Using Similar Leads
+## 2. Deduplication and Opportunity Conversion
+
+### 2.1 Check for Duplicates Using Similar Leads
 
 1. While reviewing an inquiry or pipeline record, inspect the stat buttons in the upper-right header.
 2. When CURQ detects shared emails, phone numbers, or company names with existing records, the **Similar Lead** smart button activates and displays the match count (e.g., **Similar Lead 1**).
@@ -56,7 +60,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 
 ---
 
-### Task 4: Convert a Qualified Lead into an Opportunity
+### 2.2 Convert a Qualified Lead into an Opportunity
 
 1. Open the qualified lead and click **Convert to Opportunity** in the top action bar.
 
@@ -79,7 +83,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Marking an Unqualified Lead as Lost**: If an inbound lead is spam, irrelevant, or not a commercial fit, click **Lost** in the top action bar. In the **Mark Lost** modal, select a **Lost Reason** from the dropdown, optionally add an explanation in **Closing Note**, and click **Mark as Lost** to close the inquiry.
 
@@ -90,7 +94,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
 * [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)

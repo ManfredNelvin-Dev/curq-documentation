@@ -4,7 +4,9 @@ The **Request Time Off** workflow allows employees to submit leave requests for 
 
 ---
 
-### Task 1: Create a Basic Time-Off Request
+## 1. Create and Configure Time-Off Requests
+
+### 1.1 Create a Basic Time-Off Request
 
 Employees can initiate a leave request from the dedicated self-service view:
 
@@ -28,7 +30,7 @@ Employees can initiate a leave request from the dedicated self-service view:
 
 ---
 
-### Task 2: Request Full-Day or Multi-Day Absences
+### 1.2 Request Full-Day or Multi-Day Absences
 
 For standard absences covering one or more complete working days:
 
@@ -42,7 +44,7 @@ For standard absences covering one or more complete working days:
 
 ---
 
-### Task 3: Request Half-Day Leaves
+### 1.3 Request Half-Day Leaves
 
 When an employee needs to take off only the morning or afternoon:
 
@@ -57,7 +59,7 @@ When an employee needs to take off only the morning or afternoon:
 
 ---
 
-### Task 4: Request Custom Hourly Absences
+### 1.4 Request Custom Hourly Absences
 
 When an employee needs to step away for a specific window during the workday:
 
@@ -73,7 +75,7 @@ When an employee needs to step away for a specific window during the workday:
 
 ---
 
-### Task 5: Attach Supporting Documents
+## 2. Attach Supporting Documents
 
 Certain leave types—such as medical leave or bereavement—require supporting proof before validation:
 
@@ -85,7 +87,7 @@ Certain leave types—such as medical leave or bereavement—require supporting 
 
 ---
 
-### Task 6: Track Request Approval Lifecycle
+## 3. Track Request Approval Lifecycle
 
 Once submitted, monitor your request through its approval milestones in **My Time → My Time Off**:
 
@@ -103,7 +105,7 @@ Once submitted, monitor your request through its approval milestones in **My Tim
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Supporting Document Required**: If submitting fails with a missing attachment prompt, ensure your medical certificate or proof document is attached under **Supporting Document** before saving.
 * **Insufficient Leave Balance**: If an alert indicates the requested duration exceeds your remaining balance, verify whether the leave category allows negative caps or request an additional allowance via **My Time → My Allocations**.

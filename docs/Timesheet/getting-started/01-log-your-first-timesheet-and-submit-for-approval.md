@@ -22,7 +22,9 @@ flowchart LR
 
 ---
 
-## Open the My Timesheet Sheets Workspace
+## 1. Weekly Timesheet Sheet Logging and Submission
+
+### 1.1 Open the My Timesheet Sheets Workspace
 
 Access your personal periodic timesheet sheet manager:
 
@@ -37,7 +39,7 @@ Access your personal periodic timesheet sheet manager:
 
 ---
 
-## Create a New Weekly Timesheet Sheet
+### 1.2 Create a New Weekly Timesheet Sheet
 
 Initialize a new timesheet container for the active reporting period:
 
@@ -55,7 +57,7 @@ Initialize a new timesheet container for the active reporting period:
 
 ---
 
-## Add Project and Task Deliverable Lines
+### 1.3 Add Project and Task Deliverable Lines
 
 Record time spent on specific deliverables:
 
@@ -74,7 +76,7 @@ Record time spent on specific deliverables:
 
 ---
 
-## Verify Hours in the Weekly Matrix Summary
+### 1.4 Verify Hours in the Weekly Matrix Summary
 
 Inspect your total daily hours and verify workload distribution:
 
@@ -90,7 +92,7 @@ Inspect your total daily hours and verify workload distribution:
 
 ---
 
-## Submit the Timesheet Sheet to Reviewer
+### 1.5 Submit the Timesheet Sheet to Reviewer
 
 Finalize your entries and lock the sheet for managerial review:
 

@@ -4,7 +4,7 @@ Execute batch operations across multiple contacts simultaneously, including data
 
 ---
 
-### Accessing the Bulk Actions Menu
+## 1. Access the Bulk Actions Menu
 
 1. Open the **Contacts** app.
 2. In the top right, switch to the **List View**.
@@ -15,9 +15,9 @@ Execute batch operations across multiple contacts simultaneously, including data
 
 ---
 
-### Common Bulk Tasks
+## 2. Common Bulk Operations
 
-#### 1. Batch Export to Excel or CSV
+### 2.1 Batch Export to Excel or CSV
 1. Select your target contacts.
 2. Click **Actions > Export**.
 3. Choose the export format (**XLSX** or **CSV**).
@@ -26,7 +26,7 @@ Execute batch operations across multiple contacts simultaneously, including data
 
 > For complete field definitions and exportable partner attributes, see [**Contact Form Field Definitions**](../settings-and-fields/01-contact-form-field-definitions.md).
 
-#### 2. Archive or Unarchive Contacts in Bulk
+### 2.2 Archive or Unarchive Contacts in Bulk
 To clean up inactive leads or expired vendors without deleting past transactions:
 * **To Archive**: Select the contacts, click **Actions > Archive**, and confirm. The contacts will disappear from default views.
 * **To Unarchive**:
@@ -34,27 +34,27 @@ To clean up inactive leads or expired vendors without deleting past transactions
   2. Select the records you want to reinstate.
   3. Click **Actions > Unarchive**.
 
-#### 3. Send Bulk Emails or SMS
+### 2.3 Send Bulk Emails or SMS
 1. Select the recipients from the list.
 2. Click **Actions > Send email** (or **Send SMS**).
 3. Select an email template or write a custom message.
 4. Click **Send**. Individual messages are queued and sent to each contact's primary address.
 
-#### 4. Grant Customer Portal Access
+### 2.4 Grant Customer Portal Access
 To allow multiple customers to view their invoices, deliveries, and quotes online:
 1. Select the desired customer records.
 2. Click **Actions > Grant portal access**.
 3. Verify the email addresses in the dialog box.
 4. Select the **In Portal** checkbox for each customer and click **Apply**. An email invitation with account setup instructions is dispatched to each contact.
 
-#### 5. Export vCards for Mobile & Outlook
+### 2.5 Export vCards for Mobile & Outlook
 1. Select the contacts.
 2. Click **Actions > Download (vCard)**.
 3. CURQ downloads standardized `.vcf` files that can be imported directly into mobile address books or email clients.
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **"Cannot delete contact" Error**: If you select **Actions > Delete** and receive a validation error, one or more selected contacts are linked to posted financial transactions (such as validated invoices or journal entries). CURQ blocks deletion to preserve statutory accounting integrity.
   * **Solution**: Use **Actions > Archive** instead. This hides the partner from new lookups while maintaining legal accounting records.

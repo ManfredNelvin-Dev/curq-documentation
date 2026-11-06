@@ -4,7 +4,9 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 
 ---
 
-### Task 1: Create a Custom Industry Classification
+## 1. Create and Assign Industries
+
+### 1.1 Create a Custom Industry Classification
 
 1. Open the **Contacts** app.
 2. In the top navigation bar, click **Configuration > Industries**.
@@ -26,7 +28,7 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 
 ---
 
-### Task 2: Assign an Industry to a Company Profile
+### 1.2 Assign an Industry to a Company Profile
 
 1. Open a business contact card in the **Contacts** app (ensure the record type is **Company**).
 2. Open the **Sales & Purchase** tab.
@@ -41,7 +43,7 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 
 ---
 
-### Task 3: Filter Companies by Industry
+## 2. Filter Companies by Industry
 
 1. In the **Contacts** directory, click the search bar.
 2. Click the search dropdown and select **Add Custom Filter**.
@@ -53,7 +55,7 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Industry Field Missing**: The **Industry** field only appears on **Company** records. It is hidden on **Individual** contact cards. To classify an organization, open the parent company record rather than an employee's card.
 * **Retiring an Industry Sector**: To stop staff from assigning an outdated sector without breaking historical data, open **Configuration > Industries**, click into the industry form, and toggle off **Active**.

@@ -11,7 +11,9 @@ Generate, filter, analyze, and export core financial statements, including the P
 
 ---
 
-### Task 1: Generate and Analyze the Profit and Loss (P&L) Statement
+## 1. Core Financial Statements
+
+### 1.1 Generate and Analyze the Profit and Loss (P&L) Statement
 
 The Profit and Loss report *(Income Statement)* evaluates your business profitability by calculating total revenues against operational costs and expenses across a specified time horizon.
 
@@ -49,7 +51,7 @@ The Profit and Loss report *(Income Statement)* evaluates your business profitab
 
 ---
 
-### Task 2: Generate and Review the Balance Sheet
+### 1.2 Generate and Review the Balance Sheet
 
 The Balance Sheet provides a cumulative snapshot of your company's financial position at a single point in time, verifying that total assets equal total liabilities and owner equity.
 
@@ -88,7 +90,7 @@ The Balance Sheet provides a cumulative snapshot of your company's financial pos
 
 ---
 
-### Task 3: Run the Trial Balance to Verify Ledger Equilibrium
+### 1.3 Run the Trial Balance to Verify Ledger Equilibrium
 
 The Trial Balance *(Proef- en saldibalans)* lists every general ledger account that contains an opening balance or transaction activity during the selected period. It is the primary tool used by auditors to verify that total debits strictly equal total credits.
 
@@ -125,7 +127,7 @@ The Trial Balance *(Proef- en saldibalans)* lists every general ledger account t
 
 ---
 
-### Task 4: Drill Down into Detailed Transactions Using the General Ledger
+## 2. Drill Down into Detailed Transactions Using the General Ledger
 
 When reviewing ledger accounts or preparing for external audit inquiries, the General Ledger report reveals every individual journal entry line that contributed to an account balance.
 
@@ -166,7 +168,7 @@ When reviewing ledger accounts or preparing for external audit inquiries, the Ge
 
 ---
 
-### Task 5: Monitor Overdue Balances with Aged Partner Balance
+## 3. Monitor Overdue Balances with Aged Partner Balance
 
 The Aged Partner Balance report categorizes unpaid customer invoices *(Aged Receivables)* and outstanding supplier bills *(Aged Payables)* into standardized aging buckets to assist with credit control and liquidity planning.
 
@@ -201,7 +203,7 @@ The Aged Partner Balance report categorizes unpaid customer invoices *(Aged Rece
 
 ---
 
-### Task 6: Audit Statutory Journals with the Journal Ledger (OCA)
+## 4. Audit Statutory Journals with the Journal Ledger (OCA)
 
 The Journal Ledger *(Journalenboek)* compiles a chronological register of all transactions organized by individual accounting journals *(Sales, Purchases, Bank, Cash, and Miscellaneous Operations)*:
 
@@ -227,7 +229,7 @@ The Journal Ledger *(Journalenboek)* compiles a chronological register of all tr
 
 ---
 
-### Task 7: Audit Outstanding Receivables and Payables with Open Items (OCA)
+## 5. Audit Outstanding Receivables and Payables with Open Items (OCA)
 
 The Open Items *(Openstaande posten)* report isolates all unreconciled journal items across receivable and payable control accounts, providing a clear list of unsettled invoices, vendor bills, and transit entries:
 
@@ -267,7 +269,7 @@ The Open Items *(Openstaande posten)* report isolates all unreconciled journal i
 
 ---
 
-### Task 8: Export Financial Statements to PDF and XLSX
+## 6. Export Financial Statements to PDF and XLSX
 
 Financial statements can be extracted for external statutory filings, bank financing reviews, board presentations, or detailed analytical modeling.
 
@@ -283,7 +285,7 @@ Financial statements can be extracted for external statutory filings, bank finan
 
 ---
 
-### Task 9: Audit and Retrieve Historical Statements via Last Reports Generated
+## 7. Audit and Retrieve Historical Statements via Last Reports Generated
 
 CURQ automatically archives every compiled MIS report instance, providing financial controllers with a complete historical audit trail of management and statutory statements:
 
@@ -348,7 +350,7 @@ CURQ automatically archives every compiled MIS report instance, providing financ
 
 ---
 
-### Edge Cases & Discrepancy Troubleshooting
+## Edge Cases & Discrepancy Troubleshooting
 
 * **Discrepancy Between Trial Balance and Aged Partner Balance**:
   * **Cause:** A manual journal entry was posted directly to an Accounts Receivable (`1101010 Handelsdebiteuren nominaal`) or Accounts Payable (`1203010 Handelscrediteuren nominaal`) control account without assigning a **Partner**, or without reconciling open items.
@@ -365,7 +367,7 @@ CURQ automatically archives every compiled MIS report instance, providing financ
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)
 * [Create Manual Journal Entries](./05-create-manual-journal-entries.md)

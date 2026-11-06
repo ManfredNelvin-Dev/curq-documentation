@@ -4,7 +4,9 @@ The **Multiple Requests** batch allocation tool enables Time Off Officers and HR
 
 ---
 
-### Task 1: Open the Multiple Requests Batch Wizard
+## 1. Batch Allocation Configuration and Execution
+
+### 1.1 Open the Multiple Requests Batch Wizard
 
 Access the batch distribution tool:
 
@@ -24,7 +26,7 @@ Access the batch distribution tool:
 
 ---
 
-### Task 2: Select the Employee Distribution Mode
+### 1.2 Select the Employee Distribution Mode
 
 Choose how CURQ will identify the target group of recipients:
 
@@ -35,7 +37,7 @@ Choose how CURQ will identify the target group of recipients:
 
 ---
 
-### Task 3: Configure Batch Allocation Parameters
+### 1.3 Configure Batch Allocation Parameters
 
 Define the entitlement attributes that will apply across all generated records:
 
@@ -52,7 +54,7 @@ Define the entitlement attributes that will apply across all generated records:
 
 ---
 
-### Task 4: Execute Batch Creation and Audit Generated Records
+### 1.4 Execute Batch Creation and Audit Generated Records
 
 Generate and verify the batch records:
 
@@ -65,7 +67,7 @@ Generate and verify the batch records:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Accidental Batch Allocation**: If leave was granted to the wrong group of employees, select all generated records in the **Generated Allocations** list view, click the **Action** gear menu, and click **Refuse** or **Delete**.
 * **Employees Missing from Department Batch**: If a staff member did not receive an allocation during a **By Department** batch, verify that the **Department** field on their employee profile is correctly populated.

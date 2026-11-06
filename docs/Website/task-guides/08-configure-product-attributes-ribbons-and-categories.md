@@ -2,14 +2,14 @@
 
 This guide covers organizing the public storefront catalog using eCommerce product categories, promotional ribbons, attribute filters, and combo choices.
 
-## Task 3: Website Catalog Configuration
+## 1. Website Catalog Configuration
 
 While general product settings (such as cost, invoicing policies, and warehouse routes) are managed in standard sales catalogs, website merchandising rules are configured under **eCommerce** > **Products**.
 
 * **Master Catalog & Inventory**: For setting up product templates, variants, and stock tracking, see [**View All Products**](../../Sales/task-guides/06-configure-products-and-variants.md).
 * **Frontend Pages & SEO**: For product page URLs, SEO metadata, and frontend layout editing, see [**Products & Courses Management**](./06-publish-and-manage-products-and-courses.md).
 
-### Products & Website Visibility
+### 1.1 Products & Website Visibility
 
 In product list views, the **Is Published** column is read-only and displays whether an item is active online without permitting inline edits.
 
@@ -35,7 +35,7 @@ You can publish or unpublish a product using either of two methods:
 
 ![Product Pages Kanban view highlighting the interactive footer publication toggle](../media/075.png)
 
-### Product Merchandising & Media
+### 1.2 Product Merchandising & Media
 
 When editing a product (**eCommerce** > **Products** > **Products**), configure promotional presentation and upselling rules across the **General Information** and **Sales** tabs:
 
@@ -61,7 +61,7 @@ When shoppers add items with configured optional or accessory products to their 
 
 ![Product form highlighting the rich-text eCommerce Description field](../media/080.png)
 
-### Pricelists & Web Pricing Rules
+### 1.3 Pricelists & Web Pricing Rules
 
 General pricelist creation, pricing formulas, and wholesale tiers are managed in Sales; for complete setup instructions, see [**Configuring Pricelists and Pricing Rules**](../../Sales/task-guides/08-configure-pricelists-and-pricing-rules.md).
 
@@ -84,7 +84,7 @@ Open any pricelist to configure options under the **Price Rules** and **Ecommerc
 
 ![Pricelist form Ecommerce tab showing Website domain restriction, Selectable toggle, and promotional code](../media/083.png)
 
-#### Shopper Experience with Selectable Pricelists and Promo Codes
+#### 1.3.1 Shopper Experience with Selectable Pricelists and Promo Codes
 
 * **Selectable Pricelist Dropdown**: When **Selectable** is enabled, shoppers can switch pricing and currencies from the dropdown located on the catalog page or individual product pages:
 
@@ -101,7 +101,7 @@ Open any pricelist to configure options under the **Price Rules** and **Ecommerc
 
 ![Website checkout order overview with promotional code EU applied showing discounted order totals and loyalty reward](../media/087.png)
 
-### eCommerce Categories
+## 2. eCommerce Categories
 
 Organize how items are grouped and navigated in your online store (`/shop`):
 
@@ -126,13 +126,13 @@ Organize how items are grouped and navigated in your online store (`/shop`):
 
 ![Product form Sales tab highlighting the Categories dropdown selection under Ecommerce Shop](../media/090.png)
 
-### Attributes, Combo Choices & Tags
+## 3. Attributes, Combo Choices, and Tags
 
 General variant attributes, combo choices, and product tags are managed in Sales; for complete setup instructions, see [**Configuring Product Attributes and Variants**](../../Sales/task-guides/06-configure-products-and-variants.md), [**Combo Choices Setup**](../../Sales/task-guides/10-configure-product-combos.md), and [**Product Tags Setup**](../../Sales/task-guides/07-configure-product-categories-and-tags.md).
 
 Under **eCommerce** > **Products**, configure variant options, bundling, and catalog tags with website-specific settings:
 
-#### Attributes (`eCommerce > Products > Attributes`)
+### 3.1 Attributes (`eCommerce > Products > Attributes`)
 
 Configure product attributes and their visibility in the online store:
 
@@ -153,7 +153,7 @@ Open an attribute to configure its website controls:
 
 * **eCommerce Category**: Assign an attribute category *(such as `General Features` or `Dimensions`)* to group related attributes into structured sections on the product comparison page (`/shop/compare`) and the frontend specifications table.
 
-#### Shopper Experience with Attribute Filters
+### 3.2 Shopper Experience with Attribute Filters
 
 When attributes are set to **Visible**, shoppers can filter catalog products directly from the left sidebar on `/shop`:
 
@@ -163,7 +163,7 @@ Selecting an attribute facet immediately refines the displayed product catalog:
 
 ![Store catalog page on website showing active Color filter and filtered product results](../media/095.png)
 
-#### Combo Choices (`eCommerce > Products > Combo Choices`)
+### 3.3 Combo Choices (`eCommerce > Products > Combo Choices`)
 
 Group complementary products into combo choices or packaged sets for promotional website ordering:
 
@@ -177,7 +177,7 @@ When ordering a combo product online, shoppers can customize each bundle selecti
 
 ![Frontend combo product selection modal showing configurable item choices](../media/098.png)
 
-#### Product Tags (`eCommerce > Products > Product Tags`)
+### 3.4 Product Tags (`eCommerce > Products > Product Tags`)
 
 Create searchable tags to classify catalog items and showcase badge highlights on website product cards:
 
@@ -198,11 +198,11 @@ Online shoppers can also use tags as filtering facets in the store sidebar:
 
 ![Store catalog page on website highlighting the sidebar Tags filter with Phone selected](../media/102.png)
 
-### Product Ribbons
+## 4. Product Ribbons
 
 Highlight specific items on the website with visual badge ribbons *(such as "Sale", "New!", "Sold out", or "Out of stock")*:
 
-#### Defining Ribbons
+### 4.1 Defining Ribbons
 
 1. In the top administrative bar, click **eCommerce** > **Products** > **Product Ribbons**.
 
@@ -218,7 +218,7 @@ Highlight specific items on the website with visual badge ribbons *(such as "Sal
 
 3. Click **Save**.
 
-#### Applying a Ribbon to a Product
+### 4.2 Applying a Ribbon to a Product
 
 Ribbons cannot be assigned inline from backend list views (the product list view is read-only for ribbons, and the backend form view hides the field behind Developer Mode). 
 

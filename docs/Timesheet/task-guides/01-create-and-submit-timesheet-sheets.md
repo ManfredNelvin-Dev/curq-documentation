@@ -4,7 +4,9 @@ This guide covers how to create a periodic timesheet sheet, record working hours
 
 ---
 
-### Task 1: Open My Timesheet Sheets
+## 1. Create and Record Timesheet Sheets
+
+### 1.1 Open My Timesheet Sheets
 
 Access your personal periodic timesheet sheet workspace:
 
@@ -21,7 +23,7 @@ Access your personal periodic timesheet sheet workspace:
 
 ---
 
-### Task 2: Create a New Timesheet Sheet
+### 1.2 Create a New Timesheet Sheet
 
 After clicking **New**, a blank timesheet sheet opens in the initial stage:
 
@@ -36,7 +38,7 @@ After clicking **New**, a blank timesheet sheet opens in the initial stage:
 
 ---
 
-### Task 3: Add Project Lines to the Sheet
+### 1.3 Add Project Lines to the Sheet
 
 Allocate working hours to your designated projects and tasks:
 
@@ -50,7 +52,7 @@ Selecting the correct project and task ensures that time entries are accurately 
 
 ---
 
-### Task 4: Record Working Hours on the Summary Grid
+### 1.4 Record Working Hours on the Summary Grid
 
 Once you add a project line, the sheet transitions to the **Open** stage:
 
@@ -66,7 +68,7 @@ Once you add a project line, the sheet transitions to the **Open** stage:
 
 ---
 
-### Task 5: Log Detailed Entries via the Details Tab
+## 2. Log Detailed Entries via the Details Tab
 
 For granular time tracking or to record individual work descriptions:
 
@@ -86,7 +88,7 @@ For granular time tracking or to record individual work descriptions:
 
 ---
 
-### Task 6: Verify Synchronization and Submit for Review
+## 3. Verify Synchronization and Submit for Review
 
 Entries recorded on the **Details** tab automatically synchronize with the **Summary** matrix:
 
@@ -99,7 +101,7 @@ Entries recorded on the **Details** tab automatically synchronize with the **Sum
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Log Your First Timesheet and Submit for Approval](../getting-started/01-log-your-first-timesheet-and-submit-for-approval.md)
 * [Review, Approve, and Refuse Timesheet Sheets](./04-review-approve-and-refuse-timesheet-sheets.md)

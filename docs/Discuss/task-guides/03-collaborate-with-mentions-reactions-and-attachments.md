@@ -4,7 +4,9 @@ Tag colleagues in discussions, reference topic channels, add emoji reactions, at
 
 ---
 
-## Task 1: Tag Coworkers with @Mentions
+## 1. Mentions, Links, and Message Reactions
+
+### 1.1 Tag Coworkers with @Mentions
 
 Mentioning a coworker draws their immediate attention to a conversation and sends an alert directly to their central **Inbox**:
 
@@ -21,7 +23,7 @@ Mentioning a coworker draws their immediate attention to a conversation and send
 
 ---
 
-## Task 2: Insert Channel Shortcuts with #Links
+### 1.2 Insert Channel Shortcuts with #Links
 
 You can create clickable hyperlinks to other discussion rooms directly in your text:
 
@@ -35,7 +37,7 @@ You can create clickable hyperlinks to other discussion rooms directly in your t
 
 ---
 
-## Task 3: Add Emoji Reactions and Quote Messages
+### 1.3 Add Emoji Reactions and Quote Messages
 
 Lightweight emoji reactions enable fast acknowledgments without creating clutter in team channels:
 
@@ -60,7 +62,7 @@ Lightweight emoji reactions enable fast acknowledgments without creating clutter
 
 ---
 
-## Task 4: Attach Files, PDFs, and Images
+## 2. Attach Files, PDFs, and Images
 
 Share contracts, spreadsheets, invoices, or screenshots directly within chat feeds:
 
@@ -73,7 +75,7 @@ Share contracts, spreadsheets, invoices, or screenshots directly within chat fee
 
 ---
 
-## Task 5: Star Messages for Later Follow-Up
+## 3. Star Messages for Later Follow-Up
 
 When you receive critical instructions or reference links that you need to revisit later:
 
@@ -91,7 +93,7 @@ When you receive critical instructions or reference links that you need to revis
 
 ---
 
-## Task 6: Edit, Delete, Pin, and Copy Link to Messages
+## 4. Edit, Delete, Pin, and Copy Link to Messages
 
 Manage your sent messages and highlight permanent guidelines:
 
@@ -108,7 +110,7 @@ Manage your sent messages and highlight permanent guidelines:
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Manage Channels](01-create-and-manage-channels.md)
 * [Manage Conversation Header Tools and Search](07-manage-conversation-header-tools-and-search.md)
 * [Channel and Chat Settings Definitions](../settings-and-fields/01-channel-and-chat-settings-definitions.md)

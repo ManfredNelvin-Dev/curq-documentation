@@ -24,7 +24,9 @@ flowchart LR
 
 ---
 
-## Step 1: Publish Products to the Online Store
+## 1. eCommerce Storefront and Checkout Setup
+
+### 1.1 Publish Products to the Online Store
 
 Make your catalog items visible on the public `/shop` page:
 
@@ -47,7 +49,7 @@ Make your catalog items visible on the public `/shop` page:
 
 ---
 
-## Step 2: Categorize Products and Apply Promotional Badges
+### 1.2 Categorize Products and Apply Promotional Badges
 
 Help shoppers browse your catalog efficiently with structured categories and badges:
 
@@ -62,7 +64,7 @@ Help shoppers browse your catalog efficiently with structured categories and bad
 
 ---
 
-## Step 3: Configure Online Payment Providers
+### 1.3 Configure Online Payment Providers
 
 Enable shoppers to settle purchases digitally or via offline commercial terms:
 
@@ -85,7 +87,7 @@ Enable shoppers to settle purchases digitally or via offline commercial terms:
 
 ---
 
-## Step 4: Configure Shipping and Delivery Methods
+### 1.4 Configure Shipping and Delivery Methods
 
 Define how physical goods are dispatched to online shoppers:
 
@@ -103,7 +105,7 @@ Define how physical goods are dispatched to online shoppers:
 
 ---
 
-## Step 5: Test Customer Checkout and Validate Orders
+### 1.5 Test Customer Checkout and Validate Orders
 
 Verify the checkout experience from a visitor's perspective:
 

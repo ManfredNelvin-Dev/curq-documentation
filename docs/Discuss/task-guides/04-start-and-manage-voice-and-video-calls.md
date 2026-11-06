@@ -4,7 +4,9 @@ Host peer-to-peer audio and video calls, grant device permissions, manage in-cal
 
 ---
 
-## Task 1: Start a Call from a Conversation Header
+## 1. Voice and Video Call Operations
+
+### 1.1 Start a Call from a Conversation Header
 
 Start an audio or video call directly inside any active channel or direct chat without third-party meeting accounts:
 
@@ -20,7 +22,7 @@ Start an audio or video call directly inside any active channel or direct chat w
 
 ---
 
-## Task 2: Grant Browser Permissions for Microphone and Camera
+### 1.2 Grant Browser Permissions for Microphone and Camera
 
 When connecting to a call for the first time, your web browser prompts you for access to your hardware:
 
@@ -37,7 +39,7 @@ When connecting to a call for the first time, your web browser prompts you for a
 
 ---
 
-## Task 3: Use In-Call Controls and Screen Sharing
+### 1.3 Use In-Call Controls and Screen Sharing
 
 Once connected to a call, manage your media transmission using the toolbar at the bottom of the conference window:
 
@@ -58,7 +60,7 @@ Once connected to a call, manage your media transmission using the toolbar at th
 
 ---
 
-## Task 4: Launch Instant Conferences via "Start a meeting"
+## 2. Launch Instant Conferences via "Start a meeting"
 
 To start an immediate conference without creating or cluttering a permanent channel:
 
@@ -76,7 +78,7 @@ To start an immediate conference without creating or cluttering a permanent chan
 
 ---
 
-## Task 5: Invite Participants and Share Direct Call Links
+## 3. Invite Participants and Share Direct Call Links
 
 To add colleagues or external team members into an active call:
 
@@ -90,7 +92,7 @@ To add colleagues or external team members into an active call:
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Voice and Video Hardware and Backgrounds](08-configure-voice-and-video-hardware-and-backgrounds.md)
 * [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
 * [Understanding Channels, Collaboration, and WebRTC Architecture](../core-concepts/02-understanding-channels-collaboration-and-webrtc-architecture.md)

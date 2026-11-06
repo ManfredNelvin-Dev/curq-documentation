@@ -21,7 +21,9 @@ flowchart LR
 
 ---
 
-## Open the Dashboards Workspace
+## 1. Navigate and Analyze Standard Dashboards
+
+### 1.1 Open the Dashboards Workspace
 
 To access your organization's standard dashboards:
 
@@ -36,7 +38,7 @@ To access your organization's standard dashboards:
 
 ---
 
-## Read Summary KPI Cards and Benchmarks
+### 1.2 Read Summary KPI Cards and Benchmarks
 
 Each standard dashboard features headline KPI cards at the top of the canvas for an immediate 3-second operational health check:
 
@@ -49,7 +51,7 @@ Each standard dashboard features headline KPI cards at the top of the canvas for
 
 ---
 
-## Analyze Top Performer KPIs
+### 1.3 Analyze Top Performer KPIs
 
 Beyond aggregate totals, standard dashboards spotlight top-ranking operational segments to help you identify what is driving performance:
 
@@ -64,7 +66,7 @@ Beyond aggregate totals, standard dashboards spotlight top-ranking operational s
 
 ---
 
-## Apply Dimensional and Date Range Filters
+### 1.4 Apply Dimensional and Date Range Filters
 
 Standard dashboards feature a global filter bar across the top to focus your analysis on specific periods or segments without modifying underlying reports:
 
@@ -83,7 +85,7 @@ Standard dashboards feature a global filter bar across the top to focus your ana
 
 ---
 
-## Drill Down into Source Records
+### 1.5 Drill Down into Source Records
 
 Every metric card and chart element is linked directly to the underlying transactional database:
 

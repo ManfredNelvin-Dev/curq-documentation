@@ -11,7 +11,9 @@ By the end of this exercise, you will understand how pipeline columns reflect yo
 
 ---
 
-### Step 1: Open the Kanban Pipeline
+## 1. Configure Your Test Pipeline
+
+### 1.1 Open the Kanban Pipeline
 
 1. From the main CURQ dashboard, click the **CRM** app icon to open **My Pipeline**.
 2. Notice your existing stage columns (*New*, *Qualified*, *Proposition*, *Won*).
@@ -19,7 +21,7 @@ By the end of this exercise, you will understand how pipeline columns reflect yo
 
 ---
 
-### Step 2: Add a Custom Stage
+### 1.2 Add a Custom Stage
 
 Let us add a new stage called **Technical Evaluation** where deals will pause while solutions architects evaluate customer requirements.
 
@@ -38,7 +40,7 @@ Let us add a new stage called **Technical Evaluation** where deals will pause wh
 
 ---
 
-### Step 3: Set the Stage Default Win Probability
+### 1.3 Set the Stage Default Win Probability
 
 Every stage should reflect the statistical likelihood that a deal in this stage will eventually close:
 
@@ -59,7 +61,7 @@ Now, whenever a salesperson drags an opportunity into this column, its probabili
 
 ---
 
-### Step 4: Add a Test Opportunity Card
+### 1.4 Add a Test Opportunity Card
 
 Let us verify that your new stage works by adding a test deal:
 
@@ -89,7 +91,7 @@ Congratulations! You have successfully customized your sales pipeline by adding 
 
 ---
 
-### Next Steps
+## 2. Next Steps
 
 * To learn how to configure multi-team routing and automated lead distribution, see [**Configure Sales Teams and Rule-Based Lead Assignment**](../task-guides/06-configure-sales-teams-and-assignment.md).
 * To explore all stage parameters, see [**Pipeline Configuration and Assignment Settings**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md).

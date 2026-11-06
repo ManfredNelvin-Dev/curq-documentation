@@ -4,7 +4,9 @@ The **Reporting** engine in CURQ Time Off equips HR personnel and department man
 
 ---
 
-### Task 1: Analyze Absences by Employee
+## 1. Absence Reporting and Dimensional Analysis
+
+### 1.1 Analyze Absences by Employee
 
 Inspect detailed leave records grouped by individual team members:
 
@@ -29,7 +31,7 @@ Inspect detailed leave records grouped by individual team members:
 
 ---
 
-### Task 2: Analyze Absences by Time-Off Type
+### 1.2 Analyze Absences by Time-Off Type
 
 Evaluate which leave categories account for the greatest organizational absence:
 
@@ -47,7 +49,7 @@ Evaluate which leave categories account for the greatest organizational absence:
 
 ---
 
-### Task 3: Audit Remaining and Planned Balances
+## 2. Audit Remaining and Planned Balances
 
 Verify organizational leave liability and audit remaining employee balances:
 
@@ -76,7 +78,7 @@ Verify organizational leave liability and audit remaining employee balances:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Empty Report View**: If no data appears in the report, check the search bar for restrictive date filters (e.g., ensuring `Current Year: 2026` or `Period: 2026` matches the period of requested absences) or clear active department filters.
 * **Missing Individual Requests in Grouped View**: If clicking an employee row does not expand individual requests, verify that the active Group By includes both **Employee** and **Type**.

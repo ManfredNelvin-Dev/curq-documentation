@@ -10,7 +10,9 @@ Issue customer credit notes (*Creditfacturen*), execute invoice reversals, apply
 
 ---
 
-### Task 1: Issue a Corrective Credit Note from an Existing Invoice
+## 1. Issue and Process Customer Credit Notes
+
+### 1.1 Issue a Corrective Credit Note from an Existing Invoice
 
 When an existing invoice contains erroneous pricing, incorrect quantities, or wrong customer details, generating a credit note directly from the invoice creates an automatic link between the original bill and the offsetting adjustment.
 
@@ -55,7 +57,7 @@ When an existing invoice contains erroneous pricing, incorrect quantities, or wr
 
 ---
 
-### Task 2: Create a Standalone Credit Note from the Customers Menu
+### 1.2 Create a Standalone Credit Note from the Customers Menu
 
 When providing a commercial concession, volume rebate, or financial adjustment that is not tied to a single specific invoice:
 
@@ -87,7 +89,7 @@ When providing a commercial concession, volume rebate, or financial adjustment t
 
 ---
 
-### Task 3: Reconcile Credit Notes against Customer Receivables
+### 1.3 Reconcile Credit Notes against Customer Receivables
 
 Once confirmed, an open credit note reduces the customer's overall balance. You can allocate the credit against specific open invoices:
 
@@ -110,7 +112,7 @@ Once confirmed, an open credit note reduces the customer's overall balance. You 
 
 ---
 
-### Task 4: Process a Customer Cash Refund
+### 1.4 Process a Customer Cash Refund
 
 If the customer requests a monetary repayment via bank transfer rather than a balance credit against future purchases:
 
@@ -141,7 +143,7 @@ If the customer requests a monetary repayment via bank transfer rather than a ba
 
 ---
 
-### Edge Cases and Compliance Guidelines
+## Edge Cases and Compliance Guidelines
 
 * **Statutory Immutability of Posted Documents**:
   * Dutch accounting standards and CURQ audit rules prohibit deleting or altering posted invoices. Never attempt to cancel an invoice by resetting it to draft once submitted to a customer. Always issue a formal credit note to preserve complete audit history.
@@ -152,7 +154,7 @@ If the customer requests a monetary repayment via bank transfer rather than a ba
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)

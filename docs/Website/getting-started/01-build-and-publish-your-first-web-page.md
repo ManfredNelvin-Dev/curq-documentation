@@ -23,7 +23,9 @@ flowchart LR
 
 ---
 
-## Step 1: Open the Frontend Website Canvas
+## 1. Webpage Design and Publishing Workflow
+
+### 1.1 Open the Frontend Website Canvas
 
 Access the live website environment from the CURQ backend:
 
@@ -40,7 +42,7 @@ Access the live website environment from the CURQ backend:
 
 ---
 
-## Step 2: Initialize a New Webpage
+### 1.2 Initialize a New Webpage
 
 Create a dedicated landing page for your organization:
 
@@ -69,7 +71,7 @@ Create a dedicated landing page for your organization:
 
 ---
 
-## Step 3: Assemble Layout Using Building Blocks
+### 1.3 Assemble Layout Using Building Blocks
 
 Populate your empty canvas with pre-built modular snippets:
 
@@ -89,7 +91,7 @@ Populate your empty canvas with pre-built modular snippets:
 
 ---
 
-## Step 4: Preview Across Viewports
+### 1.4 Preview Across Viewports
 
 Ensure your content renders cleanly across desktop and mobile devices:
 
@@ -102,7 +104,7 @@ Ensure your content renders cleanly across desktop and mobile devices:
 
 ---
 
-## Step 5: Save and Publish Live
+### 1.5 Save and Publish Live
 
 Commit your design changes and deploy the page to public visitors:
 

@@ -4,7 +4,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-### Activity Type Specifications
+## Activity Type Specifications
 
 | Field Name | Description |
 | :--- | :--- |
@@ -18,7 +18,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-### Activity Plan Structure
+## Activity Plan Structure
 
 | Property | Description |
 | :--- | :--- |
@@ -32,7 +32,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-### Recurring Revenue Plan Intervals
+## Recurring Revenue Plan Intervals
 
 | Plan Name | # Months | Expected MRR Normalization Formula | Description |
 | :--- | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-### Default Deal Tags
+## Default Deal Tags
 
 | Tag Name | Display Color | Analytical Significance |
 | :--- | :--- | :--- |
@@ -57,7 +57,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-### Standard Lost Reasons Catalog
+## Standard Lost Reasons Catalog
 
 | Lost Reason | Suggested Use Case | Analytical Significance |
 | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Schedule a Follow-Up Call and Manage Sales Activities](../task-guides/04-schedule-and-track-sales-activities.md)
 * [Configure Standardized Lost Reasons and Deal Tags](../task-guides/07-configure-lost-reasons-and-tags.md)
 * [Configure Recurring Revenue Plans](../task-guides/08-configure-recurring-revenue-plans.md)

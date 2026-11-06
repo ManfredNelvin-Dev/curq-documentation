@@ -9,7 +9,9 @@ Create customer records, configure multiple delivery and invoicing addresses, se
 
 ---
 
-### Task 1: Create a Customer Record (Individual vs. Company)
+## 1. Create and Structure Customer Records
+
+### 1.1 Create a Customer Record (Individual vs. Company)
 
 Every quotation and sales order requires a customer account. To create a new customer:
 
@@ -35,7 +37,7 @@ Every quotation and sales order requires a customer account. To create a new cus
 
 ---
 
-### Task 2: Manage Multiple Delivery and Invoicing Addresses
+### 1.2 Manage Multiple Delivery and Invoicing Addresses
 
 Large corporate customers often centralize accounting at headquarters while receiving goods at regional warehouses or branch offices:
 
@@ -55,7 +57,7 @@ Large corporate customers often centralize accounting at headquarters while rece
 
 ---
 
-### Task 3: Configure Commercial and Fiscal Terms
+## 2. Configure Commercial and Fiscal Terms
 
 Open the customer record and click the **Sales & Purchase** tab:
 
@@ -76,7 +78,7 @@ Open the customer record and click the **Sales & Purchase** tab:
 
 ---
 
-### Task 4: Configure Electronic Invoicing and Banking
+## 3. Configure Electronic Invoicing and Banking
 
 Under the **Invoicing** tab, establish banking coordinates and e-invoicing exchange parameters:
 
@@ -95,7 +97,7 @@ Under the **Invoicing** tab, establish banking coordinates and e-invoicing excha
 
 ---
 
-### Task 5: Set Customer Sales Order Warnings and Credit Holds
+## 4. Set Customer Sales Order Warnings and Credit Holds
 
 If a customer has a credit hold, pending lawsuit, or strict packaging requirement, configure automatic alerts:
 
@@ -112,14 +114,14 @@ If a customer has a credit hold, pending lawsuit, or strict packaging requiremen
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Overriding a Blocking Message**: If an executive authorizes an exception for a customer with a blocking message, open the customer record, temporarily set **Warning on the Sales Order** to **Warning** or **No Message**, confirm the quote, and restore the block.
 * **Customer Address Conflict on Existing Quotations**: Changing a customer's address on their master contact card does not alter already-confirmed historical sales orders, protecting historical delivery slips and tax audits.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Send Quotations](./01-create-and-send-quotations.md)
 * [Configure Pricelists and Pricing Rules](./08-configure-pricelists-and-pricing-rules.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

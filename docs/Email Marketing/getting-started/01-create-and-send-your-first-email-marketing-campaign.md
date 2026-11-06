@@ -24,7 +24,9 @@ flowchart LR
 
 ---
 
-## Step 1: Open the Mailing Lists Workspace
+## 1. Create and Launch an Email Campaign
+
+### 1.1 Open the Mailing Lists Workspace
 
 Access the subscriber management area in Email Marketing:
 
@@ -39,7 +41,7 @@ Access the subscriber management area in Email Marketing:
 
 ---
 
-## Step 2: Create a New Subscriber Mailing List
+### 1.2 Create a New Subscriber Mailing List
 
 Set up a dedicated subscriber container for your email broadcast:
 
@@ -61,7 +63,7 @@ Set up a dedicated subscriber container for your email broadcast:
 
 ---
 
-## Step 3: Add Contacts to Your Mailing List
+### 1.3 Add Contacts to Your Mailing List
 
 Populate your list with initial subscriber email addresses:
 
@@ -79,7 +81,7 @@ Populate your list with initial subscriber email addresses:
 
 ---
 
-## Step 4: Design Your Email Mailing
+### 1.4 Design Your Email Mailing
 
 Initialize and compose your email broadcast:
 
@@ -105,7 +107,7 @@ Initialize and compose your email broadcast:
 5. In the **Mail Body** tab, select a pre-designed layout from the template grid *(such as `Plain Text`, `Start From Scratch`, `Welcome Message`, `Event Promo`, `Newsletter`, or `Coupon Code`)*.
 6. Use the visual drag-and-drop editor to customize headers, text blocks, call-to-action buttons, and product cards.
 
-### (Optional) Enable A/B Testing on a Draft Mailing
+#### 1.4.1 (Optional) Enable A/B Testing on a Draft Mailing
 
 To compare different subject lines or content layouts across a sample audience before broadcasting to all recipients:
 
@@ -122,7 +124,7 @@ To compare different subject lines or content layouts across a sample audience b
 
 ---
 
-## Step 5: Test and Launch Your Broadcast
+### 1.5 Test and Launch Your Broadcast
 
 Verify message layout before launching the broadcast to your subscribers:
 

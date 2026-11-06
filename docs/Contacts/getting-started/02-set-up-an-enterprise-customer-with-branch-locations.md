@@ -11,7 +11,9 @@ By the end of this exercise, you will understand how CURQ routes sales deliverie
 
 ---
 
-### Step 1: Create the Main Corporate Headquarters
+## 1. Enterprise Customer and Multi-Branch Setup
+
+### 1.1 Create the Main Corporate Headquarters
 
 1. From the main CURQ dashboard, click the **Contacts** app icon.
 2. In the top-left corner, click **New**.
@@ -32,7 +34,7 @@ Your main corporate account record is now established.
 
 ---
 
-### Step 2: Add a Dedicated Delivery Warehouse Address
+### 1.2 Add a Dedicated Delivery Warehouse Address
 
 Enterprise customers frequently receive physical shipments at a distribution facility rather than their executive headquarters.
 
@@ -53,7 +55,7 @@ The Midwest Fulfillment Hub now appears with a dedicated **Delivery Address** ba
 
 ---
 
-### Step 3: Add an Accounts Payable Invoicing Address
+### 1.3 Add an Accounts Payable Invoicing Address
 
 Now, let us configure a separate destination where accounting invoices and billing reminders should be sent:
 
@@ -71,7 +73,7 @@ Now, let us configure a separate destination where accounting invoices and billi
 
 ---
 
-### Step 4: Verify Multi-Branch Address Routing
+### 1.4 Verify Multi-Branch Address Routing
 
 Let us confirm how the parent company card displays its connected operational facilities:
 

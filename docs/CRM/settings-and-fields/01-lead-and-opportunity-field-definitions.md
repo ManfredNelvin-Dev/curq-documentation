@@ -4,7 +4,7 @@ This document details the data fields, validation specifications, and configurat
 
 ---
 
-### Opportunity Form Fields
+## Opportunity Form Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -25,7 +25,7 @@ This document details the data fields, validation specifications, and configurat
 
 ---
 
-### Extra Information Tab Fields
+## Extra Information Tab Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -39,7 +39,7 @@ This document details the data fields, validation specifications, and configurat
 
 ---
 
-### Inbound Lead Form Fields
+## Inbound Lead Form Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -53,7 +53,7 @@ This document details the data fields, validation specifications, and configurat
 
 ---
 
-### Lead Conversion Dialog Parameters
+## Lead Conversion Dialog Parameters
 
 | Option | Description |
 | :--- | :--- |
@@ -64,7 +64,7 @@ This document details the data fields, validation specifications, and configurat
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Manage Pipeline Opportunities](../task-guides/01-create-and-manage-opportunities.md)
 * [Convert a Lead into an Opportunity](../task-guides/02-convert-leads-to-opportunities.md)
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

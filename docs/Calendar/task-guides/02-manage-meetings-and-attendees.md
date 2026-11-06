@@ -4,7 +4,9 @@ This guide covers how to modify existing events, invite participants, dispatch f
 
 ---
 
-## Task 1: Open and Edit a Meeting
+## 1. Meeting Setup and Attendee Coordination
+
+### 1.1 Open and Edit a Meeting
 
 1. Navigate to **Calendar**.
 2. Locate the meeting card on the calendar grid.
@@ -14,7 +16,7 @@ This guide covers how to modify existing events, invite participants, dispatch f
 
 ---
 
-## Task 2: Manage Attendees and Invitation Status
+### 1.2 Manage Attendees and Invitation Status
 
 1. On the meeting form, locate the **Attendees** section and click the **Select attendees...** dropdown:
 
@@ -31,7 +33,7 @@ This guide covers how to modify existing events, invite participants, dispatch f
 
 ---
 
-## Task 3: Set Location and Video-Call Details
+### 1.3 Set Location and Video-Call Details
 
 Provide clear attendance instructions for physical or remote participants:
 
@@ -42,7 +44,7 @@ Provide clear attendance instructions for physical or remote participants:
 
 ---
 
-## Task 4: Configure Reminders and Organizers
+## 2. Configure Reminders and Organizers
 
 1. **Reminders**: Click the **Reminders** field to open the alert preset dropdown:
 

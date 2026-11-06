@@ -11,7 +11,9 @@ Recurring contracts automate subscription billing for ongoing services, software
 
 ---
 
-### Task 1: Create a Customer Contract
+## 1. Customer Contract and Recurring Invoicing Lifecycle
+
+### 1.1 Create a Customer Contract
 
 A customer contract establishes the legal and operational framework for recurring billing.
 
@@ -36,7 +38,7 @@ A customer contract establishes the legal and operational framework for recurrin
 
 ---
 
-### Task 2: Configure Recurring Line Items and Invoicing Cadence
+### 1.2 Configure Recurring Line Items and Invoicing Cadence
 
 Configure the subscription products, pricing, and recurrence timing that govern automated invoice generation.
 
@@ -75,17 +77,17 @@ Configure the subscription products, pricing, and recurrence timing that govern 
 
 ---
 
-### Task 3: Generate Recurring Invoices
+### 1.3 Generate Recurring Invoices
 
 CURQ supports automated scheduled execution as well as on-demand batch or individual invoice generation.
 
-#### Method A: Automated Daily Invoicing via System Scheduler
+#### 1.3.1 Method A: Automated Daily Invoicing via System Scheduler
 CURQ includes a built-in automated scheduled action titled **Generate Recurring Invoices from Contracts**:
 * The scheduler executes daily in the background.
 * The system evaluates all active contracts where `Date of Next Invoice` is equal to or earlier than the current date.
 * Qualifying contracts automatically generate draft customer invoices matching their defined contract lines and advance `Date of Next Invoice` forward by one billing interval.
 
-#### Method B: Immediate Generation via Create Invoices Button
+#### 1.3.2 Method B: Immediate Generation via Create Invoices Button
 When a new contract is signed and the initial invoice must be dispatched immediately:
 1. Open the contract under **Accounting > Customers > Customer Contracts**.
 2. Click **Create invoices** in the top action bar:
@@ -95,7 +97,7 @@ When a new contract is signed and the initial invoice must be dispatched immedia
 
 3. Notice the stat button in the top-right corner advances to **`Invoices 1`**.
 
-#### Method C: Batch Generation via Manually Invoice Sale Contracts
+#### 1.3.3 Method C: Batch Generation via Manually Invoice Sale Contracts
 To process multiple recurring contracts simultaneously across the company:
 1. Navigate to **Accounting > Customers > Manually Invoice Sale Contracts**.
 2. In the batch generation pop-up wizard, configure the target invoicing threshold:
@@ -107,7 +109,7 @@ To process multiple recurring contracts simultaneously across the company:
 
 ---
 
-### Task 4: Monitor Generated Invoices and Billing History
+### 1.4 Monitor Generated Invoices and Billing History
 
 1. Open the customer contract under **Accounting > Customers > Customer Contracts**.
 2. Click the **Invoices** stat button *(e.g., `Invoices 1`)* in the top-right corner:
@@ -132,11 +134,11 @@ To process multiple recurring contracts simultaneously across the company:
 
 ---
 
-### Task 5: Log Contract Modifications and Terminate Lines
+## 2. Log Contract Modifications and Terminate Lines
 
 When service scopes change, customers upgrade/downgrade, or subscriptions cancel:
 
-#### Logging a Formal Contract Modification
+### 2.1 Logging a Formal Contract Modification
 1. Navigate to the **Modifications** tab:
 
    ![Customer Contract Modifications Tab showing amendment log](../media/131.png)
@@ -146,19 +148,19 @@ When service scopes change, customers upgrade/downgrade, or subscriptions cancel
    * **Description**: Enter the summary of terms adjusted *(e.g., `Seat increase from 10 to 25 licenses`)*.
    * **Sent**: Check when the formal amendment has been dispatched to the client.
 
-#### Terminating a Single Contract Line
+### 2.2 Terminating a Single Contract Line
 1. Open the contract and locate the target line under **Recurring Invoices**.
 2. Set the **Date End** column on the specific line item to the final billing date.
 3. CURQ stops invoicing that line once the date passes. Remaining lines continue their normal automated recurrence.
 
-#### Closing an Expired or Cancelled Contract
+### 2.3 Closing an Expired or Cancelled Contract
 1. In the contract header, enter the final cancellation date in **Date End**.
 2. Once `Date of Next Invoice` exceeds `Date End`, CURQ permanently stops evaluating the contract during scheduled runs.
 3. Archive the record or update internal tags to preserve audit history while removing it from active billing queues.
 
 ---
 
-### Task 6: Audit Customer Contract Lines Across Contracts (Reporting)
+## 3. Audit Customer Contract Lines Across Contracts (Reporting)
 
 To monitor all recurring revenue lines, recurrence cadences, and scheduled next invoice dates across the entire customer contract portfolio:
 
@@ -193,7 +195,7 @@ To monitor all recurring revenue lines, recurrence cadences, and scheduled next 
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Invoice Generated with Incorrect Price**: If a recurring invoice generated in `Draft` state with an obsolete price, edit the draft invoice lines directly before confirming. Then update the underlying contract line price or linked pricelist so subsequent cycles generate with the correct rate.
 * **Invoice Already Confirmed Before Error Spotted**: Do not attempt to force contract edits onto posted invoices. Reverse the incorrect invoice using **Credit Note**, apply the credit, update the contract pricing, and use **Create invoices** to generate a corrected replacement invoice for the period.
@@ -202,7 +204,7 @@ To monitor all recurring revenue lines, recurrence cadences, and scheduled next 
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Contract and Recurring Invoicing Field Definitions (Customer and Supplier)](../settings-and-fields/06-customer-contract-and-recurring-invoicing-field-definitions.md)
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)

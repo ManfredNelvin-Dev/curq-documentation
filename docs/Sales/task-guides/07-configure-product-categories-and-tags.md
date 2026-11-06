@@ -9,7 +9,7 @@ Organize catalog items, browse and filter products in Kanban and List views, est
 
 ---
 
-### Task 1: Browse, Search, and Filter Catalog Products
+## 1. Browse, Search, and Filter Catalog Products
 
 1. Open the **Sales** app and click **Products > Products** (or **Products > Product Variants**).
 
@@ -37,7 +37,9 @@ Organize catalog items, browse and filter products in Kanban and List views, est
 
 ---
 
-### Task 2: Create a Product Category and Hierarchy Tree
+## 2. Product Category Hierarchy and Logistic Rules
+
+### 2.1 Create a Product Category and Hierarchy Tree
 
 Product categories organize catalog items into structured accounting and logistical groups:
 
@@ -61,7 +63,7 @@ Product categories organize catalog items into structured accounting and logisti
 
 ---
 
-### Task 3: Configure Warehouse Logistics and Packaging Rules
+### 2.2 Configure Warehouse Logistics and Packaging Rules
 
 Under the **Logistics** section of the category form:
 
@@ -76,7 +78,7 @@ Under the **Logistics** section of the category form:
 
 ---
 
-### Task 4: Configure Costing and Inventory Valuation Methods
+### 2.3 Configure Costing and Inventory Valuation Methods
 
 Under the **Inventory Valuation** section, establish how CURQ values items in this category:
 
@@ -89,7 +91,7 @@ Under the **Inventory Valuation** section, establish how CURQ values items in th
 
 ---
 
-### Task 5: Create and Manage Centralized Product Tags
+## 3. Create and Manage Centralized Product Tags
 
 Unlike categories (where every item has exactly one category), tags allow multiple labels to be attached across products and variants:
 
@@ -120,7 +122,7 @@ Unlike categories (where every item has exactly one category), tags allow multip
 
 ---
 
-### Task 6: Assign Categories and Tags to Products
+## 4. Assign Categories and Tags to Products
 
 1. **Assign Category to Product**:
    * Open **Sales > Products > Products**.
@@ -173,7 +175,7 @@ Unlike categories (where every item has exactly one category), tags allow multip
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Preventing Circular Hierarchy Loops**: CURQ prevents setting a category as its own parent or choosing a descendant sub-category as a parent. If an error occurs, verify the category hierarchy tree.
 * **Protected System Categories**: Top-level root categories *(such as `All` and `Saleable`)* are protected from deletion to safeguard system costing integrity.
@@ -182,7 +184,7 @@ Unlike categories (where every item has exactly one category), tags allow multip
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Products and Product Variants](./06-configure-products-and-variants.md)
 * [Configure Pricelists and Pricing Rules](./08-configure-pricelists-and-pricing-rules.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

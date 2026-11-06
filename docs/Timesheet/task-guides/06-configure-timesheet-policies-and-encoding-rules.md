@@ -4,7 +4,9 @@ This guide outlines how system administrators and operations leads configure tim
 
 ---
 
-### Task 1: Access Timesheets Configuration
+## 1. Configure Encoding Units and Review Policies
+
+### 1.1 Access Timesheets Configuration
 
 Open the global configuration interface:
 
@@ -17,7 +19,7 @@ Open the global configuration interface:
 
 ---
 
-### Task 2: Configure Time Encoding Units
+### 1.2 Configure Time Encoding Units
 
 Determine how employees enter their working durations across all timesheet views:
 
@@ -30,7 +32,7 @@ Determine how employees enter their working durations across all timesheet views
 
 ---
 
-### Task 3: Define Timesheet Sheet Period and Calendar Boundaries
+### 1.3 Define Timesheet Sheet Period and Calendar Boundaries
 
 Establish the periodic cycle and starting boundary for timesheet sheets:
 
@@ -45,7 +47,7 @@ Establish the periodic cycle and starting boundary for timesheet sheets:
 
 ---
 
-### Task 4: Establish Review Policies and Approval Governance
+### 1.4 Establish Review Policies and Approval Governance
 
 Designate who is authorized to review and validate submitted employee timesheets:
 
@@ -59,7 +61,7 @@ Designate who is authorized to review and validate submitted employee timesheets
 
 ---
 
-### Task 5: Save and Apply System Changes
+## 2. Save and Apply System Changes
 
 1. Review all updated selections to ensure alignment with HR guidelines.
 2. Click **Save** in the top action bar.
@@ -67,7 +69,7 @@ Designate who is authorized to review and validate submitted employee timesheets
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Timesheet Configuration and Review Specifications](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md)
 * [Generate and Analyze Timesheet Reports](./07-generate-and-analyze-timesheet-reports.md)

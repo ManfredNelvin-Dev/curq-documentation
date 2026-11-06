@@ -10,7 +10,9 @@ Establish multi-currency price lists, configure volume quantity tiers, and autom
 
 ---
 
-### Task 1: Create a Customer Pricelist
+## 1. Create and Configure Pricelists
+
+### 1.1 Create a Customer Pricelist
 
 1. Navigate to **Sales > Products > Pricelists**.
 
@@ -28,7 +30,7 @@ Establish multi-currency price lists, configure volume quantity tiers, and autom
 
 ---
 
-### Task 2: Configure Rule Scopes and Volume Tiers
+### 1.2 Configure Rule Scopes and Volume Tiers
 
 Under the **Price Rules** tab, click **Add a line** to open the **Create Pricelist Rules** modal:
 
@@ -47,7 +49,7 @@ Under the **Price Rules** tab, click **Add a line** to open the **Create Priceli
 
 ---
 
-### Task 3: Select Computation Methods (Fixed, Discount, Formula)
+### 1.3 Select Computation Methods (Fixed, Discount, Formula)
 
 Under the **Computation** section of the rule modal, choose your calculation logic:
 
@@ -62,7 +64,7 @@ Under the **Computation** section of the rule modal, choose your calculation log
 
 ---
 
-### Task 4: Assign Pricelists to Customers or Quotations
+## 2. Assign Pricelists to Customers or Quotations
 
 1. **Assign to Customer Profile**:
    * Open the customer record from **Sales > Orders > Customers**.
@@ -78,14 +80,14 @@ Under the **Computation** section of the rule modal, choose your calculation log
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Conflicting Rules (Specific vs. Global)**: If multiple rules apply to the same item, CURQ's pricing engine prioritizes by specificity: `Product Variant Rule > Product Rule > Category Rule > Global Rule`. The most specific rule always takes precedence.
 * **Volume Discount Not Triggering**: Verify that the sales order line quantity matches or exceeds the **Min. Quantity** defined in the rule. Also check if the rule has an expired date window under **Validity**.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Sales Reporting and Analytics](./13-sales-reporting-and-analytics.md)
 * [Pricing, Pricelists, and Discount Specifications](../settings-and-fields/02-pricing-pricelists-and-discount-specifications.md)
 

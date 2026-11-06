@@ -4,7 +4,9 @@ This guide covers how to email Requests for Quotation (RFQs) with automated PDF 
 
 ---
 
-## Task 1: Send the RFQ by Email
+## 1. Dispatch Requests for Quotation
+
+### 1.1 Send the RFQ by Email
 
 1. Open the draft RFQ from **Purchase → Orders → Requests for Quotation**.
 2. Click the **Send by Email** button in the top action bar.
@@ -29,7 +31,7 @@ This guide covers how to email Requests for Quotation (RFQs) with automated PDF 
 
 ---
 
-## Task 2: Print the RFQ Document
+### 1.2 Print the RFQ Document
 
 For suppliers who require physical paperwork or when hand-delivering procurement documents:
 
@@ -47,7 +49,7 @@ For suppliers who require physical paperwork or when hand-delivering procurement
 
 ---
 
-## Task 3: Monitor the RFQ Sent Stage
+## 2. Monitor the RFQ Sent Stage
 
 While the document remains in the **RFQ Sent** stage:
 * **Primary Highlighted Action**: The **Confirm Order** button becomes highlighted in dark blue, ready to convert the quotation into an active purchase order once the vendor accepts your terms.

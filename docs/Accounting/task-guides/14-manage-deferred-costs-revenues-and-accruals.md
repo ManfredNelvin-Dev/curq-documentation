@@ -15,7 +15,9 @@ This guide explains how to set up spread templates, link spread schedules direct
 
 ---
 
-### Task 1: Access Spread Tables in Accounting
+## 1. Revenue and Expense Spread Scheduling
+
+### 1.1 Access Spread Tables in Accounting
 
 1. In the top navigation bar, select **Accounting > Spread Costs/Revenues**.
 
@@ -62,7 +64,7 @@ This guide explains how to set up spread templates, link spread schedules direct
 
 ---
 
-### Task 2: Spread Revenue from a Customer Invoice Line
+### 1.2 Spread Revenue from a Customer Invoice Line
 
 Revenue spreading can be linked directly to an invoice line while a customer sales invoice is in **Draft** status:
 
@@ -98,7 +100,7 @@ Revenue spreading can be linked directly to an invoice line while a customer sal
 
 ---
 
-### Task 3: Spread Expenses from a Vendor Bill Line
+### 1.3 Spread Expenses from a Vendor Bill Line
 
 Prepaid supplier expenses *(such as annual commercial insurance, upfront building rent, or software licenses)* are amortized using the identical mechanism on the purchase ledger:
 
@@ -114,7 +116,7 @@ Prepaid supplier expenses *(such as annual commercial insurance, upfront buildin
 
 ---
 
-### Task 4: Review and Manage the Spread Schedule
+### 1.4 Review and Manage the Spread Schedule
 
 Once linked from an invoice or bill, the schedule can be reviewed under **Accounting > Spread Costs/Revenues**:
 
@@ -132,11 +134,11 @@ Once linked from an invoice or bill, the schedule can be reviewed under **Accoun
 
 ---
 
-### Task 5: Post Periodic Accrual Journal Entries
+### 1.5 Post Periodic Accrual Journal Entries
 
 To commit spread installments to the General Ledger:
 
-#### Option A: Manual Recognition Voucher Creation
+#### 1.5.1 Option A: Manual Recognition Voucher Creation
 1. Open the spread table and navigate to the **Spread Lines** tab.
 2. Locate the line due for recognition *(e.g., installment 1 dated `10/31/2026`)*.
 3. Click **▶ Create Move** on that specific line:
@@ -159,16 +161,16 @@ To commit spread installments to the General Ledger:
 
 
 
-#### Option B: Batch Generation
+#### 1.5.2 Option B: Batch Generation
 1. In the spread table header action bar, click **Create All Moves**.
 2. CURQ processes all unposted spread lines across the entire schedule simultaneously.
 
-#### Option C: Automated System Accrual Run
+#### 1.5.3 Option C: Automated System Accrual Run
 1. If **Auto-Post Lines** is enabled on the spread table, CURQ executes an automated background cron job on the recognition date, creating and posting the installment entry automatically without manual intervention.
 
 ---
 
-### Task 6: Adjusting, Recalculating, or Cancelling a Schedule
+## 2. Adjusting, Recalculating, or Cancelling a Schedule
 
 If commercial contract terms change or an invoice is amended mid-contract, CURQ provides dynamic recalculation tools:
 
@@ -179,7 +181,7 @@ If commercial contract terms change or an invoice is amended mid-contract, CURQ 
 
 ---
 
-### Edge Cases & Troubleshooting
+## Edge Cases & Troubleshooting
 
 * **Invoice Already Validated**: Revenue or cost spreading can only be linked directly from an invoice line while the document is in **Draft** status. If an invoice or bill is already posted, you must either:
   1. Reset the document to draft (if period lock dates permit), add the spread, and re-post.
@@ -190,7 +192,7 @@ If commercial contract terms change or an invoice is amended mid-contract, CURQ 
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Create Manual Journal Entries](./05-create-manual-journal-entries.md)
 * [Manage Lock Dates and Fiscal Year-End Closing](./12-manage-lock-dates-and-fiscal-year-end-closing.md)

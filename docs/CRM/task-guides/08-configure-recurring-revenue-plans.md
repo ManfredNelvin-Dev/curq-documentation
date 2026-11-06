@@ -4,7 +4,9 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 
 ---
 
-### Task 1: Enable Recurring Revenues in Settings
+## 1. Recurring Revenue Configuration and Assignment
+
+### 1.1 Enable Recurring Revenues in Settings
 
 1. Open the **CRM** app from your main dashboard.
 2. In the top navigation bar, click **Configuration > Settings**.
@@ -24,7 +26,7 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 
 ---
 
-### Task 2: Create and Manage Recurring Plans
+### 1.2 Create and Manage Recurring Plans
 
 1. Navigate to **Configuration > Recurring Plans** (or click the shortcut from Settings).
 
@@ -51,7 +53,7 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 
 ---
 
-### Task 3: Apply Recurring Plans to Opportunities
+### 1.3 Apply Recurring Plans to Opportunities
 
 1. Open any opportunity form in your pipeline Kanban or list view (e.g., `Custom Desks`).
 2. In the top revenue header, locate the recurring revenue fields:
@@ -69,7 +71,7 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Archiving a Discontinued Plan**: If a contract duration is retired, select its row checkbox in **Configuration > Recurring Plans** (e.g., `Yearly` and `Over 3 years`), click the **⚙ Actions** dropdown menu, and select **Archive**. Existing opportunities linked to this plan maintain their historical calculations, but the plan will no longer be offered on new deals.
 
@@ -79,7 +81,7 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
 * [Default Deal Tags, Lost Reasons, and Activity Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
 * [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)

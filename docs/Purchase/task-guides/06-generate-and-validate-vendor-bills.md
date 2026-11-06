@@ -4,7 +4,9 @@ This guide covers how to generate vendor bills directly from confirmed purchase 
 
 ---
 
-## Task 1: Create a Vendor Bill from the Purchase Order
+## 1. Vendor Bill Processing Lifecycle
+
+### 1.1 Create a Vendor Bill from the Purchase Order
 
 1. Navigate to **Purchase → Orders → Purchase Orders** and open the confirmed order.
 2. Click the **Create Bill** button in the top action bar.
@@ -15,7 +17,7 @@ This guide covers how to generate vendor bills directly from confirmed purchase 
 
 ---
 
-## Task 2: Complete and Confirm the Bill
+### 1.2 Complete and Confirm the Bill
 
 1. On the draft vendor bill form:
    * **Bill Reference**: Enter the supplier's formal invoice or tax receipt number.
@@ -37,7 +39,7 @@ This guide covers how to generate vendor bills directly from confirmed purchase 
 
 ---
 
-## Task 3: Register Supplier Payment
+### 1.3 Register Supplier Payment
 
 1. On the posted vendor bill, click the **Pay** button in the top action bar.
 

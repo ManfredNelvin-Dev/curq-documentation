@@ -4,7 +4,9 @@ Time Off Types define the leave categories employees can request—such as Paid 
 
 ---
 
-### Task 1: Access the Time Off Types Catalog
+## 1. Create and Configure Time Off Types
+
+### 1.1 Access the Time Off Types Catalog
 
 Access the administrative leave type configuration workspace:
 
@@ -21,7 +23,7 @@ Access the administrative leave type configuration workspace:
 
 ---
 
-### Task 2: Create a New Time Off Type
+### 1.2 Create a New Time Off Type
 
 Initialize and configure a new leave category:
 
@@ -37,7 +39,7 @@ Initialize and configure a new leave category:
 
 ---
 
-### Task 3: Configure Leave Request Approval Rules
+### 1.3 Configure Leave Request Approval Rules
 
 Under the **Time Off Requests** section, define who must authorize employee leave submissions:
 
@@ -48,7 +50,7 @@ Under the **Time Off Requests** section, define who must authorize employee leav
 
 ---
 
-### Task 4: Configure Allocation Governance Rules
+### 1.4 Configure Allocation Governance Rules
 
 Under the **Allocation Requests** section, specify how entitlements are provisioned:
 
@@ -62,7 +64,7 @@ Under the **Allocation Requests** section, specify how entitlements are provisio
 
 ---
 
-### Task 5: Configure Operational Settings and Negative Cap
+### 1.5 Configure Operational Settings and Negative Cap
 
 Under the **Configuration** and **Negative Cap** sections, establish operational parameters:
 
@@ -81,7 +83,7 @@ Under the **Configuration** and **Negative Cap** sections, establish operational
 
 ---
 
-### Task 6: Configure Timesheet Integration and Visual Display
+## 2. Configure Timesheet Integration and Visual Display
 
 Connect leave booking with project accounting and customize dashboard presentation:
 
@@ -96,7 +98,7 @@ Connect leave booking with project accounting and customize dashboard presentati
 
 ---
 
-### Task 7: Audit Allocations and Requests via Smart Buttons
+## 3. Audit Allocations and Requests via Smart Buttons
 
 Once saved, manage associated records directly from the form header:
 
@@ -110,7 +112,7 @@ Once saved, manage associated records directly from the form header:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Leave Requests Rejected for Insufficient Balance**: If employees cannot book leave under an unlimited policy (such as Unpaid Leave), verify that **Requires allocation** is set to **No Limit** rather than **Yes**.
 * **Public Holidays Unexpectedly Deducted**: If employees report leave balances being deducted on national holidays, ensure that **Public Holiday Included** is unchecked on the leave type configuration.

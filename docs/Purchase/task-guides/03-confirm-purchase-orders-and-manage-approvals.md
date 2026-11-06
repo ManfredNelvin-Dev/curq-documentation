@@ -4,7 +4,9 @@ This guide covers how to convert Requests for Quotation into official Purchase O
 
 ---
 
-## Task 1: Confirm a Purchase Order
+## 1. Confirm and Transmit Purchase Orders
+
+### 1.1 Confirm a Purchase Order
 
 1. Open the quotation from **Purchase → Orders → Requests for Quotation** (or open an order from **Purchase → Orders → Purchase Orders**).
 2. Click the **Confirm Order** button in the top action bar (highlighted in dark blue if previously sent to the vendor).
@@ -20,7 +22,7 @@ This guide covers how to convert Requests for Quotation into official Purchase O
 
 ---
 
-## Task 2: Transmit the Official Purchase Order
+### 1.2 Transmit the Official Purchase Order
 
 Once confirmed:
 1. The status updates to **Purchase Order** (or **Locked** if automatic locking is active).
@@ -39,7 +41,7 @@ Once confirmed:
 
 ---
 
-## Task 3: Lock and Unlock Confirmed Orders
+## 2. Lock and Unlock Confirmed Orders
 
 When **Lock Confirmed Orders** is enabled in settings (the system default):
 * Confirming an order automatically places it in **Locked** status to prevent unauthorized modifications that could de-synchronize warehouse delivery receipts or accounting bills.
@@ -56,7 +58,7 @@ When **Lock Confirmed Orders** is enabled in settings (the system default):
 
 ---
 
-## Task 4: Cancel a Purchase Order
+## 3. Cancel a Purchase Order
 
 To void or cancel a confirmed order:
 

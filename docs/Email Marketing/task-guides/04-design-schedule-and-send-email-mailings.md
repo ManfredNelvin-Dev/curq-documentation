@@ -4,7 +4,9 @@ This guide covers how to create a new email mailing, choose and customize respon
 
 ---
 
-## Task 1: Initialize a New Email Mailing
+## 1. Compose and Design Email Mailings
+
+### 1.1 Initialize a New Email Mailing
 
 Create a new mailing broadcast record:
 
@@ -20,7 +22,7 @@ Create a new mailing broadcast record:
 
 ---
 
-## Task 2: Configure Recipients and Message Headers
+### 1.2 Configure Recipients and Message Headers
 
 Define message identification and target audience:
 
@@ -38,7 +40,7 @@ Define message identification and target audience:
 
 ---
 
-## Task 3: Choose a Responsive Layout Template
+### 1.3 Choose a Responsive Layout Template
 
 Select and customize the visual design of your email:
 
@@ -48,7 +50,7 @@ Select and customize the visual design of your email:
 
 ---
 
-## Task 4: Send a Test Email
+## 2. Send a Test Email
 
 Validate email rendering and link accuracy before broadcasting:
 
@@ -62,7 +64,7 @@ Validate email rendering and link accuracy before broadcasting:
 
 ---
 
-## Task 5: Launch or Schedule Broadcast Delivery
+## 3. Launch or Schedule Broadcast Delivery
 
 Dispatch the campaign to your target audience:
 

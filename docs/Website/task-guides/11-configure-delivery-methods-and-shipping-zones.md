@@ -10,7 +10,9 @@ This guide covers setting up fixed and rule-based shipping methods, defining del
 
 ---
 
-## Task 1: Enable Delivery Addresses and Shipping Fee Calculation
+## 1. Configure Delivery Addresses and Shipping Methods
+
+### 1.1 Enable Delivery Addresses and Shipping Fee Calculation
 
 Configure customer address handling and dynamic shipping cost computation:
 
@@ -25,7 +27,7 @@ Configure customer address handling and dynamic shipping cost computation:
 
 ---
 
-## Task 2: Configure Delivery Methods and Free Shipping Thresholds
+### 1.2 Configure Delivery Methods and Free Shipping Thresholds
 
 Define shipping providers, flat-rate options, tiered rules, and free delivery thresholds:
 
@@ -46,7 +48,7 @@ Define shipping providers, flat-rate options, tiered rules, and free delivery th
 
 ---
 
-## Task 3: Set Up Click & Collect In-Store Pickup
+## 2. Set Up Click & Collect In-Store Pickup
 
 Allow local customers to collect their orders at physical retail stores and pay on-site:
 
@@ -71,7 +73,7 @@ Allow local customers to collect their orders at physical retail stores and pay 
 
 ---
 
-## Task 4: Save Settings and Test Checkout Fulfillment
+## 3. Save Settings and Test Checkout Fulfillment
 
 Validate delivery method calculations in the live shopping cart:
 

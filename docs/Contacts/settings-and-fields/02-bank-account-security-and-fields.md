@@ -4,7 +4,7 @@ This document details the data fields, validation specifications, and security r
 
 ---
 
-### Bank Directory Fields
+## Bank Directory Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -16,7 +16,7 @@ This document details the data fields, validation specifications, and security r
 
 ---
 
-### Partner Bank Account Fields
+## Partner Bank Account Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -30,7 +30,7 @@ This document details the data fields, validation specifications, and security r
 
 ---
 
-### Security Badges and Risk Levels
+## Security Badges and Risk Levels
 
 | Status Badge / Warning | Trigger Condition | System Behavior |
 | :--- | :--- | :--- |

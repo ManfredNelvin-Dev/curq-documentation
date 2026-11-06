@@ -9,7 +9,9 @@ This tutorial guides you through setting up repeating events in CURQ 18 Calendar
 
 ---
 
-## Step 1: Create or Open a Meeting
+## 1. Configure and Verify Recurring Meetings
+
+### 1.1 Create or Open a Meeting
 
 1. Navigate to **Calendar**.
 2. Click an open time slot to create a new meeting, or click an existing event that you wish to convert into a repeating series.
@@ -20,7 +22,7 @@ This tutorial guides you through setting up repeating events in CURQ 18 Calendar
 
 ---
 
-## Step 2: Enable Recurrence
+### 1.2 Enable Recurrence
 
 1. On the left side of the meeting form, locate the **Recurrent** checkbox directly beneath **Duration**.
 2. Check the **Recurrent** box to convert the meeting into a repeating series.
@@ -29,7 +31,7 @@ This tutorial guides you through setting up repeating events in CURQ 18 Calendar
 
 ---
 
-## Step 3: Configure Recurrence Rules
+### 1.3 Configure Recurrence Rules
 
 Once **Recurrent** is enabled, CURQ expands the dedicated recurrence parameters:
 
@@ -48,7 +50,7 @@ Once **Recurrent** is enabled, CURQ expands the dedicated recurrence parameters:
 
 ---
 
-## Step 4: Save and Verify Series Occurrences
+### 1.4 Save and Verify Series Occurrences
 
 1. In CURQ 18, your settings save automatically as you make changes. Click the **Meetings** breadcrumb to return to the calendar grid.
 2. In the top-left view switcher, change the view from **Week** to **Month**.

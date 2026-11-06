@@ -10,7 +10,9 @@ Import electronic bank statements, register manual bank transaction lines, match
 
 ---
 
-### Task 1: Import Bank Statements Electronically (CAMT, CSV, OFX)
+## 1. Bank Statement Entry and Reconciliation
+
+### 1.1 Import Bank Statements Electronically (CAMT, CSV, OFX)
 
 When receiving electronic statement files from your banking institution:
 
@@ -31,7 +33,7 @@ When receiving electronic statement files from your banking institution:
 
 ---
 
-### Task 2: Enter Bank Transactions Manually
+### 1.2 Enter Bank Transactions Manually
 
 If electronic statement files are unavailable or you need to record individual bank adjustments directly:
 
@@ -58,7 +60,7 @@ If electronic statement files are unavailable or you need to record individual b
 
 ---
 
-### Task 3: Reconcile Bank Lines to Transition Documents from "In Payment" to "Paid"
+### 1.3 Reconcile Bank Lines to Transition Documents from "In Payment" to "Paid"
 
 When payments have already been registered via the **Pay** button on invoices or vendor bills, funds sit in a transitory clearing account *(Outstanding Receipts or Outstanding Payments)* in **In Payment** status. Reconciling matches the actual bank movement against that clearing entry to officially close the transaction:
 
@@ -91,7 +93,7 @@ When payments have already been registered via the **Pay** button on invoices or
 
 ---
 
-### Task 4: Match Bank Statement Lines Directly Without Prior Payment
+## 2. Match Bank Statement Lines Directly Without Prior Payment
 
 If you do not register payments in advance via the **Pay** button and prefer to settle invoices directly upon bank statement arrival:
 
@@ -118,7 +120,7 @@ If you do not register payments in advance via the **Pay** button and prefer to 
 
 ---
 
-### Task 5: Reconcile Direct Expenses and Bank Fees Without Invoices
+## 3. Reconcile Direct Expenses and Bank Fees Without Invoices
 
 For operational expenses that do not generate vendor bills *(such as monthly bank maintenance fees, interest charges, or direct debit subscriptions)*:
 
@@ -148,11 +150,11 @@ For operational expenses that do not generate vendor bills *(such as monthly ban
 
 ---
 
-### Task 6: Reconcile Internal Transfers Between Company Accounts
+## 4. Reconcile Internal Transfers Between Company Accounts
 
 When transferring liquidity between two accounts managed within CURQ *(such as transferring funds from your Bank account to your Cash register, or between checking and savings accounts)*:
 
-#### Phase 1: Reconcile the Outgoing Transaction on the Source Account
+### 4.1 Phase 1: Reconcile the Outgoing Transaction on the Source Account
 
 1. In the source account *(e.g., Bank)*, create or import the outgoing transfer line *(e.g., `-€ 50.00` with label `Transfer to Cash`)*.
 
@@ -167,7 +169,7 @@ When transferring liquidity between two accounts managed within CURQ *(such as t
 
 4. Click **Validate**. The source bank balance is reduced and the funds are parked in the transit clearing account.
 
-#### Phase 2: Reconcile the Incoming Transaction on the Destination Account
+### 4.2 Phase 2: Reconcile the Incoming Transaction on the Destination Account
 
 1. In the destination journal *(e.g., Cash)*, open or create the cash register *(e.g., `CSH/2026/0001`)*:
    * **Starting Balance**: `€ 0.00`
@@ -190,7 +192,7 @@ When transferring liquidity between two accounts managed within CURQ *(such as t
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Partial Bank Reconciliation**: If a customer wire transfer covers only part of an open invoice, select the invoice in the reconciliation interface. CURQ applies the statement amount against the invoice and prompts you to choose whether to keep the remainder open as **Partial Payment** or post the difference to a designated write-off account.
 * **Payment Difference Due to Bank Surcharges**: If an international wire incurs an intermediary bank charge resulting in a slight discrepancy *(e.g., invoice is `€ 100.00` but bank statement shows `€ 95.00`)*, select the invoice and use the **Manual Operations** tab to allocate the `€ 5.00` difference directly to `Bank Charges`.
@@ -199,7 +201,7 @@ When transferring liquidity between two accounts managed within CURQ *(such as t
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
 * [Payment, Bank, and Journal Entry Field Definitions](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md)

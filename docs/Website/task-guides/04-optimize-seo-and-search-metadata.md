@@ -6,7 +6,9 @@ Enhance search engine rankings, customize social media preview cards, and analyz
 
 ---
 
-## Task 1: Accessing the SEO Optimizer Tool
+## 1. On-Page Search Engine Optimization
+
+### 1.1 Accessing the SEO Optimizer Tool
 
 CURQ includes an on-page SEO dialog that evaluates live page content, renders real-time search engine result previews, and provides keyword placement feedback.
 
@@ -23,7 +25,7 @@ CURQ opens the **Optimize SEO** modal dialog, presenting metadata inputs, search
 
 ---
 
-## Task 2: Search Engine Title, Description & Snippet Preview
+### 1.2 Search Engine Title, Description & Snippet Preview
 
 The top section of the dialog configures the metadata search engines read when crawling and indexing your page:
 
@@ -43,7 +45,7 @@ The top section of the dialog configures the metadata search engines read when c
 
 ---
 
-## Task 3: Keyword Optimization & Content Placement Scoring
+### 1.3 Keyword Optimization & Content Placement Scoring
 
 The **Keywords** tool audits your target terms against live page content, identifying whether keywords are placed strategically across HTML heading and content tags:
 
@@ -54,7 +56,7 @@ The **Keywords** tool audits your target terms against live page content, identi
 3. Click **Add** *(or press `Enter`)*.
 4. CURQ immediately scans the current page DOM structure and displays a real-time placement scorecard auditing headline tags (**H1**, **H2**), title tags (**T**), meta descriptions (**D**), and body content copy (**C**).
 
-### Related Keyword Suggestions
+#### 1.3.1 Related Keyword Suggestions
 
 Beneath the score columns, CURQ generates **Related keywords** badges based on common search queries:
 
@@ -63,7 +65,7 @@ Beneath the score columns, CURQ generates **Related keywords** badges based on c
 
 ---
 
-## Task 4: Customizing Social Media Sharing Cards (Open Graph)
+## 2. Customizing Social Media Sharing Cards (Open Graph)
 
 When links to your website are shared across social platforms *(such as LinkedIn, Facebook, Twitter/X, WhatsApp, or Slack)*, social crawlers fetch Open Graph tags to generate visual link preview cards.
 
@@ -79,7 +81,7 @@ The **Social Share** section allows you to customize this card:
 
 ---
 
-## Task 5: Customizing SEO-Friendly URL Slugs
+## 3. Customizing SEO-Friendly URL Slugs
 
 For dynamic website records *(such as Blog Posts, Events, eCommerce Products, and Forum topics)*, CURQ creates structured URLs with customizable slugs:
 

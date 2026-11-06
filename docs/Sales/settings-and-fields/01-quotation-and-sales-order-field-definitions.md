@@ -4,7 +4,7 @@ This document provides factual specifications and data tables for all header fie
 
 ---
 
-### Quotation Header Fields
+## Quotation Header Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -18,7 +18,7 @@ This document provides factual specifications and data tables for all header fie
 
 ---
 
-### Order Lines Table Columns
+## Order Lines Table Columns
 
 | Field Name | Description |
 | :--- | :--- |
@@ -38,7 +38,7 @@ This document provides factual specifications and data tables for all header fie
 
 ---
 
-### Other Info Tab Fields
+## Other Info Tab Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -58,7 +58,7 @@ This document provides factual specifications and data tables for all header fie
 
 ---
 
-### Sales Order Status Lifecycle
+## Sales Order Status Lifecycle
 
 | Status | Operational Meaning | Allowed Actions |
 | :--- | :--- | :--- |
@@ -70,7 +70,7 @@ This document provides factual specifications and data tables for all header fie
 
 ---
 
-### Customer Commercial and Invoicing Fields
+## Customer Commercial and Invoicing Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -88,7 +88,7 @@ This document provides factual specifications and data tables for all header fie
 
 ---
 
-### Product Master and Category Fields
+## Product Master and Category Fields
 
 | Field Name | Options / Values | Operational Effect |
 | :--- | :--- | :--- |
@@ -103,7 +103,7 @@ This document provides factual specifications and data tables for all header fie
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Manage Quotations](../task-guides/01-create-and-send-quotations.md)
 * [Confirm and Lock Sales Orders](../task-guides/03-confirm-and-lock-sales-orders.md)
 * [Understanding the Sales Order Lifecycle and State Machine](../core-concepts/01-understanding-the-sales-order-lifecycle.md)

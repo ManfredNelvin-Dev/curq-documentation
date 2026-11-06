@@ -4,7 +4,7 @@ Configure country address formatting, add federal states, register cities for au
 
 ---
 
-### Accessing Localization Settings
+## 1. Access Localization Settings
 
 1. Open the **Contacts** app.
 2. In the top navigation bar, click **Configuration**.
@@ -19,7 +19,9 @@ Configure country address formatting, add federal states, register cities for au
 
 ---
 
-### Task 1: Manage Country Formatting and Validation Rules
+## 2. Country, State, and City Formatting Rules
+
+### 2.1 Manage Country Formatting and Validation Rules
 
 1. Navigate to **Configuration > Countries**.
 
@@ -41,7 +43,7 @@ Configure country address formatting, add federal states, register cities for au
 
 ---
 
-### Task 2: Add a Federal State or Province
+### 2.2 Add a Federal State or Province
 
 1. Navigate to **Configuration > Fed. States**.
 2. Click **+ New** at the top left (or click into an empty row at the bottom).
@@ -61,7 +63,7 @@ Configure country address formatting, add federal states, register cities for au
 
 ---
 
-### Task 3: Add Cities for Postal Code Auto-Fill
+### 2.3 Add Cities for Postal Code Auto-Fill
 
 When cities and postal codes are entered into this registry, typing a postal code on any contact form automatically populates the city, state, and country:
 
@@ -84,7 +86,7 @@ When cities and postal codes are entered into this registry, typing a postal cod
 
 ---
 
-### Task 4: Create a Regional Country Group
+## 3. Create a Regional Country Group
 
 Country groups combine multiple nations to apply shared sales pricelists or fiscal tax rules (e.g., *European Union*, *SEPA Countries*, or *Gulf Cooperation Council (GCC)*):
 
@@ -108,7 +110,7 @@ Country groups combine multiple nations to apply shared sales pricelists or fisc
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **ZIP Auto-Fill Not Triggering**: Verify that the city record in **Configuration > Cities** has the exact ZIP code entered and that the **Country** matches the country selected on the contact form.
 * **State Dropdown Empty**: Ensure the parent country is selected first on the contact form; CURQ filters the **State** dropdown to only show states linked to that nation.

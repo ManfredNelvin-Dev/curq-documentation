@@ -4,7 +4,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 
 ---
 
-### Task 1: Configure Standard Lost Reasons
+## 1. Configure Standard Lost Reasons
 
 1. Open the **CRM** app from your main dashboard.
 2. In the top navigation bar, click **Configuration > Lost Reasons** (located under the **Pipeline** section).
@@ -23,7 +23,9 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 
 ---
 
-### Task 2: Create Color-Coded Opportunity Tags
+## 2. Configure and Assign Opportunity Tags
+
+### 2.1 Create Color-Coded Opportunity Tags
 
 1. In the top navigation bar, click **Configuration > Tags** (located under the **Pipeline** section).
 
@@ -42,7 +44,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 
 ---
 
-### Task 3: Assign Tags Directly from Deal Cards
+### 2.2 Assign Tags Directly from Deal Cards
 
 1. Open any opportunity card or form from your Kanban pipeline or list view.
 2. Locate the **Tags** field in the form details.
@@ -54,7 +56,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Archiving Outdated Lost Reasons**: Never delete a lost reason that has historical opportunities attached. Instead, open the reason record, click the gear actions icon, and select **Archive**. This preserves historical win/loss analytics while preventing salespeople from selecting the obsolete reason on new deals.
 * **Updating Tag Colors**: Changing a tag's color swatch from the **Configuration > Tags** list immediately updates that tag's appearance on all open and closed opportunities across the company.
@@ -62,7 +64,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
 * [Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
 * [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)

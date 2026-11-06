@@ -21,7 +21,9 @@ flowchart LR
 
 ---
 
-## Step 1: Inspect Subscriber Contacts and Subscription Dates
+## 1. Subscriber List and Engagement Workflow
+
+### 1.1 Inspect Subscriber Contacts and Subscription Dates
 
 Review individual subscriber records and their subscription timelines:
 
@@ -39,7 +41,7 @@ Review individual subscriber records and their subscription timelines:
 
 ---
 
-## Step 2: Update Contact Subscriptions and Manage Unsubscribes
+### 1.2 Update Contact Subscriptions and Manage Unsubscribes
 
 Maintain list hygiene by managing subscriber memberships:
 
@@ -59,7 +61,7 @@ Maintain list hygiene by managing subscriber memberships:
 
 ---
 
-## Step 3: Monitor Real-Time Metrics via Smart Buttons
+### 1.3 Monitor Real-Time Metrics via Smart Buttons
 
 Track live engagement directly from the mailing list and campaign headers:
 
@@ -87,7 +89,7 @@ Track live engagement directly from the mailing list and campaign headers:
 
 ---
 
-## Step 4: Evaluate Mass Mailing Analytics and Engagement Graphs
+### 1.4 Evaluate Mass Mailing Analytics and Engagement Graphs
 
 Analyze open rates, click rates, and delivery trends across your campaigns:
 
@@ -110,7 +112,7 @@ Analyze open rates, click rates, and delivery trends across your campaigns:
 
 ---
 
-## Step 5: Audit Opt-Out Feedback and Unsubscribe Reasons
+### 1.5 Audit Opt-Out Feedback and Unsubscribe Reasons
 
 Investigate why recipients unsubscribe to improve content relevance and cadence:
 

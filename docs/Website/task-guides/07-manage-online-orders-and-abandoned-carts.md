@@ -10,7 +10,7 @@ Manage online sales orders, recover abandoned shopping carts, and configure webs
 
 ---
 
-## Task 1: Accessing eCommerce
+## 1. Access eCommerce Orders Workspace
 
 In the top administrative bar, click **eCommerce** to open the menu dropdown:
 
@@ -24,9 +24,9 @@ The menu organizes your online store into three functional areas:
 
 ---
 
-## Task 2: Managing Online Orders & Recovery
+## 2. Managing Online Orders and Cart Recovery
 
-### Orders (`eCommerce > Orders > Orders`)
+### 2.1 Orders (`eCommerce > Orders > Orders`)
 
 ![Orders manager in list view showing default Confirmed and From Website search filters, view switcher icons, and order rows](../media/066.png)
 
@@ -44,7 +44,7 @@ The menu organizes your online store into three functional areas:
 * **All Sales Orders Filter**: To see orders across both physical and digital channels, remove the **From Website** filter chip in the search bar.
 * **Order Processing Guides**: For step-by-step instructions on confirming orders, delivery validation, and invoice generation, see [**Confirm Sales Order**](../../Sales/task-guides/03-confirm-and-lock-sales-orders.md), [**Invoicing Sales Order**](../../Sales/task-guides/04-invoice-sales-orders.md), and [**Analyze Sales Orders**](../../Sales/task-guides/13-sales-reporting-and-analytics.md).
 
-### Unpaid Orders (`eCommerce > Orders > Unpaid Orders`)
+### 2.2 Unpaid Orders (`eCommerce > Orders > Unpaid Orders`)
 
 Clicking **Unpaid Orders** displays website checkout orders that reached the payment step with a quotation sent to the customer, but where the final payment was not confirmed:
 
@@ -63,7 +63,7 @@ Clicking **Unpaid Orders** displays website checkout orders that reached the pay
 
 ![Unpaid order form with Confirm action button highlighted to authorize the sale upon payment receipt](../media/069.png)
 
-### Abandoned Carts (`eCommerce > Orders > Abandoned Carts`)
+### 2.3 Abandoned Carts (`eCommerce > Orders > Abandoned Carts`)
 
 Clicking **Abandoned Carts** displays shopping sessions where visitors added items to their shopping cart and provided their contact details, but left before completing checkout.
 
@@ -87,13 +87,13 @@ Clicking **Abandoned Carts** displays shopping sessions where visitors added ite
   4. On the order form, click the primary **Send a Recovery Email** button.
   5. CURQ sends a personalized recovery email containing a direct link that restores the visitor's shopping cart so they can complete checkout with a single click. Once sent, the order receives the **Recovery Email Sent** badge and clears from the default view to prevent duplicate messages.
 
-### Order Status Comparison
+### 2.4 Order Status Comparison
 
 CURQ tracks customer shopping journeys through three progressive stages: **Abandoned Carts** (uncompleted checkout sessions awaiting recovery), **Unpaid Orders** (submitted checkouts awaiting offline payment settlement like Wire Transfer), and **Confirmed Orders** (validated purchases ready for fulfillment and billing).
 
 > For detailed comparison criteria, transition states, and recovery triggers, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
-### Customers (`eCommerce > Orders > Customers`)
+### 2.5 Customers (`eCommerce > Orders > Customers`)
 
 Clicking **Customers** opens your address book of customer contacts and buyer accounts:
 

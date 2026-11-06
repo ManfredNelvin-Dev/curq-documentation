@@ -4,7 +4,9 @@ This guide covers how supervisors, department leads, and HR managers inspect, au
 
 ---
 
-### Task 1: Access the Timesheet Sheets to Review Queue
+## 1. Review and Approve Timesheet Sheets
+
+### 1.1 Access the Timesheet Sheets to Review Queue
 
 Submitted timesheet sheets are routed directly to the designated review workspace:
 
@@ -20,7 +22,7 @@ Submitted timesheet sheets are routed directly to the designated review workspac
 
 ---
 
-### Task 2: Audit Recorded Hours and Activity Details
+### 1.2 Audit Recorded Hours and Activity Details
 
 Before taking an approval action, audit the sheet's entries for accuracy:
 
@@ -41,7 +43,7 @@ Before taking an approval action, audit the sheet's entries for accuracy:
 
 ---
 
-### Task 3: Approve the Timesheet Sheet
+### 1.3 Approve the Timesheet Sheet
 
 When all hours and deliverables are accurate and verified:
 
@@ -52,7 +54,7 @@ When all hours and deliverables are accurate and verified:
 
 ---
 
-### Task 4: Refuse a Sheet for Correction
+## 2. Refuse a Sheet for Correction
 
 If a sheet contains inaccurate hours, missing descriptions, or misallocated tasks:
 
@@ -65,7 +67,7 @@ If a sheet contains inaccurate hours, missing descriptions, or misallocated task
 
 ---
 
-### Post-Validation Outcomes
+## 3. Post-Validation Outcomes
 
 * **Locked Records**: Approved entries cannot be altered, ensuring compliance for payroll calculation.
 * **Analytic Ledger Updates**: Confirms labor costs against the project's analytic budget.
@@ -73,7 +75,7 @@ If a sheet contains inaccurate hours, missing descriptions, or misallocated task
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Understanding Timesheet Sheet Approval and Billing Workflows](../core-concepts/02-understanding-timesheet-sheet-approval-and-billing-workflows.md)
 * [Audit All Timesheets and Periodic Sheets](./05-audit-all-timesheets-and-periodic-sheets.md)

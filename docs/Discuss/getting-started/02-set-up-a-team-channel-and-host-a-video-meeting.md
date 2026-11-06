@@ -15,7 +15,7 @@ flowchart LR
 
 ---
 
-## Hands-On Exercise: Set Up a Channel and Host a Meeting
+## 1. Hands-On Exercise: Set Up a Channel and Host a Meeting
 
 
 
@@ -26,7 +26,7 @@ flowchart LR
 
 ---
 
-## Step 1: Create the Team Channel
+### 1.1 Create the Team Channel
 
 Let us begin by establishing a central room for department communications:
 
@@ -43,7 +43,7 @@ Let us begin by establishing a central room for department communications:
 
 ---
 
-## Step 2: Configure Channel Privacy and Invite Teammates
+### 1.2 Configure Channel Privacy and Invite Teammates
 
 By default, newly created channels are public to all internal users. If you need to restrict membership to a specific operational team:
 
@@ -64,7 +64,7 @@ By default, newly created channels are public to all internal users. If you need
 
 ---
 
-## Step 3: Launch an Instant Video Call with the "Start a meeting" Button
+### 1.3 Launch an Instant Video Call with the "Start a meeting" Button
 
 When urgent issues arise and text messaging is too slow, launch an immediate video meeting without leaving your browser:
 
@@ -85,7 +85,7 @@ When urgent issues arise and text messaging is too slow, launch an immediate vid
 
 ---
 
-## Step 4: Test In-Call Controls and Screen Sharing
+### 1.4 Test In-Call Controls and Screen Sharing
 
 Now that your call is active, familiarize yourself with the media control toolbar located at the bottom of the conference window:
 
@@ -104,7 +104,7 @@ Congratulations! You have configured a team communication channel and hosted an 
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Create and Manage Channels](../task-guides/01-create-and-manage-channels.md)
 * [Start and Manage Voice and Video Calls](../task-guides/04-start-and-manage-voice-and-video-calls.md)

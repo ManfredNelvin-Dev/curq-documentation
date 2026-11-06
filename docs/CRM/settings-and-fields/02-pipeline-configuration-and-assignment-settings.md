@@ -4,7 +4,7 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-### Pipeline Stage Properties
+## Pipeline Stage Properties
 
 | Field Name | Description |
 | :--- | :--- |
@@ -15,7 +15,7 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-### Sales Team Parameters
+## Sales Team Parameters
 
 | Parameter | Description |
 | :--- | :--- |
@@ -34,7 +34,7 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-### Rule-Based Assignment Parameters
+## Rule-Based Assignment Parameters
 
 | Setting | Description |
 | :--- | :--- |
@@ -45,7 +45,7 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-### Predictive Lead Scoring Parameters
+## Predictive Lead Scoring Parameters
 
 | Parameter | Description |
 | :--- | :--- |
@@ -56,7 +56,7 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Custom Pipeline Stages](../task-guides/05-configure-pipeline-stages.md)
 * [Configure Sales Teams and Rule-Based Lead Assignment](../task-guides/06-configure-sales-teams-and-assignment.md)
 * [Configure Predictive Lead Scoring](../task-guides/11-configure-predictive-lead-scoring.md)

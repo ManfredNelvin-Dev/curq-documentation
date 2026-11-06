@@ -13,7 +13,9 @@ In CURQ, the Auditfile export tool aggregates all posted journal entries, openin
 
 ---
 
-### Task 1: Access the Auditfile Export Registry
+## 1. Export Statutory Auditfiles
+
+### 1.1 Access the Auditfile Export Registry
 
 1. In the top navigation bar, select **Accounting > Reporting > OCA accounting reports > Auditfile export**.
 2. Review the registry of previously compiled statutory audit files:
@@ -28,7 +30,7 @@ In CURQ, the Auditfile export tool aggregates all posted journal entries, openin
 
 ---
 
-### Task 2: Create and Configure a New Auditfile Export
+### 1.2 Create and Configure a New Auditfile Export
 
 1. In the top action bar of the Auditfile export registry, click **+ New**.
 2. Complete the configuration parameters on the export form:
@@ -43,7 +45,7 @@ In CURQ, the Auditfile export tool aggregates all posted journal entries, openin
 
 ---
 
-### Task 3: Generate and Download the XML Auditfile
+### 1.3 Generate and Download the XML Auditfile
 
 1. On the configured auditfile form, click the **Generate auditfile** button in the upper header action bar.
 2. CURQ initiates the background compilation process:
@@ -56,7 +58,7 @@ In CURQ, the Auditfile export tool aggregates all posted journal entries, openin
 
 ---
 
-### Edge Cases and Recovery Steps
+## Edge Cases and Recovery Steps
 
 * **AttributeError on Reconciled Transactions**: If clicking **Generate auditfile** encounters a server error regarding transaction reconciliation, contact your system administrator to ensure the latest Dutch localization patch is deployed. As a temporary test or workaround, verify date ranges or isolate journals prior to running the export.
 * **Unbalanced Trial Balance Warning**: If CURQ detects an unposted or asymmetrical journal entry within the date range, the auditfile compilation may fail validation. Verify that all journal entries for the period are balanced and posted before re-running the export.
@@ -65,7 +67,7 @@ In CURQ, the Auditfile export tool aggregates all posted journal entries, openin
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [File Statutory VAT Returns and ICP Declaration](./08-file-statutory-vat-returns-and-icp-declaration.md)
 * [Statutory Tax Statement and ICP Field Definitions](../settings-and-fields/03-statutory-tax-statement-and-icp-field-definitions.md)

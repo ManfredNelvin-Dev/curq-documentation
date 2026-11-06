@@ -4,7 +4,9 @@ This guide covers how to access the Mailing Lists workspace, create new subscrib
 
 ---
 
-## Task 1: Open the Mailing Lists Workspace
+## 1. Create and Manage Mailing Lists
+
+### 1.1 Open the Mailing Lists Workspace
 
 Access your organization's subscriber segments:
 
@@ -19,7 +21,7 @@ Access your organization's subscriber segments:
 
 ---
 
-## Task 2: Create a New Mailing List
+### 1.2 Create a New Mailing List
 
 Initialize a dedicated subscriber audience container:
 
@@ -39,7 +41,7 @@ Initialize a dedicated subscriber audience container:
 
 ---
 
-## Task 3: Import Contacts and Manage List Actions
+## 2. Import Contacts and Manage List Actions
 
 Populate your list with subscribers and monitor operational actions:
 

@@ -22,7 +22,9 @@ flowchart LR
 
 ---
 
-## Open the Start Work Dialog
+## 1. Real-Time Work Timer Tracking Workflow
+
+### 1.1 Open the Start Work Dialog
 
 Access the real-time tracking interface from anywhere within Timesheets:
 
@@ -36,7 +38,7 @@ Access the real-time tracking interface from anywhere within Timesheets:
 
 ---
 
-## Configure Activity and Task Details
+### 1.2 Configure Activity and Task Details
 
 Before engaging the clock, establish the task parameters for the tracking session:
 
@@ -54,7 +56,7 @@ Before engaging the clock, establish the task parameters for the tracking sessio
 
 ---
 
-## Start the Real-Time Work Timer
+### 1.3 Start the Real-Time Work Timer
 
 Initiate the active tracking session:
 
@@ -72,7 +74,7 @@ Initiate the active tracking session:
 
 ---
 
-## Switch Tasks and Handle Overlapping Timers
+### 1.4 Switch Tasks and Handle Overlapping Timers
 
 When transitioning from one deliverable to another during the workday:
 
@@ -88,7 +90,7 @@ When transitioning from one deliverable to another during the workday:
 
 ---
 
-## Finalize the Timer and Review Generated Timesheet Line
+### 1.5 Finalize the Timer and Review Generated Timesheet Line
 
 Conclude your tracking session and verify that your hours are safely logged:
 

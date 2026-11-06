@@ -9,9 +9,9 @@ Identify and consolidate duplicate contact records into a single master profile,
 
 ---
 
-### Step-by-Step Instructions
+## 1. Merge Duplicate Contacts Workflow
 
-#### 1. Locate Duplicates in List View
+### 1.1 Locate Duplicates in List View
 1. Open the **Contacts** app.
 2. In the top-right corner, switch to the **List View** icon.
 3. In the search bar, search for the contact name, email, or company name to view potential duplicates side by side.
@@ -19,13 +19,13 @@ Identify and consolidate duplicate contact records into a single master profile,
 
    ![Select Duplicate Contacts in List View](../media/018.png)
 
-#### 2. Open the Merge Dialog
+### 1.2 Open the Merge Dialog
 1. Click the **Actions** dropdown menu (gear icon) located at the top center of the list.
 2. Select **Merge**.
 
    ![Actions Menu Merge Option](../media/019.png)
 
-#### 3. Choose the Destination Master Contact
+### 1.3 Choose the Destination Master Contact
 The **Merge** window displays the selected records and lets you define the surviving profile:
 
 ![Merge Duplicate Contacts Modal](../media/020.png)
@@ -40,7 +40,7 @@ The **Merge** window displays the selected records and lets you define the survi
 
 ---
 
-### What Happens During the Merge
+## 2. What Happens During the Merge
 
 When CURQ executes the consolidation:
 * All past **Sales Orders**, **Vendor Bills**, **Invoices**, and **Delivery Orders** are reassigned to the Destination Contact.
@@ -50,7 +50,7 @@ When CURQ executes the consolidation:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Accidentally Merged Wrong Contacts**: Merges are permanent database redirections and cannot be automatically "unmerged" with a single click. If an unintended merge occurs, you must manually create a new contact card and reassign specific transactions or employees from the chatter history. Always verify the Destination Contact carefully before clicking **Merge Contacts**.
 * **Merging an Individual with a Company**: Ensure you choose the **Company** as the Destination Contact if the goal is to keep the business entity, or convert the individual into an employee contact beforehand.

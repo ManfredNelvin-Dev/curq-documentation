@@ -4,7 +4,9 @@ CURQ Time Off integrates organizational calendars with working schedules to ensu
 
 ---
 
-### Task 1: Access the Public Holidays Interface
+## 1. Configure Public Holidays
+
+### 1.1 Access the Public Holidays Interface
 
 Configure official national, regional, or corporate holidays:
 
@@ -19,7 +21,7 @@ Configure official national, regional, or corporate holidays:
 
 ---
 
-### Task 2: Create and Configure a New Public Holiday
+### 1.2 Create and Configure a New Public Holiday
 
 Add a statutory non-working day to the system:
 
@@ -39,7 +41,9 @@ Add a statutory non-working day to the system:
 
 ---
 
-### Task 3: Access the Mandatory Days Interface
+## 2. Configure Mandatory Days and Lockouts
+
+### 2.1 Access the Mandatory Days Interface
 
 Define dates on which employees must be present and cannot take leave:
 
@@ -53,7 +57,7 @@ Define dates on which employees must be present and cannot take leave:
 
 ---
 
-### Task 4: Create a Mandatory Day Lockout
+### 2.2 Create a Mandatory Day Lockout
 
 Prevent time-off requests during critical business periods:
 
@@ -70,7 +74,7 @@ Prevent time-off requests during critical business periods:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Leave Deducted on a Public Holiday**: If leave totals still deduct days during a public holiday, check the settings of the requested **Time Off Type** and ensure that **Public Holiday Included** is unchecked. Also verify that the employee's calendar matches the **Working Hours** assigned to the holiday.
 * **Mandatory Day Lockout Not Enforced for Remote Staff**: If employees can still submit leave during a mandatory period, verify that their user profile or contract is assigned to one of the selected departments or that the department field was left blank for company-wide enforcement.

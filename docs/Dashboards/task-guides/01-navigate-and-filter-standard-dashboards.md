@@ -4,11 +4,11 @@ Standard Dashboards provide unified, real-time departmental visibility by aggreg
 
 ---
 
-## Access Standard Dashboards and Adjust Workspace Views
+## 1. Access Standard Dashboards and Adjust Workspace Views
 
 Standard dashboards are grouped by functional areas in the left sidebar navigation drawer.
 
-### Select a Dashboard
+### 1.1 Select a Dashboard
 1. Open the **Dashboards** application from the main navigation menu.
 2. In the left sidebar, click on the desired department dashboard category *(such as **Sales**, **Finance**, or **Logistics**)*:
 
@@ -16,7 +16,7 @@ Standard dashboards are grouped by functional areas in the left sidebar navigati
 
 3. The central workspace loads with live calculations and charts corresponding to the selected business domain.
 
-### Collapse and Expand the Navigation Sidebar
+### 1.2 Collapse and Expand the Navigation Sidebar
 To maximize canvas space for wide financial tables or complex multi-series charts:
 1. Click the collapse double arrow (`«`) icon next to the sidebar header:
 
@@ -29,11 +29,11 @@ To maximize canvas space for wide financial tables or complex multi-series chart
 
 ---
 
-## Interpret KPI Cards and Analytical Chart Formats
+## 2. Interpret KPI Cards and Analytical Chart Formats
 
 Each standard dashboard utilizes specialized visual components tailored to distinct analytical tasks.
 
-### Summary and Benchmark KPI Scorecards
+### 2.1 Summary and Benchmark KPI Scorecards
 Headline scorecards summarize key financial and operational metrics, displaying the primary figure along with period-over-period percentage variance against the preceding timeframe:
 
 ![Standard dashboard showing highlighted KPI cards](../media/002.png)
@@ -41,7 +41,7 @@ Headline scorecards summarize key financial and operational metrics, displaying 
 * **Primary Value**: Current metric total for the active timeframe.
 * **Variance Indicator**: Green upward arrow or red downward arrow denoting positive or negative movement against the comparison period.
 
-### Top Performer Metric Cards
+### 2.2 Top Performer Metric Cards
 Top performer cards isolate high-impact items driving business outcomes:
 
 ![Top Performer KPI cards showing Best Seller and Best Category](../media/003.png)
@@ -49,12 +49,12 @@ Top performer cards isolate high-impact items driving business outcomes:
 * **Best Seller**: Ranks top products by volume or gross revenue.
 * **Best Category**: Highlights top-performing product categories.
 
-### Qualitative Gauges and Ratings
+### 2.3 Qualitative Gauges and Ratings
 Gauge widgets display scores along a defined radial scale to illustrate benchmark health at a glance *(such as customer satisfaction ratings out of 5 stars)*:
 
 ![Gauge chart KPI card showing Average Rating](../media/016.png)
 
-### Plotted Timelines: Line and Area Charts
+### 2.4 Plotted Timelines: Line and Area Charts
 Timelines visualize historical trends, trajectory pacing, and seasonality:
 
 * **Line Charts**: Track periodic counts or milestones over time *(such as orders per month)*:
@@ -65,37 +65,37 @@ Timelines visualize historical trends, trajectory pacing, and seasonality:
 
   ![Area chart showing monthly invoiced revenue trajectory](../media/018.png)
 
-### Categorical Comparisons: Bar and Column Charts
+### 2.5 Categorical Comparisons: Bar and Column Charts
 Bar charts compare distinct entities or categories side-by-side:
 
 ![Bar chart showing Best Sellers by Revenue](../media/019.png)
 
 * Identifies top-performing sales reps, product families, or regional branches.
 
-### Component Breakdowns: Stacked Bar Charts
+### 2.6 Component Breakdowns: Stacked Bar Charts
 Stacked charts divide a single aggregate bar into component segments, illustrating both the overall total and each constituent element *(such as monthly expenses broken into mileage, meals, and general operating costs)*:
 
 ![Stacked bar chart showing Expenses Analysis by category](../media/020.png)
 
-### Dual-Metric Relationships: Combo Charts
+### 2.7 Dual-Metric Relationships: Combo Charts
 Combo charts plot two metrics sharing a common horizontal axis but utilizing different scales—such as total revenue plotted as vertical bars and average revenue per order plotted as an overlay line:
 
 ![Combo chart displaying hourly revenue bars with average per order line](../media/021.png)
 
-### Proportional Share: Pie and Donut Charts
+### 2.8 Proportional Share: Pie and Donut Charts
 Pie charts illustrate how a 100% total distributes across defined operational stages or categories *(such as project tasks divided across In Progress, Blocked, Review, and Done)*:
 
 ![Pie chart showing distribution of Tasks by State](../media/022.png)
 
 ---
 
-## Apply Dimensional and Date Range Filters
+## 3. Apply Dimensional and Date Range Filters
 
 Global dashboard filters allow you to segment and slice dashboard data dynamically without permanently modifying underlying spreadsheets.
 
 ![Dashboard filter bar highlighted at the top of the view](../media/004.png)
 
-### Select a Timeframe Filter
+### 3.1 Select a Timeframe Filter
 1. Click the date dropdown at the top left of the dashboard canvas.
 2. Choose from pre-configured periods:
    * **Last 30 Days** / **Last 90 Days** / **Last 365 Days**
@@ -103,7 +103,7 @@ Global dashboard filters allow you to segment and slice dashboard data dynamical
    * **Custom Date Range**: Select explicit start and end dates.
 3. Click the clear (`x`) icon next to the date dropdown to remove the timeframe filter and view all-time data.
 
-### Apply Dimensional Segment Filters
+### 3.2 Apply Dimensional Segment Filters
 Narrow results by organizational or commercial attributes:
 * **Country**: Filter transactions by customer delivery or billing country.
 * **Product**: Select one or more specific products.
@@ -115,7 +115,7 @@ All connected scorecards, graphs, and tables recalculate immediately upon select
 
 ---
 
-## Drill Down into Underlying Source Records
+## 4. Drill Down into Underlying Source Records
 
 Every visual card and chart on a standard dashboard connects directly to the underlying transactional database.
 
@@ -132,7 +132,7 @@ Every visual card and chart on a standard dashboard connects directly to the und
 
 ---
 
-## Share Filtered Dashboard Views
+## 5. Share Filtered Dashboard Views
 
 To collaborate with colleagues on specific analytical views:
 1. Apply your desired date ranges and dimensional filters.

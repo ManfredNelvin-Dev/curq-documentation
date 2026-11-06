@@ -12,7 +12,7 @@ Configure reversible accounting period lock dates, protect filed statutory tax r
 
 ---
 
-### Task 1: Understand Lock Date Types and Protection Levels
+## 1. Understand Lock Date Types and Protection Levels
 
 CURQ provides two distinct tiers of accounting lock dates: **Reversible Lock Dates** and an **Irreversible Lock Date**. Understanding the boundaries of each lock date ensures operational data integrity without accidentally restricting authorized financial adjustments.
 
@@ -38,7 +38,7 @@ CURQ provides two distinct tiers of accounting lock dates: **Reversible Lock Dat
 
 ---
 
-### Task 2: Configure Interim Period Lock Dates (Monthly or Quarterly)
+## 2. Configure Interim Period Lock Dates (Monthly or Quarterly)
 
 After completing monthly bank reconciliations or filing quarterly VAT returns, configure reversible lock dates to prevent operational staff from posting transactions into closed interim periods.
 
@@ -60,37 +60,39 @@ After completing monthly bank reconciliations or filing quarterly VAT returns, c
 
 ---
 
-### Task 3: Execute the Annual Fiscal Year-End Closing Workflow
+## 3. Annual Fiscal Year-End Closing Workflow
+
+### 3.1 Execute the Annual Fiscal Year-End Closing Workflow
 
 Performing a formal fiscal year-end close in CURQ ensures that all operational sub-ledgers agree with the general ledger, statutory tax obligations are finalized, and annual net income is transferred to equity. Complete the closing process using the following sequence:
 
-#### Step 1: Reconcile Financial and Clearing Accounts
+#### 3.1.1 Step 1: Reconcile Financial and Clearing Accounts
 
 1. Navigate to **Accounting > Bank Statements** and verify that all bank, credit card, and payment gateway statements through December 31 have been imported and reconciled.
 2. Open the **Reconcile** widget under **Accounting > Reconcile** and confirm that all customer receipts and vendor payments are matched against open invoices and bills.
 3. Review suspense clearing accounts *(such as `1109000 Bank suspense account`)* and ensure the ending balance is zero.
 
-#### Step 2: Process Pending Operational Documents
+#### 3.1.2 Step 2: Process Pending Operational Documents
 
 1. Go to **Customers > Invoices** and filter by status `Draft`. Validate all completed customer invoices dated in the fiscal year.
 2. Go to **Vendors > Bills** and filter by status `Draft`. Validate all approved vendor bills belonging to the fiscal year.
 3. Process all approved employee expenses and credit notes.
 
-#### Step 3: Reconcile Inventory and Stock Valuation
+#### 3.1.3 Step 3: Reconcile Inventory and Stock Valuation
 
 *(If physical inventory management is utilized)*
 1. Perform the year-end physical inventory count.
 2. Process inventory adjustments so that recorded quantities match actual warehouse stock on hand.
 3. Confirm that stock valuation accounts in the general ledger align with perpetual inventory valuations.
 
-#### Step 4: Compute and Post Year-End Asset Depreciation
+#### 3.1.4 Step 4: Compute and Post Year-End Asset Depreciation
 
 1. Navigate to **Assets > Compute Assets**.
 2. Select the final date of the fiscal year *(e.g., `12/31/2026`)*.
 3. Click **Compute** to generate and post all outstanding monthly depreciation journal entries across active fixed assets through the end of the year.
 4. Review asset reports under **Reporting > Financial Assets report** to verify total accumulated depreciation and net book values.
 
-#### Step 5: Post Accrual, Prepayment, and Adjusting Entries
+#### 3.1.5 Step 5: Post Accrual, Prepayment, and Adjusting Entries
 
 1. Navigate to **Accounting > Journal Entries**.
 2. Click **+ New** to create adjusting journal entries in the **Miscellaneous Operations** journal dated `12/31/2026`:
@@ -100,7 +102,7 @@ Performing a formal fiscal year-end close in CURQ ensures that all operational s
    * **Bad Debt Provisions**: Record write-offs or adjustments for doubtful customer receivables.
 3. Post each adjusting entry to the general ledger.
 
-#### Step 6: Finalize Statutory Tax Returns
+#### 3.1.6 Step 6: Finalize Statutory Tax Returns
 
 1. Navigate to **Reporting > NL BTW Statement**.
 2. Generate and calculate the final Q4 VAT return covering `10/01/2026` through `12/31/2026` via [**File Statutory VAT Returns and ICP Declaration**](./08-file-statutory-vat-returns-and-icp-declaration.md).
@@ -108,7 +110,7 @@ Performing a formal fiscal year-end close in CURQ ensures that all operational s
 4. Generate the corresponding **NL ICP Statement** for Q4 cross-border EU transactions.
 5. Open **Accounting > Lock Dates** and set **Tax Return Lock Date** to `12/31/2026`.
 
-#### Step 7: Audit Financial Reports and Trial Balance
+#### 3.1.7 Step 7: Audit Financial Reports and Trial Balance
 
 1. Navigate to **Reporting > MIS Reports**.
 2. Generate the **Trial Balance** (*Proef- en Saldibalans*) for the full fiscal year (`01/01/2026` to `12/31/2026`) and confirm that total debits equal total credits.
@@ -117,7 +119,7 @@ Performing a formal fiscal year-end close in CURQ ensures that all operational s
 
 ---
 
-### Task 4: Transfer Annual Net Profit or Loss to Equity
+### 3.2 Transfer Annual Net Profit or Loss to Equity
 
 Under Dutch accounting conventions and double-entry bookkeeping standards, the annual net profit or loss calculated on the Profit and Loss statement must be transferred to the company balance sheet equity reserve *(such as `0500000 Algemene reserve` / Retained Earnings)* to close the income and expense accounts for the new financial year.
 
@@ -139,7 +141,7 @@ Under Dutch accounting conventions and double-entry bookkeeping standards, the a
 
 ---
 
-### Task 5: Seal the Fiscal Year with the Hard Lock Date
+### 3.3 Seal the Fiscal Year with the Hard Lock Date
 
 Once all financial statements have been approved by management and signed off by the external auditor, seal the fiscal year permanently to ensure complete compliance and audit immutability.
 
@@ -166,7 +168,7 @@ Once all financial statements have been approved by management and signed off by
 
 ---
 
-### Task 6: Temporarily Reopen a Reversible Lock Date for Auditor Corrections
+## 4. Temporarily Reopen a Reversible Lock Date for Auditor Corrections
 
 If an external auditor requires an adjusting entry in a closed interim period or prior year before the Hard Lock Date is applied:
 
@@ -179,7 +181,7 @@ If an external auditor requires an adjusting entry in a closed interim period or
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Create Manual Journal Entries](./05-create-manual-journal-entries.md)
 * [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)

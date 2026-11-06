@@ -4,7 +4,9 @@ This guide covers how to initiate a new Request for Quotation (RFQ), select supp
 
 ---
 
-## Task 1: Start a New RFQ
+## 1. Create and Configure Requests for Quotation
+
+### 1.1 Start a New RFQ
 
 1. Open the **Purchase** application from the main dashboard.
 2. In the top navigation, ensure you are on **Orders → Requests for Quotation**.
@@ -14,7 +16,7 @@ This guide covers how to initiate a new Request for Quotation (RFQ), select supp
 
 ---
 
-## Task 2: Configure Vendor and Delivery Parameters
+### 1.2 Configure Vendor and Delivery Parameters
 
 1. Select your supplier in the **Vendor** field (for example, *Acme Technologies*).
    The system automatically fills in their default **Currency** (e.g., *EUR*), **Payment Terms**, and **Fiscal Position** based on their contact record.
@@ -32,7 +34,7 @@ This guide covers how to initiate a new Request for Quotation (RFQ), select supp
 
 ---
 
-## Task 3: Add Products and Line Items
+### 1.3 Add Products and Line Items
 
 1. Under the **Products** tab, click **Add a product**.
 2. Select your item in the **Product** column (for example, *Fair Phone 5 (Black)*).
@@ -51,7 +53,7 @@ This guide covers how to initiate a new Request for Quotation (RFQ), select supp
 
 ---
 
-## Task 4: Configure Commercial and Incoterm Details
+### 1.4 Configure Commercial and Incoterm Details
 
 Open the **Other Information** tab to verify commercial ownership, payment terms, and accounting details:
 

@@ -9,7 +9,9 @@ Transition quotations into binding sales orders, manage automatic order locking,
 
 ---
 
-### Task 1: Manually Confirm a Quotation into a Sales Order
+## 1. Confirm and Lock Sales Orders
+
+### 1.1 Manually Confirm a Quotation into a Sales Order
 
 When a customer accepts a proposal via phone, email, or in-person agreement:
 
@@ -29,7 +31,7 @@ When a customer accepts a proposal via phone, email, or in-person agreement:
 
 ---
 
-### Task 2: Lock and Unlock Confirmed Sales Orders
+### 1.2 Lock and Unlock Confirmed Sales Orders
 
 To prevent accidental price tampering or unauthorized alterations once production or shipping begins:
 
@@ -42,7 +44,7 @@ To prevent accidental price tampering or unauthorized alterations once productio
 
 ---
 
-### Task 3: Cancel a Sales Order
+## 2. Cancel a Sales Order
 
 If a customer retracts an order or a commercial agreement dissolves:
 
@@ -64,7 +66,7 @@ If a customer retracts an order or a commercial agreement dissolves:
 
 ---
 
-### Task 4: Reactivate a Cancelled Order
+## 3. Reactivate a Cancelled Order
 
 If a customer reconsiders or a cancellation was executed prematurely:
 
@@ -75,14 +77,14 @@ If a customer reconsiders or a cancellation was executed prematurely:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Order Has Draft or Posted Invoices**: You cannot cancel a sales order if an active posted invoice exists. You must first open the invoice via the **Invoices** smart button, click **Add Credit Note** (or **Reset to Draft > Cancel**), and then return to cancel the sales order.
 * **Partial Deliveries Already Processed**: If warehouse personnel already validated shipment for part of the order, cancelling the sales order will cancel remaining backorders, but will preserve the historical record of already-delivered items for billing.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Process Your First Sale from Quote to Invoice](../getting-started/01-process-your-first-sale.md)
 * [Invoice Sales Orders](./04-invoice-sales-orders.md)
 * [Understanding the Sales Order Lifecycle and State Machine](../core-concepts/01-understanding-the-sales-order-lifecycle.md)

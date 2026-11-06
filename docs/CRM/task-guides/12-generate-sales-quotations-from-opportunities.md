@@ -4,7 +4,9 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 
 ---
 
-### Task 1: Create a Quotation from an Opportunity
+## 1. Quotation Generation and Dispatch
+
+### 1.1 Create a Quotation from an Opportunity
 
 1. Open **CRM > Sales > My Pipeline**.
 2. Click into the target opportunity card to open its full form view (e.g., `Test Deal - Cloud Migration` or `Northstar Logisctics - Modernization`).
@@ -23,7 +25,7 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 
 ---
 
-### Task 2: Send the Quotation to the Prospect
+### 1.2 Send the Quotation to the Prospect
 
 1. On the quotation form view, click the **Send by Email** button in the top action bar (highlighted in red):
 
@@ -42,7 +44,9 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 
 ---
 
-### Task 3: Track Quotations on the Opportunity Card
+## 2. Quotation Tracking and Opportunity Finalization
+
+### 2.1 Track Quotations on the Opportunity Card
 
 1. Click the breadcrumbs link at the top to return to the opportunity record (`Pipeline / Northstar Logisctics - Modernization`).
 2. In the form header, notice the **Quotations** smart button (highlighted in red):
@@ -55,7 +59,7 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 
 ---
 
-### Task 4: Confirm the Sale and Finalize the Opportunity
+### 2.2 Confirm the Sale and Finalize the Opportunity
 
 1. When the customer approves the proposal:
 2. Open the quotation (`S00041`), currently in the **Quotation Sent** stage, and click the **Confirm** button in the top action bar (highlighted in red):
@@ -69,14 +73,14 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Multiple Competing Quotations**: If you send multiple alternate quotes to a client, only the quotation that is confirmed will update the final order revenue; remaining draft quotes can be cancelled.
 * **Customer Cancels Before Confirmation**: If the deal falls through, click **Cancel** on the draft quotation and click **Lost** on the opportunity record, selecting the appropriate rejection reason.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Opportunity Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields)
 * [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

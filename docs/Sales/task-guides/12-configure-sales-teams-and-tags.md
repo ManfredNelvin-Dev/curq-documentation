@@ -8,7 +8,9 @@ Organize regional or product sales teams, set monthly invoicing revenue targets,
 
 ---
 
-### Task 1: Create and Structure a Sales Team
+## 1. Create and Assign Sales Teams
+
+### 1.1 Create and Structure a Sales Team
 
 1. Navigate to **Sales > Configuration > Sales Teams**.
 
@@ -40,7 +42,7 @@ Organize regional or product sales teams, set monthly invoicing revenue targets,
 
 ---
 
-### Task 2: Assign Sales Teams to Quotations
+### 1.2 Assign Sales Teams to Quotations
 
 1. Open any draft quotation or sales order *(e.g., `S00043`)*.
 2. Click the **Other Info** tab.
@@ -52,7 +54,7 @@ Organize regional or product sales teams, set monthly invoicing revenue targets,
 
 ---
 
-### Task 3: Configure and Assign Sales Order Tags
+## 2. Configure and Assign Sales Order Tags
 
 Tags allow flexible categorization of deals by industry, campaign, or strategic priority:
 
@@ -81,14 +83,14 @@ Tags allow flexible categorization of deals by industry, campaign, or strategic 
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Team Target Mismatch Across Currencies**: The invoicing target is evaluated in the company's base currency. In multi-company environments, ensure sales orders match the sales team's associated operating company to ensure dashboard calculations align.
 * **Archiving a Sales Team**: If an organizational unit merges, open the team form and select **⚙ Actions > Archive**. Historical sales orders retain their team attribution, but the team will no longer appear in selection dropdowns for new deals.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Sales Reporting and Analytics](./13-sales-reporting-and-analytics.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
 

@@ -10,7 +10,9 @@ Configure customer bank mandates, prepare invoices for automatic direct debit co
 
 ---
 
-### Task 1: Create and Validate a Customer Banking Mandate
+## 1. SEPA Direct Debit Collection Workflow
+
+### 1.1 Create and Validate a Customer Banking Mandate
 
 A signed SEPA mandate gives your business legal authorization to debit funds directly from a customer's bank account. Under European banking regulations, collections without a valid mandate are prohibited.
 
@@ -52,7 +54,7 @@ A signed SEPA mandate gives your business legal authorization to debit funds dir
 
 ---
 
-### Task 2: Configure Customer Invoices for Direct Debit Collection
+### 1.2 Configure Customer Invoices for Direct Debit Collection
 
 When invoicing a customer who has an active direct debit mandate, CURQ routes the transaction into the electronic collection pipeline:
 
@@ -79,7 +81,7 @@ When invoicing a customer who has an active direct debit mandate, CURQ routes th
 
 ---
 
-### Task 3: Create, Generate, and Export a SEPA Direct Debit Order
+### 1.3 Create, Generate, and Export a SEPA Direct Debit Order
 
 Rather than executing individual collections, CURQ bundles all eligible open direct debit invoices into an ISO 20022 XML batch file (`pain.008.001.02`) for electronic banking submission:
 
@@ -153,7 +155,7 @@ Rather than executing individual collections, CURQ bundles all eligible open dir
 
 ---
 
-### Task 4: Reconcile Incoming Batch Collections Against the Bank Statement
+### 1.4 Reconcile Incoming Batch Collections Against the Bank Statement
 
 Once the clearing bank processes the direct debit file and credits the net collected funds to your bank account:
 
@@ -201,7 +203,7 @@ Once the clearing bank processes the direct debit file and credits the net colle
 
 ---
 
-### Edge Cases and Compliance Guidelines
+## Edge Cases and Compliance Guidelines
 
 * **Debtor Reversals and Chargebacks (*Storno*)**:
   * If a customer disputes a collection or their bank rejects the debit due to insufficient funds (*Storno*):
@@ -220,7 +222,7 @@ Once the clearing bank processes the direct debit file and credits the net colle
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)

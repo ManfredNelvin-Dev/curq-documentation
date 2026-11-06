@@ -10,7 +10,7 @@ Monitor online store revenue, track web visitor engagement, audit granular page 
 
 ---
 
-## Task 1: Accessing Website Reporting Menus
+## 1. Access Website Reporting Menus
 
 All website analytics and reporting tools are consolidated in the top administrative bar under the **Reporting** menu:
 
@@ -25,11 +25,11 @@ All website analytics and reporting tools are consolidated in the top administra
 
 ---
 
-## Task 1: Web Analytics Dashboard
+## 2. Web Analytics Dashboard
 
 The **Analytics** view (**Reporting** > **Analytics**) serves as the central traffic monitoring dashboard for your website.
 
-### Features and Capabilities
+### 2.1 Features and Capabilities
 
 * **Multi-Website Switching**: In multi-website environments, use the website selector buttons in the upper-right corner of the control panel to switch between domains and view isolated analytics per website.
 * **Go to Website**: Click the **Go to Website** button in the top bar to immediately navigate to the frontend of the active website.
@@ -41,13 +41,13 @@ The **Analytics** view (**Reporting** > **Analytics**) serves as the central tra
 
 ---
 
-## Task 2: Online Sales Analysis
+## 3. Online Sales Analysis
 
 The **Online Sales Analysis** (**Reporting** > **Online Sales**) provides deep analytical reporting using CURQ's multi-dimensional reporting engine.
 
 The report automatically filters to show only orders placed through the website, isolating online transactions from direct backend sales or point-of-sale orders.
 
-### Default View and Filters
+### 3.1 Default View and Filters
 
 * **Default Filter**: Pre-filtered with **Confirmed Orders**, focusing exclusively on validated customer purchases.
 * **Default Display**: Opens in a **Pivot** view with **Order Date** grouped along rows, **Status** across columns, and **Untaxed Amount** as the initial measure.
@@ -55,7 +55,7 @@ The report automatically filters to show only orders placed through the website,
 
 ![Online Sales Analysis opened in pivot view highlighting Confirmed Orders filter and view switchers](../media/115.png)
 
-### Available Measures
+### 3.2 Available Measures
 
 Click the **Measures** dropdown in the top-left corner of the view to plot or calculate analytical metrics across your confirmed online sales orders:
 
@@ -65,7 +65,7 @@ Click the **Measures** dropdown in the top-left corner of the view to plot or ca
 * **Volume Measures**: Analyze units via **Qty Ordered**, **Qty Delivered**, **Qty Invoiced**, and **Qty to Invoice**.
 * **Logistics & Activity**: Track freight impact via **Gross Weight**, cubic **Volume**, and order line **Count**.
 
-### Grouping and Dimension Breakdown
+### 3.3 Grouping and Dimension Breakdown
 
 Expand rows and columns in the Pivot table or group data points in the Graph view using standard dimensions:
 
@@ -79,7 +79,7 @@ Expand rows and columns in the Pivot table or group data points in the Graph vie
 
 ![Online Sales Analysis pivot table breakdown menu showing grouping dimensions](../media/116.png)
 
-### Graph View Customization
+### 3.4 Graph View Customization
 
 When switching to **Graph** view, select between:
 
@@ -92,11 +92,11 @@ When switching to **Graph** view, select between:
 
 ---
 
-## Task 3: Website Visitors Tracking
+## 4. Website Visitors Tracking
 
 The **Visitors** menu (**Reporting** > **Visitors**) tracks individual web sessions, providing real-time audience intelligence, browsing history, and lead generation tools.
 
-### View Modes and Filters
+### 4.1 View Modes and Filters
 
 * **Default Filter**: Automatically filters for activity within the **Last 7 Days**.
 * **Supported Views**: **Kanban**, **List**, **Form**, and **Graph**.
@@ -104,13 +104,13 @@ The **Visitors** menu (**Reporting** > **Visitors**) tracks individual web sessi
 
 ![Website visitors kanban view displaying visitor presence indicators, visits count, and outreach actions](../media/118.png)
 
-### Visitor List View
+### 4.2 Visitor List View
 
 > For visitor tracking columns, presence indicators, and outreach action specifications, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 The List view organizes active and historical web sessions, displaying GeoIP country flags, contact names or auto-assigned visitor IDs, last connection timestamps, preferred languages, cumulative visit counts, visited page and product tags, linked CRM lead counts, and direct outreach shortcuts *(Email, SMS, Livechat)*.
 
-### Visitor Form View and Smart Buttons
+### 4.3 Visitor Form View and Smart Buttons
 
 Clicking any visitor opens the detailed **Visitor Form**, displaying browsing history and related records:
 
@@ -135,7 +135,7 @@ Clicking the **Leads** smart button opens the list of CRM opportunities associat
 
 ![CRM opportunities list view filtered for the selected website visitor](../media/121.png)
 
-### Direct Visitor Engagement
+### 4.4 Direct Visitor Engagement
 
 Operators can initiate outbound communication directly from the visitor form header:
 
@@ -151,13 +151,13 @@ Once a message is exchanged, the conversation is permanently logged and the **Ch
 
 ---
 
-## Task 4: Page Views Audit Log
+## 5. Page Views Audit Log
 
 The **Page Views** view (**Reporting** > **Page Views**) provides a granular log of page impressions across the site.
 
 ![Page views audit log in list view displaying visitors, visited URLs, and timestamps](../media/124.png)
 
-### Event Logging and Search Filters
+### 5.1 Event Logging and Search Filters
 
 Every time a visitor navigates to a URL, CURQ records an entry capturing the destination and session:
 
@@ -167,13 +167,13 @@ Every time a visitor navigates to a URL, CURQ records an entry capturing the des
   * **Urls & Pages**: Displays all tracked URLs including dynamic system routes.
   * **Products**: Filters for impressions on published eCommerce product pages.
 
-### Page View Data Fields
+### 5.2 Page View Data Fields
 
 > For audit logging columns, visitor session parameters, and page tracking attributes, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 The audit log captures granular web impression attributes including the visitor profile reference, managed page title, exact relative URL path route, linked catalog product, and the precise HTTP request timestamp.
 
-### Grouping and Traffic Analysis
+### 5.3 Grouping and Traffic Analysis
 
 Use the **Group By** menu to aggregate traffic patterns:
 

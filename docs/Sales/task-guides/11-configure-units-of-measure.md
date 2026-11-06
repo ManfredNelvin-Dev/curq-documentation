@@ -8,7 +8,9 @@ Enable multiple units of measure, establish measurement categories, define conve
 
 ---
 
-### Task 1: Access and Create UoM Categories
+## 1. Configure UoM Categories and Conversion Units
+
+### 1.1 Access and Create UoM Categories
 
 Units of measure must belong to a shared measurement category *(e.g., Weight, Volume, Length, or Unit)* to enable mathematical conversions:
 
@@ -25,7 +27,7 @@ Units of measure must belong to a shared measurement category *(e.g., Weight, Vo
 
 ---
 
-### Task 2: Configure Units of Measure and Conversion Ratios
+### 1.2 Configure Units of Measure and Conversion Ratios
 
 Within your selected category, click **Add a line** under the **Units of Measure** table:
 
@@ -41,7 +43,7 @@ Within your selected category, click **Add a line** under the **Units of Measure
 
 ---
 
-### Task 3: Apply Units of Measure to Products and Quotes
+## 2. Apply Units of Measure to Products and Quotes
 
 1. **Assign Default UoM on Master Product**:
    * Open the product form in **Sales > Products > Products** *(e.g., `Fair Phone 5`)*.
@@ -65,13 +67,13 @@ Within your selected category, click **Add a line** under the **Units of Measure
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **"Cannot Convert Between Different Categories" Error**: You cannot convert between units belonging to different categories *(e.g., converting Kilograms directly to Liters or Hours)* without specific density attributes. Ensure both units share the same UoM Category.
 * **Changing the Reference Unit on an Active Category**: Never change the reference unit on an existing category that contains historical sales or inventory transactions, as this will recalculate historical stock balances incorrectly. Instead, create a new UoM Category.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Products and Product Variants](./06-configure-products-and-variants.md)
 * [Pricing, Pricelists, and Discount Specifications](../settings-and-fields/02-pricing-pricelists-and-discount-specifications.md)

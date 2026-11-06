@@ -4,7 +4,9 @@ Advance deals through visual Kanban stages, record won sales, apply standardized
 
 ---
 
-### Task 1: Move Deals Across Kanban Stages
+## 1. Manage Pipeline Progression and Closure
+
+### 1.1 Move Deals Across Kanban Stages
 
 1. Open **CRM > Sales > My Pipeline**.
 2. Locate the target opportunity card.
@@ -13,7 +15,7 @@ Advance deals through visual Kanban stages, record won sales, apply standardized
 
 ---
 
-### Task 2: Mark an Opportunity as Won
+### 1.2 Mark an Opportunity as Won
 
 When a client accepts your commercial proposal:
 
@@ -29,7 +31,7 @@ When a client accepts your commercial proposal:
 
 ---
 
-### Task 3: Mark an Opportunity as Lost
+### 1.3 Mark an Opportunity as Lost
 
 When negotiations conclude without a sale, recording structured reasons ensures accurate analytical feedback:
 
@@ -48,7 +50,7 @@ When negotiations conclude without a sale, recording structured reasons ensures 
 
 ---
 
-### Task 4: Find and Restore Lost Opportunities
+## 2. Find and Restore Lost Opportunities
 
 If a prospective client contacts your company again to resume discussions:
 
@@ -65,14 +67,14 @@ If a prospective client contacts your company again to resume discussions:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Accidentally Marked Lost**: If you clicked Lost by mistake, immediately filter by **Lost**, open the deal, and click **Restore**.
 * **Stage Probability Mismatch**: Moving a deal into a stage updates its probability to that stage's default value unless you have entered a manual override.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog)
 * [Configure Standardized Lost Reasons and Deal Tags](./07-configure-lost-reasons-and-tags.md)
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

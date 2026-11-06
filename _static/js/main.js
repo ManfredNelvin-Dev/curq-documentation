@@ -122,23 +122,8 @@ if (document.readyState === 'loading') {
 }
 
 function cleanHeadingNumbers() {
-    const bodyHeadings = document.querySelectorAll('.sphinx-content h2, .sphinx-content h3');
-    bodyHeadings.forEach(h => {
-        Array.from(h.childNodes).forEach(node => {
-            if (node.nodeType === Node.TEXT_NODE) {
-                node.nodeValue = node.nodeValue.replace(/^\s*\d+\.\s*/, '');
-            }
-        });
-    });
-
-    const tocLinks = document.querySelectorAll('.right-sidebar .toc-container a');
-    tocLinks.forEach(a => {
-        Array.from(a.childNodes).forEach(node => {
-            if (node.nodeType === Node.TEXT_NODE) {
-                node.nodeValue = node.nodeValue.replace(/^\s*\d+\.\s*/, '');
-            }
-        });
-    });
+    // Heading numbering is authored directly in Markdown source files.
+    // Client-side stripping/mutating is disabled to preserve accurate numbering and hierarchy.
 }
 
 function initSidebarScroll() {
@@ -298,7 +283,7 @@ function parseDocMetadata(docname) {
 function cleanTitle(title) {
     if (!title) return '';
     return title
-        .replace(/^\d+\.\s*/, '')
+        .replace(/^\d+(\.\d+)*\s*/, '')
         .replace(/&amp;/g, '&')
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')

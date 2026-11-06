@@ -4,7 +4,9 @@ This guide covers how to access the campaigns dashboard, create marketing initia
 
 ---
 
-## Task 1: Open the Campaigns Dashboard
+## 1. Create Marketing Campaigns
+
+### 1.1 Open the Campaigns Dashboard
 
 Access the campaign management workspace:
 
@@ -20,7 +22,7 @@ Access the campaign management workspace:
 
 ---
 
-## Task 2: Create a New Marketing Campaign
+### 1.2 Create a New Marketing Campaign
 
 Define a new strategic marketing initiative directly from the Kanban board:
 
@@ -38,7 +40,7 @@ Define a new strategic marketing initiative directly from the Kanban board:
 
 ---
 
-## Task 3: Edit, Configure, or Archive Campaign Cards
+## 2. Edit, Configure, or Archive Campaign Cards
 
 Manage existing campaigns directly from the Kanban workspace:
 
@@ -55,7 +57,9 @@ Manage existing campaigns directly from the Kanban workspace:
 
 ---
 
-## Task 4: Create and Link Mailings to a Campaign
+## 3. Link Mailings and Track Campaign Engagement
+
+### 3.1 Create and Link Mailings to a Campaign
 
 Compose email broadcasts directly within your campaign initiative:
 
@@ -69,7 +73,7 @@ Compose email broadcasts directly within your campaign initiative:
 
 ---
 
-## Task 5: Track Campaign Mailing Engagement and Smart Button Metrics
+### 3.2 Track Campaign Mailing Engagement and Smart Button Metrics
 
 Monitor real-time deliverability, engagement, and conversion metrics across linked broadcasts:
 

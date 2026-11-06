@@ -4,7 +4,9 @@ Initiate private conversations with individual colleagues, create multi-user gro
 
 ---
 
-## Task 1: Start a One-on-One Direct Message
+## 1. Direct and Group Message Conversations
+
+### 1.1 Start a One-on-One Direct Message
 
 Direct messages provide private, encrypted communications visible exclusively to the participants:
 
@@ -27,7 +29,7 @@ Direct messages provide private, encrypted communications visible exclusively to
 
 ---
 
-## Task 2: Create a Multi-User Private Group Chat
+### 1.2 Create a Multi-User Private Group Chat
 
 When coordinating a quick project between several colleagues without creating a permanent channel:
 
@@ -43,7 +45,7 @@ When coordinating a quick project between several colleagues without creating a 
 
 ---
 
-## Task 3: Interpret Real-Time User Presence Status
+## 2. Interpret Real-Time User Presence Status
 
 CURQ automatically monitors user activity in the browser to inform coworkers of real-time availability:
 
@@ -57,7 +59,7 @@ CURQ automatically monitors user activity in the browser to inform coworkers of 
 
 ---
 
-## Task 4: Use the Top-Bar Quick-Chat Dropdown from Any Application
+## 3. Use the Top-Bar Quick-Chat Dropdown from Any Application
 
 You do not need to leave the Sales, Accounting, or CRM applications to chat with colleagues:
 
@@ -73,7 +75,7 @@ You do not need to leave the Sales, Accounting, or CRM applications to chat with
 
 ---
 
-## Task 5: Manage Unread Messages and the Unread Banner
+## 4. Manage Unread Messages and the Unread Banner
 
 When coworkers send you messages while you are working in another tab or application:
 
@@ -92,7 +94,7 @@ When coworkers send you messages while you are working in another tab or applica
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Manage Channels](01-create-and-manage-channels.md)
 * [Collaborate with Mentions, Reactions, and Attachments](03-collaborate-with-mentions-reactions-and-attachments.md)
 * [Configure Notification Preferences and Do-Not-Disturb](05-configure-notification-preferences-and-dnd.md)

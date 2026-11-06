@@ -4,7 +4,9 @@ Create corporate or individual partner profiles, link employees to parent compan
 
 ---
 
-### Task 1: Create a Company or Individual Contact
+## 1. Create and Configure Partner Contacts
+
+### 1.1 Create a Company or Individual Contact
 
 1. Navigate to the **Contacts** app from your main dashboard.
 2. In the top-left corner, click **New**.
@@ -33,7 +35,7 @@ Create corporate or individual partner profiles, link employees to parent compan
 
 ---
 
-### Task 2: Add Separate Delivery, Invoice, and Sub-Contact Addresses
+### 1.2 Add Separate Delivery, Invoice, and Sub-Contact Addresses
 
 Large clients and vendors often operate across multiple locations. To ensure invoices and shipments are routed to the correct locations automatically:
 
@@ -56,9 +58,9 @@ Large clients and vendors often operate across multiple locations. To ensure inv
 
 ---
 
-### Task 3: Configure Commercial, Accounting, and Invoicing Settings
+### 1.3 Configure Commercial, Accounting, and Invoicing Settings
 
-#### Assign Sales and Purchase Terms
+#### 1.3.1 Assign Sales and Purchase Terms
 1. Open the contact record and select the **Sales & Purchase** tab.
 
    ![Sales and Purchase tab settings](../media/008.png)
@@ -74,7 +76,7 @@ Large clients and vendors often operate across multiple locations. To ensure inv
 
 > **Note:** For detailed definitions of sales pricelists, fiscal positions, and commercial register IDs, see [**Sales and Purchase Tab**](../settings-and-fields/01-contact-form-field-definitions.md#sales-and-purchase-tab).
 
-#### Configure Invoicing and Auto-Post Bill Rules
+#### 1.3.2 Configure Invoicing and Auto-Post Bill Rules
 1. Select the **Invoicing** tab on the contact form.
 
    ![Invoicing tab settings](../media/009.png)
@@ -88,7 +90,7 @@ Large clients and vendors often operate across multiple locations. To ensure inv
      * **Ask after 3 validations without edits**: Prompts to automate bill posting after three consecutive bills without manual modifications.
      * **Never**: Mandates manual confirmation for every bill received from this supplier.
 
-#### Configure Internal Notes and Operational Alerts
+#### 1.3.3 Configure Internal Notes and Operational Alerts
 To alert your sales team about special handling or block bad debtors:
 1. Select the **Internal Notes** tab.
 
@@ -104,7 +106,7 @@ To alert your sales team about special handling or block bad debtors:
 
 > **Note:** For behavioral rules and popup dialog specifications of alert levels, see [**Internal Notes and Warnings Tab**](../settings-and-fields/01-contact-form-field-definitions.md#internal-notes-and-warnings-tab).
 
-#### Configure Personal Information, Geolocation, Membership, and Privacy (Optional)
+#### 1.3.4 Configure Personal Information, Geolocation, Membership, and Privacy (Optional)
 Depending on your operational requirements, configure secondary partner profile tabs:
 
 1. **Personal Information** *(Individual contacts)*:
@@ -130,7 +132,7 @@ Depending on your operational requirements, configure secondary partner profile 
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Contact Linked to the Wrong Company**: Open the individual's record, click the **Company Name** field, click the **X** to remove the link, and select or type the correct company.
 * **Employee Address Differs from Company**: By default, linked contacts inherit their parent company's address. To set a private home or branch address, open the employee record, edit the address fields directly, and save.

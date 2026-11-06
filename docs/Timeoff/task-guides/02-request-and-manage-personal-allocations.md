@@ -4,7 +4,9 @@ The **My Allocations** view provides employees with a dedicated catalog of their
 
 ---
 
-### Task 1: Access the Personal Allocations Catalog
+## 1. Review and Request Personal Allocations
+
+### 1.1 Access the Personal Allocations Catalog
 
 Review your allocated leave balances and their operational statuses:
 
@@ -19,7 +21,7 @@ Review your allocated leave balances and their operational statuses:
 
 ---
 
-### Task 2: Interpret the Allocations Table
+### 1.2 Interpret the Allocations Table
 
 Each row in the allocations list details an entitlement record:
 
@@ -34,7 +36,7 @@ Each row in the allocations list details an entitlement record:
 
 ---
 
-### Task 3: Submit a Request for Additional Allocation
+### 1.3 Submit a Request for Additional Allocation
 
 When an employee has completed overtime work, earned compensatory time, or requires extra leave allowance:
 
@@ -57,7 +59,7 @@ When an employee has completed overtime work, earned compensatory time, or requi
 
 ---
 
-### Task 4: Filter and Search Allocation Records
+## 2. Filter and Search Allocation Records
 
 Locate specific allocation records across historical cycles:
 
@@ -67,7 +69,7 @@ Locate specific allocation records across historical cycles:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Allocation Balance Not Yet Credited**: Newly submitted allocation requests remain in **To Approve** status until authorized by your manager or HR officer. Check the status column before attempting to book leave against the new balance.
 * **Cannot Locate Expired or Historical Grants**: The allocations catalog filters by **Currently Valid** by default. Click the (`x`) on the search bar tag to reveal previous years' expired or exhausted allocations.

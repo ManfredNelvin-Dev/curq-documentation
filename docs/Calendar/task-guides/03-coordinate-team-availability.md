@@ -4,7 +4,9 @@ This guide covers how to overlay multiple team members' calendars, identify mutu
 
 ---
 
-## Task 1: Display Multiple Attendee Calendars
+## 1. Team Availability and Coordinated Scheduling
+
+### 1.1 Display Multiple Attendee Calendars
 
 When arranging sessions involving several colleagues, you can overlay their individual commitments directly onto your calendar workspace:
 
@@ -18,7 +20,7 @@ When arranging sessions involving several colleagues, you can overlay their indi
 
 ---
 
-## Task 2: Identify Mutual Open Time Slots
+### 1.2 Identify Mutual Open Time Slots
 
 1. Scan the combined time grid to identify vertical gaps where no team member has an active or conflicting commitment.
 2. Verify that the open window accommodates the full required meeting duration.
@@ -26,7 +28,7 @@ When arranging sessions involving several colleagues, you can overlay their indi
 
 ---
 
-## Task 3: Schedule the Coordinated Group Meeting
+### 1.3 Schedule the Coordinated Group Meeting
 
 1. In the quick-create pop-up, enter the meeting title and click **Edit**.
 2. Notice that all colleagues whose calendars were checked in the sidebar are automatically populated in the **Attendees** list.

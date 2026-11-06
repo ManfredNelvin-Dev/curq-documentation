@@ -4,7 +4,9 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 
 ---
 
-### Task 1: Create a Sales Team
+## 1. Create and Structure Sales Teams
+
+### 1.1 Create a Sales Team
 
 1. Open the **CRM** app from your main dashboard.
 2. In the top navigation bar, click **Configuration > Sales Teams**.
@@ -33,7 +35,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 
 ---
 
-### Task 2: Add Team Members and Set Monthly Capacities
+### 1.2 Add Team Members and Set Monthly Capacities
 
 1. On the sales team form, locate the **Members** tab at the bottom.
 2. Click **Add**.
@@ -50,7 +52,9 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 
 ---
 
-### Task 3: Enable Rule-Based Assignment in Settings
+## 2. Configure Rule-Based Lead Assignment
+
+### 2.1 Enable Rule-Based Assignment in Settings
 
 1. In the top navigation bar, click **Configuration > Settings**.
 2. Under the **CRM** section, locate **Rule-Based Assignment**.
@@ -67,7 +71,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 
 ---
 
-### Task 4: Configure Assignment Domains and Territories
+### 2.2 Configure Assignment Domains and Territories
 
 1. Return to **Configuration > Sales Teams** and select your team (e.g., `EU`).
 2. Under the **ASSIGNMENT RULES** column, observe the monthly capacity summary (e.g., `0 leads assigned this month on a maximum of 30`).
@@ -87,7 +91,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 
 ---
 
-### Task 5: Execute Manual Lead Assignment
+## 3. Execute Manual Lead Assignment
 
 1. On the sales team form, click the purple **Assign Leads** button in the header action bar (highlighted in red).
 
@@ -101,7 +105,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Team Member Exceeding Capacity**: If a representative reaches their rolling 30-day cap defined in **Leads (30 days)**, the assignment algorithm automatically skips them and routes subsequent leads to remaining team members with available capacity.
 * **Leads Not Routing**: Verify that the lead attributes match the exact assignment domain filters configured under **ASSIGNMENT RULES**. If a domain matches zero records, click **Edit Domain** and adjust your filter criteria.
@@ -110,7 +114,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
 * [Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
 * [Configure Custom Pipeline Stages](./05-configure-pipeline-stages.md)

@@ -4,7 +4,9 @@ Accrual plans automate progressive leave entitlement accumulation. Instead of cr
 
 ---
 
-### Task 1: Access the Accrual Plans Interface
+## 1. Accrual Plan and Seniority Milestone Setup
+
+### 1.1 Access the Accrual Plans Interface
 
 Open the administrative accrual plan catalog:
 
@@ -21,7 +23,7 @@ Open the administrative accrual plan catalog:
 
 ---
 
-### Task 2: Create a New Accrual Plan
+### 1.2 Create a New Accrual Plan
 
 Initialize a new accrual plan:
 
@@ -43,7 +45,7 @@ Initialize a new accrual plan:
 
 ---
 
-### Task 3: Add and Configure Accrual Milestones
+### 1.3 Add and Configure Accrual Milestones
 
 Accrual rules dictate how much leave is earned, how frequently, and what caps apply:
 
@@ -71,7 +73,7 @@ Accrual rules dictate how much leave is earned, how frequently, and what caps ap
 
 ---
 
-### Task 4: Save and Chain Progressive Seniority Milestones
+### 1.4 Save and Chain Progressive Seniority Milestones
 
 1. In the milestone dialog, click **Save & Close** (highlighted in red) to confirm the milestone (or **Save & New** to define additional seniority tiers).
 2. The milestone appears on the visual **Rules** timeline:
@@ -86,7 +88,7 @@ Accrual rules dictate how much leave is earned, how frequently, and what caps ap
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Accruals Not Calculating on Timesheet Submissions**: If a plan set to **Based on worked time** does not award leave, ensure that timesheets are submitted and approved in the Timesheets application.
 * **Unused Days Carried Over Beyond Policy Limit**: If an employee retained more leave than company policy allows, check the **Carry Over** rule on the active milestone to ensure either **Carry over with a maximum** or **None** is selected.

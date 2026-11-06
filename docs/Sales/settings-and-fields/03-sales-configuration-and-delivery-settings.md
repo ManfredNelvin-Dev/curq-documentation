@@ -4,7 +4,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-### Invoicing Policies Comparison
+## Invoicing Policies Comparison
 
 | Attribute | Ordered Quantities | Delivered Quantities |
 | :--- | :--- | :--- |
@@ -16,7 +16,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-### Delivery Provider Configuration Fields
+## Delivery Provider Configuration Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -31,7 +31,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-### Sales Margin Calculations
+## Sales Margin Calculations
 
 * **Line Margin**: Gross profit calculated as unit selling price minus unit cost, multiplied by the ordered quantity.
 * **Line Margin (%)**: The gross profit percentage of the line's untaxed subtotal.
@@ -41,7 +41,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-### System Validation Errors & Recovery Lookup
+## System Validation Errors & Recovery Lookup
 
 | Error Message | Probable Cause | Corrective Action |
 | :--- | :--- | :--- |
@@ -53,7 +53,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-### Operational Edge Cases and System Rules Reference
+## Operational Edge Cases and System Rules Reference
 
 | Operational Scenario / FAQ Query | System Behavior | Resolution / Best Practice |
 | :--- | :--- | :--- |
@@ -64,7 +64,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Invoice Sales Orders](../task-guides/04-invoice-sales-orders.md)
 * [Sales Reporting and Analytics](../task-guides/13-sales-reporting-and-analytics.md)
 * [Understanding Invoicing and Fulfillment](../core-concepts/02-understanding-invoicing-and-fulfillment.md)

@@ -11,7 +11,9 @@ Recurring supplier contracts automate the receipt and booking of recurring vendo
 
 ---
 
-### Task 1: Create a Supplier Contract
+## 1. Supplier Contract and Invoicing Lifecycle
+
+### 1.1 Create a Supplier Contract
 
 A supplier contract establishes the legal, commercial, and operational framework for recurring vendor commitments.
 
@@ -39,7 +41,7 @@ A supplier contract establishes the legal, commercial, and operational framework
 
 ---
 
-### Task 2: Configure Recurring Expense Lines and Purchase Billing Schedule
+### 1.2 Configure Recurring Expense Lines and Purchase Billing Schedule
 
 Configure the recurring expense items, pricing, and recurrence timing that govern automated vendor bill generation.
 
@@ -81,17 +83,17 @@ Configure the recurring expense items, pricing, and recurrence timing that gover
 
 ---
 
-### Task 3: Generate Recurring Vendor Bills
+### 1.3 Generate Recurring Vendor Bills
 
 CURQ supports automated scheduled generation as well as on-demand batch or individual bill generation.
 
-#### Method A: Automated Daily Generation via System Scheduler
+#### 1.3.1 Method A: Automated Daily Generation via System Scheduler
 CURQ runs an automated background scheduled action titled **Generate Recurring Invoices from Contracts**:
 * The scheduler executes automatically once per day.
 * The system evaluates all active supplier contracts where `Date of Next Invoice` is less than or equal to the current system date.
 * Qualifying contracts automatically generate draft vendor bills matching the configured lines, assign the purchase journal, and advance `Date of Next Invoice` forward by one interval.
 
-#### Method B: Immediate Generation via Create Invoices Button
+#### 1.3.2 Method B: Immediate Generation via Create Invoices Button
 When a new contract is agreed upon and the first vendor bill must be entered immediately:
 1. Open the contract under **Accounting > Vendors > Supplier Contracts**.
 2. Click **Create invoices** in the top action bar:
@@ -101,7 +103,7 @@ When a new contract is agreed upon and the first vendor bill must be entered imm
 
 3. Notice the stat button in the top-right corner increments to **`Invoices 1`**.
 
-#### Method C: Batch Generation via Manual Invoicing
+#### 1.3.3 Method C: Batch Generation via Manual Invoicing
 To generate pending bills across multiple supplier contracts simultaneously:
 1. Navigate to **Accounting > Vendors > Manually Invoice Purchase Contracts**:
 
@@ -114,7 +116,7 @@ To generate pending bills across multiple supplier contracts simultaneously:
 
 ---
 
-### Task 4: Validate, Match, and Settle Generated Vendor Bills
+### 1.4 Validate, Match, and Settle Generated Vendor Bills
 
 1. Open the supplier contract under **Accounting > Vendors > Supplier Contracts**.
 2. Click the **Invoices** stat button *(e.g., `Invoices 1`)* in the top-right corner to open the filtered list of generated vendor bills:
@@ -138,11 +140,11 @@ To generate pending bills across multiple supplier contracts simultaneously:
 
 ---
 
-### Task 5: Log Contract Modifications and Terminate Lines
+## 2. Log Contract Modifications and Terminate Lines
 
 When subscription tiers change, supplier pricing updates, or contracts end:
 
-#### Logging a Contract Modification
+### 2.1 Logging a Contract Modification
 1. Navigate to the **Modifications** tab on the supplier contract:
 
    ![Supplier Contract Modifications tab showing amendment log](../media/163.png)
@@ -152,19 +154,19 @@ When subscription tiers change, supplier pricing updates, or contracts end:
    * **Description**: Enter details of the contractual change *(e.g., `Indexation adjustment: 3.5% annual rate increase`)*.
    * **Sent**: Audit checkbox recording whether the adjustment notice has been processed.
 
-#### Terminating an Individual Line Item
+### 2.2 Terminating an Individual Line Item
 1. Open the supplier contract and locate the target line under **Recurring Invoices**.
 2. Set the **Date End** column on that specific line to the final effective service date.
 3. CURQ excludes that line from future billing runs while continuing to generate recurring bills for remaining active lines.
 
-#### Ending or Cancelling the Contract
+### 2.3 Ending or Cancelling the Contract
 1. In the contract header, enter the final termination date in **Date End**.
 2. Once `Date of Next Invoice` surpasses `Date End`, automated recurring bill generation permanently ceases.
 3. To stop billing immediately, advance `Date End` to today or set the contract status to closed.
 
 ---
 
-### Task 6: Audit Supplier Contract Lines Across Contracts (Reporting)
+## 3. Audit Supplier Contract Lines Across Contracts (Reporting)
 
 To monitor recurring vendor subscription expenses, equipment leases, and scheduled next billing dates across all supplier contracts:
 
@@ -199,7 +201,7 @@ To monitor recurring vendor subscription expenses, equipment leases, and schedul
 
 ---
 
-### Edge Cases and Recovery Steps
+## Edge Cases and Recovery Steps
 
 * **Vendor Invoice Amount Differs from Contract Rate**: If a supplier sends a bill with variable charges *(such as electricity overage or additional bandwidth)*, open the generated draft bill and adjust the line quantity or unit price to match the physical invoice before clicking **Confirm**.
 * **Duplicate Bill Generated**: If a vendor bill was already created manually before the recurring contract generated its draft, delete or cancel the surplus draft bill. Do not confirm both. If the recurring contract date was already advanced, manually adjust `Date of Next Invoice` on the contract back to the correct billing cycle.
@@ -208,7 +210,7 @@ To monitor recurring vendor subscription expenses, equipment leases, and schedul
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Contract and Recurring Invoicing Field Definitions (Customer and Supplier)](../settings-and-fields/06-customer-contract-and-recurring-invoicing-field-definitions.md)
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)

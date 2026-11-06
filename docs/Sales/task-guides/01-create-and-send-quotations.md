@@ -13,7 +13,9 @@ Create commercial offers, organize lines with sections and notes, attach optiona
 
 ---
 
-### Task 1: Create a Blank Quotation and Select Customer
+## 1. Create and Configure Sales Quotations
+
+### 1.1 Create a Blank Quotation and Select Customer
 
 1. Open the **Sales** app.
 2. In the top action bar, click **+ New**.
@@ -31,7 +33,7 @@ Create commercial offers, organize lines with sections and notes, attach optiona
 
 ---
 
-### Task 2: Add and Structure Order Lines
+### 1.2 Add and Structure Order Lines
 
 1. Under the **Order Lines** tab, click **Add a product**.
 2. Select your catalog item from the dropdown. CURQ automatically retrieves the unit price, applicable taxes, and unit of measure.
@@ -45,7 +47,7 @@ Create commercial offers, organize lines with sections and notes, attach optiona
 
 ---
 
-### Task 3: Attach Optional Products
+### 1.3 Attach Optional Products
 
 Provide suggestive up-sells that customers can browse and add independently in the customer portal:
 
@@ -59,7 +61,7 @@ Provide suggestive up-sells that customers can browse and add independently in t
 
 ---
 
-### Task 4: Configure Commercial and Shipping Details
+### 1.4 Configure Commercial and Shipping Details
 
 1. Open the **Other Info** tab.
 
@@ -77,7 +79,7 @@ Provide suggestive up-sells that customers can browse and add independently in t
 
 ---
 
-### Task 5: Send the Quotation by Email
+## 2. Send Quotations by Email
 
 1. Open the quotation from **Sales > Orders > Quotations** *(e.g., `S00051`)*.
 2. In the top-left action header, click **Send by Email**.
@@ -100,7 +102,7 @@ Provide suggestive up-sells that customers can browse and add independently in t
 
 ---
 
-### Task 6: Preview Customer Portal and Print Formal PDF Quotes
+## 3. Preview Customer Portal and Print Formal PDF Quotes
 
 Before sending, or while reviewing terms over the phone with a customer:
 
@@ -122,7 +124,7 @@ Before sending, or while reviewing terms over the phone with a customer:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Quotation Expired Before Customer Signature**: If a customer attempts to sign an expired quote, CURQ displays a notice that the offer has expired. To revalidate, open the quote in the backend, extend the date in the **Expiration** field, and click **Send by Email** to inform the client.
 * **Customer Address Missing**: If a selected customer lacks an invoice or delivery address, click the external link arrow next to the **Customer** field, enter the required addresses in the contact modal, and click **Save**.
@@ -133,7 +135,7 @@ Before sending, or while reviewing terms over the phone with a customer:
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Process Your First Sale from Quote to Invoice](../getting-started/01-process-your-first-sale.md)
 * [Confirm and Lock Sales Orders](./03-confirm-and-lock-sales-orders.md)

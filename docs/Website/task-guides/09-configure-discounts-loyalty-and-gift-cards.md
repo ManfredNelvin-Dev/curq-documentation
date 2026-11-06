@@ -2,7 +2,7 @@
 
 This guide covers setting up customer loyalty rewards, promotional discount coupons, e-gift cards, and shareable discount links on your online store.
 
-## Task 1: Enabling or Disabling Programs for the Website
+## 1. Enable or Disable Programs for the Website
 
 General promotional campaigns, loyalty programs, and gift card generation are managed in Sales; for complete setup instructions, see [**Pricing, Pricelists, and Discount Specifications**](../../Sales/settings-and-fields/02-pricing-pricelists-and-discount-specifications.md) and [**eCommerce Shop and Checkout Settings**](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md).
 
@@ -29,7 +29,7 @@ All promotional, coupon, and gift card programs share the same master records be
 
 4. Click the manual save icon or navigate away to save changes.
 
-## Task 2: Program Types and Website Capabilities
+## 2. Program Types and Website Capabilities
 
 * **Discount & Loyalty**:
   * **Share Promo Code Link**: In the **Discount & Loyalty** list view, click the **Share** button *(share icon)* on any Discount Code row to copy a direct URL that automatically applies the promo code to the customer's online shopping cart. *(The Share button appears only in the list view for Discount Code programs and is not present on the form view)*.

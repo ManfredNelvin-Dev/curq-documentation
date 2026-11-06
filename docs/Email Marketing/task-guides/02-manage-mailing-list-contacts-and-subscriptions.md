@@ -4,7 +4,9 @@ This guide covers how to inspect contact profiles, assign contacts to subscriber
 
 ---
 
-## Task 1: Open Mailing List Contacts
+## 1. Contact Creation and List Subscription
+
+### 1.1 Open Mailing List Contacts
 
 Access the central subscriber directory:
 
@@ -18,7 +20,7 @@ Access the central subscriber directory:
 
 ---
 
-## Task 2: Create a New Contact Profile
+### 1.2 Create a New Contact Profile
 
 Manually add an individual subscriber:
 
@@ -37,7 +39,7 @@ Manually add an individual subscriber:
 
 ---
 
-## Task 3: Assign and Remove List Subscriptions
+### 1.3 Assign and Remove List Subscriptions
 
 Manage which mailing lists the contact belongs to:
 
@@ -52,7 +54,7 @@ Manage which mailing lists the contact belongs to:
 
 ---
 
-## Task 4: Monitor Subscription Timelines
+## 2. Monitor Subscription Timelines
 
 Audit when contacts joined your mailing lists:
 

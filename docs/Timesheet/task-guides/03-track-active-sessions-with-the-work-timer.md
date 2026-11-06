@@ -4,7 +4,9 @@ This guide details how to track working time in real time using the CURQ interac
 
 ---
 
-### Task 1: Launch the Work Timer Modal
+## 1. Launch and Monitor the Work Timer
+
+### 1.1 Launch the Work Timer Modal
 
 Access the live timer from the Timesheets navigation interface:
 
@@ -18,7 +20,7 @@ Access the live timer from the Timesheets navigation interface:
 
 ---
 
-### Task 2: Specify Session and Deliverable Parameters
+### 1.2 Specify Session and Deliverable Parameters
 
 Configure activity metadata before launching the clock:
 
@@ -34,7 +36,7 @@ Configure activity metadata before launching the clock:
 
 ---
 
-### Task 3: Run and Monitor the Active Timer
+### 1.3 Run and Monitor the Active Timer
 
 Initiate the real-time tracking session:
 
@@ -48,7 +50,7 @@ Initiate the real-time tracking session:
 
 ---
 
-### Task 4: Transition Between Concurrent Tasks
+## 2. Transition Between Concurrent Tasks
 
 To switch activities when an active timer is already running:
 
@@ -64,7 +66,7 @@ To switch activities when an active timer is already running:
 
 ---
 
-### Task 5: Stop and Save Timer Durations
+## 3. Stop and Save Timer Durations
 
 Conclude your tracking session and convert time into persistent records:
 
@@ -74,7 +76,7 @@ Conclude your tracking session and convert time into persistent records:
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Track Live Work Hours with the Timer](../getting-started/02-track-live-work-hours-with-the-timer.md)
 * [Manage Daily Timesheets and Line Entries](./02-manage-daily-timesheets-and-line-entries.md)

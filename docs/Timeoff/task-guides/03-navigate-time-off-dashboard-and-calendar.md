@@ -4,7 +4,9 @@ The **Time Off Dashboard** and **All Time Off Overview** provide employees and m
 
 ---
 
-### Task 1: Access the Personal Time Off Dashboard
+## 1. Dashboard Overview and Balance Forecasting
+
+### 1.1 Access the Personal Time Off Dashboard
 
 Access your centralized self-service dashboard:
 
@@ -22,7 +24,7 @@ Access your centralized self-service dashboard:
 
 ---
 
-### Task 2: Create a Leave Request from the Dashboard
+### 1.2 Create a Leave Request from the Dashboard
 
 Employees can initiate a leave request directly from the dashboard:
 
@@ -38,7 +40,7 @@ Employees can initiate a leave request directly from the dashboard:
 
 ---
 
-### Task 3: Audit Leave Balances and Forecast Future Accruals
+### 1.3 Audit Leave Balances and Forecast Future Accruals
 
 Inspect detailed balance metrics and calculate future accrual growth:
 
@@ -60,7 +62,9 @@ Inspect detailed balance metrics and calculate future accrual growth:
 
 ---
 
-### Task 4: Switch Calendar Timeframes and Views
+## 2. Navigate and Filter the Leave Calendar
+
+### 2.1 Switch Calendar Timeframes and Views
 
 Adapt the calendar canvas to your analytical timeframe:
 
@@ -73,7 +77,7 @@ Adapt the calendar canvas to your analytical timeframe:
 
 ---
 
-### Task 5: Interpret Calendar Visual Indicators
+### 2.2 Interpret Calendar Visual Indicators
 
 CURQ uses standardized patterns and color swatches to distinguish request statuses at a glance:
 
@@ -87,7 +91,7 @@ The background color of each entry corresponds to the configured color of the ti
 
 ---
 
-### Task 6: Filter Calendar by Time-Off Type
+### 2.3 Filter Calendar by Time-Off Type
 
 To isolate specific categories on the calendar without visual clutter:
 
@@ -97,7 +101,7 @@ To isolate specific categories on the calendar without visual clutter:
 
 ---
 
-### Task 7: Review Mandatory Days and Public Holidays
+### 2.4 Review Mandatory Days and Public Holidays
 
 The right-hand panel spotlights key corporate dates:
 
@@ -108,7 +112,7 @@ The right-hand panel spotlights key corporate dates:
 
 ---
 
-### Task 8: Use the Manager All Time Off Overview
+## 3. Manager All Time Off Overview
 
 Managers and HR officers can inspect leave schedules across their entire department or company:
 
@@ -127,7 +131,7 @@ Managers and HR officers can inspect leave schedules across their entire departm
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Overview Menu Missing**: The **Overview** menu is restricted to managers and HR officers. If it does not appear in your top navigation, your user account does not have management permissions.
 * **Future Accrual Projections Show Zero**: If selecting a future date in the balance popover does not show incremental days, verify whether the leave category uses an active accrual plan or a fixed lump-sum allocation.

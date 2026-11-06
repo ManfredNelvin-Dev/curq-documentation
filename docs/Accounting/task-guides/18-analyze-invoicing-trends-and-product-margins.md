@@ -15,7 +15,9 @@ CURQ delivers three complementary managerial accounting tools under **Reporting 
 
 ---
 
-### Task 1: Access the Invoices Analysis Dashboard
+## 1. Invoicing Trends and Visual Analysis
+
+### 1.1 Access the Invoices Analysis Dashboard
 
 1. In the top navigation bar, select **Accounting > Reporting > Management > Invoice Analysis**.
 2. By default, CURQ opens the analytical dashboard with standard pre-configured filters:
@@ -24,7 +26,7 @@ CURQ delivers three complementary managerial accounting tools under **Reporting 
 
 ---
 
-### Task 2: Configure Chart Types and Graphical Dimensions
+### 1.2 Configure Chart Types and Graphical Dimensions
 
 The graphical view visualizes sales revenue trajectories and dimensional distributions over time:
 
@@ -48,7 +50,7 @@ The graphical view visualizes sales revenue trajectories and dimensional distrib
 
 ---
 
-### Task 3: Cross-Tabulate Data with Multidimensional Pivot Cubes
+### 1.3 Cross-Tabulate Data with Multidimensional Pivot Cubes
 
 While charts highlight visual trends, the **Pivot View** enables cross-tabulation across multiple business dimensions:
 
@@ -67,7 +69,7 @@ While charts highlight visual trends, the **Pivot View** enables cross-tabulatio
 
 ---
 
-### Task 4: Evaluate Product Margins and Profitability
+### 1.4 Evaluate Product Margins and Profitability
 
 To analyze commercial product margins across inventory turnover:
 
@@ -104,7 +106,7 @@ To analyze commercial product margins across inventory turnover:
 
 ---
 
-### Task 5: Audit Operational Time and Project Costs via Analytic Reporting
+## 2. Audit Operational Time and Project Costs via Analytic Reporting
 
 Beyond commercial invoices and product margins, financial controllers must audit internal operational labor, billable service hours, and project cost allocations before issuing customer invoices:
 
@@ -131,7 +133,7 @@ Beyond commercial invoices and product margins, financial controllers must audit
 
 ---
 
-### Edge Cases and Recovery Steps
+## Edge Cases and Recovery Steps
 
 * **Zero or Negative Margin on Product Sales**: If the analysis displays a 0% or negative margin for a product, check the product master record under **Accounting > Customers > Products**. Ensure the **Cost** field reflects actual purchase prices. If cost was set to zero when invoices were generated, update the cost price and recalculate margins.
 * **Vendor Bills Included in Sales Figures**: If revenue figures appear unexpectedly low or distorted, check the search bar filters. If the default **Customers** filter is cleared, CURQ aggregates both customer invoices and vendor bills into a net figure. Re-apply the **Customers** filter to isolate sales.
@@ -139,7 +141,7 @@ Beyond commercial invoices and product margins, financial controllers must audit
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Generate Financial Reports and Trial Balance](./07-generate-financial-reports-and-trial-balance.md)
 * [Fixed Assets and Financial Reports Field Definitions](../settings-and-fields/05-fixed-assets-and-financial-reports-field-definitions.md)

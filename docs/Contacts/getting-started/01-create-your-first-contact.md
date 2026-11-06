@@ -16,7 +16,7 @@ flowchart LR
 
 ---
 
-## Hands-On Exercise: Create Your First Contact
+## 1. Hands-On Exercise: Create Your First Contact
 
 
 
@@ -26,7 +26,7 @@ flowchart LR
 
 ---
 
-### Step 1: Open Contacts and Create a Company
+### 1.1 Open Contacts and Create a Company
 
 1. From the main CURQ dashboard, click the **Contacts** app icon.
 2. At the top left of the directory view, click the **New** button.
@@ -49,7 +49,7 @@ You now have your first corporate partner record in CURQ.
 
 ---
 
-### Step 2: Add an Employee Linked to the Company
+### 1.2 Add an Employee Linked to the Company
 
 Now, let's attach a real person to Acme Technologies:
 
@@ -74,7 +74,7 @@ George Willson now appears as an employee card directly under Acme Technologies.
 
 ---
 
-### Step 3: Find Your Contacts in the Directory
+### 1.3 Find Your Contacts in the Directory
 
 Let's verify that both records are visible and accessible in the main address book:
 
@@ -94,34 +94,34 @@ Congratulations! You have completed your first exercise in CURQ Contacts. You no
 
 ---
 
-## Exploring Further: Key Capabilities of CURQ Contacts
+## 2. Exploring Further: Key Capabilities of CURQ Contacts
 
 Now that you have created your first contact, explore the core capabilities and architectural principles that govern the Contacts module:
 
-### 1. Unified Partner Architecture & Hierarchies
+### 2.1 Unified Partner Architecture & Hierarchies
 * **Single Address Book**: Eliminates data silos by storing all commercial counterparties (clients, suppliers, subcontractors, service providers) in one standardized structure.
 * **Company vs. Individual Roles**:
   * *Company Records*: Represent legal entities holding legal corporate names, VAT/tax IDs, commercial credit terms, and consolidated financial balances.
   * *Individual Contacts*: Represent real people (buyers, department heads, accounts payable officers). When linked to a company, an individual inherits the company's commercial rules while retaining distinct job titles, direct telephone numbers, and email addresses.
 * **Standalone Individuals**: Independent contractors, freelancers, and B2C consumers operate as independent commercial entities without a parent organization.
 
-### 2. Multi-Address Routing & Commercial Logistics
+### 2.2 Multi-Address Routing & Commercial Logistics
 * **Decoupled Address Types**: Attach multiple specialized address records to a single parent company:
   * *Invoice Address*: Directs formal billing documents, tax identifiers, and Peppol electronic invoices to corporate accounting.
   * *Delivery Address*: Directs warehouse pickings, shipping labels, and carrier dispatch to regional distribution facilities, manufacturing plants, or retail job sites.
   * *Other Address*: Tracks secondary offices, showrooms, and satellite branches.
 * **Automated Order Splitting**: Sales and purchase orders automatically split physical logistics to branch delivery locations while posting accounting entries to central corporate headquarters.
 
-### 3. Data Integrity & Deduplication Governance
+### 2.3 Data Integrity & Deduplication Governance
 * **Deduplication & Merge Engine**: Safeguards database hygiene by detecting and merging duplicate contact records.
 * **Foreign Key Preservation**: When merging duplicate partners, the engine automatically reassigns all foreign key pointers—including open quotations, confirmed sales orders, vendor bills, posted ledger items, CRM deals, and scheduled activities—to the surviving destination contact without data corruption or orphan records.
 * **Audit Logging**: Full contact revision history, outbound emails, and customer portal activities remain permanently tracked in the Chatter audit feed.
 
-### 4. Banking, Security & Verification
+### 2.4 Banking, Security & Verification
 * **Partner Bank Registries**: Store multiple IBAN, BIC/SWIFT, and domestic routing numbers for each commercial counterparty.
 * **Bank Account Verification**: Protect against wire fraud and vendor email compromise (BEC) attacks through dedicated security verification workflows. Unverified bank details trigger visual warning badges before vendor disbursements can be authorized.
 
-### 5. Fiscal Localization & Commercial Restrictions
+### 2.5 Fiscal Localization & Commercial Restrictions
 * **Automatic Tax Mapping (Fiscal Positions)**: Dynamically adapt transaction taxes based on customer geographic location (domestic VAT, intra-community B2B reverse charge, export zero-rating, or US state tax jurisdictions).
 * **Commercial Warning & Blocking System**: Set customer-specific alerts on the **Internal Notes** tab. Choose between informative warnings (non-blocking notification banners) or hard blocking messages that prevent sales reps from creating or confirming orders for delinquent or high-risk accounts.
 * **Geographic Registries**: Centralized management of countries, states, provinces, and city ZIP code auto-fill definitions.

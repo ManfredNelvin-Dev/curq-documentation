@@ -4,7 +4,9 @@ Search across partner details, apply built-in and custom multi-criteria filters,
 
 ---
 
-### Task 1: Search Across Contact Records
+## 1. Search, Filter, and Group Contacts
+
+### 1.1 Search Across Contact Records
 
 1. Open the **Contacts** app.
 2. Click into the search bar at the top center of the screen.
@@ -25,7 +27,7 @@ Search across partner details, apply built-in and custom multi-criteria filters,
 
 ---
 
-### Task 2: Apply Filters and Custom Rules
+### 1.2 Apply Filters and Custom Rules
 
 1. Click inside the search bar to reveal the filter dropdown options.
 2. Under the **Filters** section, click one or more preset filters:
@@ -48,7 +50,7 @@ Search across partner details, apply built-in and custom multi-criteria filters,
 
 ---
 
-### Task 3: Group Contacts Multi-Level
+### 1.3 Group Contacts Multi-Level
 
 1. In the search dropdown, locate the **Group By** section.
 2. Select a primary grouping criterion:
@@ -61,9 +63,9 @@ Search across partner details, apply built-in and custom multi-criteria filters,
 
 ---
 
-### Task 4: Switch Views and Save Search Favorites
+## 2. Switch Views and Save Search Favorites
 
-#### Switch Directory Views
+### 2.1 Switch Directory Views
 At the top right of the screen, click the view switcher icons:
 
 ![Contacts View Switcher](../media/017.png)
@@ -72,7 +74,7 @@ At the top right of the screen, click the view switcher icons:
 * **List View**: Displays records in a dense tabular format for bulk operations and comparison.
 * **Activity View**: Displays an agenda grid of scheduled phone calls, meetings, and upcoming follow-ups.
 
-#### Save a Search View as a Favorite
+### 2.2 Save a Search View as a Favorite
 1. Once your desired combination of search keywords, filters, and groupings is active:
 2. Click into the search bar dropdown.
 3. Under the **Favorites** section, click **Save current search**.
@@ -82,7 +84,7 @@ At the top right of the screen, click the view switcher icons:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Contact Missing from Directory**: If you cannot locate an existing contact, click the search bar, remove any lingering filter chips, and select **Filters > Archived** to check if the record was deactivated.
 * **Too Many Search Results**: Combine multiple filters simultaneously (for example, `Companies` + `Customers` + `Country: Germany`) to narrow down large directories.

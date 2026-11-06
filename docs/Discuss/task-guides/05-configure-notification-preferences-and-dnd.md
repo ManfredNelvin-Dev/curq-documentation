@@ -4,7 +4,9 @@ Set global notification defaults, configure temporary Do-Not-Disturb focus timer
 
 ---
 
-## Task 1: Configure Global Channel Notification Rules
+## 1. Global Notification Rules and Focus Timers
+
+### 1.1 Configure Global Channel Notification Rules
 
 Set baseline alert behaviors across all channels you join to prevent notification overload:
 
@@ -25,7 +27,7 @@ Set baseline alert behaviors across all channels you join to prevent notificatio
 
 ---
 
-## Task 2: Enable Temporary Do-Not-Disturb Focus Timers
+### 1.2 Enable Temporary Do-Not-Disturb Focus Timers
 
 When presenting during meetings, hosting calls, or focusing on high-priority deep work, silence all incoming notification sounds and desktop popups across the entire system:
 
@@ -42,7 +44,7 @@ When presenting during meetings, hosting calls, or focusing on high-priority dee
    * **For 24 hours**
    * **Until I turn it back on** (permanent mute until manually disabled)
 
-### Operational Behaviors While Muted:
+#### 1.2.1 Operational Behaviors While Muted
 * Desktop banner alerts and chime audio effects are completely silenced.
 * Numerical unread counters are suppressed to eliminate visual distraction.
 * A prominent warning banner appears at the top of conversations reminding you that notifications are paused.
@@ -51,7 +53,7 @@ When presenting during meetings, hosting calls, or focusing on high-priority dee
 
 ---
 
-## Task 3: Set Per-Channel Notification Overrides
+## 2. Set Per-Channel Notification Overrides
 
 If a critical channel requires immediate attention or a high-volume social channel is too noisy, override your global baseline for that specific room:
 
@@ -69,7 +71,7 @@ If a critical channel requires immediate attention or a high-volume social chann
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Manage Conversation Header Tools and Search](07-manage-conversation-header-tools-and-search.md)
 * [Notifications and User Preferences Specifications](../settings-and-fields/02-notifications-and-user-preferences-specifications.md)
 * [Understanding Unified Business Communication and Chatter Architecture](../core-concepts/01-understanding-unified-business-communication-and-chatter-architecture.md)

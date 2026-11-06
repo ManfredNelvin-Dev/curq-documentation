@@ -4,7 +4,7 @@ Dashboard groups act as organizational category containers in the left navigatio
 
 ---
 
-## Access the Dashboards Configuration Interface
+## 1. Access the Dashboards Configuration Interface
 
 To configure dashboard groups and manage associated spreadsheets:
 
@@ -18,7 +18,7 @@ To configure dashboard groups and manage associated spreadsheets:
 
 ---
 
-## Reorder Groups in the Sidebar Navigation
+## 2. Reorder Groups in the Sidebar Navigation
 
 The vertical sequence in the Dashboards list view directly dictates the display order of categories in the left navigation drawer:
 

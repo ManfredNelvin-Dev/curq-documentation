@@ -4,7 +4,9 @@ Configure automated win probability calculations, select statistical attributes,
 
 ---
 
-### Task 1: Access Predictive Lead Scoring in Settings
+## 1. Predictive Lead Scoring Configuration
+
+### 1.1 Access Predictive Lead Scoring in Settings
 
 1. Open the **CRM** app from your main dashboard.
 2. In the top navigation bar, click **Configuration > Settings**.
@@ -16,7 +18,7 @@ Configure automated win probability calculations, select statistical attributes,
 
 ---
 
-### Task 2: Configure Statistical Attributes and Historical Cutoff Dates
+### 1.2 Configure Statistical Attributes and Historical Cutoff Dates
 
 1. Inside the **Predictive Lead Scoring** block, click the purple **Update Probabilities** button.
 2. The **Update Probabilities** modal dialog opens:
@@ -36,7 +38,7 @@ Configure automated win probability calculations, select statistical attributes,
 
 ---
 
-### Task 3: Retrain Probabilities Across Active Deals
+### 1.3 Retrain Probabilities Across Active Deals
 
 1. After choosing your statistical variables and setting the date threshold, click the purple **Update** button at the bottom of the modal dialog.
 2. CURQ executes the Bayesian predictive algorithm across all active opportunities meeting the date criteria:
@@ -47,7 +49,7 @@ Configure automated win probability calculations, select statistical attributes,
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Manual Overrides are Protected**: If a salesperson manually typed a custom win probability percentage on an individual deal, retraining the predictive model **does not overwrite** their manual input. The deal preserves the custom value until explicitly cleared or reset.
 * **Insufficient Historical Data**: If your database contains fewer than 50 closed (won or lost) deals within the chosen date window, the model may lack statistical significance. Consider extending the cutoff date further back or relying on default stage probabilities until deal volume increases.
@@ -55,7 +57,7 @@ Configure automated win probability calculations, select statistical attributes,
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
 * [Understanding Lead Assignment and Predictive Scoring](../core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
 * [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)

@@ -4,7 +4,9 @@ This guide covers how to switch calendar view modes, navigate between dates, use
 
 ---
 
-## Task 1: Switch Calendar Views
+## 1. Calendar View Modes and Date Navigation
+
+### 1.1 Switch Calendar Views
 
 CURQ Calendar provides four distinct display perspectives to accommodate short-term scheduling and long-term planning:
 
@@ -22,7 +24,7 @@ CURQ Calendar provides four distinct display perspectives to accommodate short-t
 
 ---
 
-## Task 2: Navigate Between Dates
+### 1.2 Navigate Between Dates
 
 Use the top-left date navigation controls to traverse your schedule:
 
@@ -35,7 +37,7 @@ Use the top-left date navigation controls to traverse your schedule:
 
 ---
 
-## Task 3: Use the Mini Calendar
+### 1.3 Use the Mini Calendar
 
 The right-hand side panel contains an interactive monthly **Mini Calendar**:
 
@@ -46,7 +48,7 @@ The right-hand side panel contains an interactive monthly **Mini Calendar**:
 
 ---
 
-## Task 4: Filter by Attendee Calendars
+## 2. Filter by Attendee Calendars
 
 Directly underneath the mini calendar, the **Attendees** panel allows you to control which schedules are overlaid on your view:
 

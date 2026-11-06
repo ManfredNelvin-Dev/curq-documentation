@@ -4,7 +4,9 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
 
 ---
 
-### Task 1: Track Revenue Forecasts by Closing Month
+## 1. Pipeline Forecasts and Stage Analysis
+
+### 1.1 Track Revenue Forecasts by Closing Month
 
 1. Open the **CRM** app from your main dashboard.
 2. In the top navigation bar, click **Reporting > Forecast**:
@@ -28,7 +30,7 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
 
 ---
 
-### Task 2: Evaluate Pipeline Values and Stage Velocity
+### 1.2 Evaluate Pipeline Values and Stage Velocity
 
 1. In the top navigation bar, click **Reporting > Pipeline**:
 
@@ -53,7 +55,7 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
 
 ---
 
-### Task 3: Analyze Inbound Lead Inflow and Marketing Sources
+## 2. Analyze Inbound Lead Inflow and Marketing Sources
 
 1. In the top navigation bar, click **Reporting > Leads**:
 
@@ -80,7 +82,7 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
 
 ---
 
-### Task 4: Monitor Sales Activities and Team Follow-ups
+## 3. Monitor Sales Activities and Team Follow-ups
 
 1. In the top navigation bar, click **Reporting > Activities**.
 2. Review the activity tracking chart:
@@ -93,13 +95,13 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Missing Inactive Deals in Reports**: Pipeline reports evaluate active opportunities by default. To analyze lost opportunities, click into the search bar and select **Filters > Lost**.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
 * [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [Schedule and Execute Sales Activities](./04-schedule-and-track-sales-activities.md)

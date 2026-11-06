@@ -10,7 +10,9 @@ Generate customer invoices, structure billing lines with sections and notes, ver
 
 ---
 
-### Task 1: Create a Draft Invoice and Specify Customer Information
+## 1. Create and Validate Customer Invoices
+
+### 1.1 Create a Draft Invoice and Specify Customer Information
 
 1. Open the **Accounting** application from your main dashboard.
 2. In the top navigation bar, select **Customers > Invoices**.
@@ -31,7 +33,7 @@ Generate customer invoices, structure billing lines with sections and notes, ver
 
 ---
 
-### Task 2: Configure Invoice Lines, Sections, and Tax Treatments
+### 1.2 Configure Invoice Lines, Sections, and Tax Treatments
 
 1. Select the **Invoice Lines** tab and click **Add a line**.
 2. In the **Product** column, select the merchandise or service being billed *(e.g., `Fair Phone 5 (White)`)*.
@@ -61,7 +63,7 @@ Generate customer invoices, structure billing lines with sections and notes, ver
 
 ---
 
-### Task 3: Validate and Post the Invoice
+### 1.3 Validate and Post the Invoice
 
 Once all invoice lines, quantities, and financial values are confirmed:
 
@@ -79,7 +81,7 @@ Once all invoice lines, quantities, and financial values are confirmed:
 
 ---
 
-### Task 4: Deliver Invoices to Customers
+### 1.4 Deliver Invoices to Customers
 
 After posting, transmit the document to the customer using the built-in delivery channels:
 
@@ -97,7 +99,7 @@ After posting, transmit the document to the customer using the built-in delivery
 
 ---
 
-### Task 5: Send Overdue Invoice Reminders
+## 2. Send Overdue Invoice Reminders
 
 When customer invoices pass their maturity due date without full settlement:
 
@@ -133,7 +135,7 @@ When customer invoices pass their maturity due date without full settlement:
 
 ---
 
-### Task 6: Issue Credit Notes and Process Reversals
+## 3. Issue Credit Notes and Process Reversals
 
 If an invoice contains errors or merchandise is returned after posting:
 
@@ -155,7 +157,7 @@ If an invoice contains errors or merchandise is returned after posting:
 
 ---
 
-### Task 7: Audit Customers and Product Master Data from the Accounting Menu
+## 4. Audit Customers and Product Master Data
 
 Accountants can review customer receivables profiles and catalog tax assignments directly from the **Customers** dropdown:
 
@@ -185,7 +187,7 @@ Accountants can review customer receivables profiles and catalog tax assignments
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Modifying an Invoice in Draft State**: If an error is spotted before clicking Confirm, edit quantities, accounts, or pricing directly on the form. A draft invoice can be cancelled or deleted without affecting financial reporting or sequence numbering.
 * **Modifying an Invoice After Posting**: Once confirmed, statutory rules prevent direct edits to amounts, accounts, or quantities. To correct a posted invoice, click **Credit Note** to reverse the incorrect entry, then issue a corrected replacement invoice.
@@ -199,7 +201,7 @@ Accountants can review customer receivables profiles and catalog tax assignments
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
 * [Issue and Manage Customer Credit Notes](./09-issue-and-manage-customer-credit-notes.md)

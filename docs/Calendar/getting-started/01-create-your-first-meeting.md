@@ -10,7 +10,9 @@ This tutorial guides you through scheduling an event in CURQ 18 Calendar, specif
 
 ---
 
-## Step 1: Open the Calendar
+## 1. Schedule and Configure Your First Meeting
+
+### 1.1 Open the Calendar
 
 1. Open the CURQ main dashboard.
 2. Click on the **Calendar** application icon.
@@ -20,7 +22,7 @@ This tutorial guides you through scheduling an event in CURQ 18 Calendar, specif
 
 ---
 
-## Step 2: Schedule the Meeting Slot
+### 1.2 Schedule the Meeting Slot
 
 1. Navigate to the date when the meeting should take place using the date navigation controls or the right-side mini calendar.
 2. Click directly on the required start time slot in the calendar grid (or click and drag downwards across hours to set the initial duration).
@@ -37,7 +39,7 @@ This tutorial guides you through scheduling an event in CURQ 18 Calendar, specif
 
 ---
 
-## Step 3: Verify the Scheduled Event
+### 1.3 Verify the Scheduled Event
 
 1. Return to the main calendar grid.
 2. Confirm that the new meeting block appears in the designated time slot with your user's assigned attendee color code.
@@ -54,7 +56,7 @@ This tutorial guides you through scheduling an event in CURQ 18 Calendar, specif
 
 ---
 
-## Step 4: Configure Detailed Meeting Parameters
+### 1.4 Configure Detailed Meeting Parameters
 
 Clicking **Edit** opens the comprehensive meeting management form:
 

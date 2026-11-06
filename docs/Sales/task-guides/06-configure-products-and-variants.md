@@ -10,7 +10,9 @@ Create master product catalog items, configure attributes and variations, set va
 
 ---
 
-### Task 1: Create a Master Product
+## 1. Product Master and Variant Configuration
+
+### 1.1 Create a Master Product
 
 1. Navigate to **Sales > Products > Products**.
 
@@ -38,7 +40,7 @@ Create master product catalog items, configure attributes and variations, set va
 
 ---
 
-### Task 2: Configure Global Attributes and Values
+### 1.2 Configure Global Attributes and Values
 
 Before assigning variations, define reusable product dimensions:
 
@@ -69,7 +71,7 @@ Before assigning variations, define reusable product dimensions:
 
 ---
 
-### Task 3: Configure Attributes and Generate Variants on a Product
+### 1.3 Configure Attributes and Generate Variants on a Product
 
 1. On the product form (e.g., `Fair Phone 5`), click the **Attributes & Variants** tab.
 2. Click **Add a line**.
@@ -83,7 +85,7 @@ Before assigning variations, define reusable product dimensions:
 
 ---
 
-### Task 4: Set Variant Price Extras, Exclusions, and Costs
+### 1.4 Set Variant Price Extras, Exclusions, and Costs
 
 If specific variations incur higher manufacturing expenses or warrant premium pricing:
 
@@ -109,7 +111,7 @@ If specific variations incur higher manufacturing expenses or warrant premium pr
 
 ---
 
-### Task 5: Configure Sales Tab, Upsell Products, and Customer Descriptions
+## 2. Configure Sales Tab, Upsell Products, and Customer Descriptions
 
 Open the **Sales** tab on the product template form (e.g., `Fair Phone 5`):
 
@@ -128,7 +130,7 @@ Open the **Sales** tab on the product template form (e.g., `Fair Phone 5`):
 
 ---
 
-### Task 6: Selling Product Variants on Quotations
+## 3. Selling Product Variants on Quotations
 
 When adding multi-attribute products to a sales quotation:
 
@@ -145,14 +147,14 @@ When adding multi-attribute products to a sales quotation:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **"Cost" Field Hidden on Master Product Form**: When a product template has multiple variants, CURQ intentionally hides the master cost input because each variation may have a different manufacturing cost. Open the **Variants** smart button and set the cost directly on each individual variant card.
 * **Archiving an Individual Variant**: If a specific size or color is discontinued while other options remain active, click the **Variants** smart button, select the discontinued variant, click **⚙ Actions > Archive**. The variant will no longer appear on new quotations.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Pricelists and Pricing Rules](./08-configure-pricelists-and-pricing-rules.md)
 * [Sales Reporting and Analytics](./13-sales-reporting-and-analytics.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

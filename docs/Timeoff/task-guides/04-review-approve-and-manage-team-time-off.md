@@ -4,7 +4,9 @@ The **Management → Time Off** workspace provides Team Managers, Time Off Offic
 
 ---
 
-### Task 1: Access Pending Team Leave Requests
+## 1. Review and Approve Team Leave Requests
+
+### 1.1 Access Pending Team Leave Requests
 
 Access employee leave requests requiring administrative review:
 
@@ -21,7 +23,7 @@ Access employee leave requests requiring administrative review:
 
 ---
 
-### Task 2: Filter Requests by Status and Department
+### 1.2 Filter Requests by Status and Department
 
 Organize large request backlogs using the left-hand grouping drawer:
 
@@ -32,7 +34,7 @@ Organize large request backlogs using the left-hand grouping drawer:
 
 ---
 
-### Task 3: Execute Inline Approval and Refusal Actions
+### 1.3 Execute Inline Approval and Refusal Actions
 
 Process standard requests rapidly directly from the table rows:
 
@@ -44,7 +46,7 @@ Process standard requests rapidly directly from the table rows:
 
 ---
 
-### Task 4: Review and Modify Requests in Form View
+## 2. Review and Modify Requests in Form View
 
 To verify supporting documents or inspect employee leave balances before deciding:
 
@@ -62,7 +64,7 @@ To verify supporting documents or inspect employee leave balances before decidin
 
 ---
 
-### Task 5: Submit Leave Requests on Behalf of an Employee
+## 3. Submit Leave Requests on Behalf of an Employee
 
 Administrators and managers can record absences on behalf of team members who are unreachable or out of office:
 
@@ -86,7 +88,7 @@ Administrators and managers can record absences on behalf of team members who ar
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Approved Request Needs Cancellation**: If an employee's plans change after approval, open the request in form view and click **Refuse** or **Cancel**; deducted balances will be restored to the employee's account.
 * **Pending Requests Not Appearing**: If expected team requests do not show up, check the active search filters to confirm you are not restricted by the **Waiting For Me** or **Department** filters.

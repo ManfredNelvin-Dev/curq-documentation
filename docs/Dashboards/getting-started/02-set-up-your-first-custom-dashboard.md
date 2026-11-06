@@ -21,7 +21,9 @@ flowchart LR
 
 ---
 
-## Open and Filter a Source View
+## 1. Build and Organize Your Custom Dashboard
+
+### 1.1 Open and Filter a Source View
 
 You can pin almost any List, Kanban, Graph, or Pivot view to My Dashboard. Begin by navigating to a view that you check frequently throughout your workday:
 
@@ -34,7 +36,7 @@ You can pin almost any List, Kanban, Graph, or Pivot view to My Dashboard. Begin
 
 ---
 
-## Pin the View to My Dashboard
+### 1.2 Pin the View to My Dashboard
 
 Once your view is filtered, pin it directly into your personal dashboard workspace:
 
@@ -51,7 +53,7 @@ Once your view is filtered, pin it directly into your personal dashboard workspa
 
 ---
 
-## Access My Dashboard and Review Pinned Widgets
+### 1.3 Access My Dashboard and Review Pinned Widgets
 
 Now, view your new widget inside the centralized dashboard environment:
 
@@ -65,7 +67,7 @@ Now, view your new widget inside the centralized dashboard environment:
 
 ---
 
-## Adjust the Column Layout
+### 1.4 Adjust the Column Layout
 
 Customize the layout structure of My Dashboard to fit your display screen:
 
@@ -81,7 +83,7 @@ Customize the layout structure of My Dashboard to fit your display screen:
 
 ---
 
-## Reorder, Minimize, and Organize Widgets
+### 1.5 Reorder, Minimize, and Organize Widgets
 
 Tailor widget positioning and visibility to maintain a clean workspace:
 

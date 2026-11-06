@@ -4,7 +4,7 @@ Standardize customer engagement actions, automate multi-step milestone task sequ
 
 ---
 
-### Task 1: Configure Activity Types
+## 1. Configure Activity Types
 
 1. Open the **CRM** app from your main dashboard.
 2. In the top navigation bar, click **Configuration > Activities > Activity Types**.
@@ -41,7 +41,9 @@ Standardize customer engagement actions, automate multi-step milestone task sequ
 
 ---
 
-### Task 2: Build a Multi-Step Activity Plan
+## 2. Automated Activity Plans Workflow
+
+### 2.1 Build a Multi-Step Activity Plan
 
 Activity Plans allow you to launch an entire sequence of milestone activities with a single click:
 
@@ -71,7 +73,7 @@ Activity Plans allow you to launch an entire sequence of milestone activities wi
 
 ---
 
-### Task 3: Launch an Activity Plan on an Opportunity
+### 2.2 Launch an Activity Plan on an Opportunity
 
 1. Open any opportunity card or form from your pipeline (e.g., `Custom Desks`).
 2. In the Chatter area on the right, click the **Activities** button (clock icon).
@@ -86,7 +88,7 @@ Activity Plans allow you to launch an entire sequence of milestone activities wi
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Editing a Step on an Active Deal**: Launching a plan creates discrete scheduled tasks. To adjust a specific step on an individual deal without modifying the master template, click the pencil icon next to that scheduled activity in Chatter.
 * **Model Constraints**: If an activity type or activity plan does not appear when scheduling from a deal, ensure its **Model** is set to `Lead/Opportunity` rather than another app module.
@@ -94,7 +96,7 @@ Activity Plans allow you to launch an entire sequence of milestone activities wi
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
 * [Schedule and Execute Sales Activities](./04-schedule-and-track-sales-activities.md)
 * [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)

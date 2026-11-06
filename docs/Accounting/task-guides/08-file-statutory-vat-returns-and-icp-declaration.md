@@ -15,7 +15,9 @@ Generate periodic Dutch VAT returns (*Omzetbelasting / BTW-aangifte*), audit sta
 
 ---
 
-### Task 1: Initialize a New Period VAT Return (NL BTW Statement)
+## 1. Statutory VAT Return Filing Workflow
+
+### 1.1 Initialize a New Period VAT Return (NL BTW Statement)
 
 1. Open the **Accounting** application from your main dashboard.
 2. In the top navigation bar, select **Reporting > NL BTW Statement**.
@@ -35,7 +37,7 @@ Generate periodic Dutch VAT returns (*Omzetbelasting / BTW-aangifte*), audit sta
 
 ---
 
-### Task 2: Compute Statement Lines and Populate Statutory Tax Boxes
+### 1.2 Compute Statement Lines and Populate Statutory Tax Boxes
 
 1. Under the **BTW Statement** tab, click the blue **Update** button *(located inside the table or on the top action bar)*.
 
@@ -68,7 +70,7 @@ Generate periodic Dutch VAT returns (*Omzetbelasting / BTW-aangifte*), audit sta
 
 ---
 
-### Task 3: Audit Line Details via Transaction Drill-Down
+### 1.3 Audit Line Details via Transaction Drill-Down
 
 Before submitting returns to the tax office, verify the individual journal items contributing to any box:
 
@@ -85,7 +87,7 @@ Before submitting returns to the tax office, verify the individual journal items
 
 ---
 
-### Task 4: Handle Late-Posted Historical Transactions
+## 2. Handle Late-Posted Historical Transactions
 
 When vendor bills or sales invoices belonging to an earlier, already closed tax period are recorded late, Dutch tax law allows declaring them in the subsequent regular VAT return if the net annual tax correction does not exceed **€ 1,000**.
 
@@ -100,7 +102,7 @@ When vendor bills or sales invoices belonging to an earlier, already closed tax 
 
 ---
 
-### Task 5: Review and Validate the EU ICP Declaration
+## 3. Review and Validate the EU ICP Declaration
 
 Companies delivering goods or providing B2B services to clients in other EU member states must submit an **Intra-Community Transactions Declaration** (*Opgaaf intracommunautaire prestaties - ICP*).
 
@@ -118,7 +120,7 @@ Companies delivering goods or providing B2B services to clients in other EU memb
 
 ---
 
-### Task 6: Post, Export, and Finalize the Tax Return
+### 1.4 Post, Export, and Finalize the Tax Return
 
 1. In the top action bar, click the **Post** button.
 
@@ -146,7 +148,7 @@ Companies delivering goods or providing B2B services to clients in other EU memb
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Statutory Tax Statement and ICP Field Definitions](../settings-and-fields/03-statutory-tax-statement-and-icp-field-definitions.md)
 * [Chart of Accounts, Taxes, and Journals Field Definitions](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md)

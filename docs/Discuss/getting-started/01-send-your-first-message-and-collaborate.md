@@ -17,7 +17,7 @@ flowchart LR
 
 ---
 
-## Hands-On Exercise: Send Your First Message and Collaborate
+## 1. Hands-On Exercise: Send Your First Message and Collaborate
 
 
 
@@ -27,7 +27,7 @@ flowchart LR
 
 ---
 
-## Step 1: Open the Discuss Workspace
+### 1.1 Open the Discuss Workspace
 
 You can access CURQ Discuss from any screen inside the system:
 
@@ -47,7 +47,7 @@ You can access CURQ Discuss from any screen inside the system:
 
 ---
 
-## Step 2: Open or Join a Channel
+### 1.2 Open or Join a Channel
 
 Channels allow teams to discuss specific operational topics without cluttering one-on-one message threads:
 
@@ -64,7 +64,7 @@ Channels allow teams to discuss specific operational topics without cluttering o
 
 ---
 
-## Step 3: Send a Message with an @Mention and an Emoji Reaction
+### 1.3 Send a Message with an @Mention and an Emoji Reaction
 
 Now let us send your first message and alert a colleague directly:
 
@@ -93,7 +93,7 @@ Now let us send your first message and alert a colleague directly:
 
 ---
 
-## Step 4: Start a Direct Message with a Colleague
+### 1.4 Start a Direct Message with a Colleague
 
 When you need to hold a private one-on-one discussion:
 
@@ -120,7 +120,7 @@ When you need to hold a private one-on-one discussion:
 
 ---
 
-## Step 5: Triage Your Inbox and Mark Notifications as Read
+### 1.5 Triage Your Inbox and Mark Notifications as Read
 
 Whenever teammates message you or mention you in conversations, updates arrive with unread notifications:
 
@@ -137,25 +137,25 @@ Congratulations! You have completed your first collaboration workflow in CURQ Di
 
 ---
 
-## Exploring Further: Key Capabilities of CURQ Discuss
+## 2. Exploring Further: Key Capabilities of CURQ Discuss
 
 Now that you understand the fundamentals of CURQ Discuss, explore the architectural principles and advanced tools available in the application:
 
-## 1. Document Chatter Integration
+### 2.1 Document Chatter Integration
 Discuss does not live in an isolated silo. It powers the communication pane (Chatter) on every CRM lead, sales quotation, inventory delivery, and accounting invoice across CURQ. When you log notes or mention coworkers on a business record, that conversation is permanently bound to the transaction, creating an unbroken operational audit trail.
 
-## 2. Instant Video & Voice Conferencing
+### 2.2 Instant Video & Voice Conferencing
 Hold high-definition audio and video meetings directly in your browser without third-party meeting licenses or downloads. Click the purple **Start a meeting** button or use the header phone and camera icons to start one-on-one or multi-party video conferences with screen sharing.
 
-## 3. Reusable Canned Responses
+### 2.3 Reusable Canned Responses
 Speed up routine customer communications and internal answers using the colon (`:`) shortcut syntax. Insert pre-written, department-approved replies into any chat window or invoice chatter with a single keystroke.
 
-## 4. Focused Do-Not-Disturb Modes
+### 2.4 Focused Do-Not-Disturb Modes
 Prevent notification fatigue with granular mute options. Silence pings across all channels during deep-focus work blocks or configure per-channel alert rules to ensure you only receive alerts for mentions that truly require your attention.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Manage Channels](../task-guides/01-create-and-manage-channels.md)
 * [Send Direct and Group Messages](../task-guides/02-send-direct-and-group-messages.md)
 * [Channel and Chat Settings Definitions](../settings-and-fields/01-channel-and-chat-settings-definitions.md)

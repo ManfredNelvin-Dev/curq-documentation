@@ -6,7 +6,9 @@ Edit underlying QWeb templates, customize styling rules with SCSS/CSS, and inspe
 
 ---
 
-## Task 1: Opening the HTML / CSS Editor
+## 1. Template Customization and Live Preview
+
+### 1.1 Opening the HTML / CSS Editor
 
 The **HTML / CSS Editor** (Resource Editor) provides a code editing sidebar directly in the live website environment:
 
@@ -30,7 +32,7 @@ The **HTML / CSS Editor** (Resource Editor) provides a code editing sidebar dire
 
 ---
 
-## Task 2: File Types & Resource Switcher
+### 1.2 File Types & Resource Switcher
 
 The top bar of the editor contains a resource type switcher allowing you to toggle between different web asset formats:
 
@@ -42,7 +44,7 @@ The top bar of the editor contains a resource type switcher allowing you to togg
 
 ---
 
-## Task 3: Selecting and Navigating Views & Assets
+### 1.3 Selecting and Navigating Views & Assets
 
 Adjacent to the file type dropdown is the **Resource Selector**:
 
@@ -57,7 +59,7 @@ Adjacent to the file type dropdown is the **Resource Selector**:
 
 ---
 
-## Task 4: Editing Code & Live Preview
+### 1.4 Editing Code & Live Preview
 
 The editor features full syntax highlighting directly synchronized with the live canvas:
 

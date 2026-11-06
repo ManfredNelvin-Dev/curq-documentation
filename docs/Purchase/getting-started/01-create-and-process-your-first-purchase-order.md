@@ -10,7 +10,9 @@ This tutorial walks you through the complete procurement lifecycle in CURQ 18—
 
 ---
 
-## Step 1: Create a Request for Quotation (RFQ)
+## 1. End-to-End Purchase Order Lifecycle
+
+### 1.1 Create a Request for Quotation (RFQ)
 
 Begin by drafting a quotation request to ask a supplier for pricing and delivery availability:
 
@@ -41,7 +43,7 @@ Begin by drafting a quotation request to ask a supplier for pricing and delivery
 
 ---
 
-## Step 2: Send the RFQ to Your Supplier
+### 1.2 Send the RFQ to Your Supplier
 
 Transmit the quotation request to your vendor for commercial confirmation:
 
@@ -55,7 +57,7 @@ Transmit the quotation request to your vendor for commercial confirmation:
 
 ---
 
-## Step 3: Confirm the Purchase Order
+### 1.3 Confirm the Purchase Order
 
 When the vendor confirms availability and accepts your pricing terms, convert the quotation into an active purchase order:
 
@@ -67,7 +69,7 @@ When the vendor confirms availability and accepts your pricing terms, convert th
 
 ---
 
-## Step 4: Receive Goods at the Warehouse
+### 1.4 Receive Goods at the Warehouse
 
 Confirming the purchase order automatically generates an incoming shipment in the Inventory application:
 
@@ -82,7 +84,7 @@ Confirming the purchase order automatically generates an incoming shipment in th
 
 ---
 
-## Step 5: Generate and Validate the Vendor Bill
+### 1.5 Generate and Validate the Vendor Bill
 
 Complete the procurement cycle by registering the supplier's invoice:
 

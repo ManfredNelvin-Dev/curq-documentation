@@ -9,7 +9,9 @@ Configure sales analysis graph views, evaluate performance across sales teams, p
 
 ---
 
-### Task 1: Access Sales Reporting and Configure Chart Views
+## 1. Sales Reporting and Multi-Dimensional Analysis
+
+### 1.1 Access Sales Reporting and Configure Chart Views
 
 In the top navigation bar, click **Reporting** to access analysis dimensions (**Sales**, **Salespersons**, **Products**, or **Customers**):
 
@@ -37,7 +39,7 @@ In the top right header, toggle chart presentation formats:
 
 ---
 
-### Task 2: Build Dynamic Multi-Dimensional Pivot Tables
+### 1.2 Build Dynamic Multi-Dimensional Pivot Tables
 
 To perform deep operational and commercial analysis and cross-tabulate performance metrics:
 
@@ -54,7 +56,7 @@ To perform deep operational and commercial analysis and cross-tabulate performan
 
 ---
 
-### Task 3: Filter by Team, Time Period, and Export Data
+## 2. Filter by Team, Time Period, and Export Data
 
 1. Click into the search bar at the top center.
 2. Under **Filters**:
@@ -67,7 +69,7 @@ To perform deep operational and commercial analysis and cross-tabulate performan
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Draft Quotations Skewing Revenue Metrics**: If reporting totals seem unrealistically high, check the search filter bar. Ensure the **Sales Orders** filter is active so unconfirmed drafts and speculative quotes are excluded from realized revenue.
 * **Empty or Incomplete Pivot Matrix**: If expected data rows do not populate after selecting a grouping dimension, verify that date filters encompass the order dates and that cancelled or quotation records have not been excluded by active filter criteria.
@@ -75,7 +77,7 @@ To perform deep operational and commercial analysis and cross-tabulate performan
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Pricelists and Pricing Rules](./08-configure-pricelists-and-pricing-rules.md)
 * [Configure Sales Teams and Order Tags](./12-configure-sales-teams-and-tags.md)
 * [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

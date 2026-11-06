@@ -4,7 +4,9 @@ This guide details how to configure the website live chat widget, assign operato
 
 ---
 
-## Task 1: Enable the Live Chat Widget on Your Website
+## 1. Live Chat Widget Setup and Configuration
+
+### 1.1 Enable the Live Chat Widget on Your Website
 Checking **Allows your visitors to chat with you** injects the CURQ Live Chat widget onto the storefront:
 
 > For complete field definitions, channel attributes, and operator timeout rules, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
@@ -17,7 +19,7 @@ Clicking the arrow icon next to the **Channel** dropdown opens the centralized L
 
 ![Live Chat channel configuration form highlighting top header smart buttons and assigned operators](../media/138.png)
 
-### Channel Header and Analytical Smart Buttons
+#### 1.1.1 Channel Header and Analytical Smart Buttons
 * **Smart Buttons**:
   * **Chatbots**: Displays linked conversational flow bots *(e.g., `Chatbots 1`)*.
   * **Sessions**: Tracks total visitor conversation sessions *(e.g., `Sessions 14`)*.
@@ -25,11 +27,11 @@ Clicking the arrow icon next to the **Channel** dropdown opens the centralized L
   * **Go to Website**: Opens the front-end website to preview the live chat widget in real time.
 * **Leave Channel Button**: Allows the logged-in administrator to unassign themselves from the active operator roster.
 
-### Configure Assigned Channel Operators
+#### 1.1.2 Configure Assigned Channel Operators
 * **Operators List**: Displays active operators responding to visitor inquiries *(e.g., `Marc Demo`, `Mitchell Admin`)*. Click **Add** to assign internal users, or click the **x** icon on any operator card to unassign them.
 * **Automatic Disconnection Note**: A system notice at the bottom informs users that operators showing no activity in CURQ for more than 30 minutes are automatically treated as disconnected to prevent routing incoming chats to inactive users.
 
-## Task 2: Configure Widget Aesthetics and Greeting Options
+### 1.2 Configure Widget Aesthetics and Greeting Options
 Configure customer-facing aesthetics and greeting copy for the floating widget:
 
 > For widget styling properties, color palettes, and greeting parameters, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
@@ -44,7 +46,7 @@ Configure customer-facing aesthetics and greeting copy for the floating widget:
   * **Chat Input Placeholder**: Optional guide text inside the composition box prompting user input.
   * **Channel Header Color**: Sets the theme color for the title banner on the expanded chat window.
 
-## Task 3: Define Display Rules and Geographic Targeting
+### 1.3 Define Display Rules and Geographic Targeting
 Define URL path triggers, automated popup actions, and geographic restrictions governing when the chat window displays:
 
 > For regex trigger syntax, display actions, and GeoIP country rules, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
@@ -65,7 +67,7 @@ Configure rule parameters across the dialog:
 * **URL Regex**: Enter the target URL path expression *(for example, `/contactus`)*.
 * **Country**: Select a specific country to restrict rule execution geographically *(requires server GeoIP lookup)*.
 
-## Task 4: Integrate the Live Chat Widget Across Domains
+## 2. Integrate the Live Chat Widget Across Domains
 Review integration methods for native and third-party web properties:
 
 ![Live Chat channel widget tab displaying native setup guide, embed scripts, and direct support URL](../media/142.png)
@@ -76,9 +78,9 @@ Review integration methods for native and third-party web properties:
 
 ---
 
-## Task 5: Build Automated Chatbot Scripts and Monitor Quality
+## 3. Build Automated Chatbot Scripts and Monitor Quality
 
-### Conversational Chatbot Builder
+### 3.1 Conversational Chatbot Builder
 Clicking the **Chatbots** smart button on the channel form opens the linked automated conversational bot:
 
 > For chatbot step types, conditional branching rules, and satisfaction metrics, see [**Website Page, Product, and Reporting Field Definitions**](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
@@ -92,14 +94,14 @@ Clicking the **Chatbots** smart button on the channel form opens the linked auto
   * **Answers**: Interactive clickable choice pills presented to the visitor *(e.g., `I have a pricing question`, `I am looking for your documentation`, `I am just looking around`)*.
   * **Only If**: Branch condition evaluating previous visitor selections to trigger relevant sub-paths.
 
-### Monitoring Visitor Chat Sessions
+### 3.2 Monitoring Visitor Chat Sessions
 Clicking the **Sessions** smart button displays the archive of visitor conversations:
 
 ![Live Chat sessions kanban view displaying visitor records, durations, dates, operator avatars, and satisfaction icons](../media/144.png)
 
 * Each session card records the visitor identifier, assigned operator, total talk duration, timestamp, customer country, and satisfaction rating.
 
-### Customer Satisfaction Ratings
+### 3.3 Customer Satisfaction Ratings
 Clicking the **% Happy** smart button opens the feedback quality dashboard:
 
 ![Customer satisfaction ratings kanban view displaying operator feedback, review comments, and sentiment ratings](../media/145.png)

@@ -10,7 +10,9 @@ Record supplier invoices, configure expense allocations and tax grids, verify ex
 
 ---
 
-### Task 1: Create a Draft Vendor Bill and Select Supplier
+## 1. Create and Validate Vendor Bills
+
+### 1.1 Create a Draft Vendor Bill and Select Supplier
 
 1. Open the **Accounting** application from your main dashboard.
 2. In the top navigation bar, select **Vendors > Bills**.
@@ -28,7 +30,7 @@ Record supplier invoices, configure expense allocations and tax grids, verify ex
 
 ---
 
-### Task 2: Configure Bill Lines, Expense Accounts, and VAT Grids
+### 1.2 Configure Bill Lines, Expense Accounts, and VAT Grids
 
 1. Under the **Invoice Lines** tab, click **Add a line**.
 2. Select a purchased item using one of two methods:
@@ -51,7 +53,7 @@ Record supplier invoices, configure expense allocations and tax grids, verify ex
 
 ---
 
-### Task 3: Specify Bill Dates, Accounting Dates, and Payment Terms
+### 1.3 Specify Bill Dates, Accounting Dates, and Payment Terms
 
 1. In the **Bill Date** field, select the legal issuance date printed on the supplier's document.
 2. Review the **Accounting Date**:
@@ -63,7 +65,7 @@ Record supplier invoices, configure expense allocations and tax grids, verify ex
 
 ---
 
-### Task 4: Validate and Post the Vendor Bill
+### 1.4 Validate and Post the Vendor Bill
 
 When all lines, amounts, and tax values match the supplier's invoice:
 
@@ -79,7 +81,7 @@ When all lines, amounts, and tax values match the supplier's invoice:
 
 ---
 
-### Task 5: Process Vendor Refunds and Debit Notes
+## 2. Process Vendor Refunds and Debit Notes
 
 If you return goods, receive a billing discount, or obtain a supplier credit note:
 
@@ -94,7 +96,7 @@ If you return goods, receive a billing discount, or obtain a supplier credit not
 
 ---
 
-### Task 6: Audit Vendors and Procurement Products from the Accounting Menu
+## 3. Audit Vendors and Procurement Products
 
 Accountants can manage supplier liability profiles and procurement tax codes directly from the **Vendors** dropdown:
 
@@ -123,7 +125,7 @@ Accountants can manage supplier liability profiles and procurement tax codes dir
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Duplicate Bill Detection**: If you enter a vendor bill with a **Vendor** and **Payment Reference** identical to an existing posted record, CURQ displays a duplicate warning banner to prevent accidental double-payment of supplier invoices.
 * **Supplier Invoice Received in a Closed Period**: Never modify closed books. Set the **Bill Date** to the date printed on the vendor's invoice, and set the **Accounting Date** to the first day of the current, unlocked accounting period.
@@ -132,7 +134,7 @@ Accountants can manage supplier liability profiles and procurement tax codes dir
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Register and Reconcile Payments](./03-register-and-reconcile-payments.md)
 * [Manage SEPA Vendor Payment Orders](./13-manage-sepa-vendor-payment-orders.md)

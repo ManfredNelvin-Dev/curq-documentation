@@ -4,7 +4,9 @@ Schedule follow-up calls, meetings, and tasks from deal records, and manage comm
 
 ---
 
-### Task 1: Schedule an Activity on an Opportunity
+## 1. Activity Scheduling, Execution, and Follow-Up
+
+### 1.1 Schedule an Activity on an Opportunity
 
 1. Open any opportunity card from your pipeline (e.g., `Custom Desks`).
 2. In the Chatter area on the right, click **Activities** (clock icon).
@@ -27,7 +29,7 @@ Schedule follow-up calls, meetings, and tasks from deal records, and manage comm
 
 ---
 
-### Task 2: Manage Daily Tasks in My Activities Workspace
+### 1.2 Manage Daily Tasks in My Activities Workspace
 
 1. In the top navigation bar, click **Sales > My Activities**.
 
@@ -65,7 +67,7 @@ Schedule follow-up calls, meetings, and tasks from deal records, and manage comm
 
 ---
 
-### Task 3: Filter Activities by Urgency and Type
+### 1.3 Filter Activities by Urgency and Type
 
 1. In the search bar at the top center of **My Activities**, click to reveal search criteria:
 
@@ -79,7 +81,7 @@ Schedule follow-up calls, meetings, and tasks from deal records, and manage comm
 
 ---
 
-### Task 4: Mark Activities Done and Chain Next Steps
+### 1.4 Mark Activities Done and Chain Next Steps
 
 1. In the opportunity's Chatter pane under **Planned Activities** (or from the **My Activities** table), locate the scheduled activity and click **Mark Done**:
 
@@ -105,7 +107,7 @@ Schedule follow-up calls, meetings, and tasks from deal records, and manage comm
 
 ---
 
-### Task 5: Switch Activity View Modes
+## 2. Switch Activity View Modes
 
 At the top right of **My Activities**, switch between visual execution layouts:
 
@@ -127,13 +129,13 @@ At the top right of **My Activities**, switch between visual execution layouts:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Rescheduling a Missed Call**: Open the deal, locate the overdue activity in the Chatter pane, click the small pencil icon, update the **Due Date**, and click **Save**.
 * **Activity Scheduled by Mistake**: Click the trash can icon next to the scheduled activity line in the Chatter to cancel it without recording a completed entry.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
 * [Configure Activity Types and Automated Activity Plans](./09-configure-activity-types-and-plans.md)

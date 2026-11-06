@@ -4,7 +4,9 @@ The **Management → Allocations** interface allows Time Off Officers and HR Adm
 
 ---
 
-### Task 1: Access the Allocations Management Interface
+## 1. Create and Validate Employee Allocations
+
+### 1.1 Access the Allocations Management Interface
 
 Open the administrative allocations workspace:
 
@@ -21,7 +23,7 @@ Open the administrative allocations workspace:
 
 ---
 
-### Task 2: Create a Single Employee Allocation
+### 1.2 Create a Single Employee Allocation
 
 To grant a new leave allowance to an employee:
 
@@ -42,7 +44,7 @@ To grant a new leave allowance to an employee:
 
 ---
 
-### Task 3: Approve and Validate the Allocation
+### 1.3 Approve and Validate the Allocation
 
 Finalize the allocation to activate the leave balance:
 
@@ -62,7 +64,7 @@ Finalize the allocation to activate the leave balance:
 
 ---
 
-### Task 4: Review Incoming Employee Allocation Requests
+## 2. Review Incoming Employee Allocation Requests
 
 When employees submit self-service requests for additional leave allocations:
 
@@ -75,7 +77,7 @@ When employees submit self-service requests for additional leave allocations:
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Allocation Not Visible to Employee**: Verify that the allocation record has reached **Approved** status. Allocations in **Draft** or **To Approve** do not credit the employee's active balance.
 * **Dual Approval Required**: If the allocation status moves to **Second Approval** after clicking **Approve**, the leave type requires authorization by a Time Off Officer or HR Administrator before activation.

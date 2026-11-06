@@ -10,7 +10,9 @@ Create standardized quotation templates, configure default product bundles, and 
 
 ---
 
-### Task 1: Create a Quotation Template
+## 1. Create and Design Quotation Templates
+
+### 1.1 Create a Quotation Template
 
 1. Navigate to **Sales > Configuration > Quotation Templates**:
 
@@ -27,7 +29,7 @@ Create standardized quotation templates, configure default product bundles, and 
 
 ---
 
-### Task 2: Populate Default Lines and Optional Items
+### 1.2 Populate Default Lines and Optional Items
 
 1. Under the **Lines** tab, click **Add a product** to pre-populate default catalog items *(e.g., `Fair Phone 5 (Black)` and `Fair Phone 5 (White)`)*, standard quantities, and sections:
 
@@ -43,7 +45,7 @@ Create standardized quotation templates, configure default product bundles, and 
 
 ---
 
-### Task 3: Attach PDF Quote Builder Headers and Footers
+### 1.3 Attach PDF Quote Builder Headers and Footers
 
 CURQ's PDF Quote Builder dynamically inserts polished cover pages, team introductions, and contract terms around your quotation PDF:
 
@@ -75,7 +77,7 @@ CURQ's PDF Quote Builder dynamically inserts polished cover pages, team introduc
 
 ---
 
-### Task 4: Apply a Template to a Quotation
+## 2. Apply a Template to a Quotation
 
 1. Open **Sales > Orders > Quotations** and click **+ New**.
 2. Select your customer *(e.g., `John Doe`)*.
@@ -92,14 +94,14 @@ CURQ's PDF Quote Builder dynamically inserts polished cover pages, team introduc
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Modifying a Template Does Not Alter Existing Quotes**: Adjusting a quotation template only influences future quotes created from it. Any previously generated quotes maintain their original lines and terms.
 * **Overriding Lines on an Individual Quote**: Sales representatives can freely add, remove, or discount individual lines on a quote without altering the master template.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Manage Quotations](./01-create-and-send-quotations.md)
 * [Send Quotations to Customers](./01-create-and-send-quotations.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

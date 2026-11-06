@@ -4,7 +4,9 @@ Standardize recurring client messages, create shortcut triggers, share pre-writt
 
 ---
 
-## Task 1: Create a Personal Canned Response
+## 1. Create Canned Responses
+
+### 1.1 Create a Personal Canned Response
 
 Personal canned responses allow individual sales reps, customer service agents, or project managers to quickly insert reusable text snippets using a simple keyboard shortcut:
 
@@ -26,7 +28,7 @@ Personal canned responses allow individual sales reps, customer service agents, 
 
 ---
 
-## Task 2: Create Shared Department Canned Responses
+### 1.2 Create Shared Department Canned Responses
 
 To enforce uniform brand messaging, consistent payment instructions, or approved legal disclaimers across an entire team:
 
@@ -40,7 +42,7 @@ To enforce uniform brand messaging, consistent payment instructions, or approved
 
 ---
 
-## Task 3: Insert Canned Responses into Messages and Record Chatter
+## 2. Insert Canned Responses into Messages and Record Chatter
 
 Canned responses work across the entire platform, including channels, direct chats, and document chatter feeds on Sales Orders, CRM Leads, and Customer Invoices:
 
@@ -56,7 +58,7 @@ Canned responses work across the entire platform, including channels, direct cha
 
 ---
 
-## Task 4: Search, Filter, and Manage Canned Responses
+## 3. Search, Filter, and Manage Canned Responses
 
 Organize and maintain your template library over time:
 
@@ -72,7 +74,7 @@ Organize and maintain your template library over time:
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Collaborate Using Record Chatter](09-collaborate-using-record-chatter.md)
 * [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
 * [Understanding Unified Business Communication and Chatter Architecture](../core-concepts/01-understanding-unified-business-communication-and-chatter-architecture.md)

@@ -6,7 +6,7 @@ Rather than navigating through multi-level menus, accountants use the dashboard 
 
 ---
 
-### Dashboard Overview and Journal Topology
+## 1. Dashboard Overview and Journal Topology
 
 The dashboard organizes your company's sub-ledgers into 12 dedicated cards across trade, liquidity, and specialized general journals:
 
@@ -18,7 +18,9 @@ The dashboard organizes your company's sub-ledgers into 12 dedicated cards acros
 
 ---
 
-### Task 1: Audit Commercial Receivables via Customer Invoices
+## 2. Primary Accounting Operational Cards
+
+### 2.1 Audit Commercial Receivables via Customer Invoices
 
 The **Customer Invoices** card monitors customer debt, collection urgency, and billing pipeline stages:
 
@@ -60,7 +62,7 @@ The **Customer Invoices** card monitors customer debt, collection urgency, and b
 
 ---
 
-### Task 2: Manage Vendor Obligations via Vendor Bills
+### 2.2 Manage Vendor Obligations via Vendor Bills
 
 The **Vendor Bills** card tracks supplier procurement liabilities, payment staging, and working capital outflows:
 
@@ -80,7 +82,7 @@ The **Vendor Bills** card tracks supplier procurement liabilities, payment stagi
 
 ---
 
-### Task 3: Monitor Liquid Balances via Bank and Cash Cards
+### 2.3 Monitor Liquid Balances via Bank and Cash Cards
 
 The **Bank** and **Cash** cards provide real-time liquidity oversight and automated electronic reconciliation:
 
@@ -94,7 +96,7 @@ The **Bank** and **Cash** cards provide real-time liquidity oversight and automa
 
 ---
 
-### Task 4: Fast-Track Adjustments in Pre-Configured General Sub-Ledgers
+## 3. Fast-Track Adjustments in Pre-Configured General Sub-Ledgers
 
 Clicking **New** on any general journal card on the dashboard immediately creates a manual Journal Entry pre-assigned to that specific sub-ledger, eliminating manual journal selection errors.
 
@@ -106,7 +108,7 @@ For workflows already detailed in dedicated guides, use the dashboard card as an
 
    ![Accruals draft journal entry form with ACCR sequence prefix and Journal Items tab](../media/210.png)
 
-   * *Detailed procedure*: [**Manage Deferred Costs, Revenues, and Accruals**](./14-manage-deferred-costs-revenues-and-accruals.md) and [**Reverse a Journal Entry (Accruals)**](./05-create-manual-journal-entries.md#task-4-reverse-a-journal-entry-accruals-and-adjustments).
+   * *Detailed procedure*: [**Manage Deferred Costs, Revenues, and Accruals**](./14-manage-deferred-costs-revenues-and-accruals.md) and [**Reverse a Journal Entry (Accruals)**](./05-create-manual-journal-entries.md#2-reverse-a-journal-entry-accruals-and-adjustments).
 
 2. **Exchange Difference**:
    * Dedicated sub-ledger recording realized foreign currency gains (`8501020`) and losses (`4501020`) calculated during multi-currency invoice settlements and bank statement reconciliations.
@@ -142,7 +144,7 @@ For workflows already detailed in dedicated guides, use the dashboard card as an
 
 ---
 
-### Task 5: Post Month-End Unrealized Currency Adjustments via Foreign Currency Revaluation
+## 4. Post Month-End Unrealized Currency Adjustments via Foreign Currency Revaluation
 
 Under international and Dutch accounting standards, monetary assets and liabilities denominated in foreign currencies *(such as USD bank accounts or unpaid GBP receivables)* must be revalued to the official closing spot rate at the end of every fiscal month or quarter.
 
@@ -169,7 +171,7 @@ Under international and Dutch accounting standards, monetary assets and liabilit
 
 ---
 
-### Task 6: Record Monthly Payroll Commitments via the Wages Journal
+## 5. Record Monthly Payroll Commitments via the Wages Journal
 
 Payroll transactions contain sensitive employee compensation details that must be aggregated into financial statements without exposing individual remuneration figures in general operational journals.
 
@@ -201,7 +203,7 @@ Payroll transactions contain sensitive employee compensation details that must b
 
 ---
 
-### Task 7: Record Stock Adjustments via Inventory Valuation
+## 6. Record Stock Adjustments via Inventory Valuation
 
 For companies maintaining periodic inventory accounting or recording physical stocktaking discrepancies, the **Inventory Valuation** card isolates goods adjustments from commercial procurement invoices.
 
@@ -224,7 +226,7 @@ For companies maintaining periodic inventory accounting or recording physical st
 
 ---
 
-### Edge Cases and Dashboard Troubleshooting
+## Edge Cases and Dashboard Troubleshooting
 
 * **Journal Missing from Dashboard**: If a specific journal does not appear as a card on the dashboard, navigate to **Accounting > Configuration > Journals**, open the journal record, and verify that **Show Journal on Dashboard** is enabled. Configure journal accounts, payment methods, and dashboard preferences across the journal tabs:
 
@@ -239,7 +241,7 @@ For companies maintaining periodic inventory accounting or recording physical st
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Create and Validate Customer Invoices](./01-create-and-validate-customer-invoices.md)
 * [Create and Process Vendor Bills](./02-create-and-process-vendor-bills.md)

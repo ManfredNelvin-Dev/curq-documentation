@@ -4,7 +4,9 @@ Define standard and custom professional salutations with abbreviations (such as 
 
 ---
 
-### Task 1: Create a Custom Contact Title
+## 1. Create and Assign Contact Titles
+
+### 1.1 Create a Custom Contact Title
 
 1. Open the **Contacts** app.
 2. In the top navigation bar, click **Configuration > Contact Titles**.
@@ -23,7 +25,7 @@ Define standard and custom professional salutations with abbreviations (such as 
 
 ---
 
-### Task 2: Assign a Title to an Individual Contact
+### 1.2 Assign a Title to an Individual Contact
 
 1. In the **Contacts** directory, open an individual contact card (or click **New** and ensure the type is **Individual**).
 2. On the right side of the form, locate the **Title** field (positioned between **Telegram Link** and **Language**).
@@ -35,7 +37,7 @@ Define standard and custom professional salutations with abbreviations (such as 
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Title Field Missing from Form**: The **Title** field is exclusively reserved for individual persons. If the contact record is set to **Company**, the field is hidden by design. If you need a salutation, change the contact type to **Individual** or add an individual employee under the company's **Contacts & Addresses** tab.
 * **Removing an Unwanted Title**: Navigate to **Configuration > Contact Titles**, select the checkbox next to the title, and click **Actions > Delete**. *(Note: Deleting a title clears the selection from existing contact cards using it).*

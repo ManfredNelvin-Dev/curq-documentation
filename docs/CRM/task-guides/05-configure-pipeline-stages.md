@@ -4,7 +4,9 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 
 ---
 
-### Task 1: Add a New Stage on the Kanban Board
+## 1. Configure Custom Pipeline Stages
+
+### 1.1 Add a New Stage on the Kanban Board
 
 1. Open **CRM > Sales > My Pipeline**.
 2. Scroll to the far right of the Kanban board.
@@ -20,7 +22,7 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 
 ---
 
-### Task 2: Configure Stage Properties and Guidelines
+### 1.2 Configure Stage Properties and Guidelines
 
 1. Hover over the title of the newly created stage column and click the gear actions icon.
 2. Select **Edit** from the dropdown menu.
@@ -41,7 +43,7 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 
 ---
 
-### Task 3: Reorder Stages in the Pipeline
+### 1.3 Reorder Stages in the Pipeline
 
 1. Hover your cursor over the title bar of the stage column you want to move (e.g., `Technical Evaluation`).
 2. Click and hold the column header.
@@ -53,14 +55,14 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Deleting vs. Folding Stages**: If you delete a stage that contains active opportunities, CURQ prompts you to move them or cancel. To keep past deal records intact without deleting them, consider checking **Folded in Pipeline** instead.
 * **Column Actions Menu Options**: The gear icon on each column provides quick access to **Fold** (collapse immediately), **Edit** (open configuration modal), **Automations** (set stage trigger actions), or **Delete** (remove stage).
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
 * [Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)

@@ -4,7 +4,9 @@ Adjust microphone hardware inputs, configure voice sensitivity and push-to-talk 
 
 ---
 
-## Task 1: Select Audio Input Hardware
+## 1. Configure Audio Input and Voice Detection
+
+### 1.1 Select Audio Input Hardware
 
 Ensure crystal-clear audio during team calls by selecting the appropriate microphone:
 
@@ -23,18 +25,18 @@ Ensure crystal-clear audio during team calls by selecting the appropriate microp
 
 ---
 
-## Task 2: Configure Voice Detection Sensitivity vs Push-to-Talk
+### 1.2 Configure Voice Detection Sensitivity vs Push-to-Talk
 
 CURQ provides two distinct methods for transmitting audio during conferences:
 
-### Option A: Automatic Voice Detection
+#### 1.2.1 Option A: Automatic Voice Detection
 Transmits your voice automatically whenever your speaking volume crosses a sensitivity threshold:
 1. Under **Audio Settings**, ensure **Voice Detection** is selected.
 2. Adjust the **Voice detection threshold** slider (default is `5%`):
    * **Lower Percentage (closer to 0%)**: Increases sensitivity, capturing softer voices or whispers.
    * **Higher Percentage (15% - 30%)**: Filters out background office hum, air conditioners, and mechanical keyboard clicks so the microphone opens only when you speak firmly.
 
-### Option B: Push to Talk Hotkey
+#### 1.2.2 Option B: Push to Talk Hotkey
 Keeps your microphone completely muted until you press and hold a designated shortcut:
 1. Select **Push to Talk**.
 2. Click inside the **Push-to-talk key** field and press your desired keyboard hotkey (e.g., `Space`, `Ctrl + Space`, or `Alt`).
@@ -43,15 +45,15 @@ Keeps your microphone completely muted until you press and hold a designated sho
 
 ---
 
-## Task 3: Configure Video Display Rules and Background Blur
+## 2. Configure Video Display Rules and Background Blur
 
 Protect privacy in home offices or busy environments and optimize video layout:
 
-### Show Video Participants Only
+### 2.1 Show Video Participants Only
 1. Under **Video Settings**, toggle on **Show video participants only**.
 2. When active, participants who have turned off their webcams are hidden from the primary video grid, dedicating screen space to active speakers and screen shares.
 
-### Apply Real-Time Background Blur
+### 2.2 Apply Real-Time Background Blur
 1. Toggle on **Blur video background**:
 
    ![Voice and video blur background settings](../media/042.png)
@@ -62,7 +64,7 @@ Protect privacy in home offices or busy environments and optimize video layout:
 
 ---
 
-## Task 4: Download RTC Technical Diagnostic Logs
+## 3. Download RTC Technical Diagnostic Logs
 
 If you experience dropped calls, audio stuttering, or media packet loss during WebRTC conferences:
 
@@ -77,7 +79,7 @@ If you experience dropped calls, audio stuttering, or media packet loss during W
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Start and Manage Voice and Video Calls](04-start-and-manage-voice-and-video-calls.md)
 * [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
 * [Understanding Channels, Collaboration, and WebRTC Architecture](../core-concepts/02-understanding-channels-collaboration-and-webrtc-architecture.md)

@@ -9,7 +9,9 @@ This guide details configuring GDPR cookie consent banners, privacy policies, te
 
 ---
 
-## Task 1: Enable and Customize the Cookie Consent Banner
+## 1. Cookie Consent Banner and Tracking Protection
+
+### 1.1 Enable and Customize the Cookie Consent Banner
 
 Display a legal cookie consent banner informing visitors of site cookies:
 
@@ -33,7 +35,7 @@ Display a legal cookie consent banner informing visitors of site cookies:
 
 ---
 
-## Task 2: Block Third-Party Tracking and Add Blocked Domains
+### 1.2 Block Third-Party Tracking and Add Blocked Domains
 
 Prevent external platforms and embeds from loading until user consent is recorded:
 
@@ -50,7 +52,9 @@ Prevent external platforms and embeds from loading until user consent is recorde
 
 ---
 
-## Task 3: Configure Customer Account Registration and Multi-Website Shared Logins
+## 2. Customer Account Governance and Catalog Access Rules
+
+### 2.1 Configure Customer Account Registration and Multi-Website Shared Logins
 
 Regulate how customers onboard and authenticate across your web properties:
 
@@ -64,7 +68,7 @@ Regulate how customers onboard and authenticate across your web properties:
 
 ---
 
-## Task 4: Restrict eCommerce Catalog Access to Logged-In Customers
+### 2.2 Restrict eCommerce Catalog Access to Logged-In Customers
 
 Protect wholesale pricing or member catalogs behind account authentication:
 

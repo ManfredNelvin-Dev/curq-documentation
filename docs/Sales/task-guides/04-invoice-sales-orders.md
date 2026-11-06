@@ -15,7 +15,9 @@ Generate customer invoices from confirmed sales orders, bill down payments and r
 
 ---
 
-### Task 1: Create a Standard Invoice from a Sales Order
+## 1. Sales Order Invoicing Methods
+
+### 1.1 Create a Standard Invoice from a Sales Order
 
 1. Open the confirmed sales order (e.g., `S00045`) from **Sales > Orders > Orders** (or **Quotations**).
 2. In the top action bar, click **Create Invoice**.
@@ -43,7 +45,7 @@ Generate customer invoices from confirmed sales orders, bill down payments and r
 
 ---
 
-### Task 2: Bill Down Payments and Retainers
+### 1.2 Bill Down Payments and Retainers
 
 For custom manufacturing, large enterprise contracts, or service agreements requiring upfront deposits:
 
@@ -63,7 +65,7 @@ For custom manufacturing, large enterprise contracts, or service agreements requ
 
 ---
 
-### Task 3: Batch Process Orders Ready to Invoice
+## 2. Batch Process Orders Ready to Invoice
 
 To process billing efficiently across multiple completed deliveries at the end of a week or month:
 
@@ -93,14 +95,14 @@ To process billing efficiently across multiple completed deliveries at the end o
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **"There are no invoiceable lines" Error**: If clicking *Create Invoice* triggers this warning, verify your product invoicing policy under **Product > General Information > Invoicing Policy**. If set to *Delivered quantities*, the warehouse must validate delivery first (`Delivered` column must be greater than `0`).
 * **Correcting an Incorrectly Invoiced Amount**: If an invoice is confirmed with incorrect amounts, open the invoice from the **Invoices** smart button, click **Credit Note**, enter the credit reason, and post the refund. The sales order lines automatically recalculate their un-invoiced balances.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Process Your First Sale from Quote to Invoice](../getting-started/01-process-your-first-sale.md)
 * [Understanding Invoicing and Fulfillment](../core-concepts/02-understanding-invoicing-and-fulfillment.md)
 * [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

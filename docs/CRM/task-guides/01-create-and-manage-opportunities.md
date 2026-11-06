@@ -4,7 +4,9 @@ Create commercial opportunities directly on the Kanban board or via detailed for
 
 ---
 
-### Task 1: Quick Creation from the Pipeline Kanban
+## 1. Create and Configure Pipeline Opportunities
+
+### 1.1 Quick Creation from the Pipeline Kanban
 
 1. Open the **CRM** app from your main dashboard to access **My Pipeline**.
 2. At the top left of the pipeline view, click the **+ New** button (highlighted in red) or click the **+** icon in the **New** stage column header.
@@ -31,7 +33,7 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
 
 ---
 
-### Task 2: Configure Detailed Opportunity Properties
+### 1.2 Configure Detailed Opportunity Properties
 
 1. Open the `Test Deal - Cloud Migration` opportunity card from your pipeline to view the full form.
 
@@ -51,7 +53,7 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
 
 ---
 
-### Task 3: Complete Extra Tracking and Campaign Attribution
+### 1.3 Complete Extra Tracking and Campaign Attribution
 
 1. On the opportunity form, select the **Extra Information** tab (highlighted in red).
 
@@ -79,7 +81,7 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
 
 ---
 
-### Task 4: Connect an Opportunity to a Sales Quotation
+## 2. Connect an Opportunity to a Sales Quotation
 
 1. From the top action bar of the opportunity form, click the **New Quotation** button (highlighted in red).
 
@@ -91,14 +93,14 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
 
 ---
 
-### Edge Cases & Recovery Steps
+## Edge Cases & Recovery Steps
 
 * **Resetting Overridden Probability**: If you entered a manual win probability and wish to restore the automated calculation, click the small gear icon next to the **Probability** field and select **Reset to default**.
 * **Reassigning Deals**: If an opportunity needs to move to another representative, change the **Salesperson** field; the deal will automatically update in their personal pipeline.
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [Qualify and Convert Leads into Opportunities](./02-convert-leads-to-opportunities.md)
 * [Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
