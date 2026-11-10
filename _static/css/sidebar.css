@@ -523,7 +523,11 @@
     display: none !important;
 }
 
-.right-sidebar .toc-container ul ul {
+.right-sidebar .toc-container > ul > li > ul {
+    padding-left: 0 !important;
+}
+
+.right-sidebar .toc-container > ul > li > ul ul {
     padding-left: 16px !important;
 }
 

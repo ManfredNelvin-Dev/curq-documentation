@@ -102,4 +102,10 @@ MODULE_REGISTRY: Dict[str, Dict[str, str]] = {
         'description': 'Time Tracking',
         'sidebar_key': 'timesheet',
     },
+    'Expenses': {
+        'display_name': 'Expenses',
+        'icon': 'expenses-icon.png',
+        'description': 'Expense Management',
+        'sidebar_key': 'expenses',
+    },
 }
