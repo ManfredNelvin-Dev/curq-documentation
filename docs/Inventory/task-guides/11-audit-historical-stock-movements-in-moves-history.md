@@ -2,17 +2,14 @@
 
 This operational guide provides procedures for warehouse managers, inventory controllers, and compliance auditors to inspect atomic stock move lines, trace source and destination locations, audit hardware serial identifiers, review Kanban cards, and generate category-based pivot summaries in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access permissions to the CURQ Inventory application.
-* Validated warehouse transfers *(such as completed supplier receipts, customer deliveries, or scrap write-offs)*.
-* Familiarity with CURQ double-entry stock movement logic between internal, partner, and virtual locations.
+> **Prerequisites**
+> * Operational access permissions to the CURQ Inventory application.
+> * Validated warehouse transfers *(such as completed supplier receipts, customer deliveries, or scrap write-offs)*.
+> * Familiarity with CURQ double-entry stock movement logic between internal, partner, and virtual locations.
 
 ---
 
-### Access Master Moves History and Audit Granular Stock Move Lines
+## 1. Access Master Moves History and Audit Granular Stock Move Lines
 
 1. In the top navigation bar, click the **Reporting** menu.
 2. Select **Moves History**:
@@ -34,9 +31,11 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **Unit**: Primary inventory unit of measure *(e.g., `Units`)*.
    * **Status**: Confirms finalized physical execution with a green **Done** badge.
 
+> **Tip:** For more details about the columns and tracking controls on the moves history register, see [**Moves History List Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#3-moves-history-list-register-data-dictionary).
+
 ---
 
-### Review Operational Movements in Kanban Card Mode
+## 2. Review Operational Movements in Kanban Card Mode
 
 To inspect historical stock movements in a card-oriented operational perspective:
 
@@ -52,9 +51,11 @@ To inspect historical stock movements in a card-oriented operational perspective
    * **Status Badge**: Terminal green **Done** badge confirming warehouse validation.
 4. Click any card to drill down into the granular stock move record for detailed warehouse logging.
 
+> **Tip:** For more details about the fields on operational movement cards, see [**Moves History Kanban Card Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#4-moves-history-kanban-card-data-dictionary).
+
 ---
 
-### Aggregate Movements by Product Category in Pivot View
+## 3. Aggregate Movements by Product Category in Pivot View
 
 To analyze inventory throughput across product categories and calendar periods:
 
@@ -74,19 +75,16 @@ To analyze inventory throughput across product categories and calendar periods:
      * **October 2026**: 18.00 Units across 8 move transactions.
      * **November 2026**: 57.00 Units across 4 move transactions.
      * **Total Enterprise Throughput**: 75.00 Units across 12 atomic moves.
-4. Use the pivot toolbar to download the matrix in XLSX format or embed it into corporate financial reports.
+   * 4. Use the pivot toolbar to download the matrix in XLSX format or embed it into corporate financial reports.
+
+> **Tip:** For more details about category groupings and pivot matrix dimensions, see [**Moves History Pivot View Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#5-moves-history-pivot-view-data-dictionary).
 
 ---
 
-### Related Documentation
+## Related Documentation
 
-* [Moves History Field Definitions](../settings-and-fields/11-moves-history-field-definitions.md)
+* [Stock Moves Analysis and Valuation Field Definitions](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md)
 * [Track Inventory by Location and Storage Bins](./12-track-inventory-by-location-and-storage-bins.md)
-* [Location Reporting Field Definitions](../settings-and-fields/12-location-reporting-field-definitions.md)
 * [Analyze Stock Moves and Warehouse Throughput](./10-analyze-stock-moves-and-warehouse-throughput.md)
-* [Moves Analysis and Reporting Field Definitions](../settings-and-fields/10-moves-analysis-and-reporting-field-definitions.md)
+* [Track Enterprise Stock Balances and Inventory at Date](./13-track-enterprise-stock-balances-and-inventory-at-date.md)
 * [Audit Stock Moves and Inventory Valuation](./04-audit-stock-moves-and-inventory-valuation.md)
-* [Detailed Operations and Stock Valuation Field Definitions](../settings-and-fields/04-detailed-operations-and-stock-valuation-field-definitions.md)
-* [Process Scrap Orders and Inventory Write-Offs](./08-process-scrap-orders-and-inventory-write-offs.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
-

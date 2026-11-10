@@ -2,17 +2,14 @@
 
 This operational guide provides procedures for warehouse managers, inventory controllers, and logistics supervisors to audit on-hand stock balances across physical storage locations and bins, analyze inventory distribution in pivot matrices, evaluate storage utilization in graphical charts, and trigger direct history auditing or reordering replenishment from location rows in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access permissions to the CURQ Inventory application.
-* Validated stock receipts into internal storage locations *(such as `WH/Stock`)*.
-* Familiarity with the CURQ location hierarchy separating internal warehouse storage from external partner and virtual scrap locations.
+> **Prerequisites**
+> * Operational access permissions to the CURQ Inventory application.
+> * Validated stock receipts into internal storage locations *(such as `WH/Stock`)*.
+> * Familiarity with the CURQ location hierarchy separating internal warehouse storage from external partner and virtual scrap locations.
 
 ---
 
-### Access the Locations Report and Audit Internal Warehouse Stock
+## 1. Access the Locations Report and Audit Internal Warehouse Stock
 
 1. In the top navigation bar, click the **Reporting** menu.
 2. Select **Locations**:
@@ -32,11 +29,13 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **Summary Total Row**: Bottom row aggregating total physical stock on hand *(e.g., `50.00`)* and total reserved stock *(e.g., `0.00`)* across all filtered storage bins.
 5. **Execute Row-Level Action Shortcuts**:
    * **History Control** *(clock counter-clockwise icon)*: Click **History** on any location line to open the Moves History register pre-filtered to that specific product and location. This allows immediate auditing of all past stock receipts, internal relocations, and customer shipments affecting that bin.
-   * **Replenishment Control** *(cycle arrows icon)*: Click **Replenishment** on any location line to navigate directly to the replenishment rules configuration for that product at that location. Warehouse controllers can inspect min/max thresholds, review procurement lead times, or trigger an immediate purchase order.
+32:    * **Replenishment Control** *(cycle arrows icon)*: Click **Replenishment** on any location line to navigate directly to the replenishment rules configuration for that product at that location. Warehouse controllers can inspect min/max thresholds, review procurement lead times, or trigger an immediate purchase order.
+
+> **Tip:** For more details about the controls and columns on the locations register, see [**Locations Report Header and Filter Controls**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#4-locations-report-header-and-filter-controls) and [**Locations List Register and Action Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#5-locations-list-register-and-action-controls-data-dictionary).
 
 ---
 
-### Record Opening Stock Balances and Manual Adjustments via + New
+## 2. Record Opening Stock Balances and Manual Adjustments via + New
 
 When initializing warehouse stock for the first time or performing manual inventory adjustments directly from the Locations register:
 
@@ -57,9 +56,11 @@ When initializing warehouse stock for the first time or performing manual invent
    * Click the dark blue **Save** button *(checkmark icon)* to commit the stock line. CURQ automatically posts an inventory adjustment move crediting physical stock to the destination location from `Virtual Locations/Inventory adjustment`.
    * Click **Discard** *(undo arrow icon)* to cancel the entry and revert the register to standard view mode.
 
+> **Tip:** For more details about inline balance recording controls, see [**Inline Stock Balance Entry Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#6-inline-stock-balance-entry-data-dictionary).
+
 ---
 
-### Aggregate Storage Bin Stock in Pivot View
+## 3. Aggregate Storage Bin Stock in Pivot View
 
 To analyze multi-location inventory distribution across products and warehouse storage zones:
 
@@ -79,9 +80,11 @@ To analyze multi-location inventory distribution across products and warehouse s
    * **Download (XLSX)**: Click the download tray icon to export the live location stock matrix directly to Microsoft Excel format for third-party auditing.
    * **Insert in Spreadsheet**: Click the spreadsheet icon to embed the live location data matrix into an internal CURQ spreadsheet dashboard.
 
+> **Tip:** For more details about multi-dimensional location matrix parameters, see [**Locations Pivot Matrix Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#7-locations-pivot-matrix-data-dictionary).
+
 ---
 
-### Visualize Storage Utilization in Graph View
+## 4. Visualize Storage Utilization in Graph View
 
 To evaluate warehouse space utilization and compare inventory concentrations across bins:
 
@@ -100,20 +103,14 @@ To evaluate warehouse space utilization and compare inventory concentrations acr
    * **Layout Modes**: Select **Stacked Bar** or **Cumulative Grouped** to visualize multiple product variants stored within the same physical bin.
    * **Sorting Controls**: Click **Ascending** or **Descending** sort icons to order bins by stock volume, quickly identifying high-density storage areas and underutilized warehouse capacity.
 
+> **Tip:** For more details about chart visualizers and storage utilization axes, see [**Locations Graph Visualizer Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#8-locations-graph-visualizer-data-dictionary).
+
 ---
 
-### Related Documentation
+## Related Documentation
 
-* [Location Reporting Field Definitions](../settings-and-fields/12-location-reporting-field-definitions.md)
+* [Stock and Location Reporting Field Definitions](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md)
 * [Track Enterprise Stock Balances and Inventory at Date](./13-track-enterprise-stock-balances-and-inventory-at-date.md)
-* [Stock Reporting Field Definitions](../settings-and-fields/13-stock-reporting-field-definitions.md)
 * [Audit Historical Stock Movements in Moves History](./11-audit-historical-stock-movements-in-moves-history.md)
-* [Moves History Field Definitions](../settings-and-fields/11-moves-history-field-definitions.md)
-* [Analyze Stock Moves and Warehouse Throughput](./10-analyze-stock-moves-and-warehouse-throughput.md)
-* [Moves Analysis and Reporting Field Definitions](../settings-and-fields/10-moves-analysis-and-reporting-field-definitions.md)
 * [Audit Stock Moves and Inventory Valuation](./04-audit-stock-moves-and-inventory-valuation.md)
-* [Detailed Operations and Stock Valuation Field Definitions](../settings-and-fields/04-detailed-operations-and-stock-valuation-field-definitions.md)
-* [Manage Replenishment and Automated Reordering Rules](./09-manage-replenishment-and-automated-reordering-rules.md)
-* [Replenishment and Reordering Rules Field Definitions](../settings-and-fields/09-replenishment-and-reordering-rules-field-definitions.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
-
+* [Warehouse Operations and Transfer Field Definitions](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md)

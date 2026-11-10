@@ -2,16 +2,13 @@
 
 This task guide provides operational procedures for warehouse teams to monitor warehouse queues, triage urgent shipments, launch ad-hoc transfers, and configure operation cards from the **Inventory Overview** dashboard in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access to the CURQ Inventory application.
-* Configured warehouse facilities with active operation types.
+> **Prerequisites**
+> * Operational access to the CURQ Inventory application.
+> * Configured warehouse facilities with active operation types.
 
 ---
 
-### Access and Navigate the Inventory Dashboard
+## 1. Access and Navigate the Inventory Dashboard
 
 1. From the top application switcher, click **Inventory**.
 2. CURQ opens the primary **Inventory Overview** dashboard:
@@ -23,9 +20,12 @@ This task guide provides operational procedures for warehouse teams to monitor w
    * **Search Bar**: Quickly isolate operation cards or warehouse locations by typing search keywords.
    * **Pagination Counter**: Displays the active range of visible operation cards *(e.g., `1-3 / 3`)*.
 
+
+> **Tip:** For more details about navigation menus, search filters, and dashboard controls, see [**Navigation and Control Bar Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#1-navigation-and-control-bar-data-dictionary).
+
 ---
 
-### Triage Warehouse Operational Queues
+## 2. Triage Warehouse Operational Queues
 
 Operation type cards display real-time counters representing physical warehouse workload:
 
@@ -39,9 +39,11 @@ Operation type cards display real-time counters representing physical warehouse 
 3. **Dropship Fulfillment**:
    * Click **Open** to monitor partner dropship orders where suppliers deliver directly to clients.
 
+> **Tip:** For more details about operation cards, state badges, and pending counters, see [**Operation Type Card Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#2-operation-type-card-data-dictionary).
+
 ---
 
-### Use Card Context Menus for High-Velocity Execution
+## 3. Use Card Context Menus for High-Velocity Execution
 
 Click the vertical ellipsis *(three dots icon)* in the upper-right corner of any operation card to reveal advanced shortcuts:
 
@@ -57,10 +59,13 @@ Click the vertical ellipsis *(three dots icon)* in the upper-right corner of any
    * Click **Add to Favorites** to pin high-priority operation types to the top of your dashboard.
    * Click **Configuration** to adjust sequence prefixes, default source/destination locations, and barcode scanner behaviors.
 
+> **Tip:** For more details about view filters, quick actions, and palette options, see [**Card Context Flyout Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#3-card-context-flyout-data-dictionary).
+
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Navigate Inventory and Manage Stock Operations](../getting-started/01-navigate-inventory-and-manage-stock-operations.md)
-* [Inventory Dashboard and Operation Card Definitions](../settings-and-fields/01-inventory-dashboard-and-operation-card-definitions.md)
+* [Warehouse Operations and Transfer Field Definitions](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md)
 * [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
+* [Fulfill Sales Orders and Process Deliveries](../getting-started/02-fulfill-sales-orders-and-process-deliveries.md)

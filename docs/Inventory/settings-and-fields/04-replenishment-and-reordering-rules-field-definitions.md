@@ -1,18 +1,14 @@
 # Replenishment and Reordering Rules Field Definitions
 
-This document provides a comprehensive data dictionary for all list register columns, header action controls, navigation drawers, row-level action controls, batch execution options, and safety stock curve parameters within the CURQ Inventory Replenishment module at **Inventory > Operations > Replenishment**.
+This document provides a comprehensive data dictionary for the replenishment board, minimum/maximum reordering rules, vendor pricelists, and forecasted stock calculation parameters in CURQ Inventory.
 
 ---
 
-### Replenishment Board Header and Navigation Controls Data Dictionary
+## 1. Replenishment Board Header and Navigation Controls Data Dictionary
 
 The header and filter drawer provide controls to search, filter planning horizons, and switch display modes across replenishment propositions:
 
-![CURQ Replenishment board empty state displaying the safety stock replenishment curve, minimum and maximum thresholds, lead time, and quantity to order](../media/040.png)
-
-![CURQ Replenishment board displaying the left horizon filter drawer open with 0 days selected and Not Snoozed search tag](../media/041.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **+ New Action Button** | Action button creating a custom manual reordering rule for a specified product and location. |
 | **Replenishment Board Title** | Module header indicating active navigation within the procurement replenishment register. |
@@ -29,13 +25,11 @@ The header and filter drawer provide controls to search, filter planning horizon
 
 ---
 
-### Search: Product Lookup Modal Data Dictionary
+## 2. Search: Product Lookup Modal Data Dictionary
 
 Clicking **+ New** on the Replenishment board and selecting **Search More...** opens the filtered product selection dialog:
 
-![CURQ Search Product modal listing eligible storable products filtered by replenishment domain](../media/048.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Search: Product Modal Title** | Dialog banner indicating an active product lookup filtered for procurement reordering rules. |
 | **Modal Search Input Bar** | Keyword search box to query products by internal reference, name, or barcode. |
@@ -54,13 +48,11 @@ Clicking **+ New** on the Replenishment board and selecting **Search More...** o
 
 ---
 
-### Replenishment Table Columns Data Dictionary
+## 3. Replenishment Table Columns Data Dictionary
 
 The table grid displays real-time stock metrics, safety limits, and calculated procurement recommendations:
 
-![CURQ Replenishment board populated with Fairphone 5 reordering line displaying On Hand, Forecast, Min 10, Max 50, To Order 50, and row actions](../media/042.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Row Selection Checkbox** | Checkbox enabling single or multiple row selection to activate batch replenishment action controls. |
 | **Product Column** | Relational link displaying the catalog item name requiring inventory replenishment *(e.g., `Fairphone 5`)*. |
@@ -75,13 +67,11 @@ The table grid displays real-time stock metrics, safety limits, and calculated p
 
 ---
 
-### Row-Level Action Controls Data Dictionary
+## 4. Row-Level Action Controls Data Dictionary
 
 Each row in the replenishment register exposes dedicated action buttons for rapid execution without navigating away from the board:
 
-![CURQ Replenishment board populated with Fairphone 5 reordering line displaying On Hand, Forecast, Min 10, Max 50, To Order 50, and row actions](../media/042.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Order Action Control (Truck Icon)** | Immediate trigger generating a procurement document *(such as a draft Purchase Order or Manufacturing Order)* for the specified `To Order` quantity. |
 | **Automate Action Control (Cycle Icon)** | Configuration toggle converting the rule from manual review to automated background scheduler execution. |
@@ -89,15 +79,11 @@ Each row in the replenishment register exposes dedicated action buttons for rapi
 
 ---
 
-### Batch Replenishment Selection Bar and Actions Data Dictionary
+## 5. Batch Replenishment Selection Bar and Actions Data Dictionary
 
 Selecting one or more line checkboxes activates the batch action bar for high-volume procurement:
 
-![CURQ Replenishment board displaying multi-select action bar with 1 selected, Replenish dropdown, Snooze, and Actions buttons](../media/043.png)
-
-![CURQ Replenishment board showing Replenish dropdown menu options for Order and Order To Max](../media/044.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Selection Counter and Dismiss Control** | Visual badge displaying total selected records *(e.g., `1 selected`)* with an `x` button to clear selection. |
 | **Replenish Dropdown Action Button** | Primary batch action control opening execution options for selected replenishment lines. |
@@ -108,13 +94,11 @@ Selecting one or more line checkboxes activates the batch action bar for high-vo
 
 ---
 
-### Procurement Warning Dialog Data Dictionary
+## 6. Procurement Warning Dialog Data Dictionary
 
 When automated purchase order generation encounters vendor pricing discrepancies, CURQ displays a modal blocking action:
 
-![CURQ procurement warning modal indicating no matching vendor price or minimum quantity not reached for Fairphone 5](../media/045.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Warning Dialog Header** | Modal notification banner signaling an unmet procurement constraint *(e.g., `Odoo Warning`)*. |
 | **Warning Explanation Text** | Diagnostic message identifying the root cause of the order failure *(such as no vendor defined, minimum quantity not reached, or invalid agreement dates)*. |
@@ -124,15 +108,11 @@ When automated purchase order generation encounters vendor pricing discrepancies
 
 ---
 
-### Product Purchase Tab and Vendor Pricelist Data Dictionary
+## 7. Product Purchase Tab and Vendor Pricelist Data Dictionary
 
 Navigating to the product form from replenishment displays vendor agreements, bill matching rules, and lead times:
 
-![CURQ Product form view on Purchase tab displaying Acme Technologies vendor line with Quantity 100, Price 99 EUR, and Lead Time 1 day](../media/046.png)
-
-![CURQ Product form on Purchase tab showing updated Acme Technologies vendor line with Quantity 0.00, enabling replenishment orders](../media/047.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Replenishment Product Breadcrumb** | Hierarchical navigation trail linking back to the originating replenishment proposition register. |
 | **Reordering Rule Smart Button (Min / Max)** | Upper control panel indicator displaying active threshold constraints *(e.g., `Min: 10.00 / Max: 50.00`)*. |
@@ -153,13 +133,11 @@ Navigating to the product form from replenishment displays vendor agreements, bi
 
 ---
 
-### Replenishment Toast Notification and Post-Execution Board State Data Dictionary
+## 8. Replenishment Toast Notification and Post-Execution Board State Data Dictionary
 
 Following order execution, CURQ renders confirmation notifications and updates stock projections in place:
 
-![CURQ Replenishment board showing toast notification banner for generated replenishment order P00132](../media/050.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Replenishment Toast Banner** | Upper-right confirmation popup announcing successful order issuance. |
 | **Order Reference Hyperlink** | Clickable identifier *(e.g., `P00132`)* navigating directly to the generated RFQ record in CURQ Purchase. |
@@ -170,13 +148,11 @@ Following order execution, CURQ renders confirmation notifications and updates s
 
 ---
 
-### Generated Request for Quotation (RFQ) Data Dictionary
+## 9. Generated Request for Quotation (RFQ) Data Dictionary
 
 Clicking the generated order reference opens the procurement order in the CURQ Purchase module:
 
-![CURQ Request for Quotation P00132 form view displaying Acme Technologies, Fairphone 5, Quantity 50, Unit Price 99 EUR, and Total 4950 EUR](../media/051.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **RFQ Document Identifier** | Alphanumeric purchase document code assigned upon replenishment generation *(e.g., `P00132`)*. |
 | **RFQ Lifecycle Chevron Bar** | Sequential stage tracker documenting progress across **RFQ**, **RFQ Sent**, and **Purchase Order**. |
@@ -198,15 +174,11 @@ Clicking the generated order reference opens the procurement order in the CURQ P
 
 ---
 
-### Forecasted Report Header and Metric Controls Data Dictionary
+## 10. Forecasted Report Header and Metric Controls Data Dictionary
 
 Clicking the graph drilldown icon next to the Forecast value opens the dynamic inventory projection report:
 
-![CURQ Replenishment board displaying Fairphone 5 with On Hand 50, Forecast 50, and red box highlighting the Forecast report icon](../media/052.png)
-
-![CURQ Forecasted Report for Fairphone 5 displaying On Hand 50 plus Incoming 0 minus Outgoing 0 equals Forecasted 50 Units step chart](../media/053.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Forecast Drilldown Icon** | Small chart icon next to the Forecast value launching the detailed timeline report. |
 | **Forecasted Report Breadcrumb** | Navigation trail tracking back to the parent replenishment register. |
@@ -226,13 +198,11 @@ Clicking the graph drilldown icon next to the Forecast value opens the dynamic i
 
 ---
 
-### Safety Stock Curve Conceptual Parameters Data Dictionary
+## 11. Safety Stock Curve Conceptual Parameters Data Dictionary
 
 The empty state diagram visually illustrates the mathematical models governing CURQ replenishment propositions:
 
-![CURQ Replenishment board empty state displaying the safety stock replenishment curve, minimum and maximum thresholds, lead time, and quantity to order](../media/040.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Quantity (Y-Axis)** | Vertical axis plotting physical and forecasted warehouse stock balances. |
 | **Time (X-Axis)** | Horizontal axis representing forward-looking operational timelines and replenishment cycles. |
@@ -244,12 +214,10 @@ The empty state diagram visually illustrates the mathematical models governing C
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Manage Replenishment and Automated Reordering Rules](../task-guides/09-manage-replenishment-and-automated-reordering-rules.md)
 * [Understanding Reordering Rules and Lead Times](../core-concepts/02-understanding-reordering-rules-and-lead-times.md)
-* [Operations Menu and Physical Inventory Field Definitions](./07-operations-menu-and-physical-inventory-field-definitions.md)
-* [Scrap Order Field Definitions](./08-scrap-order-field-definitions.md)
-* [Product Catalog and Stock Level Field Definitions](./05-product-catalog-and-stock-level-field-definitions.md)
-* [Detailed Operations and Stock Valuation Field Definitions](./04-detailed-operations-and-stock-valuation-field-definitions.md)
-
+* [Product Catalog and Traceability Field Definitions](./02-product-catalog-and-traceability-field-definitions.md)
+* [Warehouse Operations and Transfer Field Definitions](./01-warehouse-operations-and-transfer-field-definitions.md)
+* [Stock and Location Reporting Field Definitions](./05-stock-and-location-reporting-field-definitions.md)

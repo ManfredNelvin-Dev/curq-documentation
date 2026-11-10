@@ -2,17 +2,14 @@
 
 This tutorial guides logistics coordinators and shipping specialists through the end-to-end outbound order fulfillment process in CURQ Inventory, from monitoring the delivery pipeline on the overview dashboard to validating stock shipments against confirmed customer orders.
 
----
-
-### Prerequisites
-
-1. Ensure the **Inventory** and **Sales** applications are active with cross-module integration.
-2. Verify that at least one confirmed sales order *(e.g., `S00042`)* has generated an active outbound delivery order.
-3. Confirm that required inventory is on hand in the primary warehouse storage location *(e.g., `WH/Stock`)*.
+> **Prerequisites**
+> * Ensure the **Inventory** and **Sales** applications are active with cross-module integration.
+> * Verify that at least one confirmed sales order *(e.g., `S00042`)* has generated an active outbound delivery order.
+> * Confirm that required inventory is on hand in the primary warehouse storage location *(e.g., `WH/Stock`)*.
 
 ---
 
-### Step 1: Open the Outbound Delivery Queue
+## 1. Open the Outbound Delivery Queue
 
 1. Navigate to **Inventory > Overview**.
 2. Locate the **Delivery Orders** operational card:
@@ -25,9 +22,12 @@ This tutorial guides logistics coordinators and shipping specialists through the
    * **Operations (6)**: Total volume of active fulfillment orders in the queue.
 4. Click the dark blue **6 To Deliver** button to open the fulfillment register.
 
+
+> **Tip:** For more details about delivery order card counters and metrics, see [**Operation Type Card Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#2-operation-type-card-data-dictionary).
+
 ---
 
-### Step 2: Triage Ready Deliveries in the Register
+## 2. Triage Ready Deliveries in the Register
 
 CURQ opens the delivery orders register pre-filtered to isolate actionable orders:
 
@@ -44,9 +44,11 @@ CURQ opens the delivery orders register pre-filtered to isolate actionable order
    * **Status**: Operational readiness badge (*Ready*).
 3. Click on the reference link for **WH/OUT/00069** to enter the form view.
 
+> **Tip:** For more details about the fields and controls on the delivery order register, see [**Delivery Orders List Register Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#11-delivery-orders-list-register-data-dictionary).
+
 ---
 
-### Step 3: Inspect Reserved Quantities and Order Details
+## 3. Inspect Reserved Quantities and Order Details
 
 CURQ displays the comprehensive delivery order form:
 
@@ -62,9 +64,11 @@ CURQ displays the comprehensive delivery order form:
    * **Demand**: Ordered quantity requested by the customer *(e.g., `1.00`)*.
    * **Quantity**: Measured quantity prepared for packing *(e.g., `1.00 Units`)*.
 
+> **Tip:** For more details about header fields and line item parameters, see [**Delivery Order Header Fields Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#14-delivery-order-header-fields-data-dictionary) and [**Operations Tab Line Item Definitions**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#15-operations-tab-line-item-definitions).
+
 ---
 
-### Step 4: Verify Product Availability and Validate Shipment
+## 4. Verify Product Availability and Validate Shipment
 
 Before goods physically leave the loading dock, warehouse operators confirm stock availability and validate the transfer:
 
@@ -79,9 +83,11 @@ Before goods physically leave the loading dock, warehouse operators confirm stoc
    * Balanced stock moves transfer the physical product units out of `WH/Stock` and into `Partner Locations/Customers`.
    * Connected Sales Order `S00042` automatically updates delivered quantities from `0` to `1`, unlocking customer invoice generation in CURQ Accounting.
 
+> **Tip:** For more details about action buttons and stage triggers, see [**Delivery Order Form Action Buttons and Smart Controls**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#12-delivery-order-form-action-buttons-and-smart-controls).
+
 ---
 
-### Step 5: Review Validated Order State and Completed Metrics
+## 5. Review Validated Order State and Completed Metrics
 
 Upon successful validation, CURQ updates the form view to reflect the finalized dispatch:
 
@@ -95,9 +101,11 @@ Upon successful validation, CURQ updates the form view to reflect the finalized 
 3. **Audit Chatter**:
    * The chatter feed logs the state transition: `Ready -> Done (Status)` along with automated creation references.
 
+> **Tip:** For more details about post-validation terminal indicators, see [**Validated Delivery Order View**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#13-validated-delivery-order-view).
+
 ---
 
-### Step 6: Access Tracking Smart Buttons on Validated Transfers
+## 6. Access Tracking Smart Buttons on Validated Transfers
 
 The validated delivery order header exposes smart buttons that link the physical dispatch to operational moves and accounting ledger entries:
 
@@ -108,9 +116,11 @@ The validated delivery order header exposes smart buttons that link the physical
    * **Valuation Smart Button**: Provides immediate drill-down access to inventory valuation ledger records and cost postings.
 2. Click the **Moves** smart button to inspect the underlying warehouse picking transactions.
 
+> **Tip:** For more details about transfer smart buttons and navigation headers, see [**Validated Transfer Smart Controls Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#1-validated-transfer-smart-controls-data-dictionary).
+
 ---
 
-### Step 7: Inspect Detailed Operations and Stock Move Records
+## 7. Inspect Detailed Operations and Stock Move Records
 
 CURQ displays the **Detailed Operations** view itemizing the exact source location and picked quantities:
 
@@ -123,9 +133,11 @@ CURQ displays the **Detailed Operations** view itemizing the exact source locati
    * **Unit of Measure**: Standard measuring unit applied *(e.g., `Units`)*.
 2. Navigate back to the delivery order via the breadcrumb link *(e.g., `WH/OUT/00069`)*.
 
+> **Tip:** For more details about source bins, serial numbers, and picked move lines, see [**Detailed Operations Grid Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#2-detailed-operations-grid-data-dictionary).
+
 ---
 
-### Step 8: Audit Automated Stock Valuation Ledger Postings
+## 8. Audit Automated Stock Valuation Ledger Postings
 
 From the delivery order header, click the **Valuation** smart button to audit financial inventory impacts:
 
@@ -139,14 +151,14 @@ From the delivery order header, click the **Valuation** smart button to audit fi
    * **Total Value**: Monetary balance sheet change recorded for this stock movement *(e.g., `€ 0.00`)*.
 2. Verify that financial stock decrement entries reconcile with cost of goods sold accounts in CURQ Accounting.
 
+> **Tip:** For more details about financial stock ledger entries and quantity deltas, see [**Stock Valuation Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#11-stock-valuation-register-data-dictionary).
+
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Process Outbound Delivery Orders and Customer Shipments](../task-guides/03-process-outbound-delivery-orders-and-customer-shipments.md)
 * [Audit Stock Moves and Inventory Valuation](../task-guides/04-audit-stock-moves-and-inventory-valuation.md)
-* [Delivery Order and Outbound Shipping Field Definitions](../settings-and-fields/03-delivery-order-and-outbound-shipping-field-definitions.md)
-* [Detailed Operations and Stock Valuation Field Definitions](../settings-and-fields/04-detailed-operations-and-stock-valuation-field-definitions.md)
+* [Warehouse Operations and Transfer Field Definitions](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md)
+* [Stock Moves Analysis and Valuation Field Definitions](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md)
 * [Navigate Inventory and Manage Stock Operations](./01-navigate-inventory-and-manage-stock-operations.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
-

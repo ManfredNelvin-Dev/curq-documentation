@@ -2,16 +2,13 @@
 
 This operational guide provides procedures for inventory managers, quality control specialists, and warehouse supervisors to track product batches, manage unique hardware serial numbers, pre-allocate identifiers, and audit upstream and downstream traceability in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access to the CURQ Inventory application.
-* Products configured with tracking enabled (*By Unique Serial Number* or *By Lots*) in the product master.
+> **Prerequisites**
+> * Operational access to the CURQ Inventory application.
+> * Products configured with tracking enabled (*By Unique Serial Number* or *By Lots*) in the product master.
 
 ---
 
-### Access the Lots and Serial Numbers Register
+## 1. Access the Lots and Serial Numbers Register
 
 1. In the top navigation bar of CURQ Inventory, click the **Products** dropdown menu.
 2. Select **Lots / Serial Numbers**:
@@ -26,9 +23,12 @@ This operational guide provides procedures for inventory managers, quality contr
    * As indicated in the register overview, lots and serial numbers record the complete lifecycle of physical goods.
    * CURQ generates upstream traceability *(tracing back to vendor purchase orders and incoming delivery receipts)* and downstream traceability *(tracing forward to customer sales orders and outbound shipments)*.
 
+
+> **Tip:** For more details about navigation shortcuts and tracking columns on the register, see [**Products Navigation Dropdown Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#9-products-navigation-dropdown-data-dictionary) and [**Lots / Serial Numbers Register Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#10-lots--serial-numbers-register-data-dictionary).
+
 ---
 
-### Create or Pre-Allocate a Lot or Serial Number
+## 2. Create or Pre-Allocate a Lot or Serial Number
 
 While serial numbers are commonly captured at the dock during inbound receiving, warehouse teams can manually pre-create and allocate serial identifiers before shipments arrive:
 
@@ -48,9 +48,11 @@ While serial numbers are commonly captured at the dock during inbound receiving,
    * **On Hand Quantity**: Displays `0.00` upon creation. This counter increments automatically when goods carrying this serial number are validated on an inbound receipt *(e.g., `WH/IN/00070`)*.
    * **Total Value & Average Cost**: Computed automatically from inventory valuation ledger entries once stock is received into warehouse storage.
 
+> **Tip:** For more details about identifier strings, internal references, and cost parameters, see [**Lot / Serial Number Form View Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#11-lot--serial-number-form-view-data-dictionary).
+
 ---
 
-### Audit Location and Traceability Smart Controls
+## 3. Audit Location and Traceability Smart Controls
 
 Once saved and associated with physical stock moves, the record header provides direct drill-down buttons:
 
@@ -62,19 +64,19 @@ Once saved and associated with physical stock moves, the record header provides 
 
 ---
 
-### Operational Best Practices: Dock Intake vs Manual Pre-Creation
+## 4. Operational Best Practices: Dock Intake vs Manual Pre-Creation
 
-* **Direct Dock Assignment**: In high-volume operations, serial numbers are typically scanned or entered directly in the **Detailed Operations** table of an active inbound receipt *(as detailed in [Audit Inbound Detailed Operations](./02-process-inbound-receipts-and-vendor-deliveries.md#audit-inbound-detailed-operations-and-tracking-identifiers))*.
+* **Direct Dock Assignment**: In high-volume operations, serial numbers are typically scanned or entered directly in the **Detailed Operations** table of an active inbound receipt *(as detailed in [Audit Inbound Detailed Operations](./02-process-inbound-receipts-and-vendor-deliveries.md#6-audit-inbound-detailed-operations-and-tracking-identifiers))*.
 * **Manual Pre-Creation**: Use this manual form when vendors supply advance shipping notices (ASNs) with pre-allocated serial numbers, when pre-printing asset barcode tags before unloading, or when migrating legacy inventory balances.
+
+> **Tip:** For more details about dock intake serial number fields on transfer lines, see [**Detailed Operations Grid Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#2-detailed-operations-grid-data-dictionary).
 
 ---
 
-### Related Documentation
+## Related Documentation
 
-* [Lot and Serial Number Field Definitions](../settings-and-fields/06-lot-and-serial-number-field-definitions.md)
+* [Product Catalog and Traceability Field Definitions](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md)
 * [Manage Product Catalog and Inventory Levels](./05-manage-product-catalog-and-inventory-levels.md)
 * [Process Inbound Receipts and Vendor Deliveries](./02-process-inbound-receipts-and-vendor-deliveries.md)
 * [Process Outbound Delivery Orders and Customer Shipments](./03-process-outbound-delivery-orders-and-customer-shipments.md)
-* [Detailed Operations and Stock Valuation Field Definitions](../settings-and-fields/04-detailed-operations-and-stock-valuation-field-definitions.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
-
+* [Warehouse Operations and Transfer Field Definitions](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md)

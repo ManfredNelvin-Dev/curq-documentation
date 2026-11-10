@@ -1,16 +1,14 @@
-# Product Catalog and Stock Level Field Definitions
+# Product Catalog and Traceability Field Definitions
 
-This document provides a comprehensive data dictionary for all header controls, search filters, Kanban cards, list register columns, form action buttons, smart buttons, and General Information fields within the CURQ Inventory product master at **Inventory > Products > Products**.
+This document provides a comprehensive data dictionary for product masters, variants, replenishment parameters, logistics routes, and lot and serial number traceability in CURQ Inventory.
 
 ---
 
-### Product Catalog Header and View Controls Data Dictionary
+## 1. Product Catalog Header and View Controls Data Dictionary
 
 The catalog control bar provides global search, filtering, pagination, and perspective toggles:
 
-![CURQ Products catalog Kanban view displaying Fair Phone 5 with 3 Variants and Fair Phone 5 Black with Goods filter tag](../media/021.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **+ New Action Button** | Primary button opening a blank form to create a new product master record. |
 | **Products Header Label** | Active workspace breadcrumb with gear icon for configuring catalog view preferences. |
@@ -24,11 +22,11 @@ The catalog control bar provides global search, filtering, pagination, and persp
 
 ---
 
-### Products Kanban Card Data Dictionary
+## 2. Products Kanban Card Data Dictionary
 
 In Kanban mode, each product is represented as a visual tile summarizing pricing and variant structures:
 
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Favorite Star** | Interactive toggle bookmarking high-frequency inventory items for rapid filtering. |
 | **Product Title** | Primary catalog name assigned to the product *(e.g., `Fair Phone 5`, `Fair Phone 5 (Black)`)*. |
@@ -37,13 +35,11 @@ In Kanban mode, each product is represented as a visual tile summarizing pricing
 
 ---
 
-### Products List Register Data Dictionary
+## 3. Products List Register Data Dictionary
 
 In List mode, CURQ formats product records into tabular columns tracking stock levels and costing metrics:
 
-![CURQ Products catalog list register displaying Product Name, Internal Reference, Tags, Sales Price, Cost, On Hand, Forecasted, and Unit](../media/022.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Batch Selection Checkbox** | Multi-select selector for executing bulk actions such as exporting records or updating categories. |
 | **Favorite Star Toggle** | Table column toggle allowing operators to pin favorite products directly in the register. |
@@ -58,19 +54,11 @@ In List mode, CURQ formats product records into tabular columns tracking stock l
 
 ---
 
-### Product Variants Register and Kanban Cards Data Dictionary
+## 4. Product Variants Register and Kanban Cards Data Dictionary
 
 The Product Variants register displays specific product attribute permutations with independent pricing and inventory tracking:
 
-![CURQ Product Variants list register displaying Internal Reference, Name, Variant Values, Sales Price, Cost, and On Hand stock](../media/025.png)
-
-![CURQ Product Variants updated list register displaying 18 variants with Fairphone 5 on hand 50.00 and forecasted 50.00](../media/073.png)
-
-![CURQ Product Variants Kanban view displaying cards for individual product variants with attribute tags and prices](../media/026.png)
-
-![CURQ Product Variants updated Kanban view displaying 18 product cards including Fairphone 5 with Price 249.00](../media/074.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Internal Reference** | Variant-specific SKU or alphanumeric identifier *(e.g., `COMM`, `Delivery_007`, `EXP_GEN`)*. |
 | **Name** | Base catalog product title *(e.g., `Fair Phone 5`, `Standard delivery`)*. |
@@ -85,13 +73,11 @@ The Product Variants register displays specific product attribute permutations w
 
 ---
 
-### Product Master Form Controls and Smart Buttons Data Dictionary
+## 5. Product Master Form Controls and Smart Buttons Data Dictionary
 
 The product master form provides access to replenishment actions, label generation, cross-module links, and operational flags:
 
-![CURQ Product master form view for Fair Phone 5 Black displaying smart buttons, General Information tab, pricing, and costing](../media/023.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Replenish Button** | Operational action opening the replenishment modal to manually order stock or configure reordering parameters. |
 | **Print Labels Button** | Document generation action producing barcode shelf labels and price tags for retail or warehouse bins. |
@@ -107,13 +93,11 @@ The product master form provides access to replenishment actions, label generati
 
 ---
 
-### Product General Information Tab Data Dictionary
+## 6. Product General Information Tab Data Dictionary
 
 The General Information tab defines fundamental logistics classifications, tax profiles, valuation costs, and inventory tracking activation:
 
-![CURQ Product form for Fair Phone 5 Black highlighting the Replenish button and the Track Inventory checkbox](../media/049.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Product Type** | Classification selector between **Goods** *(tangible physical products)*, **Service** *(non-material labor)*, and **Combo** *(product bundles)*. |
 | **Invoicing Policy** | Billing rule governing when invoices are generated; set to **Delivered quantities** to invoice only after physical shipment validation. |
@@ -130,13 +114,11 @@ The General Information tab defines fundamental logistics classifications, tax p
 
 ---
 
-### Product Inventory Tab Data Dictionary
+## 7. Product Inventory Tab Data Dictionary
 
 The **Inventory** tab governs procurement routing, fulfillment lead times, virtual counterpart locations, and operational dock instructions:
 
-![CURQ Product master form view for Fair Phone 5 displaying Inventory tab with Routes, Logistics, Counterpart Locations, and Descriptions](../media/024.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Buy Route Checkbox** | Operational route instructing replenishment rules to generate draft purchase orders when stock reaches minimum thresholds. |
 | **Dropship Route Checkbox** | Operational route fulfilling customer orders directly from vendor locations, bypassing warehouse receiving and putaway. |
@@ -154,15 +136,11 @@ The **Inventory** tab governs procurement routing, fulfillment lead times, virtu
 
 ---
 
-### Product Routes Report and Diagram Legend Data Dictionary
+## 8. Product Routes Report and Diagram Legend Data Dictionary
 
 Clicking the View Diagram link on the Inventory tab generates the graphical supply chain route mapping:
 
-![CURQ Product master form view highlighting the View Diagram link on the Inventory tab with a red box and arrow](../media/030.png)
-
-![CURQ Product Routes Report diagram displaying Partners Vendors, WH Stock, and Partners Customers locations with Receipts and Delivery Orders flows](../media/031.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Print Button (Routes Report)** | Top action button exporting the graphical product route blueprint to a printable PDF document. |
 | **Partners/Vendors Location** | External source column representing external supplier and vendor origins. |
@@ -178,11 +156,59 @@ Clicking the View Diagram link on the Inventory tab generates the graphical supp
 
 ---
 
-### Related Documentation
+## 9. Products Navigation Dropdown Data Dictionary
+
+The Products menu provides access to primary catalog entities, variants, and serialized tracking records:
+
+| Field Name | Description |
+| :--- | :--- |
+| **Products Menu Link** | Navigational link opening the primary catalog of inventory goods and consumables. |
+| **Product Variants Menu Link** | Navigational link opening the complete list of individual product attribute combinations. |
+| **Lots / Serial Numbers Menu Link** | Navigational link opening the serialized traceability and batch tracking register. |
+
+---
+
+## 10. Lots / Serial Numbers Register Data Dictionary
+
+The Lots / Serial Numbers register tracks all unique product tracking entities across the enterprise:
+
+| Field Name | Description |
+| :--- | :--- |
+| **+ New Action Button** | Primary action button opening a blank form to manually create or pre-allocate a serial or lot number. |
+| **Lot/Serial Number Column** | Alphanumeric code uniquely identifying the specific physical unit or production batch. |
+| **Internal Reference Column** | Internal manufacturer part number, supplier batch code, or alternate SKU reference. |
+| **Product Column** | Relational link displaying the catalog item associated with this tracking number. |
+| **Created on Column** | Timestamp recording when the lot or serial number record was first registered in the system. |
+| **Activities Column** | Next planned activity, audit task, or quality inspection scheduled for this tracking record. |
+| **Search Input Bar** | Keyword filter input enabling operators to search serial numbers across all products and batches. |
+| **List View Switcher** | View mode toggle displaying lots and serial numbers in a tabular register. |
+| **Kanban View Switcher** | View mode toggle displaying lots and serial numbers as visual grid tiles. |
+
+---
+
+## 11. Lot / Serial Number Form View Data Dictionary
+
+The form view defines product associations, valuation balances, location tracking, and traceability reports:
+
+| Field Name | Description |
+| :--- | :--- |
+| **Lot/Serial Number** | Mandatory unique string identifying the item *(e.g., `0000001`)*; must be populated to save the record. |
+| **Product** | Mandatory relational field selecting the inventory item associated with this identifier *(e.g., `Fair Phone 5`)*. |
+| **On Hand Quantity** | Read-only inventory counter displaying the current physical units present in warehouse storage; updates automatically upon transfer validation. |
+| **Internal Reference** | Optional secondary identification code, supplier lot number, or internal tracking label. |
+| **Total Value** | Read-only financial metric displaying the current balance sheet valuation of on-hand units for this serial. |
+| **Average Cost** | Read-only metric calculating the moving average inventory valuation cost per unit for this lot. |
+| **Cost** | Standard cost price per unit used for inventory asset accounting and COGS calculations. |
+| **Description Tab** | Notebook tab containing a freeform text area for recording batch quality certificates, supplier notes, or storage instructions. |
+| **Location Smart Button** | Header navigation control displaying the specific internal warehouse storage bin or shelf where this unit is located. |
+| **Traceability Smart Button** | Header navigation control generating the full upstream and downstream movement report across purchase orders, receipts, and delivery orders. |
+
+---
+
+## Related Documentation
 
 * [Manage Product Catalog and Inventory Levels](../task-guides/05-manage-product-catalog-and-inventory-levels.md)
-* [Inventory Dashboard and Operation Card Definitions](./01-inventory-dashboard-and-operation-card-definitions.md)
-* [Receipt and Stock Transfer Field Definitions](./02-receipt-and-stock-transfer-field-definitions.md)
-* [Delivery Order and Outbound Shipping Field Definitions](./03-delivery-order-and-outbound-shipping-field-definitions.md)
-* [Detailed Operations and Stock Valuation Field Definitions](./04-detailed-operations-and-stock-valuation-field-definitions.md)
-* [Understanding Reordering Rules and Lead Times](../core-concepts/02-understanding-reordering-rules-and-lead-times.md)
+* [Manage Lot and Serial Number Traceability](../task-guides/06-manage-lot-and-serial-number-traceability.md)
+* [Warehouse Operations and Transfer Field Definitions](./01-warehouse-operations-and-transfer-field-definitions.md)
+* [Replenishment and Reordering Rules Field Definitions](./04-replenishment-and-reordering-rules-field-definitions.md)
+* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)

@@ -2,17 +2,14 @@
 
 This operational guide provides procedures for warehouse managers, inventory controllers, and financial auditors to inspect company-wide stock levels, analyze unit costs and total valuation, evaluate free-to-use availability against incoming and outgoing pipelines, perform inline quantity adjustments, and generate historical point-in-time stock snapshots in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access permissions to the CURQ Inventory application.
-* Validated stock receipts or inventory adjustments establishing on-hand product quantities.
-* Familiarity with inventory availability calculations separating physical on-hand stock from unreserved free-to-use availability.
+> **Prerequisites**
+> * Operational access permissions to the CURQ Inventory application.
+> * Validated stock receipts or inventory adjustments establishing on-hand product quantities.
+> * Familiarity with inventory availability calculations separating physical on-hand stock from unreserved free-to-use availability.
 
 ---
 
-### Access the Stock Report and Audit Enterprise Stock Balances
+## 1. Access the Stock Report and Audit Enterprise Stock Balances
 
 1. In the top navigation bar, click the **Reporting** menu.
 2. Select **Stock**:
@@ -36,9 +33,11 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **History Control** *(clock counter-clockwise icon)*: Click **History** on any product line to open the Moves History register pre-filtered to that specific item, displaying all historical inbound receipts, internal relocations, and customer shipments.
    * **Replenishment Control** *(cycle arrows icon)*: Click **Replenishment** to navigate directly to the replenishment board and adjust minimum/maximum safety stock thresholds or trigger an immediate purchase order.
 
+> **Tip:** For more details about the controls and columns on the enterprise stock register, see [**Stock Report Header and Category Filter Controls**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#1-stock-report-header-and-category-filter-controls) and [**Stock Register Columns and Row Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#2-stock-register-columns-and-row-controls-data-dictionary).
+
 ---
 
-### Generate Historical Inventory at Date Snapshots
+## 2. Generate Historical Inventory at Date Snapshots
 
 For financial audits, month-end balance sheet reconciliations, and tax compliance, CURQ enables inventory controllers to recalculate warehouse stock balances and asset valuations as of any historical timestamp:
 
@@ -54,19 +53,14 @@ For financial audits, month-end balance sheet reconciliations, and tax complianc
 4. **Dismiss Without Changes**:
    * Click **Cancel** to abort the wizard and maintain real-time current stock balances.
 
+> **Tip:** For more details about historical cutoff parameters and modal controls, see [**Inventory at Date Modal Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#3-inventory-at-date-modal-controls-data-dictionary).
+
 ---
 
-### Related Documentation
+## Related Documentation
 
-* [Stock Reporting Field Definitions](../settings-and-fields/13-stock-reporting-field-definitions.md)
+* [Stock and Location Reporting Field Definitions](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md)
 * [Track Inventory by Location and Storage Bins](./12-track-inventory-by-location-and-storage-bins.md)
-* [Location Reporting Field Definitions](../settings-and-fields/12-location-reporting-field-definitions.md)
 * [Audit Historical Stock Movements in Moves History](./11-audit-historical-stock-movements-in-moves-history.md)
-* [Moves History Field Definitions](../settings-and-fields/11-moves-history-field-definitions.md)
-* [Analyze Stock Moves and Warehouse Throughput](./10-analyze-stock-moves-and-warehouse-throughput.md)
-* [Moves Analysis and Reporting Field Definitions](../settings-and-fields/10-moves-analysis-and-reporting-field-definitions.md)
 * [Audit Stock Moves and Inventory Valuation](./04-audit-stock-moves-and-inventory-valuation.md)
-* [Detailed Operations and Stock Valuation Field Definitions](../settings-and-fields/04-detailed-operations-and-stock-valuation-field-definitions.md)
-* [Manage Replenishment and Automated Reordering Rules](./09-manage-replenishment-and-automated-reordering-rules.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
-
+* [Product Catalog and Traceability Field Definitions](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md)

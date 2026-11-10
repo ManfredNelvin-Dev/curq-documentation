@@ -6,32 +6,31 @@ This document explains the conceptual mechanics of minimum and maximum stock rul
 
 ---
 
-### The Min/Max Reordering Rule Model
+## 1. The Min/Max Reordering Rule Model
 
 CURQ evaluates inventory replenishment through continuous stock level surveillance:
 
 $$\text{Forecasted Stock} = \text{Quantity On Hand} + \text{Incoming Stock} - \text{Outgoing Stock}$$
 
 ```mermaid
-flowchart TD
-    A[Current On Hand Stock] --> B[Calculate Forecasted Stock]
-    C[Incoming Receipts] --> B
-    D[Outgoing Delivery Orders] --> B
-    B --> E{Forecasted Stock < Minimum Quantity?}
-    E -->|No| F[No Replenishment Required]
-    E -->|Yes| G[Calculate Replenishment Quantity]
-    G --> H[Quantity to Order = Maximum Quantity - Forecasted Stock]
-    H --> I[Generate Draft Purchase Order / RFQ]
+flowchart LR
+    A["`**1. Calculate Forecast**
+    On Hand + Incoming − Outgoing`"] --> B{"`**Below Min Qty?**`"}
+    B -->|No| C["`**No Action**
+    Stock above safety threshold`"]
+    B -->|Yes| D["`**Automated Replenishment**
+    Order Qty = Max Target − Forecast
+    Draft RFQ / Purchase Order Generated`"]
 ```
 
-#### 1. Core Replenishment Thresholds
+### 1.1 Core Replenishment Thresholds
 * **Minimum Quantity (Trigger Threshold)**: The critical safety stock floor. When forecasted inventory dips below this level, CURQ automatically initiates a replenishment order.
 * **Maximum Quantity (Target Ceiling)**: The target replenishment volume. CURQ calculates the exact order quantity necessary to bring inventory back up to this ceiling without overstocking.
 * **Quantity Multiple (Packaging Constraint)**: Supplier packaging batch sizes *(e.g., ordering in multiples of 10 or pallet increments of 50)*. CURQ rounds calculated replenishment quantities up to the nearest valid multiple.
 
 ---
 
-### Make to Stock (MTS) versus Make to Order (MTO)
+## 2. Make to Stock (MTS) versus Make to Order (MTO)
 
 Enterprises apply distinct fulfillment strategies depending on product velocity and customization requirements:
 
@@ -44,7 +43,7 @@ Enterprises apply distinct fulfillment strategies depending on product velocity 
 
 ---
 
-### Cumulative Supply Chain Lead Times
+## 3. Cumulative Supply Chain Lead Times
 
 Accurate delivery promises require cumulative calculation across each stage of procurement and physical handling:
 
@@ -63,12 +62,10 @@ flowchart LR
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Manage Replenishment and Automated Reordering Rules](../task-guides/09-manage-replenishment-and-automated-reordering-rules.md)
-* [Replenishment and Reordering Rules Field Definitions](../settings-and-fields/09-replenishment-and-reordering-rules-field-definitions.md)
+* [Replenishment and Reordering Rules Field Definitions](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md)
 * [Fulfill Sales Orders and Process Deliveries](../getting-started/02-fulfill-sales-orders-and-process-deliveries.md)
 * [Process Outbound Delivery Orders and Customer Shipments](../task-guides/03-process-outbound-delivery-orders-and-customer-shipments.md)
 * [Understanding Double-Entry Inventory and Stock Flows](./01-understanding-double-entry-inventory-and-stock-flows.md)
-* [Delivery Order and Outbound Shipping Field Definitions](../settings-and-fields/03-delivery-order-and-outbound-shipping-field-definitions.md)
-

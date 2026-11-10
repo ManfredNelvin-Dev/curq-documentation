@@ -6,7 +6,7 @@ This document explains the conceptual foundations of double-entry inventory, war
 
 ---
 
-### The Double-Entry Stock Movement Model
+## 1. The Double-Entry Stock Movement Model
 
 Similar to financial accounting where every debit requires a corresponding credit, CURQ Inventory records all product moves as balanced pairs:
 
@@ -39,7 +39,7 @@ flowchart LR
     Stock -->|Damaged Stock| Scrap
 ```
 
-#### 1. Location Types and Boundaries
+### 1.1 Location Types and Boundaries
 * **Internal Locations**: Physical zones owned and operated by your enterprise *(e.g., `WH/Stock`, `WH/Input`, `WH/Packing`)*. Products stored in internal locations contribute directly to on-hand inventory balances and corporate asset valuation.
 * **Vendor Locations**: Counterpart virtual locations representing external suppliers. Receiving goods from a vendor transfers units from `Partner Locations/Vendors` into `WH/Stock`.
 * **Customer Locations**: Counterpart virtual locations representing buyers. Fulfilling a sales order transfers units from `WH/Stock` into `Partner Locations/Customers`.
@@ -47,18 +47,16 @@ flowchart LR
 
 ---
 
-### The Transfer and Picking Lifecycle
+## 2. The Transfer and Picking Lifecycle
 
 Every warehouse movement progresses through structured execution states to coordinate physical dock activities with digital inventory ledgers:
 
 ```mermaid
-stateDiagram-v2
-    [*] --> Draft : Procurement / Sales Generation
-    Draft --> Waiting : Stock Reservation Attempted
-    Waiting --> Ready : Inventory Available in Storage
-    Ready --> Done : Barcode Validated / Pick Confirmed
-    Ready --> Cancelled : Order Voided
-    Done --> [*]
+flowchart LR
+    Draft["Draft<br/>Procurement / Sales Generation"] -->|"Attempt Reservation"| Waiting["Waiting<br/>Awaiting Inventory"]
+    Waiting -->|"Stock Available"| Ready["Ready<br/>Reserved in Storage"]
+    Ready -->|"Pick & Scan Confirmed"| Done["Done<br/>Validated & Committed"]
+    Ready -.->|"Order Voided"| Cancelled["Cancelled"]
 ```
 
 1. **Draft**: Initial transfer record generated manually, triggered by an approved Purchase Order, or created by a confirmed Sales Order.
@@ -68,7 +66,7 @@ stateDiagram-v2
 
 ---
 
-### Core Operation Types in Warehouse Flow
+## 3. Core Operation Types in Warehouse Flow
 
 CURQ structures warehouse logistics around dedicated operation types:
 
@@ -81,8 +79,9 @@ CURQ structures warehouse logistics around dedicated operation types:
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Navigate Inventory and Manage Stock Operations](../getting-started/01-navigate-inventory-and-manage-stock-operations.md)
 * [Navigate Inventory Overview and Operation Types](../task-guides/01-navigate-inventory-overview-and-operation-types.md)
-* [Inventory Dashboard and Operation Card Definitions](../settings-and-fields/01-inventory-dashboard-and-operation-card-definitions.md)
+* [Warehouse Operations and Transfer Field Definitions](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md)
+* [Fulfill Sales Orders and Process Deliveries](../getting-started/02-fulfill-sales-orders-and-process-deliveries.md)

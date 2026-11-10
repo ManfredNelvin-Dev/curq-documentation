@@ -2,16 +2,13 @@
 
 This operational guide provides procedures for warehouse shipping teams to triage customer orders, verify product reservations, execute physical picking, validate outbound shipments, and handle reverse logistics in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access to the CURQ Inventory application.
-* Confirmed customer sales orders generating active outbound delivery pickings.
+> **Prerequisites**
+> * Operational access to the CURQ Inventory application.
+> * Confirmed customer sales orders generating active outbound delivery pickings.
 
 ---
 
-### Access and Triage the Delivery Orders Queue
+## 1. Access and Triage the Delivery Orders Queue
 
 1. Navigate to **Inventory > Overview**.
 2. Locate the **Delivery Orders** operational card:
@@ -24,9 +21,12 @@ This operational guide provides procedures for warehouse shipping teams to triag
    * **Operations**: Quantitative summary of total planned shipping tasks.
 4. Click **6 To Deliver** to open the active shipping register.
 
+
+> **Tip:** For more details about delivery order card counters and fulfillment metrics, see [**Operation Type Card Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#2-operation-type-card-data-dictionary).
+
 ---
 
-### Filter and Prioritize Ready Shipments
+## 2. Filter and Prioritize Ready Shipments
 
 The delivery orders register organizes outbound fulfillment orders by operational priority:
 
@@ -41,9 +41,11 @@ The delivery orders register organizes outbound fulfillment orders by operationa
    * Review the **Source Document** column *(e.g., `S00042`)* to confirm customer sales contract details.
 4. Click any delivery order reference *(e.g., `WH/OUT/00069`)* to open the detailed fulfillment form.
 
+> **Tip:** For more details about the fields and controls on the delivery order register, see [**Delivery Orders List Register Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#11-delivery-orders-list-register-data-dictionary).
+
 ---
 
-### Pick Items and Confirm Product Availability
+## 3. Pick Items and Confirm Product Availability
 
 On the delivery order form view:
 
@@ -56,9 +58,11 @@ On the delivery order form view:
    * **Quantity**: Confirm physical items picked and placed in the shipping staging zone *(e.g., `1.00 Units`)*.
 3. If partial picking is required, adjust the **Quantity** field to match physical goods picked.
 
+> **Tip:** For more details about delivery header attributes and line item specifications, see [**Delivery Order Header Fields Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#14-delivery-order-header-fields-data-dictionary) and [**Operations Tab Line Item Definitions**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#15-operations-tab-line-item-definitions).
+
 ---
 
-### Validate Outbound Transfer and Complete Shipment
+## 4. Validate Outbound Transfer and Complete Shipment
 
 Once items are packed and staged at the shipping bay:
 
@@ -80,21 +84,23 @@ Once items are packed and staged at the shipping bay:
 4. **Print Shipping Documents**:
    * Click **Print** in the top action bar to generate the Delivery Slip and shipping labels.
 
+> **Tip:** For more details about dispatch action buttons and post-validation stage indicators, see [**Delivery Order Form Action Buttons and Smart Controls**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#12-delivery-order-form-action-buttons-and-smart-controls) and [**Validated Delivery Order View**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#13-validated-delivery-order-view).
+
 ---
 
-### Handle Returns and Order Cancellations
+## 5. Handle Returns and Order Cancellations
 
 1. **Process Customer Return**: Click **Return** to initiate a reverse picking transfer routing returned units back into warehouse stock.
 2. **Cancel Transfer**: If an order is voided before physical dispatch, click **Cancel** to release reserved inventory back to available stock.
 
+> **Tip:** For more details about return logistics and cancellation actions, see [**Delivery Order Form Action Buttons and Smart Controls**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#12-delivery-order-form-action-buttons-and-smart-controls).
+
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Fulfill Sales Orders and Process Deliveries](../getting-started/02-fulfill-sales-orders-and-process-deliveries.md)
 * [Audit Stock Moves and Inventory Valuation](./04-audit-stock-moves-and-inventory-valuation.md)
-* [Delivery Order and Outbound Shipping Field Definitions](../settings-and-fields/03-delivery-order-and-outbound-shipping-field-definitions.md)
-* [Detailed Operations and Stock Valuation Field Definitions](../settings-and-fields/04-detailed-operations-and-stock-valuation-field-definitions.md)
+* [Warehouse Operations and Transfer Field Definitions](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md)
+* [Stock Moves Analysis and Valuation Field Definitions](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md)
 * [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
-* [Process Inbound Receipts and Vendor Deliveries](./02-process-inbound-receipts-and-vendor-deliveries.md)
-

@@ -2,16 +2,13 @@
 
 This tutorial introduces the foundational workflows of CURQ Inventory, guiding logistics coordinators and warehouse managers through the central Inventory Overview dashboard, operation type cards, and warehouse fulfillment pipelines.
 
----
-
-### Prerequisites
-
-1. Ensure your user account has access permissions to the **Inventory** application in CURQ.
-2. Verify that warehouse operations *(such as Receipts, Delivery Orders, and Dropship)* are initialized in your system.
+> **Prerequisites**
+> * Ensure your user account has access permissions to the **Inventory** application in CURQ.
+> * Verify that warehouse operations *(such as Receipts, Delivery Orders, and Dropship)* are initialized in your system.
 
 ---
 
-### Step 1: Access the Inventory Application
+## 1. Access the Inventory Application
 
 1. From the primary CURQ application switcher in the upper-left corner, click **Inventory**.
 2. CURQ opens the centralized **Inventory Overview** dashboard:
@@ -25,9 +22,12 @@ This tutorial introduces the foundational workflows of CURQ Inventory, guiding l
    * **Reporting**: Stock valuation, stock moves analysis, moves history, and warehouse performance reports.
    * **Configuration**: Warehouse settings, location hierarchies, operation types, route rules, and putaway strategies.
 
+
+> **Tip:** For more details about navigation menus and dashboard controls, see [**Navigation and Control Bar Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#1-navigation-and-control-bar-data-dictionary).
+
 ---
 
-### Step 2: Open and Review the Inbound Receipts Register
+## 2. Open and Review the Inbound Receipts Register
 
 1. On the **Receipts** operational card, locate the primary execution button:
 
@@ -38,21 +38,26 @@ This tutorial introduces the foundational workflows of CURQ Inventory, guiding l
    * **Late (3)**: Critical counter showing supplier deliveries that have passed their expected arrival date.
    * **Back Orders (1)**: Pending split shipments awaiting residual vendor fulfillment.
    * **Operations (4)**: Total active receiving transfers in the pipeline.
+
+> **Tip:** For more details about operation card counters, backorder tags, and late indicators, see [**Operation Type Card Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#2-operation-type-card-data-dictionary).
+
 3. Click the **3 To Receive** button to open the receipts register:
    * CURQ displays the inbound transfers register:
 
 ![CURQ Receipts list register showing Reference, Contact, Scheduled Date, Source Document, and Status](../media/002.png)
 
-2. Review the register columns:
+4. Review the register columns:
    * **Reference**: Unique transaction identifier *(e.g., `WH/IN/00070`)*.
    * **Contact**: Vendor or supplier entity delivering the goods *(e.g., `Acme Technologies`, `Global Logistics Corp`)*.
    * **Scheduled Date**: Target dock arrival date, highlighted in red if overdue *(e.g., `6 days ago`)*.
    * **Source Document**: Originating Purchase Order number *(e.g., `P00093`)*.
    * **Status**: Operational lifecycle badge (*Ready*, *Done*, *Cancelled*).
 
+> **Tip:** For more details about the fields and columns on the receipts register, see [**Receipts List Register Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#4-receipts-list-register-data-dictionary).
+
 ---
 
-### Step 3: Inspect Inbound Transfer Lines in Form View
+## 3. Inspect Inbound Transfer Lines in Form View
 
 1. Click **+ New** in the upper-left corner or open an existing receipt:
    * CURQ renders the comprehensive stock transfer form:
@@ -66,9 +71,11 @@ This tutorial introduces the foundational workflows of CURQ Inventory, guiding l
    * **Source Document**: Linked procurement reference.
    * **Operations Tab**: Product lines detailing demand quantities and units of measure.
 
+> **Tip:** For more details about the fields and line item controls on the receipt form, see [**Ready Inbound Receipt Form and Operations Tab Definitions**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#6-ready-inbound-receipt-form-and-operations-tab-definitions).
+
 ---
 
-### Step 4: Interpret Delivery Orders and Dropship Pipelines
+## 4. Interpret Delivery Orders and Dropship Pipelines
 
 Return to **Inventory > Overview** to monitor outbound and partner operations:
 
@@ -85,9 +92,11 @@ Return to **Inventory > Overview** to monitor outbound and partner operations:
 
 ---
 
-### Step 5: Access Card Context Menus and Fast Actions
+## 5. Access Card Context Menus and Fast Actions
 
 Click the three vertical dots icon in the upper-right corner of any operation card *(e.g., `Receipts`)* to open the context flyout:
+
+> **Tip:** For more details about the options and actions on the card flyout menu, see [**Card Context Flyout Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#3-card-context-flyout-data-dictionary).
 
 1. **Filtered Views**:
    * **All**: Displays all historical, active, and completed operations of this type.
@@ -103,12 +112,10 @@ Click the three vertical dots icon in the upper-right corner of any operation ca
 
 ---
 
-### Related Documentation
+## Related Documentation
 
 * [Navigate Inventory Overview and Operation Types](../task-guides/01-navigate-inventory-overview-and-operation-types.md)
 * [Manage Product Catalog and Inventory Levels](../task-guides/05-manage-product-catalog-and-inventory-levels.md)
 * [Manage Replenishment and Automated Reordering Rules](../task-guides/09-manage-replenishment-and-automated-reordering-rules.md)
-* [Inventory Dashboard and Operation Card Definitions](../settings-and-fields/01-inventory-dashboard-and-operation-card-definitions.md)
-* [Replenishment and Reordering Rules Field Definitions](../settings-and-fields/09-replenishment-and-reordering-rules-field-definitions.md)
-* [Product Catalog and Stock Level Field Definitions](../settings-and-fields/05-product-catalog-and-stock-level-field-definitions.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
+* [Warehouse Operations and Transfer Field Definitions](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md)
+* [Replenishment and Reordering Rules Field Definitions](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md)

@@ -2,17 +2,14 @@
 
 This operational guide provides procedures for inventory controllers, warehouse auditors, and stockroom managers to navigate the Operations menu, conduct cycle counts, record physical inventory adjustments, and reconcile warehouse stock balances with general ledger accounts in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access to the CURQ Inventory application.
-* Authorized inventory controller permissions to apply stock adjustments.
-* Products configured with inventory tracking enabled.
+> **Prerequisites**
+> * Operational access to the CURQ Inventory application.
+> * Authorized inventory controller permissions to apply stock adjustments.
+> * Products configured with inventory tracking enabled.
 
 ---
 
-### Access the Operations Menu and Physical Inventory Register
+## 1. Access the Operations Menu and Physical Inventory Register
 
 1. In the primary top navigation bar of CURQ Inventory, click **Operations**.
 2. CURQ opens the structured operations flyout menu:
@@ -32,9 +29,11 @@ This operational guide provides procedures for inventory controllers, warehouse 
      * **Procurement: run scheduler**: Background engine triggering automated purchase and transfer rules.
 4. Under **Adjustments**, click **Physical Inventory**.
 
+> **Tip:** For more details about the fields and controls on the Operations menu, see [**Operations Menu and Navigation Structure Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#1-operations-menu-and-navigation-structure-data-dictionary).
+
 ---
 
-### Conduct Physical Counts on the Inventory Adjustments Register
+## 2. Conduct Physical Counts on the Inventory Adjustments Register
 
 CURQ displays the inventory adjustments register:
 
@@ -54,9 +53,11 @@ CURQ displays the inventory adjustments register:
    * **Scheduled Date**: Target compliance deadline for the count audit.
    * **User**: Warehouse auditor or inventory specialist assigned to the count.
 
+> **Tip:** For more details about the fields and controls on the physical inventory adjustments register, see [**Physical Inventory Adjustments Register Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#2-physical-inventory-adjustments-register-data-dictionary).
+
 ---
 
-### Record Cycle Counts and Apply Stock Adjustments
+## 3. Record Cycle Counts and Apply Stock Adjustments
 
 1. **Record a Single Product Count**:
    * Click **+ New** in the upper-left action bar.
@@ -73,7 +74,7 @@ CURQ displays the inventory adjustments register:
 
 ---
 
-### Audit Double-Entry Ledger Impacts of Stock Adjustments
+## 4. Audit Double-Entry Ledger Impacts of Stock Adjustments
 
 When an adjustment is applied, CURQ executes balanced double-entry inventory transactions:
 
@@ -87,14 +88,10 @@ When an adjustment is applied, CURQ executes balanced double-entry inventory tra
 
 ---
 
-### Related Documentation
+## Related Documentation
 
-* [Operations Menu and Physical Inventory Field Definitions](../settings-and-fields/07-operations-menu-and-physical-inventory-field-definitions.md)
+* [Physical Inventory and Scrap Field Definitions](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md)
 * [Process Scrap Orders and Inventory Write-Offs](./08-process-scrap-orders-and-inventory-write-offs.md)
 * [Manage Replenishment and Automated Reordering Rules](./09-manage-replenishment-and-automated-reordering-rules.md)
 * [Navigate Inventory Overview and Operation Types](./01-navigate-inventory-overview-and-operation-types.md)
 * [Manage Product Catalog and Inventory Levels](./05-manage-product-catalog-and-inventory-levels.md)
-* [Manage Lot and Serial Number Traceability](./06-manage-lot-and-serial-number-traceability.md)
-* [Audit Stock Moves and Inventory Valuation](./04-audit-stock-moves-and-inventory-valuation.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
-

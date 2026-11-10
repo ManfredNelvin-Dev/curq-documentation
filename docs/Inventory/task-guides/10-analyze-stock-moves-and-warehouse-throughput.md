@@ -2,17 +2,14 @@
 
 This operational guide provides procedures for warehouse managers, inventory controllers, and logistics analysts to evaluate fulfillment velocity, inspect double-entry stock movement registers, generate multi-dimensional throughput pivot tables, and visualize demand distributions across product lines in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access permissions to the CURQ Inventory application.
-* Historical completed stock transfers *(such as vendor receipts, customer deliveries, or scrap write-offs)*.
-* Familiarity with CURQ double-entry stock tracking between internal and external locations.
+> **Prerequisites**
+> * Operational access permissions to the CURQ Inventory application.
+> * Historical completed stock transfers *(such as vendor receipts, customer deliveries, or scrap write-offs)*.
+> * Familiarity with CURQ double-entry stock tracking between internal and external locations.
 
 ---
 
-### Access Moves Analysis and Evaluate Multi-Dimensional Pivot Metrics
+## 1. Access Moves Analysis and Evaluate Multi-Dimensional Pivot Metrics
 
 1. In the top navigation bar, click the **Reporting** menu.
 2. Select **Moves Analysis**:
@@ -36,9 +33,11 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **Download (XLSX)**: Exports the pivot matrix directly into Microsoft Excel format.
    * **Insert in Spreadsheet**: Embeds live pivot figures into an internal CURQ spreadsheet dashboard.
 
+> **Tip:** For more details about the controls and matrix dimensions on the pivot view, see [**Moves Analysis Header and View Switcher Controls Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#6-moves-analysis-header-and-view-switcher-controls-data-dictionary) and [**Moves Analysis Pivot Matrix Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#7-moves-analysis-pivot-matrix-data-dictionary).
+
 ---
 
-### Inspect Granular Double-Entry Transfers in List View
+## 2. Inspect Granular Double-Entry Transfers in List View
 
 To examine line-by-line execution details, source bins, and fulfillment variances:
 
@@ -60,9 +59,11 @@ To examine line-by-line execution details, source bins, and fulfillment variance
 4. **Examine Summary Throughput**:
    * The list footer computes aggregate totals across all visible moves *(e.g., `71.00` total demand against `75.00` total units physically executed)*.
 
+> **Tip:** For more details about the fields and columns on the moves analysis list register, see [**Moves Analysis List Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#8-moves-analysis-list-register-data-dictionary).
+
 ---
 
-### Visualize Demand Distributions in Graph View
+## 3. Visualize Demand Distributions in Graph View
 
 To identify high-velocity products and analyze fulfillment volume visually:
 
@@ -77,9 +78,11 @@ To identify high-velocity products and analyze fulfillment volume visually:
      * Highlights volume disparity between base stock intake *(e.g., `50.00` units for `Fairphone 5`)* and variant fulfillment runs *(e.g., `Fair Phone 5 (Black)`, `Fair Phone 5 (White)`, `Fair Phone 5 (Orange)`)*.
    * **Chart Modes**: Use the toolbar to toggle between vertical bar charts, line trends, pie proportions, or stacked volume perspectives.
 
+> **Tip:** For more details about the graph view controls, chart types, and metrics canvas, see [**Moves Analysis Graph View Controls and Canvas Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#9-moves-analysis-graph-view-controls-and-canvas-data-dictionary).
+
 ---
 
-### Review Visual Cards in Kanban Perspective
+## 4. Review Visual Cards in Kanban Perspective
 
 To monitor stock move execution in a card-oriented layout:
 
@@ -94,19 +97,14 @@ To monitor stock move execution in a card-oriented layout:
    * Ratios with variances highlight over-deliveries or vendor over-shipments accepted at the dock.
 4. Click any card to drill down into the underlying stock move form for detailed warehouse traceability.
 
+> **Tip:** For more details about the Kanban card metrics and fulfillment ratios, see [**Moves Analysis Kanban Card Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#10-moves-analysis-kanban-card-data-dictionary).
+
 ---
 
-### Related Documentation
+## Related Documentation
 
-* [Moves Analysis and Reporting Field Definitions](../settings-and-fields/10-moves-analysis-and-reporting-field-definitions.md)
+* [Stock Moves Analysis and Valuation Field Definitions](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md)
 * [Audit Historical Stock Movements in Moves History](./11-audit-historical-stock-movements-in-moves-history.md)
-* [Moves History Field Definitions](../settings-and-fields/11-moves-history-field-definitions.md)
 * [Track Inventory by Location and Storage Bins](./12-track-inventory-by-location-and-storage-bins.md)
-* [Location Reporting Field Definitions](../settings-and-fields/12-location-reporting-field-definitions.md)
-* [Audit Stock Moves and Inventory Valuation](./04-audit-stock-moves-and-inventory-valuation.md)
-* [Detailed Operations and Stock Valuation Field Definitions](../settings-and-fields/04-detailed-operations-and-stock-valuation-field-definitions.md)
-* [Process Outbound Delivery Orders and Customer Shipments](./03-process-outbound-delivery-orders-and-customer-shipments.md)
-* [Process Inbound Receipts and Vendor Deliveries](./02-process-inbound-receipts-and-vendor-deliveries.md)
-* [Process Scrap Orders and Inventory Write-Offs](./08-process-scrap-orders-and-inventory-write-offs.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
-
+* [Track Enterprise Stock Balances and Inventory at Date](./13-track-enterprise-stock-balances-and-inventory-at-date.md)
+* [Warehouse Operations and Transfer Field Definitions](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md)

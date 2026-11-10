@@ -1,16 +1,57 @@
-# Scrap Order Field Definitions
+# Physical Inventory and Scrap Field Definitions
 
-This document provides a comprehensive data dictionary for all list register columns, header action controls, form fields, validated state controls, moves history registers, and stock move records within the CURQ Inventory Scrap Orders module at **Inventory > Operations > Scrap**.
+This document provides a comprehensive data dictionary for physical inventory adjustments, cycle count registers, scrap orders, and stock write-offs in CURQ Inventory.
 
 ---
 
-### Scrap Orders Register Data Dictionary
+## 1. Operations Menu and Navigation Structure Data Dictionary
+
+The Operations dropdown organizes warehouse operations into transfers, stock adjustments, and replenishment:
+
+| Field Name | Description |
+| :--- | :--- |
+| **Transfers Header** | Section grouping primary physical stock movements between warehouses, vendors, and customers. |
+| **Receipts Link** | Navigation link opening the inbound vendor delivery register. |
+| **Deliveries Link** | Navigation link opening the outbound customer fulfillment register. |
+| **Dropships Link** | Navigation link opening the direct vendor-to-customer transfer queue. |
+| **Adjustments Header** | Section grouping stock counting, cycle audits, and inventory write-offs. |
+| **Physical Inventory Link** | Navigation link opening the cycle count audit and stock adjustment register. |
+| **Scrap Link** | Navigation link opening the damaged, expired, or obsolete stock disposal register. |
+| **Procurement Header** | Section grouping reordering rules and supply scheduling engines. |
+| **Replenishment Link** | Navigation link opening the automated and manual reordering evaluation board. |
+| **Procurement: run scheduler** | Immediate execution action triggering background automated purchase order and stock move calculations. |
+
+---
+
+## 2. Physical Inventory Adjustments Register Data Dictionary
+
+The Physical Inventory Adjustments register itemizes theoretical stock balances, counted quantities, and reconciliation actions:
+
+| Field Name | Description |
+| :--- | :--- |
+| **+ New Action Button** | Top action button inserting a new manual cycle count line for an individual product and location. |
+| **Apply All Button** | Top execution button committing all pending cycle count variances simultaneously across all audited rows. |
+| **Batch Selection Checkbox** | Multi-select selector for flagging multiple adjustment lines for batch updates or exports. |
+| **Product Column** | Catalog item name and specification being audited during the physical inventory count. |
+| **Lot/Serial Number Column** | Specific tracking identifier for items managed by lot batches or unique serial numbers. |
+| **On Hand Quantity Column** | Theoretical stock balance calculated by CURQ from cumulative historical transfers. |
+| **Unit of Measure (UoM)** | Measurement unit applied to the product quantity *(e.g., `Units`)*. |
+| **Counted Quantity Column** | Editable field capturing the actual physical quantity counted on shelves by the audit team. |
+| **Difference Column** | Calculated variance reflecting surplus *(positive value)* or shrinkage *(negative value)*. |
+| **Scheduled Date Column** | Planned target date for completing the physical inventory audit task. |
+| **User Column** | Assigned warehouse specialist or inventory auditor responsible for the cycle count. |
+| **Apply Action Control** | Row-level action button committing the specific stock variance and updating on-hand inventory balances. |
+| **Set Action Control** | Row-level action button setting the counted quantity to equal theoretical on-hand quantity, confirming zero variance. |
+| **Clear Action Control** | Row-level action button resetting the counted quantity entry to zero or blank. |
+| **History Action Control** | Row-level navigation link opening the historical log of past inventory adjustments for this product. |
+
+---
+
+## 3. Scrap Orders Register Data Dictionary
 
 The Scrap Orders register itemizes all historical and active stock write-offs:
 
-![CURQ Scrap Orders register displaying Reference, Date, Product, Quantity, Unit of Measure, Status, and empty state guidance](../media/034.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **+ New Action Button** | Primary action button opening a blank form to create a new scrap disposal order. |
 | **Reference Column** | Unique alphanumeric identifier assigned to the scrap order upon creation *(e.g., `REF0001`, `SP/00001`)*. |
@@ -26,13 +67,11 @@ The Scrap Orders register itemizes all historical and active stock write-offs:
 
 ---
 
-### Scrap Order Form Fields and Action Controls Data Dictionary
+## 4. Scrap Order Form Fields and Action Controls Data Dictionary
 
 The Scrap Order form captures product specifications, disposal quantities, replenishment triggers, and scrap justifications:
 
-![CURQ Scrap Order creation form view for Fair Phone 5 Black displaying Quantity, Replenish Quantities, Scrap Reason, and Validate button](../media/035.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Validate Action Button** | Primary execution button committing the scrap write-off, removing stock from storage, and posting valuation entries. |
 | **Status Chevron Bar** | Sequential stage tracker displaying progression from active **Draft** to completed **Done**. |
@@ -45,15 +84,11 @@ The Scrap Order form captures product specifications, disposal quantities, reple
 
 ---
 
-### Validated Scrap Order and Smart Controls Data Dictionary
+## 5. Validated Scrap Order and Smart Controls Data Dictionary
 
 Following validation, CURQ freezes operational parameters, logs immutable timestamps, and exposes relational move buttons:
 
-![CURQ validated Scrap Order form view for SP 00001 showing Done status chevron, Transit Damage tag, and Date timestamp](../media/036.png)
-
-![CURQ validated Scrap Order form highlighting the Product Moves smart button with a red box and arrow](../media/037.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Order Reference Title** | System-generated tracking code assigned upon validation *(e.g., `SP/00001`)*. |
 | **Product Moves Smart Button** | Header navigation control displaying the balanced double-entry stock moves generated by the write-off. |
@@ -63,13 +98,11 @@ Following validation, CURQ freezes operational parameters, logs immutable timest
 
 ---
 
-### Scrap Moves History Register Data Dictionary
+## 6. Scrap Moves History Register Data Dictionary
 
 Clicking the Product Moves smart button opens the Moves History register itemizing source and destination coordinates:
 
-![CURQ Moves History register displaying Date, Reference SP 00001, Product, From WH Stock, To Virtual Locations Scrap, Quantity, and Status Done](../media/038.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Date Column** | Timestamp of physical movement execution *(e.g., `11/06/2026 15:15:55`)*. |
 | **Reference Column** | Transactional reference code linking to scrap record `SP/00001`. |
@@ -82,13 +115,11 @@ Clicking the Product Moves smart button opens the Moves History register itemizi
 
 ---
 
-### Stock Move Record Form Data Dictionary
+## 7. Stock Move Record Form Data Dictionary
 
 Drilling down into an individual move row displays detailed operational accountability:
 
-![CURQ Stock Move form view for SP 00001 showing move status pipeline, Source, Quantity, and Done By warehouse specialist](../media/039.png)
-
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Move Status Pipeline** | Chevron progression tracking stages across **New**, **Waiting Availability**, **Partially Available**, **Available**, and **Done**. |
 | **Date Field** | Execution timestamp matching the scrap order completion date. |
@@ -100,11 +131,10 @@ Drilling down into an individual move row displays detailed operational accounta
 
 ---
 
-### Related Documentation
+## Related Documentation
 
-* [Process Scrap Orders and Inventory Write-Offs](../task-guides/08-process-scrap-orders-and-inventory-write-offs.md)
-* [Replenishment and Reordering Rules Field Definitions](./09-replenishment-and-reordering-rules-field-definitions.md)
 * [Conduct Physical Inventory Counts and Adjustments](../task-guides/07-conduct-physical-inventory-counts-and-adjustments.md)
-* [Operations Menu and Physical Inventory Field Definitions](./07-operations-menu-and-physical-inventory-field-definitions.md)
-* [Detailed Operations and Stock Valuation Field Definitions](./04-detailed-operations-and-stock-valuation-field-definitions.md)
+* [Process Scrap Orders and Inventory Write-Offs](../task-guides/08-process-scrap-orders-and-inventory-write-offs.md)
+* [Warehouse Operations and Transfer Field Definitions](./01-warehouse-operations-and-transfer-field-definitions.md)
+* [Stock and Location Reporting Field Definitions](./05-stock-and-location-reporting-field-definitions.md)
 * [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)

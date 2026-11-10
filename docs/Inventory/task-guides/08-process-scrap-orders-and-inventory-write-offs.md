@@ -2,17 +2,14 @@
 
 This operational guide provides procedures for inventory controllers, warehouse leads, and quality inspection teams to write off damaged, expired, or defective products from warehouse storage into virtual scrap locations, audit underlying stock moves, and inspect traceability records in CURQ Inventory.
 
----
-
-### Prerequisites
-
-* Operational access permissions to the CURQ Inventory application.
-* Physical products identified as damaged, contaminated, or non-conforming.
-* Authorized permissions to commit inventory write-offs.
+> **Prerequisites**
+> * Operational access permissions to the CURQ Inventory application.
+> * Physical products identified as damaged, contaminated, or non-conforming.
+> * Authorized permissions to commit inventory write-offs.
 
 ---
 
-### Access the Scrap Orders Register
+## 1. Access the Scrap Orders Register
 
 1. In the top navigation bar, click the **Operations** menu.
 2. Under the **Adjustments** section, click **Scrap**:
@@ -23,9 +20,11 @@ This operational guide provides procedures for inventory controllers, warehouse 
    * As indicated in the register overview, scrapping an item removes it from physical warehouse storage *(e.g., `WH/Stock`)* and transfers it to `Virtual Locations/Scrap`.
    * This preserves historical traceability and financial loss reporting without polluting active picking bins.
 
+> **Tip:** For more details about the fields and controls on the scrap orders register, see [**Scrap Orders Register Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#3-scrap-orders-register-data-dictionary).
+
 ---
 
-### Create and Configure a New Scrap Order
+## 2. Create and Configure a New Scrap Order
 
 1. In the upper-left action bar of the Scrap Orders register, click **+ New**.
 2. CURQ opens the blank scrap order form:
@@ -40,9 +39,11 @@ This operational guide provides procedures for inventory controllers, warehouse 
    * **Scrap Reason**: Select or type the justification for the write-off *(e.g., `Transit Damage`)*.
    * **Source Document**: Record cross-module references such as the originating vendor receipt *(e.g., `WH/IN/00070`)*, delivery order, or internal quality audit ticket.
 
+> **Tip:** For more details about the fields and action controls on the scrap order form, see [**Scrap Order Form Fields and Action Controls Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#4-scrap-order-form-fields-and-action-controls-data-dictionary).
+
 ---
 
-### Validate and Review Completed Scrap Orders
+## 3. Validate and Review Completed Scrap Orders
 
 Once the product, quantity, and operational context are verified:
 
@@ -60,7 +61,7 @@ Once the product, quantity, and operational context are verified:
 
 ---
 
-### Access Product Moves via Header Smart Button
+## 4. Access Product Moves via Header Smart Button
 
 From the validated scrap order header, locate the navigation smart button:
 
@@ -69,9 +70,11 @@ From the validated scrap order header, locate the navigation smart button:
 1. Click the **Product Moves** smart button in the upper control bar.
 2. CURQ redirects to the filtered stock movement register documenting the physical transfer out of warehouse inventory.
 
+> **Tip:** For more details about the validated scrap form and header smart buttons, see [**Validated Scrap Order and Smart Controls Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#5-validated-scrap-order-and-smart-controls-data-dictionary).
+
 ---
 
-### Audit Stock Movements in Moves History
+## 5. Audit Stock Movements in Moves History
 
 CURQ displays the **Moves History** register filtered to the active scrap reference:
 
@@ -87,9 +90,11 @@ CURQ displays the **Moves History** register filtered to the active scrap refere
    * **Status**: Confirms finalized execution with a green **Done** badge.
 2. Click anywhere on the table row to inspect the granular stock move record.
 
+> **Tip:** For more details about the columns and stock movement entries on the moves history register, see [**Scrap Moves History Register Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#6-scrap-moves-history-register-data-dictionary).
+
 ---
 
-### Inspect Individual Stock Move Record Attributes
+## 6. Inspect Individual Stock Move Record Attributes
 
 CURQ opens the individual stock move form detailing operational execution:
 
@@ -104,15 +109,14 @@ CURQ opens the individual stock move form detailing operational execution:
    * **Quantity**: Exact count of physical units transferred *(e.g., `2.00 Units`)*.
    * **Done By**: User avatar logging the warehouse specialist who validated the physical movement.
 
+> **Tip:** For more details about the lifecycle pipeline and movement fields on the individual move record, see [**Stock Move Record Form Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#7-stock-move-record-form-data-dictionary).
+
 ---
 
-### Related Documentation
+## Related Documentation
 
-* [Scrap Order Field Definitions](../settings-and-fields/08-scrap-order-field-definitions.md)
-* [Manage Replenishment and Automated Reordering Rules](./09-manage-replenishment-and-automated-reordering-rules.md)
-* [Replenishment and Reordering Rules Field Definitions](../settings-and-fields/09-replenishment-and-reordering-rules-field-definitions.md)
+* [Physical Inventory and Scrap Field Definitions](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md)
 * [Conduct Physical Inventory Counts and Adjustments](./07-conduct-physical-inventory-counts-and-adjustments.md)
-* [Operations Menu and Physical Inventory Field Definitions](../settings-and-fields/07-operations-menu-and-physical-inventory-field-definitions.md)
-* [Manage Product Catalog and Inventory Levels](./05-manage-product-catalog-and-inventory-levels.md)
-* [Audit Stock Moves and Inventory Valuation](./04-audit-stock-moves-and-inventory-valuation.md)
-* [Understanding Double-Entry Inventory and Stock Flows](../core-concepts/01-understanding-double-entry-inventory-and-stock-flows.md)
+* [Manage Replenishment and Automated Reordering Rules](./09-manage-replenishment-and-automated-reordering-rules.md)
+* [Replenishment and Reordering Rules Field Definitions](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md)
+* [Stock and Location Reporting Field Definitions](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md)
