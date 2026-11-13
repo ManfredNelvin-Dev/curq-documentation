@@ -7,6 +7,9 @@ Establish multi-currency price lists, configure volume quantity tiers, and autom
 > * Enable **Pricelists** in **Sales > Configuration > Settings**. Select **Advanced price rules (discounts, formulas)** to unlock volume breaks and margin controls.
 >
 >    ![Enable pricelists setting](../media/087.png)
+>
+> **Warning (Configuration Advisory):** Modifying pricelists and pricing rules requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -62,6 +65,8 @@ Under the **Computation** section of the rule modal, choose your calculation log
    * **Min. Margin & Max. Margin**: Set profitability safeguards *(e.g., ensure at least `$ 10.00` margin over cost regardless of discount)*.
 4. Click **Save & Close** (or **Save & New** to add additional quantity tiers).
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Pricing, Pricelists, and Unit of Measure Specifications](../settings-and-fields/02-pricing-pricelists-and-discount-specifications.md).
+
 ---
 
 ## 2. Assign Pricelists to Customers or Quotations
@@ -80,15 +85,19 @@ Under the **Computation** section of the rule modal, choose your calculation log
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Conflicting Rules (Specific vs. Global)**: If multiple rules apply to the same item, CURQ's pricing engine prioritizes by specificity: `Product Variant Rule > Product Rule > Category Rule > Global Rule`. The most specific rule always takes precedence.
 * **Volume Discount Not Triggering**: Verify that the sales order line quantity matches or exceeds the **Min. Quantity** defined in the rule. Also check if the rule has an expired date window under **Validity**.
 
 ---
 
+> **Tip (Advised Settings):** Base customer pricelists on standard public sales prices with percentage discounts rather than fixed overrides to simplify seasonal updates.
+
+---
+
 ## Related Documentation
 * [Sales Reporting and Analytics](./13-sales-reporting-and-analytics.md)
 * [Pricing, Pricelists, and Discount Specifications](../settings-and-fields/02-pricing-pricelists-and-discount-specifications.md)
-
-
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)
+* [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

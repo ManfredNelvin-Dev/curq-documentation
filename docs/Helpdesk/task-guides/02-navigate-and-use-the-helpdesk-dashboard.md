@@ -17,14 +17,10 @@ When tickets are logged into the system, the dashboard automatically calculates 
 
 ![Helpdesk Dashboard showing active counters for Open Tickets without team and Open Tickets](../media/007.png)
 
-| Metric / Counter | Visual Icon | Operational Purpose and Trigger Rules |
-| :--- | :--- | :--- |
-| **Open Tickets without team** | Exclamation Circle | Counts all active, unresolved tickets where the **Team** field remains unassigned *(e.g., `1`)*. Serves as a triage warning to ensure inquiries are routed to appropriate functional units. |
-| **Open Tickets** | Life Ring Wheel | Aggregate counter tracking all active tickets across all stages preceding terminal closure *(e.g., `1`)*. |
+* **Open Tickets without team** *(Exclamation Circle icon)* flags active tickets whose **Team** field is still unassigned *(e.g., `1`)*.
+* **Open Tickets** *(Life Ring Wheel icon)* tracks all unresolved tickets across active stages prior to terminal closure *(e.g., `1`)*.
 
 Clicking on any counter dynamically filters the underlying ticket register to display the matching records.
-
-> For a detailed explanation of all dashboard triage counters, workload metrics, and card controls, see [**Helpdesk Dashboard Metrics Data Dictionary**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#4-helpdesk-dashboard-metrics-data-dictionary).
 
 ---
 
@@ -34,15 +30,9 @@ Once tickets are assigned to a support department *(e.g., `Development Team`)*, 
 
 ![Helpdesk Dashboard showing Development Team card with To Do button and triage breakdown](../media/011.png)
 
-| Metric / Control | Operational Purpose |
-| :--- | :--- |
-| **Team Title** | Department or functional unit managing the support queue *(e.g., `Development Team`)*. |
-| **To Do Action Button** | Primary quick-access button *(e.g., `1 To Do`)* that opens the ticket register filtered to open tickets for this specific team. |
-| **Unassigned** | Counts tickets belonging to this team where the individual **Assigned user** is unassigned *(e.g., `1`)*. |
-| **Unattended** | Tracks tickets in the queue that have not received an initial response or internal follow-up *(e.g., `1`)*. |
-| **High Priority** | Counts tickets carrying high priority star ratings *(e.g., `1`)* to ensure rapid SLA escalation. |
+Each card displays the **Team Title**, a quick-access **`To Do`** button *(e.g., `1 To Do`)* that opens the filtered queue for that department, and sub-counters for **Unassigned**, **Unattended**, and **High Priority** tickets. When all active tickets reach a resolved stage *(e.g., `Done`)*, the action button transitions to **`0 To Do`**, and all sub-counters reset to `0` *(as shown in [020.png](../media/020.png))*, confirming that team queues are clear.
 
-When all active tickets reach a resolved stage *(e.g., `Done`)*, the action button transitions to **`0 To Do`**, and all sub-counters reset to `0` *(as shown in [020.png](../media/020.png))*, confirming that team queues are clear.
+> For a detailed explanation of all dashboard triage counters, workload metrics, and card controls, see [**Helpdesk Dashboard Metrics Data Dictionary**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#4-helpdesk-dashboard-metrics-data-dictionary).
 
 ---
 
@@ -76,7 +66,7 @@ In the upper-right corner of the dashboard or ticket register, switch between th
 
 ---
 
-## Edge Cases & Dashboard Troubleshooting
+## 3. Edge Cases & Dashboard Troubleshooting
 
 * **Zero Tickets Displayed**: If the dashboard shows an empty state *(as seen in initial setup [001.png](../media/001.png))*, verify that search filters or restrictive team criteria are cleared in the top search bar.
 * **Triage Warning Alerts**: High numbers on **Open Tickets without team** indicate that incoming automated channels *(such as email aliases or web forms)* lack default team routing rules in Helpdesk Configuration.

@@ -18,7 +18,9 @@ flowchart LR
 
 ---
 
-## 1. Hands-On Scenario
+## 1. Hands-On Exercise: Approve, Post, and Reimburse
+
+### 1.1 Review the Administrative Scenario
 
 In this administrative walkthrough, you will process an approved employee expense claim through final settlement:
 * **Expense Report Summary**: `Restaurant Bill [freeforonline_com]`
@@ -29,7 +31,7 @@ In this administrative walkthrough, you will process an approved employee expens
 
 ---
 
-## 2. Review and Approve the Claim
+### 1.2 Review and Approve the Claim
 
 Department managers inspect pending submissions to verify business necessity and policy compliance:
 
@@ -49,7 +51,7 @@ Department managers inspect pending submissions to verify business necessity and
 
 ---
 
-## 3. Post Approved Expenses to the General Ledger
+### 1.3 Post Approved Expenses to the General Ledger
 
 Financial users commit authorized expense liabilities into the accounting ledgers:
 
@@ -62,11 +64,11 @@ Financial users commit authorized expense liabilities into the accounting ledger
 
 ![CURQ Expense Report form view displaying Posted pipeline stage, Pay action button, Amount Due, and chatter audit trail](../media/027.png)
 
-> **Tip:** For detailed definitions of payment methods, accounting journals, and partner bank configuration, see [**Accounting Journal Posting Fields Data Dictionary**](../settings-and-fields/03-expense-reimbursement-and-posting-field-definitions.md#3-accounting-journal-posting-fields).
+> For complete definitions of accounting journals, accounting dates, and generated debit, tax, and credit lines, see [**Accounting Journal Posting Fields Data Dictionary**](../settings-and-fields/03-expense-reimbursement-and-posting-field-definitions.md#3-accounting-journal-posting-fields).
 
 ---
 
-## 4. Disburse Employee Reimbursement
+### 1.4 Disburse Employee Reimbursement
 
 Once the liability is recognized in Accounts Payable, funds can be disbursed to the employee:
 
@@ -87,7 +89,20 @@ Once the liability is recognized in Accounts Payable, funds can be disbursed to 
 
 ![CURQ Expense Report form view in Done stage displaying IN PAYMENT banner in the top-right corner](../media/030.png)
 
-> **Tip:** For complete field definitions of the payment modal, see [**Direct Reimbursement Payment Modal Fields Data Dictionary**](../settings-and-fields/03-expense-reimbursement-and-posting-field-definitions.md#1-direct-reimbursement-payment-modal-fields). To process payments for multiple claims at once, see [**Reimburse Employee Expenses**](../task-guides/06-reimburse-employee-expenses.md#2-reimburse-multiple-expense-reports-in-bulk).
+> For complete field definitions of the payment modal, see [**Direct Reimbursement Payment Modal Fields Data Dictionary**](../settings-and-fields/03-expense-reimbursement-and-posting-field-definitions.md#1-direct-reimbursement-payment-modal-fields). To process payments for multiple claims at once, see [**Reimburse Employee Expenses**](../task-guides/06-reimburse-employee-expenses.md#2-reimburse-multiple-expense-reports-in-bulk).
+
+---
+
+## 2. Exploring Further: Settlement Governance
+
+### 2.1 Audit Trails and Approval Traceability
+Every stage transition, attachment upload, manager approval, and refusal note is permanently logged in the Chatter audit feed with user stamps and ISO timestamps.
+
+### 2.2 Rejection and Refusal Handling
+Refusing an expense report sends the sheet back to the draft queue with a mandatory justification note, allowing employees to rectify and resubmit without losing entered receipt lines.
+
+### 2.3 Batch Settlement and Grouped Payments
+Finance teams can select multiple approved reports simultaneously from the management list view and execute a single consolidated bank payment per employee using the **Group Payments** feature.
 
 ---
 

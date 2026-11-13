@@ -37,7 +37,7 @@ Real-time timer tracking records precise labor duration without manual calculati
 
 6. When pausing or completing the activity, click **Stop work** in the header action bar to stop the timer and post recorded minutes to the timesheet ledger.
 
-> For a detailed explanation of timer dialog controls, timesheet tab columns, and capacity tracking fields, see [**Start Work Modal and Timesheets Tab Data Dictionary**](../settings-and-fields/03-project-task-field-definitions.md#4-start-work-modal-and-timesheets-tab-data-dictionary).
+> For a detailed explanation of timer dialog controls, timesheet tab columns, and active tracking indicators, see [**Start Work Modal and Timesheets Tab Data Dictionary**](../settings-and-fields/03-project-task-field-definitions.md#4-start-work-modal-and-timesheets-tab-data-dictionary) and [**Active Work Tracking Controls**](../settings-and-fields/03-project-task-field-definitions.md#5-active-work-tracking-controls).
 
 ---
 

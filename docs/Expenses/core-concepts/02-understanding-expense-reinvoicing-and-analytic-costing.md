@@ -6,13 +6,21 @@ CURQ Expenses connects employee expenditures directly to customer billing and in
 
 ## 1. Principles of Customer Expense Reinvoicing
 
-When employees incur business expenses on behalf of a client *(such as project travel, meals, or equipment hire)*, organizations can recharge those costs directly through customer sales orders. 
+### 1.1 Commercial Recharge Concepts
+
+When employees incur business expenses on behalf of a client *(such as project travel, meals, or equipment hire)*, organizations can recharge those costs directly through customer sales orders.
+
+---
+
+### 1.2 Sales Order Line Generation
 
 By linking an active customer Sales Order in the **Customer to Reinvoice** field, CURQ tracks the billable expenditure through the approval lifecycle. Once approved and posted to the general ledger, the system automatically injects a corresponding billable line item into the client's Sales Order for customer invoicing.
 
 ---
 
 ## 2. Reinvoicing Policies and Price Calculations
+
+### 2.1 Reinvoicing Policy Framework
 
 Expense reinvoicing is governed by the **Re-Invoice Costs** policy configured on each expense category:
 
@@ -22,7 +30,9 @@ Expense reinvoicing is governed by the **Re-Invoice Costs** policy configured on
 | **At cost** | Re-bills the customer the exact amount incurred on the receipt. | `Sales Order Price = Purchase Cost` | Pass-through disbursements: client hotel stays, third-party tolls, client flight tickets. |
 | **Sales price** | Re-bills the client using a fixed commercial catalog unit rate. | `Sales Order Price = Predefined Sales Price` | Fixed-rate client billables: travel mileage (€ 1.00/mile), daily consultant per diem rates. |
 
-### Profit Margin Generation
+---
+
+### 2.2 Profit Margin Generation
 
 When using the **Sales price** policy, organizations can generate a direct commercial margin on reinvoiced items:
 
@@ -35,7 +45,9 @@ For instance, an employee logs a 50-mile client site visit with an internal mile
 
 ---
 
-## 3. Analytic Distribution & Multi-Project Allocation
+## 3. Analytic Costing and Enterprise Integration
+
+### 3.1 Analytic Distribution and Multi-Project Allocation
 
 Every expense line in CURQ supports multi-dimensional cost tagging through the **Analytic Distribution** widget. When an expenditure serves multiple projects, departments, or cost centers, the amount can be split proportionally across multiple analytic accounts:
 
@@ -56,14 +68,16 @@ flowchart LR
 | **Project Beta** | Internal Maintenance | 40% | `€ 200.00` | Internal operational overhead |
 | **Total Allocation** | | **100%** | **`€ 500.00`** | **Fully Allocated** |
 
-### 3.1 Allocation Principles
+---
+
+### 3.2 Allocation Principles
 * **Sum to 100%**: When multiple projects or cost centers share an expense *(e.g., joint travel spanning two client audits)*, the percentage allocations must total exactly 100%.
 * **Cost Center Real-Time Visibility**: Analytic lines post simultaneously with general ledger entries, immediately debiting project budget utilization on the CURQ Project dashboard.
 * **Separation of Liability**: Even when expenses are split across multiple analytic accounts, the employee receives a single consolidated reimbursement payment.
 
 ---
 
-## 4. Cross-Module Enterprise Integration
+### 3.3 Cross-Module Enterprise Integration
 
 CURQ Expenses interacts across the entire enterprise data architecture:
 

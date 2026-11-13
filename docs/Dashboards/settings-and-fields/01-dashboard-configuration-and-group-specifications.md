@@ -4,7 +4,7 @@ This document provides a factual, scannable reference catalog of configuration m
 
 ---
 
-## Dashboard Group Configuration Fields
+## 1. Dashboard Group Configuration Fields
 
 The following fields define dashboard groups in **Dashboards > Configuration > Dashboards**:
 
@@ -16,7 +16,9 @@ The following fields define dashboard groups in **Dashboards > Configuration > D
 
 ---
 
-## Spreadsheet Dashboard Line Attributes
+## 2. Spreadsheet Dashboard Line Attributes
+
+> **Warning (Data Privacy & Server Performance Safeguard):** Leaving the **Group** field blank makes that dashboard accessible to all internal system users, potentially exposing confidential financial, margin, or compensation figures. Furthermore, embedding high-frequency unindexed domain queries or sub-minute auto-refresh intervals across large transaction volumes can cause severe database lock contention and system-wide slowdowns. Always restrict sensitive dashboards to designated manager roles and benchmark query performance before publishing.
 
 The following settings are configured per dashboard line under the **Spreadsheets** tab:
 
@@ -31,19 +33,8 @@ The following settings are configured per dashboard line under the **Spreadsheet
 
 ---
 
-## Security and Permission Specifications
-
-| Security Role | Operational Scope & Permissions |
-| :--- | :--- |
-| **Standard User** | Can view published dashboards within groups where they possess module read access. Can personalize **My Dashboard** with private widgets. Cannot modify standard dashboard structures. |
-| **Department Manager** | Can view dashboards assigned to their specific department security groups (e.g., Sales Manager, Accounting Officer). Can share filtered dashboard permalinks. |
-| **System Administrator** | Full administrative control. Can access **Configuration > Dashboards**, create groups, reorder categories, edit spreadsheet formulas, insert charts, and publish dashboards globally. |
-
----
-
 ## Related Documentation
 
 * [Configure Dashboard Groups and Access Rights](../task-guides/03-configure-dashboard-groups-and-access-rights.md)
 * [Dashboard Chart and Filter Definitions](./02-dashboard-chart-and-filter-definitions.md)
 * [Understanding Dashboard Security and Data Aggregation](../core-concepts/02-understanding-dashboard-security-and-data-aggregation.md)
-

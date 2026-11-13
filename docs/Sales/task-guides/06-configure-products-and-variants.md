@@ -7,6 +7,9 @@ Create master product catalog items, configure attributes and variations, set va
 > * To manage multi-attribute items, verify that **Variants** is enabled in **Sales > Configuration > Settings**:
 >
 >    ![Enable variants setting in Sales settings](../media/052.png)
+>
+> **Warning (Configuration Advisory):** Modifying products and variants requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -109,6 +112,8 @@ If specific variations incur higher manufacturing expenses or warrant premium pr
 
    ![Product variants cost column](../media/062.png)
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Configure Sales Tab, Upsell Products, and Customer Descriptions
@@ -147,10 +152,14 @@ When adding multi-attribute products to a sales quotation:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **"Cost" Field Hidden on Master Product Form**: When a product template has multiple variants, CURQ intentionally hides the master cost input because each variation may have a different manufacturing cost. Open the **Variants** smart button and set the cost directly on each individual variant card.
 * **Archiving an Individual Variant**: If a specific size or color is discontinued while other options remain active, click the **Variants** smart button, select the discontinued variant, click **⚙ Actions > Archive**. The variant will no longer appear on new quotations.
+
+---
+
+> **Tip (Advised Settings):** Configure attributes as dynamic variants only when physical inventory or pricing differs; set storable product tracking appropriately.
 
 ---
 
@@ -158,4 +167,4 @@ When adding multi-attribute products to a sales quotation:
 * [Configure Pricelists and Pricing Rules](./08-configure-pricelists-and-pricing-rules.md)
 * [Sales Reporting and Analytics](./13-sales-reporting-and-analytics.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
-
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

@@ -2,6 +2,13 @@
 
 Standardize customer engagement actions, automate multi-step milestone task sequences, and launch activity plans on deals.
 
+> **Prerequisites**
+> * Active user account with **CRM / Administrator** rights.
+> * Configured base system records and access permissions.
+>
+> **Warning (Configuration Advisory):** Modifying activity types and plans requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Configure Activity Types
@@ -37,7 +44,7 @@ Standardize customer engagement actions, automate multi-step milestone task sequ
      * **Schedule**: Enter the standard due delay (e.g., `2 days after previous activity deadline` or completion date).
 6. CURQ auto-saves updates, or click the cloud icon in the top header to save immediately.
 
-> **Note:** For action types, icon bindings, and chaining behaviors, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
+> **Note:** For action types, icon bindings, and chaining behaviors, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#1-activity-type-specifications).
 
 ---
 
@@ -69,7 +76,7 @@ Activity Plans allow you to launch an entire sequence of milestone activities wi
    * **Trigger**: Select relative scheduling timing (e.g., `Before Plan Date` or `After Plan Date`).
 5. Click the cloud icon to save the plan template.
 
-> **Note:** For plan parameters and assignment options, see [**Activity Plan Structure**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-plan-structure).
+> **Note:** For plan parameters and assignment options, see [**Activity Plan Structure**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#2-activity-plan-structure).
 
 ---
 
@@ -88,11 +95,15 @@ Activity Plans allow you to launch an entire sequence of milestone activities wi
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Editing a Step on an Active Deal**: Launching a plan creates discrete scheduled tasks. To adjust a specific step on an individual deal without modifying the master template, click the pencil icon next to that scheduled activity in Chatter.
 * **Model Constraints**: If an activity type or activity plan does not appear when scheduling from a deal, ensure its **Model** is set to `Lead/Opportunity` rather than another app module.
 * **Chaining Next Steps**: Using `Suggest Next Activity` guides reps through a consistent sales methodology by pre-filling the next logical action when they mark an activity as done.
+
+---
+
+> **Tip (Advised Settings):** Assign realistic default completion delays (e.g., 2 business days for phone calls, 5 days for proposal follow-ups) to prevent overdue backlog buildup.
 
 ---
 

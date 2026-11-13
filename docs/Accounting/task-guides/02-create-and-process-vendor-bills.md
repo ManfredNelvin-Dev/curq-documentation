@@ -125,7 +125,7 @@ Accountants can manage supplier liability profiles and procurement tax codes dir
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Duplicate Bill Detection**: If you enter a vendor bill with a **Vendor** and **Payment Reference** identical to an existing posted record, CURQ displays a duplicate warning banner to prevent accidental double-payment of supplier invoices.
 * **Supplier Invoice Received in a Closed Period**: Never modify closed books. Set the **Bill Date** to the date printed on the vendor's invoice, and set the **Accounting Date** to the first day of the current, unlocked accounting period.

@@ -55,6 +55,8 @@ Large corporate customers often centralize accounting at headquarters while rece
 5. Click **Save & Close** (or **Save & New** to add additional branch addresses).
 6. When drafting a quotation for this client, selecting their company automatically populates the default invoice and delivery addresses while allowing sales reps to select branch alternatives.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Pricing, Pricelists, and Unit of Measure Specifications](../settings-and-fields/02-pricing-pricelists-and-discount-specifications.md).
+
 ---
 
 ## 2. Configure Commercial and Fiscal Terms
@@ -114,7 +116,7 @@ If a customer has a credit hold, pending lawsuit, or strict packaging requiremen
 
 ---
 
-## Edge Cases & Recovery Steps
+## 5. Edge Cases & Recovery Steps
 
 * **Overriding a Blocking Message**: If an executive authorizes an exception for a customer with a blocking message, open the customer record, temporarily set **Warning on the Sales Order** to **Warning** or **No Message**, confirm the quote, and restore the block.
 * **Customer Address Conflict on Existing Quotations**: Changing a customer's address on their master contact card does not alter already-confirmed historical sales orders, protecting historical delivery slips and tax audits.
@@ -125,3 +127,4 @@ If a customer has a credit hold, pending lawsuit, or strict packaging requiremen
 * [Create and Send Quotations](./01-create-and-send-quotations.md)
 * [Configure Pricelists and Pricing Rules](./08-configure-pricelists-and-pricing-rules.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

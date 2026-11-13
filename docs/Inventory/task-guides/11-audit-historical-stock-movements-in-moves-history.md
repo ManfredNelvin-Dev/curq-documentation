@@ -9,7 +9,9 @@ This operational guide provides procedures for warehouse managers, inventory con
 
 ---
 
-## 1. Access Master Moves History and Audit Granular Stock Move Lines
+## 1. Audit Stock Movements Across Reporting Views
+
+### 1.1 Access Master Moves History and Audit Granular Stock Move Lines
 
 1. In the top navigation bar, click the **Reporting** menu.
 2. Select **Moves History**:
@@ -31,11 +33,11 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **Unit**: Primary inventory unit of measure *(e.g., `Units`)*.
    * **Status**: Confirms finalized physical execution with a green **Done** badge.
 
-> **Tip:** For more details about the columns and tracking controls on the moves history register, see [**Moves History List Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#3-moves-history-list-register-data-dictionary).
+> For more details about the columns and tracking controls on the moves history register, see [**Moves History List Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#2-moves-history-list-register-data-dictionary).
 
 ---
 
-## 2. Review Operational Movements in Kanban Card Mode
+### 1.2 Review Operational Movements in Kanban Card Mode
 
 To inspect historical stock movements in a card-oriented operational perspective:
 
@@ -51,11 +53,9 @@ To inspect historical stock movements in a card-oriented operational perspective
    * **Status Badge**: Terminal green **Done** badge confirming warehouse validation.
 4. Click any card to drill down into the granular stock move record for detailed warehouse logging.
 
-> **Tip:** For more details about the fields on operational movement cards, see [**Moves History Kanban Card Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#4-moves-history-kanban-card-data-dictionary).
-
 ---
 
-## 3. Aggregate Movements by Product Category in Pivot View
+### 1.3 Aggregate Movements by Product Category in Pivot View
 
 To analyze inventory throughput across product categories and calendar periods:
 
@@ -76,8 +76,6 @@ To analyze inventory throughput across product categories and calendar periods:
      * **November 2026**: 57.00 Units across 4 move transactions.
      * **Total Enterprise Throughput**: 75.00 Units across 12 atomic moves.
    * 4. Use the pivot toolbar to download the matrix in XLSX format or embed it into corporate financial reports.
-
-> **Tip:** For more details about category groupings and pivot matrix dimensions, see [**Moves History Pivot View Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#5-moves-history-pivot-view-data-dictionary).
 
 ---
 

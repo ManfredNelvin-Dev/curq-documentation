@@ -2,6 +2,10 @@
 
 Execute batch operations across multiple contacts simultaneously, including data export, archiving, reinstating records, bulk email and SMS messaging, and customer portal invitations.
 
+> **Prerequisites**
+> * Active user account with **Contacts / User** rights.
+> * Partner master directory active in the **Contacts** application.
+
 ---
 
 ## 1. Access the Bulk Actions Menu
@@ -40,6 +44,8 @@ To clean up inactive leads or expired vendors without deleting past transactions
 3. Select an email template or write a custom message.
 4. Click **Send**. Individual messages are queued and sent to each contact's primary address.
 
+> For details on **Email**, **Email Score**, **Email Bounced**, and **Mobile** fields governing bulk messaging deliverability, see [**Communication & Contact Channels**](../settings-and-fields/01-contact-form-field-definitions.md#13-communication--contact-channels).
+
 ### 2.4 Grant Customer Portal Access
 To allow multiple customers to view their invoices, deliveries, and quotes online:
 1. Select the desired customer records.
@@ -54,7 +60,7 @@ To allow multiple customers to view their invoices, deliveries, and quotes onlin
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **"Cannot delete contact" Error**: If you select **Actions > Delete** and receive a validation error, one or more selected contacts are linked to posted financial transactions (such as validated invoices or journal entries). CURQ blocks deletion to preserve statutory accounting integrity.
   * **Solution**: Use **Actions > Archive** instead. This hides the partner from new lookups while maintaining legal accounting records.

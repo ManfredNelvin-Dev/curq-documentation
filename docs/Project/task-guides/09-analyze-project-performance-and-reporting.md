@@ -29,7 +29,7 @@ Graph view provides high-level visual summaries of project workload balance and 
    * Click the **Ascending** or **Descending** sort icons to rank projects by workload volume.
    * Inspect the black trendline connecting project volume nodes.
 
-> For a detailed explanation of graph modes, pivot matrix metrics, and Gantt timeline elements, see [**Project Reporting and Analytics Field Definitions**](../settings-and-fields/05-project-reporting-and-analytics-field-definitions.md).
+> For a detailed explanation of graph modes, pivot matrix metrics, and Gantt timeline elements, see [**Tasks Analysis Graph View Data Dictionary**](../settings-and-fields/05-project-reporting-and-analytics-field-definitions.md#2-tasks-analysis-graph-view-data-dictionary), [**Tasks Analysis Pivot Matrix Data Dictionary**](../settings-and-fields/05-project-reporting-and-analytics-field-definitions.md#3-tasks-analysis-pivot-matrix-data-dictionary), and [**Tasks Analysis Gantt Timeline Data Dictionary**](../settings-and-fields/05-project-reporting-and-analytics-field-definitions.md#4-tasks-analysis-gantt-timeline-data-dictionary).
 
 ---
 

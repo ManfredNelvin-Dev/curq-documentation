@@ -4,18 +4,18 @@ This document explains the architectural principles, data models, and business l
 
 ---
 
-## The Business Problem: Fragmented Systems & Address Desynchronization
+## 1. The Business Problem: Fragmented Systems & Address Desynchronization
 
 In enterprise operations, managing business relationships across multiple departments—sales, procurement, warehousing, and accounting—presents fundamental structural challenges. Traditional ERP and CRM software suites typically maintain separate, isolated databases or tables for customers, vendors, employees, and subcontractors. While this separation appears intuitive initially, it creates severe operational bottlenecks and financial risks:
 
-### 1. The Breakdown of Siloed Customer and Vendor Databases
+### 1.1 The Breakdown of Siloed Customer and Vendor Databases
 * **Dual-Role Commercial Counterparties**: Many modern business partners act simultaneously as both suppliers and buyers. For instance, a manufacturing company may buy raw materials from a vendor while selling specialized consulting services or recycled scrap materials back to that same vendor. In segregated systems, this requires creating two completely unconnected records: a "Customer" entry and a "Vendor" entry.
   * **Fractured Transactional Visibility**: Commercial teams see only outgoing sales, while purchasing teams see only incoming purchases. Neither team has a 360-degree view of the relationship.
   * **Disjointed Financial Netting**: Accounts receivable and accounts payable balances remain isolated. Finance teams cannot easily reconcile or offset mutual debts, leading to missed cash flow netting opportunities and awkward credit holds on valuable suppliers.
 * **Internal Entities and Employee Expense Chaos**: Employees frequently act as expense claimants, internal sales representatives, project managers, and authorized buyers. When employee profiles are segregated from the commercial address book, tracking expense reimbursements or attributing sales commissions requires brittle cross-system synchronization.
 * **Scattered Communication History**: A single interaction history (emails, meeting notes, call logs, and contracts) is essential for cohesive account management. In siloed architectures, sales communication lives in the CRM, vendor dispute notes live in procurement, and payment reminders live in accounting, leaving teams blind to recent interactions.
 
-### 2. Multi-Site Logistics and Billing Desynchronization
+### 1.2 Multi-Site Logistics and Billing Desynchronization
 In real-world commercial engagements, legal liability and physical goods rarely flow to the same destination:
 * Invoices and formal tax notices must be directed to an Accounts Payable department at corporate headquarters or a centralized financial shared-services center.
 * Physical deliveries must be dispatched to regional fulfillment centers, manufacturing assembly plants, or temporary job sites equipped with specific loading docks, receiving hours, and freight requirements.
@@ -31,16 +31,16 @@ When software uses a simplistic single-address model, companies suffer continuou
 * **Misdirected Deliveries**: Carriers deliver bulk freight to executive offices rather than industrial receiving docks, generating costly carrier re-consignment fees, project delays, and damaged goods.
 * **Disputed and Delayed Invoices**: Billing documents delivered to warehouse docks sit unacknowledged, triggering supplier credit holds, vendor payment disputes, and lost early-payment discounts.
 
-### 3. Redundant Data Entry and Configuration Drift
+### 1.3 Redundant Data Entry and Configuration Drift
 Enterprise customers operate extensive corporate networks comprising holding companies, regional subsidiaries, retail storefronts, and independent procurement officers. In legacy systems, setting up a new branch often requires manually re-entering payment terms, credit limits, tax identification numbers, and custom pricelists. This repetitive data entry leads to configuration drift, where different branches of the same corporate client receive inconsistent pricing or conflicting credit terms.
 
 ---
 
-## How CURQ Solves It: The Unified Partner Model
+## 2. How CURQ Solves It: The Unified Partner Model
 
 To eliminate data silos, commercial blind spots, and logistics failures, CURQ unifies all business actors into a single architectural entity: the **Partner** model.
 
-### 1. Single Architectural Registry with Dynamic Relational Roles
+### 2.1 Single Architectural Registry with Dynamic Relational Roles
 Rather than relying on static database flags or separate tables, CURQ determines a partner's role through its **relational transaction links**:
 * If a partner is linked to a sales order or CRM deal, the partner automatically functions as a customer.
 * If that same partner is linked to a purchase order or vendor bill, they function as a vendor.
@@ -53,7 +53,7 @@ This architectural unification provides immediate operational benefits:
 
 ---
 
-## How CURQ Solves It: Companies vs. Individuals
+## 3. How CURQ Solves It: Companies vs. Individuals
 
 CURQ structures relationships through an intuitive parent-child hierarchy that separates **Legal Business Entities** (`Company`) from **Physical People** (`Individual`):
 
@@ -69,10 +69,10 @@ flowchart LR
     Accounts Payable • Billing`"]
 ```
 
-### 1. Company Records as Statutory & Fiscal Anchors
+### 3.1 Company Records as Statutory & Fiscal Anchors
 A Company record represents the legal personhood of the organization. It holds statutory registration numbers (Tax ID, VAT number, corporate registration), commercial credit limits, default fiscal tax positions, and negotiated contract terms.
 
-### 2. Individual Contacts as Operational Nodes
+### 3.2 Individual Contacts as Operational Nodes
 Individual records represent actual people (such as purchasing managers, accounting clerks, or sales executives). When attached to a parent company:
 * **Inherited Commercial Rules**: The individual automatically inherits the company's fiscal position, payment terms, and negotiated pricelist.
 * **Distinct Personal Coordinates**: The individual maintains their own direct telephone extension, verified email address, job title, and notification preferences.
@@ -80,7 +80,7 @@ Individual records represent actual people (such as purchasing managers, account
 
 ---
 
-## How CURQ Solves It: Specialized Multi-Address Routing
+## 4. How CURQ Solves It: Specialized Multi-Address Routing
 
 To solve the friction between physical logistics and legal billing, CURQ decouples addresses into specialized operational records attached directly to the parent company:
 
@@ -97,7 +97,7 @@ flowchart LR
 * **Delivery Address**: Anchors warehouse operations and transport logistics. Delivery orders, freight waybills, carrier shipping labels, and picking slips populate this address, including specific delivery notes and localized dock hours.
 * **Other Address**: Represents secondary branch locations, regional showrooms, retail sites, or training facilities.
 
-### Automated Order Splitting
+### 4.1 Automated Order Splitting
 When a commercial representative confirms a sales order or purchase order, CURQ's business logic automatically inspects the customer's partner hierarchy:
 1. Physical goods shipments are routed to the specified **Delivery Address**.
 2. Accounting entries and formal tax invoices are addressed to the specified **Invoice Address**.
@@ -106,7 +106,7 @@ This automation completely eliminates carrier re-routing costs and ensures invoi
 
 ---
 
-## How CURQ Solves It: Top-Down Configuration Inheritance
+## 5. How CURQ Solves It: Top-Down Configuration Inheritance
 
 To eliminate duplicate administrative setup across enterprise accounts with dozens of subsidiary locations and contacts, CURQ applies automated top-down configuration inheritance:
 
@@ -116,7 +116,7 @@ To eliminate duplicate administrative setup across enterprise accounts with doze
 
 ---
 
-## Summary: Business Problem vs. CURQ Solution
+## 6. Summary: Business Problem vs. CURQ Solution
 
 | Business Challenge | Traditional Legacy Approach | How CURQ Solves It |
 | :--- | :--- | :--- |

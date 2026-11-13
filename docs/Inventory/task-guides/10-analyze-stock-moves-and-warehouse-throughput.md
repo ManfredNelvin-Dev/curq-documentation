@@ -9,7 +9,9 @@ This operational guide provides procedures for warehouse managers, inventory con
 
 ---
 
-## 1. Access Moves Analysis and Evaluate Multi-Dimensional Pivot Metrics
+## 1. Analyze Stock Moves Across Reporting Views
+
+### 1.1 Access Moves Analysis and Evaluate Multi-Dimensional Pivot Metrics
 
 1. In the top navigation bar, click the **Reporting** menu.
 2. Select **Moves Analysis**:
@@ -33,11 +35,9 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **Download (XLSX)**: Exports the pivot matrix directly into Microsoft Excel format.
    * **Insert in Spreadsheet**: Embeds live pivot figures into an internal CURQ spreadsheet dashboard.
 
-> **Tip:** For more details about the controls and matrix dimensions on the pivot view, see [**Moves Analysis Header and View Switcher Controls Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#6-moves-analysis-header-and-view-switcher-controls-data-dictionary) and [**Moves Analysis Pivot Matrix Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#7-moves-analysis-pivot-matrix-data-dictionary).
-
 ---
 
-## 2. Inspect Granular Double-Entry Transfers in List View
+### 1.2 Inspect Granular Double-Entry Transfers in List View
 
 To examine line-by-line execution details, source bins, and fulfillment variances:
 
@@ -59,11 +59,11 @@ To examine line-by-line execution details, source bins, and fulfillment variance
 4. **Examine Summary Throughput**:
    * The list footer computes aggregate totals across all visible moves *(e.g., `71.00` total demand against `75.00` total units physically executed)*.
 
-> **Tip:** For more details about the fields and columns on the moves analysis list register, see [**Moves Analysis List Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#8-moves-analysis-list-register-data-dictionary).
+> For more details about the fields and columns on the moves analysis list register, see [**Moves Analysis List Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#3-moves-analysis-list-register-data-dictionary).
 
 ---
 
-## 3. Visualize Demand Distributions in Graph View
+### 1.3 Visualize Demand Distributions in Graph View
 
 To identify high-velocity products and analyze fulfillment volume visually:
 
@@ -78,11 +78,9 @@ To identify high-velocity products and analyze fulfillment volume visually:
      * Highlights volume disparity between base stock intake *(e.g., `50.00` units for `Fairphone 5`)* and variant fulfillment runs *(e.g., `Fair Phone 5 (Black)`, `Fair Phone 5 (White)`, `Fair Phone 5 (Orange)`)*.
    * **Chart Modes**: Use the toolbar to toggle between vertical bar charts, line trends, pie proportions, or stacked volume perspectives.
 
-> **Tip:** For more details about the graph view controls, chart types, and metrics canvas, see [**Moves Analysis Graph View Controls and Canvas Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#9-moves-analysis-graph-view-controls-and-canvas-data-dictionary).
-
 ---
 
-## 4. Review Visual Cards in Kanban Perspective
+### 1.4 Review Visual Cards in Kanban Perspective
 
 To monitor stock move execution in a card-oriented layout:
 
@@ -96,8 +94,6 @@ To monitor stock move execution in a card-oriented layout:
    * Ratios where executed quantity matches demand indicate exact fulfillment without backorders.
    * Ratios with variances highlight over-deliveries or vendor over-shipments accepted at the dock.
 4. Click any card to drill down into the underlying stock move form for detailed warehouse traceability.
-
-> **Tip:** For more details about the Kanban card metrics and fulfillment ratios, see [**Moves Analysis Kanban Card Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#10-moves-analysis-kanban-card-data-dictionary).
 
 ---
 

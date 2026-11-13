@@ -2,6 +2,10 @@
 
 Define standard and custom professional salutations with abbreviations (such as Dr., Prof., or Eng.) and assign them to individual contact cards for customer communications.
 
+> **Prerequisites**
+> * Active user account with **Contacts / Administrator** rights.
+> * Partner master directory active in the **Contacts** application.
+
 ---
 
 ## 1. Create and Assign Contact Titles
@@ -35,12 +39,22 @@ Define standard and custom professional salutations with abbreviations (such as 
 3. Click the dropdown and select the desired salutation (for example, `Mister`, `Doctor`, or `Miss`).
 4. Click the cloud icon to save.
 
+> For **Title** field specifications and visibility rules on Individual vs. Company profiles, see [**Primary Identity & Address Fields**](../settings-and-fields/01-contact-form-field-definitions.md#12-primary-identity--address-fields).
+
 ---
 
-## Edge Cases & Recovery Steps
+## 2. Edge Cases & Recovery Steps
 
 * **Title Field Missing from Form**: The **Title** field is exclusively reserved for individual persons. If the contact record is set to **Company**, the field is hidden by design. If you need a salutation, change the contact type to **Individual** or add an individual employee under the company's **Contacts & Addresses** tab.
 * **Removing an Unwanted Title**: Navigate to **Configuration > Contact Titles**, select the checkbox next to the title, and click **Actions > Delete**. *(Note: Deleting a title clears the selection from existing contact cards using it).*
+
+---
+
+> **Tip (Advised Settings):** Standardize common business titles (Mr., Ms., Dr., Prof.) and avoid duplicate abbreviations to maintain address print quality.
+
+---
+
+> For granular parameter descriptions and data dictionary field specifications, refer to [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md).
 
 ---
 

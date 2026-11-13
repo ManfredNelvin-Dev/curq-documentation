@@ -4,7 +4,7 @@ This document explains the foundational accounting mechanics, data models, and l
 
 ---
 
-## The Fundamental Law: Double-Entry Equilibrium
+## 1. The Fundamental Law: Double-Entry Equilibrium
 
 CURQ Accounting is built strictly on the centuries-old standard of **double-entry bookkeeping**. Every single financial event recorded in the system must affect at least two accounts, and the total value debited must exactly equal the total value credited:
 
@@ -33,7 +33,7 @@ flowchart LR
     end
 ```
 
-### Understanding Debits and Credits in CURQ
+### 1.1 Understanding Debits and Credits in CURQ
 In common language, "debit" and "credit" are often confused with bank card terminology. In double-entry accounting and inside CURQ:
 
 | Account Type | Debit ($\text{Dr}$) Impact | Credit ($\text{Cr}$) Impact | Normal Balance |
@@ -48,7 +48,7 @@ In common language, "debit" and "credit" are often confused with bank card termi
 
 ---
 
-## The CURQ Ledger Structure
+## 2. The CURQ Ledger Structure
 
 In CURQ, financial records are organized in a two-tier hierarchy: **Journal Entries** (transaction headers) and **Journal Items** (individual debit and credit lines).
 
@@ -72,7 +72,7 @@ flowchart TD
     JE -->|contains balanced lines| JI
 ```
 
-### 1. The Journal Entry (Transaction Header)
+### 2.1 The Journal Entry (Transaction Header)
 The Journal Entry is the parent record. It stores the commercial and operational header details:
 * **Identification**: The unique sequence number *(e.g., `INV/2026/00005` or `BNK1/2026/00012`)*.
 * **Context**: Document date, accounting period, partner (customer/vendor), and currency.
@@ -81,7 +81,7 @@ The Journal Entry is the parent record. It stores the commercial and operational
 
 Every customer invoice, supplier bill, manual adjustment, or bank transaction exists as a Journal Entry.
 
-### 2. The Journal Items (Ledger Lines)
+### 2.2 The Journal Items (Ledger Lines)
 Journal Items are the individual debit and credit lines within the entry. They represent the actual financial entries written into the General Ledger. Each line specifies:
 * **Account**: The specific general ledger account *(e.g., `1101010 Handelsdebiteuren nominaal` or `8001010 Netto-omzet`)*.
 * **Debit / Credit**: The numerical monetary value in company currency and foreign transaction currency.
@@ -90,7 +90,7 @@ Journal Items are the individual debit and credit lines within the entry. They r
 
 ---
 
-## Transaction Flow: From Invoicing to Payment
+## 3. Transaction Flow: From Invoicing to Payment
 
 To observe this model in practice, consider the standard sales cycle completed in [**Process Your First Customer Invoice and Payment**](../getting-started/01-process-your-first-customer-invoice-and-payment.md). A client purchases `€ 199.00` worth of goods and subsequently settles via bank transfer:
 
@@ -113,7 +113,7 @@ sequenceDiagram
     Reconcile-->>Invoice: Set Status to "In Payment"
 ```
 
-### Stage 1: Invoice Validation
+### 3.1 Stage 1: Invoice Validation
 When the invoice is confirmed, CURQ generates the first balanced entry:
 
 | Line # | Account | Partner | Debit ($\text{Dr}$) | Credit ($\text{Cr}$) | Net Impact |
@@ -122,7 +122,7 @@ When the invoice is confirmed, CURQ generates the first balanced entry:
 | 2 | `8001010 Netto-omzet uit leveringen...` | Acme Technologies | `€ 0.00` | `€ 199.00` | Revenue increase (Earned income) |
 | **Total** | | | **`€ 199.00`** | **`€ 199.00`** | **Balanced** |
 
-### Stage 2: Payment Registration
+### 3.2 Stage 2: Payment Registration
 When payment is received in the bank, the receivable must be cleared and replaced with cash/bank liquidity:
 
 | Line # | Account | Partner | Debit ($\text{Dr}$) | Credit ($\text{Cr}$) | Net Impact |
@@ -131,14 +131,14 @@ When payment is received in the bank, the receivable must be cleared and replace
 | 2 | `1101010 Handelsdebiteuren nominaal` | Acme Technologies | `€ 0.00` | `€ 199.00` | Asset decrease (Debt cleared) |
 | **Total** | | | **`€ 199.00`** | **`€ 199.00`** | **Balanced** |
 
-### Stage 3: Automatic Reconciliation
+### 3.3 Stage 3: Automatic Reconciliation
 Notice line 1 from the Invoice (`Debit € 199.00` to `1101010 Handelsdebiteuren`) and line 2 from the Payment (`Credit € 199.00` to `1101010 Handelsdebiteuren`). 
 
 CURQ's reconciliation engine links these two opposing journal items together. Because the open receivable balance for the customer reaches `€ 0.00`, the invoice automatically updates its status badge to **In Payment**.
 
 ---
 
-## Journal Architecture: Purpose-Driven Segregation
+## 4. Journal Architecture: Purpose-Driven Segregation
 
 Rather than dumping every transaction into a single, chaotic ledger, CURQ segregates financial activity across distinct **Journals**. Each journal represents a specific operational source of transactions:
 
@@ -170,7 +170,7 @@ graph TD
     J_MISC --> GL
 ```
 
-### The 5 Journal Types in CURQ
+### 4.1 The 5 Journal Types in CURQ
 
 1. **Customer Invoices (`Sale`)**:
    * Exclusively records sales invoices and customer credit notes.
@@ -194,14 +194,14 @@ graph TD
      * **Inventory Valuation** (`STJ/`): Perpetual inventory receipts, delivery adjustments, and periodic shrinkage write-offs.
      * **Taxes** (`TAX/`): Quarterly VAT clearing vouchers, small business scheme (KOR) settlements, and statutory payments.
 
-### Why Segregate by Journal?
+### 4.2 Why Segregate by Journal?
 * **Gapless Sequential Numbering**: Legal compliance in jurisdictions worldwide requires separate, strictly gapless, chronological prefixes for sales invoices (`INV/2026/00001`) versus vendor bills (`BILL/2026/00001`).
 * **Granular Access Control**: Operational teams (e.g., Sales or Purchasing) can enter source documents in their respective journals without gaining access to payroll, bank statements, or miscellaneous ledger adjustments.
 * **Targeted Reporting**: Enables rapid filtering of journals during audits without scanning millions of unrelated general ledger lines.
 
 ---
 
-## State Progression & Ledger Immutability
+## 5. State Progression & Ledger Immutability
 
 CURQ protects audit trails and statutory records by enforcing strict state progression on journal entries:
 
@@ -209,28 +209,28 @@ CURQ protects audit trails and statutory records by enforcing strict state progr
 flowchart LR
     Start([Create Entry]) --> Draft
     Draft["`**Draft**
-    Editable · No GL Impact`"] -->|Confirm & Post| Posted["`**Posted**
+    Editable · No GL Impact`"] -->|"Confirm & Post"| Posted["`**Posted**
     Validated & Locked in GL`"]
-    Posted -->|Reverse Entry| Reversed["`**Reversed**
+    Posted -->|"Reverse Entry"| Reversed["`**Reversed**
     Mirroring Contra-Entry`"]
 
-    Draft -.->|Delete or Discard| Cancelled["`**Cancelled**
+    Draft -.->|"Delete or Discard"| Cancelled["`**Cancelled**
     Voided Transaction`"]
-    Posted -.->|Reset to Draft| Cancelled
+    Posted -.->|"Reset to Draft"| Cancelled
 ```
 
-### 1. Draft State (`Draft`)
+### 5.1 Draft State (`Draft`)
 * The document is editable. Lines, quantities, taxes, and accounts can be freely modified or deleted.
 * A draft entry has **zero impact** on general ledger reports, trial balances, or tax declarations.
 * The sequence identifier is provisional *(e.g., `Draft Invoice *0005`)*.
 
-### 2. Posted State (`Posted`)
+### 5.2 Posted State (`Posted`)
 * The entry is formally confirmed and legally recognized.
 * CURQ assigns a permanent, sequential reference number according to the journal's configuration sequence.
 * Balanced debit and credit journal items immediately reflect in balance sheets, P&L reports, and tax grids.
 * **Audit Locking**: By default, posted entries cannot be altered. In regulated accounting environments, modifying a posted entry is strictly forbidden.
 
-### Correcting Errors on Posted Entries: Reversal vs. Editing
+### 5.3 Correcting Errors on Posted Entries: Reversal vs. Editing
 To fix an error on a posted entry:
 * **Reversal (Best Practice / Statutory Requirement)**: Instead of modifying or deleting historical data, CURQ generates a **Reversal Entry** or Credit Note that mirrors the original debits and credits in reverse. This preserves a complete, unalterable audit trail for auditors and tax authorities.
 * **Reset to Draft**: In development or unconstrained environments where journal settings permit canceling entries, a posted record can be unposted, corrected, and re-validated.

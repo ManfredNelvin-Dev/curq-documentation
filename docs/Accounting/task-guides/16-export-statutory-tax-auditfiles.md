@@ -58,12 +58,16 @@ In CURQ, the Auditfile export tool aggregates all posted journal entries, openin
 
 ---
 
-## Edge Cases and Recovery Steps
+## 2. Edge Cases and Recovery Steps
 
 * **AttributeError on Reconciled Transactions**: If clicking **Generate auditfile** encounters a server error regarding transaction reconciliation, contact your system administrator to ensure the latest Dutch localization patch is deployed. As a temporary test or workaround, verify date ranges or isolate journals prior to running the export.
 * **Unbalanced Trial Balance Warning**: If CURQ detects an unposted or asymmetrical journal entry within the date range, the auditfile compilation may fail validation. Verify that all journal entries for the period are balanced and posted before re-running the export.
 * **Missing Company Tax Identifier**: If the generated XML fails Belastingdienst schema validation, check that your company record has a valid Dutch VAT number (`BTW-nummer`) and KvK number configured under **Settings > Companies**.
 * **Audit Request Covering Multiple Years**: The XAF 3.2 standard requires separate files for each individual fiscal year. If tax authorities request data for a multi-year inspection window, generate individual auditfiles for each consecutive calendar year.
+
+---
+
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Statutory Tax Statement and ICP Field Definitions](../settings-and-fields/03-statutory-tax-statement-and-icp-field-definitions.md).
 
 ---
 

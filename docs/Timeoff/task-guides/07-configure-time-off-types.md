@@ -2,6 +2,13 @@
 
 Time Off Types define the leave categories employees can request—such as Paid Vacation, Sick Leave, Unpaid Leave, Compensatory Days, and Sabbatical. Each leave type governs its own approval workflows, allocation requirements, negative overdraft allowances, calendar color swatches, and timesheet integration rules.
 
+> **Prerequisites**
+> * Active user account with **Time Off / Administrator** rights.
+> * Configured employee profiles and operational time-off type structures.
+>
+> **Warning (Configuration Advisory):** Modifying time off types requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Create and Configure Time Off Types
@@ -79,7 +86,10 @@ Under the **Configuration** and **Negative Cap** sections, establish operational
 * **Kind of Time Off**:
   * **Absence**: Standard non-working absence; does not count toward worked-time accrual formulas.
   * **Worked Time**: Paid absence that qualifies as worked time for payroll or bonus accrual plans.
+* **Display Time Off in Calendar**: Controls whether approved and pending leave requests of this type appear on calendar views.
 * **Allow Negative Cap?**: When enabled, allows employees to borrow against future accruals up to a configured overdraft limit.
+
+> For complete definitions across approval rules, allocation limits, granularity, timesheet generation, and negative caps, see [**Time Off Type Configuration Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#1-time-off-type-configuration-fields).
 
 ---
 
@@ -112,11 +122,15 @@ Once saved, manage associated records directly from the form header:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Leave Requests Rejected for Insufficient Balance**: If employees cannot book leave under an unlimited policy (such as Unpaid Leave), verify that **Requires allocation** is set to **No Limit** rather than **Yes**.
 * **Public Holidays Unexpectedly Deducted**: If employees report leave balances being deducted on national holidays, ensure that **Public Holiday Included** is unchecked on the leave type configuration.
 * **Timesheet Lines Not Created**: If timesheet entries do not appear after leave approval, verify that **Generate timesheets when validating time off requests of this type** is checked and both **Project** and **Task** are properly assigned.
+
+---
+
+> **Tip (Advised Settings):** Require manager approval for paid vacation days and medical documentation for extended sick leaves; set payroll code mappings.
 
 ---
 

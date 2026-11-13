@@ -4,7 +4,7 @@ This document details the data fields, validation specifications, and security r
 
 ---
 
-## Bank Directory Fields
+## 1. Bank Directory Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -16,7 +16,7 @@ This document details the data fields, validation specifications, and security r
 
 ---
 
-## Partner Bank Account Fields
+## 2. Partner Bank Account Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -30,7 +30,7 @@ This document details the data fields, validation specifications, and security r
 
 ---
 
-## Security Badges and Risk Levels
+## 3. Security Badges and Risk Levels
 
 | Status Badge / Warning | Trigger Condition | System Behavior |
 | :--- | :--- | :--- |
@@ -47,4 +47,3 @@ This document details the data fields, validation specifications, and security r
 * [Geographic and Localization Settings](./03-localization-and-country-settings.md)
 * [Register and Authorize Partner Bank Accounts](../task-guides/08-manage-partner-bank-accounts.md)
 * [Understanding Contact Deduplication and Data Integrity](../core-concepts/02-understanding-contact-deduplication-and-data-integrity.md)
-

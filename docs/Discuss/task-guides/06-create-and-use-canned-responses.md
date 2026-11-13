@@ -2,6 +2,10 @@
 
 Standardize recurring client messages, create shortcut triggers, share pre-written responses across departments, and insert templates into chat windows and record chatter in CURQ Discuss.
 
+> **Prerequisites**
+> * Active user account with **Discuss / User** rights.
+> * Configured base system records and access permissions.
+
 ---
 
 ## 1. Create Canned Responses
@@ -40,6 +44,8 @@ To enforce uniform brand messaging, consistent payment instructions, or approved
 5. Click the cloud icon to save.
 6. The canned response is now available to every employee who belongs to the designated authorized groups.
 
+> For field definitions (**Shortcut**, **Substitution**, **Description**, **Authorized Groups**) and personal vs. shared scopes, see [**Canned Response Field Specifications**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#3-canned-response-field-specifications) and [**Canned Response Scopes**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#31-canned-response-scopes).
+
 ---
 
 ## 2. Insert Canned Responses into Messages and Record Chatter
@@ -76,5 +82,6 @@ Organize and maintain your template library over time:
 
 ## Related Documentation
 * [Collaborate Using Record Chatter](09-collaborate-using-record-chatter.md)
-* [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
 * [Understanding Unified Business Communication and Chatter Architecture](../core-concepts/01-understanding-unified-business-communication-and-chatter-architecture.md)
+* [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
+* [Channel and Chat Settings Definitions](../settings-and-fields/01-channel-and-chat-settings-definitions.md)

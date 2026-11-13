@@ -6,24 +6,35 @@ This document details the header fields, order line columns, commercial paramete
 
 ## 1. Request for Quotation & Purchase Order Header Fields
 
-Defines primary vendor identity, delivery dates, and operational references:
+Defines primary vendor identity, delivery dates, commercial currency, operational references, and action controls as shown on the RFQ and Purchase Order form header:
+
+### 1.1 Header Form Fields
 
 | Field Name | Description |
 | :--- | :--- |
-| **Vendor** | The supplier supplying the goods or services. Loading a vendor automatically populates default payment terms, currency, and fiscal positions. |
+| **Vendor** | Mandatory supplier selector *(placeholder: `Name, TIN, Email, or Reference`)*. Automatically populates default currency, payment terms, and fiscal positions from the partner contact record. |
 | **Vendor Reference** | Supplier-issued quotation number, commercial proposal code, or external catalog reference. |
+| **Currency** | Transaction currency selector *(e.g., `EUR`)* defining the pricing currency for all order lines and financial totals. |
 | **Order Deadline** | Target date and time by which the vendor must confirm pricing and availability before the quote expires. |
-| **Expected Arrival** | Estimated date when ordered items are scheduled to arrive at your warehouse facility. |
-| **Ask confirmation** | When enabled, triggers an automated email reminder to the supplier a specified number of days prior to the expected arrival date. |
-| **Deliver To** | Destination warehouse operation type and physical receipt location for incoming shipments. |
-| **Agreement** | Linked blanket order or tender agreement governing pricing and volume call-off terms for this order. |
-| **Project** | Associated analytical or operational project tracking procurement costs and material expenses. |
+| **Expected Arrival** | Estimated date and time when ordered items are scheduled to arrive at your facility. |
+| **On-Time Delivery** | Vendor fulfillment punctuality badge displayed beside Expected Arrival *(e.g., `No On-time Delivery Data` or a punctuality percentage)* tracking historical delivery reliability. |
+| **Ask confirmation** | Checkbox toggle. When enabled, reveals a reminder window *(day(s) before receipt)* to automatically dispatch an email asking the vendor to confirm delivery. |
+| **Project** | Associated analytical or operational project tracking procurement costs and material expenses against a project budget. |
+
+### 1.2 Header Action Buttons
+
+| Button | Description |
+| :--- | :--- |
+| **Send by Email** | Opens an email composer modal with a pre-configured template and PDF attachment (`Request for Quotation - [Ref].pdf`) to transmit to the supplier. Advances document status to **RFQ Sent**. |
+| **Print RFQ** | Generates and downloads an official printable PDF copy of the Request for Quotation for offline distribution. Advances document status to **RFQ Sent**. |
+| **Confirm Order** | Converts the RFQ into an active, legally binding **Purchase Order**, generating incoming warehouse delivery receipts (`WH/IN`). |
+| **Cancel** | Voids the quotation or active purchase order, cancelling any linked unvalidated warehouse receipts. |
 
 ---
 
 ## 2. Products Tab Order Line Columns
 
-Defines ordered items, requested volumes, negotiated prices, and financial subtotals:
+Defines ordered items, requested volumes, negotiated prices, and line amounts:
 
 | Field Name | Description |
 | :--- | :--- |
@@ -33,23 +44,26 @@ Defines ordered items, requested volumes, negotiated prices, and financial subto
 | **Unit of Measure** | Measurement unit used for procurement (e.g., Units, Dozens, kg, or Pallets). |
 | **Unit Price** | Price per unit negotiated with the supplier. Defaults from product cost or entered manually. |
 | **Taxes** | Purchase tax rates mapped automatically by the vendor's fiscal position. |
-| **Subtotal** | Net monetary amount for the line item before taxes (`Quantity` $\times$ `Unit Price`). |
+| **Amount** | Net monetary amount for the line item before taxes (`Quantity` $\times$ `Unit Price`). |
 
 ---
 
 ## 3. Other Information Tab Fields
 
-Defines buyer assignments, legal entity ownership, shipping terms, and financial rules:
+Defines buyer assignments, shipping terms, billing progression, and financial rules as shown under the Other Information tab:
 
 | Field Name | Description |
 | :--- | :--- |
-| **Buyer** | Internal team member responsible for managing and following up on the purchase transaction. |
-| **Company** | Corporate legal entity or operating branch issuing the purchase order. |
+| **Buyer** | Internal team member responsible for managing and following up on the purchase transaction *(e.g., `George Watson`)*. Defaults to the current user. |
 | **Source Document** | Originating document reference (such as a sales order, maintenance request, or project code) that triggered the purchase. |
 | **Incoterm** | Standardized International Commercial Terms (such as EXW, FOB, CIF, or DDP) governing freight risks and shipping obligations. |
 | **Incoterm Location** | Specific port, terminal, city, or delivery destination where the selected Incoterm takes legal effect. |
+| **Receipt Status** | Automated inventory intake status reflecting physical delivery progress (*Pending*, *Partially Received*, or *Fully Received*). |
+| **Billing Status** | Invoicing lifecycle indicator reflecting whether the order is *Nothing to Bill*, *Waiting Bills*, or *Fully Billed*. |
 | **Payment Terms** | Agreed commercial payment schedule (such as Immediate Payment, 15 Days, or 30 Days End of Month). |
-| **Fiscal Position** | Tax rule mapping domestic, regional, or international tax rates to supplier purchases. |
+| **Payment Mode** | Selected payment execution method used for financial disbursements to the vendor. |
+| **Supplier Bank Account** | Registered bank account of the supplier used for direct payment transfers. |
+| **Fiscal Position** | Tax mapping rule *(e.g., `Niet-EU landen`)* determining the automatic application of taxes on purchase order lines. |
 
 ---
 
@@ -69,41 +83,25 @@ Defines competing vendor quotes linked to the request for quotation:
 
 ---
 
-## 5. Order Statusbar Lifecycle Stages
-
-Tracks document progression through procurement verification:
-
-| Field Name | Description |
-| :--- | :--- |
-| **RFQ** | Initial draft state where vendor terms, products, and prices are being prepared. |
-| **RFQ Sent** | Quotation document has been emailed or printed and dispatched to the vendor for confirmation. |
-| **To Approve** | High-value order exceeding the company approval threshold awaiting manager confirmation. |
-| **Purchase Order** | Official, legally binding order confirmed with the supplier; incoming receipts and billable lines are active. |
-| **Locked** | Confirmed purchase order locked against modifications to protect warehouse and accounting records. |
-| **Cancelled** | Voided order with cancelled delivery pickings and reversed stock reservations. |
-
----
-
-## 6. Purchase Orders List View Columns
+## 5. Purchase Orders List View Columns
 
 Defines summary columns displayed on the primary Purchase Orders workspace:
 
 | Field Name | Description |
 | :--- | :--- |
-| **Priority** | Star toggle indicating high-priority or urgent procurement orders. |
-| **Reference** | Unique system sequence identifier for the purchase order (e.g., `P00019`). |
-| **Vendor** | Name of the supplier supplying the order. |
-| **Buyer** | Internal staff member accountable for managing the order. |
-| **Order Deadline** | Final date by which order terms were confirmed. |
-| **Activities** | Scheduled follow-up tasks, calls, reminders, or to-dos linked to the order. |
-| **Source Document** | Originating sales order, project, or manufacturing order reference. |
-| **Untaxed Amount** | Net total monetary value before taxes. |
-| **Total** | Final grand total including taxes and shipping charges. |
+| **Reference** | Unique system sequence identifier for the purchase order (e.g., `P00093`). |
+| **Confirmation Date** | Official date and timestamp when the purchase order was confirmed with the supplier. |
+| **Vendor** | Name of the supplier supplying the products. |
+| **Buyer** | Internal purchasing agent or staff member responsible for administering the order. |
+| **Activities** | Scheduled next actions, follow-up calls, reminders, or to-dos linked to the order. |
+| **Source Document** | Originating sales order, project, or internal requisition reference. |
+| **Total** | Final grand total monetary amount including taxes and shipping charges. |
 | **Billing Status** | Current invoicing state: *Nothing to Bill*, *Waiting Bills*, or *Fully Billed*. |
+| **Expected Arrival** | Estimated arrival date and time when ordered goods are scheduled for delivery. |
 
 ---
 
-## 7. Product Form Purchase Tab Fields
+## 6. Product Form Purchase Tab Fields
 
 Defines procurement rules, billing policies, and tax specifications on product templates:
 
@@ -116,7 +114,7 @@ Defines procurement rules, billing policies, and tax specifications on product t
 
 ---
 
-## 8. Units of Measure Conversion Fields
+## 7. Units of Measure Conversion Fields
 
 Defines conversion mathematics between purchasing units and warehouse stock units:
 
@@ -130,7 +128,7 @@ Defines conversion mathematics between purchasing units and warehouse stock unit
 
 ---
 
-## 9. Purchase Agreements and Blanket Orders Header Fields
+## 8. Purchase Agreements and Blanket Orders Header Fields
 
 Defines master vendor contracts, blanket order commitments, and validity boundaries:
 
@@ -145,7 +143,7 @@ Defines master vendor contracts, blanket order commitments, and validity boundar
 
 ---
 
-## 10. Blanket Order Products Tab Line Columns
+## 9. Blanket Order Products Tab Line Columns
 
 Defines contracted product items, committed volumes, call-off consumption, and locked prices:
 
@@ -160,7 +158,7 @@ Defines contracted product items, committed volumes, call-off consumption, and l
 
 ---
 
-## 11. Purchase Agreements List View Columns
+## 10. Purchase Agreements List View Columns
 
 Defines summary columns displayed on the central Purchase Agreements dashboard:
 

@@ -14,3 +14,13 @@ Incoming leads are evaluated against team domain filters (such as country or ind
 
 ## 5. How does creating a quotation from an Opportunity keep revenue forecasts updated?
 Clicking **New Quotation** on an opportunity links commercial offer lines directly to the deal and updates the **Expected Revenue** to match the quotation value. Once the customer accepts and the order is confirmed, the linked opportunity automatically moves to the **Won** stage at 100% probability.
+
+---
+
+## Related Documentation
+
+* [Track Your First Lead from Inquiry to Won Deal](./getting-started/01-track-your-first-lead-from-inquiry-to-won-deal.md)
+* [Set Up Your First Test Pipeline](./getting-started/02-set-up-your-first-test-pipeline.md)
+* [Understanding Leads vs Opportunities](./core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Understanding Lead Assignment and Predictive Scoring](./core-concepts/02-understanding-lead-assignment-and-predictive-scoring.md)
+* [Lead and Opportunity Field Definitions](./settings-and-fields/01-lead-and-opportunity-field-definitions.md)

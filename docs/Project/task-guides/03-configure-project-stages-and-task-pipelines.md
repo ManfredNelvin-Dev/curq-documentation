@@ -35,7 +35,7 @@ When initializing a new project workspace or expanding existing delivery pipelin
 
 6. The active board organizes tasks across stages *(e.g., `To Do`, `Started`, `Doing`, `Pending`, `Done`)* with column counters *(initially `0`)* and quick task addition via the **`+`** icon on each column header.
 
-> For a detailed explanation of task board headers, stage creation controls, and active pipeline columns, see [**Project Task Board and Stage Field Definitions**](../settings-and-fields/02-project-task-board-and-stage-field-definitions.md).
+> For a detailed explanation of task board headers, stage creation controls, and active pipeline columns, see [**Task Board Header and View Controls**](../settings-and-fields/02-project-task-board-and-stage-field-definitions.md#1-task-board-header-and-view-controls), [**Stage Pipeline Configuration Controls**](../settings-and-fields/02-project-task-board-and-stage-field-definitions.md#2-stage-pipeline-configuration-controls), and [**Active Stage Pipeline Data Dictionary**](../settings-and-fields/02-project-task-board-and-stage-field-definitions.md#3-active-stage-pipeline-data-dictionary).
 
 ---
 
@@ -78,10 +78,14 @@ In the upper-right corner of the task board, toggle between seven dedicated disp
 
 ---
 
-## Edge Cases & Troubleshooting
+## 3. Edge Cases & Troubleshooting
 
 * **Renaming or Deleting Stages**: Hover over any column title on the board and click the three-dots menu icon to edit stage parameters, fold the column, or delete unused stages.
 * **Folded Stage Columns**: Stages without active tasks can be folded into narrow vertical headers to preserve screen space on complex multi-stage projects.
+
+---
+
+> **Tip (Advised Settings):** Limit project pipeline stages to 4–6 core progression milestones (e.g., New, In Progress, In Review, Done) to avoid micro-management overhead.
 
 ---
 

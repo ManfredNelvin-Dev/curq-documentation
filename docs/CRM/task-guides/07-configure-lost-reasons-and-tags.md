@@ -2,6 +2,13 @@
 
 Configure standardized lost reason taxonomies and create color-coded deal tags to maintain structured pipeline reporting.
 
+> **Prerequisites**
+> * Active user account with **CRM / Administrator** rights.
+> * Partner master directory active in the **Contacts** application.
+>
+> **Warning (Configuration Advisory):** Modifying lost reasons and tags requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Configure Standard Lost Reasons
@@ -19,7 +26,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 5. In the inline **Description** field, enter your standardized reason title (e.g., `Competitor Selected` or `Technical Scope Incompatibility`).
 6. Press **Enter** or click the cloud icon at the top of the window to save the reason.
 
-> **Note:** For standard analytical categories and industry taxonomies, see [**Standard Lost Reasons Catalog**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
+> **Note:** For standard analytical categories and industry taxonomies, see [**Standard Lost Reasons Catalog**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#5-standard-lost-reasons-catalog).
 
 ---
 
@@ -40,7 +47,7 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 5. In the **Color** column, click the color swatch box to open the swatch palette, then click a color index to visually style the tag badge.
 6. Press **Enter** or click away to save the new tag.
 
-> **Note:** For recommended tag taxonomies and color schemes, see [**Default Deal Tags**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#default-deal-tags).
+> **Note:** For recommended tag taxonomies and color schemes, see [**Default Deal Tags**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#4-default-deal-tags).
 
 ---
 
@@ -56,11 +63,15 @@ Configure standardized lost reason taxonomies and create color-coded deal tags t
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Archiving Outdated Lost Reasons**: Never delete a lost reason that has historical opportunities attached. Instead, open the reason record, click the gear actions icon, and select **Archive**. This preserves historical win/loss analytics while preventing salespeople from selecting the obsolete reason on new deals.
 * **Updating Tag Colors**: Changing a tag's color swatch from the **Configuration > Tags** list immediately updates that tag's appearance on all open and closed opportunities across the company.
 * **Managing Duplicate Tags**: If users create overlapping tags (e.g., `Enterprise` and `enterprise`), reassign deals to the primary tag, then delete or archive the duplicate from the **Tags** list view.
+
+---
+
+> **Tip (Advised Settings):** Standardize a concise core list of lost reasons (e.g., Price, Competitor, Lack of Features) to ensure actionable analytics without data fragmentation.
 
 ---
 

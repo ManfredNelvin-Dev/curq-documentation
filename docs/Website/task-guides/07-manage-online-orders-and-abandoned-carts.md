@@ -4,6 +4,10 @@ This guide explains how to access online customer orders, review quotations, con
 
 Manage online sales orders, recover abandoned shopping carts, and configure website catalog rules in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Website / Editor** rights.
+> * Published website domain and access to the CURQ website builder.
+
 ---
 
 > **Note:** Installing the **eCommerce** app automatically creates the **Shop** navigation menu (`/shop`) in your website header, along with the shopping cart, wishlist shortcuts, and product catalog pages. The top administrative **eCommerce** menu also becomes available for managing orders and catalog settings. If your database only uses the base website builder without eCommerce, configure standard pages via [**Page Management**](./03-manage-webpages-and-redirections.md).
@@ -119,4 +123,3 @@ Clicking **Customers** opens your address book of customer contacts and buyer ac
 * [Configure Delivery Methods and Shipping Zones](./11-configure-delivery-methods-and-shipping-zones.md)
 * [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
 * [eCommerce Shop and Checkout Settings](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md)
-

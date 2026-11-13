@@ -150,7 +150,7 @@ When reviewing ledger accounts or preparing for external audit inquiries, the Ge
 
    ![General Ledger parameters and account unfold](../media/069.png)
 
-   > For detailed specifications of all report parameters and column definitions, see [**OCA General Ledger Report Wizard Field Definitions**](../settings-and-fields/05-fixed-assets-and-financial-reports-field-definitions.md#oca-general-ledger-report-setup-wizard-fields).
+   > For detailed specifications of all report parameters and column definitions, see [**OCA General Ledger Report Wizard Field Definitions**](../settings-and-fields/05-fixed-assets-and-financial-reports-field-definitions.md#16-oca-general-ledger-report-setup-wizard-fields).
 
 4. Analyze the detailed transaction lines for each ledger account:
    * **`0215010 Verkrijgings- of vervaardigingsprijs inventaris`**:
@@ -350,7 +350,7 @@ CURQ automatically archives every compiled MIS report instance, providing financ
 
 ---
 
-## Edge Cases & Discrepancy Troubleshooting
+## 8. Edge Cases & Discrepancy Troubleshooting
 
 * **Discrepancy Between Trial Balance and Aged Partner Balance**:
   * **Cause:** A manual journal entry was posted directly to an Accounts Receivable (`1101010 Handelsdebiteuren nominaal`) or Accounts Payable (`1203010 Handelscrediteuren nominaal`) control account without assigning a **Partner**, or without reconciling open items.

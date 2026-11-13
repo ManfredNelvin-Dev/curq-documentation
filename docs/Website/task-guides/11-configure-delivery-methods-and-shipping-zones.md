@@ -7,6 +7,9 @@ This guide covers setting up fixed and rule-based shipping methods, defining del
 > * **Administration**: User must have **Settings** rights to access and modify system configurations.
 > * **Website**: User must have **Editor and Designer** access rights to manage eCommerce settings.
 > * **eCommerce Application**: The **eCommerce** app must be installed in the database to display the Delivery settings block.
+>
+> **Warning (Configuration Advisory):** Modifying delivery methods and shipping zones requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -85,6 +88,10 @@ Validate delivery method calculations in the live shopping cart:
    * Configured delivery methods calculate fees dynamically.
    * Free shipping thresholds trigger when cart values exceed the limit.
    * Click & Collect options display valid pickup stores.
+
+---
+
+> **Tip (Advised Settings):** Define geographical shipping destinations by postal code or country and configure free-delivery thresholds for orders over standard amounts.
 
 ---
 

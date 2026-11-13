@@ -2,6 +2,10 @@
 
 This guide covers how to analyze mass mailing metrics, evaluate delivery and click statistics, apply custom measures and groupings, and inspect opt-out feedback reports in CURQ 18 Email Marketing.
 
+> **Prerequisites**
+> * Active user account with **Email Marketing / User** rights.
+> * Configured base system records and access permissions.
+
 ---
 
 ## 1. Mass Mailing Analytical Views and Measures
@@ -34,7 +38,7 @@ Inspect data across different analytical dimensions:
    * **Clicked**: Total and percentage of recipients who clicked at least one link.
    * **Bounced**: Total undelivered emails returned due to delivery issues.
 
-> For complete metric definitions and calculation formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#analytical-smart-button-metrics).
+> For complete metric definitions and calculation formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#5-analytical-smart-button-metrics).
 
 ---
 
@@ -69,7 +73,7 @@ Review why recipients are opting out of communications:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Zero Opens Reported**: If an email shows zero opens despite delivered messages, check if image blocking is enabled on corporate recipient clients (open tracking relies on a 1x1 invisible pixel). Link clicks reliably confirm active opens even if tracking pixels are blocked.
 * **Exporting Analytics**: Switch to the **Pivot View** or **List View**, click the **Action** gear icon, and select **Export** to generate an Excel spreadsheet for external reporting.

@@ -4,19 +4,21 @@ This document provides factual technical specifications, field behaviors, and co
 
 ---
 
-## Chart of Accounts Field Definitions
+## 1. Chart of Accounts Field Definitions
+
+> **Caution - Cross-System Impact (General Ledger & Automated Accounting):** The Chart of Accounts defines the financial foundation for the entire enterprise. Default accounts assigned to product categories, journals, and partners govern automatic journal entries triggered by Sales invoicing, Purchase billing, Inventory valuation, and Expense reimbursements. Modifying, deprecating, or re-coding active accounts without consulting an authorized financial adviser can halt transactional workflows across all modules and distort statutory financial statements.
 
 The Chart of Accounts establishes the complete ledger account hierarchy under the Dutch Reference Chart of Accounts (*Referentie Grootboekschema - RGS*).
 
 Navigate to: **Accounting > Configuration > Chart of Accounts**
 
-### Header Fields
+### 1.1 Header Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Code** | Unique numerical identifier for the general ledger account *(e.g., `1002010` for Bank Current Account or `1101010` for Accounts Receivable)*. Determines sorting order and RGS class grouping. |
 | **Account Name** | The formal accounting title displayed across balance sheets, trial balances, and journal vouchers *(e.g., `Rekening-courant bank` or `Handelsdebiteuren nominaal`)*. |
 
-### Accounting Tab
+### 1.2 Accounting Tab
 | Field Name | Description |
 | :--- | :--- |
 | **Asset Profile** | Links a fixed asset depreciation model *(e.g., `Inventaris`)* to the account. When this account is selected on a vendor bill line, CURQ automatically creates a linked capital asset record. |
@@ -32,13 +34,15 @@ Navigate to: **Accounting > Configuration > Chart of Accounts**
 
 ---
 
-## Tax Configuration Field Definitions
+## 2. Tax Configuration Field Definitions
+
+> **Warning (Tax Group & Pricing Risk):** Altering tax rates, tax scopes, or computation rules directly impacts customer pricing in Sales and eCommerce, vendor bill validation in Purchase, and statutory VAT declarations (*BTW-aangifte*). Never modify active tax definitions in production while commercial transactions are being processed; always test changes in a staging environment.
 
 Taxes define the calculation algorithms, VAT rates, and general ledger distribution rules applied across commercial documents and tax returns (*BTW-aangifte*).
 
 Navigate to: **Accounting > Configuration > Taxes**
 
-### Header Fields
+### 2.1 Header Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Tax Name** | The operational name displayed to users on invoices, bills, and tax configuration lists *(e.g., `Verkopen - BTW hoog (21%)`)*. |
@@ -48,24 +52,24 @@ Navigate to: **Accounting > Configuration > Taxes**
 | **Tax Scope** | Differentiates applicability between physical merchandise (`Goods`) and professional services (`Services`) for EU tax reporting. |
 | **Amount** | The numerical rate or monetary amount applied by the computation formula *(e.g., `21.0000 %` for standard Dutch high VAT)*. |
 
-### Definition Tab
+### 2.2 Definition Tab
 Configures the general ledger split and tax return box mapping for invoices and credit notes.
 
-#### 1. Distribution for Invoices
+#### 2.2.1 Distribution for Invoices
 | Field Name | Description |
 | :--- | :--- |
 | **% Based On** | The computation base for this distribution row: `Base` *(allocates the untaxed line amount to the revenue/expense account)* or `% of tax` *(e.g., `100.00 of tax` allocating the tax amount)*. |
 | **Account** | The destination general ledger account where this distribution line is posted *(e.g., `1205010.00 Af te dragen BTW hoog tarief` for VAT payable)*. Left empty for the base row so the revenue/expense account from the product line is used. |
 | **Tax Grids** | Statutory Dutch VAT return (*BTW-aangifte*) boxes affected by the transaction *(e.g., `+1a (omzet)` for high-rate turnover and `+1a (BTW)` for high-rate VAT payable)*. |
 
-#### 2. Distribution for Refunds
+#### 2.2.2 Distribution for Refunds
 | Field Name | Description |
 | :--- | :--- |
 | **% Based On** | The computation base applied when credit notes or vendor refunds are posted (`Base` or `% of tax`). |
 | **Account** | The destination general ledger account where the corrective credit note line is posted *(e.g., `1205010.00 Af te dragen BTW hoog tarief`)*. |
 | **Tax Grids** | Reversing statutory tax return boxes assigned to credit notes *(e.g., `-1a (omzet)` and `-1a (BTW)`)*. |
 
-### Advanced Options Tab
+### 2.3 Advanced Options Tab
 Configures document presentation, grouping, and compound calculation behavior.
 
 | Field Name | Description |
@@ -82,23 +86,23 @@ Configures document presentation, grouping, and compound calculation behavior.
 
 ---
 
-## Financial Journals Field Definitions
+## 3. Financial Journals Field Definitions
 
 Journals segregate double-entry transactions into dedicated operational sub-ledgers with independent chronological numbering sequences.
 
 Navigate to: **Accounting > Configuration > Journals**
 
-### Header Fields
+### 3.1 Header Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Journal Name** | Formal ledger name displayed on transaction forms, dashboards, and audit trails *(e.g., `Bank`, `Customer Invoices`, `Vendor Bills`, or `Miscellaneous Operations`)*. |
 | **Type** | Governs entry constraints, sequence behavior, and UI actions: `Sale` *(customer billing)*, `Purchase` *(vendor bills)*, `Cash` *(cash registers)*, `Bank` *(electronic statements)*, or `General` *(manual adjustments and asset depreciations)*. |
 | **Operating Unit** | Organizational division or operational branch associated with transactions posted inside this journal. |
 
-### Journal Entries Tab
+### 3.2 Journal Entries Tab
 Configures primary accounting accounts, reconciliation parameters, and bank feed methods.
 
-#### 1. Accounting Information
+#### 3.2.1 Accounting Information
 | Field Name | Description |
 | :--- | :--- |
 | **Bank Account** | General ledger liquidity account linked to this journal *(e.g., `1002010 Rekening-courant bank`)*. For `Sale` journals, this field is replaced by `Default Income Account`; for `Purchase` journals, it is replaced by `Default Expense Account`. |
@@ -111,13 +115,13 @@ Configures primary accounting accounts, reconciliation parameters, and bank feed
 | **Short Code** | Compact 3 to 5 character prefix used to construct statutory document numbers *(e.g., `BNK1` for bank moves, `INV` for customer invoices, `BILL` for vendor bills)*. |
 | **Currency** | Dedicated currency for foreign bank accounts *(e.g., `USD`)*. If left blank, the journal operates in company currency (`EUR`). |
 
-#### 2. Bank Account Number
+#### 3.2.2 Bank Account Number
 | Field Name | Description |
 | :--- | :--- |
 | **Account Number** | The company's official International Bank Account Number (IBAN) or bank account number. |
 | **Bank Feeds** | The method used to synchronize bank transactions into CURQ: `Import (OCA) (TXT/CSV/XSLX, camt.053.001.02, camt.054.001.02)` for manual file imports, `Undefined Yet` for manual entry, `Mollie Synchronization` for Mollie gateway integration, or `Online (OCA)` for live automated banking feeds. |
 
-### Incoming Payments Tab
+### 3.3 Incoming Payments Tab
 Defines the settlement methods and clearing accounts for customer payments.
 
 | Field Name | Description |
@@ -126,7 +130,7 @@ Defines the settlement methods and clearing accounts for customer payments.
 | **Name** | Display title for the payment method displayed to users when registering payments. |
 | **Outstanding Receipts accounts** | Interim clearing account *(e.g., `1002017 Outstanding Receipts`)* where customer payments are staged upon registration until electronic bank statement reconciliation clears them into the main bank account. |
 
-### Outgoing Payments Tab
+### 3.4 Outgoing Payments Tab
 Defines the disbursement methods and clearing accounts for supplier payments.
 
 | Field Name | Description |
@@ -135,10 +139,10 @@ Defines the disbursement methods and clearing accounts for supplier payments.
 | **Name** | Display title for the payment method displayed when registering vendor bill payments. |
 | **Outstanding Payments accounts** | Interim clearing account where vendor disbursements are staged until electronic bank statement reconciliation confirms settlement. |
 
-### Advanced Settings Tab
+### 3.5 Advanced Settings Tab
 Configures posting controls, lock dates, and statement import mapping.
 
-#### 1. Control-Access
+#### 3.5.1 Control-Access
 | Field Name | Description |
 | :--- | :--- |
 | **Allowed accounts** | Restricts which general ledger accounts can be manually posted into this journal. If left empty (`Keep empty for no control`), any active account is selectable. |
@@ -147,20 +151,20 @@ Configures posting controls, lock dates, and statement import mapping.
 | **Lock Date for Non-Advisers ?** | Journal-specific lock date restricting entry modifications for standard accounting users, while allowing senior advisers/controllers access. |
 | **Auto-Check on Post** | When enabled, automatically marks journal entries as reviewed (`Checked`) upon posting. |
 
-#### 2. Statement Import Map
+#### 3.5.2 Statement Import Map
 | Field Name | Description |
 | :--- | :--- |
 | **Default Sheet Mapping** | Preconfigured spreadsheet and column mapping profile used when parsing imported bank statement files. |
 
 ---
 
-## Fiscal Positions Field Definitions
+## 4. Fiscal Positions Field Definitions
 
 Fiscal Positions automatically translate product default taxes and income/expense accounts based on counterparty geographic jurisdiction and VAT registration status.
 
 Navigate to: **Accounting > Configuration > Fiscal Positions**
 
-### Header Fields
+### 4.1 Header Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Fiscal Position** | Descriptive title identifying the tax policy *(e.g., `EU landen`, `Niet-EU landen`, or `National`)*. |
@@ -170,7 +174,7 @@ Navigate to: **Accounting > Configuration > Fiscal Positions**
 | **Country Group ?** | Automatically triggers the fiscal position when the delivery or billing address belongs to an established economic area *(e.g., `European Union`)*. |
 | **Country ?** | Restricts automatic trigger strictly to a specific sovereign state *(e.g., `Germany` or `Belgium`)*. |
 
-### Tax Mapping Tab
+### 4.2 Tax Mapping Tab
 Translates catalog taxes to destination fiscal taxes.
 
 | Field Name | Description |
@@ -178,7 +182,7 @@ Translates catalog taxes to destination fiscal taxes.
 | **Tax on Product** | The default baseline tax assigned to products in the catalog *(e.g., `Verkopen - BTW hoog (21%) (Sales)` or `Inkopen - BTW hoog (21%) (Purchases)`)*. |
 | **Tax to Apply** | The replacement tax substituted by CURQ when this fiscal position is active *(e.g., mapped to `Verkopen - Export goederen binnen EU (Sales)` or `Inkopen - Import binnen EU hoog (21%) (Purchases)`)*. |
 
-### Account Mapping Tab
+### 4.3 Account Mapping Tab
 Redirects income and expense accounts to specialized foreign or export general ledger accounts.
 
 | Field Name | Description |
@@ -186,7 +190,7 @@ Redirects income and expense accounts to specialized foreign or export general l
 | **Account on Product** | The standard general ledger account assigned to product categories *(e.g., domestic sales `8001010 Netto-omzet uit leveringen geproduceerde goederen`)*. |
 | **Account to Use Instead** | The destination replacement account where revenue or expenses are redirected *(e.g., intra-EU export sales `8001020 Netto-omzet EU`)*. |
 
-### Common Fields
+### 4.4 Common Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Legal Notes** | Multi-line text field at the bottom of the form for statutory disclaimers, VAT directive exemptions, or reverse-charge clauses printed on customer invoices. |

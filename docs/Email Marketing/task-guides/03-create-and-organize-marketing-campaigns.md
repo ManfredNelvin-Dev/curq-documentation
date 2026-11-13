@@ -2,6 +2,10 @@
 
 This guide covers how to access the campaigns dashboard, create marketing initiatives, manage campaign pipeline stages, assign tags, compose mailings, and track performance metrics in CURQ 18 Email Marketing.
 
+> **Prerequisites**
+> * Active user account with **Email Marketing / User** rights.
+> * Configured outgoing mail server and marketing list segments.
+
 ---
 
 ## 1. Create Marketing Campaigns
@@ -32,7 +36,7 @@ Define a new strategic marketing initiative directly from the Kanban board:
    * **Responsible**: Assign the marketing team member overseeing campaign execution.
    * **Tags**: Add organizational tags for filtering and reporting classification.
 
-> For complete campaign field definitions, tags, and stage attributes, see [**Campaign Header Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#campaign-header-fields).
+> For complete campaign field definitions, tags, and stage attributes, see [**Campaign Header Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#2-campaign-header-fields).
 
    ![Entering campaign name, responsible person, and tags with Add and Edit buttons highlighted](../media/010.png)
 
@@ -87,11 +91,11 @@ Monitor real-time deliverability, engagement, and conversion metrics across link
    * **Quotations / Invoiced**: Financial value of sales quotations and confirmed customer invoices resulting from the campaign mailing.
    * **Received / Bounced**: Percentage of successfully delivered messages versus failed email dispatches.
 
-> For smart button metrics, revenue calculation, and conversion tracking, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#analytical-smart-button-metrics).
+> For smart button metrics, revenue calculation, and conversion tracking, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#5-analytical-smart-button-metrics).
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Unlinked Mailings**: If a mailing was created outside a campaign, open the mailing form, navigate to the **Settings** tab, and assign the target campaign in the **Mailing Campaign** field.
 * **Archiving Completed Campaigns**: Once all campaign activities conclude, open the card menu and select **Archive** to maintain a clean Kanban workspace while preserving analytical reports.
@@ -103,3 +107,4 @@ Monitor real-time deliverability, engagement, and conversion metrics across link
 * [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)
 * [Design, Schedule, and Send Email Mailings](./04-design-schedule-and-send-email-mailings.md)
 * [Understanding Campaign Lifecycles and Subscriber Governance](../core-concepts/02-understanding-campaign-lifecycles-and-subscriber-governance.md)
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)

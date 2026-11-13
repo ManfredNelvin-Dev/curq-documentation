@@ -96,7 +96,9 @@ Tailor widget positioning and visibility to maintain a clean workspace:
 
    ![Minimized widget on My Dashboard](../media/013.png)
 
-4. Click the expand (`+`) icon to reopen the widget when needed.
+4. Click the expand (`+`) icon (**Maximize / Expand**) to reopen the widget when needed.
+
+> For full behavior specifications of **1 Column Layout**, **2 Columns Layout**, **3 Columns Layout**, **Drag-and-Drop Reorder**, **Minimize / Collapse (`-`)**, **Maximize / Expand (`+`)**, and **Close / Remove (`x`)**, see [**My Dashboard Layout and Action Parameters**](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md#3-my-dashboard-layout-and-action-parameters).
 
 ---
 
@@ -106,4 +108,3 @@ Tailor widget positioning and visibility to maintain a clean workspace:
 * [Create and Manage My Dashboard](../task-guides/02-create-and-manage-my-dashboard.md)
 * [Dashboard Configuration and Group Specifications](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md)
 * [Understanding Spreadsheet Dashboards vs. My Dashboard](../core-concepts/01-understanding-spreadsheet-dashboards-vs-my-dashboard.md)
-

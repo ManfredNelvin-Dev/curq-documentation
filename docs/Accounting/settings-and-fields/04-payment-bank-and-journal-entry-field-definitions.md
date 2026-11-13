@@ -4,7 +4,7 @@ This document provides technical data dictionaries and field specifications for 
 
 ---
 
-## Payment Registration and Refund Wizard Fields
+## 1. Payment Registration and Refund Wizard Fields
 
 The Payment wizard opens when clicking **Register Payment** on a validated customer invoice or vendor bill, or clicking **Pay** on a confirmed credit note.
 
@@ -20,7 +20,7 @@ The Payment wizard opens when clicking **Register Payment** on a validated custo
 
 ---
 
-## Standalone Payment Form Fields
+## 2. Standalone Payment Form Fields
 
 Standalone payment records are created directly from **Customers > Payments** (or **Vendors > Payments**) when recording customer deposits, prepayments, or direct partner settlements.
 
@@ -38,7 +38,7 @@ Standalone payment records are created directly from **Customers > Payments** (o
 
 ---
 
-## Customer Payments List View Columns
+## 3. Customer Payments List View Columns
 
 Navigating to **Customers > Payments** displays all recorded customer receipts and outbound refunds:
 
@@ -56,7 +56,7 @@ Navigating to **Customers > Payments** displays all recorded customer receipts a
 
 ---
 
-## Vendor Payments List View and Record Fields
+## 4. Vendor Payments List View and Record Fields
 
 Navigating to **Vendors > Payments** displays all recorded supplier disbursements and outbound refunds:
 
@@ -82,7 +82,7 @@ Opening a validated payment record *(e.g., `PAY00002`)* displays the payment par
 
 ---
 
-## Standalone Payment Status Lifecycle
+## 5. Standalone Payment Status Lifecycle
 
 Standalone customer and vendor payments transition through dedicated processing stages:
 
@@ -94,7 +94,7 @@ Standalone customer and vendor payments transition through dedicated processing 
 
 ---
 
-## Bank Statement Form and Line Fields
+## 6. Bank Statement Form and Line Fields
 
 Bank statements group cleared bank transactions, confirming opening and closing statement balances against legal bank records.
 
@@ -115,7 +115,7 @@ Bank statements group cleared bank transactions, confirming opening and closing 
 
 ---
 
-## Bank Reconciliation Widget Fields
+## 7. Bank Reconciliation Widget Fields
 
 The interactive reconciliation dashboard matches cleared bank lines against open ledger moves or generates direct adjusting lines.
 
@@ -137,7 +137,7 @@ The interactive reconciliation dashboard matches cleared bank lines against open
 
 ---
 
-## Manual Journal Entry and Item Fields
+## 8. Manual Journal Entry and Item Fields
 
 Manual journal entries record non-commercial adjustments, accruals, opening balances, and capital movements in **Accounting > Accounting > Journal Entries**.
 
@@ -158,7 +158,7 @@ Manual journal entries record non-commercial adjustments, accruals, opening bala
 
 ---
 
-## Reverse Entry Wizard Fields
+## 9. Reverse Entry Wizard Fields
 
 The Reverse Entry wizard generates contra-entries to negate prior journal entries for period-end accruals or correction vouchers.
 
@@ -172,7 +172,7 @@ The Reverse Entry wizard generates contra-entries to negate prior journal entrie
 
 ---
 
-## Customer Banking Mandate Form Fields
+## 10. Customer Banking Mandate Form Fields
 
 Customer banking mandates legally authorize direct debit collections from a partner's bank account under **Customers > Banking Mandates**.
 
@@ -191,7 +191,7 @@ Customer banking mandates legally authorize direct debit collections from a part
 
 ---
 
-## Customer Banking Mandates List View Columns
+## 11. Customer Banking Mandates List View Columns
 
 The Banking Mandates list view displays active and historical customer authorizations:
 
@@ -209,7 +209,7 @@ The Banking Mandates list view displays active and historical customer authoriza
 
 ---
 
-## Banking Mandate Status Lifecycle
+## 12. Banking Mandate Status Lifecycle
 
 | Field Name | Description |
 | :--- | :--- |
@@ -219,7 +219,7 @@ The Banking Mandates list view displays active and historical customer authoriza
 
 ---
 
-## Direct Debit Payment Mode Configuration Fields
+## 13. Direct Debit Payment Mode Configuration Fields
 
 Payment modes define automated bank settlement and matching rules under **Accounting > Configuration > Payment Modes**:
 
@@ -244,11 +244,11 @@ Payment modes define automated bank settlement and matching rules under **Accoun
 
 ---
 
-## Debit Order Batch Form Fields
+## 14. Debit Order Batch Form Fields
 
 Debit order batch documents group eligible customer direct debit items for electronic ISO 20022 XML export under **Customers > Debit Orders**.
 
-### 1. Header Fields
+### 14.1 Header Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -259,7 +259,7 @@ Debit order batch documents group eligible customer direct debit items for elect
 | **Payment Type** | The monetary direction of the batch order *(defaults to `Inbound` for customer collections)*. |
 | **Payment Execution Date Type** | Controls transaction scheduling *(defaults to `Due Date` to respect invoice payment terms)*. |
 
-### 2. Transactions Tab Table Columns
+### 14.2 Transactions Tab Table Columns
 
 The Transactions tab displays all individual customer collection items assembled into the batch:
 
@@ -273,7 +273,7 @@ The Transactions tab displays all individual customer collection items assembled
 | **Communication** | Remittance narrative transmitted to the debtor bank statement *(defaults to customer invoice number `INV/2026/00006`)*. |
 | **State** | Lifecycle status of the individual line: `Draft`, `Confirmed`, or `Paid`. |
 
-### 3. Other Information Tab Fields
+### 14.3 Other Information Tab Fields
 
 The Other Information tab configures electronic file generation metadata, banking protocol flags, and batch settlement options:
 
@@ -290,7 +290,7 @@ The Other Information tab configures electronic file generation metadata, bankin
 
 ---
 
-## Debit Order Transaction Line and Modal Fields
+## 15. Debit Order Transaction Line and Modal Fields
 
 Clicking **Add a line** in the Transactions tab opens the **Create Transactions** modal to configure or review an individual direct debit item:
 
@@ -315,7 +315,7 @@ Clicking **Add a line** in the Transactions tab opens the **Create Transactions*
 
 ---
 
-## Debit Order Status Lifecycle
+## 16. Debit Order Status Lifecycle
 
 | Field Name | Description |
 | :--- | :--- |
@@ -326,7 +326,7 @@ Clicking **Add a line** in the Transactions tab opens the **Create Transactions*
 
 ---
 
-## SEPA Direct Debit Payment Transaction Fields
+## 17. SEPA Direct Debit Payment Transaction Fields
 
 Payment transactions represent the individual customer execution records generated under batch debit orders and viewed via the **Payment Lines** stat button on invoices:
 
@@ -345,11 +345,11 @@ Payment transactions represent the individual customer execution records generat
 
 ---
 
-## Vendor Payment Order Batch Form Fields
+## 18. Vendor Payment Order Batch Form Fields
 
 Payment order batch documents group eligible supplier bills for electronic ISO 20022 XML credit transfer export under **Vendors > Payment Orders**:
 
-### 1. Header and Form Fields
+### 18.1 Header and Form Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -366,7 +366,7 @@ Payment order batch documents group eligible supplier bills for electronic ISO 2
 | **File Upload Date** | Timestamp recorded when the user marks the file as successfully uploaded to the banking portal *(e.g., `10/30/2026`)*. |
 | **Description** | Optional internal narrative or audit label explaining the payment run. |
 
-### 2. Transactions Tab Table Columns
+### 18.2 Transactions Tab Table Columns
 
 | Field Name | Description |
 | :--- | :--- |
@@ -378,7 +378,7 @@ Payment order batch documents group eligible supplier bills for electronic ISO 2
 | **Amount** | The transaction disbursement sum in currency *(e.g., `€ 99.00`)*. |
 | **Payment Reference** | Internal system transaction voucher sequence *(e.g., `PO0001`)*. |
 
-### 3. Action Buttons and Lifecycle Controls
+### 18.3 Action Buttons and Lifecycle Controls
 
 | Field Name | Description |
 | :--- | :--- |
@@ -390,11 +390,11 @@ Payment order batch documents group eligible supplier bills for electronic ISO 2
 
 ---
 
-## Lock Dates Dialog Field Definitions
+## 19. Lock Dates Dialog Field Definitions
 
 Navigating to **Accounting > Lock Dates** opens the configuration dialog used to define sub-ledger restrictions, tax period locks, and statutory fiscal year closing boundaries:
 
-### Reversible Lock Dates
+### 19.1 Reversible Lock Dates
 
 | Field Name | Description |
 | :--- | :--- |
@@ -403,13 +403,13 @@ Navigating to **Accounting > Lock Dates** opens the configuration dialog used to
 | **Tax Return Lock Date** | Cutoff date locking all journal entries and lines bearing statutory tax grids *(e.g., Dutch BTW rubrieken `1a`, `1b`, `2a`, `3a`, `4a`, `5b`)*. Cannot be set to a future date relative to the current system date. Ensures transactions included in submitted tax returns cannot be altered. Can be adjusted by advisers if a formal supplementary declaration (*suppletie*) is approved. |
 | **Global Lock Date** | Operational cutoff date restricting non-adviser users *(e.g., billing clerks, sales officers, purchasing agents)* across all journals. Prevents creating, editing, posting, or cancelling transactions dated on or before this date. Users with the **Adviser** role retain permission to record adjusting journal entries behind this date. |
 
-### Irreversible Lock Date
+### 19.2 Irreversible Lock Date
 
 | Field Name | Description |
 | :--- | :--- |
 | **Hard Lock Date** | Permanent, company-wide statutory cutoff date. Completely and irreversibly locks all journal entries, general ledger moves, and documents dated on or before this date. Must be on or before the current system date (cannot be set to a future date). Once saved, no user *(including system administrators, controllers, advisers, and root accounts)* can modify, post, unpost, cancel, or reconcile entries prior to this date. This date cannot be moved backward or cleared. |
 
-### Dialog Action Buttons
+### 19.3 Dialog Action Buttons
 
 | Field Name | Description |
 | :--- | :--- |
@@ -418,11 +418,11 @@ Navigating to **Accounting > Lock Dates** opens the configuration dialog used to
 
 ---
 
-## Cost and Revenue Spreading Field Definitions
+## 20. Cost and Revenue Spreading Field Definitions
 
 Spread tables and templates govern automated deferred revenue and prepaid expense amortization schedules in **Accounting > Spread Costs/Revenues**:
 
-### 1. Spread Board Header and Form Fields
+### 20.1 Spread Board Header and Form Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -443,7 +443,7 @@ Spread tables and templates govern automated deferred revenue and prepaid expens
 | **Currency** | Base currency of the amortization schedule *(configured in the **Details** tab, defaults to `EUR`)*. |
 | **Analytic Distribution** | Cost center or analytical department tag assigned to recognition entries *(configured in the **Details** tab)*. |
 
-### 2. Spread Lines Tab Columns and Summary Totals
+### 20.2 Spread Lines Tab Columns and Summary Totals
 
 | Field Name | Description |
 | :--- | :--- |
@@ -458,7 +458,7 @@ Spread tables and templates govern automated deferred revenue and prepaid expens
 | **Unposted Amount** | Total outstanding balance across all future installment lines that have not yet been posted to the General Ledger. |
 
 
-### 3. Link Invoice Line with Spread Board Modal Fields
+### 20.3 Link Invoice Line with Spread Board Modal Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -468,7 +468,7 @@ Spread tables and templates govern automated deferred revenue and prepaid expens
 | **Spread Action Type** | Radio selector determining the creation method: `Create from spread template` or `Create new spread board`. |
 | **Spread Board** | Dropdown selector to choose an existing unlinked spread schedule *(e.g., `Annual Cloud Subscription 2026`)*. |
 
-### 4. Spread Table Action Buttons
+### 20.4 Spread Table Action Buttons
 
 | Field Name | Description |
 | :--- | :--- |
@@ -481,7 +481,7 @@ Spread tables and templates govern automated deferred revenue and prepaid expens
 
 ---
 
-## Analytic Items Ledger Field Definitions
+## 21. Analytic Items Ledger Field Definitions
 
 Analytic items track managerial cost and revenue allocations across project dimensions without affecting the statutory double-entry general ledger under **Accounting > Accounting > Analytic Items**.
 
@@ -498,7 +498,7 @@ Analytic items track managerial cost and revenue allocations across project dime
 
 ---
 
-## Global Journal Items Ledger Field Definitions
+## 22. Global Journal Items Ledger Field Definitions
 
 The global ledger under **Accounting > Accounting > Journal Items** aggregates all debit and credit moves across all journals:
 
@@ -517,7 +517,7 @@ The global ledger under **Accounting > Accounting > Journal Items** aggregates a
 
 ---
 
-## Secure Journal Entries Parameter Definitions
+## 23. Secure Journal Entries Parameter Definitions
 
 Launched under **Accounting > Accounting > Secure Entries** to cryptographically lock historical posted entries:
 
@@ -529,7 +529,7 @@ Launched under **Accounting > Accounting > Secure Entries** to cryptographically
 
 ---
 
-## Accounting Dashboard Journal Cards Data Dictionary
+## 24. Accounting Dashboard Journal Cards Data Dictionary
 
 The Accounting Dashboard at **Accounting > Dashboard** displays 12 interactive cards representing the company's core and specialized sub-ledgers:
 
@@ -550,7 +550,7 @@ The Accounting Dashboard at **Accounting > Dashboard** displays 12 interactive c
 
 ---
 
-## Accounting Dashboard Card Action Menu Fields
+## 25. Accounting Dashboard Card Action Menu Fields
 
 Accessible by clicking the three dots icon in the upper-right corner of any journal card on the dashboard:
 

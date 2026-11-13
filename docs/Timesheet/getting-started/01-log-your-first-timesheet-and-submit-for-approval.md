@@ -53,8 +53,6 @@ Initialize a new timesheet container for the active reporting period:
    * **Company**: Displays your assigned company entity *(e.g., `Siddharth`)*.
    * **Workflow Stage**: Visual indicator at the top right confirms the sheet is currently in `New` status.
 
-> For complete field descriptions, cycle rules, and status parameters, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#periodic-timesheet-sheet-fields).
-
 ---
 
 ### 1.3 Add Project and Task Deliverable Lines
@@ -72,7 +70,7 @@ Record time spent on specific deliverables:
 
 7. The line is saved directly to your sheet and the status transitions to **Open**.
 
-> For detailed field descriptions, operational behaviors, and billing mappings, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+> For column definitions on the **Details** tab, see [**Timesheet Sheet Details Tab Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#1-timesheet-sheet-details-tab-fields).
 
 ---
 
@@ -88,7 +86,7 @@ Inspect your total daily hours and verify workload distribution:
 3. Check the end-of-row and daily bottom totals to verify accumulated workload distribution *(e.g., `04:00` total)*.
 4. If required, click any cell directly within the matrix grid to adjust or enter additional hours.
 
-> For matrix dimensions, total calculations, and bidirectional synchronization rules, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#summary-matrix-grid-specifications).
+> For matrix dimensions, total calculations, and bidirectional synchronization rules, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#3-summary-matrix-grid-specifications).
 
 ---
 

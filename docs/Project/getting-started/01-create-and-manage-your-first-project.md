@@ -117,7 +117,7 @@ Configure detailed delivery parameters:
 3. **Allocated Time**: Define planned target hours for tracking team capacity.
 4. **Notebook Tabs**: Access specialized workspaces for **Description**, **Timesheets**, **Sub-tasks**, and **Extra Info**.
 
-> For a detailed explanation of all task header fields, notebook tabs, and stage status chevrons, see [**Project Task Field Definitions**](../settings-and-fields/03-project-task-field-definitions.md).
+> For a detailed explanation of all task header fields, deadlines, and priority indicators, see [**Task Header and Primary Information Fields**](../settings-and-fields/03-project-task-field-definitions.md#1-task-header-and-primary-information-fields).
 
 ---
 
@@ -132,7 +132,7 @@ Return to **Projects** via the top navigation bar to view your project portfolio
 5. **Start Work** *(play icon button)*: One-click operational action to initiate active work tracking and automated timesheet recording.
 6. **Member Avatars**: Displays assigned project team members and specialist contributors.
 
-> For a detailed explanation of project card indicators, metrics counters, and context menu options, see [**Project Dashboard and Kanban Card Definitions**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md).
+> For a detailed explanation of project card indicators, metrics counters, and context menu options, see [**Project Card Field Definitions**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md#2-project-card-field-definitions) and [**Project Card Context Menu Data Dictionary**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md#4-project-card-context-menu-data-dictionary).
 
 ---
 

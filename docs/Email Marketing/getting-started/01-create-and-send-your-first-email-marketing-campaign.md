@@ -59,7 +59,7 @@ Set up a dedicated subscriber container for your email broadcast:
    * **Partner Tag**: Optionally assign an internal partner tag to categorize subscriber contacts.
    * **Show In Preferences ?**: Check this option to allow contacts to subscribe or unsubscribe from this list on their customer preference portal page.
 
-> For complete subscriber list properties and category options, see [**Mailing List Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-list-fields).
+> For complete subscriber list properties and category options, see [**Mailing List Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#3-mailing-list-fields).
 
 ---
 
@@ -102,7 +102,7 @@ Initialize and compose your email broadcast:
    * **Recipients**: Keep the default `Mailing List` selection.
    * **Mailing Lists**: Select your newly created subscriber list *(e.g., `Consumer Newsletter`)*.
 
-> For complete header attributes, audience filter parameters, and A/B testing rules, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-record-fields).
+> For complete header attributes, audience filter parameters, and A/B testing rules, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#1-mailing-record-fields).
 
 5. In the **Mail Body** tab, select a pre-designed layout from the template grid *(such as `Plain Text`, `Start From Scratch`, `Welcome Message`, `Event Promo`, `Newsletter`, or `Coupon Code`)*.
 6. Use the visual drag-and-drop editor to customize headers, text blocks, call-to-action buttons, and product cards.

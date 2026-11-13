@@ -45,7 +45,7 @@ This guide explains how to set up spread templates, link spread schedules direct
    * **Period Type**: Set to `Month`.
    * **Start Date**: Enter the inception date *(e.g., `10/01/2026`)*.
 
-> For chart of accounts configurations, allowed journals, and account classifications, see [**Chart of Accounts Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#chart-of-accounts-field-definitions).
+> For chart of accounts configurations, allowed journals, and account classifications, see [**Chart of Accounts Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#1-chart-of-accounts-field-definitions).
 
 6. Click the Save icon:
    * CURQ saves the spread board record and displays the pending unposted balances:
@@ -181,7 +181,7 @@ If commercial contract terms change or an invoice is amended mid-contract, CURQ 
 
 ---
 
-## Edge Cases & Troubleshooting
+## 3. Edge Cases & Troubleshooting
 
 * **Invoice Already Validated**: Revenue or cost spreading can only be linked directly from an invoice line while the document is in **Draft** status. If an invoice or bill is already posted, you must either:
   1. Reset the document to draft (if period lock dates permit), add the spread, and re-post.

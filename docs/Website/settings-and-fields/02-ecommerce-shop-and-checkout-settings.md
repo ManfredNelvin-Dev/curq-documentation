@@ -12,7 +12,9 @@ The payment configuration block manages online payment gateways, payment methods
 | :--- | :--- |
 | **Activate Payments** | Activates and configures payment provider integrations supporting credit/debit cards, digital wallets *(Google Pay, Apple Pay)*, and direct wire transfers via the centralized Payment Provider registry. |
 
-### Payment Provider Form Field Specifications
+### 1.1 Payment Provider Form Field Specifications
+
+> **Caution (Production Payment Gateway Safeguard):** Leaving a payment provider in **Test Mode** on a live public website allows shoppers to complete checkouts and confirm orders in Sales and Inventory without real financial transactions being captured or settled. Conversely, switching to **Enabled** without verifying live API keys and webhook secrets causes checkout failures and lost revenue. Always execute a live end-to-end small test transaction prior to launching campaigns.
 
 Opening any gateway *(such as Wire Transfer, Stripe, or PayPal)* in the payment provider manager exposes the following configuration fields:
 
@@ -74,14 +76,14 @@ Dictates customer billing triggers, automated invoice generation upon payment se
 | **Automatic Invoice** | Automatically creates, validates, and marks customer invoices as paid as soon as online payment gateways confirm settlement. Visible only when Invoicing Policy is set to **Invoice what is ordered**. |
 | **Invoice Email Template** | Transactional email template *(default: `Invoice: Sending`)* dispatched to the customer upon payment settlement, containing the dynamic invoice PDF attachment. |
 
-### Automated Invoicing Technical Specifications
+### 4.1 Automated Invoicing Technical Specifications
 
 * **Automatic Invoice Trigger**: Fires synchronously upon receipt of a successful payment gateway callback notification.
 * **Accounting State**: The customer invoice is created directly in `Posted` status without manual approval.
 * **Payment Reconciliation**: The payment transaction record is automatically matched and reconciled against the generated invoice using the payment provider's designated bank journal.
 * **Customer Portal Availability**: The resulting PDF invoice is immediately made available under `/my/invoices`.
 
-### Invoice Email Template Parameters
+### 4.2 Invoice Email Template Parameters
 
 Opening the template editor via the external link on **Invoice Email Template** exposes the following parameters:
 
@@ -101,7 +103,7 @@ Opening the template editor via the external link on **Invoice Email Template** 
 | **Send after** | Inactivity threshold duration *(default: `10:00` Hours)* after which CURQ flags shopping carts as abandoned and schedules recovery emails. |
 | **Email Template** | Transactional template (`Ecommerce: Cart Recovery`) containing an automated recovery link that reconstructs the shopper's cart items upon click. |
 
-### Cart Recovery System Rules
+### 5.1 Cart Recovery System Rules
 
 * **Contact Capture Requirement**: Carts must be linked to a signed-in portal customer or have an email address captured during the checkout address step. Anonymous sessions without captured email addresses cannot receive recovery emails.
 * **Prior Order Suppression**: If the customer completes payment prior to timer expiration, the scheduled email is automatically cancelled.

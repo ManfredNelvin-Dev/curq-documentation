@@ -2,6 +2,13 @@
 
 Enable subscription tracking, configure recurring billing intervals, and apply recurring plans to commercial opportunities.
 
+> **Prerequisites**
+> * Active user account with **CRM / Administrator** rights.
+> * Configured base system records and access permissions.
+>
+> **Warning (Configuration Advisory):** Modifying recurring revenue plans requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Recurring Revenue Configuration and Assignment
@@ -49,7 +56,7 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 
    ![CRM recurring plans drag reorder handle](../media/064.png)
 
-> **Note:** For duration specifications and monthly normalization formulas, see [**Recurring Revenue Plan Intervals**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#recurring-revenue-plan-intervals).
+> **Note:** For duration specifications and monthly normalization formulas, see [**Recurring Revenue Plan Intervals**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#3-recurring-revenue-plan-intervals).
 
 ---
 
@@ -71,13 +78,17 @@ Enable subscription tracking, configure recurring billing intervals, and apply r
 
 ---
 
-## Edge Cases & Recovery Steps
+## 2. Edge Cases & Recovery Steps
 
 * **Archiving a Discontinued Plan**: If a contract duration is retired, select its row checkbox in **Configuration > Recurring Plans** (e.g., `Yearly` and `Over 3 years`), click the **⚙ Actions** dropdown menu, and select **Archive**. Existing opportunities linked to this plan maintain their historical calculations, but the plan will no longer be offered on new deals.
 
    ![CRM recurring plans actions archive](../media/067.png)
 
 * **Handling Multi-Currency Contracts**: Expected MRR is computed using the active opportunity's company currency exchange rate at the time of quoting.
+
+---
+
+> **Tip (Advised Settings):** Align recurring intervals (Monthly, Quarterly, Annually) with corporate subscription billing schedules and chart of account revenue recognition periods.
 
 ---
 

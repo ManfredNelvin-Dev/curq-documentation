@@ -42,6 +42,8 @@ To prevent accidental price tampering or unauthorized alterations once productio
    * The order enters an editable state.
    * Make your adjustments, save, and click **Lock** to re-secure the contract.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Cancel a Sales Order
@@ -77,7 +79,7 @@ If a customer reconsiders or a cancellation was executed prematurely:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Order Has Draft or Posted Invoices**: You cannot cancel a sales order if an active posted invoice exists. You must first open the invoice via the **Invoices** smart button, click **Add Credit Note** (or **Reset to Draft > Cancel**), and then return to cancel the sales order.
 * **Partial Deliveries Already Processed**: If warehouse personnel already validated shipment for part of the order, cancelling the sales order will cancel remaining backorders, but will preserve the historical record of already-delivered items for billing.

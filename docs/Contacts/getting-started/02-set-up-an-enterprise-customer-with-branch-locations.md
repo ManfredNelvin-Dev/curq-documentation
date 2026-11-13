@@ -32,6 +32,8 @@ By the end of this exercise, you will understand how CURQ routes sales deliverie
 
 Your main corporate account record is now established.
 
+> For descriptions of primary corporate identity, postal address, and communication fields, see [**Header and Identity Fields**](../settings-and-fields/01-contact-form-field-definitions.md#1-header-and-identity-fields).
+
 ---
 
 ### 1.2 Add a Dedicated Delivery Warehouse Address
@@ -86,7 +88,7 @@ Let us confirm how the parent company card displays its connected operational fa
 
 Congratulations! You have successfully configured a multi-branch corporate hierarchy. Whenever your commercial team creates a Sales Order for `Global Logistics Corp`, CURQ automatically routes physical deliveries to the Gary warehouse and accounting invoices to the Chicago AP department.
 
-> For complete field definitions and address routing options, see [**Contacts and Addresses Tab**](../settings-and-fields/01-contact-form-field-definitions.md#contacts-and-addresses-tab).
+> For complete field definitions and address routing options, see [**Contacts and Addresses Tab**](../settings-and-fields/01-contact-form-field-definitions.md#2-contacts-and-addresses-tab).
 
 ---
 

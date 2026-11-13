@@ -2,6 +2,10 @@
 
 Search conversation history, inspect shared attachments, govern external upload security, consult pinned messages, and manage participant directories in CURQ Discuss.
 
+> **Prerequisites**
+> * Active user account with **Discuss / User** rights.
+> * Configured base system records and access permissions.
+
 ---
 
 ## 1. Conversation Search and File Attachments
@@ -36,6 +40,8 @@ Locate files, contracts, PDF specifications, and images shared across the lifeti
    * **Preview**: Click to inspect images or PDFs directly in an in-app lightbox modal.
    * **Download**: Save a local copy to your computer.
    * **Delete**: Remove the file attachment from the channel (available to the uploader or system administrators).
+
+> For technical specifications of all conversation header controls (**Bell Icon**, **Magnifying Glass**, **Paperclip**, **Attachments Drawer**, **Push Pin**, and **People Icon**), see [**Header Toolbar Tools and Security Settings**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#5-header-toolbar-tools-and-security-settings).
 
 ---
 
@@ -92,3 +98,4 @@ Inspect live member presence and enroll new teammates:
 * [Create and Manage Channels](01-create-and-manage-channels.md)
 * [Send Direct and Group Messages](02-send-direct-and-group-messages.md)
 * [Channel and Chat Settings Definitions](../settings-and-fields/01-channel-and-chat-settings-definitions.md)
+* [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)

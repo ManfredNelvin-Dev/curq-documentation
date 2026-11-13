@@ -16,6 +16,10 @@ flowchart LR
     Payment & Ledger`"]
 ```
 
+> **Prerequisites**
+> * Active user account with **Sales / User** rights.
+> * Configured Chart of Accounts and partner records in **Contacts**.
+
 ---
 
 ## 1. Hands-On Exercise: Process Your First Sale from Quote to Invoice
@@ -98,6 +102,10 @@ When the customer agrees to the proposal:
 3. Review the generated customer invoice, then click **Confirm** to post it to the financial ledger.
 4. Click **Register Payment**, verify the bank journal and payment amount, and click **Create Payment**.
 5. The invoice status badge immediately displays a green **Paid** ribbon.
+
+---
+
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
 
 ---
 

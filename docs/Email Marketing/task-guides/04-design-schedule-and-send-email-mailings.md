@@ -2,6 +2,12 @@
 
 This guide covers how to create a new email mailing, choose and customize responsive design templates, send test messages, and dispatch or schedule delivery in CURQ 18 Email Marketing.
 
+> **Prerequisites**
+> * Active user account with **Email Marketing / User** rights.
+> * Configured outgoing mail server and marketing list segments.
+>
+> **Warning (Template Safety & Compliance Rule):** Before modifying production email templates, always create a duplicate copy to test layout and dynamic field tags. Deleting or modifying dynamic tags (such as `{{ object.name }}`) without verification can break outbound automated broadcasts. Always verify that unsubscribe links (`[[opt_out]]`) remain intact to prevent domain blacklisting.
+
 ---
 
 ## 1. Compose and Design Email Mailings
@@ -36,7 +42,7 @@ Define message identification and target audience:
    * **Recipients**: Choose **Mailing List** or select a business model *(e.g., `Contacts` or `Lead/Opportunity`)*.
    * **Select Mailing Lists**: Choose one or more subscriber lists to receive the broadcast.
 
-> For complete field definitions and configuration specifications, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-record-fields).
+> For complete field definitions and configuration specifications, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#1-mailing-record-fields).
 
 ---
 
@@ -76,7 +82,7 @@ Dispatch the campaign to your target audience:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Canceling Queued Mailings**: If a mailing is in `In Queue` status and you need to abort delivery, open the record and click **Cancel** in the action bar before the scheduled time arrives.
 * **Editing Sent Mailings**: Once a mailing transitions to `Sent`, the body content is permanently locked to preserve audit history. To reuse the content, select **Action > Duplicate** to create a fresh editable draft.

@@ -2,6 +2,10 @@
 
 Host peer-to-peer audio and video calls, grant device permissions, manage in-call controls, share your desktop screen, and launch instant conferences in CURQ Discuss.
 
+> **Prerequisites**
+> * Active user account with **Discuss / User** rights.
+> * Active enterprise user profiles configured in the corporate directory.
+
 ---
 
 ## 1. Voice and Video Call Operations
@@ -58,6 +62,8 @@ Once connected to a call, manage your media transmission using the toolbar at th
 5. **Settings (Three Dots)**: Access quick audio sensitivity thresholds and hardware device switches.
 6. **Hang Up (Red Phone)**: Disconnect from the call.
 
+> For detailed audio threshold and video display settings, see [**Voice and Audio Parameters**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#1-voice-and-audio-parameters) and [**Video Display and Privacy Parameters**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#2-video-display-and-privacy-parameters).
+
 ---
 
 ## 2. Launch Instant Conferences via "Start a meeting"
@@ -96,3 +102,4 @@ To add colleagues or external team members into an active call:
 * [Configure Voice and Video Hardware and Backgrounds](08-configure-voice-and-video-hardware-and-backgrounds.md)
 * [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
 * [Understanding Channels, Collaboration, and WebRTC Architecture](../core-concepts/02-understanding-channels-collaboration-and-webrtc-architecture.md)
+* [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)

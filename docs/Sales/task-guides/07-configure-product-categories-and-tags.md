@@ -6,6 +6,9 @@ Organize catalog items, browse and filter products in Kanban and List views, est
 > **Prerequisites**
 > * Access permissions as Sales Administrator.
 > * Products registered in the catalog under **Sales > Products > Products**.
+>
+> **Warning (Configuration Advisory):** Modifying product categories and tags requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -34,6 +37,8 @@ Organize catalog items, browse and filter products in Kanban and List views, est
    * Under **Group By**, choose **Product Type** to separate items into distinct columns:
 
       ![Products catalog grouped by Product Type](../media/069.png)
+
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
 
 ---
 
@@ -175,12 +180,16 @@ Unlike categories (where every item has exactly one category), tags allow multip
 
 ---
 
-## Edge Cases & Recovery Steps
+## 5. Edge Cases & Recovery Steps
 
 * **Preventing Circular Hierarchy Loops**: CURQ prevents setting a category as its own parent or choosing a descendant sub-category as a parent. If an error occurs, verify the category hierarchy tree.
 * **Protected System Categories**: Top-level root categories *(such as `All` and `Saleable`)* are protected from deletion to safeguard system costing integrity.
 * **Variant Already Tagged Through Master Template**: If an individual variant is unavailable for selection under the **Product Variants** tab on a tag, check the **Product Templates** tab. If the parent product template is already linked, all of its variants already inherit the tag automatically.
 * **Filtering Archived Products**: To view discontinued or archived items, click into the search bar, open **Filters**, and check **Archived**.
+
+---
+
+> **Tip (Advised Settings):** Maintain a hierarchical category structure (Category / Subcategory) aligned with the balance sheet inventory valuation accounts.
 
 ---
 

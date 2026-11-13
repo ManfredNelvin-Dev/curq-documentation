@@ -4,7 +4,9 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-## Invoicing Policies Comparison
+## 1. Invoicing Policies Comparison
+
+> **Warning - Cross-System Impact (Invoicing Policy):** Setting physical storable products to **Ordered quantities** allows invoicing customers before warehouse dispatch. If inventory is delayed, out-of-stock, or backordered, this creates premature customer disputes and premature VAT recognition in CURQ Accounting. For all physical inventory, **Delivered quantities** is strongly advised to prevent premature billing liabilities.
 
 | Attribute | Ordered Quantities | Delivered Quantities |
 | :--- | :--- | :--- |
@@ -16,7 +18,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-## Delivery Provider Configuration Fields
+## 2. Delivery Provider Configuration Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -31,7 +33,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-## Sales Margin Calculations
+## 3. Sales Margin Calculations
 
 * **Line Margin**: Gross profit calculated as unit selling price minus unit cost, multiplied by the ordered quantity.
 * **Line Margin (%)**: The gross profit percentage of the line's untaxed subtotal.
@@ -41,7 +43,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-## System Validation Errors & Recovery Lookup
+## 4. System Validation Errors & Recovery Lookup
 
 | Error Message | Probable Cause | Corrective Action |
 | :--- | :--- | :--- |
@@ -53,7 +55,7 @@ This document provides factual specifications for invoicing policies, delivery p
 
 ---
 
-## Operational Edge Cases and System Rules Reference
+## 5. Operational Edge Cases and System Rules Reference
 
 | Operational Scenario / FAQ Query | System Behavior | Resolution / Best Practice |
 | :--- | :--- | :--- |
@@ -68,5 +70,4 @@ This document provides factual specifications for invoicing policies, delivery p
 * [Invoice Sales Orders](../task-guides/04-invoice-sales-orders.md)
 * [Sales Reporting and Analytics](../task-guides/13-sales-reporting-and-analytics.md)
 * [Understanding Invoicing and Fulfillment](../core-concepts/02-understanding-invoicing-and-fulfillment.md)
-
-
+* [Quotation and Sales Order Field Definitions](01-quotation-and-sales-order-field-definitions.md)

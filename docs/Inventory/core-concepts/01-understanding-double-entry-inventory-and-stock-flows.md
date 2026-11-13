@@ -12,31 +12,23 @@ Similar to financial accounting where every debit requires a corresponding credi
 
 $$\text{Source Location} \xrightarrow{\text{Stock Move}} \text{Destination Location}$$
 
-```mermaid
+```{mermaid}
 flowchart LR
-    subgraph External Entities
-        V[Vendor Locations<br/>Partner / Vendors]
-        C[Customer Locations<br/>Partner / Customers]
-    end
+    Vend(["`**Vendor Locations**
+    Partner / Vendors`"]) -->|"Inbound Receipt"| Input["`**WH / Input**
+    Receipts dock`"]
+    Input -->|"Internal Transfer"| Stock["`**WH / Stock**
+    Storage shelves`"]
+    Stock -->|"Picking / Packing"| Output["`**WH / Output**
+    Packing & staging`"]
+    Output -->|"Delivery Order"| Cust(["`**Customer Locations**
+    Partner / Customers`"])
 
-    subgraph Physical Warehouse Locations
-        Input[WH / Input<br/>Receipts Dock]
-        Stock[WH / Stock<br/>Internal Storage Shelves]
-        Output[WH / Output<br/>Packing & Staging]
-    end
-
-    subgraph Virtual Adjustments
-        InvLoss[Virtual / Inventory Loss<br/>Physical Count Adjustments]
-        Scrap[Virtual / Scrap<br/>Damaged Products]
-    end
-
-    V -->|Inbound Receipt| Input
-    Input -->|Internal Transfer| Stock
-    Stock -->|Picking / Packing| Output
-    Output -->|Delivery Order| C
-    V -->|Dropship Direct| C
-    Stock -->|Inventory Discrepancy| InvLoss
-    Stock -->|Damaged Stock| Scrap
+    Vend -.->|"Dropship Direct"| Cust
+    Stock -.->|"Inventory Loss"| InvLoss(["`**Virtual / Inventory Loss**
+    Count adjustments`"])
+    Stock -.->|"Damaged Stock"| Scrap(["`**Virtual / Scrap**
+    Scrap write-offs`"])
 ```
 
 ### 1.1 Location Types and Boundaries
@@ -51,12 +43,18 @@ flowchart LR
 
 Every warehouse movement progresses through structured execution states to coordinate physical dock activities with digital inventory ledgers:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    Draft["Draft<br/>Procurement / Sales Generation"] -->|"Attempt Reservation"| Waiting["Waiting<br/>Awaiting Inventory"]
-    Waiting -->|"Stock Available"| Ready["Ready<br/>Reserved in Storage"]
-    Ready -->|"Pick & Scan Confirmed"| Done["Done<br/>Validated & Committed"]
-    Ready -.->|"Order Voided"| Cancelled["Cancelled"]
+    Draft(["`**1. Draft**
+    Order created`"]) -->|"Attempt Reservation"| Waiting["`**2. Waiting**
+    Awaiting inventory`"]
+    Waiting -->|"Stock Available"| Ready["`**3. Ready**
+    Reserved in WH/Stock`"]
+    Ready -->|"Validate"| Done(["`**4. Done**
+    Committed & valued`"])
+
+    Ready -.->|"Cancel"| Cancelled(["`**Cancelled**
+    Order voided`"])
 ```
 
 1. **Draft**: Initial transfer record generated manually, triggered by an approved Purchase Order, or created by a confirmed Sales Order.

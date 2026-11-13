@@ -58,3 +58,4 @@ Defines the invitation status and communication coordinates for each invited par
 * [Create Your First Meeting](../getting-started/01-create-your-first-meeting.md)
 * [Plan a Recurring Meeting](../getting-started/02-plan-a-recurring-meeting.md)
 * [Calendar Views and Navigation Controls](./02-calendar-views-and-navigation-controls.md)
+* [Calendar Settings and Integrations](03-calendar-settings-and-integrations.md)

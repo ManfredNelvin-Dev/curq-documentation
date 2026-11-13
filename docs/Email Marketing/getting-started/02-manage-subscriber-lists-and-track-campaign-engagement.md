@@ -57,7 +57,7 @@ Maintain list hygiene by managing subscriber memberships:
 
    ![Removing a mailing list assignment line on the contact form](../media/021.png)
 
-> For complete subscriber profile attributes and opt-out flags, see [**Mailing Contact Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-contact-fields).
+> For complete subscriber profile attributes and opt-out flags, see [**Mailing Contact Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#4-mailing-contact-fields).
 
 ---
 
@@ -85,7 +85,7 @@ Track live engagement directly from the mailing list and campaign headers:
    * **Mailings**: Total number of email broadcasts associated with the campaign.
    * **Clicks**: Total tracked link clickthroughs across all campaign mailings.
 
-> For KPI calculation rules and delivery rate formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#analytical-smart-button-metrics).
+> For KPI calculation rules and delivery rate formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#5-analytical-smart-button-metrics).
 
 ---
 

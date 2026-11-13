@@ -8,7 +8,7 @@ This reference document details the view modes, calendar workspace controls, nav
 
 Defines the core perspectives available in the view switcher:
 
-| View Mode | Description |
+| Field Name / View Mode | Description |
 | :--- | :--- |
 | **Day** | Focuses on a single 24-hour day broken down into 30-minute and 1-hour increments. Essential for precise hourly scheduling and interactive drag-selection of availability ranges. |
 | **Week** | Default operational view presenting a 7-day horizontal grid. Shows overlapping team bookings, morning-to-evening time slots, and all-day event banners across the top. |
@@ -21,7 +21,7 @@ Defines the core perspectives available in the view switcher:
 
 Defines controls used to navigate across temporal horizons:
 
-| Control Element | Operational Function |
+| Field Name / Control Element | Operational Function |
 | :--- | :--- |
 | **Previous Arrow (<)** | Moves the active calendar view backward by one period (one day, week, month, or year). |
 | **Next Arrow (>)** | Advances the active calendar view forward by one period. |
@@ -35,7 +35,7 @@ Defines controls used to navigate across temporal horizons:
 
 Defines controls within the right-hand collapsible panel:
 
-| Sidebar Element | Operational Function |
+| Field Name / Sidebar Element | Operational Function |
 | :--- | :--- |
 | **Attendees Checkboxes** | Toggles personal and colleague calendar overlays on and off. Checked users have their scheduled events color-coded on the shared workspace. |
 | **+ Add Attendee** | Search and add internal colleague calendars to your persistent attendee selector list. |
@@ -47,3 +47,4 @@ Defines controls within the right-hand collapsible panel:
 * [Navigate the Calendar](../task-guides/01-navigate-the-calendar.md)
 * [Coordinate Team Availability](../task-guides/03-coordinate-team-availability.md)
 * [Meeting Form Field Definitions](./01-meeting-form-field-definitions.md)
+* [Calendar Settings and Integrations](./03-calendar-settings-and-integrations.md)

@@ -1894,3 +1894,344 @@ pre.mermaid svg {
         width: 100% !important;
     }
 }
+
+/* -------------------------------------------------------------
+ * Document Header Metadata Styles: Badges, Pills, Submeta, Table
+ * ------------------------------------------------------------- */
+.doc-badge-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.doc-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 12px;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    font-family: inherit;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.doc-pill-version {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.doc-pill-feature {
+    background-color: #f8fafc;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.doc-small-submeta {
+    font-size: 0.84rem;
+    color: #64748b;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-top: 4px;
+    margin-bottom: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+    padding: 4px 12px;
+    border-radius: 6px;
+    border: 1px solid #f1f5f9;
+}
+
+.doc-small-submeta .separator {
+    color: #cbd5e1;
+    font-weight: bold;
+}
+
+.doc-metadata-table {
+    margin-top: 8px;
+    margin-bottom: 24px !important;
+    width: auto !important;
+    min-width: 380px;
+    max-width: 520px;
+}
+
+.doc-metadata-table th,
+.doc-metadata-table td {
+    padding: 6px 14px !important;
+    font-size: 0.85rem !important;
+}
+
+
+/* -------------------------------------------------------------
+ * Small Pill Metadata Styles
+ * ------------------------------------------------------------- */
+.small-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #475569;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    padding: 2px 10px;
+    margin: 4px 0 16px 0;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.small-pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #0284c7;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.mini-pill-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 4px 0 16px 0;
+}
+
+.mini-pill {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #334155;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 9999px;
+    padding: 2px 8px;
+    line-height: 1.3;
+}
+
+.mini-pill.version {
+    background-color: #eff6ff;
+    color: #1e40af;
+    border-color: #dbeafe;
+}
+
+
+/* -------------------------------------------------------------
+ * Colorful & Bold Pill Styles
+ * ------------------------------------------------------------- */
+
+/* Style 1: Electric Blue Vibrant Pill */
+.small-pill.pill-blue {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0369a1;
+    background: #e0f2fe;
+    border: 1.5px solid #38bdf8;
+    border-radius: 9999px;
+    padding: 3px 12px;
+    margin: 4px 0 16px 0;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(2, 132, 199, 0.15);
+}
+
+.small-pill.pill-blue .pill-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0284c7;
+    box-shadow: 0 0 5px #0284c7;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.small-pill.pill-blue strong {
+    color: #0c4a6e;
+    font-weight: 800;
+}
+
+/* Style 2: Dual-Tone Badge Pill (Vibrant Badge + Bold Text) */
+.small-pill.pill-dual {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f172a;
+    background: #f8fafc;
+    border: 1.5px solid #0284c7;
+    border-radius: 9999px;
+    padding: 2px 12px 2px 3px;
+    margin: 4px 0 16px 0;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.small-pill.pill-dual .tag {
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 2px 9px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: inline-block;
+}
+
+.small-pill.pill-dual strong {
+    color: #1e293b;
+    font-weight: 800;
+}
+
+/* Style 3: Deep Navy Brand with Gold & Cyan Accents */
+.small-pill.pill-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #16345f;
+    border: 1.5px solid #254b82;
+    border-radius: 9999px;
+    padding: 3px 14px;
+    margin: 4px 0 16px 0;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 6px rgba(22, 52, 95, 0.25);
+}
+
+.small-pill.pill-brand .label {
+    color: #93c5fd;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.5px;
+}
+
+.small-pill.pill-brand .val-version {
+    color: #fde047;
+    font-weight: 800;
+}
+
+.small-pill.pill-brand .val-feature {
+    color: #38bdf8;
+    font-weight: 800;
+}
+
+
+/* -------------------------------------------------------------
+ * CURQ Theme Yellow & Gold Pill Styles
+ * ------------------------------------------------------------- */
+
+/* Style 1: CURQ Theme Warm Gold Pill */
+.small-pill.pill-yellow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #16345f;
+    background: #fff6d6;
+    border: 1.5px solid #ffbf3d;
+    border-radius: 9999px;
+    padding: 3px 12px;
+    margin: 4px 0 16px 0;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    box-shadow: 0 1px 3px rgba(255, 191, 61, 0.25);
+}
+
+.small-pill.pill-yellow .pill-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f59e0b;
+    box-shadow: 0 0 4px #f59e0b;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.small-pill.pill-yellow strong {
+    color: #0f2442;
+    font-weight: 800;
+}
+
+/* Style 2: Dual-Tone Gold Badge Pill */
+.small-pill.pill-yellow-dual {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #16345f;
+    background: #fffdf2;
+    border: 1.5px solid #ffbf3d;
+    border-radius: 9999px;
+    padding: 2px 12px 2px 3px;
+    margin: 4px 0 16px 0;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(255, 191, 61, 0.2);
+}
+
+.small-pill.pill-yellow-dual .tag {
+    background: #ffbf3d;
+    color: #16345f;
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 2px 9px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    display: inline-block;
+}
+
+.small-pill.pill-yellow-dual strong {
+    color: #16345f;
+    font-weight: 800;
+}
+
+/* Style 3: Crisp Bright Amber Pill */
+.small-pill.pill-amber {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #16345f;
+    background: #fef9c3;
+    border: 1.5px solid #facc15;
+    border-radius: 9999px;
+    padding: 3px 12px;
+    margin: 4px 0 16px 0;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    box-shadow: 0 1px 3px rgba(234, 179, 8, 0.2);
+}
+
+.small-pill.pill-amber .pill-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #eab308;
+    box-shadow: 0 0 4px #eab308;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.small-pill.pill-amber strong {
+    color: #16345f;
+    font-weight: 800;
+}

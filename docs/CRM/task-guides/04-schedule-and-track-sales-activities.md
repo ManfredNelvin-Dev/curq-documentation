@@ -2,6 +2,10 @@
 
 Schedule follow-up calls, meetings, and tasks from deal records, and manage commercial follow-ups using the centralized My Activities workspace.
 
+> **Prerequisites**
+> * Active user account with **CRM / User** rights.
+> * Active enterprise user profiles configured in the corporate directory.
+
 ---
 
 ## 1. Activity Scheduling, Execution, and Follow-Up
@@ -25,7 +29,7 @@ Schedule follow-up calls, meetings, and tasks from deal records, and manage comm
    * Click **Open Calendar** to check availability and book a meeting directly on the calendar grid, or click **Schedule** to log the task.
 5. Click **Schedule** (or **Schedule & Mark as Done** if completing it immediately).
 
-> **Note:** For default delay parameters, icon behaviors, and auto-chaining triggers, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
+> **Note:** For default delay parameters, icon behaviors, and auto-chaining triggers, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#1-activity-type-specifications).
 
 ---
 
@@ -129,7 +133,7 @@ At the top right of **My Activities**, switch between visual execution layouts:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Rescheduling a Missed Call**: Open the deal, locate the overdue activity in the Chatter pane, click the small pencil icon, update the **Due Date**, and click **Save**.
 * **Activity Scheduled by Mistake**: Click the trash can icon next to the scheduled activity line in the Chatter to cancel it without recording a completed entry.
@@ -139,3 +143,5 @@ At the top right of **My Activities**, switch between visual execution layouts:
 ## Related Documentation
 * [Activity Types, Recurring Plans, and Lost Reasons](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)
 * [Configure Activity Types and Automated Activity Plans](./09-configure-activity-types-and-plans.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
+* [Default Deal Tags, Lost Reasons, and Activity Specifications](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md)

@@ -35,7 +35,7 @@ flowchart TD
 
 ---
 
-## 3. Related Documentation
+## Related Documentation
 
 * [**Create Your First Meeting**](../getting-started/01-create-your-first-meeting.md)
 * [**Plan a Recurring Meeting**](../getting-started/02-plan-a-recurring-meeting.md)

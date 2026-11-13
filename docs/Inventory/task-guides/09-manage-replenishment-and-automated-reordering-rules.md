@@ -10,7 +10,9 @@ This operational guide provides procedures for inventory controllers, procuremen
 
 ---
 
-## 1. Access the Replenishment Board and Interpret the Safety Stock Replenishment Curve
+## 1. Configure and Filter the Replenishment Board
+
+### 1.1 Access the Replenishment Board and Interpret the Safety Stock Replenishment Curve
 
 1. In the top navigation bar, click the **Operations** menu.
 2. Under the **Procurement** section, click **Replenishment**:
@@ -27,11 +29,9 @@ This operational guide provides procedures for inventory controllers, procuremen
 4. **Empty State Guidance**:
    * When all products remain above their minimum safety thresholds within the current forecast window, CURQ displays: *"You are good, no replenishment to perform! You'll find here smart replenishment propositions based on inventory forecasts. Choose the quantity to buy or manufacture and launch orders in a click. To save time in the future, set the rules as 'automated'."*
 
-> **Tip:** For more details about the parameters and thresholds on the safety stock curve, see [**Safety Stock Curve Conceptual Parameters Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#11-safety-stock-curve-conceptual-parameters-data-dictionary).
-
 ---
 
-## 2. Create Manual Replenishment Rules and Filter Eligible Storable Products
+### 1.2 Create Manual Replenishment Rules and Filter Eligible Storable Products
 
 1. To define a new reordering rule manually from the board, click the **+ New** action button in the upper-left header.
 2. In the newly generated line, click the **Product** dropdown and select **Search More...** to open the product selection modal:
@@ -44,11 +44,11 @@ This operational guide provides procedures for inventory controllers, procuremen
    * **Procurement Routing**: Only items configured with active procurement routes *(such as Buy or Manufacture)* qualify for replenishment rule assignment.
 4. Select the target product *(e.g., `Fairphone 5`)* to populate the line and configure its minimum and maximum stock limits.
 
-> **Tip:** For more details about the fields and controls on the product search dialog, see [**Search: Product Lookup Modal Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#2-search-product-lookup-modal-data-dictionary).
+> For more details about the fields and controls on the product search dialog, see [**Search: Product Lookup Modal Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#2-search-product-lookup-modal-data-dictionary).
 
 ---
 
-## 3. Filter Planning Horizons and Active Replenishment Rules
+### 1.3 Filter Planning Horizons and Active Replenishment Rules
 
 1. By default, CURQ filters the board using the **Not Snoozed** tag in the search bar, ensuring only active replenishment demands are displayed.
 2. Click the navigation drawer toggle icon in the upper-left corner of the register to reveal the horizon filter panel:
@@ -60,11 +60,13 @@ This operational guide provides procedures for inventory controllers, procuremen
    * **Trigger Filters**: Filter propositions by trigger mechanism *(such as Manual review or Automated execution)*.
    * **Category Filters**: Narrow replenishment propositions by product categories to streamline buyer assignments.
 
-> **Tip:** For more details about the header and horizon filter controls, see [**Replenishment Board Header and Navigation Controls Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#1-replenishment-board-header-and-navigation-controls-data-dictionary).
+> For more details about the header and horizon filter controls, see [**Replenishment Board Header and Navigation Controls Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#1-replenishment-board-header-and-navigation-controls-data-dictionary).
 
 ---
 
-## 4. Review Stock Forecasts, Reordering Thresholds, and Row Actions
+## 2. Execute and Troubleshoot Replenishment Orders
+
+### 2.1 Review Stock Forecasts, Reordering Thresholds, and Row Actions
 
 When inventory levels or customer demand trigger a reordering requirement, CURQ populates the replenishment board with actionable order propositions:
 
@@ -83,11 +85,11 @@ When inventory levels or customer demand trigger a reordering requirement, CURQ 
    * **Automate (Cycle Icon)**: Converts the rule from manual review to automated background scheduler execution. When automated, CURQ automatically places orders whenever forecasted stock drops below minimum limits without requiring manual buyer confirmation.
    * **Snooze (Bell Icon)**: Temporarily suppresses the proposition until a specified date, hiding it from the active board until the snooze period expires.
 
-> **Tip:** For more details about the replenishment columns and row actions, see [**Replenishment Table Columns Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#3-replenishment-table-columns-data-dictionary) and [**Row-Level Action Controls Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#4-row-level-action-controls-data-dictionary).
+> For more details about the replenishment columns and row actions, see [**Replenishment Table Columns Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#3-replenishment-table-columns-data-dictionary) and [**Row-Level Action Controls Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#4-row-level-action-controls-data-dictionary).
 
 ---
 
-## 5. Execute Batch Replenishment Orders and Reorder to Max
+### 2.2 Execute Batch Replenishment Orders and Reorder to Max
 
 Procurement teams managing multi-item replenishments can process orders in bulk using the multi-select action bar:
 
@@ -106,11 +108,9 @@ Procurement teams managing multi-item replenishments can process orders in bulk 
    * Click **Snooze** to defer replenishment across all selected items simultaneously.
    * Click **Actions** to export selected replenishment lines to a spreadsheet for external supplier review or vendor negotiation.
 
-> **Tip:** For more details about the batch replenishment bar and dropdown controls, see [**Batch Replenishment Selection Bar and Actions Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#5-batch-replenishment-selection-bar-and-actions-data-dictionary).
-
 ---
 
-## 6. Troubleshoot Procurement Warnings and Vendor Minimum Quantities
+### 2.3 Troubleshoot Procurement Warnings and Vendor Minimum Quantities
 
 When triggering replenishment using **Order** or **Replenish > Order**, CURQ cross-references the proposed order volume against the product's configured vendor pricelist. If validation criteria fail, CURQ halts order generation and displays an operational warning dialog:
 
@@ -123,7 +123,7 @@ When triggering replenishment using **Order** or **Replenish > Order**, CURQ cro
      * **Minimum Quantity Not Reached**: The primary vendor requires a minimum order volume *(e.g., `100.00 Units`)* that exceeds the current replenishment proposal *(e.g., `50.00 Units`)*.
      * **Dates Not Valid**: The vendor agreement carries an expired price validity timeframe.
 
-> **Tip:** For more details about procurement warning dialog controls, see [**Procurement Warning Dialog Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#6-procurement-warning-dialog-data-dictionary).
+> For more details about procurement warning dialog controls, see [**Procurement Warning Dialog Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#5-procurement-warning-dialog-data-dictionary).
 
 2. **Resolve Vendor Constraints via Product Form**:
    * Click the dark blue **Edit Product** button in the warning modal to open the product configuration record directly:
@@ -151,11 +151,13 @@ When triggering replenishment using **Order** or **Replenish > Order**, CURQ cro
    * Click the **Replenishment** link in the breadcrumb trail *(or navigate to **Operations > Replenishment**)* to return to the active proposition table.
    * Click **Order** on the row or select the line and choose **Replenish > Order**. Because `50.00 >= 0.00`, CURQ successfully validates the supplier contract and generates a draft Purchase Order in CURQ Purchase.
 
-> **Tip:** For more details about vendor pricelists and purchase tab controls, see [**Product Purchase Tab and Vendor Pricelist Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#7-product-purchase-tab-and-vendor-pricelist-data-dictionary).
+> For more details about vendor pricelists and purchase tab controls, see [**Product Purchase Tab and Vendor Pricelist Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#6-product-purchase-tab-and-vendor-pricelist-data-dictionary).
 
 ---
 
-## 7. Validate Generated Replenishment Orders in CURQ Purchase
+## 3. Validate Orders, Forecast Reports, and Scheduling Modes
+
+### 3.1 Validate Generated Replenishment Orders in CURQ Purchase
 
 Upon clicking **Order**, CURQ executes autonomous procurement generation and alerts operators through real-time notifications:
 
@@ -166,8 +168,6 @@ Upon clicking **Order**, CURQ executes autonomous procurement generation and ale
    * **Forecast Adjustment**: The **Forecast** metric immediately updates from `0.00` to `50.00` with an active facility icon, registering incoming purchase units in the inventory projection ledger.
    * **Demand Resolution**: The **To Order** metric drops from `50.00` to `0.00`.
    * **Action Control Disablement**: The `Order` and `Automate` buttons are removed from the row, leaving only `Snooze` since zero unfulfilled replenishment deficit remains.
-
-> **Tip:** For more details about replenishment toast notifications and post-execution states, see [**Replenishment Toast Notification and Post-Execution Board State Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#8-replenishment-toast-notification-and-post-execution-board-state-data-dictionary).
 
 2. Click the blue **P00132** link in the toast notification to inspect the generated procurement document in CURQ Purchase:
 
@@ -184,11 +184,11 @@ Upon clicking **Order**, CURQ executes autonomous procurement generation and ale
    * Click **Send by Email** to transmit the RFQ to the supplier.
    * Click **Confirm Order** to finalize the purchase agreement, converting the document to an active Purchase Order and creating the corresponding inbound receipt transfer (`WH/IN`) in CURQ Inventory.
 
-> **Tip:** For more details about generated purchase quotations and line items, see [**Generated Request for Quotation (RFQ) Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#9-generated-request-for-quotation-rfq-data-dictionary).
+> For more details about generated purchase quotations and line items, see [**Generated Request for Quotation (RFQ) Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#7-generated-request-for-quotation-rfq-data-dictionary).
 
 ---
 
-## 8. Audit Validated Receipts and the Interactive Forecasted Report
+### 3.2 Audit Validated Receipts and the Interactive Forecasted Report
 
 Following purchase order confirmation and receipt validation at the warehouse dock, CURQ reconciles physical inventory balances and updates forward-looking planning charts:
 
@@ -218,11 +218,9 @@ Following purchase order confirmation and receipt validation at the warehouse do
    * The ledger below details the movements contributing to **Forecasted Inventory** and **Forecasted with Pending**.
    * Operators can click **Update Quantity** or **Replenish** directly from this report to adjust stock counts or schedule further intake.
 
-> **Tip:** For more details about the interactive stock forecast report and metric controls, see [**Forecasted Report Header and Metric Controls Data Dictionary**](../settings-and-fields/04-replenishment-and-reordering-rules-field-definitions.md#10-forecasted-report-header-and-metric-controls-data-dictionary).
-
 ---
 
-## 9. Manual Review vs Automated Procurement Scheduler
+### 3.3 Manual Review vs Automated Procurement Scheduler
 
 CURQ provides two complementary modes for managing inventory replenishment:
 

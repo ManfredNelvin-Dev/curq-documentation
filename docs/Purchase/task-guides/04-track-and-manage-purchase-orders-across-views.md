@@ -2,6 +2,10 @@
 
 This guide covers how to navigate the Purchase Orders workspace, browse orders across List, Kanban, Calendar, Pivot, Graph, and Activity views, apply filters and groupings, and execute batch operations in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Purchase / User** rights.
+> * Active vendor contacts in **Contacts** and defined catalog products.
+
 ---
 
 ## 1. Navigate and Analyze Purchase Orders Across Views
@@ -14,7 +18,7 @@ This guide covers how to navigate the Purchase Orders workspace, browse orders a
 
 ![Purchase Orders Default List View and Billing Status](../media/018.png)
 
-> For definitions of all columns and billing statuses in the list view, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+> For definitions of all columns and billing statuses in the list view, see [**Purchase Orders List View Columns**](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md#5-purchase-orders-list-view-columns).
 
 ---
 
@@ -92,4 +96,4 @@ Use the search bar at the top of the workspace to filter, group, and slice procu
 * [Create and Manage Requests for Quotation](./01-create-and-manage-requests-for-quotation.md)
 * [Confirm Purchase Orders and Manage Approvals](./03-confirm-purchase-orders-and-manage-approvals.md)
 * [Receive Products and Manage Backorders](./05-receive-products-and-manage-backorders.md)
-* [RFQ and Purchase Order Field Definitions](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md)
+* [RFQ and Purchase Order Field Definitions](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md)

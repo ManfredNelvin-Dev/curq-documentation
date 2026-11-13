@@ -4,7 +4,7 @@ This document explores the access control architecture, multi-tiered approval wo
 
 ---
 
-## The Governance Paradigm: Segregation of Duties
+## 1. The Governance Paradigm: Segregation of Duties
 
 Leave management requires balancing departmental operational needs with corporate human resources oversight:
 
@@ -14,27 +14,25 @@ Leave management requires balancing departmental operational needs with corporat
 CURQ enforces this segregation of duties through modular approval workflows and security access tiers (**Time Off User**, **Time Off Officer**, and **Administrator**).
 
 ```{mermaid}
-flowchart TD
-    subgraph Single["Single Approval (1-Tier)"]
-        direction TB
-        S1["Employee Submits Request"] --> S2["Direct Manager Review"]
-        S2 -->|Approve| S3(["Approved & Balance Deducted"])
-        S2 -->|Refuse| S4(["Refused & Feedback Logged"])
-    end
+flowchart LR
+    S(["`**Leave Request**
+    Submitted by employee`"]) --> M["`**1st Review**
+    Team Manager`"]
 
-    subgraph Dual["Dual Validation (2-Tier)"]
-        direction TB
-        D1["Employee Submits Request"] --> D2["1st Review: Team Manager"]
-        D2 -->|Approve| D3["2nd Review: HR Officer"]
-        D2 -->|Refuse| D5(["Refused & Feedback Logged"])
-        D3 -->|Validate| D4(["Approved & Balance Deducted"])
-        D3 -->|Refuse| D5
-    end
+    M -->|"Single Approval"| A(["`**Approved**
+    Balance deducted`"])
+    M -->|"Dual Validation"| HR["`**2nd Review**
+    HR Officer`"]
+    M -->|"Refuse"| R(["`**Refused**
+    Feedback logged`"])
+
+    HR -->|"Validate"| A
+    HR -->|"Refuse"| R
 ```
 
 ---
 
-## The Four Leave Approval Workflows
+## 2. The Four Leave Approval Workflows
 
 Each leave category can be configured with one of four approval workflows:
 
@@ -47,29 +45,29 @@ Each leave category can be configured with one of four approval workflows:
 
 ---
 
-## Allocation Distribution Channels
+## 3. Allocation Distribution Channels
 
 Granting leave entitlements across hundreds of employees manually is inefficient and error-prone. CURQ provides four distinct distribution modes within the **Multiple Requests** engine:
 
-### 1. By Individual Employee
+### 3.1 By Individual Employee
 * **Scope**: Targeted single-employee assignments.
 * **Application**: Tailored compensatory days, special performance bonuses, or adjusted contractual allowances.
 
-### 2. By Department
+### 3.2 By Department
 * **Scope**: Evaluates department hierarchy and assigns allocations to all active members of the selected unit.
 * **Application**: Department-wide floating holidays, regional office closures, or department-specific service milestones.
 
-### 3. By Company
+### 3.3 By Company
 * **Scope**: Grants uniform leave allocations across all employees assigned to a specific legal entity in a multi-company instance.
 * **Application**: Annual company-wide vacation renewals, statutory public leave mandates, or regional corporate allowances.
 
-### 4. By Employee Tag
+### 3.4 By Employee Tag
 * **Scope**: Dynamic group assignment based on analytical employee tags (e.g., `Executive`, `Shift Worker`, `Intern`, `Night Shift`).
 * **Application**: Shift-differential compensatory allowances, union-negotiated benefits, or executive perk days.
 
 ---
 
-## Calendar Constraint Engines: Working Hours, Public Holidays, and Mandatory Days
+## 4. Calendar Constraint Engines: Working Hours, Public Holidays, and Mandatory Days
 
 Accurate absence calculations require dynamic evaluation against the enterprise calendar framework:
 
@@ -80,15 +78,15 @@ flowchart LR
     C --> D(["**4. Net Leave Duration**<br>Final days deducted"])
 ```
 
-### 1. Working Hours Integration
+### 4.1 Working Hours Integration
 CURQ never deducts standard non-working hours. If an employee on a Monday–Friday (40-hour) schedule requests leave from Friday to Monday, CURQ calculates exactly 2 working days (16 hours), ignoring Saturday and Sunday.
 
-### 2. Public Holiday Deductions
+### 4.2 Public Holiday Deductions
 When a public holiday (e.g., New Year's Day) falls within a requested leave window, the **Public Holiday Included** toggle dictates behavior:
 * **Toggle Disabled (Default)**: The public holiday is recognized as a non-working day; no vacation entitlement is deducted for that date.
 * **Toggle Enabled**: The holiday is deducted from the employee's personal leave allowance, treating the date as a standard absence.
 
-### 3. Mandatory Days Lockout
+### 4.3 Mandatory Days Lockout
 Organizations can designate mandatory attendance dates (e.g., annual general meetings, retail peak season, fiscal year-end closing):
 * When a mandatory day is defined for a company or department, CURQ displays a colored banner on the calendar.
 * Employee self-service time-off requests spanning mandatory days are automatically blocked, ensuring essential workforce availability during critical business periods.
@@ -100,3 +98,4 @@ Organizations can designate mandatory attendance dates (e.g., annual general mee
 * [Review, Approve, and Manage Team Time Off](../task-guides/04-review-approve-and-manage-team-time-off.md)
 * [Allocate Time Off to Multiple Employees](../task-guides/06-allocate-time-off-to-multiple-employees.md)
 * [Configure Public Holidays and Mandatory Days](../task-guides/09-configure-public-holidays-and-mandatory-days.md)
+* [Holidays, Mandatory Days, and Activity Specifications](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md)

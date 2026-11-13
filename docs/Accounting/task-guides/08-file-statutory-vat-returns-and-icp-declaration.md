@@ -9,7 +9,7 @@ Generate periodic Dutch VAT returns (*Omzetbelasting / BTW-aangifte*), audit sta
 >   ![Tax Definition tab showing VAT distribution accounts and statutory tax grids](../media/074.png)
 >   ![Tax Advanced Options tab showing tax labels, country, and presentation settings](../media/075.png)
 >
->   > For complete tax computation algorithms and tax grid mapping specifications, see [**Tax Configuration Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#tax-configuration-field-definitions).
+>   > For complete tax computation algorithms and tax grid mapping specifications, see [**Tax Configuration Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#2-tax-configuration-field-definitions).
 > * Confirm that foreign EU business customers have verified VAT identification numbers in [**Contacts**](../../Contacts/task-guides/01-create-and-manage-contacts.md).
 > * Verify your user account has **Billing Administrator** or **Accountant** access rights in CURQ.
 
@@ -120,7 +120,7 @@ Companies delivering goods or providing B2B services to clients in other EU memb
 
 ---
 
-### 1.4 Post, Export, and Finalize the Tax Return
+### 3.1 Post, Export, and Finalize the Tax Return
 
 1. In the top action bar, click the **Post** button.
 

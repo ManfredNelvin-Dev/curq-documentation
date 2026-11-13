@@ -8,7 +8,9 @@ This task guide provides operational procedures for warehouse teams to monitor w
 
 ---
 
-## 1. Access and Navigate the Inventory Dashboard
+## 1. Navigate the Inventory Overview Dashboard
+
+### 1.1 Access and Navigate the Inventory Dashboard
 
 1. From the top application switcher, click **Inventory**.
 2. CURQ opens the primary **Inventory Overview** dashboard:
@@ -20,12 +22,9 @@ This task guide provides operational procedures for warehouse teams to monitor w
    * **Search Bar**: Quickly isolate operation cards or warehouse locations by typing search keywords.
    * **Pagination Counter**: Displays the active range of visible operation cards *(e.g., `1-3 / 3`)*.
 
-
-> **Tip:** For more details about navigation menus, search filters, and dashboard controls, see [**Navigation and Control Bar Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#1-navigation-and-control-bar-data-dictionary).
-
 ---
 
-## 2. Triage Warehouse Operational Queues
+### 1.2 Triage Warehouse Operational Queues
 
 Operation type cards display real-time counters representing physical warehouse workload:
 
@@ -39,11 +38,9 @@ Operation type cards display real-time counters representing physical warehouse 
 3. **Dropship Fulfillment**:
    * Click **Open** to monitor partner dropship orders where suppliers deliver directly to clients.
 
-> **Tip:** For more details about operation cards, state badges, and pending counters, see [**Operation Type Card Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#2-operation-type-card-data-dictionary).
-
 ---
 
-## 3. Use Card Context Menus for High-Velocity Execution
+### 1.3 Use Card Context Menus for High-Velocity Execution
 
 Click the vertical ellipsis *(three dots icon)* in the upper-right corner of any operation card to reveal advanced shortcuts:
 
@@ -58,8 +55,6 @@ Click the vertical ellipsis *(three dots icon)* in the upper-right corner of any
    * Select a color swatch from the 12-color palette to highlight critical warehouse cards.
    * Click **Add to Favorites** to pin high-priority operation types to the top of your dashboard.
    * Click **Configuration** to adjust sequence prefixes, default source/destination locations, and barcode scanner behaviors.
-
-> **Tip:** For more details about view filters, quick actions, and palette options, see [**Card Context Flyout Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#3-card-context-flyout-data-dictionary).
 
 ---
 

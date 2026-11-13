@@ -18,7 +18,9 @@ flowchart LR
 
 ---
 
-## 1. Hands-On Scenario
+## 1. Hands-On Exercise: Record and Submit an Expense
+
+### 1.1 Review the Hands-On Scenario
 
 In this walkthrough, you will record an out-of-pocket client hospitality dinner:
 * **Description**: `Client Lunch`
@@ -29,7 +31,7 @@ In this walkthrough, you will record an out-of-pocket client hospitality dinner:
 
 ---
 
-## 2. Log Your Expense Record
+### 1.2 Log the Expense Record
 
 1. Open the **Expenses** application from your main dashboard.
 2. In the top navigation bar, click **My Expenses → My Expenses**.
@@ -45,11 +47,11 @@ In this walkthrough, you will record an out-of-pocket client hospitality dinner:
 
 5. Click the cloud icon or navigate to the next step to save your record.
 
-> **Tip:** For complete field definitions of the expense form, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
+> For complete field definitions of the expense form, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
 
 ---
 
-## 3. Attach Proof of Purchase
+### 1.3 Attach Proof of Purchase
 
 Corporate audit compliance requires legible receipts for all claimed expenditures:
 
@@ -61,11 +63,11 @@ Corporate audit compliance requires legible receipts for all claimed expenditure
 
 ![CURQ Expense form view showing the uploaded receipt in the Files sidebar and the paperclip counter displaying 1](../media/010.png)
 
-> **Note:** For automated intake methods such as receipt OCR scanning, drag-and-drop ingestion, and email alias forwarding, see [**Log Expenses and Attach Receipts**](../task-guides/02-log-expenses-and-attach-receipts.md#4-alternative-intake-channels-ocr-upload-drag--drop-and-inbound-email).
+> **Note:** For automated intake methods such as receipt OCR scanning, drag-and-drop ingestion, and email alias forwarding, see [**Log Expenses and Attach Receipts**](../task-guides/02-log-expenses-and-attach-receipts.md#2-alternative-automated-intake-channels).
 
 ---
 
-## 4. Bundle and Submit for Approval
+### 1.4 Bundle and Submit for Approval
 
 Individual expense entries must be packaged into a formal expense report before managers can review and authorize reimbursement:
 
@@ -83,7 +85,20 @@ Individual expense entries must be packaged into a formal expense report before 
 
 ---
 
-## Next Steps
+## 2. Exploring Further: Key Capabilities of CURQ Expenses
+
+### 2.1 Multi-Channel Receipt Digitization (OCR)
+Upload paper or digital receipts directly via OCR scanning, drag-and-drop file ingestion, or dedicated inbound email aliases. CURQ automatically parses merchant names, transaction dates, tax totals, and amounts into draft records.
+
+### 2.2 Commercial Reinvoicing and Sales Order Recovery
+Link project or client expenses directly to Customer Sales Orders. When approved, costs or sales-price markups automatically queue onto draft customer invoices, eliminating unrecovered project expenses.
+
+### 2.3 General Ledger Accounting and Tax Compliance
+Posting approved claims automatically generates balanced double-entry vouchers across operating expense accounts, VAT input tax grids, and employee payable or bank clearing ledgers.
+
+---
+
+## 3. Next Steps
 
 Now that your report is submitted, proceed to [**Approve, Post, and Reimburse Expenses**](./02-approve-post-and-reimburse-expenses.md) to explore how managers validate submissions, how finance posts journal vouchers to the general ledger, and how reimbursement disbursements are executed.
 

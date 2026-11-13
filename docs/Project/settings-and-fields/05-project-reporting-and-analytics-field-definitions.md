@@ -8,12 +8,10 @@ This document provides a comprehensive data dictionary for all analytical measur
 
 The global list view at **Project > Tasks** aggregates task records across all organizational workspaces:
 
-| Field Name / Control | Description |
+### List Columns and Indicators
+
+| Column / Field | Description |
 | :--- | :--- |
-| **All Tasks Breadcrumb** | Active workspace label with configuration gear icon for customizing list field displays. |
-| **Selection Checkbox** | Multi-select selector for initiating batch stage transitions, reassignments, or exports. |
-| **Priority Stars** | Interactive rating control allowing users to update task urgency directly within table rows. |
-| **Status Dot** | Quick status indicator reflecting task execution readiness and blockage status. |
 | **Title** | Operational name of the deliverable with direct link to the comprehensive task form. |
 | **Project** | Reference link to the parent project workspace *(e.g., `Development`, `Internal`, `Website Redesign`, or `Private`)*. |
 | **Sprint** | Designated agile iteration associated with the deliverable. |
@@ -23,7 +21,13 @@ The global list view at **Project > Tasks** aggregates task records across all o
 | **Next Activity** | Scheduled follow-up meeting, call, or deadline icon with hover details. |
 | **Tags** | Operational and categorical labels *(e.g., `Internal`)* applied for cross-cutting filtering. |
 | **Stage** | Current workflow status chevron *(e.g., `To Do`)*. |
-| **Start Work Button** | Row-level action button with green play icon initiating real-time work timer recording. |
+
+### Row Selection and Action Buttons
+
+| Button / Control | Behavior |
+| :--- | :--- |
+| **Selection Checkbox** | Selects one or more task rows to unlock batch actions such as stage transitions, reassignments, or exports. |
+| **Start Work Button** | Clicking the green play icon on a task row immediately initiates real-time work timer recording for that task. |
 
 ---
 
@@ -31,17 +35,24 @@ The global list view at **Project > Tasks** aggregates task records across all o
 
 The primary reporting dashboard at **Project > Reporting** renders graphical distributions of project metrics:
 
-| Field Name / Control | Description |
+### Graph Header and Visual Indicators
+
+| Element | Description |
 | :--- | :--- |
 | **Reporting Top Menu** | Primary navigation tab in the upper header opening the centralized analytical suite. |
 | **Tasks Analysis Header** | Dashboard identifier with configuration gear icon for saving custom analytical filters. |
-| **Measures Selector** | Dropdown menu defining the numerical metric charted *(e.g., Count, Allocated Time, Time Remaining, Overtime)*. |
-| **Bar Chart Selector** | Visualization icon rendering vertical comparative column charts across projects. |
-| **Line Chart Selector** | Visualization icon rendering continuous velocity trends and burn-down lines. |
-| **Pie Chart Selector** | Visualization icon rendering proportional market-share style slices of project workload. |
-| **Stacked Chart Toggle** | Visualization mode layering stage or tag segments within individual project bars. |
-| **Sort Ascending / Descending** | Control buttons reordering project bars from smallest to largest volume or vice versa. |
 | **Trendline Indicator** | Connected vector line illustrating volume changes and total sum across plotted categories. |
+
+### Graph Toolbar Buttons and Controls
+
+| Button / Control | Behavior |
+| :--- | :--- |
+| **Measures Selector** | Opens a dropdown menu to change the numerical metric charted *(e.g., Count, Allocated Time, Time Remaining, Overtime)*. |
+| **Bar Chart Selector** | Switches the chart to vertical comparative columns across projects. |
+| **Line Chart Selector** | Switches the chart to continuous velocity trends and burn-down lines. |
+| **Pie Chart Selector** | Switches the chart to proportional slices representing share of project workload. |
+| **Stacked Chart Toggle** | Layers stage or tag segments vertically within individual project bars instead of grouping them side-by-side. |
+| **Sort Ascending / Descending** | Reorders project bars from smallest to largest volume, or largest to smallest. |
 
 ---
 
@@ -49,16 +60,23 @@ The primary reporting dashboard at **Project > Reporting** renders graphical dis
 
 The pivot view at **Project > Reporting** delivers multi-dimensional cross-tabulation across projects and metrics:
 
-| Field Name / Control | Description |
+### Pivot Matrix Measures
+
+| Measure | Description |
 | :--- | :--- |
 | **Count Metric** | Total quantity of active and completed tasks within each project grouping. |
 | **Allocated Time Metric** | Cumulative sum of budgeted baseline hours configured across task records. |
 | **Time Remaining Metric** | Calculation of outstanding unspent hours remaining against allocated budgets. |
 | **Overtime Metric** | Quantitative metric logging timesheet hours recorded beyond budgeted baselines. |
-| **Flip Axis Button** | Table control swapping row dimensions with column dimensions for alternative cross-tabulation. |
-| **Expand All Button** | Hierarchy control expanding nested sub-categories across all projects simultaneously. |
-| **Download XLSX Button** | Export control generating an Excel spreadsheet matching on-screen matrix values. |
-| **Insert in Spreadsheet Button** | Integration control linking the pivot table directly into internal CURQ spreadsheets. |
+
+### Pivot Toolbar Buttons and Behavior
+
+| Button | Behavior |
+| :--- | :--- |
+| **Flip Axis Button** | Swaps row dimensions with column dimensions instantly for alternative cross-tabulation. |
+| **Expand All Button** | Expands all nested sub-categories across every project row and column simultaneously. |
+| **Download XLSX Button** | Generates and downloads an Excel spreadsheet matching the current on-screen matrix structure. |
+| **Insert in Spreadsheet Button** | Inserts the live pivot table directly into an internal CURQ spreadsheet. |
 
 ---
 
@@ -66,13 +84,20 @@ The pivot view at **Project > Reporting** delivers multi-dimensional cross-tabul
 
 The timeline view at **Project > Reporting** plots deliverables against scheduled operational dates:
 
-| Field Name / Control | Description |
+### Timeline Grid Elements
+
+| Element | Description |
 | :--- | :--- |
-| **Gantt View Switcher** | Far-right layout toggle displaying horizontal schedule planning grids. |
-| **Temporal Scale Controls** | Navigation buttons toggling timeline density across **Today**, **Day**, **Week**, **Month**, and **Year**. |
 | **Project Grouping Rows** | Horizontal swimlanes categorizing deliverables by workspace *(e.g., `Development`, `Internal`, `Website Redesign`, `UNASSIGNED`)*. |
 | **Current Day Indicator Line** | Vertical red guideline marking today's operational date for rapid schedule alignment. |
 | **Task Delivery Block** | Interactive horizontal bar representing the scheduled start date, duration, and deadline of each deliverable. |
+
+### Timeline Controls and Buttons
+
+| Button / Control | Behavior |
+| :--- | :--- |
+| **Gantt View Switcher** | Far-right layout toggle switching the reporting screen to the horizontal schedule planning grid. |
+| **Temporal Scale Controls** | Navigation buttons adjusting timeline zoom and focus across **Today**, **Day**, **Week**, **Month**, and **Year**. |
 
 ---
 

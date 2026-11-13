@@ -4,7 +4,7 @@ CURQ 18 Website provides a modern, high-performance web publishing framework des
 
 ---
 
-## Architectural Foundation
+## 1. Architectural Foundation
 
 CURQ Website is built on a decoupled, responsive rendering pipeline that bridges the backend relational database with a lightweight frontend execution environment:
 
@@ -21,7 +21,7 @@ flowchart LR
     Responsive Output`"]
 ```
 
-### Key Architectural Pillars
+### 1.1 Key Architectural Pillars
 
 * **Multi-Website Architecture**: CURQ supports multiple independent websites on a single database instance. Each website maintains its own domain routing, custom branding, localized languages, customer menus, product catalogs, and payment gateways while sharing shared company resources.
 * **QWeb Templating Engine**: Pages are rendered using QWeb, an XML-based dynamic templating language that supports conditional display, record looping, template inheritance, and translation string extraction.
@@ -30,35 +30,33 @@ flowchart LR
 
 ---
 
-## The Page Lifecycle: From Editing to Publication
+## 2. The Page Lifecycle: From Editing to Publication
 
 Every webpage in CURQ transitions through distinct lifecycle states, ensuring changes can be drafted and reviewed before going live:
 
 ```mermaid
-stateDiagram-v2
-    [*] --> Draft: Create New Page
-    Draft --> Staging: Save Layout & Content
-    Staging --> Published: Toggle Live Switch
-    Published --> Staging: Edit In Live Mode
-    Published --> Archived: Unpublish / Deprecate
-    Archived --> [*]
+flowchart LR
+    New["New<br/>Create Page"] -->|"Save Layout & Content"| Draft["Draft / Staging<br/>Review & Edit"]
+    Draft -->|"Toggle Live Switch"| Published["Published<br/>Live Online"]
+    Published -.->|"Edit in Live Mode"| Draft
+    Published -->|"Unpublish / Deprecate"| Archived["Archived<br/>Deprecated Route"]
 ```
 
-### 1. Creation and URL Slug Definition
+### 2.1 Creation and URL Slug Definition
 When a user initializes a page, CURQ prompts for a title and derives an SEO-friendly URL slug (e.g., `/about-us` or `/services/consulting`). Slugs are validated against existing routes to prevent collision.
 
-### 2. Layout Assembly and Customization
+### 2.2 Layout Assembly and Customization
 In edit mode, authors drag modular blocks onto the canvas. The visual editor enables inline text editing, media insertion, responsive column resizing, and background styling.
 
-### 3. Viewport Adaptation and Mobile Responsiveness
+### 2.3 Viewport Adaptation and Mobile Responsiveness
 The editor includes an instant mobile viewport simulator. Blocks automatically adapt across desktop, tablet, and mobile breakpoints using responsive flexbox and grid layouts.
 
-### 4. Publication and Redirection Management
+### 2.4 Publication and Redirection Management
 Pages remain invisible to unauthenticated visitors until toggled to **Published**. If a page URL is updated, CURQ automatically creates a 301 Permanent Redirect from the legacy path to preserve search engine rankings and incoming referral traffic.
 
 ---
 
-## Technical Specifications
+## 3. Technical Specifications
 
 | Parameter | Specification | Purpose |
 | :--- | :--- | :--- |
@@ -70,7 +68,7 @@ Pages remain invisible to unauthenticated visitors until toggled to **Published*
 
 ---
 
-## Multi-Website Routing and Domain Isolation
+## 4. Multi-Website Routing and Domain Isolation
 
 In enterprise environments with subsidiary brands or regional business units, CURQ routes requests dynamically based on the incoming HTTP `Host` header:
 
@@ -85,3 +83,4 @@ In enterprise environments with subsidiary brands or regional business units, CU
 * [Build and Publish Your First Web Page](../getting-started/01-build-and-publish-your-first-web-page.md)
 * [Design Pages with Building Blocks](../task-guides/01-design-pages-with-building-blocks.md)
 * [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md)
+* [Privacy, Cookie Compliance, and Account Settings](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md)

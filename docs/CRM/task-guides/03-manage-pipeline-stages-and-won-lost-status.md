@@ -2,6 +2,10 @@
 
 Advance deals through visual Kanban stages, record won sales, apply standardized lost reasons, and restore archived opportunities.
 
+> **Prerequisites**
+> * Active user account with **CRM / User** rights.
+> * Active sales team and defined pipeline stages in **CRM**.
+
 ---
 
 ## 1. Manage Pipeline Progression and Closure
@@ -46,7 +50,7 @@ When negotiations conclude without a sale, recording structured reasons ensures 
 4. Click **Mark as Lost**.
 5. The opportunity probability drops to **0%**, a red **Lost** ribbon attaches to the record, and the card archives from active Kanban views.
 
-> **Note:** For standard reason categories and analytical definitions, see [**Standard Lost Reasons Catalog**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog).
+> **Note:** For standard reason categories and analytical definitions, see [**Standard Lost Reasons Catalog**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#5-standard-lost-reasons-catalog).
 
 ---
 
@@ -67,7 +71,7 @@ If a prospective client contacts your company again to resume discussions:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Accidentally Marked Lost**: If you clicked Lost by mistake, immediately filter by **Lost**, open the deal, and click **Restore**.
 * **Stage Probability Mismatch**: Moving a deal into a stage updates its probability to that stage's default value unless you have entered a manual override.
@@ -75,6 +79,7 @@ If a prospective client contacts your company again to resume discussions:
 ---
 
 ## Related Documentation
-* [Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#standard-lost-reasons-catalog)
+* [Standard Lost Reasons Catalog](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#5-standard-lost-reasons-catalog)
 * [Configure Standardized Lost Reasons and Deal Tags](./07-configure-lost-reasons-and-tags.md)
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

@@ -139,7 +139,7 @@ CURQ uses a two-stage payment verification lifecycle to ensure compliance with f
 
 ---
 
-## Edge Cases & Recovery Steps
+## 6. Edge Cases & Recovery Steps
 
 * **Partial Customer Payments**: If a customer pays less than the total invoice value, enter the received amount in the **Pay** dialog. CURQ leaves the invoice in **Posted** status with an **IN PAYMENT** indicator, while displaying the remaining unpaid balance in **Amount Due**.
 * **Bounced or Rejected Payments**: If an electronic transfer fails after registration, open the invoice or bill, click the **Payments** smart button, open the payment record, and click **Unreconcile** or **Reset to Draft**. The invoice immediately reverts to unpaid status with its full balance due.

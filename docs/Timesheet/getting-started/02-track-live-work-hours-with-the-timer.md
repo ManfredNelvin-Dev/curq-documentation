@@ -52,7 +52,7 @@ Before engaging the clock, establish the task parameters for the tracking sessio
    * **Description**: Provide an operational summary of the activity underway *(e.g., `Server setup`)*.
    * **Start Time**: CURQ automatically initializes this field with the current system timestamp.
 
-> For complete field descriptions, timestamps, and task constraints, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+> For complete field descriptions of the **Start work** dialog, see [**Work Timer Session Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#4-work-timer-session-fields).
 
 ---
 

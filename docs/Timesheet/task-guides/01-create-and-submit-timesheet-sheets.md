@@ -2,6 +2,10 @@
 
 This guide covers how to create a periodic timesheet sheet, record working hours across projects and tasks using the matrix summary grid and details log, and submit the sheet for managerial review.
 
+> **Prerequisites**
+> * Active user account with **Timesheets / User** rights.
+> * Assigned project tasks and active analytic accounts in **Projects**.
+
 ---
 
 ## 1. Create and Record Timesheet Sheets
@@ -34,8 +38,6 @@ After clicking **New**, a blank timesheet sheet opens in the initial stage:
 * **Status Workflow**: The status bar in the upper-right tracks progress through `New` → `Open` → `Waiting Review` → `Approved`.
 * **Summary Tab**: Selected by default, displaying a placeholder banner until your first project line is added.
 
-> For complete field definitions, period boundary calculations, and lifecycle states, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#periodic-timesheet-sheet-fields) and [**Timesheet Sheet Workflow Lifecycle Transitions**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#timesheet-sheet-workflow-lifecycle-transitions).
-
 ---
 
 ### 1.3 Add Project Lines to the Sheet
@@ -64,7 +66,7 @@ Once you add a project line, the sheet transitions to the **Open** stage:
 4. The system dynamically calculates daily totals across the bottom row as well as overall total hours for the sheet.
 5. To log work for additional activities within the same period, use the **Select Project ?** field beneath the table and add more lines.
 
-> For grid dimensions, row and column calculations, and cell editing behaviors, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#summary-matrix-grid-specifications).
+> For grid dimensions, row and column calculations, and cell editing behaviors, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#3-summary-matrix-grid-specifications).
 
 ---
 
@@ -84,7 +86,7 @@ For granular time tracking or to record individual work descriptions:
    * **Description**: A brief explanation detailing the work completed *(e.g., `Initial project setup`)*.
    * **Hours**: The amount of time spent on the activity *(e.g., `04:00`)*.
 
-> For field definitions, operational behaviors, and sales order item linkages, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+> For complete column definitions on the **Details** tab, see [**Timesheet Sheet Details Tab Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#1-timesheet-sheet-details-tab-fields).
 
 ---
 

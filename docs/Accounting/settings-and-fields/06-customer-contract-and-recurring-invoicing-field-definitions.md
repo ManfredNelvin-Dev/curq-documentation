@@ -4,11 +4,11 @@ This reference document provides comprehensive field definitions, data requireme
 
 ---
 
-## Contract Header Fields
+## 1. Contract Header Fields
 
 The header block captures core contract identification, counterparty details, responsible staff, commercial terms, and master start and end dates.
 
-### 1. General Information
+### 1.1 General Information
 | Field Name | Description |
 | :--- | :--- |
 | **Contract Name** | Descriptive title identifying the agreement *(e.g., `Cloud Hosting & Maintenance` or `Datacenter Colocation Lease 2026`)*. Displayed on contract overviews and counterparty documents. |
@@ -18,7 +18,7 @@ The header block captures core contract identification, counterparty details, re
 | **Recurrence at line level?** | Checkbox toggle. When unchecked, all contract lines share the global schedule defined under the **Invoicing** tab. When checked, each contract line can define its own recurrence cadence. |
 | **Date Start** | Official commencement date of the subscription agreement *(defaults to current date, e.g., `10/30/2026`)*. Invoicing periods calculate from this date. |
 
-### 2. Commercial and Scheduling Settings
+### 1.2 Commercial and Scheduling Settings
 | Field Name | Description |
 | :--- | :--- |
 | **Contract Template** | Standardized configuration blueprint that automatically populates default journals, line items, and invoicing intervals *(e.g., `Standard SaaS Monthly`)*. |
@@ -29,7 +29,7 @@ The header block captures core contract identification, counterparty details, re
 
 ---
 
-## Recurring Invoices Tab Columns
+## 2. Recurring Invoices Tab Columns
 
 The **Recurring Invoices** tab lists the individual merchandise, services, software licenses, or retainers billed under the contract.
 
@@ -47,7 +47,7 @@ The **Recurring Invoices** tab lists the individual merchandise, services, softw
 | **Date End** | Specific date on which recurring billing stops for this individual line item. |
 | **Last Date Invoiced** | System timestamp recording the last time this specific line was converted into a customer invoice *(labeled `Last Date...` in the UI)*. |
 
-### Tab Actions and Notes
+### 2.1 Tab Actions and Notes
 | Field Name | Description |
 | :--- | :--- |
 | **Add a line** | Appends a new subscription product or service line to the contract. |
@@ -57,18 +57,18 @@ The **Recurring Invoices** tab lists the individual merchandise, services, softw
 
 ---
 
-## Invoicing Tab Fields
+## 3. Invoicing Tab Fields
 
 The **Invoicing** tab configures the billing mechanics, financial sub-ledgers, tax mapping rules, and document generation types.
 
-### 1. Invoicing Schedule Fields
+### 3.1 Invoicing Schedule Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Invoicing type** | Determines when invoices generate relative to the subscription service period: `Pre-paid` *(invoices at the beginning of the service window)* or `Post-paid` *(invoices in arrears at the end of the service window)*. |
 | **Invoice Every** | Numeric frequency value combined with the interval unit dictating recurrence frequency *(e.g., `1 Month(s)`, `3 Month(s)`, `1 Year(s)`)*. |
 | **Interval Unit** | Recurrence time scale: `Days`, `Weeks`, `Months`, `Last Day of Month`, or `Years`. |
 
-### 2. Accounting and Partner Rules
+### 3.2 Accounting and Partner Rules
 | Field Name | Description |
 | :--- | :--- |
 | **Invoicing contact** | Designated individual or department at the customer or supplier organization receiving billing notices *(e.g., `Acme Technologies`)*. |
@@ -76,14 +76,14 @@ The **Invoicing** tab configures the billing mechanics, financial sub-ledgers, t
 | **Journal** | The financial sub-ledger where recurring entries post *(defaults to `Customer Invoices` on customer contracts and `Vendor Bills` on supplier contracts)*. |
 | **Payment Terms** | Credit and settlement schedule applied to generated documents *(e.g., `45 Days` or `30 Days`)*. |
 
-### 3. Recurring Type
+### 3.3 Recurring Type
 | Field Name | Description |
 | :--- | :--- |
 | **Generation Type** | Document output produced by the recurring engine: `Invoice` *(generates customer billing documents or vendor bills according to contract type)*. |
 
 ---
 
-## Modifications Tab Columns
+## 4. Modifications Tab Columns
 
 The **Modifications** tab maintains an immutable audit trail of contract amendments, rate adjustments, scope changes, and legal revisions.
 
@@ -96,18 +96,18 @@ The **Modifications** tab maintains an immutable audit trail of contract amendme
 
 ---
 
-## Other Information Tab Fields
+## 5. Other Information Tab Fields
 
 The **Other Information** tab captures administrative references, reporting groups, transaction currencies, and reference guides for dynamic text markers.
 
-### 1. Contract Identification and Grouping
+### 5.1 Contract Identification and Grouping
 | Field Name | Description |
 | :--- | :--- |
 | **Reference** | External customer purchase order (PO) number, supplier agreement code, tender identifier, or internal tracking code. |
 | **Group** | Commercial or operational classification grouping related contracts for reporting. |
 | **Currency** | Currency in which the contract lines and generated invoices calculate *(e.g., `EUR`)*. |
 
-### 2. Dynamic Description Markers
+### 5.2 Dynamic Description Markers
 Text placeholders entered in line descriptions that CURQ replaces with computed billing period dates:
 
 | Field Name | Description |
@@ -118,7 +118,7 @@ Text placeholders entered in line descriptions that CURQ replaces with computed 
 
 ---
 
-## Header Action Controls and Stat Buttons
+## 6. Header Action Controls and Stat Buttons
 
 | Field Name | Description |
 | :--- | :--- |
@@ -129,7 +129,7 @@ Text placeholders entered in line descriptions that CURQ replaces with computed 
 
 ---
 
-## Supplier Contract Specific Variations and Operational Rules
+## 7. Supplier Contract Specific Variations and Operational Rules
 
 While Customer Contracts and Supplier Contracts share the underlying contract framework, key operational variations apply when managing recurring vendor agreements:
 
@@ -141,7 +141,7 @@ While Customer Contracts and Supplier Contracts share the underlying contract fr
 | **Batch Invoicing Menu** | Customer contracts are processed in bulk via **Accounting > Customers > Manually Invoice Sale Contracts**; supplier contracts are processed via **Accounting > Vendors > Manually Invoice Purchase Contracts**. |
 | **Settlement Flow** | Customer contracts settle via customer payments, bank reconciliation, or SEPA Direct Debit collections; supplier contracts settle via vendor payments or electronic SEPA Credit Transfer payment batches. |
 
-### Batch Contract Invoicing Wizard Fields
+### 7.1 Batch Contract Invoicing Wizard Fields
 
 Used when generating customer invoices or vendor bills in bulk via **Accounting > Customers > Manually Invoice Sale Contracts** or **Accounting > Vendors > Manually Invoice Purchase Contracts**:
 
@@ -152,7 +152,7 @@ Used when generating customer invoices or vendor bills in bulk via **Accounting 
 
 ---
 
-## Customer Contract Lines Reporting Columns
+## 8. Customer Contract Lines Reporting Columns
 
 Accessed via **Accounting > Reporting > Contracts > Customer Contract lines** to audit recurring customer line items across all contracts:
 
@@ -176,7 +176,7 @@ Accessed via **Accounting > Reporting > Contracts > Customer Contract lines** to
 
 ---
 
-## Customer Contract Line Recurrence Parameters
+## 9. Customer Contract Line Recurrence Parameters
 
 Detail form view opened when selecting an individual contract line:
 
@@ -201,7 +201,7 @@ Detail form view opened when selecting an individual contract line:
 
 ---
 
-## Supplier Contract Lines Reporting Columns
+## 10. Supplier Contract Lines Reporting Columns
 
 Accessed via **Accounting > Reporting > Contracts > Supplier Contract lines** to audit recurring vendor expense commitments across all purchase contracts:
 
@@ -225,7 +225,7 @@ Accessed via **Accounting > Reporting > Contracts > Supplier Contract lines** to
 
 ---
 
-## Supplier Contract Line Recurrence Parameters
+## 11. Supplier Contract Line Recurrence Parameters
 
 Detail form view opened when inspecting an individual supplier contract line:
 

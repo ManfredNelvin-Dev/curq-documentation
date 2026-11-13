@@ -8,24 +8,33 @@ This document provides a data dictionary for all navigation controls, personal K
 
 The personal task register consolidates deliverables assigned to the active user across all project workspaces:
 
-| Field Name / Control | Description |
+### Navigation and Search Fields
+
+| Element / Field | Description |
 | :--- | :--- |
 | **Tasks Top Menu** | Primary navigation tab in the upper header opening the global personalized task workspace. |
 | **My Tasks Breadcrumb** | Dashboard label with configuration gear icon for customizing display preferences. |
 | **Open Tasks Filter** | Active search tag isolating unresolved assignments and excluding closed or archived records. |
 | **Search Bar** | Keyword text entry box for filtering personal tasks by title, project, or tag. |
-| **Kanban View Switcher** | Card-based board organizing personal work by temporal scheduling horizons. |
-| **List View Switcher** | Tabular register showing task titles, parent projects, deadlines, and current stages. |
-| **Calendar View Switcher** | Schedule visualizer arranging personal deliverables across calendar days and weeks. |
-| **Pivot View Switcher** | Analytical cross-tabulation table aggregating personal hours and task counts across projects. |
-| **Graph View Switcher** | Visual chart displaying task volume distributions and completion metrics. |
-| **Activity View Switcher** | Chronological feed displaying scheduled activities, notes, and upcoming milestones. |
+
+### View Switcher Buttons and Behavior
+
+| Button | Behavior |
+| :--- | :--- |
+| **Kanban View Switcher** | Switches to the card-based board organizing personal work by temporal scheduling horizons. |
+| **List View Switcher** | Switches to the tabular register showing task titles, parent projects, deadlines, and current stages. |
+| **Calendar View Switcher** | Switches to the schedule visualizer arranging personal deliverables across calendar days and weeks. |
+| **Pivot View Switcher** | Switches to the analytical cross-tabulation table aggregating personal hours and task counts across projects. |
+| **Graph View Switcher** | Switches to the visual chart displaying task volume distributions and completion metrics. |
+| **Activity View Switcher** | Switches to the chronological feed displaying scheduled activities, notes, and upcoming milestones. |
 
 ---
 
 ## 2. Temporal Scheduling Horizon Columns
 
 The **My Tasks** board uses time-based horizon columns to structure daily productivity:
+
+### Horizon Columns
 
 | Column / Horizon | Description |
 | :--- | :--- |
@@ -35,7 +44,12 @@ The **My Tasks** board uses time-based horizon columns to structure daily produc
 | **This Week** | Sprint execution queue containing commitments scheduled for delivery during the current working week. |
 | **This Month** | Medium-term queue containing strategic deliverables due before the close of the calendar month. |
 | **Later** | Long-range backlog queue for deferred tasks, future iterations, and unscheduled ideas. |
-| **+ Column Quick-Add** | Header button on each column allowing users to create tasks directly within that scheduling horizon. |
+
+### Column Action Buttons and Behavior
+
+| Button | Behavior |
+| :--- | :--- |
+| **+ Column Quick-Add** | Clicking `+` in a column header opens an inline card to create a task directly inside that scheduling horizon. |
 
 ---
 

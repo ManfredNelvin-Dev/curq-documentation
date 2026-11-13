@@ -2,6 +2,10 @@
 
 This guide covers how to access the global email blacklist, manually manage suppression records, and customize opt-out feedback reasons in CURQ 18 Email Marketing.
 
+> **Prerequisites**
+> * Active user account with **Email Marketing / User** rights.
+> * Configured base system records and access permissions.
+
 ---
 
 ## 1. Manage Blacklisted Email Addresses
@@ -33,7 +37,7 @@ Manage individual suppression records:
 
    ![Clicking Unblacklist on the Blacklisted Email Addresses form](../media/040.png)
 
-> For complete field definitions and suppression criteria, see [**Global Email Blacklist Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#global-email-blacklist-specifications).
+> For complete field definitions and suppression criteria, see [**Global Email Blacklist Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#6-global-email-blacklist-specifications).
 
 ---
 
@@ -52,11 +56,11 @@ Customize the reasons presented to recipients during the unsubscribe process:
 3. Click **New** to add a new category *(such as `Receiving too frequently` or `No longer in this industry`)*.
 4. Save the record. The reason will now appear on subscriber self-service unsubscribe pages.
 
-> For complete field definitions and configuration details, see [**Opt-Out Reasons Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#opt-out-reasons-specifications).
+> For complete field definitions and configuration details, see [**Opt-Out Reasons Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#7-opt-out-reasons-specifications).
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Strict Overrides**: Global blacklist records override all individual mailing list subscriptions. If an address is blacklisted, it will not receive emails from any list until unblacklisted.
 * **Audit Trail**: Every unblacklisting action is permanently recorded in the record chatter with the operating user's name and timestamp.

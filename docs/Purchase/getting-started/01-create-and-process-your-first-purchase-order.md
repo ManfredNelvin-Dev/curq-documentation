@@ -22,16 +22,13 @@ Begin by drafting a quotation request to ask a supplier for pricing and delivery
 
 ![Click New on the Requests for Quotation list view](../media/001.png)
 
-4. On the blank RFQ form, configure the vendor and delivery details:
+4. On the blank RFQ form, configure the vendor and scheduling details in the header:
    * **Vendor**: Select your supplier. CURQ automatically populates default payment terms, currency, and tax fiscal positions.
    * **Vendor Reference**: Enter any external catalog or quotation reference provided by the supplier.
    * **Order Deadline**: Set the date by which the vendor should respond with confirmation.
-   * **Expected Arrival**: Specify the target date when goods are expected at your warehouse.
-   * **Deliver To**: Select your warehouse receiving operation (such as *YourCompany: Receipts*).
+   * **Expected Arrival**: Specify the target date when goods are expected at your facility.
 
-![Request for Quotation form view showing vendor and order deadline fields](../media/002.png)
-
-> For detailed definitions of all header fields, tax rules, and delivery options, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+![Request for Quotation form view showing vendor and order deadline fields in header](../media/002.png)
 
 5. Under the **Products** tab, click **Add a product**:
    * Select your product in the **Product** column (e.g., *Fair Phone 5 (Black)*).
@@ -40,6 +37,8 @@ Begin by drafting a quotation request to ask a supplier for pricing and delivery
    * Verify the applied **Taxes** and inspect the calculated **Untaxed Amount** and **Total** at the bottom right.
 
 ![Configured product lines, unit prices, taxes, and financial totals on RFQ form](../media/003.png)
+
+> For detailed definitions of all header fields, tab settings, and line item columns, see [**Request for Quotation / Purchase Order Header Fields**](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md#1-request-for-quotation--purchase-order-header-fields), [**Products Tab Order Line Columns**](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md#2-products-tab-order-line-columns), and [**Other Information Tab Fields**](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md#3-other-information-tab-fields).
 
 ---
 
@@ -52,6 +51,9 @@ Transmit the quotation request to your vendor for commercial confirmation:
 ![Send by Email and Print RFQ action buttons on the RFQ form](../media/005.png)
 
 2. The email composer modal appears with a pre-formatted message and an automatically compiled PDF attachment (`Request for Quotation - [Ref].pdf`).
+
+![Compose Email popup with attached RFQ PDF and message body](../media/006.png)
+
 3. Verify the recipient email address, review the message text, and click **Send**.
 4. The document status badge advances from **RFQ** to **RFQ Sent**, and an audit copy is saved in the record chatter.
 
@@ -61,11 +63,12 @@ Transmit the quotation request to your vendor for commercial confirmation:
 
 When the vendor confirms availability and accepts your pricing terms, convert the quotation into an active purchase order:
 
-1. Open the sent RFQ from **Purchase → Orders → Requests for Quotation**.
+1. Open the sent RFQ from **Purchase → Orders → Requests for Quotation** (or stay on the current form).
 2. Click the blue **Confirm Order** button in the top action bar.
-3. The document status updates to **Purchase Order** (or **Locked** if automatic locking is active).
 
-> If your company enforces approval limits and the order exceeds the configured threshold, the order advances to **To Approve** and requires authorization from a Purchase Manager before confirmation. For configuration details, see [**Purchase Settings and General Configuration**](../settings-and-fields/01-purchase-settings-and-general-configuration.md).
+![Click Confirm Order on the RFQ action bar](../media/010.png)
+
+3. The document status updates to **Purchase Order** (or **Locked** if automatic locking is active).
 
 ---
 
@@ -75,12 +78,17 @@ Confirming the purchase order automatically generates an incoming shipment in th
 
 1. On the confirmed purchase order, click the **Receive Products** button in the top action bar (or click the **Receipt** smart button in the top right).
 
-![Confirmed Purchase Order with Receive Products button and Receipt smart button](../media/005.png)
+![Confirmed Purchase Order showing Receive Products button and Receipt smart button](../media/011.png)
 
 2. CURQ opens the linked incoming receipt form (`WH/IN/`).
 3. In the **Operations** tab, verify that physical deliveries match the **Demand** column.
 4. Click **Validate** in the top action bar to confirm stock receipt.
+
+![Validate Incoming Warehouse Receipt](../media/026.png)
+
 5. The receipt status changes to **Done**, and products are officially added to your warehouse stock.
+
+> For complete field definitions of warehouse receipts and operation lines, see [**Warehouse Receipt Header Fields**](../settings-and-fields/02-warehouse-receipt-and-vendor-bill-field-definitions.md#1-warehouse-receipt-header-fields) and [**Receipt Operations Line Columns**](../settings-and-fields/02-warehouse-receipt-and-vendor-bill-field-definitions.md#2-receipt-operations-line-columns).
 
 ---
 
@@ -97,9 +105,13 @@ Complete the procurement cycle by registering the supplier's invoice:
 4. Enter the supplier's formal invoice number in the **Bill Reference** field and set the **Bill Date**.
 5. Click **Confirm** to post the bill to accounts payable.
 
+![Draft Vendor Bill form highlighting Confirm button](../media/038.png)
+
+6. When payment is made to the supplier, click **Pay** in the top action bar to register payment and settle the liability.
+
 ![Vendor Bill in Posted status ready for payment registration](../media/039.png)
 
-6. When payment is made to the supplier, click **Register Payment** to settle the liability and reconcile the purchase order to **Fully Billed**.
+> For complete vendor bill form field definitions, see [**Vendor Bill Form Fields**](../settings-and-fields/02-warehouse-receipt-and-vendor-bill-field-definitions.md#4-vendor-bill-form-fields).
 
 ---
 

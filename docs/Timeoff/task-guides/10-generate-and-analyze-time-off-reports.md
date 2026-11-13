@@ -2,6 +2,10 @@
 
 The **Reporting** engine in CURQ Time Off equips HR personnel and department managers with multi-dimensional analytical reports to audit employee absence patterns, evaluate leave type utilization, track liability balances, and forecast workforce availability across departments.
 
+> **Prerequisites**
+> * Active user account with **Time Off / User** rights.
+> * Configured employee profiles and operational time-off type structures.
+
 ---
 
 ## 1. Absence Reporting and Dimensional Analysis
@@ -46,7 +50,6 @@ Evaluate which leave categories account for the greatest organizational absence:
 3. Analyze leave distribution across categories *(such as `Paid Time Off`, `Compensatory Days`, and `Earned Time Off`)*.
 4. Use the graph controls at the top left to toggle between **Bar Chart**, **Line Chart**, and **Pie Chart**, or adjust ordering via **Stacked**, **Ascending**, or **Descending**.
 5. Apply search bar filters to isolate specific departments, fiscal quarters, or employment tags.
-
 ---
 
 ## 2. Audit Remaining and Planned Balances
@@ -78,7 +81,7 @@ Verify organizational leave liability and audit remaining employee balances:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Empty Report View**: If no data appears in the report, check the search bar for restrictive date filters (e.g., ensuring `Current Year: 2026` or `Period: 2026` matches the period of requested absences) or clear active department filters.
 * **Missing Individual Requests in Grouped View**: If clicking an employee row does not expand individual requests, verify that the active Group By includes both **Employee** and **Type**.

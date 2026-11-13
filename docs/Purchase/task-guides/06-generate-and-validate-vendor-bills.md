@@ -2,6 +2,10 @@
 
 This guide covers how to generate vendor bills directly from confirmed purchase orders, complete and post bills to the general ledger, and register supplier payments in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Purchase / User** rights.
+> * Configured Chart of Accounts and partner records in **Contacts**.
+
 ---
 
 ## 1. Vendor Bill Processing Lifecycle
@@ -64,9 +68,13 @@ This guide covers how to generate vendor bills directly from confirmed purchase 
 
 ---
 
+> For complete vendor bill form field definitions (**Bill Reference**, **Bill Date**, **Accounting Date**, **Payment Terms**, **Journal**), see [**Vendor Bill Form Fields**](../settings-and-fields/02-warehouse-receipt-and-vendor-bill-field-definitions.md#4-vendor-bill-form-fields).
+
+---
+
 ## Related Documentation
 
 * [Reconcile Vendor Bills with Bill Matching](./07-reconcile-vendor-bills-with-bill-matching.md)
 * [Receive Products and Manage Backorders](./05-receive-products-and-manage-backorders.md)
 * [Understanding Bill Control and 3-Way Matching](../core-concepts/02-understanding-bill-control-and-3-way-matching.md)
-* [Warehouse Receipt and Vendor Bill Field Definitions](../settings-and-fields/03-warehouse-receipt-and-vendor-bill-field-definitions.md)
+* [Warehouse Receipt and Vendor Bill Field Definitions](../settings-and-fields/02-warehouse-receipt-and-vendor-bill-field-definitions.md)

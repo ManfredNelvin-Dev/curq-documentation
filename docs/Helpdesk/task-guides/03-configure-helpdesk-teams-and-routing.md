@@ -7,6 +7,9 @@ This task guide provides step-by-step procedures for setting up functional suppo
 > * Helpdesk Administrator or Manager access permissions in CURQ.
 > * Internal user accounts configured for assigned support specialists.
 > * Inbound mail server configuration active if configuring email aliases.
+>
+> **Warning (Configuration Advisory):** Modifying helpdesk teams and routing requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -38,7 +41,7 @@ To automatically convert incoming customer emails into support tickets assigned 
    * **Authenticated Partners**: Restricts intake to registered customer records.
 4. Set the **Email** field to verify the outbound correspondence address.
 
-> For a detailed explanation of all team configuration fields, email alias parameters, and security policies, see [**Helpdesk Team Field Definitions**](../settings-and-fields/02-helpdesk-team-field-definitions.md).
+> For a detailed explanation of team configuration fields, email alias parameters, and member roster controls, see [**Helpdesk Team Configuration Header Fields**](../settings-and-fields/02-helpdesk-team-field-definitions.md#1-helpdesk-team-configuration-header-fields) and [**Team Members Tab**](../settings-and-fields/02-helpdesk-team-field-definitions.md#21-team-members-tab).
 
 ---
 
@@ -83,10 +86,14 @@ When support staff place a ticket into an awaiting state, receiving a customer r
 
 ---
 
-## Edge Cases & Configuration Troubleshooting
+## 3. Edge Cases & Configuration Troubleshooting
 
 * **Inbound Emails Not Generating Tickets**: Verify that the domain configured on the email alias matches an active mail server domain in CURQ settings, and verify that **Accept Emails From** is set to `Everyone`.
 * **Tickets Flagged Without Team**: If dashboard metrics display an alert on **Open Tickets without team** *(as documented in [Navigate and Use the Helpdesk Dashboard](./02-navigate-and-use-the-helpdesk-dashboard.md))*, manually open the ticket and select the newly created team.
+
+---
+
+> **Tip (Advised Settings):** Assign balanced or random dispatch methods only after defining team member capacity limits; keep default visibility to internal team members.
 
 ---
 

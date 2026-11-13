@@ -2,6 +2,10 @@
 
 This guide covers how to schedule meetings and calendar activities directly from record chatters in CURQ 18 applications like CRM, Projects, and Sales.
 
+> **Prerequisites**
+> * Active user account with **Calendar / User** rights.
+> * Active user calendar profile with configured timezone settings.
+
 ---
 
 ## 1. Chatter Meeting Activities Workflow
@@ -34,8 +38,13 @@ Once a scheduled calendar meeting has concluded, update the originating record:
 
 ---
 
+> For supported application integrations (**CRM**, **Projects**, **Helpdesk**, **Appointments**), see [**Cross-Module Activity Workflows**](../settings-and-fields/03-calendar-settings-and-integrations.md#2-cross-module-activity-workflows).
+
+---
+
 ## Related Documentation
 
 * [Create Your First Meeting](../getting-started/01-create-your-first-meeting.md)
 * [Manage Meetings and Attendees](./02-manage-meetings-and-attendees.md)
 * [Calendar Settings and Integrations](../settings-and-fields/03-calendar-settings-and-integrations.md)
+* [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)

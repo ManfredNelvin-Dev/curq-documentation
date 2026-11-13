@@ -60,7 +60,7 @@ Click the title of any task card to transition into the complete task form:
 4. **Allocate Team Hours**: Enter planned hours in **Allocated Time** to establish baseline estimates for timesheet tracking.
 5. **Author Specifications**: Use the **Description** rich text editor to document user stories, technical criteria, and mockups.
 
-> For a detailed explanation of all task header fields, deadline settings, and notebook tabs, see [**Project Task Field Definitions**](../settings-and-fields/03-project-task-field-definitions.md).
+> For a detailed explanation of all task header fields, deadlines, and priority indicators, see [**Task Header and Primary Information Fields**](../settings-and-fields/03-project-task-field-definitions.md#1-task-header-and-primary-information-fields).
 
 ---
 
@@ -76,7 +76,7 @@ Once tasks populate the Kanban board, team members update status by moving cards
 
 ---
 
-## Best Practices for Task Hygiene
+## 3. Best Practices for Task Hygiene
 
 * **Atomic Scope**: Keep tasks scoped to deliverables achievable within a single sprint iteration or 1 to 3 working days.
 * **Explicit Ownership**: Always assign a designated owner in **Assignees** before moving a task to `Doing`.

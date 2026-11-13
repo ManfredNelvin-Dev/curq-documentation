@@ -2,6 +2,10 @@
 
 Create commercial opportunities directly on the Kanban board or via detailed form view, assign customers and salespeople, configure win probabilities, and generate sales quotations.
 
+> **Prerequisites**
+> * Active user account with **CRM / User** rights.
+> * Active sales team and defined pipeline stages in **CRM**.
+
 ---
 
 ## 1. Create and Configure Pipeline Opportunities
@@ -29,7 +33,7 @@ Create commercial opportunities directly on the Kanban board or via detailed for
 
 The `Test Deal - Cloud Migration` deal card appears directly in the **New** column with its expected revenue (`€ 20,000.00`), customer (`Global Logistics Corp`), and scheduled activity icon.
 
-> **Note:** For allowed formats, character constraints, and definitions of each field, see [**Opportunity Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields).
+> **Note:** For allowed formats, character constraints, and definitions of each field, see [**Opportunity Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#1-opportunity-form-fields).
 
 ---
 
@@ -77,7 +81,7 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
    * **Days to Close**: Automatically tracked days elapsed to closed deal (`0.00`).
 5. CURQ saves your updates automatically.
 
-> **Note:** For descriptions of tracking metadata and assignment duration metrics, see [**Extra Information Tab Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#extra-information-tab-fields).
+> **Note:** For descriptions of tracking metadata and assignment duration metrics, see [**Extra Information Tab Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#2-extra-information-tab-fields).
 
 ---
 
@@ -93,7 +97,7 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Resetting Overridden Probability**: If you entered a manual win probability and wish to restore the automated calculation, click the small gear icon next to the **Probability** field and select **Reset to default**.
 * **Reassigning Deals**: If an opportunity needs to move to another representative, change the **Salesperson** field; the deal will automatically update in their personal pipeline.
@@ -104,3 +108,4 @@ The `Test Deal - Cloud Migration` deal card appears directly in the **New** colu
 * [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [Qualify and Convert Leads into Opportunities](./02-convert-leads-to-opportunities.md)
 * [Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

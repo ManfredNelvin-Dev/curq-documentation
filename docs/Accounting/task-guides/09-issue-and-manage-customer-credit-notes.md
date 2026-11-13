@@ -143,7 +143,7 @@ If the customer requests a monetary repayment via bank transfer rather than a ba
 
 ---
 
-## Edge Cases and Compliance Guidelines
+## 2. Edge Cases and Compliance Guidelines
 
 * **Statutory Immutability of Posted Documents**:
   * Dutch accounting standards and CURQ audit rules prohibit deleting or altering posted invoices. Never attempt to cancel an invoice by resetting it to draft once submitted to a customer. Always issue a formal credit note to preserve complete audit history.
@@ -151,6 +151,10 @@ If the customer requests a monetary repayment via bank transfer rather than a ba
   * If a customer returns only one item from a 5-item shipment, choose the **Partial Refund** option when clicking **Credit Note**. On the resulting draft credit note, delete the 4 accepted line items and keep only the single returned item before confirming.
 * **VAT Declaration Alignment**:
   * Posted customer credit notes automatically reduce output VAT reported in Dutch Tax Box `1a` (Domestic 21%), Box `1b` (9%), or intra-community Box `3b`. Ensure the accounting date of the credit note falls into the correct statutory tax return period.
+
+---
+
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Customer Invoice, Vendor Bill, and Credit Note Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
 
 ---
 

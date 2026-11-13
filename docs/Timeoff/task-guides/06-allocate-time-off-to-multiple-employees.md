@@ -2,6 +2,10 @@
 
 The **Multiple Requests** batch allocation tool enables Time Off Officers and HR Administrators to distribute leave allowances to dozens or hundreds of employees in a single administrative operation. Instead of generating individual allocation records one-by-one, administrators can target specific departments, legal company entities, or employee tags.
 
+> **Prerequisites**
+> * Active user account with **Time Off / User** rights.
+> * Configured employee profiles and operational time-off type structures.
+
 ---
 
 ## 1. Batch Allocation Configuration and Execution
@@ -67,10 +71,14 @@ Generate and verify the batch records:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 2. Edge Cases & Recovery Steps
 
 * **Accidental Batch Allocation**: If leave was granted to the wrong group of employees, select all generated records in the **Generated Allocations** list view, click the **Action** gear menu, and click **Refuse** or **Delete**.
 * **Employees Missing from Department Batch**: If a staff member did not receive an allocation during a **By Department** batch, verify that the **Department** field on their employee profile is correctly populated.
+
+---
+
+> For complete field definitions across **Mode**, **Time Off Type**, **Allocation Type**, **Validity Date From / To**, and **Allocated Quantity**, see [**Allocation Record Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#3-allocation-record-attributes).
 
 ---
 

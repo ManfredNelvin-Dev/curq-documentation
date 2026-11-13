@@ -138,6 +138,8 @@ To generate pending bills across multiple supplier contracts simultaneously:
    * Click **Register Payment** for direct bank settlement.
    * Or queue the bill into an electronic SEPA vendor payment batch under **Accounting > Vendors > Payments > SEPA Payment Orders**.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Contract and Recurring Invoicing Field Definitions (Customer and Supplier)](../settings-and-fields/06-customer-contract-and-recurring-invoicing-field-definitions.md).
+
 ---
 
 ## 2. Log Contract Modifications and Terminate Lines
@@ -201,7 +203,7 @@ To monitor recurring vendor subscription expenses, equipment leases, and schedul
 
 ---
 
-## Edge Cases and Recovery Steps
+## 4. Edge Cases and Recovery Steps
 
 * **Vendor Invoice Amount Differs from Contract Rate**: If a supplier sends a bill with variable charges *(such as electricity overage or additional bandwidth)*, open the generated draft bill and adjust the line quantity or unit price to match the physical invoice before clicking **Confirm**.
 * **Duplicate Bill Generated**: If a vendor bill was already created manually before the recurring contract generated its draft, delete or cancel the surplus draft bill. Do not confirm both. If the recurring contract date was already advanced, manually adjust `Date of Next Invoice` on the contract back to the correct billing cycle.

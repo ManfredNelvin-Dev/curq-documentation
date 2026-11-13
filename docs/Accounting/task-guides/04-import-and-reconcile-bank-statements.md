@@ -91,6 +91,8 @@ When payments have already been registered via the **Pay** button on invoices or
 
    ![Customer invoice in Paid state showing Paid ribbon and zero amount due](../media/025.png)
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Statutory Tax Statement and ICP Field Definitions](../settings-and-fields/03-statutory-tax-statement-and-icp-field-definitions.md).
+
 ---
 
 ## 2. Match Bank Statement Lines Directly Without Prior Payment
@@ -192,7 +194,7 @@ When transferring liquidity between two accounts managed within CURQ *(such as t
 
 ---
 
-## Edge Cases & Recovery Steps
+## 5. Edge Cases & Recovery Steps
 
 * **Partial Bank Reconciliation**: If a customer wire transfer covers only part of an open invoice, select the invoice in the reconciliation interface. CURQ applies the statement amount against the invoice and prompts you to choose whether to keep the remainder open as **Partial Payment** or post the difference to a designated write-off account.
 * **Payment Difference Due to Bank Surcharges**: If an international wire incurs an intermediary bank charge resulting in a slight discrepancy *(e.g., invoice is `€ 100.00` but bank statement shows `€ 95.00`)*, select the invoice and use the **Manual Operations** tab to allocate the `€ 5.00` difference directly to `Bank Charges`.

@@ -63,6 +63,8 @@ For custom manufacturing, large enterprise contracts, or service agreements requ
    * Select **Regular invoice** and ensure **Deduct down payments** is checked.
    * CURQ adds the delivered products and automatically inserts negative line items corresponding to the previously billed down payments, ensuring the customer is billed only for the remaining balance.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Batch Process Orders Ready to Invoice
@@ -95,7 +97,7 @@ To process billing efficiently across multiple completed deliveries at the end o
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **"There are no invoiceable lines" Error**: If clicking *Create Invoice* triggers this warning, verify your product invoicing policy under **Product > General Information > Invoicing Policy**. If set to *Delivered quantities*, the warehouse must validate delivery first (`Delivered` column must be greater than `0`).
 * **Correcting an Incorrectly Invoiced Amount**: If an invoice is confirmed with incorrect amounts, open the invoice from the **Invoices** smart button, click **Credit Note**, enter the credit reason, and post the refund. The sales order lines automatically recalculate their un-invoiced balances.
@@ -105,4 +107,5 @@ To process billing efficiently across multiple completed deliveries at the end o
 ## Related Documentation
 * [Process Your First Sale from Quote to Invoice](../getting-started/01-process-your-first-sale.md)
 * [Understanding Invoicing and Fulfillment](../core-concepts/02-understanding-invoicing-and-fulfillment.md)
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)
 * [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

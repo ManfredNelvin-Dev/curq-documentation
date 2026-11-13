@@ -62,8 +62,13 @@ Once **Recurrent** is enabled, CURQ expands the dedicated recurrence parameters:
 
 ---
 
+> For complete definitions of **Repeat**, **Repeat Every**, **Timezone**, and **Until**, see [**Recurrence Configuration Fields**](../settings-and-fields/01-meeting-form-field-definitions.md#2-recurrence-configuration-fields).
+
+---
+
 ## Related Documentation
 
 * [Create Your First Meeting](./01-create-your-first-meeting.md)
 * [Manage Meetings and Attendees](../task-guides/02-manage-meetings-and-attendees.md)
+* [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)
 * [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)

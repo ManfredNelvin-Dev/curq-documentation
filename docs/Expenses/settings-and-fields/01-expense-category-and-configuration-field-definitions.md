@@ -10,7 +10,6 @@ The Expense Categories register (**Expenses > Configuration > Expense Categories
 
 | Field Name | Description |
 | :--- | :--- |
-| **+ New Action Button** | Primary header action button opening a blank form to create a new expense category. |
 | **Name** | Descriptive title of the expense category *(e.g., `Communication`, `Meals`, `Mileage`, `Travel & Accommodation`)*. |
 | **Reference** | Alphanumeric tracking code used for category classification and automated email ingestion *(e.g., `COMM`, `FOOD`, `MIL`, `TRANS & ACC`)*. |
 | **Note Column** | Contextual policy notes, item descriptions, and employee spending rules *(e.g., `Phone bills, postage, etc.`, `Restaurants, business lunches, etc.`)*. |
@@ -39,6 +38,8 @@ The Expense Category form establishes the operational, financial, and tax attrib
 ---
 
 ### 2.2 Financial and Tax Mapping Fields
+
+> **Warning - Cross-System Impact (Accounting & Taxes):** The **Expense Account** and **Purchase Taxes** configured here directly govern journal entries generated in CURQ Accounting when expense reports are posted. Selecting an incorrect GL account or tax grid distorts corporate profit & loss statements and can lead to incorrect VAT returns. Non-technical users should consult with their finance team or accountant before modifying account or tax mappings.
 
 | Field Name | Description |
 | :--- | :--- |

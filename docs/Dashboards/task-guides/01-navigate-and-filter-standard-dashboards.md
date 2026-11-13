@@ -2,6 +2,10 @@
 
 Standard Dashboards provide unified, real-time departmental visibility by aggregating transactional data into intuitive visualizations, scorecards, and operational benchmarks. This guide explains how to open standard dashboards, navigate workspace sidebars, interpret diverse chart types, apply multi-dimensional filters, and drill down into underlying business records.
 
+> **Prerequisites**
+> * Active user account with **Dashboards / User** rights.
+> * Underlying business application activity and reporting data available.
+
 ---
 
 ## 1. Access Standard Dashboards and Adjust Workspace Views
@@ -26,6 +30,8 @@ To maximize canvas space for wide financial tables or complex multi-series chart
 3. To reopen the navigation drawer, click the expand icon (`»`) on the far left edge:
 
    ![Expand the collapsed dashboard sidebar](../media/015.png)
+
+> For sidebar category grouping and display sequence specifications, see [**Dashboard Group Configuration Fields**](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md#1-dashboard-group-configuration-fields).
 
 ---
 
@@ -82,10 +88,12 @@ Combo charts plot two metrics sharing a common horizontal axis but utilizing dif
 
 ![Combo chart displaying hourly revenue bars with average per order line](../media/021.png)
 
-### 2.8 Proportional Share: Pie and Donut Charts
-Pie charts illustrate how a 100% total distributes across defined operational stages or categories *(such as project tasks divided across In Progress, Blocked, Review, and Done)*:
+### 2.8 Proportional Share: Pie / Donut Charts
+**Pie / Donut Chart** widgets illustrate how a 100% total distributes across defined operational stages or categories *(such as project tasks divided across In Progress, Blocked, Review, and Done)*:
 
 ![Pie chart showing distribution of Tasks by State](../media/022.png)
+
+> For full configuration attributes across all chart formats (**Scorecard**, **Column Chart**, **Bar Chart**, **Stacked Bar Chart**, **Line Chart**, **Area Chart**, **Combo Chart**, **Pie / Donut Chart**, and **Gauge / Rating**), see [**Chart and Metric Types Catalog**](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md#1-chart-and-metric-types-catalog).
 
 ---
 
@@ -95,8 +103,8 @@ Global dashboard filters allow you to segment and slice dashboard data dynamical
 
 ![Dashboard filter bar highlighted at the top of the view](../media/004.png)
 
-### 3.1 Select a Timeframe Filter
-1. Click the date dropdown at the top left of the dashboard canvas.
+### 3.1 Select a Timeframe / Date Range Filter
+1. Click the **Timeframe / Date Range** dropdown at the top left of the dashboard canvas.
 2. Choose from pre-configured periods:
    * **Last 30 Days** / **Last 90 Days** / **Last 365 Days**
    * **This Month** / **This Quarter** / **This Year**
@@ -106,12 +114,14 @@ Global dashboard filters allow you to segment and slice dashboard data dynamical
 ### 3.2 Apply Dimensional Segment Filters
 Narrow results by organizational or commercial attributes:
 * **Country**: Filter transactions by customer delivery or billing country.
-* **Product**: Select one or more specific products.
-* **Customer**: Focus on an enterprise account or client group.
+* **Product / Category**: Select one or more specific products, variants, or broader product families.
+* **Customer / Account**: Focus on an enterprise account or client company profile.
 * **Sales Team / Salesperson**: Analyze specific regional teams or individual contributors.
-* **Campaign Source & Medium**: Evaluate marketing campaign attribution.
+* **UTM Campaign Source & UTM Medium**: Evaluate marketing campaign attribution *(e.g., Google, Newsletter, CPC, organic)*.
 
 All connected scorecards, graphs, and tables recalculate immediately upon selecting or deselecting a filter option.
+
+> For operational scope and query behavior of every global filter parameter, see [**Standard Dashboard Global Filter Parameters**](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md#2-standard-dashboard-global-filter-parameters).
 
 ---
 
@@ -146,4 +156,4 @@ To collaborate with colleagues on specific analytical views:
 * [Explore Standard Dashboards and KPIs](../getting-started/01-explore-standard-dashboards-and-kpis.md)
 * [Dashboard Chart and Filter Definitions](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md)
 * [Configure Dashboard Groups and Access Rights](./03-configure-dashboard-groups-and-access-rights.md)
-
+* [Dashboard Configuration and Group Specifications](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md)

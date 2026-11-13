@@ -62,7 +62,7 @@ Once the timer is initiated, CURQ provides real-time visual feedback:
 4. Conclude the work block:
    * Click **Stop work** in the upper action bar to stop the timer and post completed hours to the timesheet ledger.
 
-> For a detailed explanation of live work timer modal parameters, timesheet row attributes, and running clock indicators, see [**Start Work Modal and Timesheets Tab Data Dictionary**](../settings-and-fields/03-project-task-field-definitions.md#4-start-work-modal-and-timesheets-tab-data-dictionary).
+> For a detailed explanation of live work timer modal parameters, timesheet row attributes, and running clock indicators, see [**Start Work Modal and Timesheets Tab Data Dictionary**](../settings-and-fields/03-project-task-field-definitions.md#4-start-work-modal-and-timesheets-tab-data-dictionary) and [**Active Work Tracking Controls**](../settings-and-fields/03-project-task-field-definitions.md#5-active-work-tracking-controls).
 
 ---
 

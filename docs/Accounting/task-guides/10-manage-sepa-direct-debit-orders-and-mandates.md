@@ -203,7 +203,7 @@ Once the clearing bank processes the direct debit file and credits the net colle
 
 ---
 
-## Edge Cases and Compliance Guidelines
+## 2. Edge Cases and Compliance Guidelines
 
 * **Debtor Reversals and Chargebacks (*Storno*)**:
   * If a customer disputes a collection or their bank rejects the debit due to insufficient funds (*Storno*):

@@ -4,7 +4,7 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-## Pipeline Stage Properties
+## 1. Pipeline Stage Properties
 
 | Field Name | Description |
 | :--- | :--- |
@@ -15,7 +15,7 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-## Sales Team Parameters
+## 2. Sales Team Parameters
 
 | Parameter | Description |
 | :--- | :--- |
@@ -34,7 +34,9 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-## Rule-Based Assignment Parameters
+## 3. Rule-Based Assignment Parameters
+
+> **Warning (Domain Filter Syntax & Lead Routing Risk):** An invalid domain expression or conflicting logical condition in the **Assignment Domain** will cause the automated background lead routing job to fail silently. Inbound leads will remain unassigned and orphaned, disrupting the sales pipeline. Non-technical users should test criteria by clicking the record counter next to the domain builder to ensure expected records match before activating automated routing.
 
 | Setting | Description |
 | :--- | :--- |
@@ -45,7 +47,7 @@ This document provides factual specifications and data tables for pipeline stage
 
 ---
 
-## Predictive Lead Scoring Parameters
+## 4. Predictive Lead Scoring Parameters
 
 | Parameter | Description |
 | :--- | :--- |

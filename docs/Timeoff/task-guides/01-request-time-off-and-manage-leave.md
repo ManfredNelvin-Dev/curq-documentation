@@ -2,6 +2,10 @@
 
 The **Request Time Off** workflow allows employees to submit leave requests for planned vacations, illness, personal appointments, or unpaid absences. Employees can specify exact dates, select half-day or hourly durations, attach supporting verification documents, and monitor approval status in real time.
 
+> **Prerequisites**
+> * Active user account with **Time Off / User** rights.
+> * Configured employee profiles and operational time-off type structures.
+
 ---
 
 ## 1. Create and Configure Time-Off Requests
@@ -26,7 +30,7 @@ Employees can initiate a leave request from the dedicated self-service view:
 8. If the leave type requires verification *(such as a medical certificate)*, attach the necessary file under **Supporting Document**.
 9. Click **Save & Close** to submit the request for approval.
 
-> For complete field definitions and validation behavior, see [**Employee Leave Request Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#employee-leave-request-fields).
+> For complete field definitions and validation behavior, see [**Employee Leave Request Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#2-employee-leave-request-fields).
 
 ---
 
@@ -105,7 +109,7 @@ Once submitted, monitor your request through its approval milestones in **My Tim
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Supporting Document Required**: If submitting fails with a missing attachment prompt, ensure your medical certificate or proof document is attached under **Supporting Document** before saving.
 * **Insufficient Leave Balance**: If an alert indicates the requested duration exceeds your remaining balance, verify whether the leave category allows negative caps or request an additional allowance via **My Time → My Allocations**.

@@ -2,6 +2,10 @@
 
 This guide outlines how system administrators and operations leads configure time encoding units, reporting period ranges, workweek calendar start days, and managerial review policies in CURQ Timesheets.
 
+> **Prerequisites**
+> * Active user account with **Timesheets / Administrator** rights.
+> * Assigned project tasks and active analytic accounts in **Projects**.
+
 ---
 
 ## 1. Configure Encoding Units and Review Policies
@@ -57,7 +61,7 @@ Designate who is authorized to review and validate submitted employee timesheets
    * **By HR Managers**: Restricts validation authority exclusively to senior HR managers.
    * **By Timesheets Managers**: Directs review notifications to departmental timesheet supervisors.
 
-> For complete parameter descriptions, default values, and operational impacts of each setting, see [**Global System Settings**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#global-system-settings).
+> For complete parameter descriptions, default values, and operational impacts of each setting, see [**Global System Settings**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#1-global-system-settings).
 
 ---
 
@@ -66,6 +70,10 @@ Designate who is authorized to review and validate submitted employee timesheets
 1. Review all updated selections to ensure alignment with HR guidelines.
 2. Click **Save** in the top action bar.
 3. The new settings apply immediately to newly generated timesheet sheets and tracking sessions.
+
+---
+
+> **Tip (Advised Settings):** Enforce weekly sheet submission deadlines and activate billing rates linked directly to employee contract profiles.
 
 ---
 

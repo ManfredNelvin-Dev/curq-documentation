@@ -9,7 +9,7 @@ Record non-operational transactions, adjust general ledger balances, set up init
 >
 >   ![Chart of Accounts configuration form showing code, name, and account type](../media/073.png)
 >
->   > For complete Chart of Accounts field and RGS classification definitions, see [**Chart of Accounts Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#chart-of-accounts-field-definitions).
+>   > For complete Chart of Accounts field and RGS classification definitions, see [**Chart of Accounts Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#1-chart-of-accounts-field-definitions).
 > * Ensure a **Miscellaneous Operations** journal *(or dedicated adjusting journal)* is configured in **Configuration > Journals**.
 > * Confirm that the target accounting period is not blocked by a fiscal lock date.
 
@@ -178,7 +178,7 @@ For statutory compliance and tamper-evident audit trails, CURQ enables cryptogra
 
 ---
 
-## Edge Cases & Recovery Steps
+## 7. Edge Cases & Recovery Steps
 
 * **Modifying a Posted Journal Entry**: If an error is discovered on a posted entry before the fiscal period is locked, open the entry and click **Reset to Draft**. Make the required line adjustments, verify that debits still equal credits, and click **Post**.
 * **Fiscal Lock Date Prevents Editing**: If an entry falls inside a locked period, CURQ prevents both **Reset to Draft** and direct edits *(see [**Manage Lock Dates and Fiscal Year-End Closing**](./12-manage-lock-dates-and-fiscal-year-end-closing.md))*. Do not modify the historical period; instead, use **Reverse Entry** or create a new adjusting entry in the current open fiscal period.

@@ -187,7 +187,7 @@ Accountants can review customer receivables profiles and catalog tax assignments
 
 ---
 
-## Edge Cases & Recovery Steps
+## 5. Edge Cases & Recovery Steps
 
 * **Modifying an Invoice in Draft State**: If an error is spotted before clicking Confirm, edit quantities, accounts, or pricing directly on the form. A draft invoice can be cancelled or deleted without affecting financial reporting or sequence numbering.
 * **Modifying an Invoice After Posting**: Once confirmed, statutory rules prevent direct edits to amounts, accounts, or quantities. To correct a posted invoice, click **Credit Note** to reverse the incorrect entry, then issue a corrected replacement invoice.
@@ -197,7 +197,7 @@ Accountants can review customer receivables profiles and catalog tax assignments
   ![Fiscal Positions form showing domestic and export tax mapping rules](../media/080.png)
   ![Fiscal Positions Account Mapping tab](../media/081.png)
 
-  > For complete fiscal position configuration specifications, see [**Fiscal Positions Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#fiscal-positions-field-definitions).
+  > For complete fiscal position configuration specifications, see [**Fiscal Positions Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#4-fiscal-positions-field-definitions).
 
 ---
 

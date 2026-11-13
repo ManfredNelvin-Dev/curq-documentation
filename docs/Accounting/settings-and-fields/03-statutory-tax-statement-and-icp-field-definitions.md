@@ -4,7 +4,7 @@ This document provides factual technical specifications, field behaviors, column
 
 ---
 
-## Header Fields
+## 1. Header Fields
 
 The header section establishes the reporting legal entity, calendar boundaries, calculation rules, and operational timestamps for the tax declaration.
 
@@ -22,11 +22,11 @@ Navigate to: **Accounting > Reporting > NL BTW Statement**
 
 ---
 
-## BTW Statement Tab Columns and Tax Box Specifications
+## 2. BTW Statement Tab Columns and Tax Box Specifications
 
 The **BTW Statement** tab displays the aggregated tax declaration matrix structured according to statutory Dutch Belastingdienst reporting categories.
 
-### Table Columns
+### 2.1 Table Columns
 | Field Name | Description |
 | :--- | :--- |
 | **Code** | Official statutory tax box identifier defined by the Dutch Tax and Customs Administration *(e.g., `1a`, `3a`, `4a`, `5b`, `5g`)*. |
@@ -34,7 +34,7 @@ The **BTW Statement** tab displays the aggregated tax declaration matrix structu
 | **Turnover** | Aggregated untaxed net revenue or procurement base amount subject to this tax category. Clicking the magnifying glass displays contributing journal items. |
 | **VAT** | Calculated monetary sales tax payable or deductible for this box. Clicking the magnifying glass displays contributing journal items. |
 
-### Statutory Tax Box Definitions (Rubrieken 1 t/m 5)
+### 2.2 Statutory Tax Box Definitions (Rubrieken 1 t/m 5)
 | Field Name | Description |
 | :--- | :--- |
 | **`1a`** (*Leveringen/diensten belast met hoog tarief*) | Evaluates credit lines on income accounts with high VAT (`+1a (omzet)`) and tax account `1205010.00` (`+1a (BTW)`). Standard 21% domestic sales. |
@@ -56,7 +56,7 @@ The **BTW Statement** tab displays the aggregated tax declaration matrix structu
 
 ---
 
-## Past Undeclared Moves Tab Fields
+## 3. Past Undeclared Moves Tab Fields
 
 The **Past Undeclared Moves** tab enables capturing late-posted invoices from closed prior tax periods without filing an independent supplementary return (*suppletie-aangifte*).
 
@@ -73,7 +73,7 @@ The **Past Undeclared Moves** tab enables capturing late-posted invoices from cl
 
 ---
 
-## ICP Statement Tab Columns
+## 4. ICP Statement Tab Columns
 
 The **ICP Statement** tab compiles the statutory Intra-Community Transactions Declaration (*Opgaaf intracommunautaire prestaties - ICP*) for supplies to VAT-registered businesses across the European Union.
 
@@ -89,7 +89,7 @@ The **ICP Statement** tab compiles the statutory Intra-Community Transactions De
 
 ---
 
-## Document Status Lifecycle
+## 5. Document Status Lifecycle
 
 The NL BTW Statement progresses through three formal operational and legal states:
 
@@ -101,7 +101,7 @@ The NL BTW Statement progresses through three formal operational and legal state
 
 ---
 
-## Statutory Export Formats
+## 6. Statutory Export Formats
 
 Generated via the **gear icon** > **Print** menu on posted statements:
 
@@ -114,7 +114,7 @@ Generated via the **gear icon** > **Print** menu on posted statements:
 
 ---
 
-## Auditfile Export Registry Fields
+## 7. Auditfile Export Registry Fields
 
 The Auditfile export registry lists compiled Belastingdienst XML audit files under **Reporting > OCA accounting reports > Auditfile export**.
 
@@ -127,7 +127,7 @@ The Auditfile export registry lists compiled Belastingdienst XML audit files und
 
 ---
 
-## Auditfile Export Form Fields
+## 8. Auditfile Export Form Fields
 
 Configured when clicking **+ New** on the Auditfile export registry:
 

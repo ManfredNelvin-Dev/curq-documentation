@@ -2,6 +2,10 @@
 
 Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, track lead inflow trends, and monitor team activity completion.
 
+> **Prerequisites**
+> * Active user account with **CRM / User** rights.
+> * Active sales team and defined pipeline stages in **CRM**.
+
 ---
 
 ## 1. Pipeline Forecasts and Stage Analysis
@@ -53,6 +57,8 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
    * **Chart Types**: Click icons in the top control bar to switch between **Bar Chart**, **Line Chart**, and **Pie Chart**.
    * **Pivot View**: Click the **Pivot** icon in the top right to open the dedicated multi-dimensional matrix.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md).
+
 ---
 
 ## 2. Analyze Inbound Lead Inflow and Marketing Sources
@@ -95,7 +101,7 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Missing Inactive Deals in Reports**: Pipeline reports evaluate active opportunities by default. To analyze lost opportunities, click into the search bar and select **Filters > Lost**.
 
@@ -105,3 +111,4 @@ Evaluate commercial revenue forecasts, analyze pipeline conversion velocity, tra
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
 * [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [Schedule and Execute Sales Activities](./04-schedule-and-track-sales-activities.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

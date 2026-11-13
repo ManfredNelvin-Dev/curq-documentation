@@ -4,7 +4,9 @@ This document catalogs the configuration fields, calculation frequencies, and al
 
 ---
 
-## Accrual Plan Attributes
+## 1. Accrual Plan Attributes
+
+> **Warning - Cross-System Impact (Employee Compensation & Financial Liabilities):** Modifying accrual formulas, frequency cycles, or **Carry-Over Time** rules affects all enrolled employees across the company retroactively. Setting an incorrect carry-over rule can either wipe out legitimate employee earned leave (triggering labor disputes) or generate unbounded carryover balances that inflate accrued payroll liabilities on the company balance sheet. Non-technical administrators should always test new accrual plans on a test employee record before assigning company-wide.
 
 The following fields define master accrual plans in **Time Off > Configuration > Accrual Plans**:
 
@@ -18,26 +20,22 @@ The following fields define master accrual plans in **Time Off > Configuration >
 
 ---
 
-## Accrual Milestone Level Attributes
+## 2. Accrual Milestone Level Attributes
 
 The following settings configure individual milestone rules within an accrual plan:
 
-| Milestone Field | Operational Behavior & Boundaries |
+| Field Name | Operational Behavior & Boundaries |
 | :--- | :--- |
-| **Start Accruing** | Waiting period before milestone takes effect relative to allocation start date *(e.g., `3 Months`, `1 Year`)*. |
-| **Amount** | Numeric quantity of leave credited per frequency cycle *(e.g., `1.50`)*. |
-| **Unit** | Unit of measurement for added leave: **Day** or **Hours**. |
-| **Frequency** | Interval at which accrual executes: **Daily**, **Weekly**, **Twice a month**, **Monthly**, **Twice a year**, or **Yearly**. |
-| **Cap Accrued Time** | Toggle enabling an absolute ceiling on total accumulated leave under this rule. |
-| **Maximum Accrued Time** | Numerical maximum balance cap permitted *(e.g., `30.00 Days`)*. Accrual halts once this threshold is reached. |
-| **Carry Over Action** | Determines year-end balance rollover: **Lost** *(unconsumed balance resets to zero)*, **All** *(roll over full balance)*, or **Maximum** *(roll over up to a defined ceiling)*. |
-| **Maximum Carry Over** | Maximum days or hours allowed to roll forward when carry-over action is set to maximum. |
-| **Milestone Cap** | Annual accumulation ceiling restricting total days an employee can earn within a 12-month cycle. |
-| **Carry Over Validity** | Duration during which rolled-over leave remains valid before expiring *(e.g., `90 Days`)*. |
+| **Employee accrue** | Defines the accrual rate per cycle: **Amount** *(e.g., `1`, `1.5`)*, **Unit** (**Days** or **Hours**), and **Frequency** (**Daily**, **Weekly**, **Twice a month**, **Monthly**, **Twice a year**, or **Yearly**). |
+| **Cap accrued time** | Checkbox enabling an absolute ceiling on total accumulated leave under this rule, with the numeric cap and unit *(e.g., `100 Days`)*. |
+| **Start Accruing** | Waiting period *(numeric value and unit, e.g., `1 Days`)* after the allocation start date before the milestone begins accruing. |
+| **Carry over** | Determines year-end balance rollover: **None. Accrued time reset to 0** *(forfeits unused balance)*, **All accrued time carried over** *(rolls over full balance)*, or **Carry over with a maximum** *(rolls over up to a specified cap)*. |
+| **Milestone cap** | Checkbox enabling an annual accumulation limit restricting total leave earned under this milestone tier. |
+| **Carry Over Validity** | Checkbox enabling an expiration duration during which rolled-over leave remains valid before lapsing *(e.g., `90 Days`)*. |
 
 ---
 
-## Allocation Record Attributes
+## 3. Allocation Record Attributes
 
 The following settings configure allocation grants in **Management > Allocations**:
 
@@ -60,3 +58,4 @@ The following settings configure allocation grants in **Management > Allocations
 * [Configure Accrual Plans and Milestones](../task-guides/08-configure-accrual-plans-and-milestones.md)
 * [Grant and Validate Employee Allocations](../task-guides/05-grant-and-validate-employee-allocations.md)
 * [Understanding Time Off Types and Accrual Architecture](../core-concepts/01-understanding-time-off-types-and-accrual-architecture.md)
+* [Holidays, Mandatory Days, and Activity Specifications](03-holidays-mandatory-days-and-activity-specifications.md)

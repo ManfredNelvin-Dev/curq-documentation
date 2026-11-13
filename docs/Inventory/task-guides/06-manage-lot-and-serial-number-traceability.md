@@ -8,7 +8,9 @@ This operational guide provides procedures for inventory managers, quality contr
 
 ---
 
-## 1. Access the Lots and Serial Numbers Register
+## 1. Manage and Trace Lots and Serial Numbers
+
+### 1.1 Access the Lots and Serial Numbers Register
 
 1. In the top navigation bar of CURQ Inventory, click the **Products** dropdown menu.
 2. Select **Lots / Serial Numbers**:
@@ -24,11 +26,11 @@ This operational guide provides procedures for inventory managers, quality contr
    * CURQ generates upstream traceability *(tracing back to vendor purchase orders and incoming delivery receipts)* and downstream traceability *(tracing forward to customer sales orders and outbound shipments)*.
 
 
-> **Tip:** For more details about navigation shortcuts and tracking columns on the register, see [**Products Navigation Dropdown Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#9-products-navigation-dropdown-data-dictionary) and [**Lots / Serial Numbers Register Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#10-lots--serial-numbers-register-data-dictionary).
+> For more details about tracking columns and view controls on the register, see [**Lots / Serial Numbers Register Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#4-lots--serial-numbers-register-data-dictionary).
 
 ---
 
-## 2. Create or Pre-Allocate a Lot or Serial Number
+### 1.2 Create or Pre-Allocate a Lot or Serial Number
 
 While serial numbers are commonly captured at the dock during inbound receiving, warehouse teams can manually pre-create and allocate serial identifiers before shipments arrive:
 
@@ -48,11 +50,11 @@ While serial numbers are commonly captured at the dock during inbound receiving,
    * **On Hand Quantity**: Displays `0.00` upon creation. This counter increments automatically when goods carrying this serial number are validated on an inbound receipt *(e.g., `WH/IN/00070`)*.
    * **Total Value & Average Cost**: Computed automatically from inventory valuation ledger entries once stock is received into warehouse storage.
 
-> **Tip:** For more details about identifier strings, internal references, and cost parameters, see [**Lot / Serial Number Form View Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#11-lot--serial-number-form-view-data-dictionary).
+> For more details about identifier strings, internal references, and cost parameters, see [**Lot / Serial Number Form View Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#5-lot--serial-number-form-view-data-dictionary).
 
 ---
 
-## 3. Audit Location and Traceability Smart Controls
+### 1.3 Audit Location and Traceability Smart Controls
 
 Once saved and associated with physical stock moves, the record header provides direct drill-down buttons:
 
@@ -64,12 +66,10 @@ Once saved and associated with physical stock moves, the record header provides 
 
 ---
 
-## 4. Operational Best Practices: Dock Intake vs Manual Pre-Creation
+## 2. Operational Best Practices: Dock Intake vs Manual Pre-Creation
 
-* **Direct Dock Assignment**: In high-volume operations, serial numbers are typically scanned or entered directly in the **Detailed Operations** table of an active inbound receipt *(as detailed in [Audit Inbound Detailed Operations](./02-process-inbound-receipts-and-vendor-deliveries.md#6-audit-inbound-detailed-operations-and-tracking-identifiers))*.
+* **Direct Dock Assignment**: In high-volume operations, serial numbers are typically scanned or entered directly in the **Detailed Operations** table of an active inbound receipt *(as detailed in [Audit Inbound Detailed Operations](./02-process-inbound-receipts-and-vendor-deliveries.md#22-audit-inbound-detailed-operations-and-tracking-identifiers))*.
 * **Manual Pre-Creation**: Use this manual form when vendors supply advance shipping notices (ASNs) with pre-allocated serial numbers, when pre-printing asset barcode tags before unloading, or when migrating legacy inventory balances.
-
-> **Tip:** For more details about dock intake serial number fields on transfer lines, see [**Detailed Operations Grid Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#2-detailed-operations-grid-data-dictionary).
 
 ---
 

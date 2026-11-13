@@ -50,17 +50,19 @@ By default, newly created channels are public to all internal users. If you need
 1. Hover over `#operations` in the left sidebar and click the **Gear** (Settings) icon.
 2. In the channel form view, enter a brief description in the **Description** field (e.g., `Daily logistics, order fulfillment, and dispatch updates`).
 3. Select the **Privacy** tab:
-   * View the default **Authorized Group** (e.g., `User types / Internal User`) or configure group access rules.
+   * View the default **Authorized Group** (e.g., `User types / Internal User`), or configure **Auto Subscribe Groups** and **Auto Subscribe Departments** rules.
 
    ![Channel privacy settings](../media/014.png)
 
 4. Select the **Members** tab:
-   * Click **Add a line**.
-   * Select a teammate (e.g., `George Watson` or `John Doe`) from the dropdown to add them to the channel roster.
+   * Click **Add a line** under the **Partner** column.
+   * Select a teammate (e.g., `George Watson` or `John Doe`) from the dropdown to add them to the channel roster *(external portal attendees appear under **Guest**)*.
 
    ![Channel members tab](../media/015.png)
 
 5. Click the cloud icon in the top header to save your channel configuration.
+
+> For definitions of **Group Name**, **Description**, **Privacy Tab**, and **Members Tab** fields, see [**General and Technical Channel Fields**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#11-general-and-technical-channel-fields), [**Privacy Tab**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#12-privacy-tab), and [**Members Tab**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#13-members-tab).
 
 ---
 
@@ -101,6 +103,10 @@ Now that your call is active, familiarize yourself with the media control toolba
 Because you used the **Start a meeting** feature, the temporary conference room closes automatically once all participants disconnect, leaving your permanent channels clean and uncluttered.
 
 Congratulations! You have configured a team communication channel and hosted an instant real-time conference.
+
+---
+
+> For detailed audio threshold and video background blur parameters, see [**Voice and Audio Parameters**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#1-voice-and-audio-parameters) and [**Video Display and Privacy Parameters**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#2-video-display-and-privacy-parameters).
 
 ---
 

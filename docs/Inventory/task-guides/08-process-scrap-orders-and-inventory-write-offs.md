@@ -9,7 +9,9 @@ This operational guide provides procedures for inventory controllers, warehouse 
 
 ---
 
-## 1. Access the Scrap Orders Register
+## 1. Create and Validate Scrap Orders
+
+### 1.1 Access the Scrap Orders Register
 
 1. In the top navigation bar, click the **Operations** menu.
 2. Under the **Adjustments** section, click **Scrap**:
@@ -20,11 +22,11 @@ This operational guide provides procedures for inventory controllers, warehouse 
    * As indicated in the register overview, scrapping an item removes it from physical warehouse storage *(e.g., `WH/Stock`)* and transfers it to `Virtual Locations/Scrap`.
    * This preserves historical traceability and financial loss reporting without polluting active picking bins.
 
-> **Tip:** For more details about the fields and controls on the scrap orders register, see [**Scrap Orders Register Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#3-scrap-orders-register-data-dictionary).
+> For more details about the fields and controls on the scrap orders register, see [**Scrap Orders Register Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#2-scrap-orders-register-data-dictionary).
 
 ---
 
-## 2. Create and Configure a New Scrap Order
+### 1.2 Create and Configure a New Scrap Order
 
 1. In the upper-left action bar of the Scrap Orders register, click **+ New**.
 2. CURQ opens the blank scrap order form:
@@ -39,11 +41,11 @@ This operational guide provides procedures for inventory controllers, warehouse 
    * **Scrap Reason**: Select or type the justification for the write-off *(e.g., `Transit Damage`)*.
    * **Source Document**: Record cross-module references such as the originating vendor receipt *(e.g., `WH/IN/00070`)*, delivery order, or internal quality audit ticket.
 
-> **Tip:** For more details about the fields and action controls on the scrap order form, see [**Scrap Order Form Fields and Action Controls Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#4-scrap-order-form-fields-and-action-controls-data-dictionary).
+> For more details about the fields and action controls on the scrap order form, see [**Scrap Order Form Fields and Action Controls Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#3-scrap-order-form-fields-and-action-controls-data-dictionary).
 
 ---
 
-## 3. Validate and Review Completed Scrap Orders
+### 1.3 Validate and Review Completed Scrap Orders
 
 Once the product, quantity, and operational context are verified:
 
@@ -61,7 +63,9 @@ Once the product, quantity, and operational context are verified:
 
 ---
 
-## 4. Access Product Moves via Header Smart Button
+## 2. Audit Scrap Stock Moves and History
+
+### 2.1 Access Product Moves via Header Smart Button
 
 From the validated scrap order header, locate the navigation smart button:
 
@@ -70,11 +74,11 @@ From the validated scrap order header, locate the navigation smart button:
 1. Click the **Product Moves** smart button in the upper control bar.
 2. CURQ redirects to the filtered stock movement register documenting the physical transfer out of warehouse inventory.
 
-> **Tip:** For more details about the validated scrap form and header smart buttons, see [**Validated Scrap Order and Smart Controls Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#5-validated-scrap-order-and-smart-controls-data-dictionary).
+> For more details about the validated scrap form and header smart buttons, see [**Validated Scrap Order and Smart Controls Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#4-validated-scrap-order-and-smart-controls-data-dictionary).
 
 ---
 
-## 5. Audit Stock Movements in Moves History
+### 2.2 Audit Stock Movements in Moves History
 
 CURQ displays the **Moves History** register filtered to the active scrap reference:
 
@@ -90,11 +94,11 @@ CURQ displays the **Moves History** register filtered to the active scrap refere
    * **Status**: Confirms finalized execution with a green **Done** badge.
 2. Click anywhere on the table row to inspect the granular stock move record.
 
-> **Tip:** For more details about the columns and stock movement entries on the moves history register, see [**Scrap Moves History Register Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#6-scrap-moves-history-register-data-dictionary).
+> For more details about the columns and stock movement entries on the moves history register, see [**Scrap Moves History Register Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#5-scrap-moves-history-register-data-dictionary).
 
 ---
 
-## 6. Inspect Individual Stock Move Record Attributes
+### 2.3 Inspect Individual Stock Move Record Attributes
 
 CURQ opens the individual stock move form detailing operational execution:
 
@@ -109,7 +113,7 @@ CURQ opens the individual stock move form detailing operational execution:
    * **Quantity**: Exact count of physical units transferred *(e.g., `2.00 Units`)*.
    * **Done By**: User avatar logging the warehouse specialist who validated the physical movement.
 
-> **Tip:** For more details about the lifecycle pipeline and movement fields on the individual move record, see [**Stock Move Record Form Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#7-stock-move-record-form-data-dictionary).
+> For more details about the lifecycle pipeline and movement fields on the individual move record, see [**Stock Move Record Form Data Dictionary**](../settings-and-fields/03-physical-inventory-and-scrap-field-definitions.md#6-stock-move-record-form-data-dictionary).
 
 ---
 

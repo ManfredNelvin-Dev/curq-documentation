@@ -4,7 +4,7 @@ This document provides factual specifications and configuration parameters for n
 
 ---
 
-## Global Notification Configuration Parameters
+## 1. Global Notification Configuration Parameters
 
 Parameters configured under **Discuss > Configuration > Notifications**:
 
@@ -16,7 +16,7 @@ Parameters configured under **Discuss > Configuration > Notifications**:
 
 ---
 
-## Channel Notification Level Options
+## 2. Channel Notification Level Options
 
 Rules selectable per-channel via the header **Bell** icon:
 
@@ -30,7 +30,7 @@ Rules selectable per-channel via the header **Bell** icon:
 
 ---
 
-## Document Chatter Subscription Event Types
+## 3. Document Chatter Subscription Event Types
 
 Subtype triggers available when following business records (Sales Orders, Invoices, CRM Deals):
 
@@ -43,7 +43,8 @@ Subtype triggers available when following business records (Sales Orders, Invoic
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Configure Notification Preferences and Do-Not-Disturb](../task-guides/05-configure-notification-preferences-and-dnd.md)
 * [Collaborate Using Record Chatter](../task-guides/09-collaborate-using-record-chatter.md)
 * [Channel and Chat Settings Definitions](01-channel-and-chat-settings-definitions.md)
+* [Voice, Video, and Canned Responses Specifications](03-voice-video-and-canned-responses-specifications.md)

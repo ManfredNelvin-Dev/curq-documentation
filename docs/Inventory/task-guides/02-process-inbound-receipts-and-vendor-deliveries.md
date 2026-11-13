@@ -9,7 +9,9 @@ This operational guide provides procedures for warehouse receiving specialists a
 
 ---
 
-## 1. Access and Triage the Receipts Queue
+## 1. Process and Validate Inbound Receipts
+
+### 1.1 Access and Triage the Receipts Queue
 
 Warehouse receiving teams monitor inbound freight arrivals directly from the central dashboard:
 
@@ -25,12 +27,9 @@ Warehouse receiving teams monitor inbound freight arrivals directly from the cen
    * **Operations (4)**: Total quantity of active receiving orders in the operational queue.
 4. Click the dark blue **3 To Receive** button to open the receiving register.
 
-
-> **Tip:** For more details about operation card counters, backorder metrics, and pending intake indicators, see [**Operation Type Card Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#2-operation-type-card-data-dictionary).
-
 ---
 
-## 2. Filter and Prioritize Ready Inbound Deliveries
+### 1.2 Filter and Prioritize Ready Inbound Deliveries
 
 CURQ opens the receipts register pre-filtered to isolate actionable inbound shipments:
 
@@ -51,11 +50,11 @@ CURQ opens the receipts register pre-filtered to isolate actionable inbound ship
 
 4. Click on the reference link for **WH/IN/00070** to open the receiving transfer form.
 
-> **Tip:** For more details about the fields and columns on the receipts register, see [**Receipts List Register Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#4-receipts-list-register-data-dictionary).
+> For more details about the fields and columns on the receipts register, see [**Receipts List Register Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#1-receipts-list-register-data-dictionary).
 
 ---
 
-## 3. Inspect Inbound Transfer Lines and Verify Received Quantities
+### 1.3 Inspect Inbound Transfer Lines and Verify Received Quantities
 
 On the inbound receipt form view:
 
@@ -72,11 +71,11 @@ On the inbound receipt form view:
    * **Quantity**: Actual physically counted units received at the unloading dock *(e.g., `4.00 Units`)*.
 3. If partial delivery occurs, adjust the **Quantity** field to match physical counts. Upon validation, CURQ prompts operators to generate a Backorder for remaining units.
 
-> **Tip:** For more details about partner fields, locations, and line item parameters, see [**Ready Inbound Receipt Form and Operations Tab Definitions**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#6-ready-inbound-receipt-form-and-operations-tab-definitions).
+> For more details about partner fields, locations, and line item parameters, see [**Ready Inbound Receipt Form and Operations Tab Definitions**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#3-ready-inbound-receipt-form-and-operations-tab-definitions).
 
 ---
 
-## 4. Validate Stock Intake and Commit Inventory to Storage
+### 1.4 Validate Stock Intake and Commit Inventory to Storage
 
 Once physical counting and quality control inspections are complete:
 
@@ -86,11 +85,13 @@ Once physical counting and quality control inspections are complete:
 2. If quantities match total demand, CURQ immediately executes the stock move.
 3. If quantities are zero, CURQ prompts to apply default quantities matching demand.
 
-> **Tip:** For more details about validation triggers, delivery slip generation, and cancellation controls, see [**Receipt Validation Action Controls**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#7-receipt-validation-action-controls).
+> For more details about validation triggers, delivery slip generation, and cancellation controls, see [**Receipt Validation Action Controls**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#4-receipt-validation-action-controls).
 
 ---
 
-## 5. Review Validated Receipt State and Valuation Impact
+## 2. Audit Validated Receipts and Stock Valuation
+
+### 2.1 Review Validated Receipt State and Valuation Impact
 
 Upon successful validation, CURQ updates the transfer form to its finalized state:
 
@@ -107,11 +108,9 @@ Upon successful validation, CURQ updates the transfer form to its finalized stat
 4. **Audit Chatter Log**:
    * The chatter feed logs the state transition: `Ready -> Done (Status)` alongside automated creation timestamps.
 
-> **Tip:** For more details about validated transfer state indicators and effective date logging, see [**Validated Receipt Form and Valuation Smart Controls**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#8-validated-receipt-form-and-valuation-smart-controls).
-
 ---
 
-## 6. Audit Inbound Detailed Operations and Tracking Identifiers
+### 2.2 Audit Inbound Detailed Operations and Tracking Identifiers
 
 From the validated receipt header, warehouse operators click the **Moves** smart button to inspect granular stock move lines and product identification:
 
@@ -124,11 +123,9 @@ From the validated receipt header, warehouse operators click the **Moves** smart
    * **Unit of Measure**: Standard measuring unit applied *(e.g., `Units`)*.
 2. Navigate back to the receipt form using the breadcrumb link *(e.g., `WH/IN/00070`)*.
 
-> **Tip:** For more details about source bins, lot numbers, and picked move lines, see [**Detailed Operations Grid Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#2-detailed-operations-grid-data-dictionary).
-
 ---
 
-## 7. Audit Inbound Stock Valuation and Ledger Postings
+### 2.3 Audit Inbound Stock Valuation and Ledger Postings
 
 From the receipt header, click the **Valuation** smart button to audit inventory financial impacts:
 
@@ -142,11 +139,13 @@ From the receipt header, click the **Valuation** smart button to audit inventory
    * **Total Value**: Balance sheet inventory asset value adjustment *(e.g., `€ 0.00`)* calculated from supplier cost pricing.
 2. Confirm that positive inventory debits balance with accounts payable accruals in CURQ Accounting.
 
-> **Tip:** For more details about financial stock ledger entries and quantity deltas, see [**Stock Valuation Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#11-stock-valuation-register-data-dictionary).
+> For more details about financial stock ledger entries and quantity deltas, see [**Stock Valuation Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#4-stock-valuation-register-data-dictionary).
 
 ---
 
-## 8. Create an Ad-Hoc Receipt and Define Product Demand
+## 3. Create Ad-Hoc Receipts and Logistics Notes
+
+### 3.1 Create an Ad-Hoc Receipt and Define Product Demand
 
 When receiving unannounced deliveries or manual inventory transfers:
 
@@ -163,11 +162,11 @@ When receiving unannounced deliveries or manual inventory transfers:
    * Select the **Product**, enter the expected **Demand**, and confirm the **Unit** of measure.
 4. Click **Mark as Todo** to advance the draft receipt to **Ready** status.
 
-> **Tip:** For more details about draft receipt creation controls, see [**Receipt Form Header and Action Controls**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#5-receipt-form-header-and-action-controls).
+> For more details about draft receipt creation controls, see [**Receipt Form Header and Action Controls**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#2-receipt-form-header-and-action-controls).
 
 ---
 
-## 9. Record Shipping Logistics and Ownership Metadata
+### 3.2 Record Shipping Logistics and Ownership Metadata
 
 Click the **Additional Info** tab to track logistical parameters and assign accountability:
 
@@ -184,11 +183,11 @@ Click the **Additional Info** tab to track logistical parameters and assign acco
    * **Sales Order**: Connects incoming stock to an active customer sales contract for direct cross-docking.
    * **Project**: Designates project allocation if materials are dedicated to a specific client engagement.
 
-> **Tip:** For more details about carrier logistics, tracking numbers, and shipping weights, see [**Additional Info Tab Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#9-additional-info-tab-data-dictionary).
+> For more details about carrier logistics, tracking numbers, and shipping weights, see [**Additional Info Tab Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#5-additional-info-tab-data-dictionary).
 
 ---
 
-## 10. Document Warehouse Picking Notes
+### 3.3 Document Warehouse Picking Notes
 
 Click the **Note** tab to communicate specific handling instructions to dock workers:
 
@@ -197,7 +196,7 @@ Click the **Note** tab to communicate specific handling instructions to dock wor
 1. In the text area, type operational instructions *(such as quarantine requirements, temperature controls, or assigned storage bins)*.
 2. Notes documented here automatically print on physical Picking Operations sheets distributed to forklift operators.
 
-> **Tip:** For more details about internal note formatting and picking sheet text, see [**Note Tab Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#10-note-tab-data-dictionary).
+> For more details about internal note formatting and picking sheet text, see [**Note Tab Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#6-note-tab-data-dictionary).
 
 ---
 

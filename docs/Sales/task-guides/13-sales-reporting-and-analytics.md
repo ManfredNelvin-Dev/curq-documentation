@@ -54,6 +54,8 @@ To perform deep operational and commercial analysis and cross-tabulate performan
    * Click the **+** icon in the column headers and select **Order Date > Month** or **Product Category**.
 4. CURQ computes the matrix with real-time totals across both axes.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Filter by Team, Time Period, and Export Data
@@ -69,7 +71,7 @@ To perform deep operational and commercial analysis and cross-tabulate performan
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Draft Quotations Skewing Revenue Metrics**: If reporting totals seem unrealistically high, check the search filter bar. Ensure the **Sales Orders** filter is active so unconfirmed drafts and speculative quotes are excluded from realized revenue.
 * **Empty or Incomplete Pivot Matrix**: If expected data rows do not populate after selecting a grouping dimension, verify that date filters encompass the order dates and that cancelled or quotation records have not been excluded by active filter criteria.
@@ -81,4 +83,4 @@ To perform deep operational and commercial analysis and cross-tabulate performan
 * [Configure Pricelists and Pricing Rules](./08-configure-pricelists-and-pricing-rules.md)
 * [Configure Sales Teams and Order Tags](./12-configure-sales-teams-and-tags.md)
 * [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)
-
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

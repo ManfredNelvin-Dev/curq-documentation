@@ -2,6 +2,10 @@
 
 Create commercial quotations directly from CRM opportunities, manage quote revisions, track customer proposals, and convert accepted quotes into confirmed sales orders.
 
+> **Prerequisites**
+> * Active user account with **CRM / User** rights.
+> * Defined product catalog with sales pricing and active customer records.
+
 ---
 
 ## 1. Quotation Generation and Dispatch
@@ -42,6 +46,8 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 3. Click the dark blue **Send** button at the bottom left of the modal dialog.
 4. The quotation state advances from **Quotation** to **Quotation Sent**, and the sent email log and PDF copy are recorded in the record's Chatter feed on the right.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md).
+
 ---
 
 ## 2. Quotation Tracking and Opportunity Finalization
@@ -73,7 +79,7 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Multiple Competing Quotations**: If you send multiple alternate quotes to a client, only the quotation that is confirmed will update the final order revenue; remaining draft quotes can be cancelled.
 * **Customer Cancels Before Confirmation**: If the deal falls through, click **Cancel** on the draft quotation and click **Lost** on the opportunity record, selecting the appropriate rejection reason.
@@ -81,6 +87,7 @@ Create commercial quotations directly from CRM opportunities, manage quote revis
 ---
 
 ## Related Documentation
-* [Opportunity Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields)
+* [Opportunity Form Fields](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#1-opportunity-form-fields)
 * [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

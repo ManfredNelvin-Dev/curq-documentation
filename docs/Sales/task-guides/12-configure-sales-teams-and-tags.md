@@ -5,6 +5,9 @@ Organize regional or product sales teams, set monthly invoicing revenue targets,
 
 > **Prerequisites**
 > * Access permissions as Sales Administrator.
+>
+> **Warning (Configuration Advisory):** Modifying sales teams and tags requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -52,6 +55,8 @@ Organize regional or product sales teams, set monthly invoicing revenue targets,
 
 4. If a salesperson is assigned, CURQ automatically defaults to their primary team.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Configure and Assign Sales Order Tags
@@ -83,14 +88,19 @@ Tags allow flexible categorization of deals by industry, campaign, or strategic 
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Team Target Mismatch Across Currencies**: The invoicing target is evaluated in the company's base currency. In multi-company environments, ensure sales orders match the sales team's associated operating company to ensure dashboard calculations align.
 * **Archiving a Sales Team**: If an organizational unit merges, open the team form and select **⚙ Actions > Archive**. Historical sales orders retain their team attribution, but the team will no longer appear in selection dropdowns for new deals.
 
 ---
 
+> **Tip (Advised Settings):** Assign dedicated team email aliases and set realistic monthly invoicing targets per representative.
+
+---
+
 ## Related Documentation
 * [Sales Reporting and Analytics](./13-sales-reporting-and-analytics.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
-
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)
+* [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

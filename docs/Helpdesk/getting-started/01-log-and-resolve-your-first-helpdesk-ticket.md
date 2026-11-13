@@ -57,7 +57,7 @@ CURQ presents a new ticket creation form:
 5. In the **Description** tab, document the full context:
    * Example: `User reports intermittent connection timeout when attempting to log into the management portal.`
 
-> For a detailed explanation of all ticket header fields, project linkages, and customer rating policies, see [**Helpdesk Ticket and Register Field Definitions**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md).
+> For a detailed explanation of ticket header fields, counterparty details, and project linkages, see [**Identification and General Routing Fields**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#21-identification-and-general-routing-fields) and [**Counterparty and Project Linkage Fields**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#22-counterparty-and-project-linkage-fields).
 
 6. Click the Save icon:
    * CURQ commits the ticket, registers the creation event in the chatter, and assigns a permanent sequential ticket number with prefix **`HT`** *(e.g., `HT00065`)*:
@@ -75,7 +75,7 @@ CURQ presents a new ticket creation form:
 2. Verify that CURQ automatically recorded the **Last Stage Update** timestamp *(e.g., `11/02/2026 15:29:44`)*.
 3. As the ticket progresses, CURQ automatically populates the **Assigned Date** and **Closed Date** markers for SLA compliance tracking.
 
-> For a detailed explanation of lifecycle audit timestamps and related ticket columns, see [**Tab Section Field Definitions**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#3-tab-section-field-definitions).
+> For a detailed explanation of ticket tab fields, lifecycle audit timestamps, and related ticket columns, see [**Description Tab**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#31-description-tab), [**Other Information Tab**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#32-other-information-tab), and [**Related Tickets Tab**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#33-related-tickets-tab).
 
 ---
 

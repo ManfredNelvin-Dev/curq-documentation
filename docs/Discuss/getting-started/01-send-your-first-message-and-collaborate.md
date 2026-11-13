@@ -74,10 +74,7 @@ Now let us send your first message and alert a colleague directly:
    ![User mention autocomplete dropdown](../media/005.png)
 
 3. Select your coworker's name from the autocomplete dropdown. When you send the message, CURQ sends an immediate alert directly into their **Inbox**.
-4. Type your message (e.g., `Hi,Good morning`):
-   ```text
-   Hi,Good morning
-   ```
+4. Type your message (e.g., `Hi, Good morning`).
 5. Press **Enter** to publish the message to the channel feed:
 
    ![Sent message in conversation](../media/006.png)
@@ -109,7 +106,7 @@ When you need to hold a private one-on-one discussion:
    * **Green filled circle**: Online and actively using CURQ.
    * **Orange filled circle**: Away or idle (inactive for 30 minutes).
    * **Hollow circle (`○`)**: Offline.
-   * **Green heart (`♥`)**: Automated system assistant (e.g., OdooBot).
+   * **Green heart (`♥`)**: **System Bot** (automated assistant, e.g., CURQBot).
 4. The private direct message window opens with a dedicated composer:
 
    ![Direct message conversation view](../media/011.png)
@@ -134,6 +131,8 @@ Whenever teammates message you or mention you in conversations, updates arrive w
 5. In your central **Inbox**, clearing read notifications similarly archives them into **History**, keeping your daily workspace completely clutter-free.
 
 Congratulations! You have completed your first collaboration workflow in CURQ Discuss. You now know how to navigate the workspace, interact in channels, mention coworkers, send direct messages, and manage your inbox.
+
+> For detailed descriptions of sidebar navigation views (**Inbox**, **Starred**, **History**, **Channels**, **Direct Messages**) and availability indicators, see [**Workspace Navigation Elements**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#2-workspace-navigation-elements) and [**Real-Time User Presence Status Specifications**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#3-real-time-user-presence-status-specifications).
 
 ---
 

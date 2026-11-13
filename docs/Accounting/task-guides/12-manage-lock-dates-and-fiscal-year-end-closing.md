@@ -36,6 +36,8 @@ CURQ provides two distinct tiers of accounting lock dates: **Reversible Lock Dat
    * **Irreversible Lock Date**:
      * **Hard Lock Date**: Permanently and irreversibly seals all accounting entries, general ledger journals, and financial documents dated on or before this date across the company. Once saved, entries on or before this date cannot be modified, unposted, cancelled, or reconciled by any user, including system administrators, advisers, and root users. This lock date cannot be moved backward or cleared.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Customer Invoice, Vendor Bill, and Credit Note Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
+
 ---
 
 ## 2. Configure Interim Period Lock Dates (Monthly or Quarterly)

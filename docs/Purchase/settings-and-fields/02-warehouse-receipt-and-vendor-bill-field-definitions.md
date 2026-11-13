@@ -26,7 +26,6 @@ Defines physical product verification during dock receiving:
 | Field Name | Description |
 | :--- | :--- |
 | **Product** | The physical item being transferred into warehouse stock. |
-| **Packaging** | Packaging container or bulk pack size (such as Box of 10 or Pallet) if configured. |
 | **Demand** | Exact quantity ordered on the purchase order line. |
 | **Quantity** | Actual physical count verified upon delivery and received into inventory. |
 | **Unit** | Measurement unit used for stock valuation and warehouse counting. |
@@ -49,17 +48,36 @@ Defines freight carriers, parcel tracking, and weight attributes:
 
 ## 4. Vendor Bill Form Fields
 
-Defines financial and accounting attributes for supplier invoices:
+Defines financial, operational, and accounting attributes for supplier invoices as displayed on the Vendor Bill form:
+
+### 4.1 Header Form Fields
 
 | Field Name | Description |
 | :--- | :--- |
-| **Vendor** | The supplier issuing the invoice. |
-| **Bill Reference** | Supplier's formal invoice or tax receipt number. |
-| **Bill Date** | Issue date printed on the supplier's invoice document. |
-| **Accounting Date** | Date on which the journal entry is posted to the general ledger. |
-| **Payment Terms** | Credit terms establishing the net due date (e.g., *30 Days*). |
-| **Journal** | Purchase journal recording the payable transaction (typically *Vendor Bills*). |
-| **Currency** | Transaction currency in which the bill is settled. |
+| **Bill Number** | Sequential accounting identifier (displays `Draft` during creation, and system sequence code e.g., `BILL/2026/10/0004` once confirmed). |
+| **Vendor** | The supplier issuing the bill, displaying their name, registered business address, and billing contact details. |
+| **Bill Reference** | Supplier's formal invoice number, receipt reference, or external billing code. |
+| **Auto-Complete** | Lookup selector *(placeholder: `Select a purchase order or an old bill`)* allowing users to auto-populate invoice lines and terms from linked purchase orders or previous bills. |
+| **Bill Date** | Official issue date printed on the supplier's invoice document. |
+| **Accounting Date** | The effective date on which journal entries are posted to the General Ledger. |
+| **Payment Reference** | Remittance identification reference *(placeholder: `Use Bill Reference`)* included in outgoing bank payment communications. |
+| **Payment Mode** | Commercial payment execution method used to settle the liability *(e.g., Bank Transfer, SEPA)*. |
+| **Recipient Bank** | Supplier's registered bank account and IBAN destination for payment disbursements. |
+| **Due Date / Payment Terms** | Calculated payment deadline date *(e.g., `10/30/2026`)* or pre-configured credit schedule *(e.g., `Immediate Payment`, `30 Days`)*. |
+| **Journal** | Accounts payable journal recording the liability transaction *(typically `Vendor Bills`)*. |
+| **Currency** | Transaction currency selector *(e.g., `EUR`)* displayed alongside the journal. |
+| **Operating Unit** | Internal department, operational division, or project branch responsible for the expense. |
+
+### 4.2 Header Action Buttons
+
+| Button | Description |
+| :--- | :--- |
+| **Confirm** | Validates the draft vendor bill, assigns an official sequence number, posts double-entry vouchers to the General Ledger, and sets status to **Posted**. |
+| **Cancel** | Voids the draft vendor bill and cancels any linked accounting reminders. |
+| **Pay** | Available once posted; opens the payment registration modal to execute bank disbursements and advance the bill to **In Payment** / **Paid**. |
+| **Print** | Generates and downloads a printable PDF voucher of the vendor bill. |
+| **Credit Note** | Creates a reverse vendor refund or credit note linked to this bill in case of product returns or billing variances. |
+| **Reset to Draft** | Reopens a posted bill back to draft status for modifications *(only available if un-reconciled)*. |
 
 ---
 

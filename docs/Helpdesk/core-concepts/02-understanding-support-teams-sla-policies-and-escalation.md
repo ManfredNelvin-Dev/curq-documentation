@@ -12,20 +12,29 @@ Rather than maintaining a flat, unstructured pool of support tickets, CURQ organ
 
 Each team functions as an autonomous queue with dedicated inbound communication aliases, member rosters, and operational parameters:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    Email[Inbound Email] --> Router["CURQ Routing Rules"]
-    Portal[Customer Portal] --> Router
-    Direct[Phone / Manual] --> Router
+    E["`**Inbound Email**
+    Team email alias`"] --> R["`**CURQ Routing**
+    Matches channel & team`"]
+    P["`**Customer Portal**
+    Self-service form`"] --> R
+    M["`**Phone / Manual**
+    Direct agent entry`"] --> R
 
-    Router -->|"General Inquiry"| Care[Customer Care]
-    Router -->|"Billing / Invoice"| Billing[Billing Support]
-    Router -->|"Technical / Bug"| Tech[Technical Support]
+    R -->|"General"| Care["`**Customer Care**
+    Frontline triage`"]
+    R -->|"Billing"| Bill["`**Billing Support**
+    Invoices & accounts`"]
+    R -->|"Technical"| Tech["`**Technical Support**
+    Bugs & escalations`"]
 
-    Care --> Agent[Helpdesk Agent]
-    Billing --> Agent
-    Tech --> Agent
-    Tech --> Task[Project Task]
+    Care --> Ag(["`**Helpdesk Agent**
+    Resolves inquiry`"])
+    Bill --> Ag
+    Tech --> Ag
+    Tech --> Task(["`**Project Task**
+    Engineering fix`"])
 ```
 
 ### 1.1 Inbound Channel Segregation
@@ -42,12 +51,16 @@ flowchart LR
 
 Service Level Agreements define contractual commitments regarding response velocity and resolution time. CURQ enforces SLAs dynamically through real-time stage duration timers:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    New["New Stage<br/>Timer: Running"] -->|"First Response"| InProgress["In Progress<br/>Timer: Running"]
-    InProgress -->|"Awaiting Customer"| Awaiting["Awaiting Stage<br/>Timer: Paused"]
-    Awaiting -->|"Customer Responds"| InProgress
-    InProgress -->|"Resolved"| Done["Done Stage<br/>Timer: Stopped"]
+    New["`**New Stage**
+    SLA clock running`"] -->|"First Response"| Prog["`**In Progress**
+    SLA clock running`"]
+    Prog -->|"Need Info"| Wait["`**Awaiting Stage**
+    SLA clock paused`"]
+    Wait -->|"Customer Replies"| Prog
+    Prog -->|"Resolved"| Done(["`**Done Stage**
+    SLA clock stopped`"])
 ```
 
 ### 2.1 Active vs Paused SLA Clocks
@@ -63,11 +76,15 @@ A frequent point of failure in customer support operations is the "dormant ticke
 
 CURQ eliminates this failure mode through the **Auto Update Ticket Stage** engine:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    Awaiting["1. Awaiting Stage<br/>Ticket paused on hold"] -->|"Customer Reply"| Engine["2. Auto-Update Engine<br/>Detects incoming message"]
-    Engine -->|"Auto-Reactivate"| InProgress["3. In Progress<br/>Back in agent queue"]
-    Engine -->|"Alert"| Chatter["4. Chatter Notification<br/>Agent alerted immediately"]
+    Wait["`**1. Awaiting Stage**
+    Ticket paused on hold`"] -->|"Customer Replies"| Eng["`**2. Auto-Update Engine**
+    Detects incoming email`"]
+    Eng -->|"Reactivates"| Prog(["`**3. In Progress**
+    Back in active queue`"])
+    Eng -->|"Notifies"| Chat(["`**4. Chatter Alert**
+    Agent notified immediately`"])
 ```
 
 1. **Source Stages**: Designated holding stages *(e.g., `Awaiting`)* where tickets wait for counterparty action.

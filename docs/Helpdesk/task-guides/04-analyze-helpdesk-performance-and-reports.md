@@ -29,7 +29,7 @@ Pivot reporting allows managers to cross-tabulate ticket metrics across multiple
    * **Download / Export** *(downward arrow to tray)*: Exports the active matrix table directly into an XLSX spreadsheet for executive distribution.
    * **Table View** *(grid table icon)*: Toggles table formatting density.
 
-> For a detailed explanation of all pivot controls, matrix dimensions, graph modes, and customer satisfaction metrics, see [**Helpdesk Reporting Field Definitions**](../settings-and-fields/03-helpdesk-reporting-field-definitions.md).
+> For a detailed explanation of pivot controls, matrix dimensions, graph modes, and customer satisfaction metrics, see [**Pivot Action Toolbar Controls**](../settings-and-fields/03-helpdesk-reporting-field-definitions.md#11-pivot-action-toolbar-controls), [**Pivot Matrix Dimensions and Cohorts**](../settings-and-fields/03-helpdesk-reporting-field-definitions.md#12-pivot-matrix-dimensions-and-cohorts), [**Graph View Mode and Chart Selectors**](../settings-and-fields/03-helpdesk-reporting-field-definitions.md#21-graph-view-mode-and-chart-selectors), [**Graph Formatting and Sorting Controls**](../settings-and-fields/03-helpdesk-reporting-field-definitions.md#22-graph-formatting-and-sorting-controls), and [**Customer Rating Controls and Metrics Data Dictionary**](../settings-and-fields/03-helpdesk-reporting-field-definitions.md#3-customer-rating-controls-and-metrics-data-dictionary).
 
 ---
 
@@ -81,7 +81,7 @@ Customer feedback collected via automated satisfaction surveys is aggregated in 
 
 ---
 
-## Edge Cases & Reporting Troubleshooting
+## 3. Edge Cases & Reporting Troubleshooting
 
 * **Zero Records in Date Range**: If the pivot grid displays empty cells, verify that the top search bar does not contain restrictive date or stage filters from previous sessions. Click the filter tag removal icons to restore complete historical intake.
 * **Missing Custom Measures**: Operational metrics calculate based on logged ticket fields. Ensure support specialists populate project tasks, stages, and teams so that multi-dimensional groupings remain complete.

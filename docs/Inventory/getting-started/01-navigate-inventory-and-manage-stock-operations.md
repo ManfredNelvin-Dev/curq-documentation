@@ -8,7 +8,9 @@ This tutorial introduces the foundational workflows of CURQ Inventory, guiding l
 
 ---
 
-## 1. Access the Inventory Application
+## 1. Navigate the Dashboard and Inbound Receipts
+
+### 1.1 Access the Inventory Application
 
 1. From the primary CURQ application switcher in the upper-left corner, click **Inventory**.
 2. CURQ opens the centralized **Inventory Overview** dashboard:
@@ -22,12 +24,9 @@ This tutorial introduces the foundational workflows of CURQ Inventory, guiding l
    * **Reporting**: Stock valuation, stock moves analysis, moves history, and warehouse performance reports.
    * **Configuration**: Warehouse settings, location hierarchies, operation types, route rules, and putaway strategies.
 
-
-> **Tip:** For more details about navigation menus and dashboard controls, see [**Navigation and Control Bar Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#1-navigation-and-control-bar-data-dictionary).
-
 ---
 
-## 2. Open and Review the Inbound Receipts Register
+### 1.2 Open and Review the Inbound Receipts Register
 
 1. On the **Receipts** operational card, locate the primary execution button:
 
@@ -38,8 +37,6 @@ This tutorial introduces the foundational workflows of CURQ Inventory, guiding l
    * **Late (3)**: Critical counter showing supplier deliveries that have passed their expected arrival date.
    * **Back Orders (1)**: Pending split shipments awaiting residual vendor fulfillment.
    * **Operations (4)**: Total active receiving transfers in the pipeline.
-
-> **Tip:** For more details about operation card counters, backorder tags, and late indicators, see [**Operation Type Card Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#2-operation-type-card-data-dictionary).
 
 3. Click the **3 To Receive** button to open the receipts register:
    * CURQ displays the inbound transfers register:
@@ -53,11 +50,11 @@ This tutorial introduces the foundational workflows of CURQ Inventory, guiding l
    * **Source Document**: Originating Purchase Order number *(e.g., `P00093`)*.
    * **Status**: Operational lifecycle badge (*Ready*, *Done*, *Cancelled*).
 
-> **Tip:** For more details about the fields and columns on the receipts register, see [**Receipts List Register Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#4-receipts-list-register-data-dictionary).
+> For more details about the fields and columns on the receipts register, see [**Receipts List Register Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#1-receipts-list-register-data-dictionary).
 
 ---
 
-## 3. Inspect Inbound Transfer Lines in Form View
+### 1.3 Inspect Inbound Transfer Lines in Form View
 
 1. Click **+ New** in the upper-left corner or open an existing receipt:
    * CURQ renders the comprehensive stock transfer form:
@@ -71,11 +68,13 @@ This tutorial introduces the foundational workflows of CURQ Inventory, guiding l
    * **Source Document**: Linked procurement reference.
    * **Operations Tab**: Product lines detailing demand quantities and units of measure.
 
-> **Tip:** For more details about the fields and line item controls on the receipt form, see [**Ready Inbound Receipt Form and Operations Tab Definitions**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#6-ready-inbound-receipt-form-and-operations-tab-definitions).
+> For more details about the fields and line item controls on the receipt form, see [**Ready Inbound Receipt Form and Operations Tab Definitions**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#3-ready-inbound-receipt-form-and-operations-tab-definitions).
 
 ---
 
-## 4. Interpret Delivery Orders and Dropship Pipelines
+## 2. Monitor Outbound Pipelines and Card Actions
+
+### 2.1 Interpret Delivery Orders and Dropship Pipelines
 
 Return to **Inventory > Overview** to monitor outbound and partner operations:
 
@@ -92,11 +91,9 @@ Return to **Inventory > Overview** to monitor outbound and partner operations:
 
 ---
 
-## 5. Access Card Context Menus and Fast Actions
+### 2.2 Access Card Context Menus and Fast Actions
 
 Click the three vertical dots icon in the upper-right corner of any operation card *(e.g., `Receipts`)* to open the context flyout:
-
-> **Tip:** For more details about the options and actions on the card flyout menu, see [**Card Context Flyout Data Dictionary**](../settings-and-fields/01-warehouse-operations-and-transfer-field-definitions.md#3-card-context-flyout-data-dictionary).
 
 1. **Filtered Views**:
    * **All**: Displays all historical, active, and completed operations of this type.

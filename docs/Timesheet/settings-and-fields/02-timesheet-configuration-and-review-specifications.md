@@ -4,7 +4,9 @@ This reference guide outlines configuration settings, review policy behaviors, s
 
 ---
 
-## Global System Settings
+## 1. Global System Settings
+
+> **Warning - Cross-System Impact (Billing & Cost Accounting):** Altering the **Encoding Method** (`Hours / Minutes` vs `Days / Half-Days`) or **Time Billing** policies will impact ongoing project tracking and customer invoicing. Additionally, modifying an employee's hourly cost rate on their HR profile retroactively alters profitability margins on previously completed Project tasks. Always consult your project accounting manager before making policy changes.
 
 The following settings govern global timesheet recording and governance under **Configuration > Settings**:
 
@@ -21,18 +23,7 @@ The following settings govern global timesheet recording and governance under **
 
 ---
 
-## Timesheet Sheet Workflow Lifecycle Transitions
-
-| Source State | Trigger Action | Target State | Behavioral & Access Restrictions |
-| :--- | :--- | :--- | :--- |
-| `New` | Record creation | `Open` | Initial container generated; employee begins populating lines and matrix cells. |
-| `Open` | **Submit to Reviewer** | `Waiting Review` | Employee entries are locked against modification; review notification routed to authorized reviewer. |
-| `Waiting Review` | **Approve** | `Approved` | Records permanently locked; delivered quantities pushed to sales orders; entries released for payroll. |
-| `Waiting Review` | **Refuse** | `Open` | Sheet reset to draft state; reappears in employee's **My Timesheets to Submit** queue for revision. |
-
----
-
-## Service Product Billing Rules
+## 2. Service Product Billing Rules
 
 When configuring billable services in **Sales / Inventory > Products**:
 
@@ -49,3 +40,4 @@ When configuring billable services in **Sales / Inventory > Products**:
 * [Timesheet Line and Sheet Field Definitions](./01-timesheet-line-and-sheet-field-definitions.md)
 * [Configure Timesheet Policies and Encoding Rules](../task-guides/06-configure-timesheet-policies-and-encoding-rules.md)
 * [Understanding Timesheet Sheet Approval and Billing Workflows](../core-concepts/02-understanding-timesheet-sheet-approval-and-billing-workflows.md)
+* [Timesheet Line and Sheet Field Definitions](01-timesheet-line-and-sheet-field-definitions.md)

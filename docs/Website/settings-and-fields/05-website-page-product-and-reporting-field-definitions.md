@@ -6,7 +6,7 @@ This catalog documents data fields, manager column specifications, technical att
 
 ## 1. Page Manager and Page Properties
 
-### Page Manager Columns
+### 1.1 Page Manager Columns
 In **Site** > **Pages** *(List View)*, the Page Manager organizes pages with the following attributes:
 
 | Field Name | Description |
@@ -19,7 +19,7 @@ In **Site** > **Pages** *(List View)*, the Page Manager organizes pages with the
 | **Is Published** | Controls online visibility. Green indicates live and visible to visitors; grey/red indicates unpublished and restricted to administrators. |
 | **Website** | In multi-website setups, identifies the website domain instance associated with the page *(empty if shared across all websites)*. |
 
-### Page Properties Field Definitions
+### 1.2 Page Properties Field Definitions
 In **Site** > **This page** > **Properties**, the modal dialog configures underlying routing and visibility rules:
 
 | Field Name | Description |
@@ -34,7 +34,7 @@ In **Site** > **This page** > **Properties**, the modal dialog configures underl
 | **Publishing Date** | Optional scheduled release timestamp when the page automatically transitions to published. |
 | **Is a Template** | When enabled, converts this page into a reusable layout option selectable in **+ New** > **Page**. |
 
-### Page Visibility and Access Security Options
+### 1.3 Page Visibility and Access Security Options
 The **Visibility** dropdown in Page Properties enforces access boundaries:
 
 | Field Name | Description |
@@ -50,7 +50,7 @@ The **Visibility** dropdown in Page Properties enforces access boundaries:
 
 In **Site** > **This page** > **Optimize SEO**, the modal analyzes content optimization:
 
-### SEO Metadata Field Definitions
+### 2.1 SEO Metadata Field Definitions
 
 | Field Name | Description |
 | :--- | :--- |
@@ -59,7 +59,7 @@ In **Site** > **This page** > **Optimize SEO**, the modal analyzes content optim
 | **Custom Url** | Editable URL slug for dynamic records *(e.g., products, blog posts, events)* while preserving backend database ID. |
 | **Social Share Image** | Graphic injected into Open Graph `og:image` tags for link preview cards on social networks (recommended 1200x630 px, 1.91:1 ratio). |
 
-### SEO Optimizer Placement Indicators
+### 2.2 SEO Optimizer Placement Indicators
 The **Keywords** scorecard audits target keywords across the live HTML document:
 
 | Field Name | Description |
@@ -74,7 +74,7 @@ The **Keywords** scorecard audits target keywords across the live HTML document:
 
 ## 3. Product and Course Catalog Fields
 
-### Product Pages Field Definitions
+### 3.1 Product Pages Field Definitions
 In **Site** > **Products** *(List View)*, catalog items display the following columns:
 
 | Field Name | Description |
@@ -87,7 +87,7 @@ In **Site** > **Products** *(List View)*, catalog items display the following co
 | **SEO Optimized** | Indicates whether custom meta title, description, and keywords have been saved. |
 | **Is Published** | Read-only indicator showing online publication status. |
 
-#### Quick-Creation Product Fields
+#### 3.1.1 Quick-Creation Product Fields
 Clicking **+ New** in the Product Pages manager presents the following fields:
 
 | Field Name | Description |
@@ -100,7 +100,7 @@ Clicking **+ New** in the Product Pages manager presents the following fields:
 | **Sales Taxes** | Default sales tax rates applied to online purchases. |
 | **Website Category** | Initial eCommerce category assignment for `/shop` navigation. |
 
-### Course Pages Field Definitions
+### 3.2 Course Pages Field Definitions
 In **Site** > **Courses** *(List View)*, online learning programs display the following columns:
 
 | Field Name | Description |
@@ -113,7 +113,7 @@ In **Site** > **Courses** *(List View)*, online learning programs display the fo
 | **SEO Optimized** | Confirms search snippet configuration. |
 | **Is Published** | Publication state on the eLearning platform. |
 
-#### Quick-Creation Course Fields
+#### 3.2.1 Quick-Creation Course Fields
 Clicking **+ New** in the Course Pages manager presents the following fields:
 
 | Field Name | Description |
@@ -129,7 +129,7 @@ Clicking **+ New** in the Course Pages manager presents the following fields:
 
 ## 4. Catalog Merchandising and Attribute Field Definitions
 
-### Product Merchandising and Upselling Fields
+### 4.1 Product Merchandising and Upselling Fields
 In **eCommerce** > **Products** > **Products** *(Product Form)*:
 
 | Field Name | Description |
@@ -142,7 +142,7 @@ In **eCommerce** > **Products** > **Products** *(Product Form)*:
 | **Is Published** | Checkbox to toggle online visibility in `/shop`. Located in `Sales` tab > Ecommerce Shop. |
 | **Website** | Restricts the product to a specific website domain, or blank for all sites. Located in `Sales` tab > Ecommerce Shop. |
 
-### eCommerce Pricelists and Promotional Code Fields
+### 4.2 eCommerce Pricelists and Promotional Code Fields
 In **eCommerce** > **Products** > **Pricelists** > **Ecommerce** tab:
 
 | Field Name | Description |
@@ -151,7 +151,7 @@ In **eCommerce** > **Products** > **Pricelists** > **Ecommerce** tab:
 | **Selectable** | When enabled, shoppers can manually choose this pricelist from the currency/pricing dropdown on `/shop`. |
 | **Code / E-commerce Promotional Code** | Promotional coupon code *(e.g., `EU`)* that activates the pricelist discounts when entered at checkout. |
 
-### eCommerce Category Form Fields
+### 4.3 eCommerce Category Form Fields
 In **eCommerce** > **Products** > **eCommerce Categories**:
 
 | Field Name | Description |
@@ -162,7 +162,7 @@ In **eCommerce** > **Products** > **eCommerce Categories**:
 | **Website** | Restricts category display to a specific website domain. |
 | **Description** | Introductory promotional copy displayed at the top of the category browsing page. |
 
-### Product Attribute, Tag, and Ribbon Fields
+### 4.4 Product Attribute, Tag, and Ribbon Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -179,7 +179,7 @@ In **eCommerce** > **Products** > **eCommerce Categories**:
 
 ## 5. Online Orders and Cart Recovery Criteria
 
-### Online Sales Order Field Definitions
+### 5.1 Online Sales Order Field Definitions
 In **eCommerce** > **Orders** > **Orders** *(List View)*:
 
 | Field Name | Description |
@@ -194,7 +194,7 @@ In **eCommerce** > **Orders** > **Orders** *(List View)*:
 | **Total** | Final transaction grand total including items, shipping fees, and taxes. |
 | **Invoice Status** | Billing state: **To Invoice** (pending customer invoice) or **Nothing to Invoice**. |
 
-### Order Status and Cart Recovery Criteria
+### 5.2 Order Status and Cart Recovery Criteria
 How CURQ categorizes website purchasing journeys:
 
 | Field Name | Description |
@@ -207,7 +207,7 @@ How CURQ categorizes website purchasing journeys:
 
 ## 6. Live Chat and Chatbot Field Definitions
 
-### Live Chat Channel and Operator Fields
+### 6.1 Live Chat Channel and Operator Fields
 In **Website** > **Configuration** > **Settings** > **Email & Marketing** > **Channel**:
 
 | Field Name | Description |
@@ -219,7 +219,7 @@ In **Website** > **Configuration** > **Settings** > **Email & Marketing** > **Ch
 | **Sessions** | Total count of recorded visitor live chat sessions. |
 | **% Happy** | Cumulative customer satisfaction rating percentage. |
 
-### Widget Aesthetics and Greeting Options
+### 6.2 Widget Aesthetics and Greeting Options
 Under the channel **Options** tab:
 
 | Field Name | Description |
@@ -230,7 +230,7 @@ Under the channel **Options** tab:
 | **Chat Input Placeholder** | Guide prompt text inside the message typing field *(defaults to empty)*. |
 | **Channel Header Color** | Header banner color of the expanded chat window *(defaults to theme palette)*. |
 
-### Channel Display Rule Fields
+### 6.3 Channel Display Rule Fields
 Under the channel **Channel Rules** tab:
 
 | Field Name | Description |
@@ -240,7 +240,7 @@ Under the channel **Channel Rules** tab:
 | **URL Regex** | Regular expression pattern matching website URL routes *(e.g., `/contactus`, `/shop/.*`)*. |
 | **Country** | Restricts rule execution to visitors from specific countries *(requires GeoIP)*. |
 
-### Chatbot Script and Visitor Tracking Fields
+### 6.4 Chatbot Script and Visitor Tracking Fields
 In the **Chatbot Script** builder:
 
 | Field Name | Description |
@@ -254,7 +254,7 @@ In the **Chatbot Script** builder:
 
 ## 7. Website Reporting and Analytics Field Definitions
 
-### Reporting Menus Overview
+### 7.1 Reporting Menus Overview
 
 | Field Name | Description |
 | :--- | :--- |
@@ -263,7 +263,7 @@ In the **Chatbot Script** builder:
 | **Visitors** | Located at `Reporting` > `Visitors` (Kanban, List, Form, and Graph views). Displays real-time user tracking, connection states, browsing paths, and direct outreach. |
 | **Page Views** | Located at `Reporting` > `Page Views` (List and Graph views). Provides a granular audit trail of individual URL impressions, timestamps, and sessions. |
 
-### Online Sales Analysis Measures and Dimensions
+### 7.2 Online Sales Analysis Measures and Dimensions
 In `Reporting` > `Online Sales`:
 
 | Field Name | Description |
@@ -279,7 +279,7 @@ In `Reporting` > `Online Sales`:
 | **Volume** | Total cubic volume in m³ for warehouse packing optimization. |
 | **Count** | Total sales order line records representing transaction frequency. |
 
-### Visitor Tracking Attributes and Columns
+### 7.3 Visitor Tracking Attributes and Columns
 In `Reporting` > `Visitors`:
 
 | Field Name | Description |
@@ -294,7 +294,7 @@ In `Reporting` > `Visitors`:
 | **Leads** | Count of CRM leads generated by or linked to this visitor. |
 | **Direct Outreach** | Action shortcuts to launch **Email**, **SMS**, or **Livechat** directly to the visitor. |
 
-### Page Views Audit Log Field Definitions
+### 7.4 Page Views Audit Log Field Definitions
 In `Reporting` > `Page Views`:
 
 | Field Name | Description |

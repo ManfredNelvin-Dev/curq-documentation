@@ -42,7 +42,7 @@ While Kanban boards excel at day-to-day visual flow within a single project or i
 
 ---
 
-## Best Practices for Portfolio Auditing
+## 2. Best Practices for Portfolio Auditing
 
 * **Batch Verification**: Use the leftmost checkboxes to select multiple tasks for bulk stage updates or reassignment.
 * **Overdue Surveillance**: Scan the **Next Activity** column for clock icons indicating scheduled follow-ups or approaching deadlines.

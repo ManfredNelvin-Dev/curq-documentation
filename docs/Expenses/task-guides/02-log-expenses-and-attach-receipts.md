@@ -9,7 +9,9 @@ Employees must record their expenditures in CURQ before they can be included in 
 
 ---
 
-## 1. Access the My Expenses Register
+## 1. Create and Record Individual Expenses Manually
+
+### 1.1 Access the My Expenses Register
 
 1. Open the **Expenses** application.
 2. In the top navigation bar, click **My Expenses**.
@@ -28,11 +30,11 @@ Employees must record their expenditures in CURQ before they can be included in 
      * **New**: Opens a blank form for manual transactional data entry.
    * **Itemized Expense Register Columns**: Review logged expenditures, payment types, and operational statuses *(e.g., `10/30/2026 Train ticket to client headquarters`, `€ 75.00`, green `Done` status)*.
 
-> **Tip:** For more details about the columns, summary banners, and status cards on the register, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary).
+> For more details about the columns, summary banners, and status cards on the register, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary).
 
 ---
 
-## 2. Create and Configure an Individual Expense Record
+### 1.2 Create and Configure the Expense Form
 
 1. In the upper-left action bar of the My Expenses register, click the dark blue **New** button:
 
@@ -62,11 +64,11 @@ Employees must record their expenditures in CURQ before they can be included in 
    * **Notes...**: Add internal itemization notes, justification comments, or client attendee lists.
 5. Review the right-hand chatter audit feed, which logs the initial creation timestamp: `Siddharth Sathyan Expense created`.
 
-> **Tip:** For more details about transaction fields, action buttons, and audit trail attributes, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
+> For more details about transaction fields, action buttons, and audit trail attributes, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
 
 ---
 
-## 3. Attach Supporting Receipts and Documentation
+### 1.3 Attach Supporting Receipts and Documentation
 
 Receipts can be attached to individual expense records for verification, audit compliance, and managerial review:
 
@@ -93,23 +95,11 @@ Receipts can be attached to individual expense records for verification, audit c
 
 ---
 
-## 4. Alternative Intake Channels: OCR Upload, Drag & Drop, and Inbound Email
+## 2. Alternative Automated Intake Channels
 
 In addition to manual web entry, CURQ provides automated intake workflows to eliminate manual typing:
 
-### 4.1 Configure Receipt Digitization (OCR)
-
-CURQ supports automatic expense creation through receipt scanning using OCR (Optical Character Recognition):
-
-1. Navigate to **Expenses → Configuration → Settings**.
-2. Enable **Expense Digitization (OCR)**.
-3. Select the required digitization method:
-   * **Do Not Digitize**: Disables receipt digitization while keeping the digitization module installed.
-   * **Digitize on Demand Only**: Scans receipts only when the user clicks the Digitize Document button.
-   * **Digitize Automatically**: Automatically scans receipts when they are uploaded.
-4. Click **Save**.
-
-### 4.2 Upload and Digitize Receipts via OCR
+### 2.1 Upload and Digitize Receipts via OCR
 
 1. Open the **Expenses** application and navigate to **My Expenses > My Expenses**.
 2. In the upper-left action toolbar, click the dark blue **Upload** button:
@@ -134,9 +124,9 @@ CURQ supports automatic expense creation through receipt scanning using OCR (Opt
    * **Customer to Reinvoice**: Link to an active client Sales Order if the expense is project-billable.
    * **Create Report**: Once verified, click **Create Report** to package the claim into an expense sheet for submission.
 
-> **Tip:** For more details about the register columns and intake status badges, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary). To review form field definitions and validation rules, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
+> For more details about the register columns and intake status badges, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary). To review form field definitions and validation rules, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
 
-### 4.3 Drag and Drop Receipts
+### 2.2 Ingest Receipts via Drag and Drop
 
 Receipts can also be uploaded by dragging and dropping files onto the Expenses dashboard:
 
@@ -146,7 +136,7 @@ Receipts can also be uploaded by dragging and dropping files onto the Expenses d
 4. CURQ scans the receipt and displays the generated record on the **Generate Expenses** dashboard.
 5. Open the record and review or update the extracted information before submitting.
 
-### 4.4 Submit Expenses Through Email
+### 2.3 Submit Expenses Through Email Aliases
 
 Expenses can be created by sending receipts to a configured email alias:
 
@@ -155,13 +145,11 @@ Expenses can be created by sending receipts to a configured email alias:
 3. Configure the email alias *(e.g., `expenses@yourcompany.com`)*.
 4. Click **Save**.
 5. Employees send an email to the configured alias with the receipt attached:
-   * The email subject must contain the expense category reference followed by the expense amount:
-     ```text
-     FOOD $25.00
-     ```
-     *(Here, `FOOD` is the reference code for the Meals category, and `$25.00` is the purchase amount)*.
+   * The email subject must contain the expense category reference followed by the expense amount.
    * CURQ matches the sender's authenticated email, creates the expense record, and attaches the receipt file.
    * **Note:** Only authenticated employee email addresses are accepted. The employee's work email address must be configured in the Work Email field of their profile in the Employees module.
+
+> For incoming email alias and OCR configuration parameters, see [**Receipt Processing and Digitization (OCR)**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#31-receipt-processing-and-digitization-ocr).
 
 ---
 
@@ -172,3 +160,4 @@ Expenses can be created by sending receipts to a configured email alias:
 * [Review, Approve, and Refuse Expenses](./04-review-approve-and-refuse-expenses.md)
 * [Create and Manage Expense Categories](./01-create-and-manage-expense-categories.md)
 * [Expense Record and Report Field Definitions](../settings-and-fields/02-expense-record-and-report-field-definitions.md)
+* [Expense Category and Configuration Field Definitions](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md)

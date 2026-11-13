@@ -75,6 +75,8 @@ To offer credit cards, instant bank transfers, or mobile wallets in the customer
 
 4. Click **Save**.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Customer Signing Experience and Offline Overrides
@@ -93,7 +95,7 @@ To offer credit cards, instant bank transfers, or mobile wallets in the customer
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Customer Paid but Webhook Failed to Confirm Order**: If a payment processor charges the customer but network latency prevents the automated callback, open the sales order Chatter. Locate the transaction ID, click into the transaction, and click **Capture Transaction** or click **Confirm** manually on the order.
 * **Customer Signature Audit Trail Needed**: If legal counsel requires proof of signature, open the sales order Chatter. Click on the attached `Order_S00042_Signed.pdf`. The document includes the visual signature, signer's printed name, UTC timestamp, and client IP address.
@@ -103,4 +105,5 @@ To offer credit cards, instant bank transfers, or mobile wallets in the customer
 ## Related Documentation
 * [Complete a Sale with Online Signature and Payment](../getting-started/02-complete-a-sale-with-online-signature-and-payment.md)
 * [Understanding the Sales Order Lifecycle and State Machine](../core-concepts/01-understanding-the-sales-order-lifecycle.md)
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)
 * [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

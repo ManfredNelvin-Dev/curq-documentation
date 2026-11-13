@@ -5,6 +5,9 @@ Enable multiple units of measure, establish measurement categories, define conve
 
 > **Prerequisites**
 > * Enable **Units of Measure** in **Sales > Configuration > Settings**.
+>
+> **Warning (Configuration Advisory):** Modifying units of measure requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -41,6 +44,8 @@ Within your selected category, click **Add a line** under the **Units of Measure
 3. **Rounding Precision**: Specify decimal tolerance *(e.g., `0.01` or `1.000`)* to avoid fractional conversion artifacts.
 4. Click **Save**.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Apply Units of Measure to Products and Quotes
@@ -67,13 +72,19 @@ Within your selected category, click **Add a line** under the **Units of Measure
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **"Cannot Convert Between Different Categories" Error**: You cannot convert between units belonging to different categories *(e.g., converting Kilograms directly to Liters or Hours)* without specific density attributes. Ensure both units share the same UoM Category.
 * **Changing the Reference Unit on an Active Category**: Never change the reference unit on an existing category that contains historical sales or inventory transactions, as this will recalculate historical stock balances incorrectly. Instead, create a new UoM Category.
 
 ---
 
+> **Tip (Advised Settings):** Always set conversion ratios relative to the reference unit within the same UoM category; never alter base units after recording inventory transactions.
+
+---
+
 ## Related Documentation
 * [Configure Products and Product Variants](./06-configure-products-and-variants.md)
 * [Pricing, Pricelists, and Discount Specifications](../settings-and-fields/02-pricing-pricelists-and-discount-specifications.md)
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)
+* [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

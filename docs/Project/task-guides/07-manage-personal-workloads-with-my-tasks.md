@@ -25,7 +25,7 @@ While project workspaces isolate deliverables by client or department, individua
    * **Open Tasks Filter**: Automatically filters out closed and archived items, displaying only active assignments.
    * **View Switcher**: Alternate between Kanban view, List view, Calendar view, Pivot view, Graph view, and Activity view.
 
-> For a detailed explanation of temporal horizon columns, control panel elements, and card indicator badges, see [**My Tasks and Temporal Scheduling Field Definitions**](../settings-and-fields/04-my-tasks-and-temporal-scheduling-field-definitions.md).
+> For a detailed explanation of control panel elements, temporal horizon columns, and card indicator badges, see [**My Tasks Control Panel and View Selectors**](../settings-and-fields/04-my-tasks-and-temporal-scheduling-field-definitions.md#1-my-tasks-control-panel-and-view-selectors), [**Temporal Scheduling Horizon Columns**](../settings-and-fields/04-my-tasks-and-temporal-scheduling-field-definitions.md#2-temporal-scheduling-horizon-columns), and [**Personal Task Card Indicators**](../settings-and-fields/04-my-tasks-and-temporal-scheduling-field-definitions.md#3-personal-task-card-indicators).
 
 ---
 
@@ -52,7 +52,7 @@ Specialists manage personal focus by dragging and dropping cards across time hor
 
 ---
 
-## Best Practices for Personal Task Management
+## 2. Best Practices for Personal Task Management
 
 * **Inbox Zero**: Empty the **Inbox** column at the start of each working day by assigning clear execution horizons.
 * **Realistic Daily Commitment**: Limit cards in **Today** to 3 to 5 primary deliverables to maintain focused flow.

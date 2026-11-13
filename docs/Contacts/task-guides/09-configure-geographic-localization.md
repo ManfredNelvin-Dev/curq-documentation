@@ -2,6 +2,13 @@
 
 Configure country address formatting, add federal states, register cities for automated postal code completion, and build regional country groups for pricelists and tax positions.
 
+> **Prerequisites**
+> * Active user account with **Contacts / Administrator** rights.
+> * Configured base system records and access permissions.
+>
+> **Warning (Configuration Advisory):** Modifying geographic localization requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Access Localization Settings
@@ -31,7 +38,8 @@ Configure country address formatting, add federal states, register cities for au
 
    ![Country configuration form view showing address settings and states directory](../media/041.png)
 
-3. Configure validation and address formatting:
+3. Review or configure core identification, currency, and address formatting rules:
+   * **Country Name**, **Country Code**, **Country Calling Code**, and **Currency**: Official nation label, ISO 3166-1 code, dialing prefix, and default transaction currency.
    * **Enforce Cities**: Turn on to require users to pick from verified cities rather than typing free-text.
    * **Zip Required**: Turn on to block saving addresses without postal codes.
    * **State Required**: Turn on to mandate state/province selection.
@@ -39,7 +47,7 @@ Configure country address formatting, add federal states, register cities for au
    * **Customer Name Position**: Choose where the recipient name appears relative to the street address (`Before Address` or `After Address`).
 4. Click the cloud icon to save.
 
-> **Note:** For ISO schemas, currency bindings, and address formatting toggles, see [**Country Fields**](../settings-and-fields/03-localization-and-country-settings.md#country-fields).
+> For ISO schemas, currency bindings, and address formatting toggles, see [**Country Fields**](../settings-and-fields/03-localization-and-country-settings.md#1-country-fields).
 
 ---
 
@@ -59,7 +67,7 @@ Configure country address formatting, add federal states, register cities for au
 
 4. Click outside the row or click **Save**.
 
-> **Note:** For administrative subdivision specifications, see [**Federal State Fields**](../settings-and-fields/03-localization-and-country-settings.md#federal-state-fields).
+> For administrative subdivision specifications, see [**Federal State Fields**](../settings-and-fields/03-localization-and-country-settings.md#2-federal-state-fields).
 
 ---
 
@@ -82,7 +90,7 @@ When cities and postal codes are entered into this registry, typing a postal cod
 
 4. Click **Save** at the top left (or click outside the line).
 
-> **Note:** For municipality parameter constraints, see [**City Fields**](../settings-and-fields/03-localization-and-country-settings.md#city-fields).
+> For municipality parameter constraints, see [**City Fields**](../settings-and-fields/03-localization-and-country-settings.md#3-city-fields).
 
 ---
 
@@ -106,14 +114,18 @@ Country groups combine multiple nations to apply shared sales pricelists or fisc
 
 6. Click the cloud icon to save.
 
-> **Note:** For zone definitions and pricelist scoping rules, see [**Country Group Fields**](../settings-and-fields/03-localization-and-country-settings.md#country-group-fields).
+> For zone definitions and pricelist scoping rules, see [**Country Group Fields**](../settings-and-fields/03-localization-and-country-settings.md#4-country-group-fields).
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **ZIP Auto-Fill Not Triggering**: Verify that the city record in **Configuration > Cities** has the exact ZIP code entered and that the **Country** matches the country selected on the contact form.
 * **State Dropdown Empty**: Ensure the parent country is selected first on the contact form; CURQ filters the **State** dropdown to only show states linked to that nation.
+
+---
+
+> **Tip (Advised Settings):** Maintain official ISO country codes and standard state/province codes to preserve tax calculation and delivery routing integrity.
 
 ---
 

@@ -12,15 +12,15 @@ CURQ evaluates inventory replenishment through continuous stock level surveillan
 
 $$\text{Forecasted Stock} = \text{Quantity On Hand} + \text{Incoming Stock} - \text{Outgoing Stock}$$
 
-```mermaid
+```{mermaid}
 flowchart LR
-    A["`**1. Calculate Forecast**
-    On Hand + Incoming − Outgoing`"] --> B{"`**Below Min Qty?**`"}
-    B -->|No| C["`**No Action**
-    Stock above safety threshold`"]
-    B -->|Yes| D["`**Automated Replenishment**
-    Order Qty = Max Target − Forecast
-    Draft RFQ / Purchase Order Generated`"]
+    Calc(["`**1. Calculate Forecast**
+    On Hand + In − Out`"]) --> Check{"`**Below Min Qty?**`"}
+    Check -->|"No"| Ok(["`**No Action**
+    Above safety floor`"])
+    Check -->|"Yes"| Order(["`**Trigger Replenishment**
+    Qty = Max − Forecast
+    Draft RFQ / Order created`"])
 ```
 
 ### 1.1 Core Replenishment Thresholds
@@ -47,12 +47,17 @@ Enterprises apply distinct fulfillment strategies depending on product velocity 
 
 Accurate delivery promises require cumulative calculation across each stage of procurement and physical handling:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    A[Order Placed<br/>Day 0] -->|Vendor Lead Time| B[Dock Delivery<br/>WH / Input]
-    B -->|Reception Lead Time| C[Storage Ready<br/>WH / Stock]
-    C -->|Picking & Packing| D[Fulfillment<br/>WH / Output]
-    D -->|Customer Lead Time| E[Customer Delivery<br/>Destination]
+    Order(["`**1. Order Placed**
+    Day 0`"]) -->|"Vendor Lead Time"| Dock["`**2. Dock Delivery**
+    WH / Input`"]
+    Dock -->|"Reception Lead Time"| Stock["`**3. Storage Ready**
+    WH / Stock`"]
+    Stock -->|"Picking & Packing"| Out["`**4. Fulfillment**
+    WH / Output`"]
+    Out -->|"Customer Lead Time"| Cust(["`**5. Delivered**
+    Customer destination`"])
 ```
 
 1. **Vendor Lead Time**: Calendar days required by the supplier to manufacture and ship goods to your receiving dock.

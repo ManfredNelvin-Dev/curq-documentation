@@ -4,6 +4,10 @@ This guide covers how to access the central Page Manager, configure page access 
 
 Organize, configure, secure, and maintain web pages across your CURQ 18 websites using the centralized Page Manager and Page Properties dialog.
 
+> **Prerequisites**
+> * Active user account with **Website / Editor** rights.
+> * Published website domain and access to the CURQ website builder.
+
 ---
 
 ## 1. Page Manager Navigation and Batch Actions
@@ -145,4 +149,3 @@ Standardize brand layout designs by converting custom pages into reusable templa
 * [Optimize SEO and Search Metadata](./04-optimize-seo-and-search-metadata.md)
 * [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
 * [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md)
-

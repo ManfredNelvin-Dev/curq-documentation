@@ -2,6 +2,10 @@
 
 The **Time Off Dashboard** and **All Time Off Overview** provide employees and managers with dynamic calendar visualizers, real-time entitlement scorecards, and scheduling constraint indicators. This guide explains how to navigate calendar timeframes, calculate future leave balances, filter by leave types, and audit scheduled absences across teams.
 
+> **Prerequisites**
+> * Active user account with **Time Off / User** rights.
+> * Active user calendar profile with configured timezone settings.
+
 ---
 
 ## 1. Dashboard Overview and Balance Forecasting
@@ -108,7 +112,7 @@ The right-hand panel spotlights key corporate dates:
 * **Mandatory Days**: Company-designated dates requiring attendance *(such as annual inventory counts or executive summits)*. Time-off requests are locked and cannot be booked on these dates.
 * **Public Holidays**: Official statutory holidays configured for your working calendar. Public holidays are automatically excluded from leave deductions when the time-off type is configured accordingly.
 
-> For complete field definitions and configuration options, see [**Public Holiday Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#public-holiday-attributes) and [**Mandatory Day Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#mandatory-day-attributes).
+> For complete field definitions and configuration options, see [**Public Holiday Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#1-public-holiday-attributes) and [**Mandatory Day Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#2-mandatory-day-attributes).
 
 ---
 
@@ -131,7 +135,7 @@ Managers and HR officers can inspect leave schedules across their entire departm
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Overview Menu Missing**: The **Overview** menu is restricted to managers and HR officers. If it does not appear in your top navigation, your user account does not have management permissions.
 * **Future Accrual Projections Show Zero**: If selecting a future date in the balance popover does not show incremental days, verify whether the leave category uses an active accrual plan or a fixed lump-sum allocation.

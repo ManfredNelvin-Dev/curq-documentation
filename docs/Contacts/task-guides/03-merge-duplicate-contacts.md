@@ -6,6 +6,8 @@ Identify and consolidate duplicate contact records into a single master profile,
 > **Prerequisites**
 > * You must have permissions to modify and delete contact records.
 > * The records to be merged should represent the same legal entity or individual person.
+>
+> **Caution (Irreversible Action Advisory):** Merging contacts is permanent and cannot be undone. All linked commercial transactions (Sales Orders, Invoices, Delivery Slips, Purchase Orders, and Chatter messages) from the secondary records will be re-parented to the Destination Master Contact, and the secondary contact cards will be permanently deleted. Never merge contacts with different Tax IDs or differing legal entities.
 
 ---
 
@@ -36,7 +38,7 @@ The **Merge** window displays the selected records and lets you define the survi
    * To add another duplicate record, click **Add a line** and search for the contact.
 3. Click **Merge Contacts** (or **Cancel** / **Skip these contacts** to abort without altering records).
 
-> For complete field definitions and identity attributes, see [**Header and Identity Fields**](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
+> For complete field definitions and identity attributes, see [**Header and Identity Fields**](../settings-and-fields/01-contact-form-field-definitions.md#1-header-and-identity-fields).
 
 ---
 
@@ -50,7 +52,7 @@ When CURQ executes the consolidation:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Accidentally Merged Wrong Contacts**: Merges are permanent database redirections and cannot be automatically "unmerged" with a single click. If an unintended merge occurs, you must manually create a new contact card and reassign specific transactions or employees from the chatter history. Always verify the Destination Contact carefully before clicking **Merge Contacts**.
 * **Merging an Individual with a Company**: Ensure you choose the **Company** as the Destination Contact if the goal is to keep the business entity, or convert the individual into an employee contact beforehand.

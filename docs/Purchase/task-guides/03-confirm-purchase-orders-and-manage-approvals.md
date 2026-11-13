@@ -2,6 +2,10 @@
 
 This guide covers how to convert Requests for Quotation into official Purchase Orders, transmit purchase orders to vendors, manage order locks, and execute order cancellations in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Purchase / User** rights.
+> * Active vendor contacts in **Contacts** and defined catalog products.
+
 ---
 
 ## 1. Confirm and Transmit Purchase Orders
@@ -38,6 +42,8 @@ Once confirmed:
 4. Click **Send** to transmit the formal purchase order to the vendor.
 
 ![Compose Email popup with attached formal Purchase Order PDF](../media/013.png)
+
+> For order locking settings, status transitions, and procurement states, see [**Understanding the Procurement Lifecycle and Order States**](../core-concepts/01-understanding-the-procurement-lifecycle-and-order-states.md).
 
 ---
 
@@ -77,5 +83,5 @@ To void or cancel a confirmed order:
 
 * [Create and Manage Requests for Quotation](./01-create-and-manage-requests-for-quotation.md)
 * [Receive Products and Manage Backorders](./05-receive-products-and-manage-backorders.md)
-* [Purchase Settings and General Configuration](../settings-and-fields/01-purchase-settings-and-general-configuration.md)
+* [RFQ, Purchase Order, and Blanket Order Field Definitions](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md)
 * [Understanding the Procurement Lifecycle and Order States](../core-concepts/01-understanding-the-procurement-lifecycle-and-order-states.md)

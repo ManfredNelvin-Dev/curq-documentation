@@ -2,6 +2,10 @@
 
 The **Management → Allocations** interface allows Time Off Officers and HR Administrators to assign leave entitlements to individual employees, configure accrual plans, and review incoming employee allocation requests. This guide explains how to create regular and accrual allocations, validate employee requests, and manage entitlement lifecycles.
 
+> **Prerequisites**
+> * Active user account with **Time Off / User** rights.
+> * Configured employee profiles and operational time-off type structures.
+
 ---
 
 ## 1. Create and Validate Employee Allocations
@@ -62,6 +66,8 @@ Finalize the allocation to activate the leave balance:
 
    ![Employee My Allocations list view displaying approved leave entitlements](../media/028.png)
 
+> For complete field definitions across **Name**, **Mode**, **Allocation Type**, **Accrual Plan**, **Validity Date From / To**, and **Status**, see [**Allocation Record Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#3-allocation-record-attributes).
+
 ---
 
 ## 2. Review Incoming Employee Allocation Requests
@@ -77,7 +83,7 @@ When employees submit self-service requests for additional leave allocations:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Allocation Not Visible to Employee**: Verify that the allocation record has reached **Approved** status. Allocations in **Draft** or **To Approve** do not credit the employee's active balance.
 * **Dual Approval Required**: If the allocation status moves to **Second Approval** after clicking **Approve**, the leave type requires authorization by a Time Off Officer or HR Administrator before activation.
@@ -90,3 +96,4 @@ When employees submit self-service requests for additional leave allocations:
 * [Set Up Your First Leave Allocation](../getting-started/02-set-up-your-first-leave-allocation.md)
 * [Allocate Time Off to Multiple Employees](./06-allocate-time-off-to-multiple-employees.md)
 * [Accrual Plans and Milestone Specifications](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md)
+* [Holidays, Mandatory Days, and Activity Specifications](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md)

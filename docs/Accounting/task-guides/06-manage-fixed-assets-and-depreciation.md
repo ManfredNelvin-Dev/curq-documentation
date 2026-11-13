@@ -4,7 +4,7 @@ Configure asset profiles, register capital assets manually or automatically from
 
 ---
 
-## Overview
+## 1. Overview
 
 Fixed assets *(such as machinery, vehicles, office furniture, and IT equipment)* represent long-term capital investments that provide economic value across multiple accounting years. Under standard accounting principles, the cost of these assets is not expensed entirely on the purchase date; instead, it is allocated across the asset's useful operational life through periodic **depreciation**.
 
@@ -22,9 +22,9 @@ In CURQ Accounting, the asset management workflow automates this accounting cycl
 
 ---
 
-## 1. Fixed Asset Registration and Depreciation
+## 2. Fixed Asset Registration and Depreciation
 
-### 1.1 Configure an Asset Profile
+### 2.1 Configure an Asset Profile
 
 Asset profiles serve as templates that standardize depreciation parameters and general ledger accounts across asset categories.
 
@@ -58,7 +58,7 @@ Asset profiles serve as templates that standardize depreciation parameters and g
 
 ---
 
-### 1.2 Register a Capital Asset Manually
+### 2.2 Register a Capital Asset Manually
 
 When entering existing assets during migration or recording capital investments not created directly from invoices:
 
@@ -87,7 +87,7 @@ When entering existing assets during migration or recording capital investments 
 
 ---
 
-### 1.3 Confirm and Activate the Asset
+### 2.3 Confirm and Activate the Asset
 
 Generating the depreciation board keeps the asset in **Draft** status, allowing adjustments prior to general ledger posting.
 
@@ -102,11 +102,11 @@ Generating the depreciation board keeps the asset in **Draft** status, allowing 
 
 ---
 
-### 1.4 Post Periodic Depreciation Journal Entries
+### 2.4 Post Periodic Depreciation Journal Entries
 
 Depreciation amounts on active assets must be posted to the General Ledger at the end of each accounting period *(month-end or year-end)*.
 
-#### 1.4.1 Method A: Batch Posting Across All Active Assets
+#### 2.4.1 Method A: Batch Posting Across All Active Assets
 1. In the top navigation bar, select **Assets > Compute Assets**.
 
    ![Assets menu dropdown highlighting Compute Assets menu item](../media/051.png)
@@ -125,7 +125,7 @@ Depreciation amounts on active assets must be posted to the General Ledger at th
 
    ![Created Asset Moves dashboard view showing batch depreciation execution](../media/053.png)
 
-#### 1.4.2 Method B: Posting Individual Asset Lines Directly
+#### 2.4.2 Method B: Posting Individual Asset Lines Directly
 1. Open the active asset in **Accounting > Assets > Assets**.
 2. On the **Depreciation Board** tab, locate the target period row *(e.g., the first line dated `10/31/2026` for `€ 40.99`)*.
 3. Click the **Create Move** button on that row:
@@ -153,9 +153,11 @@ Depreciation amounts on active assets must be posted to the General Ledger at th
 
    ![Assets list view showing updated depreciated and residual values](../media/054.png)
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Fixed Assets and Financial Reports Field Definitions](../settings-and-fields/05-fixed-assets-and-financial-reports-field-definitions.md).
+
 ---
 
-## 2. Automatically Generate Assets from Vendor Bills
+## 3. Automatically Generate Assets from Vendor Bills
 
 CURQ can eliminate manual data entry by automatically generating capital asset draft records when vendor bills are confirmed.
 
@@ -204,7 +206,7 @@ CURQ can eliminate manual data entry by automatically generating capital asset d
 
 ---
 
-## 3. Sell or Dispose of an Asset
+## 4. Sell or Dispose of an Asset
 
 When an asset is retired due to obsolescence, theft, damage, or sale:
 
@@ -230,7 +232,7 @@ When an asset is retired due to obsolescence, theft, damage, or sale:
 
 ---
 
-## 4. Generate and Audit the Financial Assets Report
+## 5. Generate and Audit the Financial Assets Report
 
 To produce an audit-ready financial statement of capital assets, acquisition costs, and accumulated depreciation:
 
@@ -248,7 +250,7 @@ To produce an audit-ready financial statement of capital assets, acquisition cos
 
 ---
 
-## Edge Cases & Recovery Steps
+## 6. Edge Cases & Recovery Steps
 
 * **Modifying an Active Asset**: Once an asset is in **Running** status, core purchase value and start date fields are locked. To modify depreciation terms, click **Modify Depreciation** *(or **Reset to Draft** if permitted by fiscal lock date rules)*, adjust calculation variables, and re-compute the schedule.
 * **Fiscal Lock Date Prevents Depreciation Posting**: If a periodic batch compute falls inside a locked fiscal period, CURQ will reject posting. You must either advance the compute date to an open period or have an authorized accounting administrator temporarily adjust the fiscal lock date.

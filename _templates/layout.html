@@ -126,32 +126,6 @@
                 <div class="sphinx-content">
                     {% block body %}{{ body|safe }}{% endblock %}
 
-                    {% if pagename.endswith('00-overview') %}
-                    {% set ns_btns = namespace(first_article=none, first_faq=none) %}
-                    {% if ns.current_mod %}
-                    {% for p in ns.current_mod.pages %}
-                    {% if (p.category == 'Articles' or 'article' in p.page_path.lower()) and not ns_btns.first_article
-                    %}
-                    {% set ns_btns.first_article = p %}
-                    {% endif %}
-                    {% if (p.label == 'FAQ' or p.category == 'FAQ' or p.page_path.endswith('/faq') or
-                    p.page_path.endswith('faq')) and not ns_btns.first_faq %}
-                    {% set ns_btns.first_faq = p %}
-                    {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                    <div class="overview-buttons">
-                        {% if ns_btns.first_article %}
-                        <a href="{{ pathto(ns_btns.first_article.page_path) }}?module={{ ns.current_mod.sidebar_key }}"
-                            class="overview-btn">{{ _('View all articles') }}</a>
-                        {% endif %}
-                        {% if ns_btns.first_faq %}
-                        <a href="{{ pathto(ns_btns.first_faq.page_path) }}?module={{ ns.current_mod.sidebar_key }}"
-                            class="overview-btn secondary">{{ _('Frequently asked questions') }}</a>
-                        {% endif %}
-                    </div>
-                    {% endif %}
-
                     {% if page_last_updated or last_updated %}
                     <div class="page-footer">
                         <div class="page-last-updated">
@@ -165,8 +139,7 @@
                 {% block right_sidebar %}
                 {% if pagename not in ['docs/support', 'support', 'docs/whats-new', 'whats-new'] %}
                 {% set is_standalone = is_standalone_page if is_standalone_page is defined else
-                (pagename.endswith('00-overview') or pagename.endswith('/overview') or pagename.lower().endswith('faq')
-                or pagename.lower() == 'docs/faq' or pagename == 'faq') %}
+                (pagename.lower().endswith('faq') or pagename.lower() == 'docs/faq' or pagename == 'faq') %}
                 {% if toc or not is_standalone %}
                 <aside class="right-sidebar">
                     {% block right_sidebar_toc %}
@@ -180,7 +153,7 @@
                     {% endif %}
                     {% endblock %}
 
-                    {% set is_standalone = ('overview' in pagename.lower() or 'faq' in pagename.lower() or
+                    {% set is_standalone = ('faq' in pagename.lower() or
                     'popular_articles' in pagename or 'landing_faq' in pagename) %}
                     {% if not is_standalone %}
                     <div class="right-sidebar-section">
@@ -198,7 +171,7 @@
                             {% if not ns.current_mod or mod.folder != ns.current_mod.folder %}
                             {% if mod.has_docs %}
                             <li><a href="{{ pathto(mod.pages[0].page_path) }}?module={{ mod.sidebar_key }}">{{
-                                    _(mod.display_name) }} {{ _('Overview') }}</a></li>
+                                    _(mod.display_name) }}</a></li>
                             {% else %}
                             <li><a href="{{ pathto('docs') }}?module={{ mod.sidebar_key }}">{{ _(mod.display_name)
                                     }}</a></li>

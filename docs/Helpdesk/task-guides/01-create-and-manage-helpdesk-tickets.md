@@ -30,7 +30,7 @@ This task guide provides step-by-step procedures for logging, triaging, assignin
    * Select the **Contact** or **Partner Name**. CURQ automatically retrieves their email address.
 5. In the **Description** tab, record the technical description, customer statements, and system logs.
 
-> For a detailed explanation of all ticket header fields, customer linkages, and urgency priorities, see [**Helpdesk Ticket and Register Field Definitions**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md).
+> For a detailed explanation of register columns, routing fields, project linkages, and description notes, see [**Ticket Register List View Columns**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#1-ticket-register-list-view-columns), [**Identification and General Routing Fields**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#21-identification-and-general-routing-fields), [**Counterparty and Project Linkage Fields**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#22-counterparty-and-project-linkage-fields), and [**Description Tab**](../settings-and-fields/01-helpdesk-ticket-field-definitions.md#31-description-tab).
 
 6. Click Save:
    * CURQ commits the record, logs the creation audit event in the chatter, and allocates the official ticket sequence *(e.g., `HT00065`)*:
@@ -134,7 +134,7 @@ To focus exclusively on inquiries assigned to your internal user profile without
 
 ---
 
-## Edge Cases & Troubleshooting
+## 4. Edge Cases & Troubleshooting
 
 * **Missing Customer Email**: If customer automated replies bounce, verify that the **Email** field on the ticket header matches a valid address. Updating the email on the ticket updates future communications without altering the contact master card.
 * **Unassigned Ticket Backlog**: Monitor tickets where **Assigned user** is blank by filtering the register by `Unassigned` to ensure response times meet team SLAs.

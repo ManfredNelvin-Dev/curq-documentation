@@ -2,6 +2,10 @@
 
 This guide demonstrates how project leaders, finance managers, and department heads generate, analyze, and export multidimensional timesheet reports in CURQ Timesheets.
 
+> **Prerequisites**
+> * Active user account with **Timesheets / User** rights.
+> * Assigned project tasks and active analytic accounts in **Projects**.
+
 ---
 
 ## 1. Timesheet Reporting Views and Quantitative Measures
@@ -50,7 +54,7 @@ Categorizes logged hours by commercial billing classification *(e.g., Billable o
 
 ![Timesheets by Billing Type pivot matrix report](../media/017.png)
 
-> For billing models, invoicing mechanisms, and revenue calculations, see [**Service Product Billing Rules**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#service-product-billing-rules).
+> For billing models, invoicing mechanisms, and revenue calculations, see [**Service Product Billing Rules**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#2-service-product-billing-rules).
 
 ---
 

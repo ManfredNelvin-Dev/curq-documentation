@@ -2,6 +2,10 @@
 
 Initiate private conversations with individual colleagues, create multi-user group chats, monitor live coworker availability, and manage unread message notifications across CURQ Discuss.
 
+> **Prerequisites**
+> * Active user account with **Discuss / User** rights.
+> * Active enterprise user profiles configured in the corporate directory.
+
 ---
 
 ## 1. Direct and Group Message Conversations
@@ -43,6 +47,8 @@ When coordinating a quick project between several colleagues without creating a 
 
 6. CURQ converts the conversation into a multi-party group chat, keeping previous messages intact and granting the newly added member access to subsequent messages.
 
+> For definitions of sidebar navigation items (**Direct Messages**, **Channels**, **Inbox**, **Starred**, **History**), see [**Workspace Navigation Elements**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#2-workspace-navigation-elements).
+
 ---
 
 ## 2. Interpret Real-Time User Presence Status
@@ -53,7 +59,9 @@ CURQ automatically monitors user activity in the browser to inform coworkers of 
    * **Green filled circle (`●`)**: **Online**. The user currently has CURQ open and is actively clicking, typing, or navigating.
    * **Orange filled circle (`●`)**: **Away / Idle**. The user is logged in, but has been inactive for 30 consecutive minutes.
    * **Hollow circle (`○`)**: **Offline**. The user closed their browser tab, signed out, or lost connection.
-   * **Green heart (`♥`)**: **System Assistant**. Indicates automated bots (such as CURQBot).
+   * **Green heart (`♥`)**: **System Bot**. Indicates automated bots (such as CURQBot).
+
+> For complete status triggers and system assistant meanings, see [**Real-Time User Presence Status Specifications**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#3-real-time-user-presence-status-specifications).
 
 > **Note:** Presence indicators are automated by system heartbeat events. Users cannot manually force an "Away" or "Invisible" state while remaining active in the platform.
 

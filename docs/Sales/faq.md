@@ -14,3 +14,13 @@ On a confirmed order, click **Create Invoice** and select **Down Payment** (perc
 
 ## 5. How does CURQ determine which pricelist rule applies when multiple rules overlap?
 CURQ applies rules according to a strict specificity hierarchy: Product Variant takes precedence over Product Template, which takes precedence over Product Category, followed by Global rules. Within the same specificity tier, the rule with the highest applicable minimum quantity threshold is selected.
+
+---
+
+## Related Documentation
+
+* [Process Your First Sale](./getting-started/01-process-your-first-sale.md)
+* [Complete a Sale with Online Signature and Payment](./getting-started/02-complete-a-sale-with-online-signature-and-payment.md)
+* [Understanding the Sales Order Lifecycle](./core-concepts/01-understanding-the-sales-order-lifecycle.md)
+* [Understanding Invoicing and Fulfillment](./core-concepts/02-understanding-invoicing-and-fulfillment.md)
+* [Quotation and Sales Order Field Definitions](./settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

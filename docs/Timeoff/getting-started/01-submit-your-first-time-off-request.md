@@ -85,7 +85,7 @@ CURQ supports full-day absences, partial half-days, and hourly increments:
    * Enter a brief reason in the **Description** field *(e.g., `Personal reasons`)*.
    * If requesting medical leave or mandatory documentation, click **Attach File** under **Supporting Document** to upload verification.
 
-> For complete field definitions and validation behavior, see [**Employee Leave Request Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#employee-leave-request-fields).
+> For complete field definitions and validation behavior, see [**Employee Leave Request Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#2-employee-leave-request-fields).
 
 ---
 
@@ -109,17 +109,6 @@ Once all details are verified, finalize your submission:
    * **Approved**: Once authorized, the status updates to **Approved** and your dashboard balance updates immediately:
 
    ![My Time Off list view showing validated leave requests in Approved status](../media/011.png)
-
----
-
-## 2. Summary of Achievements
-
-In this tutorial, you learned to:
-* Navigate to the personal **Time Off Dashboard** and inspect leave balance cards.
-* Interpret allocated, accrued, planned, and available leave metrics.
-* Create a leave request with custom date ranges, half-day, or hourly options.
-* Attach supporting documents and submit requests for manager approval.
-* Track submitted leave from pending review through final approval.
 
 ---
 

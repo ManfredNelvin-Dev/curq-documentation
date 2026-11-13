@@ -149,12 +149,16 @@ The expense report workflow advances through a sequential four-stage verificatio
 
 ---
 
-## Edge Cases and Recovery Steps
+## 2. Edge Cases and Recovery Steps
 
 * **Personal Purchase Mixed with Business Expense**: If an employee receipt contains both business and personal items, edit the **Subtotal** on the expense line to reflect only the deductible business portion. Do not claim the personal fraction.
 * **Refused Expense Resubmission**: When an expense is refused due to missing documentation, open the report, upload the requested receipt in Chatter, adjust line amounts if required, and click **Reset to Draft** followed by **Submit to Manager**.
 * **Corporate Credit Card Expenses**: For lines marked **Paid By: Company**, do not click **Register Payment** to reimburse the employee. Instead, reconcile the posted expense move against the corresponding corporate credit card statement line in **Accounting > Accounting > Bank Statements**.
 * **Reinvoicing Expenses to Clients**: When **Customer to Reinvoice** is selected, open the linked sales order or navigate to **Sales > To Invoice > Orders to Invoice**. The approved expense automatically appears as an invoiceable line item ready to bill the client.
+
+---
+
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Customer Invoice, Vendor Bill, and Credit Note Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
 
 ---
 

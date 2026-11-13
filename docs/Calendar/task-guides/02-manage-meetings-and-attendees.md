@@ -2,6 +2,10 @@
 
 This guide covers how to modify existing events, invite participants, dispatch formal invitations, configure location and video conferencing links, set reminders, and designate meeting organizers in CURQ 18 Calendar.
 
+> **Prerequisites**
+> * Active user account with **Calendar / User** rights.
+> * Active user calendar profile with configured timezone settings.
+
 ---
 
 ## 1. Meeting Setup and Attendee Coordination
@@ -31,6 +35,8 @@ This guide covers how to modify existing events, invite participants, dispatch f
    * **Status**: Tracks the current response status (**Yes**, **Needs Action**, **Uncertain**, or **Decline**).
 5. Click **Send Invitations** to transmit email notices containing standard `.ics` calendar invitation files.
 
+> For invitation column definitions (**Attendee**, **Email**, **Phone**, **Status**), see [**Attendee Invitation Tracking Columns**](../settings-and-fields/01-meeting-form-field-definitions.md#3-attendee-invitation-tracking-columns).
+
 ---
 
 ### 1.3 Set Location and Video-Call Details
@@ -41,6 +47,8 @@ Provide clear attendance instructions for physical or remote participants:
 
 1. **Location**: For in-person or hybrid events, specify the physical conference room, branch office, or site address. For virtual events, designate as `Online Meeting`.
 2. **Videocall URL**: For online meetings, click **+ CURQ Meeting** to automatically generate an integrated video conference link, or paste a third-party conference URL (e.g., Google Meet, Teams, or Zoom).
+
+> For complete event field specifications (**Location**, **Videocall URL**, **Reminders**, **Organizer**, **Privacy**), see [**Primary Event Header & Scheduling Fields**](../settings-and-fields/01-meeting-form-field-definitions.md#1-primary-event-header--scheduling-fields).
 
 ---
 
@@ -64,3 +72,4 @@ Provide clear attendance instructions for physical or remote participants:
 * [Coordinate Team Availability](./03-coordinate-team-availability.md)
 * [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)
 * [Create Your First Meeting](../getting-started/01-create-your-first-meeting.md)
+* [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)

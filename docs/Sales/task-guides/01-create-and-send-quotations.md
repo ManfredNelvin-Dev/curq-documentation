@@ -77,6 +77,8 @@ Provide suggestive up-sells that customers can browse and add independently in t
    * **Fiscal Position**: Automatic or manual tax mapping rule for international sales.
 4. Click the cloud icon in the top header (or press `Ctrl+S`) to save your quotation.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Send Quotations by Email
@@ -124,7 +126,7 @@ Before sending, or while reviewing terms over the phone with a customer:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Quotation Expired Before Customer Signature**: If a customer attempts to sign an expired quote, CURQ displays a notice that the offer has expired. To revalidate, open the quote in the backend, extend the date in the **Expiration** field, and click **Send by Email** to inform the client.
 * **Customer Address Missing**: If a selected customer lacks an invoice or delivery address, click the external link arrow next to the **Customer** field, enter the required addresses in the contact modal, and click **Save**.

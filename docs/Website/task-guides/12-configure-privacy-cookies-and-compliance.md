@@ -6,6 +6,9 @@ This guide details configuring GDPR cookie consent banners, privacy policies, te
 > **Prerequisites**
 > * **Administration**: User must have **Settings** rights to access and modify system configurations.
 > * **Website**: User must have **Editor and Designer** access rights to manage website settings.
+>
+> **Warning (Configuration Advisory):** Modifying privacy, cookies, and compliance requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -78,6 +81,10 @@ Protect wholesale pricing or member catalogs behind account authentication:
    * **All users**: Entire storefront (`/shop`) and prices are open to anonymous guests.
    * **Logged in users**: Locks catalog browsing, product prices, and shopping carts behind portal login. Anonymous guests are automatically redirected to the login form.
 2. Click **Save** in the top-left corner of the settings view to apply changes.
+
+---
+
+> **Tip (Advised Settings):** Enable GDPR-compliant cookie consent banners with explicit opt-in for marketing cookies and published privacy policy links.
 
 ---
 

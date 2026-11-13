@@ -6,6 +6,8 @@ This document provides a comprehensive data dictionary for all configuration set
 
 ## 1. Helpdesk Team Configuration Header Fields
 
+> **Warning - Cross-System Communication Safeguard (Email Aliases & Projects):** The **Email Alias** configured here intercepts inbound messages at the mail server level. Duplicating or modifying aliases used by CRM (`sales@...`) or Discuss channels will disrupt customer ticket creation or drop incoming inquiries. Furthermore, linking an incorrect **Project** redirects billable development tickets and timesheet logs to wrong project workspaces.
+
 Located at **Helpdesk > Configuration > Teams**, the Helpdesk Team form governs functional team dispatch, communication aliases, and project synchronization:
 
 | Field Name | Description |

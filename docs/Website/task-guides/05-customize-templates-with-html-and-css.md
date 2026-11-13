@@ -4,6 +4,10 @@ This guide covers accessing the integrated HTML/CSS code editor, inspecting QWeb
 
 Edit underlying QWeb templates, customize styling rules with SCSS/CSS, and inspect website code in CURQ 18 using the built-in HTML / CSS Editor.
 
+> **Prerequisites**
+> * Active user account with **Website / Editor** rights.
+> * Configured base system records and access permissions.
+
 ---
 
 ## 1. Template Customization and Live Preview
@@ -70,6 +74,10 @@ The editor features full syntax highlighting directly synchronized with the live
 * **Resetting Customizations**: For modified SCSS stylesheets, a red **Reset** button appears, allowing you to discard custom CSS overrides and restore default styling.
 * **Saving Changes**: Click **Save** in the top bar to apply changes directly to the database. The webpage automatically re-renders with your new code.
 * **Closing the Editor**: Click **Close** to dismiss the code panel and return to standard frontend preview.
+
+---
+
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md).
 
 ---
 

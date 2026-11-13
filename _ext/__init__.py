@@ -4,11 +4,20 @@ Custom Sphinx extensions and build-time context generators for CURQ documentatio
 
 from datetime import datetime
 from pathlib import Path
+import re
+import sys
 from typing import Any, Dict, List
 
 from .git_metadata import get_git_file_dates_for_ref
 from .modules_context import build_modules_context
 from .whats_new import get_whats_new_from_git
+
+# Ensure parent directory is in sys.path to import module_registry
+root_dir = Path(__file__).resolve().parent.parent
+if str(root_dir) not in sys.path:
+    sys.path.insert(0, str(root_dir))
+
+from module_registry import MODULE_REGISTRY
 
 __all__ = [
     "build_modules_context",
@@ -88,6 +97,34 @@ def setup(app) -> Dict[str, Any]:
 
         context["page_last_updated"] = page_date
         context["last_updated"] = page_date
+
+        # Dynamically inject the Release/Feature badge pill under the primary H1
+        # on all module documentation pages without requiring HTML in markdown source files.
+        module_name = None
+        parts = pagename.split("/")
+        if len(parts) >= 2 and parts[0] == "docs":
+            mod_key = parts[1]
+            if mod_key in MODULE_REGISTRY:
+                module_name = MODULE_REGISTRY[mod_key]["display_name"]
+        elif parts[0] in MODULE_REGISTRY:
+            module_name = MODULE_REGISTRY[parts[0]]["display_name"]
+
+        if module_name and "body" in context and context["body"]:
+            smv_ver = getattr(app.config, "smv_current_version", None)
+            if smv_ver and smv_ver not in ("HEAD", "main"):
+                release_ver = smv_ver
+            else:
+                release_ver = getattr(app.config, "release", None) or getattr(app.config, "version", "18.0")
+            context["module_feature_name"] = module_name
+            context["active_version"] = release_ver
+            if "small-pill" not in context["body"] and "</h1>" in context["body"]:
+                pill_html = (
+                    f'\n<p><span class="small-pill pill-yellow">'
+                    f'<span class="pill-dot"></span>'
+                    f'<strong>Release/Feature:</strong> CURQ {release_ver} · {module_name}'
+                    f'</span></p>'
+                )
+                context["body"] = re.sub(r"(</h1>)", r"\1" + pill_html, context["body"], count=1)
 
     app.connect("html-page-context", on_html_page_context)
 

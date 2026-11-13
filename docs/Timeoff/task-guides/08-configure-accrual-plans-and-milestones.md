@@ -2,6 +2,13 @@
 
 Accrual plans automate progressive leave entitlement accumulation. Instead of crediting an entire annual leave quota at the start of the year, accrual plans calculate and award leave incrementally based on elapsed time, seniority milestones, or hours logged on timesheets.
 
+> **Prerequisites**
+> * Active user account with **Time Off / Administrator** rights.
+> * Configured employee profiles and operational time-off type structures.
+>
+> **Warning (Configuration Advisory):** Modifying accrual plans and milestones requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Accrual Plan and Seniority Milestone Setup
@@ -43,6 +50,8 @@ Initialize a new accrual plan:
      * **Other**: Evaluates balances on a specific calendar day.
    * **Based on worked time**: Enable this toggle if leave accrues proportionally based on actual hours recorded on validated timesheets.
 
+> For accrual plan parameters (**Accrued Gain Time**, **Carry-Over Time**, **Based on worked time**), see [**Accrual Plan Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#1-accrual-plan-attributes).
+
 ---
 
 ### 1.3 Add and Configure Accrual Milestones
@@ -52,6 +61,8 @@ Accrual rules dictate how much leave is earned, how frequently, and what caps ap
 1. In the **Rules** section, click **New Milestone** (highlighted in red):
 
    ![Accrual plan form view highlighting New Milestone button and opening the Create Milestone dialog](../media/047.png)
+
+   > For milestone-level rules (**Employee accrue**, **Cap accrued time**, **Start Accruing**, **Carry over**, **Milestone cap**, **Carry Over Validity**), see [**Accrual Milestone Level Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#2-accrual-milestone-level-attributes).
 
 2. The **Create Milestone** modal dialog opens:
 
@@ -88,10 +99,14 @@ Accrual rules dictate how much leave is earned, how frequently, and what caps ap
 
 ---
 
-## Edge Cases & Recovery Steps
+## 2. Edge Cases & Recovery Steps
 
 * **Accruals Not Calculating on Timesheet Submissions**: If a plan set to **Based on worked time** does not award leave, ensure that timesheets are submitted and approved in the Timesheets application.
 * **Unused Days Carried Over Beyond Policy Limit**: If an employee retained more leave than company policy allows, check the **Carry Over** rule on the active milestone to ensure either **Carry over with a maximum** or **None** is selected.
+
+---
+
+> **Tip (Advised Settings):** Configure monthly or annual accrual milestones matching standard statutory employment contracts with clear carry-over limits.
 
 ---
 

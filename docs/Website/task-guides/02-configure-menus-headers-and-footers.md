@@ -4,6 +4,13 @@ This guide details how to build and organize navigation menus, dropdown submenus
 
 Organize website structure, build hierarchical dropdowns, design responsive mega menus, and customize header and footer navigation layouts in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Website / Administrator** rights.
+> * Published website domain and access to the CURQ website builder.
+>
+> **Warning (Configuration Advisory):** Modifying menus, headers, and footers requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Menu Structure and Hierarchy Configuration
@@ -159,6 +166,8 @@ Mega menus replace narrow vertical dropdowns with expansive, multi-column naviga
       * **Visible for Logged Out** visitors only *(guest prospects)*
 11. Click **Save** in the top bar to publish your mega menu.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [eCommerce Shop and Checkout Settings](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md).
+
 ---
 
 ## 2. Customizing Header Layout and Navbar Options
@@ -248,6 +257,10 @@ When operating multiple brand websites within a single CURQ database:
 3. **Dedicated Brand Navigation**:
    * Each website maintains its own header and footer styling, brand logo, and navigation links.
    * Changes made within the Menu Editor are saved strictly under the active website context.
+
+---
+
+> **Tip (Advised Settings):** Maintain a concise top-level navigation hierarchy (maximum 5–7 primary links) with responsive hamburger menus for mobile screens.
 
 ---
 

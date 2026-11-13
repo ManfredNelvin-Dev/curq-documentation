@@ -44,3 +44,13 @@ CURQ includes built-in integration capabilities and open API protocols:
 * **Payment Gateways**: Pre-configured connectors for payment processors (such as Stripe, PayPal, and SEPA Direct Debit) support secure online checkout and automated payment reconciliation.
 * **Logistics & Communication**: Direct integrations support parcel carriers (such as Sendcloud), transactional and marketing email servers (SMTP/IMAP), and SMS gateways.
 * **Data Migration**: Built-in CSV and Excel import/export tools enable rapid bulk data ingestion and synchronization.
+
+---
+
+## Related Documentation
+
+* [CURQ System Overview](Articles/00-overview.md)
+* [System Security & Data Privacy](Articles/01-system-security-and-data-privacy.md)
+* [User Roles & Permissions Setup](Articles/03-user-roles-and-permissions-setup.md)
+* [Data Import & Export Guide](Articles/02-data-import-and-export-guide.md)
+* [Multi-Currency & Localization Guide](Articles/05-multi-currency-and-localization-guide.md)

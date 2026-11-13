@@ -2,6 +2,10 @@
 
 This guide covers how to access the Mailing Lists workspace, create new subscriber lists, configure public preferences, and manage subscriber contacts in CURQ 18 Email Marketing.
 
+> **Prerequisites**
+> * Active user account with **Email Marketing / User** rights.
+> * Configured outgoing mail server and marketing list segments.
+
 ---
 
 ## 1. Create and Manage Mailing Lists
@@ -39,6 +43,8 @@ Initialize a dedicated subscriber audience container:
    * **Partner Tag**: Specify a tag to automatically group linked contacts.
    * **Show In Preferences ?**: Check this box if you want recipients to see and manage their subscription to this list via customer portal preference pages.
 
+> For complete subscriber list properties, **Show in Preferences**, **Mandatory Partner**, and **Partner Tag** options, see [**Mailing List Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#3-mailing-list-fields).
+
 ---
 
 ## 2. Import Contacts and Manage List Actions
@@ -60,7 +66,7 @@ Populate your list with subscribers and monitor operational actions:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Duplicate Email Addresses**: If an imported file contains duplicate email addresses, CURQ automatically consolidates them to ensure each contact receives only one email per broadcast.
 * **Accidental Deletion**: Deleting a mailing list removes list associations but does not delete the underlying master Contact profiles in the Contacts app.
@@ -72,4 +78,5 @@ Populate your list with subscribers and monitor operational actions:
 
 * [Manage Mailing List Contacts and Subscriptions](./02-manage-mailing-list-contacts-and-subscriptions.md)
 * [Design, Schedule, and Send Email Mailings](./04-design-schedule-and-send-email-mailings.md)
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)
 * [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)

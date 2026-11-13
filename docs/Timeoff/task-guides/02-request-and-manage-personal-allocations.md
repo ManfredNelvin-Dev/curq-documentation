@@ -2,6 +2,10 @@
 
 The **My Allocations** view provides employees with a dedicated catalog of their active leave balances and pending allocation requests. When company policy permits, employees can request additional leave allocations—such as extra compensatory days or extended vacation allowances—directly from this interface.
 
+> **Prerequisites**
+> * Active user account with **Time Off / User** rights.
+> * Configured employee profiles and operational time-off type structures.
+
 ---
 
 ## 1. Review and Request Personal Allocations
@@ -55,7 +59,7 @@ When an employee has completed overtime work, earned compensatory time, or requi
 4. The request transitions to **To Approve** status and automatically alerts your manager or HR officer via the chatter activity feed.
 5. Once your manager reviews and approves the request, your balance card on the **Dashboard** increases immediately.
 
-> For complete field definitions and configuration options, see [**Allocation Record Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#allocation-record-attributes).
+> For complete field definitions and configuration options, see [**Allocation Record Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#3-allocation-record-attributes).
 
 ---
 
@@ -69,7 +73,7 @@ Locate specific allocation records across historical cycles:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Allocation Balance Not Yet Credited**: Newly submitted allocation requests remain in **To Approve** status until authorized by your manager or HR officer. Check the status column before attempting to book leave against the new balance.
 * **Cannot Locate Expired or Historical Grants**: The allocations catalog filters by **Currently Valid** by default. Click the (`x`) on the search bar tag to reveal previous years' expired or exhausted allocations.

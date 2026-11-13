@@ -13,6 +13,10 @@ flowchart LR
     Receivable Cleared`"]
 ```
 
+> **Prerequisites**
+> * Active user account with **Accounting / User** rights.
+> * Configured Chart of Accounts and partner records in **Contacts**.
+
 ---
 
 ## 1. Hands-On Exercise: From Invoice to Settlement
@@ -101,6 +105,8 @@ When the customer pays via bank transfer or cash:
    * A **Payments** smart button appears at the top showing `1` linked payment transaction.
 
    ![Customer invoice with In Payment green ribbon badge](../media/006.png)
+
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Customer Invoice, Vendor Bill, and Credit Note Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
 
 ---
 

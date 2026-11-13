@@ -10,14 +10,18 @@ This document explains the conceptual mechanics of project task state machines, 
 
 Each task in CURQ progresses across sequential operational stages representing distinct phases of delivery:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    New["New<br/>Intake & Backlog"] -->|"Assign Specialist"| Assigned["Assigned<br/>Scoping & Readiness"]
-    Assigned -->|"Start Work Timer"| InProgress["In Progress<br/>Active Execution"]
-    InProgress -->|"Complete & Verify"| Done["Done<br/>Delivered & Verified"]
+    New["`**New**
+    Intake & backlog`"] -->|"Assign"| Ass["`**Assigned**
+    Scoped & ready`"]
+    Ass -->|"Start Work"| Prog["`**In Progress**
+    Active execution`"]
+    Prog -->|"Verify"| Done(["`**Done**
+    Delivered & closed`"])
 
-    InProgress -.->|"Re-open / Blocked"| Assigned
-    Done -.->|"Rework / Defect"| InProgress
+    Prog -.->|"Blocked"| Ass
+    Done -.->|"Rework"| Prog
 ```
 
 ### 1.1 Core Workflow Stages
@@ -42,13 +46,18 @@ CURQ Project organizes task execution through Kanban stage columns:
 
 Tasks in CURQ Project connect directly with other core enterprise applications:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    Sales["CURQ Sales<br/>Sales Order Lines"] -->|"Generates Project"| Project["Project Workspace<br/>Tasks & Sprints"]
-    Helpdesk["CURQ Helpdesk<br/>Support Tickets"] -->|"Escalates Bug"| Project
+    Sales["`**CURQ Sales**
+    Sales order lines`"] -->|"Creates Project"| Proj["`**Project Workspace**
+    Tasks & sprints`"]
+    Help["`**CURQ Helpdesk**
+    Support tickets`"] -->|"Escalates Bug"| Proj
 
-    Project -->|"Track Work Hours"| Timesheet["CURQ Timesheets<br/>Recorded Hours"]
-    Timesheet -->|"Invoice Billable Hours"| Invoice["CURQ Accounting<br/>Customer Invoices"]
+    Proj -->|"Logs Hours"| Time["`**CURQ Timesheets**
+    Recorded work hours`"]
+    Time -->|"Bills Hours"| Inv(["`**CURQ Accounting**
+    Customer invoices`"])
 ```
 
 * **Helpdesk Escalations**: When a client ticket in CURQ Helpdesk *(such as `HT00065`)* requires software development, the ticket is attached to an internal task *(such as `Frontend development`)*. Changes in task status cross-post directly to the ticket chatter.

@@ -8,7 +8,9 @@ This operational guide provides procedures for inventory managers, catalog speci
 
 ---
 
-## 1. Access the Products Catalog
+## 1. Browse and Audit the Products Catalog
+
+### 1.1 Access the Products Catalog
 
 1. From any view in CURQ Inventory, click **Products** in the primary top navigation bar.
 2. Select **Products** from the dropdown menu.
@@ -24,12 +26,9 @@ This operational guide provides procedures for inventory managers, catalog speci
    * **Pagination Counter**: Displays current record scope *(e.g., `1-2/2`)*.
    * **View Switchers**: Toggles between visual **Kanban** view and structured **List** view.
 
-
-> **Tip:** For more details about catalog search bars, filters, and view controls, see [**Product Catalog Header and View Controls Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#1-product-catalog-header-and-view-controls-data-dictionary).
-
 ---
 
-## 2. Navigate Products in Kanban View
+### 1.2 Navigate Products in Kanban View
 
 The Kanban view presents products as visual cards designed for fast product identification:
 
@@ -39,11 +38,9 @@ The Kanban view presents products as visual cards designed for fast product iden
 4. **Favorite Star**: Click the star icon to bookmark high-volume or critical inventory items.
 5. Click any card to drill down into the complete product configuration form.
 
-> **Tip:** For more details about card metrics, pricing, and on-hand badges, see [**Products Kanban Card Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#2-products-kanban-card-data-dictionary).
-
 ---
 
-## 3. Switch to Structured List View and Audit Stock Balances
+### 1.3 Switch to Structured List View and Audit Stock Balances
 
 To analyze tabular stock metrics, cost values, and inventory tags:
 
@@ -62,11 +59,13 @@ To analyze tabular stock metrics, cost values, and inventory tags:
    * **Forecasted**: Projected stock availability factoring in incoming receipts and reserved delivery orders.
    * **Unit**: Standard Unit of Measure applied across inventory operations *(e.g., `Units`)*.
 
-> **Tip:** For more details about the fields and columns on the product list register, see [**Products List Register Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#3-products-list-register-data-dictionary).
+> For more details about the fields and columns on the product list register, see [**Products List Register Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#1-products-list-register-data-dictionary).
 
 ---
 
-## 4. Configure Product Master Attributes on the Form View
+## 2. Configure Product Tracking, Routes, and Variants
+
+### 2.1 Configure Product Master Attributes on the Form View
 
 Click on any product record *(e.g., `Fair Phone 5 (Black)`)* to open the detailed product master form:
 
@@ -95,11 +94,11 @@ Click on any product record *(e.g., `Fair Phone 5 (Black)`)* to open the detaile
    * **Reference & Barcode**: Enter internal SKU codes and EAN/UPC barcodes for optical scanner verification during picking and receiving.
    * **Internal Notes**: Text area for documenting packaging guidelines or storage instructions for warehouse staff.
 
-> **Tip:** For more details about header controls, smart buttons, and general fields, see [**Product Master Form Controls and Smart Buttons Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#5-product-master-form-controls-and-smart-buttons-data-dictionary) and [**Product General Information Tab Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#6-product-general-information-tab-data-dictionary).
+> For more details about product general fields, pricing, and tracking parameters, see [**Product General Information Tab Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#2-product-general-information-tab-data-dictionary).
 
 ---
 
-## 5. Enable Storable Product Inventory Tracking vs Consumables
+### 2.2 Enable Storable Product Inventory Tracking vs Consumables
 
 In CURQ, the classification between **Storable Products** and **Consumable Goods** is controlled directly by the **Track Inventory** checkbox on the General Information tab:
 
@@ -120,7 +119,7 @@ In CURQ, the classification between **Storable Products** and **Consumable Goods
 
 ---
 
-## 6. Configure Supply Chain Routes and Logistics on the Inventory Tab
+### 2.3 Configure Supply Chain Routes and Logistics on the Inventory Tab
 
 Click the **Inventory** notebook tab to configure procurement routing, lead times, counterpart locations, and warehouse operational notes:
 
@@ -132,6 +131,8 @@ Click the **Inventory** notebook tab to configure procurement routing, lead time
    * **View Diagram Action**:
 
 ![CURQ Product master form view highlighting the View Diagram link on the Inventory tab with a red box and arrow](../media/030.png)
+
+> For more details about logistics parameters, routes, and smart buttons on the Inventory tab, see [**Product Inventory Tab Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#3-product-inventory-tab-data-dictionary).
 
    * Click **-> View Diagram** to inspect the graphical routing flowchart mapping procurement intake to dispatch destinations:
 
@@ -161,11 +162,9 @@ Click the **Inventory** notebook tab to configure procurement routing, lead time
    * Review the **Variants** smart button *(e.g., `3 Variants` on `Fair Phone 5`)* to inspect specific SKU attribute matrices *(such as color or memory configurations)*.
    * Review cumulative operational counters *(e.g., `Sold: 11.00 Units`, `Purchased: 19.00 Units`, and `In: 6 / Out: 3`)*.
 
-> **Tip:** For more details about logistics parameters and route diagram rules, see [**Product Inventory Tab Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#7-product-inventory-tab-data-dictionary) and [**Product Routes Report and Diagram Legend Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#8-product-routes-report-and-diagram-legend-data-dictionary).
-
 ---
 
-## 7. Audit and Manage Product Variants
+### 2.4 Audit and Manage Product Variants
 
 When products feature multiple attributes *(such as colors, sizes, or storage capacities)*, inventory managers audit individual variants across list and Kanban registers:
 
@@ -198,11 +197,10 @@ When products feature multiple attributes *(such as colors, sizes, or storage ca
 
    * Each visual tile highlights specific retail pricing, attribute badges *(such as `Color: Black`, `Color: White`, `Color: Orange`)*, and catalog icons.
 
-> **Tip:** For more details about variant attributes, pricing, and inventory matrices, see [**Product Variants Register and Kanban Cards Data Dictionary**](../settings-and-fields/02-product-catalog-and-traceability-field-definitions.md#4-product-variants-register-and-kanban-cards-data-dictionary).
 
 ---
 
-## 8. Create New Products from the Catalog
+## 3. Create New Products from the Catalog
 
 1. In the upper-left action bar, click **+ New**.
 2. Configure product attributes:

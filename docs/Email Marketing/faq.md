@@ -24,3 +24,13 @@ When a recipient clicks unsubscribe, CURQ marks their subscription as opted out 
 
 ## 7. Can I send email marketing broadcasts directly to CRM Leads or Sales Orders without creating a mailing list?
 Yes. On the mailing creation form, change the **Recipients** selector from `Mailing List` to your desired business model, such as `Lead/Opportunity` or `Sales Order`. You can then define granular domain filter rules *(such as country, stage, or tags)* to dynamically target those records.
+
+---
+
+## Related Documentation
+
+* [Create and Send Your First Email Marketing Campaign](./getting-started/01-create-and-send-your-first-email-marketing-campaign.md)
+* [Manage Subscriber Lists and Track Campaign Engagement](./getting-started/02-manage-subscriber-lists-and-track-campaign-engagement.md)
+* [Understanding Email Marketing Architecture and Delivery Mechanisms](./core-concepts/01-understanding-email-marketing-architecture-and-delivery-mechanisms.md)
+* [Understanding Campaign Lifecycles and Subscriber Governance](./core-concepts/02-understanding-campaign-lifecycles-and-subscriber-governance.md)
+* [Mailing and Campaign Field Definitions](./settings-and-fields/01-mailing-and-campaign-field-definitions.md)

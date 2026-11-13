@@ -4,7 +4,7 @@ This document explains the architectural state machine, legal locking mechanics,
 
 ---
 
-## The Sales Order as an Architectural State Machine
+## 1. The Sales Order as an Architectural State Machine
 
 A commercial transaction in CURQ is governed by a deterministic finite state machine. As negotiations progress from preliminary inquiries to finalized contracts, the document transitions through formal states:
 
@@ -20,19 +20,19 @@ flowchart LR
     SO -.-> CA
 ```
 
-### 1. Draft Quotation (`draft`)
+### 1.1 Draft Quotation (`draft`)
 The draft stage represents an exploratory estimate. Sales personnel can freely add, modify, reorder, or delete lines. In this state:
 * No warehouse stock is reserved.
 * No revenue projections are recognized in financial ledgers.
 * The document carries a temporary sequence identifier *(e.g., `Q00042`)*.
 
-### 2. Quotation Sent (`sent`)
+### 1.2 Quotation Sent (`sent`)
 When the proposal is transmitted via email or presented in the customer portal, the record enters the `sent` state. This signifies an outstanding commercial offer:
 * The system establishes a legal timestamp marking the start of the validity period.
 * The customer portal activates real-time access, logging an audit event the moment the recipient views the offer.
 * If an expiration date is reached without client confirmation, the offer becomes invalid for digital signature.
 
-### 3. Sales Order (`sale`)
+### 1.3 Sales Order (`sale`)
 Customer confirmation (via digital signature, online payment, or manual approval) converts the quotation into a legally binding sales order:
 * The sequence prefix permanently transforms *(e.g., to `S00042`)*.
 * **Inventory Handshake**: CURQ automatically commits stock allocations and creates a linked warehouse delivery slip.
@@ -40,7 +40,7 @@ Customer confirmation (via digital signature, online payment, or manual approval
 
 ---
 
-## Why Confirmed Orders Lock: Contractual and Ledger Integrity
+## 2. Why Confirmed Orders Lock: Contractual and Ledger Integrity
 
 In high-volume commercial operations, allowing unrestricted modifications to confirmed orders introduces severe risks across procurement, fulfillment, and accounting:
 
@@ -52,7 +52,7 @@ When modifications are genuinely required, CURQ enforces an explicit **Unlock** 
 
 ---
 
-## The Chatter Audit Trail and Non-Repudiation
+## 3. The Chatter Audit Trail and Non-Repudiation
 
 CURQ integrates an immutable activity stream (the **Chatter**) on every sales order to provide verifiable compliance and non-repudiation:
 
@@ -67,7 +67,7 @@ This cryptographic and operational trail satisfies commercial e-signature standa
 
 ---
 
-## Down Payments vs. Final Settlements
+## 4. Down Payments vs. Final Settlements
 
 In complex or high-value contracts, revenue realization is decoupled from initial cash intake through a structured two-stage accounting model:
 

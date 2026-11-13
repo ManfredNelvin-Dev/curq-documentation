@@ -7,6 +7,8 @@ Create standardized quotation templates, configure default product bundles, and 
 > * Enable **Quotation Templates** in **Sales > Configuration > Settings**.
 >
 >    ![Enable quotation templates setting](../media/093.png)
+>
+> **Warning (Email Template & Order Confirmation Advisory):** The **Confirmation Mail** template assigned here automatically triggers upon customer signature or payment. Modifying the underlying transactional email template or deleting dynamic placeholders (such as `{{ object.name }}` or portal payment links) will disrupt order fulfillment and client communication. Always duplicate email templates before editing and verify rendered outputs with test quotations.
 
 ---
 
@@ -75,6 +77,8 @@ CURQ's PDF Quote Builder dynamically inserts polished cover pages, team introduc
 
 4. Save the template.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Apply a Template to a Quotation
@@ -94,10 +98,14 @@ CURQ's PDF Quote Builder dynamically inserts polished cover pages, team introduc
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Modifying a Template Does Not Alter Existing Quotes**: Adjusting a quotation template only influences future quotes created from it. Any previously generated quotes maintain their original lines and terms.
 * **Overriding Lines on an Individual Quote**: Sales representatives can freely add, remove, or discount individual lines on a quote without altering the master template.
+
+---
+
+> **Tip (Advised Settings):** Include standard commercial terms, 30-day validity expiration dates, and default signature confirmation toggles.
 
 ---
 
@@ -105,3 +113,4 @@ CURQ's PDF Quote Builder dynamically inserts polished cover pages, team introduc
 * [Create and Manage Quotations](./01-create-and-send-quotations.md)
 * [Send Quotations to Customers](./01-create-and-send-quotations.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)

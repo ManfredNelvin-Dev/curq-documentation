@@ -40,7 +40,7 @@ Configure the operational parameters and communication routing on the main team 
    * Click **Add a line**.
    * Select internal agents *(e.g., `Support Specialist` or `Lead Engineer`)* to grant queue access and dispatch eligibility.
 
-> For a detailed explanation of all team configuration fields, email alias parameters, and security policies, see [**Helpdesk Team Field Definitions**](../settings-and-fields/02-helpdesk-team-field-definitions.md).
+> For a detailed explanation of team configuration fields, email alias parameters, and member roster controls, see [**Helpdesk Team Configuration Header Fields**](../settings-and-fields/02-helpdesk-team-field-definitions.md#1-helpdesk-team-configuration-header-fields) and [**Team Members Tab**](../settings-and-fields/02-helpdesk-team-field-definitions.md#21-team-members-tab).
 
 ---
 

@@ -8,17 +8,10 @@ This document provides a comprehensive data dictionary for all header smart butt
 
 The project configuration header provides high-level health indicators, cross-module links, and operational actions:
 
-| Field Name / Control | Description |
+### Project Header Fields
+
+| Field Name | Description |
 | :--- | :--- |
-| **Share Project Button** | Action button launching external collaborator invitation workflows and portal access rules. |
-| **Tasks Smart Button** | Metric button showing completed versus total tasks with completion percentage *(e.g., `0/1 (0%)`)*. |
-| **Dashboard Status Smart Button** | Quick indicator tracking project milestone health and delivery confidence. |
-| **Tickets Smart Button** | Counter button displaying open Helpdesk customer tickets associated with this project. |
-| **Child Projects Smart Button** | Navigational button accessing nested sub-projects within this master workspace. |
-| **Sprints Smart Button** | Agile counter displaying active and planned development sprints. |
-| **Backlog Smart Button** | Register button opening unassigned backlog work items. |
-| **Start Work Button** | Action button with green play icon initiating real-time project-level time logging. |
-| **Favorite Star** | Bookmark control pinning the workspace to top priority positions across the enterprise. |
 | **Project Title** | Master name defining the workspace *(e.g., `Website Redesign`)*. |
 | **Name of the Tasks** | Customizable singular label applied to deliverables across views *(default `Tasks`)*. |
 | **Use Tickets as** | Customizable label applied to linked Helpdesk support records *(default `Tickets`)*. |
@@ -28,13 +21,29 @@ The project configuration header provides high-level health indicators, cross-mo
 | **Planned Date** | Calendar date range establishing target commencement and delivery deadlines. |
 | **Allocated Time** | Total budgeted labor hours allocated across the entire project scope. |
 
+### Header Action and Smart Buttons
+
+| Button | Behavior |
+| :--- | :--- |
+| **Share Project Button** | Launches external collaborator invitation workflows and configures portal access rules. |
+| **Tasks Smart Button** | Displays completed versus total tasks with percentage *(e.g., `0/1 (0%)`)* and opens the project's task register on click. |
+| **Dashboard Status Smart Button** | Opens the project health and milestone confidence update view. |
+| **Tickets Smart Button** | Displays the count of linked Helpdesk customer tickets and navigates directly to them on click. |
+| **Child Projects Smart Button** | Opens nested sub-projects belonging to this master workspace. |
+| **Sprints Smart Button** | Displays active and planned agile sprints and opens the sprint register on click. |
+| **Backlog Smart Button** | Opens the register of unassigned backlog work items for this project. |
+| **Start Work Button** | Clicking the green play icon initiates real-time project-level time logging. |
+| **Favorite Star** | Toggles bookmark status to pin or unpin the workspace on the Projects overview board. |
+
 ---
 
 ## 2. Settings Tab Data Dictionary
 
+> **Warning - Cross-System Impact (Billable Projects & Analytic Accounting):** De-selecting the **Billable** checkbox or changing the associated **Analytic Account** immediately disconnects logged employee timesheets from linked Sales Orders. Hours worked will not show up on customer invoices, leading to unbilled services and revenue loss. Non-technical users should not change billing or analytic configurations while a project has active work orders in progress.
+
 The **Settings** tab defines project visibility, customer communication aliases, and module integrations:
 
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Visibility (Private)** | Radio option restricting workspace access strictly to invited internal users. |
 | **Visibility (All Internal)** | Radio option granting view and update rights to all internal employees. |
@@ -50,7 +59,7 @@ The **Settings** tab defines project visibility, customer communication aliases,
 
 The **Analytic** tab establishes relational connections to corporate financial and cost accounting ledgers:
 
-| Field Name / Control | Description |
+| Field Name | Description |
 | :--- | :--- |
 | **Project Analytic Account** | Financial analytic ledger account *(e.g., `Website Redesign`)* recording direct labor costs and revenues. |
 
@@ -60,14 +69,21 @@ The **Analytic** tab establishes relational connections to corporate financial a
 
 The **Project Stages** tab configures the sequential progression gates and automated email templates:
 
-| Field Name / Control | Description |
+### Stage Tab Fields
+
+| Field Name | Description |
 | :--- | :--- |
-| **Stage Reorder Handle** | Drag-and-drop icon on the left edge allowing administrators to resequence column order. |
 | **Name** | Title of the pipeline stage *(e.g., `To Do`, `Started`, `Doing`, `Pending`, `Done`)*. |
 | **Folded in Kanban** | Checkbox collapsing the stage column by default in Kanban views to reduce visual clutter. |
 | **Email Template** | Automated email template triggered when tasks transition into this specific stage. |
-| **Delete Row Action** | Table control removing a stage from the project workflow pipeline. |
-| **Add a line Control** | Table action button inserting a new operational stage into the project master. |
+
+### Stage Row Controls and Buttons
+
+| Button / Control | Behavior |
+| :--- | :--- |
+| **Stage Reorder Handle** | Drag-and-drop handle on the left edge that resequences pipeline stage column order. |
+| **Delete Row Action** | Clicking the trash bin icon removes the stage from the project workflow pipeline. |
+| **Add a line Control** | Inserts a new editable stage row into the project stages table. |
 
 ---
 

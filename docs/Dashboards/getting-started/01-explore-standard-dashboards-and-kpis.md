@@ -36,6 +36,8 @@ To access your organization's standard dashboards:
 
 4. The dashboard canvas immediately loads with live summary cards, monthly sales trends, and top customer tables.
 
+> For sidebar category grouping and display sequence rules, see [**Dashboard Group Configuration Fields**](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md#1-dashboard-group-configuration-fields).
+
 ---
 
 ### 1.2 Read Summary KPI Cards and Benchmarks
@@ -64,6 +66,8 @@ Beyond aggregate totals, standard dashboards spotlight top-ranking operational s
 
 3. Review the column charts below (*Best Sellers by Revenue* and *Best Sellers by Units Sold*) to evaluate product demand.
 
+> For descriptions of all scorecard and chart formats (including column, bar, line, area, combo, pie/donut, and gauge widgets), see [**Chart and Metric Types Catalog**](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md#1-chart-and-metric-types-catalog).
+
 ---
 
 ### 1.4 Apply Dimensional and Date Range Filters
@@ -74,14 +78,16 @@ Standard dashboards feature a global filter bar across the top to focus your ana
 
    ![Dashboard filter bar highlighted at the top of the view](../media/004.png)
 
-2. **Select a Date Range**: Click the timeframe dropdown *(such as **Last 90 Days** or **This Month**)* to adjust the analytical window.
+2. **Select a Timeframe / Date Range**: Click the timeframe dropdown *(such as **Last 90 Days** or **This Month**)* to adjust the analytical window.
 3. **Filter by Dimensions**: Select specific dimensions to narrow the scope:
    * **Country**: Filter metrics by customer geographical territory.
-   * **Product & Category**: Isolate figures for an individual product line or category.
-   * **Customer**: Focus on a specific client account.
+   * **Product / Category**: Isolate figures for an individual product line or category family.
+   * **Customer / Account**: Focus on a specific client account or partner profile.
    * **Salesperson & Sales Team**: View performance for a specific team or representative.
-   * **Source & Medium**: Track marketing campaign attribution.
+   * **UTM Campaign Source & UTM Medium**: Track marketing campaign attribution.
 4. Watch as all KPI scorecards and graphical charts recalculate immediately.
+
+> For definitions and scope of every global filter parameter, see [**Standard Dashboard Global Filter Parameters**](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md#2-standard-dashboard-global-filter-parameters).
 
 ---
 
@@ -101,9 +107,13 @@ Every metric card and chart element is linked directly to the underlying transac
 
 ---
 
+> For granular parameter descriptions and data dictionary field specifications, refer to [**Dashboard Configuration and Group Specifications**](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md).
+
+---
+
 ## Related Documentation
 
 * [Set Up Your First Custom Dashboard](./02-set-up-your-first-custom-dashboard.md)
 * [Navigate and Filter Standard Dashboards](../task-guides/01-navigate-and-filter-standard-dashboards.md)
 * [Dashboard Chart and Filter Definitions](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md)
-
+* [Dashboard Configuration and Group Specifications](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md)

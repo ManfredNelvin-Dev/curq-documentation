@@ -15,3 +15,12 @@ Click your user avatar at the top right, select **Preferences**, and navigate to
 ## 5. Can I use canned responses across sales quotations and invoice chatters?
 Yes. Canned responses work in every composer throughout CURQ. Type a colon (`:`) followed by the shortcut keyword (e.g., `:hello` or `:quote-followup`) in any channel, direct message, or document chatter, and press **Enter** to insert the pre-written substitution text.
 
+---
+
+## Related Documentation
+
+* [Send Your First Message and Collaborate](./getting-started/01-send-your-first-message-and-collaborate.md)
+* [Set Up a Team Channel and Host a Video Meeting](./getting-started/02-set-up-a-team-channel-and-host-a-video-meeting.md)
+* [Understanding Unified Business Communication and Chatter Architecture](./core-concepts/01-understanding-unified-business-communication-and-chatter-architecture.md)
+* [Understanding Channels, Collaboration, and WebRTC Architecture](./core-concepts/02-understanding-channels-collaboration-and-webrtc-architecture.md)
+* [Channel and Chat Settings Definitions](./settings-and-fields/01-channel-and-chat-settings-definitions.md)

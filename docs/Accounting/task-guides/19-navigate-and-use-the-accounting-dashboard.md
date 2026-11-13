@@ -4,6 +4,10 @@ The **Accounting Dashboard** is the central operational command center in CURQ A
 
 Rather than navigating through multi-level menus, accountants use the dashboard to monitor financial health at a glance, import statements, and launch pre-routed journal vouchers with automated account assignments.
 
+> **Prerequisites**
+> * Active user account with **Accounting / User** rights.
+> * Underlying business application activity and reporting data available.
+
 ---
 
 ## 1. Dashboard Overview and Journal Topology
@@ -226,7 +230,7 @@ For companies maintaining periodic inventory accounting or recording physical st
 
 ---
 
-## Edge Cases and Dashboard Troubleshooting
+## 7. Edge Cases and Dashboard Troubleshooting
 
 * **Journal Missing from Dashboard**: If a specific journal does not appear as a card on the dashboard, navigate to **Accounting > Configuration > Journals**, open the journal record, and verify that **Show Journal on Dashboard** is enabled. Configure journal accounts, payment methods, and dashboard preferences across the journal tabs:
 
@@ -235,7 +239,7 @@ For companies maintaining periodic inventory accounting or recording physical st
   ![Outgoing Payments tab](../media/078.png)
   ![Journal Advanced Settings tab](../media/079.png)
 
-  > For complete journal parameter specifications, see [**Financial Journals Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#financial-journals-field-definitions).
+  > For complete journal parameter specifications, see [**Financial Journals Field Definitions**](../settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md#3-financial-journals-field-definitions).
 * **Unbalanced Dashboard Warning**: If a journal card displays an unexpected red alert icon, one or more unposted draft entries contain balance discrepancies. Click the card title to review and balance draft items.
 * **Filter Persistence**: Dashboard counters reflect real-time database state. If numbers appear unexpectedly low, verify the top search bar is clear and no restrictive partner or date filters are active.
 

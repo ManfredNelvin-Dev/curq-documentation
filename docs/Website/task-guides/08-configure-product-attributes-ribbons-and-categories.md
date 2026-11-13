@@ -2,6 +2,15 @@
 
 This guide covers organizing the public storefront catalog using eCommerce product categories, promotional ribbons, attribute filters, and combo choices.
 
+> **Prerequisites**
+> * Active user account with **Website / Administrator** rights.
+> * Defined catalog products and active eCommerce storefront in CURQ.
+>
+> **Warning (Configuration Advisory):** Modifying eCommerce catalog and attributes requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
+---
+
 ## 1. Website Catalog Configuration
 
 While general product settings (such as cost, invoicing policies, and warehouse routes) are managed in standard sales catalogs, website merchandising rules are configured under **eCommerce** > **Products**.
@@ -244,6 +253,14 @@ To apply a ribbon to a product as a standard user:
 
 ![Product form in Developer Mode highlighting the Ribbon field under Ecommerce Shop](../media/108.png)
 
+> **Prerequisites**
+> * Active user account with **Website / Administrator** rights.
+> * Configured base system records and access permissions.
+
+---
+
+> **Tip (Advised Settings):** Enable multi-attribute storefront filtering (e.g., Size, Color) and limit promotional badges (e.g., 'Sale', 'New') to active promotions.
+
 ---
 
 ## Related Documentation
@@ -252,4 +269,3 @@ To apply a ribbon to a product as a standard user:
 * [Configure Discounts, Loyalty Programs, and Gift Cards](./09-configure-discounts-loyalty-and-gift-cards.md)
 * [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
 * [eCommerce Shop and Checkout Settings](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md)
-

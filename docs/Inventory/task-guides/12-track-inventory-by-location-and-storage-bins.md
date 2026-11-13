@@ -9,7 +9,9 @@ This operational guide provides procedures for warehouse managers, inventory con
 
 ---
 
-## 1. Access the Locations Report and Audit Internal Warehouse Stock
+## 1. Audit and Adjust Storage Bin Stock
+
+### 1.1 Access the Locations Report and Audit Internal Warehouse Stock
 
 1. In the top navigation bar, click the **Reporting** menu.
 2. Select **Locations**:
@@ -31,11 +33,11 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **History Control** *(clock counter-clockwise icon)*: Click **History** on any location line to open the Moves History register pre-filtered to that specific product and location. This allows immediate auditing of all past stock receipts, internal relocations, and customer shipments affecting that bin.
 32:    * **Replenishment Control** *(cycle arrows icon)*: Click **Replenishment** on any location line to navigate directly to the replenishment rules configuration for that product at that location. Warehouse controllers can inspect min/max thresholds, review procurement lead times, or trigger an immediate purchase order.
 
-> **Tip:** For more details about the controls and columns on the locations register, see [**Locations Report Header and Filter Controls**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#4-locations-report-header-and-filter-controls) and [**Locations List Register and Action Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#5-locations-list-register-and-action-controls-data-dictionary).
+> For more details about the columns and controls on the locations register, see [**Locations List Register and Action Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#3-locations-list-register-and-action-controls-data-dictionary).
 
 ---
 
-## 2. Record Opening Stock Balances and Manual Adjustments via + New
+### 1.2 Record Opening Stock Balances and Manual Adjustments via + New
 
 When initializing warehouse stock for the first time or performing manual inventory adjustments directly from the Locations register:
 
@@ -56,11 +58,13 @@ When initializing warehouse stock for the first time or performing manual invent
    * Click the dark blue **Save** button *(checkmark icon)* to commit the stock line. CURQ automatically posts an inventory adjustment move crediting physical stock to the destination location from `Virtual Locations/Inventory adjustment`.
    * Click **Discard** *(undo arrow icon)* to cancel the entry and revert the register to standard view mode.
 
-> **Tip:** For more details about inline balance recording controls, see [**Inline Stock Balance Entry Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#6-inline-stock-balance-entry-data-dictionary).
+> For more details about inline balance recording controls, see [**Inline Stock Balance Entry Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#4-inline-stock-balance-entry-data-dictionary).
 
 ---
 
-## 3. Aggregate Storage Bin Stock in Pivot View
+## 2. Analyze Storage Stock Across Pivot and Graph Views
+
+### 2.1 Aggregate Storage Bin Stock in Pivot View
 
 To analyze multi-location inventory distribution across products and warehouse storage zones:
 
@@ -80,11 +84,9 @@ To analyze multi-location inventory distribution across products and warehouse s
    * **Download (XLSX)**: Click the download tray icon to export the live location stock matrix directly to Microsoft Excel format for third-party auditing.
    * **Insert in Spreadsheet**: Click the spreadsheet icon to embed the live location data matrix into an internal CURQ spreadsheet dashboard.
 
-> **Tip:** For more details about multi-dimensional location matrix parameters, see [**Locations Pivot Matrix Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#7-locations-pivot-matrix-data-dictionary).
-
 ---
 
-## 4. Visualize Storage Utilization in Graph View
+### 2.2 Visualize Storage Utilization in Graph View
 
 To evaluate warehouse space utilization and compare inventory concentrations across bins:
 
@@ -102,8 +104,6 @@ To evaluate warehouse space utilization and compare inventory concentrations acr
    * **Chart Type Switchers**: Toggle between **Bar Chart** *(default for discrete bin comparisons)*, **Line Chart** *(for progressive distribution)*, and **Pie Chart** *(for overall warehouse percentage share)*.
    * **Layout Modes**: Select **Stacked Bar** or **Cumulative Grouped** to visualize multiple product variants stored within the same physical bin.
    * **Sorting Controls**: Click **Ascending** or **Descending** sort icons to order bins by stock volume, quickly identifying high-density storage areas and underutilized warehouse capacity.
-
-> **Tip:** For more details about chart visualizers and storage utilization axes, see [**Locations Graph Visualizer Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#8-locations-graph-visualizer-data-dictionary).
 
 ---
 

@@ -4,7 +4,7 @@ This document explores the architectural models, underlying data pipelines, accr
 
 ---
 
-## The Dual Entitlement Model: Fixed Allocations vs. Dynamic Accruals
+## 1. The Dual Entitlement Model: Fixed Allocations vs. Dynamic Accruals
 
 Managing employee leave requires two distinct entitlement structures:
 
@@ -18,34 +18,22 @@ Managing employee leave requires two distinct entitlement structures:
 
 ```{mermaid}
 flowchart LR
-    subgraph Source["1. Entitlement Source"]
-        direction TB
-        A["**Fixed Allocation**<br>Lump-sum balance credited upfront"]
-        B["**Accrual Plan**<br>Progressive balance earned over time"]
-        C["**Unallocated (No Limit)**<br>Direct booking without balance pool"]
-    end
+    A["`**Fixed Allocation**
+    Lump-sum granted upfront`"] --> P1["`**Fixed Balance Pool**
+    Valid within set dates`"] --> D(["`**Deducted from Balance**`"])
 
-    subgraph Pool["2. Balance Accounting"]
-        direction TB
-        D["**Fixed Balance Pool**<br>Valid within set dates"]
-        E["**Accrued Balance**<br>Earned per period / milestone"]
-        F["**No Balance Tracking**<br>Unlimited policy allowance"]
-    end
+    B["`**Accrual Plan**
+    Earned per period / tenure`"] --> P2["`**Accrued Balance**
+    Grows over time`"] --> D
 
-    subgraph Outcome["3. Leave Booking"]
-        direction TB
-        G(["**Deducted from Available Balance**"])
-        H(["**Approved Absence Recorded**"])
-    end
-
-    A --> D --> G
-    B --> E --> G
-    C --> F --> H
+    C["`**Unallocated (No Limit)**
+    No balance pool required`"] --> D2(["`**Approved Directly**
+    No balance tracking`"])
 ```
 
 ---
 
-## Architectural Comparison of Entitlement Models
+## 2. Architectural Comparison of Entitlement Models
 
 The table below contrasts the three primary allocation architectures available in CURQ Time Off:
 
@@ -60,18 +48,18 @@ The table below contrasts the three primary allocation architectures available i
 
 ---
 
-## How the Accrual Plan Calculation Engine Operates
+## 3. How the Accrual Plan Calculation Engine Operates
 
 Accrual plans automate complex statutory leave entitlements by evaluating sequential milestone rules against employee tenure and calendar schedules.
 
-### 1. Accrued Gain Timing
+### 3.1 Accrued Gain Timing
 
 When an employee earns leave within a period (such as 1.5 days per month), CURQ evaluates the **Accrued Gain Time** setting:
 
 * **At the start of the accrual period**: Leave is credited at 00:00 on the first day of the cycle *(e.g., on the 1st of each month)*. This allows employees to take leave anticipating the full month's service.
 * **At the end of the accrual period**: Leave is credited only after the cycle completes *(e.g., on the last day of the month)*, ensuring employees earn time only after rendering service.
 
-### 2. Tenure-Based Milestone Tiers
+### 3.2 Tenure-Based Milestone Tiers
 
 Organizations often award greater leave entitlements to tenured staff. CURQ implements this through progressive milestones on a single accrual plan:
 
@@ -81,7 +69,7 @@ Organizations often award greater leave entitlements to tenured staff. CURQ impl
 
 When an employee reaches a service milestone, the engine automatically transitions their accrual rate without requiring HR intervention.
 
-### 3. Carry-Over Governance and Expiration
+### 3.3 Carry-Over Governance and Expiration
 
 At the conclusion of an accrual cycle (such as the end of the calendar year), the engine processes unused balances:
 
@@ -92,7 +80,7 @@ At the conclusion of an accrual cycle (such as the end of the calendar year), th
 
 ---
 
-## Worked Time vs. Absence Rules
+## 4. Worked Time vs. Absence Rules
 
 For hourly or part-time staff, leave accrual can be tied directly to actual hours logged in the **Timesheets** application:
 
@@ -103,7 +91,7 @@ For hourly or part-time staff, leave accrual can be tied directly to actual hour
 
 ---
 
-## Negative Cap Mechanics and Overdraft Governance
+## 5. Negative Cap Mechanics and Overdraft Governance
 
 Under standard rules, CURQ prevents employees from booking leave that exceeds their current available balance. However, business policies often allow borrowing against future earnings:
 
@@ -118,3 +106,4 @@ Under standard rules, CURQ prevents employees from booking leave that exceeds th
 * [Configure Time Off Types](../task-guides/07-configure-time-off-types.md)
 * [Configure Accrual Plans and Milestones](../task-guides/08-configure-accrual-plans-and-milestones.md)
 * [Time Off Types and Request Field Definitions](../settings-and-fields/01-time-off-types-and-request-field-definitions.md)
+* [Holidays, Mandatory Days, and Activity Specifications](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md)

@@ -2,6 +2,13 @@
 
 Create custom pipeline stages, adjust stage properties, configure folded columns, and reorder stages to match your sales methodology.
 
+> **Prerequisites**
+> * Active user account with **CRM / Administrator** rights.
+> * Active sales team and defined pipeline stages in **CRM**.
+>
+> **Warning (Configuration Advisory):** Modifying pipeline stages requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Configure Custom Pipeline Stages
@@ -39,7 +46,7 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
    * **Requirements**: Enter internal criteria, guidelines, or milestone checklists displayed to salespeople to move an opportunity into this stage.
 4. Click **Save & Close**.
 
-> **Note:** For detailed field constraints and pipeline behaviors, see [**Pipeline Stage Properties**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#pipeline-stage-properties).
+> **Note:** For detailed field constraints and pipeline behaviors, see [**Pipeline Stage Properties**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#1-pipeline-stage-properties).
 
 ---
 
@@ -55,10 +62,14 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 
 ---
 
-## Edge Cases & Recovery Steps
+## 2. Edge Cases & Recovery Steps
 
 * **Deleting vs. Folding Stages**: If you delete a stage that contains active opportunities, CURQ prompts you to move them or cancel. To keep past deal records intact without deleting them, consider checking **Folded in Pipeline** instead.
 * **Column Actions Menu Options**: The gear icon on each column provides quick access to **Fold** (collapse immediately), **Edit** (open configuration modal), **Automations** (set stage trigger actions), or **Delete** (remove stage).
+
+---
+
+> **Tip (Advised Settings):** Retain standard progressive stage probabilities (New 10%, Qualified 40%, Proposition 70%, Won 100%). Keep stages global unless dedicated team workflows are strictly necessary.
 
 ---
 
@@ -66,3 +77,4 @@ Create custom pipeline stages, adjust stage properties, configure folded columns
 * [Pipeline Configuration and Assignment Settings](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md)
 * [Manage Pipeline Stages and Won or Lost Deals](./03-manage-pipeline-stages-and-won-lost-status.md)
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

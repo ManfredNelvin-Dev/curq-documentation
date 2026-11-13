@@ -8,7 +8,9 @@ Expense reports must be reviewed and approved by authorized users before they ca
 
 ---
 
-## 1. Access the Expense Reports Management Workspace
+## 1. Review and Approve Expense Reports
+
+### 1.1 Access the Expense Reports Management Workspace
 
 Authorized managers can review pending claims through the managerial navigation menu:
 
@@ -27,11 +29,11 @@ Authorized managers can review pending claims through the managerial navigation 
    * **Dashboard Columns**: Inspect claimant names, report summaries *(e.g., `Restaurant Bill [freeforonline_com]`)*, scheduled review activities *(e.g., `$ Expense Approval`)*, total amounts *(e.g., `€ 1,300.00`)*, and current lifecycle stages.
    * **My Team Filter**: In the search bar, managers can apply the **My Team** filter to isolate submissions from direct reports.
 
-> **Tip:** For complete descriptions of the register columns, filter options, and pipeline status banners, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary).
+> For complete descriptions of the register columns, filter options, and pipeline status banners, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary).
 
 ---
 
-## 2. Approve an Individual Expense Report
+### 1.2 Audit and Approve an Individual Report
 
 1. On the **All Reports** dashboard, click to open the target submitted expense report *(e.g., `Restaurant Bill [freeforonline_com]`)*:
 
@@ -56,11 +58,11 @@ Authorized managers can review pending claims through the managerial navigation 
   * `None -> Siddharth Sathyan (Manager)`
   * `$ Expense Approval done`
 
-> **Tip:** For details on report header fields, expense lines, and lifecycle statuses, see [**Expense Report (Sheet) Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#3-expense-report-sheet-fields-data-dictionary).
+> For details on report header fields, expense lines, and lifecycle statuses, see [**Expense Report (Sheet) Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#3-expense-report-sheet-fields-data-dictionary).
 
 ---
 
-## 3. Approve Multiple Expense Reports in Batch
+### 1.3 Approve Multiple Expense Reports in Batch
 
 Managers supervising large teams can approve multiple expense reports in a single operation:
 
@@ -72,7 +74,9 @@ Managers supervising large teams can approve multiple expense reports in a singl
 
 ---
 
-## 4. Refuse an Expense Report
+## 2. Refuse Claims and Handle Discrepancies
+
+### 2.1 Refuse an Ineligible Expense Report
 
 Managers can refuse an expense report when submitted information is incomplete, incorrect, or violates corporate spending policies:
 
@@ -85,11 +89,11 @@ Managers can refuse an expense report when submitted information is incomplete, 
    * CURQ logs the refusal and justification explanation directly in the chatter.
    * An automated notification is delivered to the employee detailing the reason.
 
-> **Tip:** For complete refusal modal field specifications, see [**Expense Refusal Modal Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#4-expense-refusal-modal-data-dictionary).
+> For complete refusal modal field specifications, see [**Expense Refusal Modal Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#4-expense-refusal-modal-data-dictionary).
 
 ---
 
-## 5. Communicate and Reset Refused Reports
+### 2.2 Communicate via Chatter and Reset Refused Claims
 
 1. **Collaborate via Chatter**: If additional documentation or clarification is needed before making an approval decision, managers can communicate with employees through the chatter using **Send message** or **Log note**.
 2. **Reset to Draft**: A refused report can be returned to editable status using **Reset to Draft**:

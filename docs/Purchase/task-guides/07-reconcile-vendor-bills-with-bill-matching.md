@@ -2,6 +2,10 @@
 
 This guide covers how to identify and reconcile procurement billing discrepancies using CURQ 18 bill matching, verify quantities and prices across purchase orders and supplier invoices, and resolve variances.
 
+> **Prerequisites**
+> * Active user account with **Purchase / User** rights.
+> * Configured Chart of Accounts and partner records in **Contacts**.
+
 ---
 
 ## 1. Reconcile Vendor Bills via Bill Matching
@@ -15,7 +19,7 @@ This guide covers how to identify and reconcile procurement billing discrepancie
 
 3. CURQ opens the linked **Bill Matching** workspace displaying the purchase order lines alongside billed quantities and unit prices.
 
-> For definitions of all columns and discrepancy flags in the bill matching workspace, see [**Warehouse Receipt and Vendor Bill Field Definitions**](../settings-and-fields/03-warehouse-receipt-and-vendor-bill-field-definitions.md).
+> For definitions of all columns and discrepancy flags in the bill matching workspace, see [**Bill Matching Workspace Columns**](../settings-and-fields/02-warehouse-receipt-and-vendor-bill-field-definitions.md#5-bill-matching-workspace-columns).
 
 ---
 
@@ -45,4 +49,4 @@ This guide covers how to identify and reconcile procurement billing discrepancie
 * [Generate and Validate Vendor Bills](./06-generate-and-validate-vendor-bills.md)
 * [Receive Products and Manage Backorders](./05-receive-products-and-manage-backorders.md)
 * [Understanding Bill Control and 3-Way Matching](../core-concepts/02-understanding-bill-control-and-3-way-matching.md)
-* [Warehouse Receipt and Vendor Bill Field Definitions](../settings-and-fields/03-warehouse-receipt-and-vendor-bill-field-definitions.md)
+* [Warehouse Receipt and Vendor Bill Field Definitions](../settings-and-fields/02-warehouse-receipt-and-vendor-bill-field-definitions.md)

@@ -13,6 +13,8 @@ After an expense report has been approved and committed to the general ledger, o
 
 To process a direct bank or cash disbursement for a single employee claim:
 
+### 1.1 Open the Posted Report and Launch Payment
+
 1. In the top navigation bar, navigate to **Expenses → Expense Reports**.
 2. Open the target expense report with the **Posted** status *(e.g., `Restaurant Bill [freeforonline_com]`)*:
 
@@ -20,18 +22,24 @@ To process a direct bank or cash disbursement for a single employee claim:
 
 3. Review the outstanding balance under **Amount Due** *(e.g., `€ 1,300.00`)* and verify the claimant payment classification *(e.g., `Paid By: Employee (to reimburse)`)*.
 4. In the upper action bar, click the dark blue **Pay** button.
-5. In the **Pay** pop-up modal, configure payment parameters:
+
+---
+
+### 1.2 Configure Payment Modal and Confirm Settlement
+
+In the **Pay** pop-up modal, configure payment parameters:
 
 ![CURQ Pay pop-up modal over the Expense Report form highlighting the Create Payment action button](../media/029.png)
 
+1. **Configure Payment Rail and Coordinates**:
    * **Journal**: Select the corporate Bank or Cash journal *(e.g., `Bank`)*.
    * **Payment Method**: Select the applicable payment rail *(e.g., `Manual Payment`, `Manual Payment (Cash)`, `Batch Deposit (Bank)`, or `Checks (Bank)`)*.
    * **Recipient Bank Account**: Select the employee's verified personal bank account *(e.g., `Account Number`)* when using a Bank journal.
    * **Amount**: Displays the exact reimbursement amount *(e.g., `€ 1,300.00 EUR`)*.
    * **Payment Date**: Specify the effective disbursement execution date *(e.g., `11/10/2026`)*.
    * **Memo**: Pre-populated with the expense report summary *(e.g., `Restaurant Bill [freeforonline_com]`)*.
-6. Review the payment details and click the dark blue **Create Payment** button.
-7. **Verify Payment Registration and Lifecycle Completion**:
+2. Review the payment details and click the dark blue **Create Payment** button.
+3. **Verify Payment Registration and Lifecycle Completion**:
 
 ![CURQ Expense Report form view displaying Done pipeline stage, green IN PAYMENT ribbon, and chatter audit trail](../media/030.png)
 
@@ -42,7 +50,7 @@ To process a direct bank or cash disbursement for a single employee claim:
   * `• Not Paid -> In Payment (Payment Status)`
   * `• Posted -> Done (Status)`
 
-> **Tip:** For complete field definitions of the payment modal, see [**Direct Reimbursement Payment Modal Fields Data Dictionary**](../settings-and-fields/03-expense-reimbursement-and-posting-field-definitions.md#1-direct-reimbursement-payment-modal-fields).
+> For complete field definitions of the payment modal, see [**Direct Reimbursement Payment Modal Fields Data Dictionary**](../settings-and-fields/03-expense-reimbursement-and-posting-field-definitions.md#1-direct-reimbursement-payment-modal-fields).
 
 ---
 
@@ -50,17 +58,26 @@ To process a direct bank or cash disbursement for a single employee claim:
 
 Finance teams can process reimbursements across multiple employees and expense reports simultaneously:
 
+### 2.1 Select Posted Reports and Launch Batch Payment
+
 1. Navigate to **Expenses → Expense Reports**.
-2. Filter the reports using the **Posted** status filter.
+2. Filter the reports using the **Approved** and **Posted** status filters.
 3. Select the checkboxes next to the expense reports to be reimbursed.
 4. In the upper toolbar, click the dark blue **Pay** button.
-5. In the bulk payment modal, configure the parameters:
+
+---
+
+### 2.2 Configure Group Payments and Disburse
+
+In the bulk payment modal, configure the parameters:
+
+1. **Configure Bulk Options**:
    * **Journal**: Select the corporate Bank or Cash journal.
    * **Payment Method**: Select the desired payment rail.
    * **Group Payments**: Enable this option to consolidate multiple expense reports belonging to the same employee into a single payment transaction.
    * **Amount**: Displays the aggregated total reimbursement sum.
    * **Payment Date**: Specify the effective payment date.
-6. Click **Create Payments** to process all disbursements in batch.
+2. Click **Create Payments** to process all disbursements in batch.
 
 ---
 

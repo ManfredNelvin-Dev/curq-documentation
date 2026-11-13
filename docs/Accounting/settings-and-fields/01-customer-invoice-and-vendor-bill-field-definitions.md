@@ -4,7 +4,7 @@ This document provides factual specifications and data tables for all header fie
 
 ---
 
-## Header Fields
+## 1. Header Fields
 
 The header section records the primary commercial counterparty, billing dates, financial journals, and payment terms for the transaction.
 
@@ -24,7 +24,7 @@ The header section records the primary commercial counterparty, billing dates, f
 
 ---
 
-## Invoice Lines, Bill Lines, and Credit Lines Table Columns
+## 2. Invoice Lines, Bill Lines, and Credit Lines Table Columns
 
 The lines table specifies the individual products, services, accounting allocations, and tax treatments that comprise the commercial document.
 
@@ -45,7 +45,7 @@ The lines table specifies the individual products, services, accounting allocati
 
 ---
 
-## Journal Items Tab Columns
+## 3. Journal Items Tab Columns
 
 The Journal Items tab displays the underlying double-entry accounting records that are committed to the General Ledger upon posting.
 
@@ -62,11 +62,11 @@ The Journal Items tab displays the underlying double-entry accounting records th
 
 ---
 
-## Other Info Tab Fields
+## 4. Other Info Tab Fields
 
 The Other Info tab configures operational parameters, financial journal settings, and marketing attribution tags organized into three distinct sections.
 
-### 1. Invoice Section
+### 4.1 Invoice Section
 | Field Name | Description |
 | :--- | :--- |
 | **Customer Reference** | *(Customer Invoice only)* The client's internal purchase order (PO) number or reference code, printed on the invoice for the customer's accounts payable team. |
@@ -76,7 +76,7 @@ The Other Info tab configures operational parameters, financial journal settings
 | **Payment Reference** | The unique payment identifier printed on the invoice for automated bank statement reconciliation *(e.g., `INV/2026/00005`)*. |
 | **Delivery Date** | Date on which the underlying merchandise or services were physically fulfilled. |
 
-### 2. Accounting Section
+### 4.2 Accounting Section
 | Field Name | Description |
 | :--- | :--- |
 | **Incoterm** | International commercial trade terms *(e.g., `EXW`, `FOB`, `CIF`, `DAP`)* governing shipping risk and logistics ownership. |
@@ -90,7 +90,7 @@ The Other Info tab configures operational parameters, financial journal settings
 | **Auto-post** | Configures recurring draft entries to post automatically on their scheduled date without manual intervention. |
 | **Checked** | Administrative review flag allowing accountants to verify and mark the transaction as reviewed. |
 
-### 3. Marketing Section
+### 4.3 Marketing Section
 | Field Name | Description |
 | :--- | :--- |
 | **Campaign** | Commercial marketing campaign that generated the underlying order or invoice *(e.g., `Fall Promotion`)*. |
@@ -99,11 +99,11 @@ The Other Info tab configures operational parameters, financial journal settings
 
 ---
 
-## Overdue Invoice Reminder Wizard Fields
+## 5. Overdue Invoice Reminder Wizard Fields
 
 When a customer invoice exceeds its maturity due date without full settlement, clicking **Send an overdue reminder** in the invoice header banner launches the **Overdue Invoice Remind** modal wizard:
 
-### 1. Filter and Option Fields
+### 5.1 Filter and Option Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Customers** | Optional partner filter restricting the dunning run to designated customer accounts. If left empty, all debtors with overdue items are evaluated. |
@@ -113,7 +113,7 @@ When a customer invoice exceeds its maturity due date without full settlement, c
 | **Trigger Delay** | Grace period in days following the invoice due date before an overdue reminder triggers *(e.g., `0 days` for immediate reminder eligibility upon maturity)*. |
 | **Minimum Delay Since Last Reminder** | Minimum waiting period in days enforced between sequential follow-up reminders *(e.g., `5 days`)* to avoid duplicate dunning notices. |
 
-### 2. Payments Up-To-Date? Table Columns
+### 5.2 Payments Up-To-Date? Table Columns
 | Field Name | Description |
 | :--- | :--- |
 | **Journal** | The financial liquidity journal checked for recent entries *(e.g., `Bank` or `Cash`)*. |
@@ -121,7 +121,7 @@ When a customer invoice exceeds its maturity due date without full settlement, c
 | **Last Entry Created on** | Exact system timestamp when the latest journal transaction was created or imported. |
 | **Last Entry Created by** | The internal user who registered or imported the last journal entry. |
 
-### 3. Wizard Action Buttons
+### 5.3 Wizard Action Buttons
 | Field Name | Description |
 | :--- | :--- |
 | **Start** | Initiates the reminder generation process and opens the **Overdue Invoice Step** review modal. |
@@ -129,11 +129,11 @@ When a customer invoice exceeds its maturity due date without full settlement, c
 
 ---
 
-## Overdue Invoice Step Review Modal Fields
+## 6. Overdue Invoice Step Review Modal Fields
 
 In `One by One` mode, clicking **Start** opens the **Overdue Invoice Step** review modal to inspect, customize, and approve the reminder notice for each customer:
 
-### 1. Customer and Contact Header Fields
+### 6.1 Customer and Contact Header Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Customer** | The debtor partner entity receiving the payment reminder *(e.g., `John Doe`)*. |
@@ -143,7 +143,7 @@ In `One by One` mode, clicking **Start** opens the **Overdue Invoice Step** revi
 | **Email** | Destination email address receiving the dunning notice and attached invoice PDFs *(e.g., `email@yourcompany.com`)*. |
 | **Mobile** | Mobile phone number registered on the customer contact record for SMS or telephone follow-up. |
 
-### 2. Overdue Invoices Sub-Table Columns
+### 6.2 Overdue Invoices Sub-Table Columns
 | Field Name | Description |
 | :--- | :--- |
 | **Invoicing Contact** | The billing recipient designated on the specific invoice line *(labeled `Invoicing ...` in the UI)*. |
@@ -158,7 +158,7 @@ In `One by One` mode, clicking **Start** opens the **Overdue Invoice Step** revi
 | **Amount Due** | Open unpaid residual balance remaining on the invoice *(labeled `Am...` in the UI)*. |
 | **Add a line** | Action link enabling manual addition of other open customer invoices to the current dunning notice. |
 
-### 3. Reminder Message and Transmission Fields
+### 6.3 Reminder Message and Transmission Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Reminder Type** | Communication transmission channel *(e.g., `E-mail`)*. |
@@ -166,7 +166,7 @@ In `One by One` mode, clicking **Start** opens the **Overdue Invoice Step** revi
 | **Subject** | Editable email subject line pre-filled by the reminder level *(e.g., `Company Name - Payment Reminder n°1`)*. |
 | **Message Body** | Rich text email notice containing the debtor greeting, itemized breakdown table *(listing `Invoice Number`, `Invoice Date`, `Payment Terms`, `Due Date`, `Order Ref.`, `Type`, `Total Untaxed`, `Total`, `Residual`, `Past Reminders`, and `Total Residual in EUR`)*, and remittance instructions. |
 
-### 4. Modal Action Buttons
+### 6.4 Modal Action Buttons
 | Field Name | Description |
 | :--- | :--- |
 | **Validate** | Dispatches the reminder email with attached invoice PDFs to the customer, increments their reminder counter, logs the interaction in Chatter, and advances to the next customer in the queue. |
@@ -175,7 +175,7 @@ In `One by One` mode, clicking **Start** opens the **Overdue Invoice Step** revi
 
 ---
 
-## Credit Note and Reversal Wizard Fields
+## 7. Credit Note and Reversal Wizard Fields
 
 Clicking **Credit Note** on a posted customer invoice or vendor bill launches the reversal modal wizard.
 
@@ -188,7 +188,7 @@ Clicking **Credit Note** on a posted customer invoice or vendor bill launches th
 
 ---
 
-## Document Status Lifecycle
+## 8. Document Status Lifecycle
 
 Customer invoices, vendor bills, and credit notes transition through formal operational and legal states:
 
@@ -202,11 +202,11 @@ Customer invoices, vendor bills, and credit notes transition through formal oper
 
 ---
 
-## Employee Expense Report Field Definitions
+## 9. Employee Expense Report Field Definitions
 
 Employee expenses record reimbursable out-of-pocket costs and corporate card purchases under **Accounting > Vendors > Employee Expenses**.
 
-### 1. Header Fields
+### 9.1 Header Fields
 | Field Name | Description |
 | :--- | :--- |
 | **Expense Report Summary** | Commercial description or project title identifying the reimbursement batch *(e.g., `Client Meeting Travel and Subsistence Oct 2026`)*. |
@@ -214,7 +214,7 @@ Employee expenses record reimbursable out-of-pocket costs and corporate card pur
 | **Manager** | Designated approving manager responsible for authorizing the business expenditure. |
 | **Paid By** | Funding origin: `Employee (to reimburse)` (personal out-of-pocket payment) or `Company` (corporate card/account). |
 
-### 2. Expense Tab Line Columns
+### 9.2 Expense Tab Line Columns
 | Field Name | Description |
 | :--- | :--- |
 | **Expense Date** | Transaction or invoice date printed on the merchant receipt *(e.g., `10/30/2026`)*. |
@@ -226,7 +226,7 @@ Employee expenses record reimbursable out-of-pocket costs and corporate card pur
 | **Subtotal In Currency** | Receipt amount denominated in original transaction currency if foreign exchange applies. |
 | **Subtotal** | Net line amount before tax calculated in company base currency *(e.g., `€ 75.00`)*. |
 
-### 3. Create Expense Lines Modal Fields
+### 9.3 Create Expense Lines Modal Fields
 
 Opened when clicking **Add a line** on the expense report form to encode individual receipts:
 
@@ -243,7 +243,7 @@ Opened when clicking **Add a line** on the expense report form to encode individ
 | **Paid By** | Monetary source: `Employee (to reimburse)` or `Company`. |
 | **Notes** | Free-text field for internal remarks or receipt details. |
 
-### 4. Individual Expense Record Form Fields
+### 9.4 Individual Expense Record Form Fields
 
 When clicking an expense line from the report, CURQ opens the individual expense record detail view:
 
@@ -262,7 +262,7 @@ When clicking an expense line from the report, CURQ opens the individual expense
 | **Account** | Specific general ledger expense account debited *(e.g., `7001010 Kosten van grond- en hulpstoffen`)*. |
 | **Analytic Distribution** | Cost center allocations attributing expenses to specific analytical projects or departments. |
 
-### 5. Employee Expense Reimbursement Modal Fields (Pay Dialog)
+### 9.5 Employee Expense Reimbursement Modal Fields (Pay Dialog)
 
 Triggered by clicking **Pay** on a posted Expense Report to execute staff reimbursement:
 
@@ -277,9 +277,9 @@ Triggered by clicking **Pay** on a posted Expense Report to execute staff reimbu
 | **Create Payment** | Action button executing the payment move and advancing document status to `Done` (`In Payment`). |
 | **Discard** | Cancels payment entry creation and returns to the posted expense voucher without changes. |
 
-### 6. Expense Document Status Pipelines
+### 9.6 Expense Document Status Pipelines
 
-#### Expense Report Lifecycle
+#### 9.6.1 Expense Report Lifecycle
 | Field Name | Description |
 | :--- | :--- |
 | **To Submit** | Draft report. Receipts and line items can be freely added, modified, or removed. |
@@ -289,7 +289,7 @@ Triggered by clicking **Pay** on a posted Expense Report to execute staff reimbu
 | **Done** | Payment disbursed and settled; employee payable cleared to zero. |
 | **Refused** | Rejected by management or finance. Returned to draft status for employee correction. |
 
-#### Individual Expense Line Lifecycle
+#### 9.6.2 Individual Expense Line Lifecycle
 | Field Name | Description |
 | :--- | :--- |
 | **To Report** | Individual expense recorded independently but not yet attached to an Expense Report batch. |
@@ -300,7 +300,7 @@ Triggered by clicking **Pay** on a posted Expense Report to execute staff reimbu
 
 ---
 
-## Products Catalog List View Field Definitions
+## 10. Products Catalog List View Field Definitions
 
 Navigating to **Customers > Products** or **Vendors > Products** opens the central accounting product catalog:
 
@@ -314,7 +314,7 @@ Navigating to **Customers > Products** or **Vendors > Products** opens the centr
 
 ---
 
-## Customers and Vendors Directory Field Definitions
+## 11. Customers and Vendors Directory Field Definitions
 
 Navigating to **Customers > Customers** or **Vendors > Vendors** displays counterparty ledgers filtered by commercial billing status:
 

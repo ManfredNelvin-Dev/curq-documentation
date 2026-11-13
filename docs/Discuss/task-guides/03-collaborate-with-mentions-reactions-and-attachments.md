@@ -2,6 +2,10 @@
 
 Tag colleagues in discussions, reference topic channels, add emoji reactions, attach business documents, star important messages, and organize conversation feeds in CURQ Discuss.
 
+> **Prerequisites**
+> * Active user account with **Discuss / User** rights.
+> * Configured base system records and access permissions.
+
 ---
 
 ## 1. Mentions, Links, and Message Reactions
@@ -60,6 +64,8 @@ Lightweight emoji reactions enable fast acknowledgments without creating clutter
    * CURQ embeds the quoted text block into your message composer with an attribution header.
    * Add your comment below the quoted block and press **Enter**.
 
+> For permissions and scope across all message hover actions (**Emoji Reaction**, **Quote**, **Star**, **Pin**, **Edit**, **Delete**, **Mark as Unread**, and **Copy Link**), see [**Message Action Menu Definitions**](../settings-and-fields/01-channel-and-chat-settings-definitions.md#4-message-action-menu-definitions).
+
 ---
 
 ## 2. Attach Files, PDFs, and Images
@@ -114,3 +120,4 @@ Manage your sent messages and highlight permanent guidelines:
 * [Create and Manage Channels](01-create-and-manage-channels.md)
 * [Manage Conversation Header Tools and Search](07-manage-conversation-header-tools-and-search.md)
 * [Channel and Chat Settings Definitions](../settings-and-fields/01-channel-and-chat-settings-definitions.md)
+* [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)

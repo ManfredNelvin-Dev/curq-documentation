@@ -4,7 +4,7 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ---
 
-## Country Fields
+## 1. Country Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -20,7 +20,7 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ---
 
-## Federal State Fields
+## 2. Federal State Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -30,7 +30,7 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ---
 
-## City Fields
+## 3. City Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -41,7 +41,7 @@ This document details the configuration parameters, ISO standards, and data tabl
 
 ---
 
-## Country Group Fields
+## 4. Country Group Fields
 
 | Field Name | Description |
 | :--- | :--- |
@@ -57,4 +57,3 @@ This document details the configuration parameters, ISO standards, and data tabl
 * [Contact Form Field Definitions](./01-contact-form-field-definitions.md)
 * [Configure Geographic Data and Country Groups](../task-guides/09-configure-geographic-localization.md)
 * [Understanding Unified Partner Architecture and Hierarchies](../core-concepts/01-understanding-unified-partner-architecture-and-hierarchies.md)
-

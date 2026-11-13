@@ -6,10 +6,15 @@ Expense categories establish the operational taxonomy, reimbursement costs, acco
 > * Administrative access with **Expenses / Administrator (Manager)** permissions.
 > * General Ledger chart of accounts configured in [**Accounting**](../../Accounting/core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md).
 > * Applicable purchase and sales taxes configured in **Accounting > Configuration > Taxes**.
+>
+> **Warning (Configuration Advisory):** Modifying expense categories requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
-## 1. Access the Expense Categories Register
+## 1. Create and Configure Expense Categories
+
+### 1.1 Access the Expense Categories Register
 
 1. Open the **Expenses** application.
 2. In the top navigation bar, click **Configuration**.
@@ -32,11 +37,11 @@ Expense categories establish the operational taxonomy, reimbursement costs, acco
 
 Existing categories can be modified, or new categories can be created to meet organizational requirements.
 
-> **Tip:** For more details about the fields and columns on the expense categories register, see [**Expense Categories Register Data Dictionary**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#1-expense-categories-register-data-dictionary).
+> For more details about the fields and columns on the expense categories register, see [**Expense Categories Register Data Dictionary**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#1-expense-categories-register-data-dictionary).
 
 ---
 
-## 2. Create and Configure a New Expense Category
+### 1.2 Open the Category Creation Form
 
 1. In the upper-left action bar of the Expense Categories register, click the dark blue **+ New** button:
 
@@ -46,30 +51,35 @@ Existing categories can be modified, or new categories can be created to meet or
 
 ![CURQ Expense Category form view for Client Lunch displaying Product Name, Cost, Reference, Category, Guideline, Expense Account, Purchase Taxes, Sales Taxes, and Re-Invoice Costs](../media/004.png)
 
-3. **Configure Category Identification and Operational Parameters**:
-   * **Product Name (Mandatory)**: Enter a short, descriptive name for the expenditure type *(e.g., `Client Lunch`)*.
-   * **Cost**: Specify the fixed reimbursement amount. Leave as `0.00` if employees are reimbursed based on the actual expense amount.
-   * **Reference**: Enter a short reference code *(e.g., `FOOD`, `TRAVEL`, or `COMM`)* used for automated email intake routing.
-   * **Category**: Select the appropriate product category in the catalog hierarchy *(e.g., `All`)*.
-   * **Company**: Specify the operating company entity to which the category belongs. Leave blank if it applies across all multi-company entities.
-   * **Guideline**: Provide instructions or policy rules about the expenses allowed under this category *(e.g., `e.g. Restaurants: only week days, for lunch`)*.
+---
 
-4. **Configure Accounting and Taxation Mappings**:
-   * **Expense Account (Mandatory)**: Select the general ledger operating expense account debited upon posting *(e.g., `0101010 Verkrijgings- of vervaardigingsprijs kosten van`)*.
-   * **Purchase Taxes**: Specify the default purchase taxes applicable to the expense *(e.g., `Inkopen - BTW laag (9%)`)*.
-   * **Sales Taxes**: Specify the default sales taxes applied when reinvoicing to customers *(e.g., `Verkopen - BTW hoog (21%)`)*.
+### 1.3 Configure Operational Parameters and Guidelines
 
-5. **Configure Customer Reinvoicing Rules**:
-   * Under the **INVOICING** section, set the **Re-Invoice Costs** policy:
-     * **No**: The expense cannot be reinvoiced to customers.
-     * **At cost**: Expenses are reinvoiced using the cost configured on the expense category.
-     * **Sales price**: Expenses are reinvoiced using the configured sales price.
-
-> **Tip:** For more details about category identification, financial mapping, and customer reinvoicing fields, see [**Expense Category Form Fields Data Dictionary**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#2-expense-category-form-fields-data-dictionary).
+Configure category identification and employee spending boundaries:
+1. **Product Name (Mandatory)**: Enter a short, descriptive name for the expenditure type *(e.g., `Client Lunch`)*.
+2. **Cost**: Specify the fixed reimbursement amount. Leave as `0.00` if employees are reimbursed based on the actual expense amount.
+3. **Reference**: Enter a short reference code *(e.g., `FOOD`, `TRAVEL`, or `COMM`)* used for automated email intake routing.
+4. **Category**: Select the appropriate product category in the catalog hierarchy *(e.g., `All`)*.
+5. **Company**: Specify the operating company entity to which the category belongs. Leave blank if it applies across all multi-company entities.
+6. **Guideline**: Provide instructions or policy rules about the expenses allowed under this category *(e.g., `e.g. Restaurants: only week days, for lunch`)*.
 
 ---
 
-## 3. Configure Reimbursement Rates and Cost Models
+### 1.4 Map General Ledger Accounts and Taxes
+
+Configure accounting and taxation mappings to ensure compliant journal posting:
+1. **Expense Account (Mandatory)**: Select the general ledger operating expense account debited upon posting *(e.g., `0101010 Verkrijgings- of vervaardigingsprijs kosten van`)*.
+2. **Purchase Taxes**: Specify the default purchase taxes applicable to the expense *(e.g., `Inkopen - BTW laag (9%)`)*.
+3. **Sales Taxes**: Specify the default sales taxes applied when reinvoicing to customers *(e.g., `Verkopen - BTW hoog (21%)`)*.
+4. Changes are automatically saved by CURQ upon leaving the form.
+
+> For detailed field descriptions across category setup, accounting mappings, and client billing, see [**General Information & Identification Fields**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#21-general-information--identification-fields), [**Financial and Tax Mapping Fields**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#22-financial-and-tax-mapping-fields), and [**Reinvoicing & Commercial Recovery Fields**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#23-reinvoicing--commercial-recovery-fields).
+
+---
+
+## 2. Configure Reimbursement Rates and Billing Policies
+
+### 2.1 Configure Reimbursement Rates and Cost Models
 
 The **Cost** field dictates how CURQ computes employee reimbursement values:
 
@@ -80,7 +90,7 @@ The **Cost** field dictates how CURQ computes employee reimbursement values:
 
 ---
 
-## 4. Re-Invoice Project Expenses to Client Sales Orders
+### 2.2 Re-Invoice Project Expenses to Client Sales Orders
 
 If the Sales module is installed, the invoicing section allows expenses to be charged back to customers through sales orders:
 
@@ -99,6 +109,10 @@ If the Sales module is installed, the invoicing section allows expenses to be ch
    * **Dynamic Confirmation**: CURQ displays confirmation text below the selector:
      > *"Expenses will be added to the Sales Order at their sales price (product price, pricelist, etc.) when posted."*
 5. Changes are automatically saved by CURQ upon leaving the form.
+
+---
+
+> **Tip (Advised Settings):** Map every expense category to its dedicated general ledger operating account and standard Dutch RGS purchase tax code.
 
 ---
 

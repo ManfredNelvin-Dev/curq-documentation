@@ -2,6 +2,10 @@
 
 This guide covers how to switch calendar view modes, navigate between dates, use the mini calendar picker, and control visibility filters in CURQ 18 Calendar.
 
+> **Prerequisites**
+> * Active user account with **Calendar / User** rights.
+> * Active user calendar profile with configured timezone settings.
+
 ---
 
 ## 1. Calendar View Modes and Date Navigation
@@ -46,6 +50,8 @@ The right-hand side panel contains an interactive monthly **Mini Calendar**:
 
    ![Right-sidebar interactive monthly mini calendar picker](../media/012.png)
 
+> For complete descriptions of view perspectives and date navigation controls, see [**Calendar View Modes**](../settings-and-fields/02-calendar-views-and-navigation-controls.md#1-calendar-view-modes) and [**Navigation Elements**](../settings-and-fields/02-calendar-views-and-navigation-controls.md#2-navigation-elements).
+
 ---
 
 ## 2. Filter by Attendee Calendars
@@ -61,6 +67,8 @@ Directly underneath the mini calendar, the **Attendees** panel allows you to con
 4. Click **+ Add Attendees** to search for additional team members and include their calendars in your comparison view.
 5. Each attendee's events are rendered in a distinct color to make cross-team comparison intuitive.
 
+> For sidebar attendee overlay controls, see [**Sidebar Filtering Controls**](../settings-and-fields/02-calendar-views-and-navigation-controls.md#3-sidebar-filtering-controls).
+
 ---
 
 ## Related Documentation
@@ -68,3 +76,4 @@ Directly underneath the mini calendar, the **Attendees** panel allows you to con
 * [Coordinate Team Availability](./03-coordinate-team-availability.md)
 * [Calendar Views and Navigation Controls](../settings-and-fields/02-calendar-views-and-navigation-controls.md)
 * [Create Your First Meeting](../getting-started/01-create-your-first-meeting.md)
+* [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)

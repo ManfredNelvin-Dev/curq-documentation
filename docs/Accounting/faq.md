@@ -60,3 +60,13 @@ A **Fiscal Position** (*Fiscale positie*) acts as an automatic tax and account t
 * When a customer from an EU country with a verified VAT number is selected, CURQ detects the **`EU landen`** fiscal position.
 * It dynamically maps standard domestic VAT *(e.g., `Verkopen - BTW hoog (21%)`)* to the EU reverse-charge tax *(e.g., `Verkopen - Export goederen binnen EU (Sales)`)*, reporting under statutory VAT grid `3b`.
 * For non-EU exports, it maps taxes to export zero-rated rules (`0% BTW`) reporting under statutory VAT grid `3a`.
+
+---
+
+## Related Documentation
+
+* [Process Your First Customer Invoice and Payment](./getting-started/01-process-your-first-customer-invoice-and-payment.md)
+* [Understanding Double-Entry Bookkeeping and Journals](./core-concepts/01-understanding-double-entry-bookkeeping-and-journals.md)
+* [Understanding the Invoice and Bill Lifecycle](./core-concepts/02-understanding-the-invoice-and-bill-lifecycle.md)
+* [Customer Invoice and Vendor Bill Field Definitions](./settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md)
+* [Chart of Accounts and Taxes Field Definitions](./settings-and-fields/02-chart-of-accounts-and-taxes-field-definitions.md)

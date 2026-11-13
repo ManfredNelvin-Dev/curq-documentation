@@ -2,6 +2,10 @@
 
 Coordinate cross-departmental operations, log internal audit notes, send customer messages, schedule follow-up tasks, and follow business documents in CURQ Discuss.
 
+> **Prerequisites**
+> * Active user account with **Discuss / User** rights.
+> * Active enterprise user profiles configured in the corporate directory.
+
 ---
 
 ## 1. Record Chatter Notes and Customer Messages
@@ -33,7 +37,7 @@ When you need to communicate directly with the customer or vendor associated wit
 3. Type your customer-facing update (e.g., dispatch notices, shipment tracking links, or quotation clarifications).
 4. You can type `:canned-response` to insert pre-approved customer communication templates.
 
-> For shortcut syntax and template substitution rules, see [**Voice, Video, and Canned Responses Specifications**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#canned-response-field-specifications).
+> For shortcut syntax and template substitution rules, see [**Voice, Video, and Canned Responses Specifications**](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md#3-canned-response-field-specifications).
 
 5. Click **Send**.
 6. CURQ dispatches the message as an official email to all external followers and logs the transmission in the document's permanent audit trail.
@@ -63,7 +67,9 @@ Control which business transactions send notifications into your Discuss Inbox:
 1. Open the target transaction record.
 2. In the top-right corner of the Chatter pane, click the **Follow** button.
 3. You are now subscribed to automated status updates (such as order confirmation, delivery validation, or invoice payment).
-4. Hover over the **Following** button and click the dropdown arrow to customize which specific subtype events notify you (e.g., *Discussions Only*, *Activities Only*, or *All Stage Changes*).
+4. Hover over the **Following** button and click the dropdown arrow to customize which specific subtype events notify you (**Discussions**, **Notes**, **Activities**, or **Stage Changes**).
+
+> For alert routing behavior across all document chatter subscription event types, see [**Document Chatter Subscription Event Types**](../settings-and-fields/02-notifications-and-user-preferences-specifications.md#3-document-chatter-subscription-event-types).
 
 ### 3.2 Unfollow a Document
 1. Open the document you wish to stop tracking.
@@ -76,7 +82,6 @@ Control which business transactions send notifications into your Discuss Inbox:
 ## Related Documentation
 * [Send Direct and Group Messages](02-send-direct-and-group-messages.md)
 * [Configure Notification Preferences and Do-Not-Disturb](05-configure-notification-preferences-and-dnd.md)
-* [Create and Use Canned Responses](06-create-and-use-canned-responses.md)
-* [Notification and User Preferences Specifications](../settings-and-fields/02-notifications-and-user-preferences-specifications.md)
+* [Notifications and User Preferences Specifications](../settings-and-fields/02-notifications-and-user-preferences-specifications.md)
 * [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)
 * [Understanding Unified Business Communication and Chatter Architecture](../core-concepts/01-understanding-unified-business-communication-and-chatter-architecture.md)

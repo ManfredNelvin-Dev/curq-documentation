@@ -4,7 +4,7 @@ This document explains the commercial logic, data architecture, and pipeline mec
 
 ---
 
-## The Two-Tier Commercial Intake Model
+## 1. The Two-Tier Commercial Intake Model
 
 In commercial operations, sales teams encounter two fundamentally different categories of prospects:
 
@@ -15,7 +15,7 @@ flowchart LR
     Qualified Deals in Sales Pipeline`"]
 ```
 
-### 1. Inbound Leads (Lead Intake Stage)
+### 1.1 Inbound Leads (Lead Intake Stage)
 Leads represent raw, unverified inquiries. Examples include website contact form submissions, business cards gathered at trade shows, general email inquiries, or imported marketing lists. 
 
 At this stage, the prospective client has expressed interest, but key commercial criteria remain unconfirmed:
@@ -24,12 +24,12 @@ At this stage, the prospective client has expressed interest, but key commercial
 * Are you speaking with a decision-maker?
 * Is the inquiry a duplicate of an existing corporate account?
 
-### 2. Pipeline Opportunities (Active Pipeline Stage)
+### 1.2 Pipeline Opportunities (Active Pipeline Stage)
 An opportunity represents an active, verified commercial engagement. An opportunity possesses an assigned account executive, an estimated monetary transaction value, an expected closing date, and a specific pipeline stage.
 
 ---
 
-## Why Segregating Leads Protects Pipeline Velocity
+## 2. Why Segregating Leads Protects Pipeline Velocity
 
 Allowing unverified leads directly onto the active sales Kanban board introduces significant operational distortions:
 
@@ -41,7 +41,7 @@ By establishing an optional qualification buffer, CURQ allows commercial teams t
 
 ---
 
-## Pipeline Stage Velocity and Probability Progression
+## 3. Pipeline Stage Velocity and Probability Progression
 
 The Kanban pipeline functions as an architectural state machine representing the natural evolution of a customer relationship:
 
@@ -54,17 +54,17 @@ flowchart LR
     (100% Probability)`"]
 ```
 
-### Probability as a Weighted Metric
+### 3.1 Probability as a Weighted Metric
 Each stage carries an architectural probability factor reflecting the historical likelihood of closure. As deals move to the right:
 1. **Uncertainty Decreases**: Customer requirements are scoped, technical feasibility is demonstrated, and pricing agreements are submitted.
 2. **Prorated Value Increases**: The system computes **Prorated Revenue** (calculated as Expected Revenue multiplied by Probability), allowing leadership to plan working capital and production based on statistically realistic revenue expectations.
 
-### Stage Transitions and Quotation Integration
+### 3.2 Stage Transitions and Quotation Integration
 When an opportunity reaches the proposition milestone, commercial representatives generate formal sales quotations directly from the deal record. This architectural link connects CRM data directly to inventory reserves, accounting ledgers, and delivery scheduling upon contract signature.
 
 ---
 
-## Revenue Modeling: One-Off Contract Values vs. Normalized MRR
+## 4. Revenue Modeling: One-Off Contract Values vs. Normalized MRR
 
 Modern B2B engagements frequently combine one-off transactions with subscription-based recurring revenue contracts. Evaluating these agreements side-by-side on a raw total value basis introduces severe reporting distortions:
 
@@ -73,14 +73,14 @@ Modern B2B engagements frequently combine one-off transactions with subscription
 
 If a sales pipeline measures only gross contract value, multi-year recurring deals artificially overshadow high-margin immediate sales. Conversely, measuring only first-year cash flow understates the long-term enterprise value of subscription accounts.
 
-### Normalization via Monthly Recurring Revenue (MRR)
+### 4.1 Normalization via Monthly Recurring Revenue (MRR)
 CURQ resolves this discrepancy through automated recurring plan normalization. By dividing the recurring contract value across the plan's duration in months, the system standardizes subscription commitments into a single monthly metric (Expected MRR).
 
 This normalization allows commercial directors to directly compare pipeline yield across diverse agreement durations alongside one-off deal values.
 
 ---
 
-## Terminal Pipeline Outcomes and Closed-Lost Feedback Loops
+## 5. Terminal Pipeline Outcomes and Closed-Lost Feedback Loops
 
 In sales operations, closing a deal as **Lost** is often perceived as a failure. In data-driven organizations, however, lost deal analytics represent the primary feedback loop for continuous product, pricing, and operational refinement.
 
@@ -94,7 +94,7 @@ flowchart LR
     *(Competitor / Price / Gap)*`"]
 ```
 
-### Standardized Rejection Taxonomy
+### 5.1 Standardized Rejection Taxonomy
 When sales representatives record structured lost reasons rather than unstructured, subjective notes:
 * **Product Strategy Gaps**: Repeated losses categorized under specific functional deficiencies reveal critical feature gaps for the product roadmap.
 * **Pricing Elasticity**: Losses clustered under pricing objections provide finance and executive teams with quantitative evidence of market friction.

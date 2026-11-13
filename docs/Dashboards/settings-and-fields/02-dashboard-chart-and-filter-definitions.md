@@ -4,7 +4,7 @@ This document details visual chart types, analytical metrics, global filter para
 
 ---
 
-## Chart and Metric Types Catalog
+## 1. Chart and Metric Types Catalog
 
 CURQ Dashboards support diverse visual formats optimized for operational and financial analysis:
 
@@ -22,7 +22,7 @@ CURQ Dashboards support diverse visual formats optimized for operational and fin
 
 ---
 
-## Standard Dashboard Global Filter Parameters
+## 2. Standard Dashboard Global Filter Parameters
 
 The global filter bar at the top of standard dashboards allows users to isolate specific transaction subsets:
 
@@ -39,7 +39,7 @@ The global filter bar at the top of standard dashboards allows users to isolate 
 
 ---
 
-## My Dashboard Layout and Action Parameters
+## 3. My Dashboard Layout and Action Parameters
 
 The following configuration options manage widgets and layouts within **My Dashboard**:
 
@@ -60,4 +60,3 @@ The following configuration options manage widgets and layouts within **My Dashb
 * [Navigate and Filter Standard Dashboards](../task-guides/01-navigate-and-filter-standard-dashboards.md)
 * [Dashboard Configuration and Group Specifications](./01-dashboard-configuration-and-group-specifications.md)
 * [Understanding Spreadsheet Dashboards vs. My Dashboard](../core-concepts/01-understanding-spreadsheet-dashboards-vs-my-dashboard.md)
-

@@ -8,7 +8,9 @@ Individual draft expenses must be packaged into consolidated expense reports and
 
 ---
 
-## 1. Monitor Expenses on the Personal Register
+## 1. Bundle and Submit Expense Reports
+
+### 1.1 Monitor Expenses on the Personal Register
 
 1. Open the **Expenses** application.
 2. In the top navigation bar, click **My Expenses > My Expenses**.
@@ -27,11 +29,11 @@ Individual draft expenses must be packaged into consolidated expense reports and
      * `10/30/2026 Train ticket to client headquarters` — `€ 75.00`, Status **Done** *(fully approved and processed)*.
    * **Aggregated Register Total**: Shows total expenditures recorded across all lines *(e.g., `€ 1,275.00`)*.
 
-> **Tip:** For complete descriptions of the register columns, filter options, and pipeline status banners, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary).
+> For complete descriptions of the register columns, filter options, and pipeline status banners, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary).
 
 ---
 
-## 2. Access Bundled Reports via Individual Expense Lines
+### 1.2 Access Bundled Reports via Individual Expense Lines
 
 When an expense is packaged into an expense report, its status transitions to **To Submit**:
 
@@ -45,11 +47,11 @@ When an expense is packaged into an expense report, its status transitions to **
    * CURQ replaces the standard creation controls with the dark blue **View Report** button.
 4. Click **View Report** to navigate directly to the consolidated Expense Report sheet.
 
-> **Tip:** For field specifications and action button behavior on the individual expense form, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
+> For field specifications and action button behavior on the individual expense form, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
 
 ---
 
-## 3. Submit the Consolidated Expense Report to Management
+### 1.3 Submit the Consolidated Expense Report to Management
 
 The Expense Report sheet aggregates individual lines into an official claim for managerial review:
 
@@ -68,11 +70,13 @@ The Expense Report sheet aggregates individual lines into an official claim for 
 3. Click the dark blue **Submit to Manager** button.
 4. The report status advances to **Submitted**, locking the lines and dispatching an approval activity to the designated supervisor.
 
-> **Tip:** For details on report header fields, journal assignment rules, and report sheet statuses, see [**Expense Report (Sheet) Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#3-expense-report-sheet-fields-data-dictionary).
+> For details on report header fields, journal assignment rules, and report sheet statuses, see [**Expense Report (Sheet) Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#3-expense-report-sheet-fields-data-dictionary).
 
 ---
 
-## 4. Track Stage Progression and Audit Reviewer Refusal
+## 2. Track Approval Status and Resolve Refused Reports
+
+### 2.1 Track Stage Progression and Lifecycle Statuses
 
 Expense reports move through distinct administrative stages during the review and reimbursement lifecycle:
 
@@ -85,9 +89,15 @@ Expense reports move through distinct administrative stages during the review an
 | **Done** | The expense reimbursement process has been completed. |
 | **Refused** | The manager has refused the expense report. |
 
-CURQ maintains an immutable audit trail in the chatter feed detailing every managerial action and status transition:
+CURQ maintains an immutable audit trail in the chatter feed detailing every managerial action and status transition.
 
-1. If an approver rejects a submission, the pipeline stage automatically updates to **Refused**:
+---
+
+### 2.2 Audit Reviewer Refusal Notes and Feedback
+
+If an approver rejects a submission, the pipeline stage automatically updates to **Refused**:
+
+1. In the **Expense Reports** view, open the refused report sheet:
 
 ![CURQ Expense Report form view displaying Refused pipeline stage and chatter audit log highlighting the refusal reason](../media/019.png)
 
@@ -96,12 +106,12 @@ CURQ maintains an immutable audit trail in the chatter feed detailing every mana
    * **Chatter Timeline**: The right-hand panel logs the exact timeline:
      * `Submitted -> Refused (Status)`
      * `Your Expense Report Client Lunch has been refused`
-     * **Reason**: Approvers must enter a mandatory explanation upon refusal *(e.g., `• Reason: not valid``)*.
+     * **Reason**: Approvers must enter a mandatory explanation upon refusal *(e.g., `• Reason: not valid`)*.
 3. Review the reason provided to understand required corrections *(such as policy limits exceeded, improper category assignment, or illegible receipt documents)*.
 
 ---
 
-## 5. Rectify and Reset Refused Expense Reports
+### 2.3 Rectify and Reset Refused Expense Reports
 
 Refused expense reports can be unlocked, modified, and resubmitted without recreating transaction lines:
 
@@ -116,7 +126,7 @@ Refused expense reports can be unlocked, modified, and resubmitted without recre
    * Remove invalid lines by clicking the delete icon *(**X**)* at the end of the line item row.
 4. Once all discrepancies are addressed, click **Submit to Manager** to re-submit the corrected claim for supervisor review.
 
-> **Tip:** For detailed field descriptions, journal selection rules, and report sheet statuses, see [**Expense Report (Sheet) Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#3-expense-report-sheet-fields-data-dictionary).
+> For detailed field descriptions, journal selection rules, and report sheet statuses, see [**Expense Report (Sheet) Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#3-expense-report-sheet-fields-data-dictionary).
 
 ---
 

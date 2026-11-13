@@ -2,6 +2,13 @@
 
 Configure automated win probability calculations, select statistical attributes, set historical lead cutoff dates, and retrain pipeline predictive scoring models.
 
+> **Prerequisites**
+> * Active user account with **CRM / Administrator** rights.
+> * Active sales team and defined pipeline stages in **CRM**.
+>
+> **Warning (Configuration Advisory):** Modifying predictive lead scoring requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Predictive Lead Scoring Configuration
@@ -34,7 +41,7 @@ Configure automated win probability calculations, select statistical attributes,
    * **Source / Medium**: Evaluates marketing attribution channels.
 5. In the **Consider leads created as of the:** field, select or enter a historical cutoff date (e.g., `12/28/2025` or 12–24 months prior). Records created before this threshold will be excluded, ensuring outdated sales cycles or discontinued pricing don't skew modern win predictions.
 
-> **Note:** For mathematical details, Bayesian weighting rules, and parameter definitions, see [**Predictive Lead Scoring Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#predictive-lead-scoring-parameters).
+> **Note:** For mathematical details, Bayesian weighting rules, and parameter definitions, see [**Predictive Lead Scoring Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#4-predictive-lead-scoring-parameters).
 
 ---
 
@@ -49,11 +56,15 @@ Configure automated win probability calculations, select statistical attributes,
 
 ---
 
-## Edge Cases & Recovery Steps
+## 2. Edge Cases & Recovery Steps
 
 * **Manual Overrides are Protected**: If a salesperson manually typed a custom win probability percentage on an individual deal, retraining the predictive model **does not overwrite** their manual input. The deal preserves the custom value until explicitly cleared or reset.
 * **Insufficient Historical Data**: If your database contains fewer than 50 closed (won or lost) deals within the chosen date window, the model may lack statistical significance. Consider extending the cutoff date further back or relying on default stage probabilities until deal volume increases.
 * **Adding Marketing Attribution**: When introducing new marketing campaign sources, add `Source` to the statistical fields list so the model starts factoring origin channels into probability weights.
+
+---
+
+> **Tip (Advised Settings):** Retain default Bayesian scoring weight factors until a minimum threshold of 100 won/lost historical deals is reached in the database.
 
 ---
 

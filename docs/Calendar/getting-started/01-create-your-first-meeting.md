@@ -71,8 +71,13 @@ Clicking **Edit** opens the comprehensive meeting management form:
 
 ---
 
+> For complete parameter descriptions across scheduling, location, reminders, and attendee tracking, see [**Primary Event Header & Scheduling Fields**](../settings-and-fields/01-meeting-form-field-definitions.md#1-primary-event-header--scheduling-fields) and [**Attendee Invitation Tracking Columns**](../settings-and-fields/01-meeting-form-field-definitions.md#3-attendee-invitation-tracking-columns).
+
+---
+
 ## Related Documentation
 
 * [Plan a Recurring Meeting](./02-plan-a-recurring-meeting.md)
 * [Manage Meetings and Attendees](../task-guides/02-manage-meetings-and-attendees.md)
+* [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)
 * [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)

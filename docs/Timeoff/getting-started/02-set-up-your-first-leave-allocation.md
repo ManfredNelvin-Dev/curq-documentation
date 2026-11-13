@@ -65,7 +65,7 @@ Specify the employee recipient, time-off category, entitlement quantity, and val
 5. **Assign the Employee**: In the **Employee** field, select the target team member *(e.g., `George Watson`)*.
 6. **Add an Operational Reason**: Enter explanatory context in the **Add a reason...** note area.
 
-> For complete field definitions and configuration options, see [**Allocation Record Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#allocation-record-attributes).
+> For complete field definitions and configuration options, see [**Allocation Record Attributes**](../settings-and-fields/02-accrual-plans-and-milestone-specifications.md#3-allocation-record-attributes).
 
 ---
 
@@ -96,17 +96,6 @@ Confirm that the newly approved allocation is immediately available for employee
 
 2. Verify that the new allocation appears in the list with the status **Approved** and shows the exact granted balance *(such as the `Compensatory Days` allocation of `1 days`)*.
 3. When the employee accesses their **Dashboard**, the corresponding leave balance card updates in real time, enabling immediate time-off booking.
-
----
-
-## 2. Summary of Achievements
-
-In this tutorial, you learned to:
-* Access the **Management → Allocations** interface.
-* Configure a regular leave allocation with custom labels, dates, and units.
-* Approve allocations to activate employee entitlements.
-* Audit allocation approvals through the automated chatter history.
-* Verify balance updates across the employee self-service dashboard.
 
 ---
 

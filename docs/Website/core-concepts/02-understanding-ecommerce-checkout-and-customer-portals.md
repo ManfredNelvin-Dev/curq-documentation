@@ -4,7 +4,7 @@ CURQ 18 integrates an end-to-end electronic commerce engine directly with invent
 
 ---
 
-## The eCommerce Transaction Lifecycle
+## 1. The eCommerce Transaction Lifecycle
 
 When a shopper visits your CURQ storefront, their session progresses through an automated transaction lifecycle:
 
@@ -21,22 +21,22 @@ flowchart LR
     Inventory & Invoice`"]
 ```
 
-### 1. Catalog Browsing & Variant Resolution
+### 1.1 Catalog Browsing & Variant Resolution
 Products displayed on `/shop` dynamically inherit customer-specific pricelists, attribute matrix selections (such as size, color, or material), and promotional badges (ribbons). Inventory levels determine whether items show live stock indicators or backorder warnings.
 
-### 2. Shopping Cart Management
+### 1.2 Shopping Cart Management
 Adding an item creates a temporary quotation in the backend. As the customer adds items or applies promotional discount codes, CURQ calculates line totals, taxes, and discounts in real time.
 
-### 3. Checkout Address and Fiscal Position
+### 1.3 Checkout Address and Fiscal Position
 During checkout, the customer specifies shipping and billing coordinates. CURQ automatically resolves the customer's **Fiscal Position** to apply correct regional VAT, domestic tax rates, or zero-rated export exemptions.
 
-### 4. Shipping Carrier and Delivery Method
+### 1.4 Shipping Carrier and Delivery Method
 Shoppers select from active shipping methods:
 * **Fixed Price**: Flat-rate or free shipping over a spending threshold.
 * **Rule-based Carrier**: Dynamic rate calculation based on weight, volume, or delivery zone.
 * **In-Store Collection**: Customer pickup at local warehouse outlets with zero delivery surcharge.
 
-### 5. Payment Acquirer and Order Confirmation
+### 1.5 Payment Acquirer and Order Confirmation
 Customers execute payment via integrated payment providers (such as Stripe, PayPal, Authorize.net) or choose manual terms (Wire Transfer). Upon payment validation, CURQ:
 * Converts the quotation into a confirmed **Sales Order**.
 * Generates inventory reservation pickings in the warehouse.
@@ -44,19 +44,18 @@ Customers execute payment via integrated payment providers (such as Stripe, PayP
 
 ---
 
-## Abandoned Cart Detection and Recovery
+## 2. Abandoned Cart Detection and Recovery
 
 Not every cart completes checkout. CURQ tracks incomplete orders and powers automated recovery workflows:
 
 ```mermaid
-stateDiagram-v2
-    [*] --> ActiveCart: Add Products
-    ActiveCart --> CheckoutStarted: Enter Details
-    CheckoutStarted --> CompletedOrder: Payment Success
-    CheckoutStarted --> AbandonedCart: Inactivity Threshold Exceeded
-    AbandonedCart --> RecoveryEmailSent: Automated Campaign
-    RecoveryEmailSent --> CompletedOrder: Customer Clicks Link & Pays
-    RecoveryEmailSent --> Expired: No Response
+flowchart LR
+    Active["Active Cart<br/>Add Products"] -->|"Enter Details"| Checkout["Checkout Started<br/>Details Captured"]
+    Checkout -->|"Payment Success"| Completed["Completed Order<br/>Order Confirmed"]
+    Checkout -->|"Inactivity Threshold"| Abandoned["Abandoned Cart<br/>Pending Recovery"]
+    Abandoned -->|"Automated Trigger"| Recovery["Recovery Email Sent<br/>Discount & Cart Link"]
+    Recovery -->|"Click Link & Pay"| Completed
+    Recovery -->|"No Response"| Expired["Expired<br/>Cart Archived"]
 ```
 
 * **Inactivity Detection**: If a customer inputs their email address during checkout but abandons the transaction, CURQ tags the record as an **Abandoned Cart** once the inactivity threshold expires.
@@ -65,7 +64,7 @@ stateDiagram-v2
 
 ---
 
-## Customer Portal and B2B Access
+## 3. Customer Portal and B2B Access
 
 CURQ provides a dedicated, authenticated **Customer Portal** accessible at `/my`:
 
@@ -84,3 +83,4 @@ CURQ provides a dedicated, authenticated **Customer Portal** accessible at `/my`
 * [Set Up an eCommerce Storefront and Checkout](../getting-started/02-set-up-an-ecommerce-storefront-and-checkout.md)
 * [Manage Online Orders and Abandoned Carts](../task-guides/07-manage-online-orders-and-abandoned-carts.md)
 * [eCommerce Shop and Checkout Specifications](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md)
+* [Privacy, Cookie Compliance, and Account Settings](../settings-and-fields/04-privacy-cookie-compliance-and-account-settings.md)

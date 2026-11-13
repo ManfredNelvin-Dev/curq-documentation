@@ -20,7 +20,7 @@ Under the **Delivery** configuration section, parameters control how customer ad
 
 In the Delivery Methods manager, shipping carriers define pricing rules, weight ceilings, and publication status:
 
-### Delivery Methods List View Columns
+### 2.1 Delivery Methods List View Columns
 
 | Field Name | Description |
 | :--- | :--- |
@@ -31,7 +31,7 @@ In the Delivery Methods manager, shipping carriers define pricing rules, weight 
 | **Company** | Limits carrier availability to a specific multi-company operating unit. |
 | **Max Weight** | Enforces an upper weight limit on the shipment before the method is hidden from checkout. |
 
-### Carrier Provider Modes
+### 2.2 Carrier Provider Modes
 
 * **Fixed Price**: Flat-rate shipping fee added to order subtotals regardless of parcel dimensions.
 * **Based on Rules**: Tiered pricing computed dynamically using conditional criteria:
@@ -47,7 +47,7 @@ In the Delivery Methods manager, shipping carriers define pricing rules, weight 
 
 Enabling Click & Collect provides physical in-store collection at designated warehouses:
 
-### Stores Tab Specifications
+### 3.1 Stores Tab Specifications
 
 Defines retail branch collection points and physical fulfillment outlets:
 
@@ -58,7 +58,7 @@ Defines retail branch collection points and physical fulfillment outlets:
 | **Address** | Physical street address, map coordinates, and contact details of the pickup location. |
 | **Company** | Operating company entity responsible for store collection orders. |
 
-### Availability Tab Specifications
+### 3.2 Availability Tab Specifications
 
 Defines geographic eligibility, parcel dimension limits, and product tagging restrictions for store collection:
 

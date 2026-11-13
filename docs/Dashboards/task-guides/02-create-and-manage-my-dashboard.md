@@ -2,6 +2,10 @@
 
 **My Dashboard** provides an individualized command center where users can assemble personalized widgets from across CURQ. Powered by the CURQ `board` framework, each user can pin filtered lists, Kanban pipelines, analytical charts, and pivot tables to track their critical daily tasks without affecting company-wide standard dashboards.
 
+> **Prerequisites**
+> * Active user account with **Dashboards / User** rights.
+> * Underlying business application activity and reporting data available.
+
 ---
 
 ## 1. Pin Views to My Dashboard
@@ -42,43 +46,45 @@ Access your personal workspace by navigating to **Dashboards > My Dashboard**:
    ![Select a column layout in My Dashboard](../media/011.png)
 
 2. Choose your preferred structure:
-   * **1 Column**: Expands cards across the entire screen. Best for wide financial tables or complex pivot matrices.
-   * **2 Columns**: Splits the display into two equal vertical columns. Recommended for standard desktop monitors.
-   * **3 Columns**: Creates three vertical columns. Ideal for ultrawide monitors and rapid triaging across multiple workflows.
+   * **1 Column Layout**: Expands cards across the entire screen. Best for wide financial tables or complex pivot matrices.
+   * **2 Columns Layout**: Splits the display into two equal vertical columns. Recommended for standard desktop monitors.
+   * **3 Columns Layout**: Creates three vertical columns. Ideal for ultrawide monitors and rapid triaging across multiple workflows.
 
-### 2.2 Reposition Widgets via Drag-and-Drop
+### 2.2 Reposition Widgets via Drag-and-Drop Reorder
 * Click and hold the header bar of any widget card.
 * Drag the card into the desired column and vertical order.
 * Release the mouse button. The updated arrangement persists automatically.
 
 ---
 
-## 3. Minimize and Fold Widgets
+## 3. Minimize / Collapse and Maximize / Expand Widgets
 
-When managing numerous operational widgets, minimize cards to conserve screen space while keeping them immediately accessible.
+When managing numerous operational widgets, collapse cards to conserve screen space while keeping them immediately accessible.
 
 1. Locate the header controls in the top right corner of the widget card:
 
    ![Widget header controls showing minimize and close buttons](../media/012.png)
 
-2. Click the minus (`-`) icon. The card collapses into a compact title bar:
+2. Click **Minimize / Collapse (`-`)**. The card collapses into a compact title bar:
 
    ![Minimized widget on My Dashboard](../media/013.png)
 
-3. Click the maximize (`+`) icon to expand the card back to full height.
+3. Click **Maximize / Expand (`+`)** to reopen the card back to full height.
 
 ---
 
-## 4. Remove Widgets from My Dashboard
+## 4. Close / Remove Widgets from My Dashboard
 
 When a pinned view is no longer required:
 
 1. Locate the widget card you want to delete.
-2. In the top right corner of the widget header bar, click the close (`x`) icon:
+2. In the top right corner of the widget header bar, click **Close / Remove (`x`)**:
 
    ![Remove widget from My Dashboard using the close icon](../media/012.png)
 
 3. Confirm the removal prompt. The widget is permanently deleted from your personal dashboard without altering the underlying business records or views.
+
+> For full behavior specifications of **1 Column Layout**, **2 Columns Layout**, **3 Columns Layout**, and widget controls, see [**My Dashboard Layout and Action Parameters**](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md#3-my-dashboard-layout-and-action-parameters).
 
 ---
 
@@ -87,5 +93,4 @@ When a pinned view is no longer required:
 * [Set Up Your First Custom Dashboard](../getting-started/02-set-up-your-first-custom-dashboard.md)
 * [Understanding Spreadsheet Dashboards vs. My Dashboard](../core-concepts/01-understanding-spreadsheet-dashboards-vs-my-dashboard.md)
 * [Dashboard Chart and Filter Definitions](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md)
-
-
+* [Dashboard Configuration and Group Specifications](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md)

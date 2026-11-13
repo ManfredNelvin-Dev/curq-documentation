@@ -2,6 +2,15 @@
 
 This guide covers setting up customer loyalty rewards, promotional discount coupons, e-gift cards, and shareable discount links on your online store.
 
+> **Prerequisites**
+> * Active user account with **Website / Administrator** or **Sales / Administrator** rights.
+> * Defined customer pricing policies and active eCommerce payment gateway.
+>
+> **Warning (Configuration Advisory):** Modifying discounts and loyalty programs requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
+---
+
 ## 1. Enable or Disable Programs for the Website
 
 General promotional campaigns, loyalty programs, and gift card generation are managed in Sales; for complete setup instructions, see [**Pricing, Pricelists, and Discount Specifications**](../../Sales/settings-and-fields/02-pricing-pricelists-and-discount-specifications.md) and [**eCommerce Shop and Checkout Settings**](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md).
@@ -49,6 +58,14 @@ Clicking **Share** opens the **Share Discounts** dialog, providing the direct pr
 
 ![Gift Card program configuration form highlighting the Available On Website checkbox](../media/114.png)
 
+> **Prerequisites**
+> * Active user account with **Website / Administrator** rights.
+> * Configured base system records and access permissions.
+
+---
+
+> **Tip (Advised Settings):** Set explicit expiration dates and minimum purchase requirements on promotional coupon codes to avoid margin leakage.
+
 ---
 
 ## Related Documentation
@@ -57,4 +74,3 @@ Clicking **Share** opens the **Share Discounts** dialog, providing the direct pr
 * [Configure Product Attributes, Ribbons, and Categories](./08-configure-product-attributes-ribbons-and-categories.md)
 * [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
 * [eCommerce Shop and Checkout Settings](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md)
-

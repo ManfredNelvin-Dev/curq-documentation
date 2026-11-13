@@ -8,15 +8,22 @@ This document explains the underlying state progression, team dispatch mechanism
 
 Support tickets progress through a multi-stage workflow from intake to resolution:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    Start([Customer Inquiry]) --> New[New Ticket]
-    New -->|"Assign Agent"| InProgress[In Progress]
-    InProgress <-->|"Request / Reply"| Awaiting[Awaiting Customer]
-    InProgress -->|"Solution Verified"| Done[Done]
-
-    New -.->|"Spam / Invalid"| Rejected[Rejected]
-    Awaiting -.->|"Withdrawn"| Cancelled[Cancelled]
+    Start(["`**Customer Inquiry**
+    Intake submitted`"]) --> New["`**New**
+    Initial triage`"]
+    New -->|"Assign"| Prog["`**In Progress**
+    Active investigation`"]
+    Prog -->|"Need Info"| Wait["`**Awaiting**
+    Paused on customer`"]
+    Wait -->|"Reply"| Prog
+    Prog -->|"Resolved"| Done(["`**Done**
+    Verified & closed`"])
+    New -.->|"Invalid / Spam"| Rej(["`**Rejected**
+    Declined`"])
+    Wait -.->|"Withdrawn"| Can(["`**Cancelled**
+    Voided`"])
 ```
 
 ### 1.1 Lifecycle Stages

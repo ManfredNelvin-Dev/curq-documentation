@@ -2,6 +2,13 @@
 
 Activity Types allow human resources teams to standardize follow-up actions, schedule approval deadlines, set default reminder templates, and suggest next steps. Within the Time Off application, activity types support automated leave workflows—such as requesting medical certificates, scheduling manager review calls, or prompting HR allocation approvals.
 
+> **Prerequisites**
+> * Active user account with **Time Off / Administrator** rights.
+> * Configured base system records and access permissions.
+>
+> **Warning (Configuration Advisory):** Modifying activity types requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Create and Configure Activity Types
@@ -55,7 +62,7 @@ Under the **Activity Settings** section on the left, establish behavior and assi
 * **Keep Done**: Toggle whether completed activities remain visible in the record chatter feed.
 * **Default Note**: Add standard operating instructions or procedures into the rich-text note box.
 
-> **Note:** For detailed specifications and field descriptions, see [**Holidays, Mandatory Days, and Activity Specifications**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md).
+> For complete activity settings, decoration types, and chaining options, see [**Activity Type Configuration Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#3-activity-type-configuration-attributes).
 
 ---
 
@@ -74,10 +81,14 @@ Click the cloud save icon in the upper-left form header (or navigate away) to sa
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Activity Restricted to Wrong Model**: If an activity type does not appear in the Time Off request chatter, verify that the **Model** field is set to **Time Off** rather than an unrelated model.
 * **Chained Activity Did Not Auto-Schedule**: If a follow-up activity was expected to schedule automatically upon completion, check that **Chaining Type** is set to **Trigger Next Activity** instead of **Suggest Next Activity**.
+
+---
+
+> **Tip (Advised Settings):** Set automated reminder activities with 3 business days lead time for pending allocation and leave approval reviews.
 
 ---
 
@@ -85,4 +96,5 @@ Click the cloud save icon in the upper-left form header (or navigate away) to sa
 
 * [Review, Approve, and Manage Team Time Off](./04-review-approve-and-manage-team-time-off.md)
 * [Configure Time Off Types](./07-configure-time-off-types.md)
+* [Holidays, Mandatory Days, and Activity Specifications](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md)
 * [Holidays, Mandatory Days, and Activity Specifications](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md)

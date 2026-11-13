@@ -6,6 +6,8 @@ This document details the configuration parameters, domain routing rules, multi-
 
 ## 1. Website Info Specifications
 
+> **Caution (Domain Routing & SSL Safeguard):** Modifying the **Domain** field without prior DNS record updates and active SSL/TLS certificates will drop the public website and eCommerce store offline immediately. Furthermore, changing the **Company** entity alters sales order invoicing journals and inventory stock locations for all future online checkouts. Non-technical users should never change production domain settings without network administrator verification.
+
 The **Website Info** configuration block establishes the foundational identity, routing address, language availability, and brand icon for each website instance in CURQ 18:
 
 | Field Name | Description |
@@ -17,7 +19,7 @@ The **Website Info** configuration block establishes the foundational identity, 
 | **Company** | Designates the legal operating partner entity responsible for sales orders, inventory valuation, and accounting entries originating from this website. |
 | **Favicon** | The browser tab icon displayed alongside the webpage title. CURQ automatically resizes and converts uploaded graphics (PNG, JPG, or ICO) into 256x256 ICO format. |
 
-### Multi-Website Scope and Routing Behavior
+### 1.1 Multi-Website Scope and Routing Behavior
 
 * **Domain Routing**: In multi-website deployments, CURQ matches incoming HTTP requests against the **Domain** field. If a request does not match any configured domain, CURQ routes the visitor to the fallback website record (where Domain is blank or matches base database URL).
 * **Language Prefixes**: Non-default languages are injected into URL routes using ISO-639-1 language codes (e.g., `/nl/shop` vs. `/shop`).
@@ -39,13 +41,13 @@ The **SEO** configuration block controls search crawler directives, tracking tag
 | **Google Search Console** | Verifies domain ownership with Google Webmaster Tools by returning the required HTML verification token *(e.g., `google<alphanumeric>.html`)*. |
 | **Plausible Analytics** | Integrates lightweight, privacy-friendly web analytics using your shared link authorization token and domain string without triggering cookie banner requirements. |
 
-### Technical Details & Formats
+### 2.1 Technical Details & Formats
 
-#### Google Analytics 4 (GA4)
+#### 2.1.1 Google Analytics 4 (GA4)
 * **Tag Injection**: Injects `https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX` into the QWeb primary asset template.
 * **Privacy Interaction**: In environments with the **Cookies Bar** enabled, Google Analytics scripts are held until the visitor grants consent to optional cookies.
 
-#### Robots.txt Specifications
+#### 2.1.2 Robots.txt Specifications
 * **Public Endpoint**: Directives compile directly to the standard public route `/robots.txt`.
 * **Standard Directives**:
   * `User-agent: *`: Applies following rules to all search engine crawlers.
@@ -54,7 +56,7 @@ The **SEO** configuration block controls search crawler directives, tracking tag
   * `Disallow: /my/`: Blocks search spiders from indexing authenticated customer portal directories.
   * `Allow: *`: Explicitly permits crawling all public layout and catalog pages.
 
-#### Default Social Share Image (Open Graph)
+#### 2.1.3 Default Social Share Image (Open Graph)
 * **Image Dimensions**: Recommended aspect ratio is 1.91:1 (1200 x 630 pixels, minimum 600 x 315 pixels).
 * **Metadata Tags**: Injected as `<meta property="og:image" content="...">` and `<meta name="twitter:image" content="...">`.
 * **Fallback Hierarchy**:
@@ -62,11 +64,11 @@ The **SEO** configuration block controls search crawler directives, tracking tag
   2. Default Social Share Image (configured in Settings).
   3. Operating Company Logo (system fallback).
 
-#### Google Search Console
+#### 2.1.4 Google Search Console
 * **Verification Format**: Accepts the full file token string (e.g., `google1234567890123456.html`) or the raw verification key.
 * **Response Handling**: CURQ automatically intercepts requests to the verification endpoint and returns the matching verification string to confirm ownership.
 
-#### Plausible Analytics
+#### 2.1.5 Plausible Analytics
 * **Shared Link Auth**: The read-only authorization token generated from the Plausible dashboard settings.
 * **Site Identifier**: The registered domain name matching the Plausible site record *(e.g., `curq.nl`)*.
 * **Cookie-Free Advantage**: Operates without client-side cookies or personal data storage, exempt from GDPR consent banner requirements.

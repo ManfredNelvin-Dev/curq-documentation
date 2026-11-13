@@ -8,7 +8,9 @@ The Expenses Analysis report helps organizations monitor employee spending, main
 
 ---
 
-## 1. View Expense Analysis
+## 1. Access and Navigate Expense Analytics
+
+### 1.1 Access the Expenses Analysis Workspace
 
 To access the aggregate analytical dashboard:
 
@@ -21,20 +23,26 @@ To access the aggregate analytical dashboard:
 
 ![CURQ Expenses Analysis graphical view displaying a stacked bar chart of expenses by month and employee](../media/032.png)
 
-4. **Chart Toolbar and Display Controls**:
+---
+
+### 1.2 Switch and Configure Visual Chart Types
+
+1. **Chart Toolbar and Display Controls**:
    * **Measures**: Click the **Measures** dropdown to choose the calculated analytical dimension *(defaulting to `Total In Currency`)*.
    * **Chart Types**: Switch between **Bar Chart**, **Line Chart**, and **Pie Chart** displays.
    * **Stacked Bar Chart**: Toggle stacked bar representation to view proportional employee or category contributions per period.
    * **Sort Order**: Use the ascending and descending sort icons to rank period expenditure.
    * **Legend and Axis**: Review the horizontal timeline *(e.g., `October 2026` at `€ 75.00` and `November 2026` at `€ 2,500.00`)* and claimant legend *(e.g., `Siddharth Sathyan`)*.
-5. **View Selectors**: Use the view toggle buttons in the upper-right corner to switch between:
+2. **View Selectors**: Use the view toggle buttons in the upper-right corner to switch between:
    * **Graph View** *(Bar Chart, Line Chart, Pie Chart)*
    * **Pivot View** *(Multi-dimensional spreadsheet matrix)*
    * **List View** *(Itemized transaction log)*
 
 ---
 
-## 2. Analyse Expenses by Employee
+## 2. Drill Down into Spending Patterns
+
+### 2.1 Analyse Expenses by Employee
 
 Evaluating expenditures across staff members highlights top claimants and verifies travel policy compliance:
 
@@ -58,7 +66,7 @@ Evaluating expenditures across staff members highlights top claimants and verifi
 
 ---
 
-## 3. Analyse Expenses by Category
+### 2.2 Analyse Expenses by Category
 
 Understanding how expenditures distribute across expense categories assists finance leaders in negotiating vendor corporate rates and enforcing category caps:
 
@@ -80,13 +88,13 @@ Understanding how expenditures distribute across expense categories assists fina
 
 ---
 
-## 4. Filter and Export Analytical Reports
+### 2.3 Filter, Bookmark, and Export Analytical Reports
 
 1. **Apply Dynamic Filters**: In the search bar at the top, filter by operational status *(e.g., `To Post`, `Approved`, `Done`)*, filter by date ranges, or group by department and analytic distribution accounts.
 2. **Export to Excel**: In the upper toolbar of the Pivot View, click the **Download (Excel)** icon *(third icon in the pivot controls toolbar)* to export an `.xlsx` spreadsheet complete with sub-totals and formulas for board and executive reporting.
 3. **Save Favorite Filters**: Click the search bar dropdown, expand **Favorites**, and select **Save current search** to bookmark recurring analytical configurations for fast quarterly or monthly audits.
 
-> **Tip:** For details on register metrics, pipeline statuses, and currency attributes, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary).
+> For details on register metrics, pipeline statuses, and currency attributes, see [**My Expenses Register and Pipeline Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#1-my-expenses-register-and-pipeline-data-dictionary).
 
 ---
 

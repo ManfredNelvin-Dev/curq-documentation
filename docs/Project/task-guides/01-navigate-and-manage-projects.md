@@ -22,7 +22,7 @@ This task guide outlines procedures for navigating the CURQ Project overview, tr
    * Click the **Favorite Star** icon on any card to pin it to your personal favorites queue.
    * Click the project title *(e.g., `Development`)* to drill directly into its internal agile task board.
 
-> For a detailed explanation of all project card indicators, metrics counters, and navigation controls, see [**Project Dashboard and Kanban Card Definitions**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md).
+> For a detailed explanation of navigation controls, project card indicators, and metrics counters, see [**Top Navigation and Header Action Controls**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md#1-top-navigation-and-header-action-controls) and [**Project Card Field Definitions**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md#2-project-card-field-definitions).
 
 ---
 
@@ -61,7 +61,7 @@ When projects represent software engineering or client technical deliverables:
 
 ---
 
-## Edge Cases & Troubleshooting
+## 3. Edge Cases & Troubleshooting
 
 * **Missing Tickets Counter**: If the project card does not display a tickets metric, verify that CURQ Helpdesk is installed and that at least one support ticket has selected this project in its **Project** field.
 * **Favorite Sorting**: Starred projects always appear first in the Kanban view regardless of default alphabetical ordering.

@@ -6,6 +6,9 @@ This task guide provides step-by-step procedures for provisioning project worksp
 > **Prerequisites**
 > * Project Administrator or Manager privileges in CURQ.
 > * Basic knowledge of organizational project hierarchy and team workflows.
+>
+> **Warning (Configuration Advisory):** Modifying project parameters requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -28,7 +31,7 @@ This task guide provides step-by-step procedures for provisioning project worksp
 
 6. Click **Create project** to commit the workspace.
 
-> For a detailed explanation of project creation parameters, timesheet toggles, and context menu actions, see [**Project Dashboard and Kanban Card Definitions**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md).
+> For a detailed explanation of project creation parameters and timesheet toggles, see [**Project Creation Modal Field Definitions**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md#3-project-creation-modal-field-definitions).
 
 ---
 
@@ -45,6 +48,8 @@ This task guide provides step-by-step procedures for provisioning project worksp
    * **Reporting Links**: Direct navigation to project-specific **Dashboard**, **Tasks Analysis**, **Burndown Chart**, and **Sprints Timeline**.
    * **Color Palette**: Click any of the 12 color swatches to tint the card for rapid visual identification.
    * **Actions**: Select **Share Project** to invite external collaborators, **Duplicate** to clone the workspace template, or **Settings** to open the full project configuration form.
+
+> For a detailed explanation of all context menu navigation links, color swatches, and actions, see [**Project Card Context Menu Data Dictionary**](../settings-and-fields/01-project-dashboard-and-kanban-card-definitions.md#4-project-card-context-menu-data-dictionary).
 
 ---
 
@@ -99,7 +104,11 @@ Click the **Project Stages** notebook tab to manage the sequential delivery pipe
 4. **Email Template**: Bind automated email notifications to specific stage transitions *(such as sending client updates when deliverables enter `Done`)*.
 5. Click **Add a line** to introduce new custom stages directly into the project master configuration.
 
-> For a detailed explanation of workspace settings tabs, analytic account linkages, and pipeline stage options, see [**Project Configuration and Workspace Settings Field Definitions**](../settings-and-fields/06-project-configuration-and-workspace-settings-field-definitions.md).
+> For a detailed explanation of workspace settings, analytic account linkages, and pipeline stage options, see [**Project Settings Header and Smart Buttons**](../settings-and-fields/06-project-configuration-and-workspace-settings-field-definitions.md#1-project-settings-header-and-smart-buttons), [**Settings Tab Data Dictionary**](../settings-and-fields/06-project-configuration-and-workspace-settings-field-definitions.md#2-settings-tab-data-dictionary), [**Analytic Tab Data Dictionary**](../settings-and-fields/06-project-configuration-and-workspace-settings-field-definitions.md#3-analytic-tab-data-dictionary), and [**Project Stages Tab Data Dictionary**](../settings-and-fields/06-project-configuration-and-workspace-settings-field-definitions.md#4-project-stages-tab-data-dictionary).
+
+---
+
+> **Tip (Advised Settings):** Enable Timesheets and Milestones only on billable client projects; retain standard visibility (Invited Employees Only or All Employees).
 
 ---
 

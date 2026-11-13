@@ -4,6 +4,10 @@ This guide covers how to open the visual website editor, add and format modular 
 
 Build, customize, and publish responsive web pages using the drag-and-drop website editor in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Website / Editor** rights.
+> * Published website domain and access to the CURQ website builder.
+
 ---
 
 ## 1. Page Creation and Block Design Workflow
@@ -164,6 +168,8 @@ When an entire block section is selected, the right sidebar switches to the **Cu
    * **Animation**: Add entrance animations *(such as Fade In, Slide Up, or Zoom In)* that trigger as visitors scroll down the page.
 
    ![Customize sidebar panel showing block layout controls, column styling, and inline text formatting](../media/019.png)
+
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md).
 
 ---
 

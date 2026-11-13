@@ -22,7 +22,7 @@ The **Privacy** block governs user consent compliance, portal account creation r
 
 When active, visitors arriving on any public web page see the consent bar anchored to the bottom of the viewport.
 
-### Consent Banner Elements and Actions
+### 2.1 Consent Banner Elements and Actions
 
 | Field Name | Description |
 | :--- | :--- |
@@ -35,7 +35,7 @@ When active, visitors arriving on any public web page see the consent bar anchor
 
 ## 3. Third-Party Tracking and Blocked Domains
 
-### Automatically Suppressed Service Categories
+### 3.1 Automatically Suppressed Service Categories
 
 CURQ suppresses scripts, analytics tags, and embedded frames originating from the following networks prior to affirmative cookie consent:
 
@@ -45,7 +45,7 @@ CURQ suppresses scripts, analytics tags, and embedded frames originating from th
 | **Video Streaming** | YouTube (`youtube.com/embed`), Vimeo (`player.vimeo.com`), Dailymotion, and Youku embedded players. |
 | **Google Services** | Google Maps embed iframes, Google Analytics (`gtag.js`), and Google Tag Manager containers. |
 
-### Custom Blocked Domain Specifications
+### 3.2 Custom Blocked Domain Specifications
 
 * **Syntax**: Fully qualified domain names (FQDN) or hostnames *(e.g., `www.custom-tracker.com`, `analytics.partner.io`)* entered one per line.
 * **Matching Logic**: Substring matching applied against script `src` attributes and iframe target URLs.
@@ -55,12 +55,12 @@ CURQ suppresses scripts, analytics tags, and embedded frames originating from th
 
 ## 4. Customer Account Authentication Policies
 
-### Multi-Website Account Scope
+### 4.1 Multi-Website Account Scope
 
 * **Shared Customer Accounts (Enabled)**: Single sign-on experience across multiple websites. A customer registered on `site-a.com` can authenticate directly on `site-b.com` using identical credentials.
 * **Shared Customer Accounts (Disabled)**: User records remain strictly segregated by website ID. Accounts registered on one site cannot authenticate on other sites without explicit registration.
 
-### Portal Onboarding Modes
+### 4.2 Portal Onboarding Modes
 
 | Field Name | Description |
 | :--- | :--- |

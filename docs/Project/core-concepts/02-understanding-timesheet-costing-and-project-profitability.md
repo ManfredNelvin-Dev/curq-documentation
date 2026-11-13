@@ -10,15 +10,19 @@ This guide explains the conceptual architecture of timesheet valuation, billable
 
 Every labor hour logged against a project task carries both a cost basis *(internal expense)* and, where applicable, a billing value *(external revenue)*:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    Hours["Logged Timesheet Hours"]
+    Hours["`**Logged Hours**
+    Task timesheet entries`"]
 
-    Hours -->|"Cost Rate"| Cost["Labor Cost<br/>Internal Cost Basis"]
-    Hours -->|"Billing Rate"| Revenue["Invoiced Revenue<br/>Client Billing"]
+    Hours -->|"Cost Rate"| Cost["`**Labor Cost**
+    Internal expense`"]
+    Hours -->|"Billing Rate"| Rev["`**Invoiced Revenue**
+    Client billing`"]
 
-    Cost --> Profit["Project Profitability<br/>Gross Margin %"]
-    Revenue --> Profit
+    Cost --> Profit(["`**Project Profitability**
+    Gross margin %`"])
+    Rev --> Profit
 ```
 
 ### 1.1 Internal Labor Cost Valuation
@@ -38,13 +42,17 @@ When a project workspace has the **Billable** parameter enabled, recorded timesh
 
 Timesheet records progress through structured operational states to ensure financial integrity:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    Draft["1. Draft<br/>Timer / Manual Entry"] -->|"Submit Periodic Sheet"| Submitted["2. Submitted<br/>Locked for Review"]
-    Submitted -->|"Manager Approval"| Approved["3. Approved<br/>Certified Hours"]
-    Approved -->|"Generate Invoice"| Invoiced["4. Invoiced<br/>Billed in Accounting"]
+    Draft["`**1. Draft**
+    Timer / manual entry`"] -->|"Submit Sheet"| Sub["`**2. Submitted**
+    Locked for review`"]
+    Sub -->|"Approve"| App["`**3. Approved**
+    Certified hours`"]
+    App -->|"Invoice"| Inv(["`**4. Invoiced**
+    Billed in Accounting`"])
 
-    Submitted -.->|"Reject / Modify"| Draft
+    Sub -.->|"Refuse"| Draft
 ```
 
 1. **Draft**: Initial entry created via the real-time **Start work** timer or manual entry on the **Timesheets** tab. The specialist can edit descriptions and durations freely.
@@ -71,14 +79,19 @@ Organizations manage both external client deliverables and internal initiatives 
 
 Timesheet data flows seamlessly across CURQ modules to eliminate duplicate entries:
 
-```mermaid
+```{mermaid}
 flowchart LR
-    Timer["Task Work Timer"] --> Entry["Timesheet Entry<br/>Logged Hours"]
-    
-    Entry --> Project["CURQ Project<br/>Allocated vs Actual"]
-    Entry --> Sales["CURQ Sales<br/>Delivered Quantities"]
-    Sales --> Invoice["CURQ Accounting<br/>Customer Invoices"]
-    Entry --> Payroll["CURQ Payroll<br/>Labor Costing"]
+    Timer["`**Task Timer**
+    Work session`"] --> Entry["`**Timesheet Entry**
+    Logged hours`"]
+
+    Entry --> Proj(["`**CURQ Project**
+    Allocated vs. actual`"])
+    Entry --> Sales["`**CURQ Sales**
+    Delivered qty`"] --> Inv(["`**CURQ Accounting**
+    Customer invoices`"])
+    Entry --> Pay(["`**CURQ Payroll**
+    Labor costing`"])
 ```
 
 * **CURQ Project**: Provides real-time capacity feedback, burn-down visibility, and completion forecasts based on historical timesheet velocity.

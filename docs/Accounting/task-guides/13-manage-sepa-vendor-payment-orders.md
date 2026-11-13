@@ -36,7 +36,7 @@ Rather than disbursing payments individually, CURQ enables finance teams to bund
 
    ![Vendor payment record in In Process state](../media/141.png)
 
-   > For full field specifications of vendor payment orders, batch headers, and XML parameters, see [**Vendor Payment Order Batch Form Fields**](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md#vendor-payment-order-batch-form-fields).
+   > For full field specifications of vendor payment orders, batch headers, and XML parameters, see [**Vendor Payment Order Batch Form Fields**](../settings-and-fields/04-payment-bank-and-journal-entry-field-definitions.md#18-vendor-payment-order-batch-form-fields).
 
 5. Configure the payment batch header parameters:
    * **Payment Mode**: Select your electronic disbursement mode *(e.g., `Manual` or `SEPA Credit Transfer`)*.
@@ -159,7 +159,7 @@ When the actual cash disbursement is executed by your commercial bank:
 
 ---
 
-## Edge Cases & Troubleshooting
+## 3. Edge Cases & Troubleshooting
 
 * **Missing Bank Journal Error**: If clicking Confirm Payments returns `Missing Bank Journal on payment order`, verify that your Payment Mode under **Configuration > Payment Modes** has its **Link to Bank Account?** set to `Fixed` with an assigned Bank Journal, or select `Bank` directly in the header.
 * **Missing Communication on Payment Line**: If confirmation fails with `Communication is empty`, click **View** on the transaction line and enter the vendor bill number or invoice reference.

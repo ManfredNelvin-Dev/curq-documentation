@@ -4,7 +4,7 @@ This document explains the architectural principles, underlying data pipelines, 
 
 ---
 
-## The Dual Operational Challenge: Strategic Visibility vs. Tactical Execution
+## 1. The Dual Operational Challenge: Strategic Visibility vs. Tactical Execution
 
 Modern enterprise management demands two fundamentally different analytical capabilities:
 
@@ -20,9 +20,21 @@ Traditional ERP solutions often attempt to force both use cases into a single ri
 
 CURQ solves this by implementing two specialized dashboard architectures: **Standard Dashboards** for aggregated cross-functional reporting, and **My Dashboard** for personalized operational tracking.
 
+```mermaid
+flowchart LR
+    Data["`**CURQ Business Data**
+    Sales · Invoices · Inventory · Projects`"]
+
+    Data -->|"Formulas & Global Filters"| Std["`**Standard Dashboards**
+    Strategic KPIs, Charts & Macro Reporting`"]
+
+    Data -->|"Pinned Views & Personal Domains"| My["`**My Dashboard**
+    Daily Action Queues, Kanban & Task Triage`"]
+```
+
 ---
 
-## Architectural Comparison
+## 2. Architectural Comparison
 
 | Architectural Dimension | Standard Dashboards | My Dashboard |
 | :--- | :--- | :--- |
@@ -36,18 +48,18 @@ CURQ solves this by implementing two specialized dashboard architectures: **Stan
 
 ---
 
-## How Standard Dashboards Work: The Spreadsheet Architecture
+## 3. How Standard Dashboards Work: The Spreadsheet Architecture
 
 Standard Dashboards are powered by the CURQ Spreadsheet calculation engine. Rather than storing static chart screenshots, standard dashboards store a JSON payload representing a complete multi-tab spreadsheet model.
 
-### Embedded Data Queries
+### 3.1 Embedded Data Queries
 Spreadsheets contain specialized formulas (such as `=ODOO.PIVOT(...)` or `=ODOO.FILTER(...)`) that query the relational database. When a user opens a dashboard:
 1. The spreadsheet engine evaluates the global filters selected in the top bar (such as `Date = Last 90 Days` and `Country = United States`).
 2. These filter parameters are injected dynamically into the spreadsheet's data queries.
 3. The formulas recalculate cell values across the grid in real time.
 4. Bound SVG charts and Scorecards update immediately to reflect the calculated cells.
 
-### Drill-Down Action Routing
+### 3.2 Drill-Down Action Routing
 Each KPI card and chart series can be configured with an underlying business model and search filter. When an executive clicks on the **Quotations** card:
 * The dashboard framework extracts the active global filters.
 * It constructs an action window with a combined domain filter.
@@ -55,22 +67,22 @@ Each KPI card and chart series can be configured with an underlying business mod
 
 ---
 
-## How My Dashboard Works: The Board Architecture
+## 4. How My Dashboard Works: The Board Architecture
 
 My Dashboard functions as a modular layout container that aggregates disparate action windows into a responsive multi-column CSS grid.
 
-### View Serialization and Embedding
-When a user clicks **Actions / Settings (⚙) > Dashboard** on a view:
+### 4.1 View Serialization and Embedding
+When a view is appended to My Dashboard via **Actions / Settings (⚙) > Dashboard**:
 1. CURQ extracts the active view definition: the target view (e.g., Invoices), the view type (e.g., list), and the active search filter criteria.
 2. It registers the dashboard widget associated with the user's personal profile.
 3. The widget definition is serialized into an XML architecture stored in the user's session profile.
 
-### Live Transactional Execution
+### 4.2 Live Transactional Execution
 Unlike spreadsheet dashboards, widgets in My Dashboard do not rely on pre-calculated formulas. Each card executes a live database query matching its saved action window. When an inventory clerk updates a delivery order from their dashboard widget, the changes persist immediately into the database without requiring formula recalculation.
 
 ---
 
-## Choosing the Right Framework
+## 5. Choosing the Right Framework
 
 Use this operational guideline when deciding where to build or access reports:
 
@@ -95,4 +107,3 @@ Use this operational guideline when deciding where to build or access reports:
 * [Understanding Dashboard Security and Data Aggregation](./02-understanding-dashboard-security-and-data-aggregation.md)
 * [Dashboard Configuration and Group Specifications](../settings-and-fields/01-dashboard-configuration-and-group-specifications.md)
 * [Dashboard Chart and Filter Definitions](../settings-and-fields/02-dashboard-chart-and-filter-definitions.md)
-

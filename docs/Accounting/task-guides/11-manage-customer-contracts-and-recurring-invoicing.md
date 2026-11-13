@@ -132,6 +132,8 @@ To process multiple recurring contracts simultaneously across the company:
    * **Add to Debit Order**: If settled via direct debit, queue the invoice into an electronic SEPA collection order.
    * **Preview**: Review the Customer Portal view as seen by the customer online.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Customer Invoice, Vendor Bill, and Credit Note Field Definitions](../settings-and-fields/01-customer-invoice-and-vendor-bill-field-definitions.md).
+
 ---
 
 ## 2. Log Contract Modifications and Terminate Lines
@@ -195,7 +197,7 @@ To monitor all recurring revenue lines, recurrence cadences, and scheduled next 
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Invoice Generated with Incorrect Price**: If a recurring invoice generated in `Draft` state with an obsolete price, edit the draft invoice lines directly before confirming. Then update the underlying contract line price or linked pricelist so subsequent cycles generate with the correct rate.
 * **Invoice Already Confirmed Before Error Spotted**: Do not attempt to force contract edits onto posted invoices. Reverse the incorrect invoice using **Credit Note**, apply the credit, update the contract pricing, and use **Create invoices** to generate a corrected replacement invoice for the period.

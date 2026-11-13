@@ -4,27 +4,21 @@ This reference catalog provides field definitions, operational behaviors, and va
 
 ---
 
-## Timesheet Line Entry Fields
+## 1. Timesheet Sheet Details Tab Fields
 
-The following fields define individual atomic timesheet logs in **My Timesheets**, **All Timesheets**, and the work timer:
+The following fields define the line-item columns under the **Details** tab on a periodic timesheet sheet:
 
 | Field Name | Description |
 | :--- | :--- |
-| **Start Time / Date** | Calendar timestamp when the work occurred. Defaults to current system time; determines chronological placement. |
-| **Employee** | Team member who executed the work. Inherited automatically from the active login session or assigned by manager. |
-| **Project** | Target project deliverable. Directs costs to the project's analytic account. |
-| **Task** | Specific milestone or deliverable within the selected project. Constrained by the selected project. |
-| **Description** | Free-text operational summary of the activity accomplished. Displayed on client invoices and manager audit views. |
-| **Time Spent / Hours** | Quantity of time logged, stored as decimal hours *(e.g., `1.50` = 1 hour 30 minutes)*. |
-| **Sales Order Item** | Linked billable service line on customer sales contracts. Drives automatic delivered quantity invoicing. |
-| **Ticket Partner** | Customer or external contact linked to associated customer service tickets. |
-| **Ticket** | Linked support ticket when logging time directly from helpdesk deliverables. |
-| **Department** | Organizational department associated with the employee profile. |
-| **Company** | Legal operating company entity in multi-company configurations. |
+| **Date** | Calendar date on which the work was performed *(e.g., `10/26/2026`)*. Synchronizes with the matching date column on the **Summary** tab. |
+| **Project** | Target customer or internal project to which the logged hours belong *(e.g., `Development`)*. |
+| **Task** | Specific deliverable task within the selected project *(e.g., `Backend development`)*. |
+| **Description** | Brief operational summary describing the work completed *(e.g., `Initial project setup`)*. |
+| **Hours** | Duration worked on the entry in `HH:MM` format *(e.g., `04:00`)*. |
 
 ---
 
-## Periodic Timesheet Sheet Fields
+## 2. Periodic Timesheet Sheet Fields
 
 The following fields define periodic timesheet governance containers in **My Timesheet Sheets** and **Timesheet Sheets to Review**:
 
@@ -36,12 +30,11 @@ The following fields define periodic timesheet governance containers in **My Tim
 | **Date To** | Closing calendar boundary of the sheet's active cycle. |
 | **Reviewer** | Assigned validator responsible for evaluating and approving the sheet. |
 | **Total Time** | Cumulative sum of all hours recorded across projects within the sheet period. |
-| **Status / State** | Lifecycle state: `New` (initialized), `Open` (in progress), `Waiting Review` (submitted for approval), `Approved` (finalized). |
-| **Company** | Legal company entity for organizational reporting. |
+| **Department** | Organizational department associated with the employee profile. |
 
 ---
 
-## Summary Matrix Grid Specifications
+## 3. Summary Matrix Grid Specifications
 
 The **Summary** tab renders a dynamic matrix grid that synchronizes bidirectionally with atomic line entries:
 
@@ -55,15 +48,32 @@ The **Summary** tab renders a dynamic matrix grid that synchronizes bidirectiona
 
 ---
 
-## Security Roles and Permission Matrix
+## 4. Work Timer Session Fields
 
-| Security Role | Operational Scope & Permissions |
+The following fields configure live tracking sessions in the **Start work** dialog:
+
+| Field Name | Description |
 | :--- | :--- |
-| **User: own timesheets only** | Can log personal hours, run live timer, edit own draft lines, and submit personal timesheet sheets. Cannot view other employees' records. |
-| **User: all timesheets** | Can view personal timesheets as well as read-only access to organization-wide timesheet records and reporting views. |
-| **Timesheet Sheet Manager** | Can review, validate, approve, and refuse employee timesheet sheets assigned to their jurisdiction. Can audit team submissions. |
-| **HR Officer / Manager** | Can review organization-wide sheets, audit compliance, oversee employee contractual hours, and manage timesheet review queues. |
-| **Administrator** | Full administrative rights. Can configure encoding units, sheet ranges, review policies, billing integrations, and time-off rules. |
+| **Description** | Operational summary describing the work performed during the session *(e.g., `Server setup`)*. |
+| **Start Time** | Timestamp when the work session begins *(initialized automatically to the current date and time, e.g., `10/28/2026 07:41:51`)*. |
+| **End Time** | Timestamp when the work session ends *(left blank while the timer is active and populated upon stopping)*. |
+| **Project** | Target project to which the tracked session hours are billed and allocated *(e.g., `Development`)*. |
+| **Task** | Specific deliverable task within the selected project *(e.g., `Server setup`)*. |
+
+---
+
+## 5. My Timesheets List View Fields
+
+The following fields define the columns in the **My Timesheets > My Timesheets** list view:
+
+| Field Name | Description |
+| :--- | :--- |
+| **Start Time** | Timestamp when the activity started *(defaults to the current date and time; editable inline when logging past work)*. |
+| **Project** | Target customer or internal project to which the logged hours belong *(e.g., `Development`)*. |
+| **Task** | Specific deliverable task within the selected project *(e.g., `Server setup`, `Frontend development`)*. |
+| **Description** | Short operational summary describing the work performed *(e.g., `Initial project setup`)*. |
+| **Sales Order Item** | Linked billable service line on a customer sales order used for time-and-materials invoicing. |
+| **Time Spent** | Logged duration for the entry in `HH:MM` format *(e.g., `03:00`, `04:00`)*, paired with a row-level timer toggle and column total at the bottom. |
 
 ---
 

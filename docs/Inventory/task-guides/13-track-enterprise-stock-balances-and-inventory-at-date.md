@@ -9,7 +9,9 @@ This operational guide provides procedures for warehouse managers, inventory con
 
 ---
 
-## 1. Access the Stock Report and Audit Enterprise Stock Balances
+## 1. Track Enterprise Stock Balances and Historical Snapshots
+
+### 1.1 Access the Stock Report and Audit Enterprise Stock Balances
 
 1. In the top navigation bar, click the **Reporting** menu.
 2. Select **Stock**:
@@ -33,11 +35,11 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **History Control** *(clock counter-clockwise icon)*: Click **History** on any product line to open the Moves History register pre-filtered to that specific item, displaying all historical inbound receipts, internal relocations, and customer shipments.
    * **Replenishment Control** *(cycle arrows icon)*: Click **Replenishment** to navigate directly to the replenishment board and adjust minimum/maximum safety stock thresholds or trigger an immediate purchase order.
 
-> **Tip:** For more details about the controls and columns on the enterprise stock register, see [**Stock Report Header and Category Filter Controls**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#1-stock-report-header-and-category-filter-controls) and [**Stock Register Columns and Row Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#2-stock-register-columns-and-row-controls-data-dictionary).
+> For more details about the columns and controls on the enterprise stock register, see [**Stock Register Columns and Row Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#1-stock-register-columns-and-row-controls-data-dictionary).
 
 ---
 
-## 2. Generate Historical Inventory at Date Snapshots
+### 1.2 Generate Historical Inventory at Date Snapshots
 
 For financial audits, month-end balance sheet reconciliations, and tax compliance, CURQ enables inventory controllers to recalculate warehouse stock balances and asset valuations as of any historical timestamp:
 
@@ -53,7 +55,7 @@ For financial audits, month-end balance sheet reconciliations, and tax complianc
 4. **Dismiss Without Changes**:
    * Click **Cancel** to abort the wizard and maintain real-time current stock balances.
 
-> **Tip:** For more details about historical cutoff parameters and modal controls, see [**Inventory at Date Modal Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#3-inventory-at-date-modal-controls-data-dictionary).
+> For more details about historical cutoff parameters and modal controls, see [**Inventory at Date Modal Controls Data Dictionary**](../settings-and-fields/05-stock-and-location-reporting-field-definitions.md#2-inventory-at-date-modal-controls-data-dictionary).
 
 ---
 

@@ -6,9 +6,11 @@ This reference document details the system-wide configuration options, third-par
 
 ## 1. Calendar General Settings
 
+> **Warning - Cross-System Impact (Calendar Synchronization & Timezones):** Modifying third-party OAuth credentials or disconnecting calendar synchronization without clearing cached events can result in duplicate meeting entries or unexpected event deletions across connected user devices. Furthermore, altering the company global working calendar or user timezone directly recalculates delivery promises in Sales, project task deadlines in Project, and SLA target clocks in Helpdesk. Always confirm timezone settings before deploying calendar integrations.
+
 System-wide administrative parameters accessible under **Settings → General Settings → Integrations**:
 
-| Configuration Option | Description |
+| Field Name / Configuration Option | Description |
 | :--- | :--- |
 | **Google Calendar Synchronization** | Enables bi-directional event synchronization with Google Workspace calendars. Requires authorized Google Client ID and Client Secret credentials. |
 | **Outlook Calendar Synchronization** | Enables bi-directional synchronization with Microsoft 365 and Outlook calendars. Requires registered Microsoft Azure App Client ID and Client Secret. |
@@ -20,7 +22,7 @@ System-wide administrative parameters accessible under **Settings → General Se
 
 Defines how Calendar integrates with record chatters across other business applications:
 
-| Application Link | Integration Functionality |
+| Field Name / Application Link | Integration Functionality |
 | :--- | :--- |
 | **CRM** | Schedule sales pitches, client discovery calls, and product demonstrations directly from Opportunity records into user calendars. |
 | **Projects** | Coordinate milestone reviews, sprint planning sessions, and task follow-ups linked to specific project tasks. |
@@ -31,13 +33,15 @@ Defines how Calendar integrates with record chatters across other business appli
 
 ## 3. Configuration Validation Checklist
 
-Before releasing calendar and appointment features across your organization, verify the following:
+Before releasing calendar and appointment features across your organization, verify the following parameters:
 
-- [ ] **Google Calendar / Outlook Sync**: Verify whether API credentials and OAuth redirect URIs are active and authorized.
-- [ ] **Outgoing Email Server**: Confirm that system mail servers can dispatch `.ics` calendar invitation attachments to external attendees.
-- [ ] **Video Conferencing**: Check that default meeting URLs (CURQ Discuss, Google Meet, or Microsoft Teams) are configured.
-- [ ] **Reminder Channels**: Confirm that notification channels (browser notifications, emails, and SMS gateways) are functional.
-- [ ] **Access Rights**: Validate that user roles have appropriate visibility over personal and team calendars.
+| Verification Parameter | Scope & Configuration Target | Required Role |
+| :--- | :--- | :--- |
+| **Google Calendar / Outlook Sync** | Verify whether API credentials and OAuth redirect URIs are active and authorized. | Administrator |
+| **Outgoing Email Server** | Confirm that system mail servers can dispatch `.ics` calendar invitation attachments to external attendees. | Administrator |
+| **Video Conferencing** | Check that default meeting URLs (CURQ Discuss, Google Meet, or Microsoft Teams) are configured. | User / Admin |
+| **Reminder Channels** | Confirm that notification channels (browser notifications, emails, and SMS gateways) are functional. | User / Admin |
+| **Access Rights** | Validate that user roles have appropriate visibility over personal and team calendars. | Administrator |
 
 ---
 
@@ -45,3 +49,5 @@ Before releasing calendar and appointment features across your organization, ver
 
 * [Create Meetings from Chatter](../task-guides/04-create-meetings-from-chatter.md)
 * [Meeting Form Field Definitions](./01-meeting-form-field-definitions.md)
+* [Calendar Views and Navigation Controls](./02-calendar-views-and-navigation-controls.md)
+* [Navigate the Calendar](../task-guides/01-navigate-the-calendar.md)

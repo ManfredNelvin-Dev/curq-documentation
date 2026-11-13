@@ -1,10 +1,12 @@
 # Mailing and Campaign Field Definitions
 
-This catalog documents the data fields, technical specifications, operational behaviors, blacklist controls, and security roles of core records in CURQ 18 Email Marketing, including Mailings, Campaigns, Mailing Lists, Contacts, and Global Suppression Lists.
+This catalog documents the data fields, technical specifications, operational behaviors, and blacklist controls of core records in CURQ 18 Email Marketing, including Mailings, Campaigns, Mailing Lists, Contacts, and Global Suppression Lists.
 
 ---
 
-## Mailing Record Fields
+## 1. Mailing Record Fields
+
+> **Warning (Email Template & Dynamic Content Advisory):** Modifications to email templates, dynamic field placeholders (`{{ ... }}`), or tracking links have direct cross-system consequences. Corrupting template syntax can cause automated delivery failures across Sales, Accounting, and CRM. Non-technical users should never edit live production templates directly; always duplicate the template first, verify placeholder resolution with test dispatches, and ensure mandatory unsubscribe links (`[[opt_out]]`) are preserved to prevent domain reputation damage and regulatory violations.
 
 The following fields configure individual marketing broadcasts in the **Mailings** composer view:
 
@@ -28,7 +30,7 @@ The following fields configure individual marketing broadcasts in the **Mailings
 
 ---
 
-## Campaign Header Fields
+## 2. Campaign Header Fields
 
 The following fields define strategic marketing initiatives in the **Campaigns** view:
 
@@ -42,7 +44,7 @@ The following fields define strategic marketing initiatives in the **Campaigns**
 
 ---
 
-## Mailing List Fields
+## 3. Mailing List Fields
 
 The following fields configure subscriber groupings in **Mailing Lists**:
 
@@ -56,7 +58,7 @@ The following fields configure subscriber groupings in **Mailing Lists**:
 
 ---
 
-## Mailing Contact Fields
+## 4. Mailing Contact Fields
 
 The following fields define individual subscriber records in **Mailing List Contacts**:
 
@@ -74,7 +76,7 @@ The following fields define individual subscriber records in **Mailing List Cont
 
 ---
 
-## Analytical Smart Button Metrics
+## 5. Analytical Smart Button Metrics
 
 Both Mailings and Campaigns feature header smart buttons that compute aggregate operational KPIs:
 
@@ -89,7 +91,7 @@ Both Mailings and Campaigns feature header smart buttons that compute aggregate 
 
 ---
 
-## Global Email Blacklist Specifications
+## 6. Global Email Blacklist Specifications
 
 The global blacklist provides enterprise-wide suppression of unsubscribed or delinquent email addresses:
 
@@ -102,7 +104,7 @@ The global blacklist provides enterprise-wide suppression of unsubscribed or del
 
 ---
 
-## Opt-Out Reasons Specifications
+## 7. Opt-Out Reasons Specifications
 
 Feedback reasons presented to subscribers during the unsubscribe workflow:
 
@@ -114,19 +116,9 @@ Feedback reasons presented to subscribers during the unsubscribe workflow:
 
 ---
 
-## Security Roles and Permission Matrix
-
-CURQ Email Marketing defines two primary security groups:
-
-| Security Role | Description |
-| :--- | :--- |
-| **User** | Standard access to create, edit, test, and send mailings; manage mailing lists and subscriber contacts; view performance reports and analytics. |
-| **Administrator** | Full administrative access across all Email Marketing features, including managing stages, tags, opt-out reasons, and global blacklist records. |
-
----
-
 ## Related Documentation
 
 * [Manage Blacklisted Emails and Opt-Out Reasons](../task-guides/05-manage-blacklisted-emails-and-opt-out-reasons.md)
 * [Design, Schedule, and Send Email Mailings](../task-guides/04-design-schedule-and-send-email-mailings.md)
 * [Understanding Campaign Lifecycles and Subscriber Governance](../core-concepts/02-understanding-campaign-lifecycles-and-subscriber-governance.md)
+* [Understanding Email Marketing Architecture and Delivery Mechanisms](../core-concepts/01-understanding-email-marketing-architecture-and-delivery-mechanisms.md)

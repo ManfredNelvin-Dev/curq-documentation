@@ -4,7 +4,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-## Activity Type Specifications
+## 1. Activity Type Specifications
 
 | Field Name | Description |
 | :--- | :--- |
@@ -18,7 +18,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-## Activity Plan Structure
+## 2. Activity Plan Structure
 
 | Property | Description |
 | :--- | :--- |
@@ -32,7 +32,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-## Recurring Revenue Plan Intervals
+## 3. Recurring Revenue Plan Intervals
 
 | Plan Name | # Months | Expected MRR Normalization Formula | Description |
 | :--- | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-## Default Deal Tags
+## 4. Default Deal Tags
 
 | Tag Name | Display Color | Analytical Significance |
 | :--- | :--- | :--- |
@@ -57,7 +57,7 @@ This document details the configuration parameters, interval formulas, and statu
 
 ---
 
-## Standard Lost Reasons Catalog
+## 5. Standard Lost Reasons Catalog
 
 | Lost Reason | Suggested Use Case | Analytical Significance |
 | :--- | :--- | :--- |

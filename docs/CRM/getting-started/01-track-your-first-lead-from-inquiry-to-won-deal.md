@@ -31,7 +31,7 @@ In this tutorial, you will build a clear mental model of how CURQ organizes the 
    * **Priority**: Click the second star to set a high priority rating (`★★☆`).
 5. Click **Add**.
 
-> For allowed formats, character constraints, and definitions of each field, see [**Opportunity Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#opportunity-form-fields).
+> For allowed formats, character constraints, and definitions of each field, see [**Opportunity Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#1-opportunity-form-fields).
 
 Your new deal card appears immediately in the **New** stage column:
 
@@ -53,7 +53,7 @@ Now, let us schedule an initial discovery call so your team knows what step to t
    * **Summary**: Type `Initial discovery call with procurement team`.
    * **Due Date**: Select tomorrow's date (e.g., `10/18/2026`).
 
-> For default delay parameters, icon behaviors, and chaining triggers, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#activity-type-specifications).
+> For default delay parameters, icon behaviors, and chaining triggers, see [**Activity Type Specifications**](../settings-and-fields/03-activity-types-recurring-plans-and-lost-reasons.md#1-activity-type-specifications).
 
 4. Click the dark blue **Schedule** button:
 

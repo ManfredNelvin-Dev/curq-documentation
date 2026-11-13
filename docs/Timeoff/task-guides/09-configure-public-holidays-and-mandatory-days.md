@@ -2,6 +2,13 @@
 
 CURQ Time Off integrates organizational calendars with working schedules to ensure statutory compliance and business coverage. Administrators can define **Public Holidays** that automatically deduct non-working days from leave calculations, and schedule **Mandatory Days** that lock calendar dates to prevent employee absence during critical operational events.
 
+> **Prerequisites**
+> * Active user account with **Time Off / Administrator** rights.
+> * Configured employee profiles and operational time-off type structures.
+>
+> **Warning (Configuration Advisory):** Modifying public holidays and mandatory days requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Configure Public Holidays
@@ -39,6 +46,8 @@ Add a statutory non-working day to the system:
 
 4. When employees request time off spanning this date, CURQ automatically skips the holiday from deducted leave totals (provided **Public Holiday Included** is disabled on the leave type).
 
+> For complete public holiday field definitions (**Name**, **Company**, **Start Date**, **End Date**, **Working Hours**), see [**Public Holiday Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#1-public-holiday-attributes).
+
 ---
 
 ## 2. Configure Mandatory Days and Lockouts
@@ -72,12 +81,18 @@ Prevent time-off requests during critical business periods:
 3. Click **✔ Save** in the top action bar to confirm the lockout (or **⮌ Discard** to cancel).
 4. The blackout dates render as highlighted banners across employee calendars, and any attempt by an employee to submit a leave request covering these dates is automatically rejected by the system.
 
+> For mandatory blackout field definitions (**Name**, **Company**, **Departments**, **Start Date**, **End Date**, **Color**), see [**Mandatory Day Attributes**](../settings-and-fields/03-holidays-mandatory-days-and-activity-specifications.md#2-mandatory-day-attributes).
+
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Leave Deducted on a Public Holiday**: If leave totals still deduct days during a public holiday, check the settings of the requested **Time Off Type** and ensure that **Public Holiday Included** is unchecked. Also verify that the employee's calendar matches the **Working Hours** assigned to the holiday.
 * **Mandatory Day Lockout Not Enforced for Remote Staff**: If employees can still submit leave during a mandatory period, verify that their user profile or contract is assigned to one of the selected departments or that the department field was left blank for company-wide enforcement.
+
+---
+
+> **Tip (Advised Settings):** Schedule statutory national public holidays at the beginning of each calendar year to ensure accurate working-day deductions.
 
 ---
 

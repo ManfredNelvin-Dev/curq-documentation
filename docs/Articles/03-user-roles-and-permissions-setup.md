@@ -4,7 +4,7 @@ Role-based access control (RBAC) in CURQ allows enterprise administrators to def
 
 ---
 
-## Default Access Groups
+## 1. Default Access Groups
 
 | Group Level | Access Scope |
 |---|---|
@@ -15,8 +15,18 @@ Role-based access control (RBAC) in CURQ allows enterprise administrators to def
 
 ---
 
-## Configuring User Access
+## 2. Configuring User Access
 1. Go to **Settings > Users & Companies > Users**.
 2. Open the user record.
 3. In the **Access Rights** tab, select the role level for each module (Accounting, CRM, Sales, HR, etc.).
 4. Save the user record to apply permission rules immediately.
+
+---
+
+## Related Documentation
+
+* [CURQ System Overview](00-overview.md)
+* [System Security & Data Privacy](01-system-security-and-data-privacy.md)
+* [Audit Logs & Compliance Tracking](04-audit-logs-and-compliance-tracking.md)
+* [Data Import & Export Guide](02-data-import-and-export-guide.md)
+* [Multi-Currency & Localization Guide](05-multi-currency-and-localization-guide.md)

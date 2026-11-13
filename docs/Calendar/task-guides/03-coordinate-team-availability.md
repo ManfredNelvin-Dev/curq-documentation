@@ -2,6 +2,10 @@
 
 This guide covers how to overlay multiple team members' calendars, identify mutual free time slots, and schedule group meetings without scheduling conflicts in CURQ 18 Calendar.
 
+> **Prerequisites**
+> * Active user account with **Calendar / User** rights.
+> * Active user calendar profile with configured timezone settings.
+
 ---
 
 ## 1. Team Availability and Coordinated Scheduling
@@ -39,8 +43,13 @@ When arranging sessions involving several colleagues, you can overlay their indi
 
 ---
 
+> For sidebar attendee overlay controls and event scheduling fields, see [**Sidebar Filtering Controls**](../settings-and-fields/02-calendar-views-and-navigation-controls.md#3-sidebar-filtering-controls) and [**Primary Event Header & Scheduling Fields**](../settings-and-fields/01-meeting-form-field-definitions.md#1-primary-event-header--scheduling-fields).
+
+---
+
 ## Related Documentation
 
 * [Navigate the Calendar](./01-navigate-the-calendar.md)
 * [Manage Meetings and Attendees](./02-manage-meetings-and-attendees.md)
+* [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)
 * [Meeting Form Field Definitions](../settings-and-fields/01-meeting-form-field-definitions.md)

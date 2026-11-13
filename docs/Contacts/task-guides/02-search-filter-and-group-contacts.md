@@ -2,6 +2,10 @@
 
 Search across partner details, apply built-in and custom multi-criteria filters, group contacts hierarchically, and save custom search views for quick access.
 
+> **Prerequisites**
+> * Active user account with **Contacts / User** rights.
+> * Partner master directory active in the **Contacts** application.
+
 ---
 
 ## 1. Search, Filter, and Group Contacts
@@ -23,7 +27,7 @@ Search across partner details, apply built-in and custom multi-criteria filters,
 
    ![Contacts dynamic search dropdown](../media/015.png)
 
-> For complete field definitions and search attribute details, see [**Contact Form Field Definitions**](../settings-and-fields/01-contact-form-field-definitions.md#header-and-identity-fields).
+> For complete field definitions and search attribute details, see [**Contact Form Field Definitions**](../settings-and-fields/01-contact-form-field-definitions.md#1-header-and-identity-fields).
 
 ---
 
@@ -61,6 +65,8 @@ Search across partner details, apply built-in and custom multi-criteria filters,
 3. **Add a Custom Grouping**: Click **Add Custom Group** to cluster by any field, such as `Industry` or `Payment Terms`.
 4. To apply multi-level grouping, click a second group criterion (for example, Group by **Country**, then by **Company**).
 
+> For descriptions of filterable and groupable commercial and localization attributes (such as **Salesperson**, **Payment Terms**, **Industry**, and **Country**), see [**Sales and Purchase Tab**](../settings-and-fields/01-contact-form-field-definitions.md#3-sales-and-purchase-tab) and [**Country Fields**](../settings-and-fields/03-localization-and-country-settings.md#1-country-fields).
+
 ---
 
 ## 2. Switch Views and Save Search Favorites
@@ -84,7 +90,7 @@ At the top right of the screen, click the view switcher icons:
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Contact Missing from Directory**: If you cannot locate an existing contact, click the search bar, remove any lingering filter chips, and select **Filters > Archived** to check if the record was deactivated.
 * **Too Many Search Results**: Combine multiple filters simultaneously (for example, `Companies` + `Customers` + `Country: Germany`) to narrow down large directories.

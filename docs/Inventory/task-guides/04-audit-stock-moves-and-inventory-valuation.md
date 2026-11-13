@@ -6,10 +6,14 @@ This operational guide provides procedures for warehouse managers, inventory con
 > * Operational access to CURQ Inventory and CURQ Accounting.
 > * At least one validated stock transfer *(such as completed Delivery Order `WH/OUT/00069` or completed Inbound Receipt `WH/IN/00070`)*.
 > * Configured inventory costing method *(Standard Price, Average Cost, or FIFO)* for evaluated product categories.
+>
+> **Caution (Valuation Reversal Safeguard):** Inventory valuation adjustments directly alter balance sheet accounts. Once valuation journal entries are generated in Accounting, reversing them requires manual compensating debit/credit journal entries. Non-technical users must consult with a certified controller prior to performing valuation write-downs.
 
 ---
 
-## 1. Locate Validated Transfers and Access Smart Buttons
+## 1. Audit Transfer Moves and Ledger Entries
+
+### 1.1 Locate Validated Transfers and Access Smart Buttons
 
 1. Navigate to **Inventory > Operations > Transfers** or drill down through **Inventory > Overview** to **Delivery Orders** or **Receipts**.
 2. Open any completed transfer in **Done** status *(e.g., `WH/OUT/00069` or `WH/IN/00070`)*:
@@ -23,11 +27,11 @@ This operational guide provides procedures for warehouse managers, inventory con
    * **Effective Date**: Confirms the exact execution timestamp when physical stock moved into or out of inventory.
 
 
-> **Tip:** For more details about transfer smart buttons and header controls, see [**Validated Transfer Smart Controls Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#1-validated-transfer-smart-controls-data-dictionary).
+> For more details about transfer smart buttons and header controls, see [**Validated Transfer Smart Controls Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#1-validated-transfer-smart-controls-data-dictionary).
 
 ---
 
-## 2. Audit Granular Stock Moves in Detailed Operations
+### 1.2 Audit Granular Stock Moves in Detailed Operations
 
 To verify which storage locations, bins, and serial or lot identifiers were consumed or received during transfer execution:
 
@@ -53,11 +57,9 @@ To verify which storage locations, bins, and serial or lot identifiers were cons
 4. **Discrepancy Resolution**:
    * If the picked location differs from the physical bin, record an internal stock move to balance inventory location records before customer dispatch.
 
-> **Tip:** For more details about source bins, lot numbers, and picked move lines, see [**Detailed Operations Grid Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#2-detailed-operations-grid-data-dictionary).
-
 ---
 
-## 3. Audit Inventory Valuation and General Ledger Entries
+### 1.3 Audit Inventory Valuation and General Ledger Entries
 
 Automated valuation records reconcile physical warehouse stock with the financial balance sheet:
 
@@ -79,11 +81,13 @@ Automated valuation records reconcile physical warehouse stock with the financia
 4. **Switch Reporting Perspectives**:
    * Use the view switchers in the top right to analyze valuation data in **List**, **Pivot**, or **Graph** mode for multi-order stock reconciliation.
 
-> **Tip:** For more details about financial stock ledger entries and quantity deltas, see [**Stock Valuation Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#11-stock-valuation-register-data-dictionary).
+> For more details about financial stock ledger entries and quantity deltas, see [**Stock Valuation Register Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#4-stock-valuation-register-data-dictionary).
 
 ---
 
-## 4. Access Enterprise Stock Valuation via the Reporting Menu
+## 2. Analyze Enterprise Stock Valuation and Historical Snapshots
+
+### 2.1 Access Enterprise Stock Valuation via the Reporting Menu
 
 In addition to auditing individual transfer documents, inventory controllers and finance auditors can inspect global valuation balances across the entire organization:
 
@@ -117,14 +121,14 @@ In addition to auditing individual transfer documents, inventory controllers and
 ![CURQ Stock Valuation register displaying revaluation entry for Fairphone 5 with Quantity 0.00 and Total Value 4950 EUR](../media/059.png)
 
    * **Physical Receipt Line (`16:24:39`)**: Logs physical warehouse intake of `50.00 Units` on receipt `WH/IN/00110` at initial baseline valuation `€ 0.00`.
-   * **Cost Revaluation Line (`16:59:40`)**: Displays an empty operational reference and **`Quantity: 0.00`**, verifying that zero physical units moved across warehouse bins. CURQ injects a pure monetary value delta of **`€ 4,950.00`** ($$50.00 \times € 99.00$$).
+   * **Cost Revaluation Line (`16:59:40`)**: Displays an empty operational reference and **`Quantity: 0.00`**, verifying that zero physical units moved across warehouse bins. CURQ injects a pure monetary value delta of **`€ 4,950.00`**.
    * **Reconciled Totals**: Reconciles warehouse stock to **`50.00 Units`** on hand and **`€ 4,950.00`** in total inventory asset valuation on the company balance sheet.
 
-> **Tip:** For more details about reporting navigation and global asset ledgers, see [**Inventory Reporting Menu Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#12-inventory-reporting-menu-data-dictionary) and [**Enterprise Stock Valuation Register and Pivot View Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#13-enterprise-stock-valuation-register-and-pivot-view-data-dictionary).
+> For more details about global asset ledgers and valuation totals, see [**Enterprise Stock Valuation Register Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#5-enterprise-stock-valuation-register-dictionary).
 
 ---
 
-## 5. Multidimensional Valuation Analysis in Pivot Mode
+### 2.2 Multidimensional Valuation Analysis in Pivot Mode
 
 To analyze inventory asset distribution by accounting period, category, and warehouse:
 
@@ -139,11 +143,9 @@ To analyze inventory asset distribution by accounting period, category, and ware
    * **Hierarchical Categorization**: Expands rows by product category *(e.g., `All`)*, product variant, or warehouse storage zone.
    * **Spreadsheet Export**: Click the **Download (XLSX)** icon or **Insert in Spreadsheet** icon to export audit figures for corporate financial modeling.
 
-> **Tip:** For more details about pivot matrix dimensions, measures, and export tools, see [**Enterprise Stock Valuation Register and Pivot View Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#13-enterprise-stock-valuation-register-and-pivot-view-data-dictionary).
-
 ---
 
-## 6. Generate Historical Stock Valuation at Date
+### 2.3 Generate Historical Stock Valuation at Date
 
 For month-end financial closing, fiscal year audits, and historical balance sheet reconciliation, CURQ allows auditors to generate point-in-time stock valuation snapshots:
 
@@ -161,11 +163,11 @@ For month-end financial closing, fiscal year audits, and historical balance shee
    * Click **Confirm**: CURQ rolls back subsequent inventory transactions and recalculates warehouse quantities and monetary values exactly as they stood at that historical timestamp.
    * Click **Cancel** to abort without altering the current real-time register view.
 
-> **Tip:** For more details about historical asset recalculation and cutoff timestamps, see [**Valuation at Date Modal Dialog Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#14-valuation-at-date-modal-dialog-data-dictionary).
+> For more details about historical asset recalculation and cutoff timestamps, see [**Valuation at Date Modal Dialog Data Dictionary**](../settings-and-fields/06-stock-moves-analysis-and-valuation-field-definitions.md#6-valuation-at-date-modal-dialog-data-dictionary).
 
 ---
 
-## 7. Reconcile Stock Entries with CURQ Accounting
+## 3. Reconcile Stock Entries with CURQ Accounting
 
 1. **Inbound Receipt Reconciliation**:
    * Confirm that the valuation record generates an automated accounting entry debiting the Inventory Asset account *(e.g., `110100 Stock Valuation`)* and crediting the Stock Interim (Received) account *(e.g., `210200 Goods Received Not Invoiced`)*.

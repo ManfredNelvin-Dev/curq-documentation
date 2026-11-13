@@ -2,6 +2,10 @@
 
 This guide explains how to view, log, filter, and audit individual working hours and unsubmitted timesheet entries in CURQ Timesheets.
 
+> **Prerequisites**
+> * Active user account with **Timesheets / User** rights.
+> * Assigned project tasks and active analytic accounts in **Projects**.
+
 ---
 
 ## 1. Log and Organize Daily Timesheets
@@ -36,7 +40,7 @@ Log individual time entries quickly without opening a periodic sheet:
    * **Time Spent**: Enter the duration *(e.g., `04:00`)*.
 4. Click anywhere outside the row to save the entry inline.
 
-> For complete field descriptions, allowed formats, and default value rules, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+> For complete field descriptions, allowed formats, and default value rules in **My Timesheets**, see [**My Timesheets List View Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#5-my-timesheets-list-view-fields).
 
 ---
 

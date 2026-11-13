@@ -656,7 +656,7 @@ function extractCardData(headingEl) {
 // Overview Cards Formatting
 function formatOverviewCards() {
     const path = window.location.pathname.toLowerCase();
-    const isOverview = path.includes('/00-overview') || document.querySelector('.sphinx-content h1')?.textContent.toLowerCase().includes('overview');
+    const isOverview = path.includes('/00-overview');
     if (!isOverview) return;
 
     const headings = Array.from(document.querySelectorAll('.sphinx-content h2')).filter(h => h.querySelector('a.reference.internal'));

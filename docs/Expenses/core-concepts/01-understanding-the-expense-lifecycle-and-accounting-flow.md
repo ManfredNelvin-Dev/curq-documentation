@@ -8,9 +8,12 @@ Employees can record expenses manually, upload digital receipts, drag and drop d
 
 ## 1. Key Capabilities of CURQ Expenses
 
+### 1.1 Multi-Channel Expense Capture
 * **Expense Recording**: Capture expenditures manually or automatically through OCR document scanning and inbound email forwarding.
 * **Expense Categories**: Configure expense types, fixed or variable reimbursement rates, general ledger accounts, purchase/sales taxes, and reinvoicing policies.
 * **Expense Reports**: Group individual line items into consolidated expense report sheets for streamlined managerial review.
+
+### 1.2 Governance, Accounting, and Analytics
 * **Expense Approval**: Review, approve, or refuse submitted reports with mandatory justification logging in the record chatter.
 * **Accounting Integration**: Post approved expenses to dedicated accounting journals, automatically generating balanced double-entry vouchers.
 * **Employee Reimbursement**: Reimburse staff via bank transfers, cash, or checks individually or in batch.
@@ -19,23 +22,25 @@ Employees can record expenses manually, upload digital receipts, drag and drop d
 
 ---
 
-## 2. End-to-End Operational Lifecycle
+## 2. End-to-End Operational Lifecycle and State Machine
+
+### 2.1 Sequential Processing Stages
 
 CURQ Expenses structures employee expense management into four clear, sequential stages:
 
 ```mermaid
 flowchart LR
-    Step1["`**1. Record & Submit**
+    Step1(["`**1. Record & Submit**
     Staff log expenses and
-    submit report sheet`"] --> Step2["`**2. Review & Approve**
+    submit report sheet`"]) --> Step2["`**2. Review & Approve**
     Managers verify receipts
     and authorize claim`"]
     Step2 --> Step3["`**3. Post Entries**
     Finance commits vouchers
     to General Ledger`"]
-    Step3 --> Step4["`**4. Disburse Payment**
+    Step3 --> Step4(["`**4. Disburse Payment**
     Direct reimbursement
-    clears liability`"]
+    clears liability`"])
 ```
 
 1. **Record & Submit**: Employees log expenditures via manual web entry, OCR receipt scanning, drag-and-drop, or email forwarding, and bundle them into an official expense report sheet.
@@ -45,19 +50,24 @@ flowchart LR
 
 ---
 
-## 3. The Expense Lifecycle State Machine
+### 2.2 Lifecycle State Transitions
 
 Every expense report transitions through a strict sequence of operational states:
 
 ```mermaid
 flowchart LR
-    ToSubmit["To Submit<br/>Report Created"] -->|"Submit to Manager"| Submitted["Submitted<br/>Awaiting Review"]
-    Submitted -->|"Approve"| Approved["Approved<br/>Ready for Posting"]
-    Approved -->|"Post Journal Entries"| Posted["Posted<br/>GL Updated"]
-    Posted -->|"Pay"| Done["Done<br/>Reimbursed"]
+    ToSubmit(["`**1. To Submit**
+    Report created`"]) -->|"Submit"| Submitted["`**2. Submitted**
+    Awaiting review`"]
+    Submitted -->|"Approve"| Approved["`**3. Approved**
+    Ready for posting`"]
+    Approved -->|"Post Entries"| Posted["`**4. Posted**
+    GL updated`"]
+    Posted -->|"Pay"| Done(["`**5. Done**
+    Reimbursed`"])
 
-    Submitted -.->|"Refuse (Reason Required)"| Refused["Refused<br/>Returned to Staff"]
-    Refused -.->|"Reset to Draft"| ToSubmit
+    Submitted -.->|"Refuse"| Refused(["`**Refused**
+    Returned to staff`"])
 ```
 
 | Lifecycle Status | Operational Description | Allowed Actions |
@@ -71,7 +81,9 @@ flowchart LR
 
 ---
 
-## 4. Payment Models: Employee-Paid vs. Company-Paid
+## 3. Payment Models and Accounting Mechanics
+
+### 3.1 Employee-Paid vs. Company-Paid Models
 
 CURQ Expenses fundamentally distinguishes between expenditures funded personally by staff and purchases settled using company funds:
 
@@ -84,13 +96,9 @@ CURQ Expenses fundamentally distinguishes between expenditures funded personally
 
 ---
 
-## 5. General Ledger Mechanics and Double-Entry Accounting
+### 3.2 Standard Employee Reimbursement Journal Entry
 
-When an approved expense report is posted via **Post Journal Entries**, CURQ executes balanced double-entry accounting transactions:
-
-### 5.1 Standard Employee Reimbursement Journal Entry
-
-When an employee incurs a `€ 1,200.00` client dining expense with 9% included tax (`€ 99.08` VAT, `€ 1,100.92` net):
+When an approved expense report is posted via **Post Journal Entries**, CURQ executes balanced double-entry accounting transactions. When an employee incurs a `€ 1,200.00` client dining expense with 9% included tax (`€ 99.08` VAT, `€ 1,100.92` net):
 
 | Line # | Account | Partner | Debit (Dr) | Credit (Cr) | Financial Impact |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -98,6 +106,10 @@ When an employee incurs a `€ 1,200.00` client dining expense with 9% included 
 | 2 | `Input VAT / Tax Deductible Account` | Tax Authority | `€ 99.08` | `€ 0.00` | Tax asset increase (VAT) |
 | 3 | `Employee Payable Account` | Siddharth Sathyan | `€ 0.00` | `€ 1,200.00` | Liability increase (Payable owed) |
 | **Total** | | | **`€ 1,200.00`** | **`€ 1,200.00`** | **Balanced** |
+
+---
+
+### 3.3 Settlement and Payment Journal Entry
 
 Upon reimbursement payment execution:
 

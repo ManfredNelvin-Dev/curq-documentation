@@ -4,7 +4,7 @@ This document examines the underlying architecture, operational structure, analy
 
 ---
 
-## Core Data Architecture and Operational Dual-Layer Structure
+## 1. Core Data Architecture and Operational Dual-Layer Structure
 
 CURQ Timesheets operates on a unified, dual-layer architectural model that balances detailed operational tracking with structured periodic approvals:
 
@@ -19,31 +19,23 @@ CURQ Timesheets operates on a unified, dual-layer architectural model that balan
    * Enforces period boundaries, approval workflows, and immutability once validated by reviewers.
 
 ```{mermaid}
-flowchart TD
-    subgraph Capture["Operational Time Capture"]
-        A["`**Live Work Timer**
-        Real-Time Session`"] --> C["`**Atomic Timesheet Line**
-        Individual Log Entry`"]
-        B["`**Manual Daily Entry**
-        My Timesheets`"] --> C
-    end
+flowchart LR
+    T["`**Live Work Timer**
+    Real-time session`"] --> L["`**Timesheet Line**
+    Date, Project & Hours`"]
+    M["`**Manual Entry**
+    My Timesheets / Details`"] --> L
 
-    subgraph Aggregation["Governance & Accounting Layer"]
-        C --> D["`**Analytic Ledger**
-        Cost & Margin Evaluation`"]
-        C --> E["`**Periodic Timesheet Sheet**
-        Weekly Matrix Summary`"]
-        E --> F{"`**Review Policy**`"}
-        F -->|Approved| G["`**Sales Order Invoicing**
-        Delivered Hours Quantity`"]
-        F -->|Refused| H["`**Correction Queue**
-        Returned to Employee`"]
-    end
+    L --> A(["`**Analytic Ledger**
+    Project costs & margins`"])
+    L --> S["`**Timesheet Sheet**
+    Weekly summary & approval`"] --> I(["`**Customer Invoicing**
+    Billable hours released`"])
 ```
 
 ---
 
-## Architectural Comparison: Atomic Lines vs. Periodic Sheets
+## 2. Architectural Comparison: Atomic Lines vs. Periodic Sheets
 
 The table below contrasts the functions, behaviors, and access models of the two timesheet tiers:
 
@@ -58,17 +50,17 @@ The table below contrasts the functions, behaviors, and access models of the two
 
 ---
 
-## Project and Task Deliverable Integration
+## 3. Project and Task Deliverable Integration
 
 Timesheets natively tie into the CURQ **Project** application to ensure accurate effort accounting:
 
-### Hierarchical Task Allocation
+### 3.1 Hierarchical Task Allocation
 
 When employees log time, the interface enforces project-task relationships:
 * Selecting a **Project** immediately narrows the **Task** dropdown to active deliverables belonging solely to that project.
 * Tasks inherit analytic accounts, project managers, and billing parameters directly from parent projects.
 
-### Budget and Planned Hours Tracking
+### 3.2 Budget and Planned Hours Tracking
 
 Each project task maintains planned hour targets:
 * **Initially Planned Hours**: Budget allocated during sprint or deliverable scoping.
@@ -78,7 +70,7 @@ Each project task maintains planned hour targets:
 
 ---
 
-## Analytic Accounting and Cost Rate Dynamics
+## 4. Analytic Accounting and Cost Rate Dynamics
 
 Timesheets connect operational effort directly with company financial ledgers:
 
@@ -93,3 +85,4 @@ Timesheets connect operational effort directly with company financial ledgers:
 * [Understanding Timesheet Sheet Approval and Billing Workflows](./02-understanding-timesheet-sheet-approval-and-billing-workflows.md)
 * [Log Your First Timesheet and Submit for Approval](../getting-started/01-log-your-first-timesheet-and-submit-for-approval.md)
 * [Configure Timesheet Policies and Encoding Rules](../task-guides/06-configure-timesheet-policies-and-encoding-rules.md)
+* [Timesheet Line and Sheet Field Definitions](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md)

@@ -4,7 +4,7 @@ This document explains the underlying architecture, mail queue dispatch engines,
 
 ---
 
-## Architectural Overview: Transactional vs. Bulk Broadcast Pipelines
+## 1. Architectural Overview: Transactional vs. Bulk Broadcast Pipelines
 
 CURQ separates email operations into two distinct processing pipelines to isolate routine transactional notifications from mass marketing campaigns:
 
@@ -57,7 +57,7 @@ flowchart TD
 
 ---
 
-## Asynchronous Mail Queue Processing and Batch Throttling
+## 2. Asynchronous Mail Queue Processing and Batch Throttling
 
 When a user clicks **Send** or a scheduled dispatch time is reached, CURQ does not transmit emails synchronously through the active browser session. Instead, it utilizes an asynchronous execution architecture:
 
@@ -68,11 +68,11 @@ When a user clicks **Send** or a scheduled dispatch time is reached, CURQ does n
 
 ---
 
-## Deliverability, Domain Authentication, and Bounce Tracking
+## 3. Deliverability, Domain Authentication, and Bounce Tracking
 
 To maintain high deliverability and avoid spam classification, CURQ integrates standard email authentication and feedback protocols:
 
-### Domain Authentication Protocols
+### 3.1 Domain Authentication Protocols
 
 | Protocol | Technical Mechanism | Deliverability Purpose |
 | :--- | :--- | :--- |
@@ -80,7 +80,7 @@ To maintain high deliverability and avoid spam classification, CURQ integrates s
 | **DKIM (DomainKeys Identified Mail)** | Cryptographic signature embedded in outgoing email headers. | Validates that message headers and body content were not altered during transmission. |
 | **DMARC (Domain-based Message Authentication)** | DNS policy instructing receivers on handling failed SPF/DKIM. | Protects domain sender reputation and enforces strict inbox routing compliance. |
 
-### Automated Bounce Handling via VERP
+### 3.2 Automated Bounce Handling via VERP
 
 CURQ employs **Variable Envelope Return Path (VERP)** to detect and process undeliverable messages automatically:
 
@@ -95,7 +95,7 @@ CURQ employs **Variable Envelope Return Path (VERP)** to detect and process unde
 
 ---
 
-## Architectural Comparison Table
+## 4. Architectural Comparison Table
 
 | Operational Dimension | Transactional Mail Pipeline | Email Marketing Broadcast Pipeline |
 | :--- | :--- | :--- |
@@ -112,4 +112,5 @@ CURQ employs **Variable Envelope Return Path (VERP)** to detect and process unde
 
 * [Understanding Campaign Lifecycles and Subscriber Governance](./02-understanding-campaign-lifecycles-and-subscriber-governance.md)
 * [Design, Schedule, and Send Email Mailings](../task-guides/04-design-schedule-and-send-email-mailings.md)
+* [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)
 * [Mailing and Campaign Field Definitions](../settings-and-fields/01-mailing-and-campaign-field-definitions.md)

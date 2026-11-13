@@ -2,6 +2,10 @@
 
 This guide covers how to initiate a new Request for Quotation (RFQ), select suppliers, configure delivery dates and destinations, add line items and sections, and review financial totals in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Purchase / User** rights.
+> * Defined product catalog with sales pricing and active customer records.
+
 ---
 
 ## 1. Create and Configure Requests for Quotation
@@ -26,11 +30,11 @@ This guide covers how to initiate a new Request for Quotation (RFQ), select supp
    * **On-Time Delivery**: Displays the vendor's historical delivery reliability percentage (or *No On-time Delivery Data* if newly registered).
    * **Ask confirmation**: Check this box to enable automated receipt reminders. Enter the number of **day(s) before** receipt to automatically email the supplier a confirmation request prior to scheduled delivery.
 5. *(Optional)* In the **Project** field, select an active project to allocate procurement expenses and material costs directly to that project's profitability sheet.
-6. *(Optional)* Under the **Other Information** tab, verify the **Deliver To** warehouse operation (such as *Receipts* for your primary warehouse) and assign an active **Agreement** if purchasing against a blanket order or tender contract.
+6. *(Optional)* To assign a dedicated procurement **Buyer**, link a **Source Document**, set **Incoterms**, or review fiscal settings, open the **Other Information** tab (detailed in [Configure Commercial and Incoterm Details](#14-configure-commercial-and-incoterm-details)).
 
 ![Request for Quotation form view showing vendor and order deadline fields](../media/002.png)
 
-> For complete field definitions across quotation headers and shipping terms, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+> For complete field definitions across quotation headers and shipping terms, see [**Request for Quotation / Purchase Order Header Fields**](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md#1-request-for-quotation--purchase-order-header-fields).
 
 ---
 
@@ -51,6 +55,8 @@ This guide covers how to initiate a new Request for Quotation (RFQ), select supp
 
 ![Configured product lines, unit prices, taxes, and financial totals on RFQ form](../media/003.png)
 
+> For order line column definitions (**Product**, **Description**, **Quantity**, **Unit of Measure**, **Unit Price**, **Taxes**, **Amount**), see [**Products Tab Order Line Columns**](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md#2-products-tab-order-line-columns).
+
 ---
 
 ### 1.4 Configure Commercial and Incoterm Details
@@ -64,9 +70,9 @@ Open the **Other Information** tab to verify commercial ownership, payment terms
 5. **Supplier Bank Account**: Select the vendor's registered bank account for disbursements.
 6. **Fiscal Position**: Verify the automatic tax mapping rules applied to line items (for example, *Niet-EU landen*).
 
-![Other Information tab showing commercial and fiscal settings on RFQ form](../media/004.png)
+![Other Information tab showing commercial settings and vendor terms on request for quotation](../media/004.png)
 
-> For complete specifications of commercial fields, Incoterms, and payment terms, see [**RFQ and Purchase Order Field Definitions**](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md).
+> For complete specifications of commercial fields, Incoterms, and payment terms, see [**Other Information Tab Fields**](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md#3-other-information-tab-fields).
 
 ---
 
@@ -74,4 +80,4 @@ Open the **Other Information** tab to verify commercial ownership, payment terms
 
 * [Send and Print Requests for Quotation](./02-send-and-print-requests-for-quotation.md)
 * [Confirm Purchase Orders and Manage Approvals](./03-confirm-purchase-orders-and-manage-approvals.md)
-* [RFQ and Purchase Order Field Definitions](../settings-and-fields/02-rfq-and-purchase-order-field-definitions.md)
+* [RFQ, Purchase Order, and Blanket Order Field Definitions](../settings-and-fields/01-rfq-and-purchase-order-field-definitions.md)

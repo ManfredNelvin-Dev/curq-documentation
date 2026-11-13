@@ -2,6 +2,13 @@
 
 Organize sales teams, set monthly invoicing targets, configure territorial assignment domains, and automate lead allocation across team members.
 
+> **Prerequisites**
+> * Active user account with **CRM / Administrator** rights.
+> * Active sales team and defined pipeline stages in **CRM**.
+>
+> **Warning (Configuration Advisory):** Modifying sales teams and assignment rules requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Create and Structure Sales Teams
@@ -31,7 +38,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
      * **Invoicing Target**: Enter the monthly team revenue target in company currency (e.g., `10,000.00 / Month`).
 5. CURQ auto-saves updates, or click the cloud icon in the top header to save immediately.
 
-> **Note:** For parameter specifications and capacity definitions, see [**Sales Team Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#sales-team-parameters).
+> **Note:** For parameter specifications and capacity definitions, see [**Sales Team Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#2-sales-team-parameters).
 
 ---
 
@@ -67,7 +74,7 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
    * **Repeatedly**: Runs an automated background job (e.g., Every `1` `Hours`).
 5. Click **Save** in the top action bar.
 
-> **Note:** For cron interval options and execution descriptions, see [**Rule-Based Assignment Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#rule-based-assignment-parameters).
+> **Note:** For cron interval options and execution descriptions, see [**Rule-Based Assignment Parameters**](../settings-and-fields/02-pipeline-configuration-and-assignment-settings.md#3-rule-based-assignment-parameters).
 
 ---
 
@@ -105,12 +112,16 @@ Organize sales teams, set monthly invoicing targets, configure territorial assig
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Team Member Exceeding Capacity**: If a representative reaches their rolling 30-day cap defined in **Leads (30 days)**, the assignment algorithm automatically skips them and routes subsequent leads to remaining team members with available capacity.
 * **Leads Not Routing**: Verify that the lead attributes match the exact assignment domain filters configured under **ASSIGNMENT RULES**. If a domain matches zero records, click **Edit Domain** and adjust your filter criteria.
 * **Excluding Team Leaders from Routing**: To prevent supervisors from receiving automated lead allocations, check the **Skip auto assignment** box on their member card.
 * **Scheduled Cron Failures**: If scheduled lead routing stops running, verify in **Configuration > Settings** that **Rule-Based Assignment** is enabled and set to **Repeatedly**.
+
+---
+
+> **Tip (Advised Settings):** Set conservative 30-day lead assignment caps. Retain manual assignment methods until round-robin rules and territorial domains are fully validated.
 
 ---
 

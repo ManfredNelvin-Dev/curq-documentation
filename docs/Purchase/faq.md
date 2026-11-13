@@ -31,3 +31,13 @@ Yes, provided no incoming warehouse receipts have been validated or vendor bills
 ## 5. How do I handle partial incoming shipments, backorders, and vendor returns?
 
 When a supplier delivers fewer items than requested, enter the actual count verified at the receiving dock in the **Quantity** column and click **Validate**. CURQ prompts you to **Create Backorder**, which automatically generates a new incoming receipt for the remaining balance. If delivered goods are damaged or incorrect, open the validated receipt in *Done* status, click **Return**, confirm the return quantity, and validate the outgoing return picking (`WH/OUT/`). The originating purchase order automatically reduces its received quantity count to keep billing lines accurate.
+
+---
+
+## Related Documentation
+
+* [Create and Process Your First Purchase Order](./getting-started/01-create-and-process-your-first-purchase-order.md)
+* [Understanding the Procurement Lifecycle and Order States](./core-concepts/01-understanding-the-procurement-lifecycle-and-order-states.md)
+* [Understanding Bill Control and 3-Way Matching](./core-concepts/02-understanding-bill-control-and-3-way-matching.md)
+* [RFQ, Purchase Order, and Blanket Order Field Definitions](./settings-and-fields/01-rfq-and-purchase-order-field-definitions.md)
+* [Warehouse Receipt and Vendor Bill Field Definitions](./settings-and-fields/02-warehouse-receipt-and-vendor-bill-field-definitions.md)

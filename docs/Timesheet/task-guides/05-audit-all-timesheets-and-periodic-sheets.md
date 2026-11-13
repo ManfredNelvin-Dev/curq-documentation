@@ -2,6 +2,10 @@
 
 This guide explains how administrators, department leads, and operations managers monitor organization-wide timesheet sheets, track submission compliance, and audit logged hours across projects in CURQ Timesheets.
 
+> **Prerequisites**
+> * Active user account with **Timesheets / User** rights.
+> * Assigned project tasks and active analytic accounts in **Projects**.
+
 ---
 
 ## 1. Audit Employee Timesheet Sheets
@@ -33,7 +37,7 @@ The list view consolidates key operational metadata for each timesheet cycle:
 * **Status**: Workflow state *(e.g., `Open`, `Waiting Review`, or `Approved`)*.
 * **Total Time**: Cumulative working hours recorded across all activities in the sheet.
 
-> For complete field descriptions, cycle rules, and status parameters, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#periodic-timesheet-sheet-fields).
+> For complete field descriptions, cycle rules, and status parameters, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#2-periodic-timesheet-sheet-fields).
 
 ---
 
@@ -47,7 +51,7 @@ Click any timesheet sheet row to open the complete inspection view:
 2. **Details Tab**: Review individual task descriptions, start times, and linked sales order items to ensure client billable work is accurately tagged.
 3. **Chatter Activity**: Check employee notes, submission timestamps, and previous review feedback.
 
-> For matrix grid calculations and atomic line parameters, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#summary-matrix-grid-specifications) and [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+> For matrix grid calculations and **Details** tab column definitions, see [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#3-summary-matrix-grid-specifications) and [**Timesheet Sheet Details Tab Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#1-timesheet-sheet-details-tab-fields).
 
 ---
 

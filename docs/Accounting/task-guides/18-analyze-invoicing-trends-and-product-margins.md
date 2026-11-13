@@ -104,6 +104,8 @@ To analyze commercial product margins across inventory turnover:
    * **Expected Margin (%)**: Target list-price profit margin percentage.
 5. Sort product rows by **Total Margin** or **Total Margin Rate(%)** descending to identify your most profitable offerings.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Contract and Recurring Invoicing Field Definitions (Customer and Supplier)](../settings-and-fields/06-customer-contract-and-recurring-invoicing-field-definitions.md).
+
 ---
 
 ## 2. Audit Operational Time and Project Costs via Analytic Reporting
@@ -133,7 +135,7 @@ Beyond commercial invoices and product margins, financial controllers must audit
 
 ---
 
-## Edge Cases and Recovery Steps
+## 3. Edge Cases and Recovery Steps
 
 * **Zero or Negative Margin on Product Sales**: If the analysis displays a 0% or negative margin for a product, check the product master record under **Accounting > Customers > Products**. Ensure the **Cost** field reflects actual purchase prices. If cost was set to zero when invoices were generated, update the cost price and recalculate margins.
 * **Vendor Bills Included in Sales Figures**: If revenue figures appear unexpectedly low or distorted, check the search bar filters. If the default **Customers** filter is cleared, CURQ aggregates both customer invoices and vendor bills into a net figure. Re-apply the **Customers** filter to isolate sales.

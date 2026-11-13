@@ -4,7 +4,7 @@ This guide examines the lifecycle stages of marketing mailings, recipient target
 
 ---
 
-## Mailing Lifecycle Stages
+## 1. Mailing Lifecycle Stages
 
 Each marketing broadcast moves through a deterministic series of workflow stages governed by system validation checks and scheduler events:
 
@@ -13,21 +13,21 @@ Each marketing broadcast moves through a deterministic series of workflow stages
 * **Sending**: The asynchronous worker has commenced batch transmission. Emails are currently being formatted and passed to the outgoing SMTP relay.
 * **Sent**: All messages in the mailing have been delivered to the outgoing mail server. Analytics smart buttons and reporting charts are populated with real-time delivery and interaction data.
 
-> For complete stage specifications and composer field attributes, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#mailing-record-fields).
+> For complete stage specifications and composer field attributes, see [**Mailing Record Fields**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#1-mailing-record-fields).
 
 ---
 
-## Dynamic Recipient Targeting Models
+## 2. Dynamic Recipient Targeting Models
 
 CURQ Email Marketing supports two distinct methods for defining recipient audiences:
 
-### 1. Static Mailing Lists
+### 2.1 Static Mailing Lists
 
 * Curated groups of subscribers stored directly within the Email Marketing module.
 * Subscribers can be added manually, imported via CSV/Excel spreadsheets, or registered automatically through website newsletter forms.
 * Ideal for public newsletters, recurring product announcements, and customer loyalty programs.
 
-### 2. Dynamic Model Segmentation
+### 2.2 Dynamic Model Segmentation
 
 CURQ can target records directly from any enterprise business area without manually exporting contact data:
 
@@ -42,7 +42,7 @@ When a dynamic model is selected, users can build advanced search domains *(e.g.
 
 ---
 
-## A/B Testing Statistical Distribution
+## 3. A/B Testing Statistical Distribution
 
 CURQ 18 provides native A/B testing to evaluate subject lines, email templates, and sender names before broadcasting to your entire audience:
 
@@ -76,14 +76,14 @@ flowchart TD
 
 ---
 
-## Subscriber Consent and Compliance Governance
+## 4. Subscriber Consent and Compliance Governance
 
 CURQ enforces international privacy regulations *(such as GDPR and CAN-SPAM)* through a two-tiered consent model:
 
 * **List-Level Opt-Out**: When a subscriber chooses to leave a specific publication, they are unsubscribed from that mailing list only and remain active on other company lists.
 * **Global Blacklist**: When a subscriber requests global suppression, their email address is registered on the organizational blacklist, permanently excluding them from all present and future marketing broadcasts across all modules.
 
-### Hierarchy of Subscriber Filtering
+### 4.1 Hierarchy of Subscriber Filtering
 
 When compiling the final recipient list during dispatch, CURQ applies a strict multi-tier exclusion filter:
 
@@ -92,11 +92,11 @@ When compiling the final recipient list during dispatch, CURQ applies a strict m
 3. **List-Specific Opt-Out**: Skips contacts marked as opted out on the target mailing list.
 4. **Global Blacklist Check**: Automatically drops any email address registered on the organizational blacklist. This overrides all mailing list subscriptions across all modules.
 
-> For complete suppression specifications and blacklist attributes, see [**Global Email Blacklist Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#global-email-blacklist-specifications).
+> For complete suppression specifications and blacklist attributes, see [**Global Email Blacklist Specifications**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#6-global-email-blacklist-specifications).
 
 ---
 
-## Core Engagement Metrics and Calculations
+## 5. Core Engagement Metrics and Calculations
 
 | Performance Metric | Mathematical Formula | Strategic Significance |
 | :--- | :--- | :--- |
@@ -107,7 +107,7 @@ When compiling the final recipient list during dispatch, CURQ applies a strict m
 | **Bounce Rate** | `(Bounced / Sent) * 100` | Measures list cleanliness; rates above 2% indicate outdated data. |
 | **Unsubscribe Rate** | `(Opted Out / Delivered) * 100` | Monitors audience fatigue or irrelevant content frequency. |
 
-> For complete metric definitions and calculation formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#analytical-smart-button-metrics).
+> For complete metric definitions and calculation formulas, see [**Analytical Smart Button Metrics**](../settings-and-fields/01-mailing-and-campaign-field-definitions.md#5-analytical-smart-button-metrics).
 
 ---
 

@@ -4,6 +4,10 @@ This guide covers monitoring the web analytics dashboard, evaluating online sale
 
 Monitor online store revenue, track web visitor engagement, audit granular page views, and analyze website conversion performance in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Website / Editor** rights.
+> * Configured base system records and access permissions.
+
 ---
 
 > **Note:** Website reporting features are accessible to users with the **Website / Editor and Designer** or **Sales / Administrator** access rights.
@@ -192,4 +196,3 @@ Switch to **Graph** view to plot URL impression volumes over time or compare pro
 * [Optimize SEO and Search Metadata](./04-optimize-seo-and-search-metadata.md)
 * [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
 * [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md)
-

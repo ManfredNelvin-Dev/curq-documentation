@@ -2,6 +2,13 @@
 
 Configure economic sectors (such as Manufacturing, Retail, or IT/Communication), assign industry classifications to company profiles, and segment partners by sector.
 
+> **Prerequisites**
+> * Active user account with **Contacts / Administrator** rights.
+> * Configured base system records and access permissions.
+>
+> **Warning (Configuration Advisory):** Modifying industries requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Create and Assign Industries
@@ -39,7 +46,7 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 4. Select the sector from the dropdown list (for example, `Manufacturing` or `IT/Communication`).
 5. Click the cloud icon to save.
 
-> For complete field definitions and sales/purchase configuration options, see [**Sales and Purchase Tab**](../settings-and-fields/01-contact-form-field-definitions.md#sales-and-purchase-tab).
+> For complete **Industry** field specifications and related sales/purchase attributes, see [**Sales and Purchase Tab — Miscellaneous Section**](../settings-and-fields/01-contact-form-field-definitions.md#34-miscellaneous-section).
 
 ---
 
@@ -55,10 +62,14 @@ Configure economic sectors (such as Manufacturing, Retail, or IT/Communication),
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Industry Field Missing**: The **Industry** field only appears on **Company** records. It is hidden on **Individual** contact cards. To classify an organization, open the parent company record rather than an employee's card.
 * **Retiring an Industry Sector**: To stop staff from assigning an outdated sector without breaking historical data, open **Configuration > Industries**, click into the industry form, and toggle off **Active**.
+
+---
+
+> **Tip (Advised Settings):** Align industry sectors with official NACE/SIC standard codes for uniform corporate segmentation and statutory reporting.
 
 ---
 

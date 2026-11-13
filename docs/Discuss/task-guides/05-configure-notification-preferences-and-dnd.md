@@ -2,6 +2,13 @@
 
 Set global notification defaults, configure temporary Do-Not-Disturb focus timers, and customize channel alert overrides in CURQ Discuss.
 
+> **Prerequisites**
+> * Active user account with **Discuss / Administrator** rights.
+> * Configured base system records and access permissions.
+>
+> **Warning (Configuration Advisory):** Modifying notification preferences requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Global Notification Rules and Focus Timers
@@ -51,6 +58,8 @@ When presenting during meetings, hosting calls, or focusing on high-priority dee
 * Once the timer elapses, CURQ restores standard alert delivery automatically.
 * To cancel the mute early, return to the dialog and switch **Mute all conversations** off, or click **Unmute Conversation** from the banner.
 
+> For default values and behavior of **Mute all conversations**, **Mute duration**, and **Channel Notifications**, see [**Global Notification Configuration Parameters**](../settings-and-fields/02-notifications-and-user-preferences-specifications.md#1-global-notification-configuration-parameters).
+
 ---
 
 ## 2. Set Per-Channel Notification Overrides
@@ -58,7 +67,7 @@ When presenting during meetings, hosting calls, or focusing on high-priority dee
 If a critical channel requires immediate attention or a high-volume social channel is too noisy, override your global baseline for that specific room:
 
 1. Open the channel from the left sidebar (e.g., `#operations`).
-2. In the top-right header toolbar, click the **Bell** icon to open the **Notification Settings** menu:
+2. In the top-right header toolbar, click the **Bell Icon** to open the **Notification Settings** menu:
 
    ![Channel notification settings dropdown](../media/033.png)
 
@@ -67,7 +76,13 @@ If a critical channel requires immediate attention or a high-volume social chann
    * **All Messages**: Notifies you of every message posted in this room, regardless of global settings.
    * **Mentions Only**: Alerts you only when directly tagged.
    * **Nothing**: Completely silences this channel while keeping alerts active for other rooms.
-4. To silence this single room temporarily without muting company-wide chats, click **Mute Conversation** and choose an individual duration (e.g., *For 1 hour* or *For 8 hours*). The bell turns into a red slashed bell.
+4. To silence this single room temporarily without muting company-wide chats, click **Mute Conversation** (**Muted**) and choose an individual duration (e.g., *For 1 hour* or *For 8 hours*). The bell turns into a red slashed bell.
+
+> For visual bell state indicators and operational criteria across all levels, see [**Channel Notification Level Options**](../settings-and-fields/02-notifications-and-user-preferences-specifications.md#2-channel-notification-level-options).
+
+---
+
+> **Tip (Advised Settings):** Default notification handling to email digests or desktop popups with muted off-hours schedules to prevent alert fatigue.
 
 ---
 
@@ -75,3 +90,4 @@ If a critical channel requires immediate attention or a high-volume social chann
 * [Manage Conversation Header Tools and Search](07-manage-conversation-header-tools-and-search.md)
 * [Notifications and User Preferences Specifications](../settings-and-fields/02-notifications-and-user-preferences-specifications.md)
 * [Understanding Unified Business Communication and Chatter Architecture](../core-concepts/01-understanding-unified-business-communication-and-chatter-architecture.md)
+* [Voice, Video, and Canned Responses Specifications](../settings-and-fields/03-voice-video-and-canned-responses-specifications.md)

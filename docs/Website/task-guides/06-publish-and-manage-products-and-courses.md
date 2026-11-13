@@ -4,6 +4,10 @@ This guide details how to manage the publication status, SEO visibility, layout 
 
 Monitor, publish, and manage eCommerce products and eLearning course pages in CURQ 18 using the frontend Page Manager.
 
+> **Prerequisites**
+> * Active user account with **Website / Editor** rights.
+> * Configured base system records and access permissions.
+
 ---
 
 > **Note:** The **Products** option requires the **eCommerce** app to be installed, while the **Courses** option requires the **eLearning** app. If either app is not installed in your database, its corresponding option will not appear in the **Site** menu.
@@ -129,4 +133,3 @@ From the list view:
 * [Configure Product Attributes, Ribbons, and Categories](./08-configure-product-attributes-ribbons-and-categories.md)
 * [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
 * [eCommerce Shop and Checkout Settings](../settings-and-fields/02-ecommerce-shop-and-checkout-settings.md)
-

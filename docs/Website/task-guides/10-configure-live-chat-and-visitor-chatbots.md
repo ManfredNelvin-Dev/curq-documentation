@@ -2,6 +2,13 @@
 
 This guide details how to configure the website live chat widget, assign operators, build automated chatbot decision trees, manage display rules, and monitor visitor satisfaction in CURQ 18.
 
+> **Prerequisites**
+> * Active user account with **Website / Administrator** rights.
+> * Active enterprise user profiles configured in the corporate directory.
+>
+> **Warning (Configuration Advisory):** Modifying live chat and chatbots requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
+
 ---
 
 ## 1. Live Chat Widget Setup and Configuration
@@ -110,10 +117,13 @@ Clicking the **% Happy** smart button opens the feedback quality dashboard:
 
 ---
 
+> **Tip (Advised Settings):** Configure automated welcome messages, fallback email prompts, and clear operating hours on public chat channels.
+
+---
+
 ## Related Documentation
 
 * [Track Visitors and Analyze Web Reporting](./13-track-visitors-and-analyze-web-reporting.md)
 * [Configure Privacy, Cookies, and Compliance Policies](./12-configure-privacy-cookies-and-compliance.md)
 * [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
 * [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md)
-

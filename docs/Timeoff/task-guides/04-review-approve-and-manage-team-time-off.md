@@ -2,6 +2,10 @@
 
 The **Management → Time Off** workspace provides Team Managers, Time Off Officers, and HR Administrators with a centralized command center to review, validate, modify, or reject employee leave requests. Authorized users can execute quick one-click approvals from the list view or open detailed form views to verify remaining balances and attached supporting documents.
 
+> **Prerequisites**
+> * Active user account with **Time Off / User** rights.
+> * Configured employee profiles and operational time-off type structures.
+
 ---
 
 ## 1. Review and Approve Team Leave Requests
@@ -84,11 +88,11 @@ Administrators and managers can record absences on behalf of team members who ar
    * **Supporting Document**: If required by organizational policy, click **Attach File** to upload documentation *(such as a physician's note or medical certificate)*.
 4. Click the cloud save icon or navigate away to persist the request. The request is submitted in **To Approve** stage and can be validated immediately by the manager or HR officer.
 
-> For complete field definitions and validation rules, see [**Employee Leave Request Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#employee-leave-request-fields).
+> For complete field definitions and validation rules, see [**Employee Leave Request Fields**](../settings-and-fields/01-time-off-types-and-request-field-definitions.md#2-employee-leave-request-fields).
 
 ---
 
-## Edge Cases & Recovery Steps
+## 4. Edge Cases & Recovery Steps
 
 * **Approved Request Needs Cancellation**: If an employee's plans change after approval, open the request in form view and click **Refuse** or **Cancel**; deducted balances will be restored to the employee's account.
 * **Pending Requests Not Appearing**: If expected team requests do not show up, check the active search filters to confirm you are not restricted by the **Waiting For Me** or **Department** filters.

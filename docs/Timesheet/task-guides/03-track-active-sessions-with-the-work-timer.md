@@ -2,6 +2,10 @@
 
 This guide details how to track working time in real time using the CURQ interactive work timer, switch between tasks seamlessly without session collision, and automatically convert running sessions into accurate timesheet lines.
 
+> **Prerequisites**
+> * Active user account with **Timesheets / User** rights.
+> * Assigned project tasks and active analytic accounts in **Projects**.
+
 ---
 
 ## 1. Launch and Monitor the Work Timer
@@ -32,7 +36,7 @@ Configure activity metadata before launching the clock:
    * **Description**: Enter an operational summary describing the work about to be performed.
    * **Start Time**: Initialized automatically with the current system timestamp.
 
-> For complete session field descriptions and validation behaviors, see [**Timesheet Line Entry Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#timesheet-line-entry-fields).
+> For complete field descriptions of the **Start work** dialog, see [**Work Timer Session Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#4-work-timer-session-fields).
 
 ---
 

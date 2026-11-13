@@ -2,6 +2,10 @@
 
 Capture unqualified inquiries, evaluate prospect suitability, identify duplicate records, and convert qualified leads into pipeline opportunities.
 
+> **Prerequisites**
+> * Active user account with **CRM / User** rights.
+> * Active sales team and defined pipeline stages in **CRM**.
+
 ---
 
 ## 1. Inbound Lead Intake Workflow
@@ -43,7 +47,7 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 
 5. The system automatically saves the record as fields are completed.
 
-> **Note:** For field formats and allowed constraints, see [**Inbound Lead Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#inbound-lead-form-fields).
+> **Note:** For field formats and allowed constraints, see [**Inbound Lead Form Fields**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#3-inbound-lead-form-fields).
 
 ---
 
@@ -79,11 +83,11 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 4. Verify or adjust the assigned **Salesperson** (e.g., `Siddharth Sathyan`) and **Sales Team**.
 5. Click **Create Opportunity**.
 
-> **Note:** For behavioral rules and parameter outcomes of the conversion dialog, see [**Lead Conversion Dialog Parameters**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#lead-conversion-dialog-parameters).
+> **Note:** For behavioral rules and parameter outcomes of the conversion dialog, see [**Lead Conversion Dialog Parameters**](../settings-and-fields/01-lead-and-opportunity-field-definitions.md#4-lead-conversion-dialog-parameters).
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Marking an Unqualified Lead as Lost**: If an inbound lead is spam, irrelevant, or not a commercial fit, click **Lost** in the top action bar. In the **Mark Lost** modal, select a **Lost Reason** from the dropdown, optionally add an explanation in **Closing Note**, and click **Mark as Lost** to close the inquiry.
 
@@ -98,3 +102,4 @@ Capture unqualified inquiries, evaluate prospect suitability, identify duplicate
 * [Understanding Leads vs. Opportunities in CURQ](../core-concepts/01-understanding-leads-vs-opportunities.md)
 * [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)
 * [Create and Manage Pipeline Opportunities](./01-create-and-manage-opportunities.md)
+* [Lead and Opportunity Form Field Definitions](../settings-and-fields/01-lead-and-opportunity-field-definitions.md)

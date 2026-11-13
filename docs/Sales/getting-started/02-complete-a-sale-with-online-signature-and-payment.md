@@ -2,6 +2,10 @@
 
 Follow this walkthrough to experience how modern B2B transactions close in CURQ 18: requiring digital customer signatures and online prepayments to automate sales order confirmation and invoicing.
 
+> **Prerequisites**
+> * Active user account with **Sales / User** rights.
+> * Defined product catalog with sales pricing and active customer records.
+
 ---
 
 ## 1. Complete Online Signature and Payment Workflow
@@ -43,7 +47,7 @@ flowchart LR
 
    ![Other info settings enabling online signature and payment](../media/008.png)
 
-> For complete field definitions, pricing parameters, and delivery options, see [**Other Info Tab Fields**](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md#other-info-tab-fields).
+> For complete field definitions, pricing parameters, and delivery options, see [**Other Info Tab Fields**](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md#3-other-info-tab-fields).
 
 5. In the top action bar, click the cloud icon (or press `Ctrl+S`) to save the quotation.
 

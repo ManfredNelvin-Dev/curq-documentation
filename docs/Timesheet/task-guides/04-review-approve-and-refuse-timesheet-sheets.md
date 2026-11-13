@@ -2,6 +2,10 @@
 
 This guide covers how supervisors, department leads, and HR managers inspect, audit, approve, or refuse submitted employee timesheet sheets in CURQ Timesheets.
 
+> **Prerequisites**
+> * Active user account with **Timesheets / User** rights.
+> * Assigned project tasks and active analytic accounts in **Projects**.
+
 ---
 
 ## 1. Review and Approve Timesheet Sheets
@@ -39,8 +43,6 @@ Before taking an approval action, audit the sheet's entries for accuracy:
    * Verify that time is assigned to the correct projects and deliverable tasks.
    * Ensure billable client deliverables contain the correct sales order item.
 
-> For periodic sheet attributes, matrix specifications, and line details, see [**Periodic Timesheet Sheet Fields**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#periodic-timesheet-sheet-fields) and [**Summary Matrix Grid Specifications**](../settings-and-fields/01-timesheet-line-and-sheet-field-definitions.md#summary-matrix-grid-specifications).
-
 ---
 
 ### 1.3 Approve the Timesheet Sheet
@@ -62,8 +64,6 @@ If a sheet contains inaccurate hours, missing descriptions, or misallocated task
 2. Provide a clear explanation in the chatter specifying why the sheet is being returned and what corrections are required.
 3. The sheet status reverts from `Waiting Review` back to `Open`.
 4. The record immediately reappears in the employee's **My Timesheets to Submit** queue so they can update lines and resubmit.
-
-> For workflow stage definitions, trigger actions, and access restrictions, see [**Timesheet Sheet Workflow Lifecycle Transitions**](../settings-and-fields/02-timesheet-configuration-and-review-specifications.md#timesheet-sheet-workflow-lifecycle-transitions).
 
 ---
 

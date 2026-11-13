@@ -5,6 +5,9 @@ Configure combo choices, package multi-item product bundles, and select flexible
 
 > **Prerequisites**
 > * Base catalog products that will form the individual combo choices must exist in **Sales > Products > Products**.
+>
+> **Warning (Configuration Advisory):** Modifying product combos requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -46,6 +49,8 @@ Combo choices define the selectable categories or subgroups from which customers
 
 4. Save the product.
 
+> **Tip:** For granular parameter descriptions and data dictionary field specifications, refer to [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md).
+
 ---
 
 ## 2. Add and Configure Combos on Quotations
@@ -65,13 +70,19 @@ Combo choices define the selectable categories or subgroups from which customers
 
 ---
 
-## Edge Cases & Recovery Steps
+## 3. Edge Cases & Recovery Steps
 
 * **Inventory Reservations on Combo Components**: When a sales order containing a combo is confirmed, CURQ reserves stock for the individual chosen components (Goods/Storable items) in inventory, ensuring warehouse dispatchers receive accurate picking slips.
 * **Component Out of Stock**: If one choice within a combo is depleted in the warehouse, sales reps can edit the quote line before confirmation and choose an alternative item from the combo choice pool.
 
 ---
 
+> **Tip (Advised Settings):** Group related complementary products with clear package savings; maintain single base unit of measure for all bundled items.
+
+---
+
 ## Related Documentation
 * [Configure Products and Product Variants](./06-configure-products-and-variants.md)
+* [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)
+* [Sales Configuration and Delivery Settings](../settings-and-fields/03-sales-configuration-and-delivery-settings.md)
 * [Quotation and Sales Order Field Definitions](../settings-and-fields/01-quotation-and-sales-order-field-definitions.md)

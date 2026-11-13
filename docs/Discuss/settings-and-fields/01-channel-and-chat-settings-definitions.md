@@ -4,23 +4,49 @@ This document provides a factual, scannable catalog of properties, parameters, p
 
 ---
 
-## Channel Configuration Properties
+## 1. Channel Configuration Properties
 
-The following fields and options are accessible on the channel settings form (**Discuss > Channel Gear Icon**):
+> **Warning (Channel Visibility & Privacy Risk):** Expanding the **Authorized Group** setting *(for example, switching from a restricted managerial group to `User types / Internal User`)* immediately exposes all historical message archives, attached files, and internal discussions in that room to every user in the expanded group. Never widen access on sensitive HR or executive channels; create a separate general channel instead.
 
-| Field / Setting | Description |
+The following fields and tabs are accessible on the channel settings form (**Discuss > Channel Gear Icon**):
+
+### 1.1 General and Technical Channel Fields
+
+| Field Name | Description |
 | :--- | :--- |
-| **Channel Name** | The unique title of the room. Formatted automatically with a `#` prefix in lowercase syntax. |
-| **Description** | Brief explanation of the channel's purpose, operational scope, and usage guidelines visible in channel directories. |
-| **Privacy: Everyone** | Public channel. Discoverable and joinable by all internal system users without administrative approval. |
-| **Privacy: Invited people only** | Private channel. Hidden from global directory searches; access is granted strictly through explicit invitations from existing members. |
-| **Privacy: Auto Subscribe Groups** | Relational user groups (e.g., `Sales / User`, `Accounting / Accountant`). Users assigned to these groups are enrolled into the channel automatically upon creation. |
-| **Members: Member Name** | Relational link to the partner/user profile enrolled in the channel. |
-| **Members: Role / Actions** | Displays membership status and provides the deletion action to revoke channel access. |
+| **Group Name** | The primary title of the channel displayed in the sidebar and header *(formatted automatically with a `#` prefix, e.g., `# operations`)*. |
+| **Channel Image / Avatar** | Camera upload box (`📷 +`) in the top-right corner for attaching a custom channel icon or department badge. |
+| **Channel Type** | Classification of the room *(e.g., `Channel`)* determining conversation behavior and visibility rules. Includes a help tooltip (`?`). |
+| **Description** | Brief explanation of the channel's purpose, operational scope, and usage guidelines *(placeholder: `Topics discussed in this group...`)*. |
+| **Parent Channel** | Optional parent channel linking this room beneath a higher-level topic hierarchy. Includes a help tooltip (`?`). |
+| **Sub Channels (`Name`)** | Inline sub-table listing nested child channels created under this parent channel. |
+| **From Message** | Reference to the originating message when a channel or thread is created directly from an existing discussion post. Includes a help tooltip (`?`). |
+| **Sfu Channel Uuid** | Unique Selective Forwarding Unit (SFU) identifier governing WebRTC audio/video conference routing for this channel. |
+| **Sfu Server Url** | Endpoint URL of the SFU media server handling real-time multi-party video and voice streams. |
+
+### 1.2 Privacy Tab
+
+Parameters under the **Privacy** tab govern who can discover, access, and automatically join the channel:
+
+| Field Name | Description |
+| :--- | :--- |
+| **Authorized Group** | Security user group permitted to access and participate in the channel *(e.g., `User types / Internal User`)*. Restrict to a specific department or admin group to limit access, or manage membership explicitly via the **Members** tab. |
+| **Auto Subscribe Groups** | Relational user groups *(e.g., `Sales / User`, `Accounting / Accountant`)*. Existing and newly added users in these groups are automatically subscribed to the channel without manual invitations. |
+| **Auto Subscribe Departments** | HR departments whose employees are automatically enrolled into the channel upon creation or department assignment. |
+
+### 1.3 Members Tab
+
+The **Members** tab lists all active participants enrolled in the channel and provides inline controls to add or remove access:
+
+| Field Name | Description |
+| :--- | :--- |
+| **Partner** | Relational link to each enrolled internal user or partner profile *(e.g., `Siddharth Sathyan`)*. Click **Add a line** at the bottom of the table to enroll additional users. |
+| **Guest** | Identifies external guest or portal participants granted temporary or invited access to the channel. |
+| **Remove Action (`🗑`)** | Trash can icon on the far right end of each member row used to immediately remove the participant and revoke their access to the channel. |
 
 ---
 
-## Workspace Navigation Elements
+## 2. Workspace Navigation Elements
 
 | Folder / View | Purpose & Operational Behavior |
 | :--- | :--- |
@@ -32,7 +58,7 @@ The following fields and options are accessible on the channel settings form (**
 
 ---
 
-## Real-Time User Presence Status Specifications
+## 3. Real-Time User Presence Status Specifications
 
 | Status Indicator | System Trigger & Operational Meaning |
 | :--- | :--- |
@@ -43,7 +69,7 @@ The following fields and options are accessible on the channel settings form (**
 
 ---
 
-## Message Action Menu Definitions
+## 4. Message Action Menu Definitions
 
 Options available via message hover actions and the three vertical dots menu:
 
@@ -60,7 +86,7 @@ Options available via message hover actions and the three vertical dots menu:
 
 ---
 
-## Header Toolbar Tools and Security Settings
+## 5. Header Toolbar Tools and Security Settings
 
 | Tool / Icon | Parameter | Technical Specification |
 | :--- | :--- | :--- |
@@ -73,7 +99,8 @@ Options available via message hover actions and the three vertical dots menu:
 
 ---
 
-### Related Documentation
+## Related Documentation
 * [Create and Manage Channels](../task-guides/01-create-and-manage-channels.md)
 * [Manage Conversation Header Tools and Search](../task-guides/07-manage-conversation-header-tools-and-search.md)
 * [Notifications and User Preferences Specifications](02-notifications-and-user-preferences-specifications.md)
+* [Voice, Video, and Canned Responses Specifications](03-voice-video-and-canned-responses-specifications.md)

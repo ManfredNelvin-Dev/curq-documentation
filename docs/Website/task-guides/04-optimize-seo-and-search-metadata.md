@@ -4,6 +4,10 @@ This guide explains how to use the built-in SEO optimizer, configure meta titles
 
 Enhance search engine rankings, customize social media preview cards, and analyze on-page keyword density in CURQ 18 using the integrated SEO Optimizer tool.
 
+> **Prerequisites**
+> * Active user account with **Website / Editor** rights.
+> * Published website domain and access to the CURQ website builder.
+
 ---
 
 ## 1. On-Page Search Engine Optimization
@@ -98,4 +102,3 @@ For dynamic website records *(such as Blog Posts, Events, eCommerce Products, an
 * [Track Visitors and Analyze Web Reporting](./13-track-visitors-and-analyze-web-reporting.md)
 * [Website Page, Product, and Reporting Field Definitions](../settings-and-fields/05-website-page-product-and-reporting-field-definitions.md)
 * [Website Configuration and Domain Settings](../settings-and-fields/01-website-configuration-and-domain-settings.md)
-

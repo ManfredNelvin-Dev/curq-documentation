@@ -9,7 +9,9 @@ The Expenses module allows organizations to charge eligible employee expenditure
 
 ---
 
-## 1. Configure Expense Categories for Reinvoicing
+## 1. Configure and Log Client Billable Expenses
+
+### 1.1 Configure Expense Categories for Reinvoicing
 
 Before an expense can be charged to a client, its underlying category must have reinvoicing activated:
 
@@ -26,11 +28,11 @@ Before an expense can be charged to a client, its underlying category must have 
 5. Configure applicable **Purchase Taxes** and **Sales Taxes** for proper tax accounting on both vendor purchases and customer invoices.
 6. Click the cloud icon or navigate away to save the category.
 
-> **Tip:** For complete field definitions of reinvoicing policies, pricing formulas, and catalog defaults, see [**Expense Category Form Fields Data Dictionary**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#2-expense-category-form-fields-data-dictionary).
+> For complete field definitions of reinvoicing policies, pricing formulas, and tax mappings, see [**Financial and Tax Mapping Fields**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#22-financial-and-tax-mapping-fields) and [**Reinvoicing & Commercial Recovery Fields**](../settings-and-fields/01-expense-category-and-configuration-field-definitions.md#23-reinvoicing--commercial-recovery-fields).
 
 ---
 
-## 2. Create an Expense for a Customer
+### 1.2 Create an Expense Linked to a Customer Sales Order
 
 1. Open **Expenses → My Expenses → My Expenses** and click **New**.
 2. In the **Category** field, select the configured expense category *(e.g., `[Hc] Repair`)*.
@@ -44,11 +46,11 @@ Before an expense can be charged to a client, its underlying category must have 
 7. Click **Attach Receipt** in the upper toolbar to attach supporting supplier invoices or payment slips.
 8. Click **Create Report** in the upper action bar to group the line into a formal expense report.
 
-> **Tip:** For field specifications and action button behavior on the individual expense form, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
+> For field specifications and action button behavior on the individual expense form, see [**Individual Expense Form Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#2-individual-expense-form-fields-data-dictionary).
 
 ---
 
-## 3. Submit and Approve the Expense Report
+### 1.3 Submit and Approve the Expense Report
 
 1. When creating a report from an individual expense, CURQ generates an **Expense Report** summary *(e.g., `Gas`)* in the **To Submit** stage.
 2. Review the linked line items under the **Expense** tab:
@@ -72,11 +74,13 @@ Before an expense can be charged to a client, its underlying category must have 
    * The **Analytic Distribution** column automatically inherits the project tag *(e.g., `S00051 - Acme Technologies`)*.
    * The action bar unlocks the **Post Journal Entries** button for the finance team.
 
-> **Tip:** For details on report header fields, journal assignment rules, and report sheet statuses, see [**Expense Report (Sheet) Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#3-expense-report-sheet-fields-data-dictionary).
+> For details on report header fields, journal assignment rules, and report sheet statuses, see [**Expense Report (Sheet) Fields Data Dictionary**](../settings-and-fields/02-expense-record-and-report-field-definitions.md#3-expense-report-sheet-fields-data-dictionary).
 
 ---
 
-## 4. Post Expenses and Update Sales Orders
+## 2. Post Expenses and Invoice the Customer
+
+### 2.1 Post Expenses and Update Sales Order Lines
 
 1. Open the approved expense report.
 2. In the upper action bar, click **Post Journal Entries**:
@@ -86,7 +90,7 @@ Before an expense can be charged to a client, its underlying category must have 
 
 ---
 
-## 5. Create Customer Invoices from Sales Orders
+### 2.2 Create and Validate Customer Invoices
 
 1. In the posted expense report, click the **Sales Orders** smart button *(or navigate directly to **Sales → Orders → Orders** and open `S00051 - Acme Technologies`)*.
 2. Under the **Order Lines** tab, verify the injected expense line *(e.g., `[Hc] Repair - Gas`)* and confirmed delivered quantity.
@@ -102,7 +106,7 @@ Before an expense can be charged to a client, its underlying category must have 
 
 ---
 
-## 6. Verify Customer Payments
+### 2.3 Verify and Reconcile Customer Payments
 
 Once the client receives the invoice, payment can be completed through corporate settlement channels:
 

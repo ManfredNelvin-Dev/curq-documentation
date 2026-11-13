@@ -2,29 +2,15 @@
 
 Welcome to the CURQ Contacts application. CURQ uses a single, unified address book to manage all commercial counterparties—companies, individual contacts, branch delivery hubs, billing departments, and vendor bank accounts.
 
-In this tutorial, you will build a clear mental model of how CURQ organizes contact relationships and complete a hands-on exercise to create your first company contact and link an individual employee to it in 3 quick steps.
-
-```{mermaid}
-flowchart LR
-    C["`**Company: Acme Technologies**
-    Tax ID • Terms • Pricelist`"]
-    C --> I["`**Employee: George Willson**
-    Sales Director • Email & Phone`"]
-    C --> D["`**Delivery Address**
-    Acme East Warehouse`"]
-```
-
----
-
-## 1. Hands-On Exercise: Create Your First Contact
-
-
+In this tutorial, you will complete a hands-on exercise to create your first company contact and link an individual employee to it in 3 quick steps.
 
 > **Prerequisites**
 > * Access to a standard CURQ instance with the **Contacts** app installed.
 > * Standard default settings. No prior configuration or administrative permissions are necessary.
 
 ---
+
+## 1. Hands-On Exercise: Create Your First Contact
 
 ### 1.1 Open Contacts and Create a Company
 
@@ -34,16 +20,19 @@ flowchart LR
    ![Click New to create a contact](../media/001.png)
 
 3. Notice the radio buttons at the top of the form: **Individual** and **Company**. Select **Company**.
-4. Enter the primary company information:
-   * **Name**: Type `Acme Technologies`.
-   * **Address**: Enter a street address, city, state, postal code, and country (for example, `100 Innovation Way, Austin, TX 78701, United States`).
-   * **Phone**: Enter `+1 (512) 555-0199`.
-   * **Email**: Enter `info@acmetech.com`.
 
    ![Acme Technologies company contact form](../media/002.png)
 
+4. Enter the primary company information:
+   * **Name**: Type `Acme Technologies`.
+   * **Address**: Enter a street address, city, state, postal code, and country (for example, `100 Innovation Way, Austin, TX 78701, United States`).
+   * **Phone**: Enter `+1 512-555-0199`.
+   * **Email**: Enter `info@acmetech.com`.
+
 5. Leave all advanced tabs (**Sales & Purchase**, **Invoicing**, etc.) at their default settings for now.
 6. Look at the top left near the document title—CURQ saves changes automatically. You can also click the cloud icon to confirm saving.
+
+> For complete field descriptions, smart button metrics, and validation rules shown on this form, see [**Header and Identity Fields**](../settings-and-fields/01-contact-form-field-definitions.md#1-header-and-identity-fields).
 
 You now have your first corporate partner record in CURQ.
 
@@ -72,6 +61,8 @@ Now, let's attach a real person to Acme Technologies:
 
 George Willson now appears as an employee card directly under Acme Technologies.
 
+> For technical descriptions of sub-contact types and address inheritance behavior, see [**Contacts and Addresses Tab**](../settings-and-fields/01-contact-form-field-definitions.md#2-contacts-and-addresses-tab).
+
 ---
 
 ### 1.3 Find Your Contacts in the Directory
@@ -91,6 +82,8 @@ Let's verify that both records are visible and accessible in the main address bo
    * His business address matches the parent company.
 
 Congratulations! You have completed your first exercise in CURQ Contacts. You now understand how CURQ links individual people to corporate entities.
+
+> For granular parameter descriptions and data dictionary field specifications, refer to [Contact Form Field Definitions](../settings-and-fields/01-contact-form-field-definitions.md).
 
 ---
 

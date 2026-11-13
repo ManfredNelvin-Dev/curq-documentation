@@ -6,6 +6,9 @@ This operational guide explains how to decompose complex deliverables into struc
 > **Prerequisites**
 > * An existing parent task *(e.g., `Design Responsive Homepage Layout`)* within an active project.
 > * Operational permissions to create, assign, and modify project tasks.
+>
+> **Warning (Configuration Advisory):** Modifying sub-tasks and hierarchies requires administrative privileges. Because misconfiguration can lead to operational disruptions or workflow errors, configuration by a user administrator with the assistance of an authorized CURQ advisor or consultant is advised.
+
 
 ---
 
@@ -45,15 +48,19 @@ Configure structural properties:
    * **Assigning Date**: Automated audit timestamp logging when the current specialist was assigned.
    * **Last Stage Update**: Automated audit timestamp recording when the task transitioned between workflow stages.
 
-> For a detailed explanation of sub-task table fields, parent task relationships, sequence numbers, and technical metadata, see [**Sub-Tasks and Extra Info Tab Field Definitions**](../settings-and-fields/03-project-task-field-definitions.md#2-sub-tasks-tab-data-dictionary).
+> For a detailed explanation of sub-task table fields, parent task relationships, sequence numbers, and technical metadata, see [**Sub-Tasks Tab Data Dictionary**](../settings-and-fields/03-project-task-field-definitions.md#2-sub-tasks-tab-data-dictionary) and [**Extra Info Tab Data Dictionary**](../settings-and-fields/03-project-task-field-definitions.md#3-extra-info-tab-data-dictionary).
 
 ---
 
-## Best Practices for Sub-Task Management
+## 2. Best Practices for Sub-Task Management
 
 * **Independent Execution**: Ensure each sub-task has a single, clear outcome and assigned owner.
 * **Avoid Deep Nesting**: Limit task hierarchies to two levels *(Parent Task and Sub-task)* to prevent communication fragmentation.
 * **Stage Tracking**: Verify that sub-task completions roll up to parent milestone progress.
+
+---
+
+> **Tip (Advised Settings):** Restrict sub-task nesting depth to a maximum of 2 levels to maintain readable Gantt and Kanban views across project teams.
 
 ---
 
